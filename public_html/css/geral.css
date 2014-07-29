@@ -1,0 +1,13 @@
+body {
+    max-width: 900px;
+    position: relative;
+    margin: 0px;
+    padding: 0px;
+}
+
+div {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    background-color: red;
+}
