@@ -29,8 +29,6 @@ ul.menu {
 
 ul.menu > li {
     display: inline-block;
-    padding-left: 2px;
-    padding-right: 2px;
 }
 
 ul.menu > li:hover {
@@ -43,8 +41,63 @@ ul.menu > li:active {
 }
 
 ul.menu > li:nth-child(1n+2):before {
-    content: ' | ';
+    content: '| ';
     color: #ffffff; 
+}
+
+
+/* Arquetipos */
+
+div.arquetipo {
+    padding: 10px;
+    border-bottom: 4px solid #000;
+}
+
+div.arquetipo p {
+    margin: 0px;
+}
+
+div.arquetipo:hover {
+    background-color: rgba(255,255,255,.1);
+}
+
+div.arquetipo > h1 {
+    text-align: center;
+    color: #000;
+    font-size: 2.4em;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+div.arquetipo > div.descricao > p, div.arquetipo > p.joguese {
+    text-align: justify;
+    text-indent: 1em;
+}
+
+div.arquetipo > p.joguese > b {
+    font-size: 1.3em;
+}
+
+div.arquetipo > p.joguese {
+    margin-top: 30px;
+}
+
+div.arquetipo > h2 {
+    margin: 0px;
+    margin-top: 40px;
+    margin-bottom: 10px;
+}
+
+div.arquetipo > div.vantagens > p {
+    margin-bottom: 20px;
+    margin: -10px;
+    padding: 20px;
+    text-align: justify;
+    text-indent: 1em;
+}
+
+div.arquetipo > div.vantagens > p:hover {
+    background-color: rgba(255,255,255,.3);
 }
 
 
@@ -58,11 +111,13 @@ div.ajaxBlock {
 /* Changelog */
 
 #changelog {
-    position: relative;
-    height: 150px;
+    position: absolute;
+    top: 40px;
+    height: 60px;
     background-color: #a0a0b6;
     overflow-y: auto;
     overflow-x: hidden;
+    z-index: 100;
 }
 
 #changelog > h1 {
@@ -75,6 +130,15 @@ div.ajaxBlock {
     top: 5px;
     left: 50%;
     margin-left: -150px;
+}
+
+#changelog > h1:hover {
+    cursor: pointer;
+    color: #4330dd;
+}
+
+#changelog > h1:active {
+    color: #1e0ea9;
 }
 
 #changelog > ul {
@@ -91,7 +155,7 @@ div.ajaxBlock {
 
 #conteudo {
     position: absolute;
-    top: 190px;
+    top: 100px;
     bottom: 0px;
     background-color: #5d5d8e;
     overflow-y: auto;

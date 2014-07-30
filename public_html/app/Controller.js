@@ -107,4 +107,19 @@ function Controller () {
             f.apply(context, arguments);
         };
     };
+    
+    this.toggleChangelog = function () {
+        if (this.$changelog.css('height') === '60px') {
+            this.$changelog.css('height', 'auto').css('bottom', this.$conteudo.height() + 'px');
+            this.$changelog.animate({
+                bottom : '0px'
+            }, 500);
+        } else {
+            this.$changelog.animate({
+                bottom : this.$conteudo.height() + 'px'
+            }, 500, function () {
+                window.controller.$changelog.css('height', '60px').css('bottom', '');
+            });
+        }
+    };
 }
