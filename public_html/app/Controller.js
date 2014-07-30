@@ -31,6 +31,23 @@ function Controller () {
             dataType : 'html',
             success: function (data) {
                 window.controller.$conteudo.html(data);
+                var $arquetipos = $('#conteudo').find('div.arquetipo');
+                var $links = $('<ol class="quickLinks" />');
+                var $link;
+                var $arquetipo;
+                if ($arquetipos.length > 0) {
+                    for (var i = 0; i < $arquetipos.length; i++) {
+                        $arquetipo = $($arquetipos[i]);
+                        $link = $('<li />').append(
+                            $('<a />').text($($arquetipo.find('h1')[0]).text()).attr('href', '#arq' + i)
+                        );
+                        $links.append($link);
+                        $arquetipo.prepend($('<a />').attr('id', 'arq' + i))
+                                  .append($('<a class="goTop" />').text('Voltar ao topo').attr('href', '#top'));
+                    }
+                    window.controller.$conteudo.prepend($links).prepend($("<a />").attr('id', 'top'))
+                            .prepend($('<h1 />').text('Arquétipos'));
+                }
                 window.controller.unblock();
             },
             error: function (data) {
@@ -114,13 +131,15 @@ function Controller () {
             this.$changelog.css('height', 'auto').css('bottom', this.$conteudo.height() + 'px');
             this.$changelog.animate({
                 bottom : '0px'
-            }, 500);
+            }, 500, function () {
+                window.controller.$changelog.css('overflow-y', 'auto');
+            });
         } else {
             this.$changelog.animate({
                 bottom : this.$conteudo.height() + 'px'
             }, 500, function () {
                 window.controller.$changelog.css('height', '35px').css('bottom', '');
-            });
+            }).css('overflow-y', '');
         }
     };
 }
