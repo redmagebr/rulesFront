@@ -88,6 +88,11 @@ div.arquetipo > h2 {
     margin-bottom: 10px;
 }
 
+div.arquetipo > p.atributos {
+    text-align: justify;
+    text-indent: 1em;
+}
+
 div.arquetipo > div.vantagens > p {
     margin-bottom: 20px;
     margin: -10px;
@@ -113,9 +118,9 @@ div.ajaxBlock {
 #changelog {
     position: absolute;
     top: 40px;
-    height: 60px;
+    height: 35px;
     background-color: #a0a0b6;
-    overflow-y: auto;
+    overflow-y: hidden;
     overflow-x: hidden;
     z-index: 100;
 }
@@ -126,36 +131,51 @@ div.ajaxBlock {
     color: #00004a;
     margin: 0px;
     position: absolute;
-    width: 300px;
-    top: 5px;
-    left: 50%;
-    margin-left: -150px;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 35px;
+    line-height: 35px;
 }
 
 #changelog > h1:hover {
     cursor: pointer;
     color: #4330dd;
+    background-color: rgba(255,255,255,.3);
 }
 
 #changelog > h1:active {
     color: #1e0ea9;
+    background-color: rgba(255,255,255,.1);
 }
 
 #changelog > ul {
     margin-top: 30px;
-    margin-right: 10px;
     text-align: justify;
-    list-style: square
+    list-style: square inside;
+    margin-left: 0px;
+    padding: 0px;
+}
+
+#changelog > ul > li {
+    padding-left: 40px;
+    padding-right: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 #changelog > ul > li:before {
     content: attr(data-major) "." attr(data-minor) "." attr(data-release);
 }
 
+#changelog > ul > li:hover {
+    background-color: rgba(255,255,255,.2);
+}
+
 
 #conteudo {
     position: absolute;
-    top: 100px;
+    top: 75px;
     bottom: 0px;
     background-color: #5d5d8e;
     overflow-y: auto;
