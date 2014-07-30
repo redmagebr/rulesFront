@@ -1,10 +1,9 @@
-body {
-    max-width: 900px;
-    position: relative;
+html, body {
     margin: 0px;
     padding: 0px;
+    font-family: alegreya;
+    background: none;
 }
-
 div {
     position: absolute;
     left: 0px;
