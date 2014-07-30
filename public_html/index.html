@@ -14,9 +14,32 @@ and open the template in the editor.
         <link rel="stylesheet" type="text/css" media="all" href="http://redpg.com.br/css/fontface/alegreya.css">
     </head>
     <body>
-        <div>TODO write content</div>
+        <div id='loadingPage'>
+            <a class='spinner whiteLoading'></a>
+        </div>
+        <ul class='menu'>
+            <li onclick='window.controller.getPage("Regras");'>Regras Gerais</li>
+            <li>Arquétipos</li>
+            <li>Vantagens</li>
+            <li>Desvantagens</li>
+            <li>Estilos de Luta</li>
+            <li>Técnicas</li>
+        </ul>
+        <div id='changelog' class='ajaxBlock'>
+            
+            <h1>Changelog - Exemplo</h1><ul>                <li data-major='3' data-minor='0' data-release='0'>        <ul>            <li>                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.            </li>            <li>                Update 2            </li>        </ul>    </li>            <li data-major='2' data-minor='7' data-release='0'>        <ul>            <li>                Update 1            </li>            <li>                Update 2            </li>        </ul>    </li>            </ul>
+            
+        </div>
+        <div id='conteudo' class='ajaxBlock'>
+            
+        </div>
         
-        <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+        <script type="text/javascript" src="http://redpg.com.br/js/jquery-2.1.1.min.js"></script>
+        <script type="text/javascript" src="http://redpg.com.br/js/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="app/Controller.js"></script>
+        <script type='text/javascript'>
+            window.controller = new Controller();
+        </script>
     </body>
     
 </html>
