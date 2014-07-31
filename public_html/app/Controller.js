@@ -30,9 +30,38 @@ function Controller () {
             url : url + '.html',
             dataType : 'html',
             success: function (data) {
+                window.controller.$conteudo.empty();
                 var $div = $('<div />').html(data);
                 var $listed = $div.children('.quickListed');
-                console.log($listed);
+                if ($listed.length > 0) {
+                    var $quickListed;
+                    var $li;
+                    var name;
+                    var $ol = $('<ol class="quickLinks" />');
+                    for (var i = 0; i < $listed.length; i++) {
+                        $quickListed = $($listed[i]);
+                        name = $($quickListed.children('h1')[0]).text();
+                        if (name.trim() === '') {
+                            console.log("EMPTY LISTED");
+                            console.log($quickListed);
+                            $quickListed.remove();
+                            continue;
+                        }
+                        $li = $('<li />').append($('<a />').attr('href', '#list' + i).text(name));
+                        $ol.append($li);
+                        
+                        $quickListed.prepend(
+                            $('<a id="list' + i + '" />')
+                        ).append(
+                            $('<a class="goTop" />').text("Voltar ao topo").attr('href', '#top')
+                        );
+                    }
+                    window.controller.$conteudo
+                            .append($('<a id="top" />'));
+                    var $ps = $div.children('p');
+                    $ol.insertAfter($($ps[$ps.length - 1]));
+                }
+                window.controller.$conteudo.append($div.html());
                 window.controller.unblock();
             },
             error: function (data) {
