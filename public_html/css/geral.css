@@ -51,8 +51,11 @@ ul.menu > li:nth-child(1n+2):before {
     text-align: center;
 }
 
+#conteudo > p {
+    text-align: center;
+}
+
 ol.quickLinks {
-    list-style-type: upper-roman;
     margin-left: 30px;
 }
 

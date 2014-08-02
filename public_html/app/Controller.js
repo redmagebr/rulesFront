@@ -33,7 +33,23 @@ function Controller () {
                 window.controller.$conteudo.empty();
                 var $div = $('<div />').html(data);
                 var $listed = $div.children('.quickListed');
-                var $sortinghat = [];
+                    
+                $listed.sort(function (a, b) {
+                    var $a = $(a);
+                    var $b = $(b);
+                    a = $($a.children('h1')[0]).text().trim().toUpperCase();
+                    b = $($b.children('h1')[0]).text().trim().toUpperCase();
+                    console.log(a + " - as opposed to - " + b);
+                    console.log (a < b);
+                    if (a < b) {
+                        return -1;
+                    }
+                    if (a > b) {
+                        return 1;
+                    }
+                    return 0;
+                });
+                
                 if ($listed.length > 0) {
                     var $quickListed;
                     var $li;
@@ -54,18 +70,15 @@ function Controller () {
                         ).append(
                             $('<a class="goTop" />').text("Voltar ao topo").attr('href', '#top')
                         );
-                        $quickListed.detach();
-                        $sortinghat.push($quickListed);
+                        $quickListed.remove();
                     }
                     
-                    $sortinghat.sort(function ($a, $b) {
-                        var a = $($a.children('h1')[0]).text().trim().toUpperCase();
-                        var b = $($b.children('h1')[0]).text().trim().toUpperCase();
-                        return a - b;
-                    })
-                    
-                    for (var i = 0; i < $sortinghat.length; i++) {
-                        $quickListed = $sortinghat[i];
+                    for (var i = 0; i < $listed.length; i++) {
+                        $quickListed = $($listed[i]);
+                        name = $($quickListed.children('h1')[0]).text();
+                        if (name.trim() === '') {
+                            continue;
+                        }
                         $div.append($quickListed);
                     }
                     window.controller.$conteudo
