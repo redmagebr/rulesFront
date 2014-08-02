@@ -33,6 +33,7 @@ function Controller () {
                 window.controller.$conteudo.empty();
                 var $div = $('<div />').html(data);
                 var $listed = $div.children('.quickListed');
+                var $sortinghat = [];
                 if ($listed.length > 0) {
                     var $quickListed;
                     var $li;
@@ -42,8 +43,6 @@ function Controller () {
                         $quickListed = $($listed[i]);
                         name = $($quickListed.children('h1')[0]).text();
                         if (name.trim() === '') {
-                            console.log("EMPTY LISTED");
-                            console.log($quickListed);
                             $quickListed.remove();
                             continue;
                         }
@@ -55,6 +54,19 @@ function Controller () {
                         ).append(
                             $('<a class="goTop" />').text("Voltar ao topo").attr('href', '#top')
                         );
+                        $quickListed.detach();
+                        $sortinghat.push($quickListed);
+                    }
+                    
+                    $sortinghat.sort(function ($a, $b) {
+                        var a = $($a.children('h1')[0]).text().trim().toUpperCase();
+                        var b = $($b.children('h1')[0]).text().trim().toUpperCase();
+                        return a - b;
+                    })
+                    
+                    for (var i = 0; i < $sortinghat.length; i++) {
+                        $quickListed = $sortinghat[i];
+                        $div.append($quickListed);
                     }
                     window.controller.$conteudo
                             .append($('<a id="top" />'));
