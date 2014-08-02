@@ -99,6 +99,9 @@ function Controller () {
             dataType : 'html',
             success: function (data) {
                 window.controller.$changelog.html(data);
+                window.controller.$changelog.children('h1').on('click', function () {
+                    window.controller.toggleChangelog();
+                });
                 window.controller.unblock();
             },
             error: function (data) {
