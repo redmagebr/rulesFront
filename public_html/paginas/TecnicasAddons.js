@@ -1,3 +1,68 @@
+/**
+ * Tipos de Técnicas
+ * @type Array
+ */
+window.techTipos = [
+    {
+        "id" : "ataque",
+        "nome" : "Formas de Ataque",
+        "descricao" : [
+            "To do"
+        ]
+    },
+    {
+        "id" : "especial",
+        "nome" : "Formas Especiais",
+        "descricao" : [
+            "To do"
+        ]
+    },
+    {
+        "id" : "passiva",
+        "nome" : "Formas Passivas",
+        "descricao" : [
+            "To do"
+        ]
+    },
+    {
+        "id" : "estilo",
+        "nome" : "Estilos de Luta",
+        "descricao" : [
+            "To do"
+        ]
+    }
+];
+window.tiposHash = {};
+for (var i = 0; i < window.techTipos.length; i++) {
+    window.tiposHash[window.techTipos[i].id] = window.techTipos[i];
+}
+
+
+/**
+ * Conceitos!
+ * @type Array
+ */
+window.techConceitos = [
+    {
+        "id" : "stacking",
+        "nome" : "Acumulação de Bônus e Redutores",
+        "descricao" : "Bonus e Redutores se acumulam quando tem nomes idferentes blablabla",
+        "listado" : false,
+        "impresso" : true
+    }
+];
+window.conceitosHash = {};
+for (var i = 0; i < window.techConceitos.length; i++) {
+    window.conceitosHash[window.techConceitos[i].id] = window.techConceitos[i];
+}
+
+
+
+
+/**
+ * Addons de Técnicas! Todos!
+ * @type Array
+ */
 window.techAddons = 
 [
     {

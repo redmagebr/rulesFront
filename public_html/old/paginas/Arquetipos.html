@@ -1,3 +1,46 @@
+<script type='text/javascript'>
+            var $conteudo = $('#conteudo');
+            var $arquetipos = $conteudo.children('div.arquetipo');
+            var $arquetipo;
+            var arquetipos = [];
+            var arquetipo;
+            var $desc;
+            var k;
+            var getting;
+            var vantagem;
+            var nome;
+            for (var i = 0; i < $arquetipos.length; i++) {
+                $arquetipo = $($arquetipos[i]);
+                $($arquetipo.children('p.joguese')[0]).children('b').remove();
+                arquetipo = {
+                    'nome' : $($arquetipo.children('h1')[0]).text().trim(),
+                    'descricao' : [],
+                    'joguese' : $($arquetipo.children('p.joguese')[0]).text().trim(),
+                    'atributos' : $($arquetipo.children('p.atributos')[0]).text().trim(),
+                    'vantagens' : []
+                };
+                $desc = $($arquetipo.children('div.descricao')[0]).children('p');
+                for (k = 0; k < $desc.length; k++) {
+                    arquetipo.descricao.push($($desc[k]).text().trim());
+                }
+                $desc = $($arquetipo.children('div.vantagens')[0]).children('p');
+                for (k = 0; k < $desc.length; k++) {
+                    nome = $($($desc[k]).children('b')[0]).text().trim();
+                    $($($desc[k]).children('b')[0]).remove();
+                    vantagem = {
+                        'nome' : nome,
+                        'descricao' : $($desc[k]).text().trim()
+                    };
+                    arquetipo.vantagens.push(vantagem);
+                }
+                arquetipos.push(arquetipo);
+            }
+            console.log(arquetipos);
+            $('body').empty().append(
+                $('<pre />').html(JSON.stringify(arquetipos, undefined, 4))
+            );
+        </script>
+
 <div class='arquetipo quickListed'>
     <h1>Alquimista</h1>
     <div class='descricao'>
