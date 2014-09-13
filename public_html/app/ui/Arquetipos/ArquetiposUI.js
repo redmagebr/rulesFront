@@ -76,5 +76,7 @@ function ArquetiposUI (ui) {
             
             this.$conteudo.append($div);
         }
+        
+        this.$conteudo.scrollTop(0);
     };
 }

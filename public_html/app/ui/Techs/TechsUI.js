@@ -66,6 +66,8 @@ function TechsUI (ui) {
                 this.$conteudo.append($addon);
             }
         }
+        
+        this.$conteudo.scrollTop(0);
     };
     
     

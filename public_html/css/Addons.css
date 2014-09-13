@@ -17,6 +17,8 @@ div.addon > h1 {
 
 div.addon > h1 > img {
     vertical-align: top;
+    height: 32px;
+    width: 32px;
 }
 
 div.addon > div.conceitos {

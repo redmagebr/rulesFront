@@ -35,8 +35,8 @@ window.techTipos = [
         "id" : "ataque",
         "nome" : "Formas de Ataque",
         "descricao" : [
-            "Uma técnica de Ataque tem um custo de ativação, começando em 0% e somando a seus addons. Você paga o preço ao realizar o ataque, independente dele acertar ou não.",
-            "Uma técnica de ataque pode ter seu custo reduzido a 0%, mesmo com addons. Uma técnica de ataque sem addons é chamada de Ataque Básico."
+            "Uma técnica de Ataque tem um custo de ativação, começando em 0 MP e somando a seus addons. Você paga o preço ao realizar o ataque, independente dele acertar ou não.",
+            "Uma técnica de ataque pode ter seu custo reduzido a 0, mesmo com addons. Uma técnica de ataque sem addons é chamada de Ataque Básico."
         ],
         "conceitos" : [
             
@@ -56,8 +56,9 @@ window.techTipos = [
         "id" : "passiva",
         "nome" : "Formas Passivas",
         "descricao" : [
-            "Uma técnica passiva tem um custo por Rodada, começando em 0% e somando a seus addons. Isso significa que você paga o preço dela ao ativar ela e no início de cada um dos seus próximos turnos, se for manter ela ativa.",
-            "Uma técnica passiva pode ter seu custo reduzido a 0% MP por rodada."
+            "Uma técnica passiva tem um custo por Rodada, começando em 0 e somando a seus addons. Isso significa que você paga o preço dela ao ativar ela e no início de cada um dos seus próximos turnos, se for manter ela ativa.",
+            "Uma técnica passiva pode ter seu custo reduzido a 0 MP por rodada, mas não menos do que isso.",
+            "Um personagem pode ter mais de uma técnica passiva ativa ao mesmo tempo, mas não pode ter um mesmo addon ativo ao mesmo tempo entre uma ou mais técnicas passivas. Addons de passivas que não sejam únicos (que citem isso em sua descrição específica) podem estar ativos em mais de uma passiva ao mesmo tempo."
         ],
         "conceitos" : [
             
@@ -67,7 +68,9 @@ window.techTipos = [
         "id" : "estilo",
         "nome" : "Estilos de Luta",
         "descricao" : [
-            "To do"
+            "Um estilo de luta tem um custo por Rodada, começando em 0 e somando a seus addons. Isso significa que você paga o preço dela ao ativar ela e no início de cada um dos seus próximos turnos, se for manter ela ativa.",
+            "Um personagem só pode ter um único estilo de luta ativo ao mesmo tempo.",
+            "Bônus concedidos por estilos de luta são SEMPRE \"Bônus de Habilidade\" e não se acumulam entre si. Redutores de estilo de luta não tem tipo e se acumulam. Alguns efeitos de outros tipos de técnicas concedem Bônus de Habilidade, então tome cuidado para não pegar dois addons que não trabalham bem juntos."
         ],
         "conceitos" : [
             
@@ -942,6 +945,9 @@ window.techAddons =
         ],
         "nivel": 3
     },
+    /*
+     * Técnicas Especiais
+     */
     {
         "id": 204,
         "tipo": "especial",
@@ -1524,6 +1530,9 @@ window.techAddons =
         ],
         "nivel": 1
     },
+    /*
+     * Técnicas Passivas
+     */
     {
         "id": 360,
         "tipo": "passiva",
@@ -1867,5 +1876,251 @@ window.techAddons =
             "unicidade"
         ],
         "nivel": 2
+    },
+    /*
+     * Estilos de Luta
+     * ID Range: 5000~5999
+     */
+    {
+        "id" : 5000,
+        "nivel" : 1,
+        "tipo" : "estilo",
+        "nome" : "Golpes Rápidos e Fracos",
+        "nomeLimpo" : "Golpes Rapidos e Fracos",
+        "efeitos" : [
+            "+1 Ataque e -1 Dano",
+            "Aumenta o custo em 2 MP por rodada."
+        ],
+        "conceitos" : [
+            
+        ]
+    },
+    {
+        "id" : 5001,
+        "nivel" : 1,
+        "tipo" : "estilo",
+        "nome" : "Evasão de Combate",
+        "nomeLimpo" : "Evasao de Combate",
+        "efeitos" : [
+            "+1 Defesa",
+            "Aumenta o custo em 3 MP por rodada."
+        ],
+        "conceitos" : [
+            
+        ]
+    },
+    {
+        "id" : 5002,
+        "nivel" : 1,
+        "tipo" : "estilo",
+        "nome" : "Potência de Combate",
+        "nomeLimpo" : "Potencia de Combate",
+        "efeitos" : [
+            "+1 Dano",
+            "Aumenta o custo em 2 MP por rodada."
+        ],
+        "conceitos" : [
+            
+        ]
+    },
+    {
+        "id" : 5003,
+        "nivel" : 1,
+        "tipo" : "estilo",
+        "nome" : "Precisão de Combate",
+        "nomeLimpo" : "Precisao de Combate",
+        "efeitos" : [
+            "+1 Ataque",
+            "Aumenta o custo em 3 MP por rodada."
+        ],
+        "conceitos" : [
+            
+        ]
+    },
+    {
+        "id" : 5004,
+        "nivel" : 1,
+        "tipo" : "estilo",
+        "nome" : "Golpes Fortes e Lentos",
+        "nomeLimpo" : "Golpes Fortes e Lentos",
+        "efeitos" : [
+            "+1 Dano, -1 Ataque",
+            "Aumenta o custo em 1 MP por rodada."
+        ],
+        "conceitos" : [
+            
+        ]
+    },
+    {
+        "id" : 5005,
+        "nivel" : 1,
+        "tipo" : "estilo",
+        "nome" : "Força Descontrolada",
+        "nomeLimpo" : "Forca Descontrolada",
+        "efeitos" : [
+            "+2 Dano, -1 Ataque",
+            "Aumenta o custo em 4 MP por rodada."
+        ],
+        "conceitos" : [
+            
+        ]
+    },
+    {
+        "id" : 5006,
+        "nivel" : 1,
+        "tipo" : "estilo",
+        "nome" : "Cuidado Excessivo",
+        "nomeLimpo" : "Cuidado Excessivo",
+        "efeitos" : [
+            "+1 Defesa, -2 Dano",
+            "Aumenta o custo em 1 MP por rodada."
+        ],
+        "conceitos" : [
+            
+        ]
+    },
+    {
+        "id" : 5007,
+        "nivel" : 1,
+        "tipo" : "estilo",
+        "nome" : "Excesso de Poder",
+        "nomeLimpo" : "Excesso de Poder",
+        "efeitos" : [
+            "+2 Dano ",
+            "Aumenta o custo em 6 MP por rodada."
+        ],
+        "conceitos" : [
+            
+        ]
+    },
+    {
+        "id" : 5008,
+        "nivel" : 1,
+        "tipo" : "estilo",
+        "nome" : "Correr Riscos",
+        "nomeLimpo" : "Correr Riscos",
+        "efeitos" : [
+            "-2 RD Geral ",
+            "Diminui o custo em 3 MP por rodada."
+        ],
+        "conceitos" : [
+            
+        ]
+    },
+    {
+        "id" : 5009,
+        "nivel" : 1,
+        "tipo" : "estilo",
+        "nome" : "Guarda Aberta",
+        "nomeLimpo" : "Guarda Aberta",
+        "efeitos" : [
+            "-4 RD Geral ",
+            "Diminui o custo em 4 MP por rodada."
+        ],
+        "conceitos" : [
+            
+        ]
+    },
+    {
+        "id" : 5010,
+        "nivel" : 1,
+        "tipo" : "estilo",
+        "nome" : "Segurando Força",
+        "nomeLimpo" : "Segurando Forca",
+        "efeitos" : [
+            "-2 Dano ",
+            "Diminui o custo em 3 MP por rodada."
+        ],
+        "conceitos" : [
+            
+        ]
+    },
+    {
+        "id" : 5011,
+        "nivel" : 1,
+        "tipo" : "estilo",
+        "nome" : "Movimentação Dificultada",
+        "nomeLimpo" : "Movimentacao Dificultada",
+        "efeitos" : [
+            "-1 Defesa",
+            "Diminui o custo em 3 MP por rodada."
+        ],
+        "conceitos" : [
+            
+        ]
+    },
+    {
+        "id" : 5012,
+        "nivel" : 1,
+        "tipo" : "estilo",
+        "nome" : "Adepto de Batalha",
+        "nomeLimpo" : "Adepto de Batalha",
+        "efeitos" : [
+            "Receba +1 em testes de Ataque e Defesa, contanto que o nível base (sem bônus) do atributo sendo rolado não seja maior do que sua Sabedoria de Combate.",
+            "Aumenta o custo em 2 MP por rodada."
+        ],
+        "conceitos" : [
+            
+        ]
+    },
+    {
+        "id" : 5013,
+        "nivel" : 1,
+        "tipo" : "estilo",
+        "nome" : "Maestria de Combate",
+        "nomeLimpo" : "Maestria de Combate",
+        "efeitos" : [
+            "Se seus dois maiores atributos de dano possuirem o mesmo nível, receba +1 em rolagens de dano que envolvam qualquer um deles. Se uma rolagem de dano envolver os dois atributos juntos, receba +2 Dano ao invés disso.",
+            "Aumenta o custo em 2 MP por rodada."
+        ],
+        "conceitos" : [
+            
+        ]
+    },
+    {
+        "id" : 5014,
+        "nivel" : 1,
+        "tipo" : "estilo",
+        "nome" : "Posição Fortificada",
+        "nomeLimpo" : "Posicao Fortificada",
+        "efeitos" : [
+            "Ao ativar esse estilo de luta, seu HP Atual e Máximo aumentam em 2. Isso não conta como uma cura.",
+            "Ao desativar esse estilo de luta, seu HP Atul e Máximo diminuem em 2. Isso não conta como um dano, mas se seu HP ficar inferior a 1, isso deverá ser tratado normalmente.",
+            "Aumenta o custo em 2 MP por rodada."
+        ],
+        "conceitos" : [
+            
+        ]
+    },
+    {
+        "id" : 5015,
+        "nivel" : 1,
+        "tipo" : "estilo",
+        "nome" : "Fragilidade",
+        "nomeLimpo" : "Fragilidade",
+        "efeitos" : [
+            "Quando esse estilo for ativado, reduza seu HP máximo e atual em 3, isso não conta como um dano, mas pode reduzir seu HP para baixo de 1 e isso deve ser tratado normalmente se acontecer.",
+            "Quando esse estilo for desativado, aumente seu HP máximo em 3, seu HP atual não é modificado.",
+            "Aumenta o custo em 3 MP por rodada."
+        ],
+        "conceitos" : [
+            
+        ]
+    },
+    {
+        "id" : 5016,
+        "nivel" : 1,
+        "tipo" : "estilo",
+        "nome" : "Domínio Absoluto",
+        "nomeLimpo" : "Dominio Absoluto",
+        "efeitos" : [
+            "Enquanto esse estilo estiver ativo, você pode reduzir qualquer custo de MP sendo pago durante o seu turno em 1, uma vez.",
+            "Esse addon pode ser adicionado duas vezes no mesmo estilo de luta, passando a permitir que a redução aconteça duas vezes.",
+            "De uma maneira simplificada: Domínio Absoluto permite que você economize 1 MP por rodada.",
+            "Aumenta o custo em 3 MP por rodada."
+        ],
+        "conceitos" : [
+            
+        ]
     }
 ];
