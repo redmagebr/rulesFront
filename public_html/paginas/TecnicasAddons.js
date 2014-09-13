@@ -1,4 +1,22 @@
 /**
+ * 
+ * Changelog
+ * @type Array
+ */
+window.techChangelog = [
+    {
+        "version" : [3, 0],
+        "description" : "Website novo lançado. Adicionar mudanças 2.7 para 3.0"
+    }
+].sort(function (a, b) {
+    if (a.version[0] > b.version[0]) return -1;
+    if (a.version[0] < b.version[0]) return 1;
+    if (a.version[1] > b.version[1]) return -1;
+    if (a.version[1] < b.version[1]) return 1;
+    return 0;
+});
+
+/**
  * Tipos de Técnicas
  * @type Array
  */
@@ -8,6 +26,9 @@ window.techTipos = [
         "nome" : "Formas de Ataque",
         "descricao" : [
             "To do"
+        ],
+        "conceitos" : [
+            
         ]
     },
     {
@@ -15,6 +36,9 @@ window.techTipos = [
         "nome" : "Formas Especiais",
         "descricao" : [
             "To do"
+        ],
+        "conceitos" : [
+            
         ]
     },
     {
@@ -22,6 +46,9 @@ window.techTipos = [
         "nome" : "Formas Passivas",
         "descricao" : [
             "To do"
+        ],
+        "conceitos" : [
+            
         ]
     },
     {
@@ -29,6 +56,9 @@ window.techTipos = [
         "nome" : "Estilos de Luta",
         "descricao" : [
             "To do"
+        ],
+        "conceitos" : [
+            
         ]
     }
 ];
