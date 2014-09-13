@@ -13,11 +13,16 @@ function TechsUI (ui) {
     
     this.load = function () {
         var cbs = function () {
-            window.ui.unblock();
             window.techs.fill();
+            window.ui.unblock();
         };
         
         var cbe = function () {
+            if (window.techAddons !== undefined) {
+                window.techs.fill();
+                window.ui.unblock();
+                return;
+            }
             window.ui.unblock();
             window.ui.showError();
         };

@@ -9,13 +9,8 @@ window.techChangelog = [
         "description" : [
             "Door Knocker passa a ser única junto de um buff e um nerf ao mesmo tempo para fazer isso ficar melhor.",
             "Overload refeita completamente.",
-            "Buracos de Último Recurso tapados."
-        ]
-    },
-    {
-        "version" : [2,7],
-        "description" : [
-            "Literally what."
+            "Buracos de Último Recurso tapados.",
+            "Aviso em Mountain's Stand adicionado."
         ]
     }
 ].sort(function (a, b) {
@@ -1421,7 +1416,7 @@ window.techAddons =
         "nomeLimpo": "Restauracao - Mountain's Stand",
         "efeitos": [
             "Você gasta um ponto de stamina e se cura na quantidade normal + 1d4. Isso consome o turno do personagem.",
-            "Você só pode ativar Suspiro da Montanha nos momentos em que poderia utilizar Buscar Coragem.",
+            "Restauração - Mountain's Stand só pode ser utilizada quando o personagem possui alguma passiva com addons da família Protection ativa. Caso contrário, mesmo que uma técnica com Mountain's Stand seja criada, ela não poderá ser utilizada.",
             "Custo de ativação desse efeito é 2 MP."
         ],
         "conceitos": [
