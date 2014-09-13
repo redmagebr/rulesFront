@@ -11,6 +11,7 @@ and open the template in the editor.
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" type="text/css" href="css/Geral.css" />
+        <link rel="stylesheet" type="text/css" href="css/Changelog.css" />
         <!-- Alegreya Font-Face Licensed under SIL Open Font License v1.10. License found in CSS. -->
         <link rel="stylesheet" type="text/css" media="all" href="http://redpg.com.br/css/fontface/alegreya2.css">
     </head>
@@ -23,7 +24,7 @@ and open the template in the editor.
             <div id="titleBar">
                 <a href="#">Regras</a>
                 -
-                <a href="#">Addons</a>
+                <a id="addons" href="#">Addons</a>
                 -
                 <a href="#">Raças</a>
                 -
@@ -32,7 +33,20 @@ and open the template in the editor.
                 <a href="#">Vantagens e Desvantagens</a>
             </div>
             <div id="content">
-                
+                <div id="changelog">
+                    <h1>Changelog</h1>
+                    <h2>3.0</h2>
+                    <ul>
+                        <li>Mudança 1</li>
+                        <li>Mudança 2</li>
+                    </ul>
+                    <a id="moreChangelog" onclick="$(this).parent().children('.oldChanges').toggle()">Mostrar mudanças antigas</a>
+                    <h2 class="oldChanges">2.7</h2>
+                    <ul class="oldChanges">
+                        <li>Mudança 1</li>
+                        <li>Mudança 2</li>
+                    </ul>
+                </div>
             </div>
         </div>
         
@@ -44,6 +58,7 @@ and open the template in the editor.
             <script type="text/javascript" src="app/Application.js"></script>
             <script type="text/javascript" src="app/ui/UI.js"></script>
             <script type="text/javascript" src="app/ui/Techs/TechsUI.js"></script>
+            <script type="text/javascript" src="app/ui/Changelog/ChangelogUI.js"></script>
             <script type="text/javascript" src="paginas/TecnicasHandler.js"></script>
         <!-- My Scripts -->
         <!-- Preload Pages -->

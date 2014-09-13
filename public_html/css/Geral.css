@@ -77,3 +77,22 @@
     from {-webkit-transform: rotate(0deg);}
     to   {-webkit-transform: rotate(359deg);}
 }
+
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    border-radius: 0px;
+    background-color: #b9b9b9;
+}
+ 
+::-webkit-scrollbar-thumb {
+    border-radius: 0px;
+    background-color: #626262;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    cursor: pointer;
+}

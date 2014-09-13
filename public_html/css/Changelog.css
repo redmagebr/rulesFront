@@ -1,0 +1,56 @@
+#changelog > h1 {
+    font-size: 1em;
+    text-align: center;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+#changelog > h2 {
+    font-size: 0.9em;
+    text-align: left;
+    text-indent: 1em;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+#changelog > ul {
+    margin: 0px;
+    padding: 0px;
+    list-style-position: inside;
+    list-style-type: square;
+}
+
+#changelog > ul > li {
+    margin: 0px;
+    padding-left: 2em;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-size: 0.9em;
+}
+
+#changelog > ul > li:hover {
+    background-color: #ededed;
+}
+
+#moreChangelog {
+    color: #0600d3;
+    font-weight: bold;
+    text-align: center;
+    display: block;
+    margin: 0px;
+    padding: 5px;
+}
+
+#moreChangelog:hover {
+    color: #5752ff;
+    cursor: pointer;
+    background-color: #ebebeb;
+}
+
+#moreChangelog:active {
+    color: #2520cd;
+}
+
+.oldChanges {
+    display: none;
+}

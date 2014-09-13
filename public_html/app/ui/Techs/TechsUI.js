@@ -1,9 +1,14 @@
 function TechsUI (ui) {
     this.ui = ui;
     window.techs = this;
-    this.handler = null;
     this.ajax = new AjaxTechs(this);
-    this.stale = false;;
+    this.stale = false;
+    this.$conteudo = $('#content');
+    
+    $('#addons').on('click', function (e) {
+        e.preventDefault();
+        window.techs.loadTechs();
+    });
     
     this.loadTechs = function () {
         var cbs = function () {
@@ -18,6 +23,7 @@ function TechsUI (ui) {
         
         window.ui.block();
         if (!this.stale) {
+            this.stale = true;
             cbs();
             return;
         }
@@ -26,6 +32,9 @@ function TechsUI (ui) {
     };
     
     this.fillTechs = function () {
-        this.handler = new TecnicasHandler(window.techAddons);
+        var handler = new TecnicasHandler(window.techAddons);
+        var $changelog = window.app.ui.changelog.$createChangelog(window.techChangelog);
+        
+        this.$conteudo.empty().append($changelog);
     };
 }

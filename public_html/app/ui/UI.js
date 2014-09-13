@@ -1,7 +1,9 @@
 function UI (app) {
     this.app = app;
+    window.ui = this;
     
     this.techs = new TechsUI(this);
+    this.changelog = new ChangelogUI(this);
     
     this.$loading = $('#loadingPage').fadeOut();
     this.loadCount = 0;

@@ -6,7 +6,17 @@
 window.techChangelog = [
     {
         "version" : [3, 0],
-        "description" : "Website novo lançado. Adicionar mudanças 2.7 para 3.0"
+        "description" : [
+            "Door Knocker passa a ser única junto de um buff e um nerf ao mesmo tempo para fazer isso ficar melhor.",
+            "Overload refeita completamente.",
+            "Buracos de Último Recurso tapados."
+        ]
+    },
+    {
+        "version" : [2,7],
+        "description" : [
+            "Literally what."
+        ]
     }
 ].sort(function (a, b) {
     if (a.version[0] > b.version[0]) return -1;
@@ -248,10 +258,10 @@ window.techAddons =
         "nome": "Door Knocker",
         "nomeLimpo": "Door Knocker",
         "efeitos": [
-            "Você recebe -1 em testes de acerto  nessa técnica.",
-            "Essa técnica ignora 25% das resistências do alvo. Repetir esse addon em uma mesma técnica acumula tanto o redutor quanto o bônus. A porcentagem de resistência ignorada por vários desse addon é Somada, não multiplicada: dois Door Knockers resultam em 50% de penetração.",
+            "Durante a criação dessa técnica, escolha 25%, 50%, 75% ou 100%. Ataques realizados com essa técnica ganham essa quantidade de penetração.",
+            "Ataques com essa técnica também recebem -1, -2, -3, -4 em testes de acerto, de forma respectiva à porcentagem de penetração escolhida.",
             "Esse addon não pode ser usado lado-a-lado com addons que fornecem bônus em testes de acerto ou testes contra defesa. Esse addon ainda pode ser usado caso o personagem esteja recebendo o bônus de outra fonte (como uma passiva ou um buff com duração).",
-            "Aumente o custo da técnica em 2."
+            "De acordo com a penetração escolhida para essa técnica, aumente o custo dela em 3, 5, 7 ou 9 MP."
         ],
         "conceitos": [
 
@@ -878,7 +888,8 @@ window.techAddons =
             "Se o usuário estiver com menos de 20% do HP máximo quando utilizar a técnica, ela não erra. Se o combate não terminar nesse turno, o usuário tem seu HP reduzido a 0 e é nocauteado, independente de quaisquer outros efeitos que estejam ativos. Se o combate terminar, o HP do usuário é reduzido para 1.",
             "O uso da técnica quando esse efeito é ativado envolve uma cena que precisa deixar claro para o inimigo e todos os outros jogadores que essa técnica é um Último Recurso.",
             "Aumenta custo da técnica em 4.",
-            "Último Recurso não pode ser usada em um contra-ataque."
+            "Último Recurso não pode ser usada em um contra-ataque.",
+            "Último Recurso não pode ser usada junto de addons que lidem com testes de acerto de forma alguma. Também não pode ser usada junto de addons que impeçam o alvo de realizar ações padrão como resposta ao ataque."
         ],
         "conceitos": [
 
@@ -1272,16 +1283,17 @@ window.techAddons =
         "nome": "Overload",
         "nomeLimpo": "Overload",
         "efeitos": [
-            "Ao ativar esse efeito, receba um bônus de +2 em rolagens dos 4 atributos escolhidos(escolhidos na criação dessa técnica)",
-            "Para ativar essa técnica, você perde HP num dano recebido que é baseado no seu maior atributo + 2. Além disso, gaste 10 MP.",
-            "Durante cada um de seus turnos você pode decidir manter essa técnica ativa ou não. Manter essa técnica ativa resulta em um gasto de 4 MP e metade da perda de HP anterior.",
-            "O HP perdido por essa técnica é considerado um dano recebido e ele não pode ser aumentado nem diminuído de nenhuma outra forma, sendo um dano direto.",
-            "Quando os efeitos de Overload acabam, você fica exausto, recebendo -2 em todos seus atributos de combate acima de 0 até o fim do combate. Overload não pode ser ativada outra vez nesse combate."
+            "Você pode ativar essa técnica ao realizar alguma ação de combate. Escolha um número de 1 a 3 para X ao ativar esse efeito. X não pode ser igual ou maior ao seu nível.",
+            "Como um custo para ativar esse efeito, você paga (4 + X) MP e recebe um dano direto de (Nível + X) HP. O dano conta como um dano para outros efeitos e não pode ser reduzido.",
+            "Você recebe um Bônus de +X em testes de combate e um Bônus de +(2 * X) dano até o término daquela ação, que não pode durar mais do que um turno.",
+            "Após ativar Overload em alguma ação, o personagem entra no estado 'Overloaded'.",
+            "- Overloaded: Você está explodindo poder. O personagem não pode ser curado de maneira alguma. Realizar qualquer ação de combate sem ativar Overload cancela esse efeito e faz o personagem entrar no estado 'Exausto'.",
+            "- Exausto: Você usou todas as suas forças. Receba -1 em qualquer Teste e -2 Dano. Esse efeito dura até o personagem poder descansar, não podendo ser removido antes do final do combate."
         ],
         "conceitos": [
 
         ],
-        "nivel": 3
+        "nivel": 2
     },
     {
         "id": 370,
