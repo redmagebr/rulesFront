@@ -22,38 +22,12 @@ and open the template in the editor.
         </div>
         
         <div id="window">
-            <div id="titleBar">
-                <a href="#">Regras</a>
+            <div id="titleBar"><a id="addonsButton" href="#">Addons</a>
                 -
-                <a id="addons" href="#">Addons</a>
-                -
-                <a href="#">Raças</a>
-                -
-                <a href="#">Arquétipos</a>
-                -
-                <a href="#">Vantagens e Desvantagens</a>
+                <a id="arquetiposButton" href="#">Arquétipos</a>
             </div>
             <div id="content">
-                <div id="addons">
-                    <div id="addonX" class="addon" data-nivel="X">
-                        <div class="conceitos">
-                            <h1>Conceitos</h1>
-                            <a>Conceito 1</a>
-                            <a>Conceito Maior</a>
-                            <a>Efeitos Acumulativos</a>
-                        </div>
-                        <h1>
-                            <img src="http://techs.redpg.com.br/icon/Break%20Weapon.png" />
-                            Break Weapon
-                            -
-                            para nível X e acima
-                        </h1>
-                        <ul>
-                            <li>Efeito 1</li>
-                        </ul>
-                        <span></span>
-                    </div>
-                </div>
+                Clique em um dos links acima para ver o conteúdo!
             </div>
         </div>
         
@@ -62,17 +36,30 @@ and open the template in the editor.
         <!-- My scripts -->
             <script type="text/javascript" src="app/ajax/Ajax.js"></script>
             <script type="text/javascript" src="app/ajax/AjaxTechs.js"></script>
+            <script type="text/javascript" src="app/ajax/AjaxArquetipos.js"></script>
             <script type="text/javascript" src="app/Application.js"></script>
             <script type="text/javascript" src="app/ui/UI.js"></script>
             <script type="text/javascript" src="app/ui/Techs/TechsUI.js"></script>
+            <script type="text/javascript" src="app/ui/Arquetipos/ArquetiposUI.js"></script>
             <script type="text/javascript" src="app/ui/Changelog/ChangelogUI.js"></script>
             <script type="text/javascript" src="paginas/TecnicasHandler.js"></script>
         <!-- My Scripts -->
         <!-- Preload Pages -->
             <script type="text/javascript" src="paginas/TecnicasAddons.js"></script>
+            <script type="text/javascript" src="paginas/Arquetipos.js"></script>
         <!-- Preload Pages -->
         <script type='text/javascript'>
             window.app = new Application();
+            function inIframe () {
+                try {
+                    return window.self !== window.top;
+                } catch (e) {
+                    return true;
+                }
+            }
+//            if (inIframe) {
+//                $('html').addClass('goNuts');
+//            }
         </script>
     </body>
     

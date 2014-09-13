@@ -1,4 +1,19 @@
-window.arquetipos = [
+window.arquetiposChangelog = [
+    {
+        "version" : [3, 0],
+        "description" : [
+            "Website criado. Alguma pobre alma precisa verificar se todos os arquétipos ainda estão up to date."
+        ]
+    }
+].sort(function (a, b) {
+    if (a.version[0] > b.version[0]) return -1;
+    if (a.version[0] < b.version[0]) return 1;
+    if (a.version[1] > b.version[1]) return -1;
+    if (a.version[1] < b.version[1]) return 1;
+    return 0;
+});
+
+window.arquetiposArray = [
     {
         "nome": "Alquimista",
         "descricao": [
@@ -8,11 +23,11 @@ window.arquetipos = [
         "atributos": "Magia ou Elemento",
         "vantagens": [
             {
-                "nome": "Trabalho Duro:",
+                "nome": "Trabalho Duro",
                 "descricao": "Você possui aptidões naturais para trabalhar com Alquimia e componentes químicos, assim, esta vantagem concede um bônus de +2 em testes de criação de itens pelo            Emprego: Alquimia."
             },
             {
-                "nome": "Apotecário:",
+                "nome": "Apotecário",
                 "descricao": "Uma vez por sessão ou dia (o que demorar mais para acontecer) você pode puxar uma poção que possua um efeito narrativo relativamente simples voltado para um propósito único. Essa poção não pode ser usada em combate para fins de aumentar HP, MP ou coisas que o influenciem diretamente. Exemplos: um frasco que faz crescer uma densa vegetação entre o usuário e os inimigos, impossibilitando que eles o alcancem dali, permitindo que o grupo fuja, ou mesmo uma poção que cria um efeito ilusório de fogo intenso, assustando qualquer ameaça que tente se aproximar (sem saberem que é um fogo falso). O mestre pode vetar um efeito se achar que ele não corresponde às regras ou foge dos objetivos dessa vantagem."
             }
         ]
@@ -27,15 +42,15 @@ window.arquetipos = [
         "atributos": "O atributo principal varia de acordo com o tipo de artefato que ele porta. O artefato deve ser criado em conjunto com a história do personagem, e caso ele não queira ou não ache necessário, não é obrigatória a definição complexa do real poder que está adormecido no item (isso pode ser algo que o mestre possa desenvolver caso o jogador não queira decidir por si próprio).",
         "vantagens": [
             {
-                "nome": "O Poder do Cinto:",
+                "nome": "O Poder do Cinto",
                 "descricao": "O Arauto carrega consigo um artefato especial. O Arauto tem todos seus atributos de combate reduzidos em -1 (inclui Ataque e Defesa), para um mínimo de 0.  O jogador pode decidir reduzir seus atributos para 0 sem o artefato, se relevante. Ele deve ativar o seu artefato para poder utilizar seus atributos (como uma ação grátis que pode ser realizada na Fase de Preparação). O jogador também pode decidir incluir alguns atributos-teste e/ou perícias nessa separação, se quiser. O artefato não precisa ser um cinto, esta é só a definição da vantagem."
             },
             {
-                "nome": "Ultimate Life Form:",
+                "nome": "Ultimate Life Form",
                 "descricao": "Em um marco importante da história, você pode ter aprendido o segredo da sua forma final, junto do seu artefato. Ao ativar sua forma final, você pode transformar uma luta 1x1 em uma batalha cinemática (seguindo as regras apropriadas para essas lutas). Inimigos de nível igual ou superior ao seu são muito fortes para serem enfrentados dessa maneira. Você também pode incluir sua Forma Final em suas técnicas a partir desse ponto da história, mas isso não é obrigatório nem te dá bônus extras."
             },
             {
-                "nome": "Segredos Antigos:",
+                "nome": "Segredos Antigos",
                 "descricao": "O seu artefato possui muitos segredos místicos que você está apenas começando a despertar. A cada novo nível que você adquirir, você ganha 1 ponto de habilidade a mais do que o normal."
             }
         ]
@@ -49,11 +64,11 @@ window.arquetipos = [
         "atributos": "Arma",
         "vantagens": [
             {
-                "nome": "Obsevador Nato:",
+                "nome": "Obsevador Nato",
                 "descricao": "Criaturas ou alvos quaisquer não podem se esconder de seus sentidos. Caso alguém esteja se escondendo de você (ou no local onde está), você sempre consegue encontrar pistas ou falhas na manobra para encontrar tal alvo muito mais facilmente que qualquer outra pessoa conseguiria. Esses efeitos não se aplicam em combate e também funcionam para aparatos tecnológicos ou magia."
             },
             {
-                "nome": "Concentração Atroz:",
+                "nome": "Concentração Atroz",
                 "descricao": "Após anos e anos de treinamento, os movimentos do arqueiro são extremamente precisos. Você é capaz de acertar o olho de um rato a muitos metros de distância, e torna testes menores de precisão irrelevantes."
             }
         ]
@@ -67,7 +82,7 @@ window.arquetipos = [
         "atributos": "Arma",
         "vantagens": [
             {
-                "nome": "Débito de Sangue:",
+                "nome": "Débito de Sangue",
                 "descricao": "Enquanto existirem pelo menos duas pessoas no mundo, alguém vai querer alguém morto. O assassino sempre sabe como conseguir alvos e pode conseguir um sem a necessidade de testes, contanto que esteja em uma cidade/vilarejo. Um assassino não pode conseguir um alvo novo enquanto não tiver se livrado do último. Se livrar de um alvo dá uma quantia de dinheiro para o assassino apropriado ao seu nível. O nível do assassino também define a dificuldade do trabalho."
             },
             {
@@ -85,11 +100,11 @@ window.arquetipos = [
         "atributos": "Liderança ou Magia",
         "vantagens": [
             {
-                "nome": "Harmonia Improvisada:",
+                "nome": "Harmonia Improvisada",
                 "descricao": "Você começa a tocar uma música improvisada (ela precisa ter uma breve letra para acompanhar a canção, mas não precisa ser nenhuma obra de arte) e imediatamente todos os ouvintes do local começam a prestar atenção em você, num raio de até 10 metros. Os ouvintes suspendem todas as suas atividades atuais e passam a observá-lo até que sua canção acabe ou até que o efeito vá lentamente se dissipando. Isso não funciona em combate."
             },
             {
-                "nome": "Bard's Song:",
+                "nome": "Bard's Song",
                 "descricao": "Por cantar uma música relacionada ao teste que está fazendo (você precisa inventar uma pequena letra, não precisa ser uma obra de arte, mas precisa existir) você recebe até +4 em um teste de perícia, com um mínimo de +2. Você também pode cantar músicas relacionadas ao teste de aliados, dando um bônus de +2 para eles. Pode atrapalhar em certas situações. O tamanho do bônus varia de acordo com a qualidade do Poema/Música em questão. “Minta, minta para o rei~! Faça ele de bobo e nos salve da lei~!”"
             }
         ]
@@ -103,11 +118,11 @@ window.arquetipos = [
         "atributos": "Arma",
         "vantagens": [
             {
-                "nome": "Implacável:",
+                "nome": "Implacável",
                 "descricao": "Se você estiver com 2 de HP ou menos mas ainda for capaz de agir e lutar, você entra num estado corporal e espiritual que transcendem a normalidade. Assim, caso seja reduzido para 0 de HP ou menos, você automaticamente passa nos dois primeiros testes de morte (seja de Força de Vontade ou Constituição)."
             },
             {
-                "nome": "Fúria Renovada:",
+                "nome": "Fúria Renovada",
                 "descricao": "Uma vez por dia ou episódio (o que demorar mais para acontecer) você pode entrar num estado de fúria mediante à uma situação tensa ou que necessite de tal mobilização psíquica. Enquanto neste estado, você ignora qualquer dificuldade de terreno para se mover, não ganhando penalidades nisso. Também pode se mover com o dobro de velocidade normal, para cenas narrativas isso significa que você é quase um perseguidor implacável. Durante esse tempo você também não pode sofrer efeitos de dominação mental ou alteração de emoções, muito menos ser pego de surpresa em combate (portanto, se um combate iniciar e você estiver em modo de fúria previamente, você age primeiro que todos independente dos resultados). A fúria dura 1d4 rodadas ou 5 minutos."
             }
         ]
@@ -122,15 +137,15 @@ window.arquetipos = [
         "atributos": "Arma ou Tecnologia",
         "vantagens": [
             {
-                "nome": "Líder do Bando:",
+                "nome": "Líder do Bando",
                 "descricao": "Orgulho é o que separa o amador do profissional, e um caçador é movido pela sua vontade de superar qualquer obstáculo. Sempre que um caçador estiver realizando testes de uma forma competitiva com outro personagem ou criatura, ele recebe +1 Bônus de Arquétipo em testes de atributos-teste e +2 Bônus de Arquétipo em testes de perícia com atributo-teste. Estar realizando exatamente o mesmo teste que o resto do grupo e ao mesmo tempo conta como  atividade competitiva."
             },
             {
-                "nome": "Combatente Alfa:",
+                "nome": "Combatente Alfa",
                 "descricao": "O caçador é um mestre de armas e está sempre pronto para um combate com sua presa. Todas as armas passam a funcionar para seu maior atributo de dano, independente de qual arma seja e qual o atributo de dano do caçador seja, ele faz funcionar. O caçador também pode utilizar qualquer arma improvisada como uma arma de nível 0 para seu atributo de dano principal."
             },
             {
-                "nome": "Rei da Selva:",
+                "nome": "Rei da Selva",
                 "descricao": "A mera presença de um caçador tão grandioso é o suficiente para amedrontar criaturas de todos os tipos. Animais de nível igual ou inferior ao do caçador não irão atacar nem atrapalhar o grupo em nenhuma hipótese, mesmo que sejam treinados. Eles sabem muito bem que não teriam como vencer."
             }
         ]
@@ -144,11 +159,11 @@ window.arquetipos = [
         "atributos": "Arma",
         "vantagens": [
             {
-                "nome": "Patrono (Vantagem Opcional):",
+                "nome": "Patrono (Vantagem Opcional)",
                 "descricao": "Uma grande organização, empresa, governo ou NPC poderoso ajuda você. Dentro de certos limites um Patrono pode fornecer transporte, equipamento e informação para você. Um Patrono também pode ajudar e enviar reforços quando você mais precisar. Ter um Patrono também significa que você precisa ser leal e seguir ordens. Muitas vezes vai precisar cumprir missões especiais para o seu Patrono."
             },
             {
-                "nome": "Vanguarda:",
+                "nome": "Vanguarda",
                 "descricao": "Você pode não ser o melhor protetor de todos e pode nem sempre estar em todos os lugares, mas fará de tudo para proteger seus aliados mais estimados. Caso esteja na frente do grupo durante uma exploração, movimentação ou cena, você pode agir como uma força de aviso e alerta para o grupo, permitindo que eles ganhem um bônus de +2 na primeira rolagem de qualquer coisa que possa vir a acontecer nesse caso, você também ganha esse bônus, mas reduzido para +0. Esse bônus só acontece novamente depois de um certo tempo (a critério do mestre)."
             }
         ]
@@ -162,11 +177,11 @@ window.arquetipos = [
         "atributos": "Arma ou Magia",
         "vantagens": [
             {
-                "nome": "Sua Reputação te Precede:",
+                "nome": "Sua Reputação te Precede",
                 "descricao": "Ao lidar com capangas ou outros empregados de ranking baixo, todos os seus testes de intimidação ficam mais fáceis (tem sua dificuldade reduzida em uma categoria na tabela de dificuldades)."
             },
             {
-                "nome": "O mundo é dos espertos:",
+                "nome": "O mundo é dos espertos",
                 "descricao": "Se você estiver com 2 de HP ou menos, mas de pé e capaz de agir sem problemas, você pode escapar do combate de alguma forma apropriada e sem chance de falhar. Assim que o Cavaleiro Negro percebe que a situação não está em seu favor, ele se manda... Viver para lutar outro dia. Isso é considerado uma Derrota por Rendição caso seja relevante. Essa vantagem só pode ser usada se outros integrantes do seu grupo estiverem segurando os inimigos até o limite do bom senso. Exemplos: Em uma luta de 2x5 até pode funcionar você sair e deixar seu último aliado sozinho, mas em uma 2x20 não. Da mesma forma, em uma luta 1x1 seria impossível fugir sorrateiramente."
             }
         ]
@@ -180,11 +195,11 @@ window.arquetipos = [
         "atributos": "Liderança ou Arma",
         "vantagens": [
             {
-                "nome": "Símbolos Sagrados:",
+                "nome": "Símbolos Sagrados",
                 "descricao": "Qualquer símbolo ou objeto feito em honra ao deus escolhido na criação do personagem se torna um símbolo sagrado, podendo funcionar como uma arma para seus ataques que envolvem a sua divindade. Símbolos sagrados nunca estão em nível inferior ao seu, mas símbolos realmente bem acabados ou poderosos podem ter nível superior."
             },
             {
-                "nome": "Religioso:",
+                "nome": "Religioso",
                 "descricao": "Você deve seguir as regras da religião apropriada ao seu personagem. Você não ganha pontos por isso e não pode tomar a desvantagem religioso da forma normal. Essa desvantagem não é tão pesada quanto a normal, então você pode ir até o ponto em que estiver confortável ao definir as regras."
             }
         ]
@@ -198,11 +213,11 @@ window.arquetipos = [
         "atributos": "Arma",
         "vantagens": [
             {
-                "nome": "Friends in High Places:",
+                "nome": "Friends in High Places",
                 "descricao": "Sempre que você chegar atrasado e do alto para salvar alguém/um grupo de pessoas, você recebe sucesso automático nos três primeiros testes que forem possíveis para você dos atributos-teste: Força ou Agilidade."
             },
             {
-                "nome": "Respeito:",
+                "nome": "Respeito",
                 "descricao": "O personagem diminui uma dificuldade em seus testes de Diplomacia na categoria na tabela de dificuldades, quando lidando com aliados, NPCs ou criaturas que entendam sua língua."
             }
         ]
@@ -216,15 +231,15 @@ window.arquetipos = [
         "atributos": "Arma, Magia ou Liderança",
         "vantagens": [
             {
-                "nome": "Como se fosse minha casa:",
+                "nome": "Como se fosse minha casa",
                 "descricao": "Qualquer teste para busca de alimentos em uma área selvagem que fosse exigir um teste possível de até dificuldade média (15) passa a ser sucesso automático, você conhece a natureza como a palma da sua mão. O mesmo vale para testes para não se perder ou encontrar alguém que passou por ali."
             },
             {
-                "nome": "O Filho Pródigo Retorna:",
+                "nome": "O Filho Pródigo Retorna",
                 "descricao": "Quando em uma selva, pântano ou floresta realmente densa, você evita perigos e perigos evitam você. As árvores parecem guiar o seu caminho e os predadores se afastam. Criaturas mágicas da floresta também podem te auxiliar, a depender do misticismo do local."
             },
             {
-                "nome": "Comandar Plantas:",
+                "nome": "Comandar Plantas",
                 "descricao": "Você pode se concentrar para fazer plantas morrerem ou florescerem. Seu toque pode levar uma flor murcha a algo com beleza sem preço. Em poucas semanas, você poderia transformar uma pequena área de um deserto em um Oasis, usando apenas o seu dom."
             }
         ]
@@ -238,11 +253,11 @@ window.arquetipos = [
         "atributos": "Elemento",
         "vantagens": [
             {
-                "nome": "Ascendência Elemental:",
+                "nome": "Ascendência Elemental",
                 "descricao": "Ao criar o seu personagem, escolha um elemento. Você só poderá usar esse elemento até obter outras formas de manipular os que não detêm controle. Você pode usar esse elemento para qualquer coisa que desejar em questões interpretativas, como formar um cantil de gelo, um escudo temporário de pedra (para fins que não sejam de combate), uma corda de trovões para segurá-lo num penhasco ou mesmo um furacão de ar para prevenir que você e seus aliados recebam dano por queda numa situação especial."
             },
             {
-                "nome": "Espírito Elemental:",
+                "nome": "Espírito Elemental",
                 "descricao": "Esta vantagem usa o elemento escolhido pela vantagem anterior durante a criação do personagem (Fogo, Eletricidade, Ar, Gelo, Água, Bio ou Terra). Você pode ter um objeto que é sua posse inquestionável encantado para não poder ser utilizado por outras pessoas. Você pode definir as especificidades desse encantamento, mas como exemplos: uma espada encantada por água pode se desfazer e passar pelas mãos dos outros quando tentarem a segurar. Uma espada encantada por terra pode aumentar o próprio peso em várias toneladas. O fato é que se alguém que não for você tentar usar o item encantado, não vai poder."
             }
         ]
@@ -256,7 +271,7 @@ window.arquetipos = [
         "atributos": "Tecnologia",
         "vantagens": [
             {
-                "nome": "Inventor:",
+                "nome": "Inventor",
                 "descricao": "Você pode criar uma invenção de tamanho pequeno / médio com um único propósito objetivo e bem definido para justificar sua existência. Essa invenção dura 1d4 horas ao seu lado e eventualmente para de funcionar, perdendo seu funcionamento. A invenção não pode ser usada em combate e para fins de testes sempre utilizam o atributo Inteligência, no valor sendo igual ao do engenheiro que a criou. Sua resistência é baixa e qualquer golpe simples a destrói facilmente. A invenção pode ter diversas funções simples, como: iluminar uma área enquanto se move, funcionar como um detector de metais, ser um sonar, servir café, aspirar pó, suportar peso, etc. O engenheiro sempre tem pequenas peças desimportantes em seus bolsos/mochila para criar uma invenção simples do tipo. O personagem pode fazer duas invenções pequenas e simples por dia ou episódio (o que demorar mais para acontecer), entretanto, elas não podem funcionar juntas ou serem criadas ao mesmo tempo. O personagem pode sacrificar as duas invenções e fazer uma invenção média no lugar, somente uma vez por dia ou episódio (o que demorar mais para acontecer). Uma invenção média pode ter até duas funções que ficam ativas ao mesmo tempo e ela possui uma resistência maior, equivalendo à 5 pontos de HP e 1 RD geral, mas não pode ser usada em combate como um integrante extra ou mesmo causar dano. Criar uma invenção leva certo tempo dependendo da função dela e se é uma invenção simples ou média. Invenções médias levam mais tempo que as pequenas, e a quantia de tempo é estipulada pelo mestre, mas sempre deve ser superior à 20 minutos (ou 1 rodada dentro do jogo)."
             }
         ]
@@ -270,11 +285,11 @@ window.arquetipos = [
         "atributos": "Arma",
         "vantagens": [
             {
-                "nome": "Reação Improvisada:",
+                "nome": "Reação Improvisada",
                 "descricao": "Quase sempre sua agilidade natural e graça permitem que você reaja de forma adequada as situações diversas e mais inesperadas. Com isso, você ganha um bônus natural de +2 em testes que são reações contra alguma coisa que esteja acontecendo (fora de combate)."
             },
             {
-                "nome": "Duelista:",
+                "nome": "Duelista",
                 "descricao": "Uma vez por sessão ou dia (o que demorar mais para acontecer) você pode desafiar um alvo específico para um duelo 1x1 onde ninguém mais poderá intervir. Esse duelo automaticamente passa de um combate clássico para um combate cinemático especial (ver regras e informações de C.E.C. no manual básico). Caso você ganhe o duelo, você recebe uma quantia bônus de experiência - a quantia dada nesse bônus é critério do mestre."
             }
         ]
@@ -289,15 +304,15 @@ window.arquetipos = [
         "atributos": "Liderança",
         "vantagens": [
             {
-                "nome": "O Plano do Estrategista:",
+                "nome": "O Plano do Estrategista",
                 "descricao": "O estrategista sabe muito bem o que faz e suas ordens são exatamente o que precisava ser feito. Sempre que personagens forem realizar passos de um plano que o estrategista definiu, eles recebem +1 em qualquer teste de Atributo-teste ou perícia."
             },
             {
-                "nome": "Ordens Superiores:",
+                "nome": "Ordens Superiores",
                 "descricao": "A presença física do estrategista não é necessária. Contanto que o estrategista tenha como saber o que está acontecendo e passar seus comandos, o estrategista pode participar de um combate. Dessa maneira, o estrategista não pode ser alvo de nenhum efeito e não pode realizar nenhuma ação que fosse exigir sua presença no local, mas pode continuar participando do combate como suporte."
             },
             {
-                "nome": "Gênio:",
+                "nome": "Gênio",
                 "descricao": "O estrategista não possui oponentes do seu próprio nível e nunca perde uma partida de jogos nos quais a estratégia seja decisiva, como Xadrez."
             }
         ]
@@ -311,11 +326,11 @@ window.arquetipos = [
         "atributos": "Arma",
         "vantagens": [
             {
-                "nome": "Trabalhador:",
+                "nome": "Trabalhador",
                 "descricao": "Semanalmente o seu personagem pode dar o melhor de si para conseguir os melhores resultados para seu próprio trabalho. Em termos de jogo isso significa que toda vez que você fosse criar itens através do sistema de empregos (sistema opcional) você pode usar um \"efeito especial\" que permite ter um resultado otimizado e usar menos materiais que o normal. Esse efeito pode ser usado 4 vezes por semana e só vale para materiais do tipo: Madeira, Gemas e Minerais. Usar um efeito significa reduzir a quantia de materiais usados pela metade do que seriam usados normalmente."
             },
             {
-                "nome": "A arte da criação:",
+                "nome": "A arte da criação",
                 "descricao": "Seus sentidos foram treinados além do normal quando o assunto é uma peça forjada seja por uma máquina ou a mão. Com isso, você ganha bônus de +4 em qualquer teste que envolver o reconhecimento de falsificações, origens de um objeto, saber sua função real ou possíveis habilidades escondidas e até mesmo a história do objeto (completa ou não, a critério do mestre)."
             }
         ]
@@ -329,11 +344,11 @@ window.arquetipos = [
         "atributos": "Arma",
         "vantagens": [
             {
-                "nome": "My Profession!:",
+                "nome": "My Profession!",
                 "descricao": "Sempre que realizar testes de perícia relacionados a motivar aliados para um combate, adicione +2 ao resultado do dado."
             },
             {
-                "nome": "Mestre da Arena:",
+                "nome": "Mestre da Arena",
                 "descricao": "Você nunca está desprevenido num combate ou situação que exija uma ação drástica, você pode ir contra tudo e todos usando qualquer coisa ou qualquer tipo de arma. Em termos práticos, isso permite que o personagem ache / crie uma rápida arma simples e rústica para atender suas necessidades. A arma é sempre de nível 0 e usa o atributo apropriado / que mais fizer sentido."
             }
         ]
@@ -348,11 +363,11 @@ window.arquetipos = [
         "atributos": "Arma",
         "vantagens": [
             {
-                "nome": "Herói:",
+                "nome": "Herói",
                 "descricao": "Você não se abate fácil e possui uma grande força de vontade interna. Ao ficar com 2 de HP ou menos (contanto que ainda seja positivo) você pode ativar esta vantagem e continuar lutando normalmente mesmo depois que cair para 0 de HP ou menos, podendo ficar com o HP negativo (indo até -10). Se você atingir -10 de HP você morre automaticamente, mas, se a luta terminar e você ficar com o HP menor que 1, os testes de morte são feitos normalmente."
             },
             {
-                "nome": "Presença Inspiradora:",
+                "nome": "Presença Inspiradora",
                 "descricao": "Sua vontade interior é algo admirável, mesmo que não se mostre sempre que possível. Com isso, sempre que estiver na companhia de dois (2) aliados ou mais, ganhe um bônus de +1 nas três primeiras rolagens que fizer durante o episódio ou dia (o que demorar mais para acontecer), desde que essas atividades ou testes envolvam uma forma de ajudar os aliados."
             }
         ]
@@ -366,11 +381,11 @@ window.arquetipos = [
         "atributos": "Magia",
         "vantagens": [
             {
-                "nome": "Flagelo Vermelho:",
+                "nome": "Flagelo Vermelho",
                 "descricao": "Seus sentidos ficam extremamente mais apurados quando um alvo ou uma pessoa que está com ferimentos (e/ou sangrando) se localiza próxima ou numa distância considerável. Obedecendo a essas condições, você pode sentir o cheiro de tal alvo, saber a localização aproximada do mesmo e até saber dizer quão ferido ele (a) está e até onde poderia ir. Caso feche seus olhos, você abdica da sua visão geral, mas ganha uma forma de ver a silhueta do alvo com um tom vermelho vibrante e saber a direção onde ele está."
             },
             {
-                "nome": "Venábulo Carmesim:",
+                "nome": "Venábulo Carmesim",
                 "descricao": "Você consegue manipular o sangue como ninguém, e isso lhe permite moldá-lo em algum objeto desejado ou desenho / escritura qualquer. Adicionalmente, você pode usar quantias de sangue (sua ou de outra origem) como uma arma de nível 0 que utiliza o atributo Magia."
             }
         ]
@@ -385,15 +400,15 @@ window.arquetipos = [
         "atributos": "Tecnologia",
         "vantagens": [
             {
-                "nome": "Fumaça e Espelhos:",
+                "nome": "Fumaça e Espelhos",
                 "descricao": "“O que” você faz é menos importante do que o “Como” você faz. Por manter as pessoas em volta de si entretidas, o Ilusionista é capaz de realizar ações sem revelar suas intenções. Isso efetivamente permite que o Ilusionista consiga sucessos automáticos em testes de Ladinagem enquanto mantiver a atenção da audiência em outro lugar. Testes muito difíceis de Ladinagem têm a dificuldade levemente reduzida, ao invés de serem sucessos automáticos."
             },
             {
-                "nome": "O Maior Truque:",
+                "nome": "O Maior Truque",
                 "descricao": "Se os outros membros do grupo te ajudarem a montar um plano especial, você é capaz de participar de um combate tendo todos seus atributos de combate aumentados em +10. Exceto que você não pode causar danos ou efeitos de verdade em nenhum lugar! É tudo ilusão! Mas os inimigos não precisam saber disso, não é?"
             },
             {
-                "nome": "Quando ninguém estava olhando:",
+                "nome": "Quando ninguém estava olhando",
                 "descricao": "No meio da confusão, é normal que as pessoas se esqueçam das coisas realmente importantes. Mas não o Ilusionista. A falta de atenção dos outros é justamente o que o Ilusionista usa. Assim sendo, o Ilusionista pode se aproveitar desses momentos para pegar algo “emprestado”. Durante uma sessão, caso o grupo se esqueça de algo, o Ilusionista pode realizar um teste de Ladinagem retroativo para ter pego essa coisa durante a última oportunidade, mesmo que o jogador do Mágico também tivesse se esquecido."
             }
         ]
@@ -407,19 +422,19 @@ window.arquetipos = [
         "atributos": "Magia",
         "vantagens": [
             {
-                "nome": "Ordem dos Inquisidores (Opcional):",
+                "nome": "Ordem dos Inquisidores (Opcional)",
                 "descricao": "Você faz parte da milenar ordem dos Inquisidores. Precisar de ajuda é uma fraqueza vergonhosa, mas pedidos de ajuda em geral serão respondidos. Dependendo das circunstâncias, você também pode receber missões."
             },
             {
-                "nome": "Fogo Sagrado:",
+                "nome": "Fogo Sagrado",
                 "descricao": "Por um curto período de alguns minutos, se torna dia (ou extremamente claro) na região onde você estiver. Além disso, qualquer escuridão artificial ou mágica enfraquece, deixando tudo mais claro. Você só consegue realizar essa façanha uma vez por dia ou episódio, o que demorar mais para passar."
             },
             {
-                "nome": "Intuição Divina:",
+                "nome": "Intuição Divina",
                 "descricao": "Não existe \"escuro demais\" para você. Você enxerga perfeitamente bem em uma escuridão absoluta. Você possui um sexto sentido que não te deixa em paz enquanto magia negra estiver sendo realizada por perto. Sob a luz da sol, você pode enxergar um pentagrama na testa de uma pessoa que usou magia negra, mesmo que ela tenha feito isso apenas uma vez."
             },
             {
-                "nome": "Humilhação Inconsolável:",
+                "nome": "Humilhação Inconsolável",
                 "descricao": "Se você falhar em destruir algum usuário de magia negra após tentar caçá-lo, a Fúria Divina te consumirá, pouco a pouco, com um ódio incontrolável. Quanto mais tempo você demorar para corrigir esse erro, pior fica. Eventualmente, você será incapaz de pensar em nada a não ser terminar o trabalho."
             }
         ]
@@ -433,11 +448,11 @@ window.arquetipos = [
         "atributos": "Liderança ou Magia",
         "vantagens": [
             {
-                "nome": "Convocação Extraplanar:",
+                "nome": "Convocação Extraplanar",
                 "descricao": "Você pode convocar uma criatura extraplanar / celestial / mágica / astral, e de outras categorias ao pagar um custo igual a 2 de MP."
             },
             {
-                "nome": "Invocação Rápida:",
+                "nome": "Invocação Rápida",
                 "descricao": "Com o gasto de 2 de MP, o Invocador pode, por alguns segundos, conjurar uma criatura celestial / mágica / astral / extraplanar e de outras categorias para auxiliá-lo em uma tarefa ou causar algum efeito que tenha a ver com o conceito de tal besta. A criatura é conjurada e executa uma ação, depois sumindo quando completar o propósito pelo qual foi chamada."
             }
         ]
@@ -454,19 +469,19 @@ window.arquetipos = [
         "atributos": "Arma ou Artes Marciais",
         "vantagens": [
             {
-                "nome": "O monstro acorda:",
+                "nome": "O monstro acorda",
                 "descricao": "Em situações bem específicas, geralmente, mas não necessariamente, relacionadas à raiva, o personagem se transforma ou perde boa parte do controle, se tornando uma fera selvagem. Quando o monstro acorda, o personagem pode gastar 1 Stamina para curar seu HP totalmente. O monstro costuma dormir quando o que o acordou não existe mais, mas em situações mais intensas a transformação pode durar mais tempo. O jogador tem controle sobre quando \"O monstro acorda\", sendo quem julga se uma situação é boa o suficiente ou não.                        Caso o jogador queira, o personagem pode ter seus atributos de combate reduzidos a 0 enquanto o monstro estiver dormente. Nesse caso, a primeira ativação de \"O monstro acorda\" em uma sessão não consome Stamina."
             },
             {
-                "nome": "O jogador que escolher esse arquétipo deve escolher também uma (e somente uma) das opções abaixo:",
+                "nome": "O jogador que escolher esse arquétipo deve escolher também uma (e somente uma) das opções abaixo",
                 "descricao": ""
             },
             {
-                "nome": "Fúria é minha escolha, não uma doença:",
+                "nome": "Fúria é minha escolha, não uma doença",
                 "descricao": "O personagem enfrentou o monstro e venceu. A fera nunca sai do seu controle e faz o que ele quer que faça, não que isso seja fácil para o personagem. O personagem passa a receber +2 em testes de Força de Vontade para se controlar ou testes contra medo. O personagem pode ativar \"O monstro acorda\" quando quiser, sem exigir nenhuma situação."
             },
             {
-                "nome": "Você não quer me ver zangado:",
+                "nome": "Você não quer me ver zangado",
                 "descricao": "Em situações especiais das condições de sua perda de controle, circunstâncias ainda mais fortes (exemplo: muita, muita raiva) o personagem se torna o monstro... Mas totalmente descontrolado.            O monstro irá destruir o que o trouxe e então passará a destruir tudo que existe a sua volta, sejam apenas objetos, amigos ou o amor da sua vida. Durante a duração da transformação, todas as rolagens de combate do personagem recebem +1. Além disso, o HP máximo do personagem aumenta em +20 temporariamente e ele é curado completamente.            O personagem passará a atacar aliados depois de eliminar seu inimigo atual e precisará ser parado por eles. Enquanto fora de controle você não irá matar seus amigos e quando eles seriam nocauteados eles são nocauteados com 0 de HP sem risco de morte.                         Atenção:            Você ainda pode causar a morte deles indiretamente. Alguém nocauteado não pode se defender de outras ameaças.                        Atenção: se seu HP ficar -10 ou menor do que isso de uma vez só, você morre imediatamente ao invés de retornar ao normal.                        Esse poder não se ativa em eventos PVP e é controlado pelo mestre nas outras ocasiões, sendo recomendável não a ativar para uma luta entre jogadores (o monstro precisa enfrentar múltiplos jogadores). Então o jogador não escolhe quando ativar essa vantagem, o mestre escolhe.                        Essa vantagem pode ser trocada por \"Fúria é minha escolha, não uma doença\" no decorrer da história caso seja relevante aos acontecimentos."
             }
         ]
@@ -480,11 +495,11 @@ window.arquetipos = [
         "atributos": "Arma",
         "vantagens": [
             {
-                "nome": "Ouvinte Silencioso:",
+                "nome": "Ouvinte Silencioso",
                 "descricao": "Você sempre escuta o que lhe convém, podendo uma vez por sessão ou semana (o que demorar mais para acontecer) requisitar uma informação especial de sua escolha diretamente para o mestre. Essa informação pode chegar aos seus ouvidos por meio de conversas aleatórias de pessoas nas ruas ou mesmo pequenos informantes que podem vir a te conhecer / possuem um débito contigo."
             },
             {
-                "nome": "Malícia:",
+                "nome": "Malícia",
                 "descricao": "Você sempre está prevenido para as coisas ruins que podem vir a acontecer numa aventura. Com isso, ignore qualquer necessidade de ferramentas especiais para destrancar uma porta, baú, container ou armadilha; você sempre tem o que precisa para trabalhar. Adicionalmente, você ganha +2 em testes relacionados à abrir fechaduras e desarmar armadilhas."
             }
         ]
@@ -498,11 +513,11 @@ window.arquetipos = [
         "atributos": "Magia",
         "vantagens": [
             {
-                "nome": "Granger:",
+                "nome": "Granger",
                 "descricao": "Sempre que você tentar adquirir informações sobre um tópico com uma perícia de Conhecimento e sua rolagem resultar em menos de 5, o resultado do dado é aumentado para 5."
             },
             {
-                "nome": "Olho Arcano:",
+                "nome": "Olho Arcano",
                 "descricao": "Uma vez por episódio você consegue usar esse efeito e ver passagens secretas, armadilhas escondidas, pisos falsos, perigos naturais, objetos e criaturas invisíveis que são denunciadas por um acúmulo de energia arcana roxa. Adicionalmente, também é possível ver locais que tenham traços de magia ou uso de magia recente (de qualquer origem). Somente o personagem vê essas revelações. O efeito fica ativo por 5 minutos e não pode ser usado em combate."
             }
         ]
@@ -516,11 +531,11 @@ window.arquetipos = [
         "atributos": "Magia",
         "vantagens": [
             {
-                "nome": "Puro:",
+                "nome": "Puro",
                 "descricao": "Você recebe +3 em testes relacionados a convencer outras pessoas de que você não é uma ameaça ou não lhes deseja mal. Doenças, independente da origem, tem 50% de chance (1d100 <= 50) de não te afetarem, mesmo, ou até principalmente, se forem mágicas."
             },
             {
-                "nome": "Fé Intensa:",
+                "nome": "Fé Intensa",
                 "descricao": "Você possui uma fé muito forte dentro de si, seja em uma entidade específica ou em traços humanos abstratos (como força de vontade), e por isso a cada fim de episódio ganha +2 ponto de fé.  Um personagem começa a história com 3 pontos de fé e ganha mais 3 a cada término de sessão. Podendo acumular eles até qualquer quantidade. Pontos de fé podem ser acumulados e usados para fins específicos:"
             }
         ]
@@ -534,11 +549,11 @@ window.arquetipos = [
         "atributos": "Arma, Magia ou Liderança",
         "vantagens": [
             {
-                "nome": "Falsificação ou Tesouro?:",
+                "nome": "Falsificação ou Tesouro?",
                 "descricao": "Com um pequeno investimento de (Nível do Objeto a ser copiado ou criado) x 50 moedas de ouro, você pode criar uma falsificação quase perfeita de um artefato ou objeto que desejar, exceto que ele SEMPRE terá um defeito e não funcionará para o seu propósito original (ou se funcionar, não funcionará totalmente como deveria). Você também pode criar artefatos que sejam totalmente novos (desde que providencie uma descrição de como ele é e o que faz) para servirem à algum propósito social ou simples o suficiente. Os artefatos não são como invenções de engenheiros, portanto eles são bem mais simples e obedecem a regras de funcionalidade e objetivos mais diretos."
             },
             {
-                "nome": "Influência:",
+                "nome": "Influência",
                 "descricao": "Você possui certa influência por incorporar o arquétipo do Mercante Príncipe, isso lhe permite vender ou comprar um item em qualquer lugar com um bônus de 20% de desconto/lucro sobre o preço de venda/compra."
             }
         ]
@@ -552,19 +567,19 @@ window.arquetipos = [
         "atributos": "Artes Marciais",
         "vantagens": [
             {
-                "nome": "Hamon:",
+                "nome": "Hamon",
                 "descricao": "Você consegue controlar uma energia sobrenatural presente em todos os seres vivos tendo como a respiração como canalizador principal. Por meditar fora de combate por alguns minutos você recupera seu HP e MP ao máximo sem gastar Stamina."
             },
             {
-                "nome": "Disciplina do Punho de Ferro:",
+                "nome": "Disciplina do Punho de Ferro",
                 "descricao": "Quando não estiver com nenhuma arma equipada, os punhos do monge contam como duas armas de Nível 0 de uma mão (+1 de dano cada)."
             },
             {
-                "nome": "Transcender - Andarilho dos Planos:",
+                "nome": "Transcender - Andarilho dos Planos",
                 "descricao": "Uma vez por episódio ou dia (o que demorar mais para acontecer) você pode meditar durante alguns minutos e elevar seu estado de espírito para fora de seu corpo. Enquanto estiver assim, você pode caminhar livremente pelo plano astral / espiritual e procurar por algo que deseje, sejam isso uma resposta ou encontrar com alguém que já se foi. Além disso, seu corpo fica inerte num estado de sono profundo enquanto não estiver com o espírito nele, portanto, caso ele seja danificado de alguma forma, você não poderá se defender (e pode até morrer dependendo do caso). Caso seu corpo desfaleça enquanto estiver fora, seu espírito ficará preso pra toda a eternidade no plano astral."
             },
             {
-                "nome": "Transcender - Karma Espiritual:",
+                "nome": "Transcender - Karma Espiritual",
                 "descricao": "Adicionalmente ao transcender original, você pode optar por não ir ao plano espiritual, mas sim trocar de corpo com um aliado ou alvo próximo (que esteja na sua linha de visão). Quando trocar de corpo, a alma do alvo vai para o seu corpo e a sua para o dele durante 10 minutos ou 1d4 rodadas. Caso seu corpo seja danificado ao ponto de não suportar mais conter vida dentro dele, você fica preso pra sempre no corpo atual em que estiver e a alma que estiver no seu, ficará perdida, vagando então como um espírito vingativo contra você pelo resto de sua vida também. Esse efeito não pode ser usado em combate e um alvo precisa ser susceptível espiritualmente para tal troca (critério do mestre). Este efeito não requer muita meditação (e talvez até nenhuma se for de acordo do jogador e mestre) e pode ser usado sem restrições de uso por episódio ou dias. Quando estiver no corpo de um alvo, você ganha as habilidades e potencialidades dele, mas não saberá o que ele pode fazer ou não (pois não retém as memórias e trejeitos do mesmo), mas poderá descobrir acidentalmente (ou não)."
             }
         ]
@@ -578,11 +593,11 @@ window.arquetipos = [
         "atributos": "Arma ou Liderança",
         "vantagens": [
             {
-                "nome": "Copycat:",
+                "nome": "Copycat",
                 "descricao": "Você é um exímio observador frente às demonstrações de poder e força que acontecem próximas de você. O mímico pode incluir em suas técnicas qualquer estilo de luta que já tenha visto, mesmo que isso não encaixe com seus atributos muito bem. Exemplo: um Mímico poderia criar ataques que claramente usam Armas baseadas no guerreiro do grupo, mas usando seu atributo Tecnologia. Isso significa que o Mímico possui muito mais espaço para criar seus poderes."
             },
             {
-                "nome": "Som Fantasma:",
+                "nome": "Som Fantasma",
                 "descricao": "Você consegue reproduzir um som que você já tenha ouvido com extrema precisão com sua voz (pode ser uma voz de outra pessoa, som animal, ruído, assovio, etc)."
             }
         ]
@@ -596,11 +611,11 @@ window.arquetipos = [
         "atributos": "Magia ou Liderança",
         "vantagens": [
             {
-                "nome": "Pacto:",
+                "nome": "Pacto",
                 "descricao": "Você pode selar acordos com criaturas do tipo demônio, com as especificidades mudando caso à caso. Com um acordo selado, o demônio irá te ajudar em combates até o acordo terminar ou ser quebrado."
             },
             {
-                "nome": "Ritual dos Mortos:",
+                "nome": "Ritual dos Mortos",
                 "descricao": "Você consegue montar e executar um ritual especial que leva cerca de 40 minutos para ficar pronto e necessita de materiais equivalentes a 100 Moedas de ouro x o Nível do personagem/NPC morto. Se o altar que você vai criar for destruído, o espírito desaparece.. Esse ritual permite que você evoque uma figura específica já morta, seja um personagem, NPC importante ou qualquer outro que esteja morto. Para evocar o espírito é obrigatório que você use um osso ou objeto pessoal do morto em questão além dos ingredientes básicos. O espírito convocado só pode ficar ativo por 3 minutos e possui uma forma de comunicação limitada, além de não poder se mover para qualquer lugar além das redondezas do local do ritual. Um espírito convocado não pode ser destruído de forma alguma e nem pode causar mal a qualquer um a sua volta (exceto em situações especiais)."
             }
         ]
@@ -614,11 +629,11 @@ window.arquetipos = [
         "atributos": "Arma ou Tecnologia",
         "vantagens": [
             {
-                "nome": "Acrobata Natural:",
+                "nome": "Acrobata Natural",
                 "descricao": "Uma vez por episódio você pode jogar novamente uma rolagem nas perícias: Acrobacias ou Furtividade e usar o resultado que mais lhe agradar."
             },
             {
-                "nome": "Bomba de Fumaça:",
+                "nome": "Bomba de Fumaça",
                 "descricao": "Você possui sempre três bombas de fumaça pra usar por dia ou por sessão (o que demorar para acontecer mais) e no dia seguinte você refaz o estoque delas para essa quantidade máxima com alguns momentos de preparo breve. Uma bomba de fumaça pode ser usada em combate e fora dela, e quando usada cria uma enorme cortina de fumaça cinzenta/branca que oculta totalmente quem estiver lá dentro (incluindo você). Portanto devido ao seu treinamento nessas situações, você ganha um bônus de +4 em todos os testes de Furtividade enquanto a bomba de fumaça durar (uma ação após o uso). Esses bônus só se aplicam a você e não são válidos em situações que não sejam oportunas, como por exemplo, usar a bomba se alguém já estiver te vendo ou conseguir te achar facilmente. Usar a bomba não consome seu turno."
             }
         ]
@@ -632,19 +647,19 @@ window.arquetipos = [
         "atributos": "Arma ou Magia",
         "vantagens": [
             {
-                "nome": "Ordem dos Paladinos (Opcional):",
+                "nome": "Ordem dos Paladinos (Opcional)",
                 "descricao": "Você faz parte da milenar ordem dos Paladinos. Se você precisar de ajuda, eles responderão com outros guardiões, mas você também pode ser chamado."
             },
             {
-                "nome": "Vingador Sagrado:",
+                "nome": "Vingador Sagrado",
                 "descricao": "Durante o dia, criaturas e personagens malignos são claramente visíveis para você, não importa onde estejam escondidas. Sempre que outro personagem tentar mentir para você sob a luz do Sol, você obtém sucesso automático para perceber a mentira e seu sexto sentido te faz saber quando há maldade na espreita. Injustos não podem se esconder da sua ira."
             },
             {
-                "nome": "Penitência:",
+                "nome": "Penitência",
                 "descricao": "Qualquer Paladino que se corrompa ou se torne maligno perde todos os seus poderes e só pode recuperá-los se fizer penitência. Se fizer parte da Ordem, também será caçado."
             },
             {
-                "nome": "Poder Resoluto:",
+                "nome": "Poder Resoluto",
                 "descricao": "Uma vez por episódio e com o custo de 50% de seu MP total, você pode usar seu poder máximo e queimar sua essência na sua totalidade por um breve momento de força interna, aumentando todos os atributos de teste em +2 ponto e concedendo um bônus de +2 em todas as perícias enquanto esse efeito limitado durar."
             }
         ]
@@ -658,11 +673,11 @@ window.arquetipos = [
         "atributos": "Arma ou Tecnologia",
         "vantagens": [
             {
-                "nome": "Presença Intimidadora:",
+                "nome": "Presença Intimidadora",
                 "descricao": "Você é um combatente impiedoso por natureza (geralmente) e isso faz com que as pessoas temam sua reputação. Você ganha leves descontos em estabelecimentos e vendedores que sejam coagidos por um teste de intimidação bem sucedido. Eles também podem providenciar informações extras que você busque com maior facilidade."
             },
             {
-                "nome": "Vida de Corsário:",
+                "nome": "Vida de Corsário",
                 "descricao": "Por ser um aventureiro de espírito livre e boêmio por natureza, você gosta muito de bares, tavernas e lugares do tipo onde pode comer e beber bem. Você sempre tem alguma amizade ou conexão nesses lugares, fazendo com que a estadia, o consumo de bebidas e comidas para si e seus aliados seja totalmente gratuita ou de preço muito reduzido do normal (à critério do mestre). Adicionalmente, ganhe +1 stamina toda vez que passar uma noite ou descansar completamente nesses lugares. Essa vantagem não implica numa conexão ou fama por que você é extrovertido ou algo do tipo, meramente significa que é conhecido / frequentador de tal lugar e por isso é bem-vindo."
             }
         ]
@@ -676,11 +691,11 @@ window.arquetipos = [
         "atributos": "Arma ou Tecnologia",
         "vantagens": [
             {
-                "nome": "Dedos Rápidos:",
+                "nome": "Dedos Rápidos",
                 "descricao": "Sempre que você iniciar combate com alguém (você tomou a primeira ação), você não rola os dados de iniciativa: você é o primeiro a agir na rodada e pronto."
             },
             {
-                "nome": "Desde quando está aí?:",
+                "nome": "Desde quando está aí?",
                 "descricao": "O pistoleiro sempre fica quieto, então quando ele fala, as pessoas escutam. Se você realizar o seu primeiro teste social de uma cena logo depois de um aliado falhar em um teste social, você recebe um bônus de +4 na sua rolagem. Recomenda-se que mestres sejam lenientes nessa hora: se o seu aliado tinha acabado de jogar a situação toda num buraco e não deveria ter volta, você falar pode consertar tudo."
             }
         ]
@@ -694,11 +709,11 @@ window.arquetipos = [
         "atributos": "Arma",
         "vantagens": [
             {
-                "nome": "Porta Dimensional:",
+                "nome": "Porta Dimensional",
                 "descricao": "Uma vez por  episódio você tem a possibilidade de desenhar uma porta em qualquer superfície que permita desenhos, através de um giz branco ou algo do tipo. Ao desenhar uma segunda porta em outro lugar, você cria uma conexão entre os dois lugares com os desenhos, permitindo assim abri-las e viajar através de uma fenda temporal que conecta os locais. Embora tenha um longo alcance, o mestre dirá se ambos os locais foram conectado com sucesso ou não (locais muito distantes um dos outros tendem a ter conexões mais fracas). Qualquer pessoa pode usar esse mecanismo, entretanto, somente você pode abrir e destruir as portas (a não ser que o local onde ela fora desenhada, seja destruído também)."
             },
             {
-                "nome": "Sorvedouro Fantasma:",
+                "nome": "Sorvedouro Fantasma",
                 "descricao": "Uma vez por episódio você pode gastar 50% do seu MP e causar uma intensa desestabilização nas suas proximidades, desativando todos e qualquer aparato tecnológico, mágico e negando certos encantamentos ativos (não funciona dentro de combate). Embora possua uma grande força, esse efeito nem sempre pode funcionar com todos os tipos de máquinas ou energias mágicas."
             }
         ]
@@ -712,11 +727,11 @@ window.arquetipos = [
         "atributos": "Arma",
         "vantagens": [
             {
-                "nome": "Postura Rígida:",
+                "nome": "Postura Rígida",
                 "descricao": "Você possui a habilidade de reagir ao perigo antes mesmo dos seus sentidos normalmente permitirem. Com isso, sempre que você fosse ser pego de surpresa, você é tratado como se tivesse em uma categoria abaixo para testes relacionados à surpresa ou a reagir contra algo que acabou de aparecer ou acontecer. Em termos práticos, isso significa que para você, os testes relacionados aos eventos citados acima, são mais fáceis em uma categoria (da lista de dificuldades sugeridas, que pode ser encontrada no manual básico)."
             },
             {
-                "nome": "Corte de Alta Frequência:",
+                "nome": "Corte de Alta Frequência",
                 "descricao": "Quando você realizar um teste para quebrar ou cortar algum objeto usando sua espada, adicione +4 à rolagem. Esse corte, diferentemente dos cortes normais, atravessa e abre caminho em metais ou materiais de extrema resistência que não poderiam ser cortados normalmente. Não pode ser usado em combate."
             }
         ]
@@ -730,11 +745,11 @@ window.arquetipos = [
         "atributos": "Liderança",
         "vantagens": [
             {
-                "nome": "Domar Bestas:",
+                "nome": "Domar Bestas",
                 "descricao": "Você pode domar um animal com um teste bem sucedido de Natureza. Animais hostis precisam ser acalmados antes de serem domados."
             },
             {
-                "nome": "Empatia Natural:",
+                "nome": "Empatia Natural",
                 "descricao": "Você consegue se comunicar com criaturas e animais, podendo compreender a linguagem delas, desde que tenham uma inteligência mínima. Os animais também geralmente compreendem seus sentimentos e motivos mais facilmente que outras pessoas."
             }
         ]
@@ -750,17 +765,23 @@ window.arquetipos = [
         "atributos": "Arma e Magia",
         "vantagens": [
             {
-                "nome": "Corpo como um Templo:",
+                "nome": "Corpo como um Templo",
                 "descricao": "Runas espalhadas por todo o corpo do personagem, como tatuagens mágicas, o protegem de todo o mal que tenta invadir. O personagem recebe +3 em testes de resistência contra efeitos mágicos que tentem corromper seu corpo ou sua mente diretamente. O personagem não pode ter sua mente nem emoções lidas por efeitos mágicos. As runas entram na sua carne profundamente, mas se forem arrancadas de alguma forma esses efeitos são perdidos."
             },
             {
-                "nome": "Preço do conhecimento:",
+                "nome": "Preço do conhecimento",
                 "descricao": "O traumatizante processo de colocar as runas no corpo do personagem o alterou para sempre. Como um sobrevivente de uma tortura que mataria muitos guerreiros altamente treinados, o personagem nunca mais será o mesmo. Personagens que tentam ler as emoções do mestre das runas por meios não mágicos recebem -3 em seus testes, pois a verdade é que o mestre das runas já não possui muitas. Isso deve ser tratado como uma desvantagem para o mestre das runas e o narrador pode decidir aplicar um redutor de até -3 em todos os testes sociais nos quais isso seja relevante."
             },
             {
-                "nome": "Mais uma proteção:",
+                "nome": "Mais uma proteção",
                 "descricao": "O mestre das runas pode aplicar suas runas a algum objeto, protegendo contra algum tipo de corrupção mágica específica. Essas runas são mais simples, não duram tanto e são destruídas já na primeira vez que lidarem com a maldição de que protegem, mas essa primeira maldição também será bloqueada completamente. Se aplicado a uma armadura, elas vão proteger o usuário da armadura. Quando aplicadas a outros itens, devem ser tratadas de forma apropriada, considerando-se que as runas atuam como um pára-raios. Tipos de corrupção mágica que podem ser escolhidas: veneno, invasão de mente. Em geral, qualquer coisa que fosse ser incluída em \"Corpo como um templo\" pode ser escolhida por \"Mais uma proteção\"."
             }
         ]
     }
-];
+].sort(function (a,b) {
+    var na = a.nome.toUpperCase();
+    var nb = b.nome.toUpperCase();
+    if (na < nb) return -1;
+    if (na > nb) return 1;
+    return 0;
+});

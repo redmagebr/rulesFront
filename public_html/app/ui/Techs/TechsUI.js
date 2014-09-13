@@ -6,15 +6,15 @@ function TechsUI (ui) {
     this.stale = false;
     this.$conteudo = $('#content');
     
-    $('#addons').on('click', function (e) {
+    $('#addonsButton').on('click', function (e) {
         e.preventDefault();
-        window.techs.loadTechs();
+        window.techs.load();
     });
     
-    this.loadTechs = function () {
+    this.load = function () {
         var cbs = function () {
             window.ui.unblock();
-            window.techs.fillTechs();
+            window.techs.fill();
         };
         
         var cbe = function () {
@@ -29,10 +29,10 @@ function TechsUI (ui) {
             return;
         }
         
-        this.ajax.loadTechs(cbs, cbe);
+        this.ajax.load(cbs, cbe);
     };
     
-    this.fillTechs = function () {
+    this.fill = function () {
         var handler = new TecnicasHandler(window.techAddons);
         var $changelog = window.app.ui.changelog.$createChangelog(window.techChangelog);
         
