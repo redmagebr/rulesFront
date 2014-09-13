@@ -23,10 +23,18 @@ and open the template in the editor.
         <script type="text/javascript">
             window.vantagens = [];
             $('#submit').on('click', function () {
+                var descricao = [];
+                var other = $('#descricao').val().trim().split('\n');
+                for (var i = 0; i < other.length; i++) {
+                    other[i] = other[i].trim();
+                    if (other[i] !== '') {
+                        descricao.push(other[i]);
+                    }
+                }
                 var vantagem = {
                     nome : $('#nome').val(),
                     pontos : $('#pontos').val(),
-                    descricao : $('#descricao').val()
+                    descricao : descricao
                 };
                 window.vantagens.push(vantagem);
                 window.fixJSON();
