@@ -59,6 +59,32 @@ html {
     overflow-y: auto;
 }
 
+#toTheTop {
+    position: absolute;
+    top: 40px;
+    left: 0px;
+    padding: 10px;
+    display: block;
+    height: 30px;
+    line-height: 30px;
+    font-weight: bold;
+    font-size: 1.2em;
+    color: #1200c2;
+    background-color: white;
+    border: solid 1px #000;
+}
+
+#toTheTop:hover {
+    cursor: pointer;
+    color: #6f5fff;
+    border-color: #7f7f7f;
+}
+
+#toTheTop:active {
+    color: #3d2dd3;
+    border-color: #363636;
+}
+
 #loadingPage {
     position: absolute;
     left: 0px;

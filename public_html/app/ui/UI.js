@@ -8,7 +8,22 @@ function UI (app) {
     
     this.$loading = $('#loadingPage').fadeOut();
     this.$conteudo = $('#content');
+    this.$topButton = $('#toTheTop').hide();
     this.loadCount = 0;
+    
+    this.$topButton.on('click', function () {
+        window.ui.$conteudo.animate({
+            scrollTop : 0
+        });
+    });
+    
+    this.$conteudo.on('scroll', function () {
+        if (this.scrollTop > 30) {
+            window.ui.$topButton.stop(true,false).fadeIn(100);
+        } else {
+            window.ui.$topButton.stop(true,false).fadeOut(100);
+        }
+    });
     
     this.block = function () {
         if (++this.loadCount > 0) {
