@@ -5,6 +5,7 @@ div.addon:hover {
 div.addon {
     padding-top: 10px;
     padding-bottom: 10px;
+    margin-top: 30px;
 }
 
 div.addon > h1 {
@@ -32,6 +33,7 @@ div.addon > div.conceitos > a {
     padding-right: 15px;
     font-weight: bold;
     color: #0600be;
+    text-decoration: none;
 }
 
 div.addon > div.conceitos > a:hover {
@@ -68,4 +70,44 @@ div.addon > span {
     width: 0px;
     height: 0px;
     clear: both;
+}
+
+h1.addonHeader {
+    font-size: 1.4em;
+    text-align: center;
+    margin: 0px;
+    margin-top: 20px;
+}
+
+p.addonExp {
+    text-align: justify;
+    text-indent: 1em;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin: 0px;
+    margin-bottom: 4px;
+    margin-top: 4px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    font-size: 0.9em;
+}
+
+p.addonExp:hover {
+    background-color: #eeeeee;
+}
+
+#addonTipos {
+    text-align: center;
+}
+
+#addonTipos > h1 {
+    font-size: 1em;
+}
+
+#addonTipos > a {
+    display: inline-block;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: #0500ab;
+    text-decoration: none;
 }

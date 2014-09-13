@@ -35,7 +35,8 @@ window.techTipos = [
         "id" : "ataque",
         "nome" : "Formas de Ataque",
         "descricao" : [
-            "To do"
+            "Uma técnica de Ataque tem um custo de ativação, começando em 0% e somando a seus addons. Você paga o preço ao realizar o ataque, independente dele acertar ou não.",
+            "Uma técnica de ataque pode ter seu custo reduzido a 0%, mesmo com addons. Uma técnica de ataque sem addons é chamada de Ataque Básico."
         ],
         "conceitos" : [
             
@@ -45,7 +46,7 @@ window.techTipos = [
         "id" : "especial",
         "nome" : "Formas Especiais",
         "descricao" : [
-            "To do"
+            "Técnicas Especiais são como um cinto de utilidades do Batman. Cada parte de uma técnica especial pode ser ativada independentemente, e o custo da ativação sempre é o custo especial do addon sendo ativado."
         ],
         "conceitos" : [
             
@@ -55,7 +56,8 @@ window.techTipos = [
         "id" : "passiva",
         "nome" : "Formas Passivas",
         "descricao" : [
-            "To do"
+            "Uma técnica passiva tem um custo por Rodada, começando em 0% e somando a seus addons. Isso significa que você paga o preço dela ao ativar ela e no início de cada um dos seus próximos turnos, se for manter ela ativa.",
+            "Uma técnica passiva pode ter seu custo reduzido a 0% MP por rodada."
         ],
         "conceitos" : [
             
@@ -85,7 +87,7 @@ for (var i = 0; i < window.techTipos.length; i++) {
 window.techConceitos = [
     {
         "id" : "stacking",
-        "nome" : "Acumulação de Bônus e Redutores",
+        "nome" : "Bônus Nomeados",
         "descricao" : "Bonus e Redutores se acumulam quando tem nomes idferentes blablabla",
         "listado" : false,
         "impresso" : true
