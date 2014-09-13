@@ -2096,7 +2096,7 @@ window.techAddons =
         "efeitos" : [
             "Quando esse estilo for ativado, reduza seu HP máximo e atual em 3, isso não conta como um dano, mas pode reduzir seu HP para baixo de 1 e isso deve ser tratado normalmente se acontecer.",
             "Quando esse estilo for desativado, aumente seu HP máximo em 3, seu HP atual não é modificado.",
-            "Aumenta o custo em 3 MP por rodada."
+            "Diminui o custo em 2 MP por rodada."
         ],
         "conceitos" : [
             
