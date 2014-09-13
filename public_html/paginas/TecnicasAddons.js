@@ -2111,8 +2111,7 @@ window.techAddons =
         "efeitos" : [
             "Enquanto esse estilo estiver ativo, você pode reduzir qualquer custo de MP sendo pago durante o seu turno em 1, uma vez.",
             "Esse addon pode ser adicionado duas vezes no mesmo estilo de luta, passando a permitir que a redução aconteça duas vezes.",
-            "De uma maneira simplificada: Domínio Absoluto permite que você economize 1 MP por rodada.",
-            "Aumenta o custo em 3 MP por rodada."
+            "De uma maneira simplificada: Domínio Absoluto permite que você economize 1 MP por rodada."
         ],
         "conceitos" : [
             
