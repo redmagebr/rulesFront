@@ -104,7 +104,7 @@ function TechsUI (ui) {
             $div.append($conceitos);
         }
         var $h1 = $('<h1 />');
-        var $img = $('<img src="http://techs.redpg.com.br/icon/' + addon.nomeLimpo.replace(' ', '%20') + '.png" />');
+        var $img = $('<img src="img/icon/' + addon.nomeLimpo.replace(' ', '%20') + '.png" />');
         $h1.append($img).append(" " + addon.nome + ' - para nível ' + addon.nivel + ' e acima');
         $div.append($h1);
         var $ul = $('<ul />');
