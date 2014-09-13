@@ -1,0 +1,64 @@
+div.addon:hover {
+    background-color: #ebebeb;
+}
+
+div.addon {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+div.addon > h1 {
+    margin: 0px;
+    text-align: left;
+    font-size: 1.2em;
+    line-height: 32px;
+}
+
+div.addon > h1 > img {
+    vertical-align: top;
+    margin-left: 5px;
+}
+
+div.addon > div.conceitos {
+    float: right;
+    display: block;
+    text-align: right;
+    font-size: 0.9em;
+}
+
+div.addon > div.conceitos > a {
+    display: block;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-weight: bold;
+    color: #0600be;
+}
+
+div.addon > div.conceitos > a:hover {
+    cursor: pointer;
+    color: #4d47ff;
+}
+
+div.addon > div.conceitos > h1 {
+    font-size: 1em;
+    margin: 0px;
+    padding: 0px;
+    padding-right: 15px;
+}
+
+div.addon > ul {
+    margin: 0px;
+    padding: 0px;
+    list-style-position: inside;
+    list-style-type: square;
+}
+
+div.addon > ul > li {
+    margin: 0px;
+    padding-left: 1em;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-size: 0.9em;
+    text-align: justify;
+    padding-right: 10px;
+}
