@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <input id="nome" type="text" placeholder="nome" style="width: 500px" /> <br />
+        <input id="pontos" type="text" placeholder="pontos" style="width: 500px" /> <br />
+        <textarea id="descricao" placeholder="descricao"  style="width: 500px; height: 400px"></textarea>
+        <br />
+        <input id="submit" type="submit" />
+        <br /><br /><br />
+        <textarea id="result" placeholder="JSON comes here" style="width: 500px; height: 400px"></textarea>
+        <script type="text/javascript" src="http://redpg.com.br/js/jquery-2.1.1.min.js"></script>
+        <script type="text/javascript" src="http://redpg.com.br/js/jquery-ui.min.js"></script>
+        <script type="text/javascript">
+            window.vantagens = [];
+            $('#submit').on('click', function () {
+                var vantagem = {
+                    nome : $('#nome').val(),
+                    pontos : $('#pontos').val(),
+                    descricao : $('#descricao').val()
+                };
+                window.vantagens.push(vantagem);
+                window.fixJSON();
+            });
+            
+            window.fixJSON = function () {
+                $('#result').val(JSON.stringify(window.vantagens, undefined, 4));
+            };
+            
+            window.fixJSON();
+        </script>
+    </body>
+</html>
