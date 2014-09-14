@@ -7,7 +7,8 @@ window.techChangelog = [
     {
         version : [3, 1],
         description : [
-            "Clarificação adicionada ao addon High Spell Voltage Zone."
+            "Clarificação adicionada ao addon High Spell Voltage Zone.",
+            "Overload não acumula com Overload."
         ]
     },
     {
@@ -1355,7 +1356,7 @@ window.techAddons =
         "efeitos": [
             "Você pode ativar essa técnica ao realizar alguma ação de combate. Escolha um número de 1 a 3 para X ao ativar esse efeito. X não pode ser igual ou maior ao seu nível.",
             "Como um custo para ativar esse efeito, você paga (4 + X) MP e recebe um dano direto de (Nível + X) HP. O dano conta como um dano para outros efeitos e não pode ser reduzido.",
-            "Você recebe um Bônus de +X em testes de combate e um Bônus de +(2 * X) dano até o término daquela ação, que não pode durar mais do que um turno.",
+            "Você recebe um Bônus de +X Bônus de Overload em testes de combate e um Bônus de +(2 * X) Bônus de Overload dano até o término daquela ação, que não pode durar mais do que um turno.",
             "Após ativar Overload em alguma ação, o personagem entra no estado 'Overloaded'.",
             "- Overloaded: Você está explodindo poder. O personagem não pode ser curado de maneira alguma. Realizar qualquer ação de combate sem ativar Overload cancela esse efeito e faz o personagem entrar no estado 'Exausto'.",
             "- Exausto: Você usou todas as suas forças. Receba -1 em qualquer Teste e -2 Dano. Esse efeito dura até o personagem poder descansar, não podendo ser removido antes do final do combate."
