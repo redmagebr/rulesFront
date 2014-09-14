@@ -766,4 +766,1074 @@ window.vantagensArray = [
             "Você fala com um tom calmo que passa o quanto você aprendeu sobre a vida. Você pode usar sua Sabedoria no lugar de Carisma para testes de Diplomacia."
         ]
     }
-];
+].sort(function (a,b) {
+    var na = a.nome.toUpperCase();
+    var nb = b.nome.toUpperCase();
+    if (na < nb) return -1;
+    if (na > nb) return 1;
+    return 0;
+});
+
+window.vantagensHash = {};
+for (var i = 0; i < window.vantagensArray.length; i++) {
+    window.vantagensHash[window.vantagensArray[i].nome.toUpperCase()] = window.vantagensArray[i];
+}
+
+window.desvantagensArray = [
+    {
+        "nome": "Alergia",
+        "pontos": "2",
+        "descricao": [
+            "O personagem tem alergia a alguma substância que ele deve definir e isso o afeta em todos os momentos em que a substância estiver em contato. Os efeitos negativos variam de acordo com o nível de exposição à substância."
+        ]
+    },
+    {
+        "nome": "Alergia Sobrenatural",
+        "pontos": "4",
+        "descricao": [
+            "O personagem tem alergia a alguma substância que ele deve definir e isso o afeta em todos os momentos em que a substância estiver em contato com ele ou presente no ambiente próximo a ele. O personagem sofre redutores de 1 em todos os seus atributos de combate e redutores de 2 em atributos-teste enquanto estiver próximo a essa substância."
+        ]
+    },
+    {
+        "nome": "Amaldiçoado",
+        "pontos": "2",
+        "descricao": [
+            "O personagem é amaldiçoado de alguma forma, desde ser perseguido por uma entidade sobrenatural, ter uma má sorte impressionante ou estar marcado para morrer por um fantasma (o jogador define na criação baseado em sua história)."
+        ]
+    },
+    {
+        "nome": "Amnésia",
+        "pontos": "1",
+        "descricao": [
+            "O personagem não se recorda de sua verdadeira identidade, ou perdeu a memória recente (algumas semanas atrás ou meses). O jogador deve definir na história o motivo e como isso aconteceu."
+        ]
+    },
+    {
+        "nome": "Amor Perdido",
+        "pontos": "2",
+        "descricao": [
+            "Você conheceu o amor verdadeiro, e agora ele se foi. Você fica melancólico sempre que te lembram do que você perdeu, recebendo -1 em testes de Atributo-Teste ou perícias até conseguir se recuperar."
+        ]
+    },
+    {
+        "nome": "Anacrônico",
+        "pontos": "2",
+        "descricao": [
+            "O personagem não consegue usar equipamentos modernos, tem muita dificuldade de se adaptar à tecnologia. Isso faz com que o personagem não possa usar Armas de Fogo ou usar qualquer tipo de equipamento que não seja básico e razoavelmente intuitivo para um ser vivo. O personagem também não pode colocar pontos na perícia \"Sistemas\" e falha automaticamente sempre que lidar com máquinas modernas."
+        ]
+    },
+    {
+        "nome": "Analfabetismo",
+        "pontos": "1",
+        "descricao": [
+            "O Personagem não sabe ler ou escrever."
+        ]
+    },
+    {
+        "nome": "Aparência Engraçada",
+        "pontos": "3",
+        "descricao": [
+            "A aparência do personagem é motivo de piada, causando penalidades em tratos sociais. As pessoas simplesmente não te levam a sério. Você falha automaticamente em qualquer teste social no qual a sua aparência acabe dominando muito (intimidação contra alguém que não conhece sua força) e mestres podem decidir te dar falhas automáticas em testes sociais quando apropriado."
+        ]
+    },
+    {
+        "nome": "Aparência Hedionda",
+        "pontos": "3",
+        "descricao": [
+            "O personagem possui uma aparência monstruosa, que causa outras pessoas a serem mais hostis em relação a ele. Você falha automaticamente em alguns testes sociais relevantes (como sedução). Além disso, sua Aparência é reduzida para um valor igual à 1 e não pode ser maior do que isso."
+        ]
+    },
+    {
+        "nome": "Aparência Inofensiva",
+        "pontos": "1",
+        "descricao": [
+            "Você simplesmente não parece uma ameaça. Isso pode acabar funcionando a seu favor às vezes, mas ninguém que não te conheça não vai pensar que você pode trazer problemas ou reagir de qualquer maneira."
+        ]
+    },
+    {
+        "nome": "Arrogante",
+        "pontos": "2",
+        "descricao": [
+            "O personagem acredita ser o melhor, e tende a humilhar os demais. Isso pode causar inimizades e inimigos facilmente para o personagem."
+        ]
+    },
+    {
+        "nome": "Ascético",
+        "pontos": "2",
+        "descricao": [
+            "Você não se importa com bens, riqueza ou poder temporário, glória ou com sua aparência. O mundo é apenas algo curto que está entre você e a próxima existência, e você não se prende a ele. Você tem só o que precisa e nada mais. Qualquer dinheiro que sobrar durante a criação da ficha é reduzido a 0 e seu personagem deve passar a história sem obter dinheiro ou itens que não precise de verdade (por exemplo, dormir no chão é tão bom quanto dormir num hotel)."
+        ]
+    },
+    {
+        "nome": "Assombrado",
+        "pontos": "1 ou 3",
+        "descricao": [
+            "O personagem é perseguido por um fantasma, um espírito ou uma entidade etérea em busca de vingança, ou de solução para seus dramas pessoais. O jogador deve explicar os motivos e objetivos da assombração em sua história. A assombração pode aparecer frequentemente ou não. Caso o jogador queira que ela seja frequente, a desvantagem concede 3 pontos. Caso ele queira que ela seja esporádica, o custo é de 1 ponto."
+        ]
+    },
+    {
+        "nome": "Avareza",
+        "pontos": "2",
+        "descricao": [
+            "O personagem jamais divide o que tem com ninguém, e tem com principal motivação acumular dinheiro. O custo aumenta para 3 caso o personagem seja do arquétipo Mercante Príncipe."
+        ]
+    },
+    {
+        "nome": "Azarado",
+        "pontos": "1 ou 2",
+        "descricao": [
+            "1 Ponto: O personagem tem muita má sorte e sempre sofre contratempos em cenas importantes da aventura. O mestre determina como irá funcionar a má sorte do personagem. Quando você obtém uma falha critica, o efeito é aumentado 10 vezes.",
+            "2 Pontos: Você é como um pára-raios para azar (ganhe todos os efeitos de 1 ponto dessa desvantagem e os extras dessa). Coisas ruins e desastrosas tendem a acontecer com você, sendo elas mortais ou não. Sempre que algo ruim for acontecer ao grupo, acontece com você primeiro. Caso o Mestre prefira, você pode simplesmente atrair coisas ruins e se ferrar bastante, não necessariamente levando o grupo consigo."
+        ]
+    },
+    {
+        "nome": "Baixa resistência à dor",
+        "pontos": "2",
+        "descricao": [
+            "O personagem não lida bem com dor nem ameaças de dor. Se sendo machucado ou torturado de alguma forma, testes de Força de Vontade (FV) se tornam muito mais difíceis. O aumento de dificuldade deve ser de pelo menos uma categoria, mas o mestre pode decidir aumentar mais."
+        ]
+    },
+    {
+        "nome": "Bully",
+        "pontos": "1",
+        "descricao": [
+            "O personagem adora irritar e humilhar aqueles que considera serem mais fracos. Essa desvantagem pode gerar inimigos futuros."
+        ]
+    },
+    {
+        "nome": "Carnívoro",
+        "pontos": "2",
+        "descricao": [
+            "Sua espécie (ou você em particular), o que precisa ser explicado na sua história, é incapaz de processar alimentos que não sejam carnes. O que não for carne pode te encher e te matar a fome, mas não vai realmente te alimentar. Comer o que não é carne também não é saudável para você."
+        ]
+    },
+    {
+        "nome": "Casamento de encomenda",
+        "pontos": "3",
+        "descricao": [
+            "Seu personagem está noivo. Infelizmente, o casamento não está destinado a o deixar feliz. Talvez ele esteja para se casar com algum inimigo, ou talvez esteja para se casar com alguém realmente ignorante ou irritante. Independente do caso, a família do personagem deseja que ele obedeça e se case. O casamento deve acontecer em menos de um ano e você não deseja que ele aconteça. O pior é que a pessoa com quem seu personagem deve se casar também não está nada feliz com isso. No melhor dos casos, você está destinado a viver em uma casa fria e triste, preso a um casamento político. No pior dos casos, pode estar se casando com um espião ou o casamento pode ser uma trama para destruir sua família por dentro."
+        ]
+    },
+    {
+        "nome": "Cauteloso",
+        "pontos": "2",
+        "descricao": [
+            "O personagem evita entrar em perigo e planeja excessivamente suas ações."
+        ]
+    },
+    {
+        "nome": "Cego",
+        "pontos": "3",
+        "descricao": [
+            "O personagem perdeu completamente sua visão por algum motivo. O personagem treinou muito e ainda é capaz de operar em combate através dos outros sentidos, mas falha automaticamente em qualquer teste que dependa exclusivamente de visão. Além disso, recebe -4 em todos os outros testes de Percepção quando visão é um fator importante. Em combate, você não sofre penalidades quando enfrenta inimigos invisíveis ou outras táticas similares."
+        ]
+    },
+    {
+        "nome": "Cético",
+        "pontos": "1",
+        "descricao": [
+            "O personagem tem dificuldades em acreditar em histórias sem evidência."
+        ]
+    },
+    {
+        "nome": "Chantagem",
+        "pontos": "4",
+        "descricao": [
+            "Alguém em algum lugar sabe um segredo obscuro seu ou algum terrível feito do passado que você tenha cometido em algum momento de fraqueza. O que é pior: essa (ou essas) pessoa(s) tem como objetivo fazer você pagar por isso. A pessoa que te chantageia sempre sabe onde você está de alguma forma, e periodicamente faz certas exigências de você em troca de não contar o seu segredo. Você é obrigado a cumprir essas exigências sempre que aparecerem ou então seu segredo virá à tona e você sofrerá as consequências disso (psicológica e socialmente). O jogador deve definir na história quem é que sabe do segredo do personagem, como essa pessoa é (em termos de personalidade) e qual é esse segredo temível."
+        ]
+    },
+    {
+        "nome": "Chiclete de Monstro",
+        "pontos": "5",
+        "descricao": [
+            "O personagem é sempre o primeiro a ser atacado por inimigos ou é geralmente a escolha preferida dos mesmos. Em combate isso significa que ele sempre será o primeiro a ser atacado pelos inimigos, fora de combate isso significa que ele será o alvo preferido por inimigos que estejam atrás do grupo."
+        ]
+    },
+    {
+        "nome": "Ciúme Doentio",
+        "pontos": "2",
+        "descricao": [
+            "O personagem possui um interesse amoroso por quem sente ciúmes doentios, que o leva a ações insanas."
+        ]
+    },
+    {
+        "nome": "Claustrofobia",
+        "pontos": "4",
+        "descricao": [
+            "O personagem sofre penalidade nos testes de medo quando entra em ambientes muito pequenos. Esses são testes de força de vontade que começam com dificuldade 6 e acontecem toda vez que o mestre estiver com vontade de os fazer (mas pelo menos 1 por cena apropriada). O teste vai ficando cada vez mais difícil, ao falhar seu personagem entra em pânico e PRECISA sair dali."
+        ]
+    },
+    {
+        "nome": "Cleptomania",
+        "pontos": "3",
+        "descricao": [
+            "O personagem não consegue evitar roubar, quando surge uma oportunidade. Caso o personagem seja do arquétipo: Ladrão, esta desvantagem concede 1 ponto ao invés de três."
+        ]
+    },
+    {
+        "nome": "Código de conduta rígido",
+        "pontos": "2",
+        "descricao": [
+            "O personagem segue um código de conduta rígido e jamais o quebra. Se quebrar ganha muitas penalidades. É interessante o jogador explicar como seria esse código e em quais condições aconteceria em sua história."
+        ]
+    },
+    {
+        "nome": "Colecionador Compulsivo",
+        "pontos": "2",
+        "descricao": [
+            "O personagem possui uma obsessão de colecionar um determinado tipo de objeto, item ou coisa em específico. O jogador deve explicitar qual tipo de objeto é na história do personagem."
+        ]
+    },
+    {
+        "nome": "Complexo de Inferioridade",
+        "pontos": "2",
+        "descricao": [
+            "O personagem possui baixa autoestima e está sempre se desculpando por suas imaginárias limitações. Testes de intimidação ou convencimento contra você tem suas dificuldades reduzidas em uma categoria."
+        ]
+    },
+    {
+        "nome": "Confiança Cega",
+        "pontos": "4",
+        "descricao": [
+            "O personagem tem excesso de confiança em si mesmo, ao ponto de cometer atos insanos. Você nunca pode desistir de um confronto. Além disso, o personagem sempre assume que obteve sucesso, mesmo quando falhou claramente. Como um exemplo: Se você falha em um teste de disfarce e alguém percebe, você simplesmente não desiste do plano original até que a escolha seja retirada de suas mãos, a ideia de ter cometido um erro é algo que nem passa pela sua cabeça."
+        ]
+    },
+    {
+        "nome": "Corcunda",
+        "pontos": "3",
+        "descricao": [
+            "O personagem tem uma corcunda que causa grande penalidade em testes sociais e de agilidade. Você recebe -2 em testes sociais e sua Agilidade é reduzida permanentemente em 1 ponto."
+        ]
+    },
+    {
+        "nome": "Corpo Alienígina",
+        "pontos": "3",
+        "descricao": [
+            "Possui uma forma e uma fisiologia completamente diferente do normal, afetando testes sociais e testes de cura. O personagem ainda pode escolher uma raça, mas seu corpo e sua aparência possuirão altas diferenças do padrão. Equipamentos normais não servem para você e você precisa gastar 50% mais dinheiro em qualquer equipamento comprado, além de só poder fazer por encomenda (equipamentos precisam ser feitos especialmente para você). Quando interagindo com um personagem da sua raça original, você recebe -2 em quaisquer testes sociais."
+        ]
+    },
+    {
+        "nome": "Corrupção Moral Crônica",
+        "pontos": "1",
+        "descricao": [
+            "O personagem está progressivamente se tornando mal ou corrupto em direção a algum objetivo ou coisa que queira muito."
+        ]
+    },
+    {
+        "nome": "Covarde",
+        "pontos": "2",
+        "descricao": [
+            "Você é muito cuidadoso e evita situações que fossem te pôr em perigo sério. Quando for participar de algo perigoso, o mestre pode decidir realizar testes de Força de Vontade. Uma falha significa que o personagem não consegue se controlar e vai fazer o que precisar fazer para sair dessa situação, evitando apenas se colocar em uma situação mais perigosa ainda. Testes sociais podem se tornar mais difícil quando o outro personagem sabe que você é um covarde."
+        ]
+    },
+    {
+        "nome": "Credulidade",
+        "pontos": "3",
+        "descricao": [
+            "O personagem acredita em praticamente tudo que lhe dizem. Testes de blefe contra você tem sua dificuldade reduzida em duas categorias e você recebe um redutor de -5 em testes de percepção para detectar mentiras. Isso não significa que você precisa acreditar em histórias implausíveis."
+        ]
+    },
+    {
+        "nome": "Criança",
+        "pontos": "5",
+        "descricao": [
+            "O personagem é equivalente a uma criança humana, fisicamente. Sua Força (FOR) e Constituição (CON) possuem um valor igual à 1 e não podem ser maiores do que isso. Sua Agilidade (AGI) não pode ser maior do que 3. Essa desvantagem não pode ser comprada junto de outras desvantagens que reduzam Força ou Constituição."
+        ]
+    },
+    {
+        "nome": "Crença não-convencional",
+        "pontos": "1",
+        "descricao": [
+            "O personagem segue algum tipo de religião pagã ou estranha, diferente das socialmente aceitas. Isso causa penalidades nos testes sociais."
+        ]
+    },
+    {
+        "nome": "Curioso",
+        "pontos": "2",
+        "descricao": [
+            "O personagem não consegue evitar saciar sua curiosidade, mesmo em detrimento do seu bem estar."
+        ]
+    },
+    {
+        "nome": "Daltônico",
+        "pontos": "1",
+        "descricao": [
+            "O personagem tem dificuldades de diferenciar ou enxergar cores."
+        ]
+    },
+    {
+        "nome": "Deficiência Auditiva",
+        "pontos": "2",
+        "descricao": [
+            "O personagem não consegue escutar bem ou é completamente surdo. O personagem aprendeu a lidar com isso em combate, mas isso causa falha automática em testes de percepção quando audição é um fator importante."
+        ]
+    },
+    {
+        "nome": "Decepado",
+        "pontos": "4",
+        "descricao": [
+            "O personagem não possui um membro do corpo por algum motivo que deve ser explicado na história do personagem, seja por uma catástrofe ou condições adversas do nascimento do mesmo. O personagem fica incapaz de realizar ações que necessitem exclusivamente daquele membro ou então recebe uma penalidade de -4 em testes que envolvam o membro decepado (no caso de ter uma das pernas perdidas, o personagem ainda poderia tentar correr, mas teria grandes dificuldades)."
+        ]
+    },
+    {
+        "nome": "Delirante",
+        "pontos": "2",
+        "descricao": [
+            "O  personagem sofre com delírios aleatórios ou específicos referente a algum evento traumático de seu passado. Caso seja relacionado com um evento o jogador deve explicar o motivo dos delírios na história do personagem."
+        ]
+    },
+    {
+        "nome": "Dependente",
+        "pontos": "2",
+        "descricao": [
+            "O personagem é dependente de alguém ou alguma coisa para sua sobrevivência. O jogador deve especificar quem é essa pessoa ou coisa de que o personagem depende em sua história."
+        ]
+    },
+    {
+        "nome": "Depressivo",
+        "pontos": "2",
+        "descricao": [
+            "O personagem sofre de depressão profunda e tem pensamentos suicidas, principalmente em momentos de estresse. Dentro de combate isso pode fazer com que eventualmente o personagem perca a vez enquanto sofre uma recaída."
+        ]
+    },
+    {
+        "nome": "Desatento",
+        "pontos": "3",
+        "descricao": [
+            "O personagem se distrai muito fácil, portanto, não reage a eventos tão rapidamente como seus demais companheiros. Como resultado disso, ele pode acabar não conseguindo reagir em certas situações e acontecimentos que requerem uma ação rápida, e em combate, isso faz com que o personagem não seja capaz de agir durante rodadas ou combate surpresas (na fase de preparação, exclusivamente)."
+        ]
+    },
+    {
+        "nome": "Destino Cruel",
+        "pontos": "5",
+        "descricao": [
+            "Existe um destino de extrema significância esperando por você, e infelizmente não é algo feliz. Seu personagem está fadado à morrer ou ficar completamente inútil de alguma forma onde não possa mais ser ele mesmo em algum ponto da história e isso acontecerá independente dos esforços do personagem. Antes de sua morte, você irá lançar uma profunda escuridão no mundo de alguma forma. Talvez você permitirá que a receita do poder total caia nas mãos dos seus inimigos, talvez você permitirá com a sua falha que um reino inteiro seja destruído e milhares de vidas serão perdidas. Uma vez por sessão, sempre que você for ferido ao ponto de morrer ou falhar em testes que levariam à sua morte, você então apenas fica inconsciente ou fora de perigo (mas inutilizado momentaneamente). Essa desvantagem não pode ser comprada em conjunto com vantagens que tenham a ver com a longevidade do personagem (como imortalidade, por exemplo)."
+        ]
+    },
+    {
+        "nome": "Dislexia",
+        "pontos": "1",
+        "descricao": [
+            "O personagem tem grande dificuldade de leitura."
+        ]
+    },
+    {
+        "nome": "Distraído",
+        "pontos": "2",
+        "descricao": [
+            "O personagem tem penalidades em testes de Percepção e tem dificuldade de se concentrar em uma tarefa."
+        ]
+    },
+    {
+        "nome": "Dívida",
+        "pontos": "2 ou 4",
+        "descricao": [
+            "Você tem uma dívida com alguém e algum dia eles virão cobrar. Por 2 pontos é alguma dívida pequena e a cobrança vai te trazer alguma inconveniência, sem realmente te ameaçar. Por 4 pontos é uma dívida bem grande e a cobrança, igualmente, exigirá riscos grandes."
+        ]
+    },
+    {
+        "nome": "Doente Terminal",
+        "pontos": "2",
+        "descricao": [
+            "O personagem sofre de uma doença terminal e tem penalidades em testes que envolvam força física, constituição, agilidade, etc. Eventualmente este personagem está fadado a morrer e pode vir a falecer mais cedo do que o normal."
+        ]
+    },
+    {
+        "nome": "Dupla Personalidade",
+        "pontos": "3",
+        "descricao": [
+            "O personagem possui duas personalidades diferentes, sendo uma necessariamente a dominante que está presente na maior parte do tempo. É necessário que o jogador descreva como são as duas personalidades e se necessário, quando as alterações de personalidade podem se manifestar (alguma situação tensa, efeito traumático, memórias, etc)."
+        ]
+    },
+    {
+        "nome": "Egoísta",
+        "pontos": "1",
+        "descricao": [
+            "O personagem só se preocupa com si mesmo e pode deixar seus aliados de fora de seus planos frequentemente."
+        ]
+    },
+    {
+        "nome": "Empatia Médium",
+        "pontos": "1",
+        "descricao": [
+            "Você sempre é capaz de dizer quando alguém está com algum sentimento forte e você sabe exatamente qual. Isso acontece por você copiar, involuntariamente, qualquer sentimento forte perto de você. Se alguém estiver depressivo a ponto de suicídio, você ficaria igual. Da mesma forma, se alguém estiver muito feliz, você também ficará!"
+        ]
+    },
+    {
+        "nome": "Enxaqueca",
+        "pontos": "2",
+        "descricao": [
+            "O personagem sofre periodicamente de enxaquecas fortíssima que criam grandes penalidades em todos os testes."
+        ]
+    },
+    {
+        "nome": "Epilepsia",
+        "pontos": "4",
+        "descricao": [
+            "O personagem sofre periodicamente com crises epilépticas, que o deixam completamente incapacitado. Em combate, isso se traduz em uma chance de 5% (1d100 = 5) no inicio de todos os seus turnos. O mestre pode te pedir outros testes durante a sessão, obtendo o mesmo resultado."
+        ]
+    },
+    {
+        "nome": "Escravo",
+        "pontos": "4",
+        "descricao": [
+            "O personagem é escravo de algum mestre, e pode ser vendido para outro mestre ou sacrificado, se o mestre assim o desejar. O jogador deve especificar quem é o mestre e por que o personagem é um escravo em sua história."
+        ]
+    },
+    {
+        "nome": "Estigma Social",
+        "pontos": "2",
+        "descricao": [
+            "Por algum motivo, o personagem é estigmatizado socialmente e rejeitado por aonde vai. O jogador deve explicar por que o personagem sofre disso em sua história."
+        ]
+    },
+    {
+        "nome": "Eterna Fraqueza",
+        "pontos": "3",
+        "descricao": [
+            "O personagem não conseguiu desenvolver seus músculos e algo o impede de o fazer no futuro, resultando em um personagem tão fraco quanto uma criança. A Força (FOR) do personagem é reduzida a 1 e não pode ser maior do que isso."
+        ]
+    },
+    {
+        "nome": "Extremamente Alto",
+        "pontos": "2",
+        "descricao": [
+            "Sua altura é muito maior que a média, as pessoas o tratam quase como um monstro. Tem dificuldades de andar em ônibus, de se mover em espaços pequenos, etc. O personagem sofre penalidades em testes de esquivas, movimento e defesas onde sua altura possa o prejudicar."
+        ]
+    },
+    {
+        "nome": "Extremamente Preguiçoso",
+        "pontos": "1",
+        "descricao": [
+            "O personagem tem muita dificuldade de encontrar motivação para o que quer que seja fazendo com que seja afetado de variadas formas dentro e fora de combate (principalmente)."
+        ]
+    },
+    {
+        "nome": "Falta de Confiança",
+        "pontos": "3",
+        "descricao": [
+            "O seu personagem pode ser realmente bom em algo, mas ele simplesmente não confia na sua própria habilidade. Ele treina e treina, mas ainda não é excelente. O conhecimento está lá, mas a dúvida também. Escolha uma perícia na qual você tem pelo menos nível 3. Sempre que você rolar um sucesso naquela perícia, role o teste novamente. Você só obtém sucessos com aquela perícia quando rola dois sucessos."
+        ]
+    },
+    {
+        "nome": "Fanático",
+        "pontos": "2",
+        "descricao": [
+            "O personagem tem uma crença fanática em uma religião, ideologia ou até um ídolo. Causa penalidade em testes sociais."
+        ]
+    },
+    {
+        "nome": "Feio de Doer",
+        "pontos": "2",
+        "descricao": [
+            "O personagem é muito feio. Seu atributo secundário Aparência, originalmente igual à sua Carisma, é reduzido para um valor igual à 1 e não pode ser maior do que isso. Aparência é usada no lugar de Carisma para testes de sedução."
+        ]
+    },
+    {
+        "nome": "Ferida Permanente",
+        "pontos": "2",
+        "descricao": [
+            "O personagem possui algum machucado de origem sobrenatural que nunca poderá ser curado. Por causa disso, o HP atual do personagem nunca alcança seu HP máximo, ficando, no máximo, um ponto abaixo dele."
+        ]
+    },
+    {
+        "nome": "Fiel",
+        "pontos": "4",
+        "descricao": [
+            "O personagem é capaz de dar a própria vida por seus amigos, sem pensar duas vezes. Às vezes o excesso de fidelidade faz com que o personagem faça coisas que os seus aliados não queriam que fizesse."
+        ]
+    },
+    {
+        "nome": "Fobia",
+        "pontos": "1",
+        "descricao": [
+            "O personagem possui um medo irracional de alguma coisa, criatura, pessoal, situação, etc. A fobia deve ser especificada na história do personagem."
+        ]
+    },
+    {
+        "nome": "Frágil",
+        "pontos": "3",
+        "descricao": [
+            "O personagem não aguenta muito dano em combate e se machuca muito mais facilmente do que deveria, independente do caso. Reduza sua RD Geral em -1, sempre."
+        ]
+    },
+    {
+        "nome": "Fraqueza Especial",
+        "pontos": "2",
+        "descricao": [
+            "O personagem tem algum tipo de fraqueza, pela qual sofre penalidades. Tal fraqueza deve ser explicitada na história do personagem."
+        ]
+    },
+    {
+        "nome": "Fraqueza Sobrenatural",
+        "pontos": "4",
+        "descricao": [
+            "O personagem possui algum tipo de ponto fraco, que causa o dobro de dano ou pode levá-lo à morte instantaneamente. Tal fraqueza deve ser explicitada na história do personagem."
+        ]
+    },
+    {
+        "nome": "Galinha",
+        "pontos": "1 ou 2",
+        "descricao": [
+            "1 Ponto: Seu personagem tem o hábito de paquerar um membro do sexo oposto (ou do mesmo sexo) sempre que possível. Isso pode trazer complicações sociais para o personagem e raramente traz alguma sorte pro mesmo, uma vez que ele acaba sendo mal visto pelo personagem paquerado.",
+            "2 Pontos: O personagem é extremamente paquerador e nunca perderá uma chance de dar em cima de um alvo desejado, sendo muito inconveniente e as vezes tornando-se um admirador obsessivo e incansável."
+        ]
+    },
+    {
+        "nome": "Gagueira",
+        "pontos": "2",
+        "descricao": [
+            "O personagem é gago, sofrendo assim, penalidades em testes sociais devido a dificuldade para passar informações. Penalidades em testes de Sedução e em testes de Diplomacia também são aplicadas."
+        ]
+    },
+    {
+        "nome": "Generosidade Exagerada",
+        "pontos": "2",
+        "descricao": [
+            "O personagem é incapaz de ficar com algo para si, quer sempre compartilhar tudo que tem. Isso pode variar desde informações quanto espólios de um combate ou mesmo objetos próprios."
+        ]
+    },
+    {
+        "nome": "Hábitos Pessoais Odiosos",
+        "pontos": "2",
+        "descricao": [
+            "O personagem possui hábitos odiosos, que causam repulsa social."
+        ]
+    },
+    {
+        "nome": "Herbívoro",
+        "pontos": "2",
+        "descricao": [
+            "Sua espécie (ou você em particular), o que precisa ser explicado na sua história, é incapaz de processar alimentos que não sejam plantas. O que não for plantas pode te encher e te matar a fome, mas não vai realmente te alimentar. Comer o que não é planta também não é saudável para você."
+        ]
+    },
+    {
+        "nome": "Heróico",
+        "pontos": "4",
+        "descricao": [
+            "O personagem nunca recusa um pedido de ajuda, mesmo que isso custe sua própria vida."
+        ]
+    },
+    {
+        "nome": "Honestidade Radical",
+        "pontos": "4",
+        "descricao": [
+            "O personagem sempre fala a verdade, não importando a ocasião."
+        ]
+    },
+    {
+        "nome": "Identidade Errada",
+        "pontos": "3",
+        "descricao": [
+            "O personagem possui uma semelhança impressionante com um importante e famoso criminoso ou vilão. O jogador deve explicitar com quem ele geralmente é confundido na sua história."
+        ]
+    },
+    {
+        "nome": "Identidade Secreta",
+        "pontos": "3",
+        "descricao": [
+            "O personagem possui uma identidade secreta que, se revelada, causará transtornos e sofrimento para os seus conhecidos e para si próprio. O jogador deve explicitar porque essa identidade secreta é importante."
+        ]
+    },
+    {
+        "nome": "Idoso",
+        "pontos": "2",
+        "descricao": [
+            "O personagem possui uma idade avançada para a sua raça, sofrendo assim penalidades generalizadas em todos os atributos em certas ações."
+        ]
+    },
+    {
+        "nome": "Imbecil",
+        "pontos": "3",
+        "descricao": [
+            "O personagem é burro como uma porta. Tem penalidade em qualquer tipo de teste de conhecimento e pode eventualmente falar besteiras absurdas. Sua Inteligência (INT) é reduzida para um valor igual à 1 e não pode ser maior do que isso."
+        ]
+    },
+    {
+        "nome": "Impulsividade",
+        "pontos": "1",
+        "descricao": [
+            "Personagem não consegue controlar suas emoções, irrita-se facilmente e fala o que der na telha."
+        ]
+    },
+    {
+        "nome": "Imunidade Baixa",
+        "pontos": "3",
+        "descricao": [
+            "O corpo do personagem é fraco. Ele fica doente com facilidade e não resiste muito bem a nenhuma ameaça, como venenos, calor intenso, frio intenso, feridas e machucados de todos os tipos, etc... Seus ossos também se quebram facilmente. A Constituição (CON) do personagem é reduzida a 1 e não pode ser maior do que isso."
+        ]
+    },
+    {
+        "nome": "Incompatibilidade com Eletrônicos",
+        "pontos": "1",
+        "descricao": [
+            "O personagem causa avaria e problemas ao usar um dispositivo eletrônico, não consegue usar nada de alta tecnologia sem causar dano ou estragá-los."
+        ]
+    },
+    {
+        "nome": "Incompetência",
+        "pontos": "2",
+        "descricao": [
+            "O personagem tem penalidade em todos os testes que envolvam perícias ou habilidades profissionais. Essa desvantagem afeta diretamente qualquer ofício que o personagem tenha, causando uma penalidade fixa de -2 em qualquer teste envolvendo alguma perícia Emprego e também é adicionada quando o personagem fizer qualquer coisa relacionada a trabalho."
+        ]
+    },
+    {
+        "nome": "Inexperiente",
+        "pontos": "2",
+        "descricao": [
+            "O personagem começa com 3 pontos de perícia a menos. Também escolha três perícias: essas perícias começam no nível -2, exigindo 7 pontos para atingirem o nível 5."
+        ]
+    },
+    {
+        "nome": "Infantil",
+        "pontos": "1",
+        "descricao": [
+            "O personagem age como se fosse uma criança, possuem emoções simples e impulsividade, ciúmes etc. Ele também é muito ingênuo."
+        ]
+    },
+    {
+        "nome": "Inimigo Pessoal",
+        "pontos": "?",
+        "descricao": [
+            "O personagem possui um inimigo pessoal, que o persegue durante as aventuras. O inimigo sempre tem nível superior ao seu e pode ser bem poderoso, influente e ter capangas. Essa desvantagem concede 3 pontos para um inimigo de nível equivalente ao seu e 5 pontos para um inimigo de nível superior ao seu."
+        ]
+    },
+    {
+        "nome": "Inimigos",
+        "pontos": "5",
+        "descricao": [
+            "O personagem possui inimigos múltiplos, organizações, gangues, máfias que estão ao seu encalço."
+        ]
+    },
+    {
+        "nome": "Insônia",
+        "pontos": "4",
+        "descricao": [
+            "O personagem tem dificuldades de dormir, e na maior parte do tempo realmente não consegue dormir e descansar apropriadamente. Isso causa diversas penalidades na vida do personagem, como fadiga, penalidades em atributos-teste (dependendo de quantos dias o personagem não dormiu) e quando o personagem dormir ele sempre recupera um ponto de Stamina  a menos, nunca ficando com sua Stamina no máximo através desse método. Essa desvantagem não pode coexistir com a vantagem \"Não Dorme\"."
+        ]
+    },
+    {
+        "nome": "Jogo Compulsivo",
+        "pontos": "2",
+        "descricao": [
+            "O personagem tem o vício de jogar compulsivamente, não consegue parar de gastar todo o seu dinheiro em apostas."
+        ]
+    },
+    {
+        "nome": "Lento",
+        "pontos": "3",
+        "descricao": [
+            "O personagem é muito mais lento do que o normal tem penalidade no deslocamento e sempre fica por último nos testes de iniciativa. Sua Agilidade (AGI) é reduzida para um valor igual à 1 e não pode ser maior do que isso."
+        ]
+    },
+    {
+        "nome": "Língua Solta",
+        "pontos": "2",
+        "descricao": [
+            "O personagem é incapaz de guardar segredos e tem que fazer testes de Força de Vontade para se controlar. Quebrar a confiança de alguém é a forma mais rápida de se perder um amigo para sempre."
+        ]
+    },
+    {
+        "nome": "Línguagem Focada",
+        "pontos": "2",
+        "descricao": [
+            "O personagem nunca aprendeu a linguagem Comum e portanto, não pode se comunicar da maneira mais usual conhecida. Se você não souber nenhuma outra língua, você não sabe se comunicar com outras pessoas. Linguagem Focada não é recomendável caso o personagem não saiba falar nenhuma língua que algum outro personagem do grupo fale."
+        ]
+    },
+    {
+        "nome": "Loucura",
+        "pontos": "2",
+        "descricao": [
+            "O personagem tem algum tipo de distúrbio psiquiátrico, esquizofrenia, mania, paranóia, delírios e isso eventualmente a afeta nas horas mais inoportunas."
+        ]
+    },
+    {
+        "nome": "Má Reputação",
+        "pontos": "2",
+        "descricao": [
+            "O personagem tem um passado sombrio, que o persegue por todos os lugares. Pode ser um ex-criminoso, acusado de um crime que não cometera ou relacionado com algum passado obscuro. O jogador deve explicitar o motivo da má reputação na história do personagem."
+        ]
+    },
+    {
+        "nome": "Manco",
+        "pontos": "2",
+        "descricao": [
+            "O personagem possui uma penalidade no deslocamento e em qualquer outro tipo de teste que envolva correr ou andar. A iniciativa do personagem é sempre reduzida pela metade também."
+        ]
+    },
+    {
+        "nome": "Máquina de Guerra",
+        "pontos": "4",
+        "descricao": [
+            "Seu personagem é incapaz de não testar sua força contra inimigos poderosos. Quanto mais forte o inimigo, mais vontade ele tem de tentar, mesmo que vá perder ou até acabar morto. Seu personagem gosta tanto de lutar ou se testar que simplesmente não pode se controlar.",
+            "Da mesma forma, seu personagem não irá participar de nenhum plano para se livrar de uma ameaça grande se isso for resultar em não poder lutar contra a ameaça diretamente. Se é orgulho, vontade de aprender ou o que for você que decide. Seu personagem não precisa querer matar essas pessoas, pode só querer lutas amigáveis."
+        ]
+    },
+    {
+        "nome": "Medroso",
+        "pontos": "1",
+        "descricao": [
+            "O personagem não tem nenhuma coragem e busca sempre não se envolver em combates ou eventos perigosos."
+        ]
+    },
+    {
+        "nome": "Megalomania",
+        "pontos": "2",
+        "descricao": [
+            "O personagem tem planos mirabolantes de ascensão à fama internacional, riquezas incomensuráveis ou de conquista mundial."
+        ]
+    },
+    {
+        "nome": "Mente Fraca",
+        "pontos": "3",
+        "descricao": [
+            "O personagem é facilmente manipulado por outros, habilidades que tenham efeito de dominação mental ou feitiços que alteram o comportamento / obediência do personagem acertam automaticamente. Fora de combate, o personagem acredita facilmente em tudo o que lhe dizem e não procura investigar muito o porquê das coisas. Sua Força de Vontade (FV) é reduzida para um valor igual à 1 e não pode ser maior do que isso."
+        ]
+    },
+    {
+        "nome": "Mentira Compulsiva",
+        "pontos": "2",
+        "descricao": [
+            "O personagem mente compulsivamente, inventa histórias fictícias sobre si e seus companheiros para ganhar vantagens."
+        ]
+    },
+    {
+        "nome": "Morte pelo Sol",
+        "pontos": "3",
+        "descricao": [
+            "O personagem morre se exposto ao sol. Ele pode explodir, queimar totalmente, virar pó, etc. Isso pode ser resolvido se o personagem estiver protegido por armaduras, jóias especiais, mantos longos e coisas do tipo...Contato direto com a pele do personagem causa sérios danos."
+        ]
+    },
+    {
+        "nome": "Mudo",
+        "pontos": "2",
+        "descricao": [
+            "O personagem é incapaz de se comunicar verbalmente."
+        ]
+    },
+    {
+        "nome": "Necessidades respiratórias especiais",
+        "pontos": "3",
+        "descricao": [
+            "O personagem respira apenas uma atmosfera ou gás totalmente diferente do normal. Oxigênio é como um veneno para ele, portanto o jogador deve explicar o porquê disso na história do personagem. Essa desvantagem inclui eventuais aparelhos que suprem a necessidade especial do personagem. Um oponente pode tentar atacar seu equipamento ao receber -4 no teste de Ataque. Caso ele acerte ele não causa dano, mas seu equipamento é destruído e você morrerá se não houver um substituto disponível."
+        ]
+    },
+    {
+        "nome": "Nervos à flor da pele",
+        "pontos": "2",
+        "descricao": [
+            "O personagem tem baixa força de vontade e não consegue se controlar, estourando de raiva por qualquer motivo. O personagem recebe penalidades em teste do atributo “Força Vontade”."
+        ]
+    },
+    {
+        "nome": "Obcecado",
+        "pontos": "2",
+        "descricao": [
+            "O personagem possui uma obsessão severa com algo, e tal obsessão atrapalha totalmente sua vida, dando penalidades nos testes sociais, por exemplo."
+        ]
+    },
+    {
+        "nome": "Obeso",
+        "pontos": "1",
+        "descricao": [
+            "O personagem está muito acima do seu peso normal, tem penalidades em todos os testes que envolvam exercício físico e movimentação. O personagem se adaptou a esse problema em relação a combate e não recebe penalidades lá."
+        ]
+    },
+    {
+        "nome": "Objeto de valor sentimental",
+        "pontos": "2",
+        "descricao": [
+            "Seu personagem possui algum item com um valor fora do normal para ele...",
+            "Escolha algum objeto que faz parte da história do seu personagem (pode ser qualquer tipo de item e até equipamentos comprados ou criados por alguma vantagem). Ele é MUITO importante para seu personagem e seu personagem daria a própria vida para evitar que esse objeto fosse perdido."
+        ]
+    },
+    {
+        "nome": "Olhos deficientes",
+        "pontos": "2",
+        "descricao": [
+            "O personagem não consegue ver bem, possui algum tipo de deficiência visual, seja uma miopia fortíssima ou outro problema. O problema pode ser consertado por meio de lentes ou óculos. O personagem tem penalidade em testes de Percepção e pode eventualmente receber penalidades em testes de mira / precisão."
+        ]
+    },
+    {
+        "nome": "Ovelha Negra",
+        "pontos": "3",
+        "descricao": [
+            "Seja lá qual for a razão, você é a ovelha negra da sua família e eles frequentemente se sentem enojados e desprezam suas ações. Você pode escolher se foi mandado para fora da sua família ou se é só mal visto mesmo, e deve explicar porque o contexto da sua família te torna tão diferente. Sempre que fizer algum teste social ou alguma cena que envolva sua família, dificilmente alguém te dará crédito ou vai querer te levar em consideração."
+        ]
+    },
+    {
+        "nome": "Pacifista",
+        "pontos": "1",
+        "descricao": [
+            "O personagem evita o combate de todas as formas e jamais irá matar alguém. Ele odeia entrar em combates, mesmo que disso dependa sua vida."
+        ]
+    },
+    {
+        "nome": "Paranóico",
+        "pontos": "2",
+        "descricao": [
+            "O personagem acha que está sendo perseguido e não consegue confiar em ninguém muito profundamente."
+        ]
+    },
+    {
+        "nome": "Passado Negro",
+        "pontos": "2",
+        "descricao": [
+            "O personagem possui um segredo em seu passado, pode ser um crime, uma maldição, um trauma horrendo, e isso atrapalha seus relacionamentos e sua sanidade. Pessoas não ficam felizes quando descobrem esse passado negro."
+        ]
+    },
+    {
+        "nome": "Pesadelos Constantes",
+        "pontos": "2",
+        "descricao": [
+            "O personagem tem pesadelos quase todas as noites, que lhe dão penalidades em tratos sociais e em sua sanidade."
+        ]
+    },
+    {
+        "nome": "Pior de ambos os lados",
+        "pontos": "4",
+        "descricao": [
+            "Escolha uma raça primária e uma raça secundária. Você é uma mistura das duas raças, contendo as partes negativas de ambas. Escolha um dos atributos-teste que uma das raças forneceria um bônus de +1 (+2 pontos de vantagens é uma opção caso Humano seja escolhido). Você não recebe outros bônus raciais, apenas o que escolheu. Você não ganha acesso às vantagens raciais de nenhuma das raças, mas ganha acesso à todas as desvantagens raciais de ambas. Não é compatível com a vantagem \"Melhor de ambos os lados\" nem com a raça Changeling."
+        ]
+    },
+    {
+        "nome": "Pobreza",
+        "pontos": "3",
+        "descricao": [
+            "O personagem é completamente pobre, e excluído socialmente. Penalidade em relações sociais. Reduza sua quantidade inicial de dinheiro para 300."
+        ]
+    },
+    {
+        "nome": "Preconceituoso",
+        "pontos": "2",
+        "descricao": [
+            "Seu personagem tem várias crenças bem marretadas dentro da sua cabeça e não as muda facilmente. Isso pode ir desde preconceitos que o fazem desprezar outros quanto preconceitos que o fazem esperar mais de outros. Raça, status social, local onde nasceu, emprego... Tudo é algo que seu personagem usa para rotular pessoas e reduzir elas a algum padrão."
+        ]
+    },
+    {
+        "nome": "Procurado pelas autoridades",
+        "pontos": "3",
+        "descricao": [
+            "O personagem está fugindo de autoridades específicas ou gerais por algum motivo. O jogador deve explicar o motivo na história do personagem."
+        ]
+    },
+    {
+        "nome": "Protegido Indefeso",
+        "pontos": "3",
+        "descricao": [
+            "O personagem possui alguma pessoa indefesa sobre seus cuidados e simplesmente precisa proteger essa pessoa. Essa pessoa tem uma certa tendência a arranjar encrenca."
+        ]
+    },
+    {
+        "nome": "Rejeição Cibernética",
+        "pontos": "2",
+        "descricao": [
+            "O organismo do personagem rejeita completamente implantes cibernéticos. Caso o personagem use um implante cibernético, ele poderá morrer em poucos dias."
+        ]
+    },
+    {
+        "nome": "Renegado",
+        "pontos": "2",
+        "descricao": [
+            "O personagem não se encaixa de maneira nenhuma na sociedade, sendo rejeitado em todas as situações. O jogador deve dar um motivo pelo qual o personagem geralmente é rejeitado."
+        ]
+    },
+    {
+        "nome": "Rival",
+        "pontos": "2",
+        "descricao": [
+            "Você possui um relacionamento competitivo com alguém e um se esforça muito para superar o outro. Isso pode fazer com que se tratem como inimigos às vezes, mas não é obrigatório que se odeiem.",
+            "Seu rival pode ser algum outro personagem de jogador do seu grupo, contanto que ambos concordem com isso."
+        ]
+    },
+    {
+        "nome": "Rival Especial",
+        "pontos": "3",
+        "descricao": [
+            "Alguma coisa aconteceu entre você e algum personagem importante de arcos anteriores, e agora você quer superar esse personagem mais do que tudo. Talvez você tenha visto ele em uma luta ou simplesmente falado com ele, mas seu sonho e/ou objetivo é superá-lo.",
+            "Envolver um personagem antigo em sua história muito provavelmente vai exigir aprovação do mestre e/ou do criador daquele personagem, dependendo de como você o incluiu - é importante garantir que o personagem não tome um rumo não desejado."
+        ]
+    },
+    {
+        "nome": "Rosto de Mentiroso",
+        "pontos": "2",
+        "descricao": [
+            "O rosto do personagem não inspira confiança, causando penalidades em testes sociais onde convencer alguém de que fala a verdade é relevante."
+        ]
+    },
+    {
+        "nome": "Saco sem fundo",
+        "pontos": "1",
+        "descricao": [
+            "Você precisa se alimentar muito mais do que uma pessoa normal para ficar cheio e pode até estar quase constantemente com fome. Você só ganha as vantagens de alimentação ao comer o equivalente a 3 porções. Comer menos do que isso também significa que continuará com fome."
+        ]
+    },
+    {
+        "nome": "Sadismo",
+        "pontos": "1",
+        "descricao": [
+            "O personagem tem prazer em causar dor nos demais, pode vir a corromper-se completamente e ficar insano."
+        ]
+    },
+    {
+        "nome": "Sanguinário",
+        "pontos": "1",
+        "descricao": [
+            "O personagem é excessivamente cruel e sanguinário, raramente tendo piedade ou compaixão com os outros."
+        ]
+    },
+    {
+        "nome": "Sensível à luz",
+        "pontos": "2",
+        "descricao": [
+            "O personagem sofre grandes penalidades quando exposto à luz, seja de dano direto ou redutores em atributos e perícias."
+        ]
+    },
+    {
+        "nome": "Sexita",
+        "pontos": "2",
+        "descricao": [
+            "Você não consegue suportar pessoas do sexo oposto e sente uma terrível repulsa por elas. Isso inclui pessoas de outras raças diferentes."
+        ]
+    },
+    {
+        "nome": "Sexy",
+        "pontos": "3",
+        "descricao": [
+            "O personagem é relativamente atraente, mas de um jeito bem específico que costuma trazer mais problemas do que vale. A aparência do personagem é aumentada para 3 se fosse menor do que isso e essa desvantagem não pode ser comprada junto de desvantagens que alterassem sua aparência (vantagens podem). A aparência do personagem SEMPRE vai atrair a atenção de quem ele não queria atrair a atenção e quem o viu dificilmente irá esquecer quando alguém o estiver procurando. O personagem também é atraente para membros de ambos os sexos de qualquer espécie, incluindo criaturas não-inteligentes."
+        ]
+    },
+    {
+        "nome": "Sinal de identificação",
+        "pontos": "1",
+        "descricao": [
+            "O personagem possui algum tipo de sinal, tatuagem, cicatriz, marca que o torna facilmente identificável por quem quer que o esteja perseguindo. Caso seja uma cicatriz ou tatuagem que tenha algum significado, o jogador deve explicar o motivo / significado na história do personagem."
+        ]
+    },
+    {
+        "nome": "Sofrimento Constante",
+        "pontos": "2",
+        "descricao": [
+            "O personagem tem um sofrimento físico ou mental constante por algum motivo obscuro ou mesmo sem razão. O jogador deve explicar na história do personagem caso isso tenha um motivo."
+        ]
+    },
+    {
+        "nome": "Suicida",
+        "pontos": "1",
+        "descricao": [
+            "O personagem possui impulsos suicidas, que podem surgir em situações de estresse."
+        ]
+    },
+    {
+        "nome": "Supremacia",
+        "pontos": "1",
+        "descricao": [
+            "O personagem acredita na superioridade da própria cultura, status social, raça, etc. Ele humilha os outros que não possuem a mesma cultura ou crença que ele."
+        ]
+    },
+    {
+        "nome": "Supremacista",
+        "pontos": "1",
+        "descricao": [
+            "Escolha um dos traços importantes e visíveis do seu personagem. Seu personagem acredita que esse traço é o melhor e mais superior de todos e que qualquer um que não se encaixe nele é inferior a ele. Seu personagem pode estar planejando formas de levar seu \"grupo\" ao poder e eliminar (ou dominar) os inferiores. Nesse caso, a desvantagem passa a conceder 2 pontos ao invés de 1."
+        ]
+    },
+    {
+        "nome": "Tagarela",
+        "pontos": "2",
+        "descricao": [
+            "O personagem fala sem parar, causando penalidades nos tratos sociais."
+        ]
+    },
+    {
+        "nome": "Teimoso",
+        "pontos": "1",
+        "descricao": [
+            "O personagem não muda de opinião facilmente."
+        ]
+    },
+    {
+        "nome": "Terríveis Circunstâncias",
+        "pontos": "2",
+        "descricao": [
+            "Toda a sua família próxima está morta. Não sobrou ninguém para falar com você ou te ajudar."
+        ]
+    },
+    {
+        "nome": "Timidez",
+        "pontos": "2",
+        "descricao": [
+            "O personagem tem muita dificuldade nos tratos sociais. Não consegue expressar o que realmente sente e se acovarda ao ter que conhecer ou abordar pessoas novas."
+        ]
+    },
+    {
+        "nome": "Traumatizado",
+        "pontos": "2",
+        "descricao": [
+            "Personagem é traumatizado por algum motivo e tem penalidades em testes de sanidade e de relações sociais. O trauma irá afetar diretamente o seu dia a dia. O jogador deve explicar o motivo do trauma na história do personagem."
+        ]
+    },
+    {
+        "nome": "Vantagem Imaginária",
+        "pontos": "X",
+        "descricao": [
+            "Escolha uma vantagem na lista de vantagens. Essa desvantagem concede pontos na metade do custo daquela vantagem, arredondado para cima. O personagem deve agir como se possuísse aquela vantagem, mas ele não a possui. Exemplos: um personagem com Vantagem Imaginária: Direção Absoluta faria coisas como “É por ali! Eu sei que é!”, mas estaria errado. Um personagem com Vantagem imaginária: Imortalidade Avançada pode acabar se colocando em situações perigosas, acreditando que não pode morrer. O mestre deve vetar a compra dessa desvantagem caso a vantagem escolhida vá ser irrelevante como vantagem imaginária."
+        ]
+    },
+    {
+        "nome": "Verdade Oculta",
+        "pontos": "1 ou 2",
+        "descricao": [
+            "Alguma coisa importante sobre e para o seu personagem não é aparente e talvez até se passe o contrário. Esse traço do personagem raramente é reconhecido de imediato.",
+            "Exemplos: um mercenário que só liga pro dinheiro sendo reconhecido como bondoso altruísta ou alguém com uma certa ideologia mas que acaba passando a imagem da ideologia oposta, recebendo vários convites para um grupo que detesta só por parecer seguir aquelas ideias.",
+            "Por aumentar o ganho para 2 pontos, o seu traço não ser reconhecido também te traz transtornos consideráveis, talvez te deixando agressivo ou depressivo."
+        ]
+    },
+    {
+        "nome": "Viciado",
+        "pontos": "3",
+        "descricao": [
+            "O personagem tem comportamento autodestrutivo e é viciado em algum tipo de substância entorpecente ou hábito em específico. Ele necessita usar a substância ou fazer tal hábito constantemente ou tem grandes penalidades em todos os testes. Pode perder pontos de vida ao ficar sem executar seu vício."
+        ]
+    },
+    {
+        "nome": "Vingativo",
+        "pontos": "1",
+        "descricao": [
+            "O personagem é altamente vingativo e não vai sossegar até acertar as contas com qualquer um que o cause mal, chegando a causar dano a si mesmo em sua busca sedenta por vingança."
+        ]
+    },
+    {
+        "nome": "Vingança Antiga",
+        "pontos": "3",
+        "descricao": [
+            "Alguém te fez algo há algum tempo atrás e seu personagem não consegue viver com isso. Seu personagem é totalmente tomado por um sentimento de vingança e gasta seus dias indo atrás daquela pessoa ou criando planos para destruir ela."
+        ]
+    },
+    {
+        "nome": "Visões Médium",
+        "pontos": "2",
+        "descricao": [
+            "Você sempre tem visões sobrenaturais nos momentos mais inoportunos, efetivamente te desligando por curtos períodos.",
+            "Em geral essas visões não vão te trazer nada de útil. Às vezes são do futuro, às vezes são do passado e às vezes são algo que nunca aconteceu."
+        ]
+    },
+    {
+        "nome": "Voluntário",
+        "pontos": "3",
+        "descricao": [
+            "Talvez seu personagem tenha um desejo oculto de morrer, talvez ele não se dê valor ou talvez ele dê valor demais às outras pessoas. O que importa é que seu personagem vai se fazer disponível a qualquer trabalho suicida se isso for trazer alguma vantagem para os outros e estaria pronto até para se sacrificar diretamente para salvar alguém."
+        ]
+    }
+].sort(function (a,b) {
+    var na = a.nome.toUpperCase();
+    var nb = b.nome.toUpperCase();
+    if (na < nb) return -1;
+    if (na > nb) return 1;
+    return 0;
+});
+
+window.desvantagensHash = {};
+for (var i = 0; i < window.desvantagensArray.length; i++) {
+    window.desvantagensHash[window.desvantagensArray[i].nome.toUpperCase()] = window.desvantagensArray[i];
+}
