@@ -503,7 +503,7 @@ window.techAddons =
         "efeitos": [
             "Aumenta o custo da técnica em 4.",
             "Essa técnica não pode receber outros addons que aumentem ou diminuam seu dano.",
-            "Para decidir o dano final dessa técnica, escolha um aliado: o aliado realiza um teste de ataque contra esquiva no mesmo alvo que você estiver atacando. Se o ataque básico dele acertar, ele rola o dano dele e adiciona esse dano ao seu dano. Caso contrário, essa técnic terá como dano apenas o seu dano básico (dado de dano + bônus de arma + um atributo).",
+            "Para decidir o dano final dessa técnica, escolha um aliado: o aliado realiza um teste de ataque contra esquiva no mesmo alvo que você estiver atacando. Se o ataque básico dele acertar, ele rola o dano dele e adiciona esse dano ao seu dano. Caso contrário, essa técnica terá como dano apenas o seu dano básico (dado de dano + bônus de arma + um atributo).",
             "Para qualquer efeito acontecendo nessa técnica, VOCÊ é o único usuário. Então efeitos como Mark of the Guardian podem ser utilizados por você e addons como Inspire terão todos os seus aliados como alvos válidos.",
             "Redutores ou Bônus de dano em porcentagem para o dano do aliado são ignorados durante esse seu ataque, mas qualquer Bônus ou Redutor adicionado no SEU ataque é considerado para o ataque final.",
             "O dano final desse ataque é a soma do seu dano com o dano do seu aliado e possui como tipos quaisquer atributos de dano que tenham sido usados por você e ele.",
