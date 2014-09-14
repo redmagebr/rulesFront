@@ -2187,6 +2187,8 @@ window.techAddons =
 });
 
 window.techAddonsHash = {};
+var addon;
 for (var i = 0; i < window.techAddons.length; i++) {
-
+    addon = window.techAddons[i];
+    window.techAddonsHash[addon.tipo + '-' + addon.nome] = addon;
 }
