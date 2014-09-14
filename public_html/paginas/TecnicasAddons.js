@@ -70,6 +70,67 @@ window.techTipos = [
         "conceitos" : [
             
         ]
+    },
+    {
+        "id" : "arma",
+        "nome" : "Armas",
+        "descricao" : [
+            "Uma arma tem uma quantidade de Slots iguais ao seu nível. Addons em uma arma estão sempre ativos, mas tendem a só terem utilidade quando elas estão equipadas e sendo utilizadas em algum ataque.",
+            "Todas as armas operam junto de um Atributo de Dano. Armas começam funcionando para um único atributo, como uma Espada para Arma ou Luvas para Artes Marciais.",
+            "Armas de uma mão concedem um bônus de +1 Bônus de Arma Dano quando estão em uso. Armas de duas mão (ou duas armas de uma mão) concedem um bônus de +2 Bônus de Arma Dano quando estão em uso.",
+            "Uma arma é considerada 'Em uso' quando está equipada e o personagem está realizando um ataque que inclui algum dos atributos para os quais a arma funciona no dano desse ataque. Caso a descrição da técnica não inclua a arma de forma alguma, o mestre pode decidir que a arma não está em uso.",
+            "Armas não equipadas possuem um peso no inventário e tem um peso inicial de 2."
+        ],
+        "conceitos" : [
+            
+        ]
+    },
+    {
+        "id" : "escudo",
+        "nome" : "Armas Defensivas",
+        "descricao" : [
+            "Armas Defensivas são itens de defesa e possuem um número de slots igual ao nível delas.",
+            "Estar equipado com uma Arma Defensiva garante um bônus de +1 RD Geral. Armas Defensivas também dão um bônus de +1 Bônus de Arma RD para algum atributo de dano, especificado na sua criação.",
+            "Armas defensivas não equipadas possuem um peso no inventário e tem um peso inicial de 2."
+        ],
+        "conceitos" : [
+            
+        ]
+    },
+    {
+        "id" : "armadura",
+        "nome" : "Armaduras",
+        "descricao" : [
+            "Armaduras protegem o personagem de ataques inimigos.",
+            "Armaduras têm seus bônus naturais definidos pelos addons Armadura Leve, Armadura Média e Armadura Pesada, que não preenchem slots e devem ser adicionados à todas as peças de armaduras.",
+            "Roupas comuns e corpo nú contam como Armadura Leve, sem nenhum outro Addon.",
+            "Armaduras não equipadas possuem peso para inventário e um peso inicial de 2."
+        ],
+        "conceitos" : [
+            
+        ]
+    },
+    {
+        "id" : "acessorio",
+        "nome" : "Acessórios",
+        "descricao" : [
+            "Acessórios são objetos que auxiliam o personagem a fazer alguma outra coisa, podendo serem reusados muitas vezes.",
+            "Eles ficam no inventário do personagem e tem peso inicial em 1. Acessórios não possuem efeito algum inicialmente, realizando apenas o que seus Addons fazem."
+        ],
+        "conceitos" : [
+            
+        ]
+    },
+    {
+        "id" : "consumivel",
+        "nome" : "Itens Consumíveis",
+        "descricao" : [
+            "Itens consumíveis são como acessórios, mas mais poderosos e que só podem ser utilizados uma única vez.",
+            ""
+        ],
+        "conceitos" : [
+            
+        ]
     }
 ];
 window.tiposHash = {};

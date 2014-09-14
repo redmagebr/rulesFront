@@ -3,7 +3,7 @@ function ArquetiposUI (ui) {
     this.app = this.ui.app;
     window.arquetipos = this;
     this.ajax = new AjaxArquetipos(this);
-    this.stale = false;
+    this.stale = window.arquetiposArray === undefined;
     this.$conteudo = $('#content');
     
     $('#arquetiposButton').on('click', function (e) {

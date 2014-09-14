@@ -22,14 +22,25 @@ and open the template in the editor.
         </div>
         
         <div id="window">
-            <div id="titleBar"><a id="addonsButton" href="#">Addons</a>
+            <div id="titleBar">
+                <!--
+                <a id="addonsButton" href="#">Regras</a>
+                -
+                -->
+                <a id="addonsButton" href="#">Addons</a>
                 -
                 <a id="arquetiposButton" href="#">Arquétipos</a>
+                -
+                <!--
+                <a id="addonsButton" href="#">Raças</a>
+                -
+                -->
+                <a id="vantagensButton" href="#">Vantagens/Desvantagens</a>
             </div>
             <div id="content">
                 Clique em um dos links acima para ver o conteúdo!
             </div>
-            <a id="toTheTop">Voltar ao topo</a>
+            <a id="toTheTop" style="display: none">Voltar ao topo</a>
         </div>
         
         <script type="text/javascript" src="http://redpg.com.br/js/jquery-2.1.1.min.js"></script>
@@ -38,9 +49,11 @@ and open the template in the editor.
             <script type="text/javascript" src="app/ajax/Ajax.js"></script>
             <script type="text/javascript" src="app/ajax/AjaxTechs.js"></script>
             <script type="text/javascript" src="app/ajax/AjaxArquetipos.js"></script>
+            <script type="text/javascript" src="app/ajax/AjaxVantagens.js"></script>
             <script type="text/javascript" src="app/Application.js"></script>
             <script type="text/javascript" src="app/ui/UI.js"></script>
             <script type="text/javascript" src="app/ui/Techs/TechsUI.js"></script>
+            <script type="text/javascript" src="app/ui/Vantagens/VantagensUI.js"></script>
             <script type="text/javascript" src="app/ui/Arquetipos/ArquetiposUI.js"></script>
             <script type="text/javascript" src="app/ui/Changelog/ChangelogUI.js"></script>
             <script type="text/javascript" src="paginas/TecnicasHandler.js"></script>
@@ -48,6 +61,7 @@ and open the template in the editor.
         <!-- Preload Pages -->
             <script type="text/javascript" src="paginas/TecnicasAddons.js"></script>
             <script type="text/javascript" src="paginas/Arquetipos.js"></script>
+            <script type="text/javascript" src="paginas/Vantagens.js"></script>
         <!-- Preload Pages -->
         <script type='text/javascript'>
             window.app = new Application();

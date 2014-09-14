@@ -4,6 +4,7 @@ function UI (app) {
     
     this.techs = new TechsUI(this);
     this.arquetipos = new ArquetiposUI(this);
+    this.vantagens = new VantagensUI(this);
     this.changelog = new ChangelogUI(this);
     
     this.$loading = $('#loadingPage').fadeOut();

@@ -3,7 +3,7 @@ function TechsUI (ui) {
     this.app = this.ui.app;
     window.techs = this;
     this.ajax = new AjaxTechs(this);
-    this.stale = false;
+    this.stale = window.techAddons === undefined;
     this.$conteudo = $('#content');
     
     $('#addonsButton').on('click', function (e) {
