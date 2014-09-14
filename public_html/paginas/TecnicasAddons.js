@@ -2178,4 +2178,15 @@ window.techAddons =
             
         ]
     }
-];
+].sort(function (a,b) {
+    var na = a.nome.toUpperCase();
+    var nb = b.nome.toUpperCase();
+    if (na < nb) return -1;
+    if (na > nb) return 1;
+    return 0;
+});
+
+window.techAddonsHash = {};
+for (var i = 0; i < window.techAddons.length; i++) {
+
+}
