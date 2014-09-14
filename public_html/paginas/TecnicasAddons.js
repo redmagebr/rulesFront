@@ -5,6 +5,12 @@
  */
 window.techChangelog = [
     {
+        version : [3, 1],
+        description : [
+            "Clarificação adicionada ao addon High Spell Voltage Zone."
+        ]
+    },
+    {
         "version" : [3, 0],
         "description" : [
             "Door Knocker passa a ser única junto de um buff e um nerf ao mesmo tempo para fazer isso ficar melhor.",
@@ -1716,8 +1722,7 @@ window.techAddons =
             "O personagem com essa passiva ativa recebe os custos extras duas vezes.",
             "Defesas: 2 MP",
             "Ataques: 4 MP",
-            "Ativar esse efeito não é opcional para aliados nem inimigos.",
-            ""
+            "Ativar esse efeito não é opcional para aliados nem inimigos. Os custos extras são adicionados às ações e não podem ser reduzidos de nenhuma maneira."
         ],
         "conceitos": [
 
