@@ -11,7 +11,13 @@ window.techChangelog = [
             "Clarificação adicionada ao addon High Spell Voltage Zone.",
             "Overload não acumula com Overload.",
             "Change Form e Leadership - Now you do it tem suas notas de manutenção alteradas para algo menos assustador.",
-            "Vulnerability deixou de dar bônus de dano em porcentagem em alguma atualização passada, mas sua descrição não foi atualizada completamente. 'Acumula multiplicativamente' é a forma como bônus de dano em porcentagem se acumulam, não bônus brutos. Essa mensagem foi retirada."
+            "Vulnerability deixou de dar bônus de dano em porcentagem em alguma atualização passada, mas sua descrição não foi atualizada completamente. 'Acumula multiplicativamente' é a forma como bônus de dano em porcentagem se acumulam, não bônus brutos. Essa mensagem foi retirada.",
+            "Purify alterada para ficar mais viável. Consumir o turno era muito pesado em cima do custo de MP.",
+            "Nullify Magic tinha um parágrafo que não encaixava com a sua descrição atual, certamente algo que perdeu um valor em alguma atualização passada. Nullify Magic foi refeita para encaixar melhor com o estilo de novos addons Controller em relação a muitos alvos.",
+            "Clarificação adicionada em Bloqueio Agressivo.",
+            "Door Knocker havia sido alterada para algo que só precisava de um Slot, mas não havia sido rebalanceada para tal, ainda carregando custos e penalidades mais baixas, como se cada degrau do seu efeito também estivesse consumindo um Slot. Ela foi alterada para dois degraus.",
+            "Avatar of Destruction existia para preencher a função de um Power Up custoso para algum personagem, principalmente útil na narrativa. Mas agora já temos tanto arquétipos quanto outros addons que fazem exatamente isso de uma forma mais controlada. Avatar of Destruction é removida.",
+            "Requerimento de Nível em muitos addons foi reduzido."
         ]
     },
     {
@@ -293,7 +299,7 @@ window.techAddons =
         "nomeLimpo": "Counter Counter II",
         "efeitos": [
             "Se o oponente realizar um contra-ataque contra essa técnica, essa técnica recebe +4 na sua rolagem de dano.",
-            "Aumenta Custo da técnica em 4."
+            "Aumenta Custo da técnica em 5."
         ],
         "conceitos": [
             "unicidade"
@@ -329,10 +335,10 @@ window.techAddons =
         "nome": "Door Knocker",
         "nomeLimpo": "Door Knocker",
         "efeitos": [
-            "Durante a criação dessa técnica, escolha 25%, 50%, 75% ou 100%. Ataques realizados com essa técnica ganham essa quantidade de penetração.",
-            "Ataques com essa técnica também recebem -1, -2, -3, -4 em testes de acerto, de forma respectiva à porcentagem de penetração escolhida.",
-            "Esse addon não pode ser usado lado-a-lado com addons que fornecem bônus em testes de acerto ou testes contra defesa. Esse addon ainda pode ser usado caso o personagem esteja recebendo o bônus de outra fonte (como uma passiva ou um buff com duração).",
-            "De acordo com a penetração escolhida para essa técnica, aumente o custo dela em 3, 5, 7 ou 9 MP."
+            "Durante a criação dessa técnica, escolha 50% ou 100%. Ataques realizados com essa técnica ganham essa quantidade de penetração.",
+            "Ataques com essa técnica também recebem -3 ou -6 em testes de acerto, de forma respectiva à porcentagem de penetração escolhida.",
+            "Esse addon não pode ser usado lado-a-lado com addons que fornecem bônus em testes de acerto ou testes contra defesa, nem junto de addons que impeçam o oponente de se esquivar. Esse addon ainda pode ser usado caso o personagem esteja recebendo o bônus de outra fonte (como uma passiva ou um buff com duração).",
+            "De acordo com a penetração escolhida para essa técnica, aumente o custo dela em 5 ou 10 MP."
         ],
         "conceitos": [
 
@@ -584,14 +590,15 @@ window.techAddons =
         "nome": "Nullify Magic",
         "nomeLimpo": "Nullify Magic",
         "efeitos": [
-            "Caso esse ataque cause 1 ponto de dano ou mais, reduza o MP do alvo em 2.Esse addon acumula consigo mesmo.",
+            "Caso esse ataque cause 1 ponto de dano ou mais, reduza o MP do alvo em 2. Esse addon acumula consigo mesmo.",
+            "Como um custo extra para utilizar essa técnica, pague 3 MP para cada alvo que o ataque possua. Isso conta como um custo de ativação, mas não pode ser reduzido de nenhuma maneira.",
             "O custo extra desse addon não é pago quando esse ataque é usado como contra-ataque e os efeitos desse addon são ignorados quando o ataque é feito como contra-ataque.",
-            "Aumente o custo da técnica em 4."
+            "Não aumenta o custo da técnica diretamente."
         ],
         "conceitos": [
 
         ],
-        "nivel": 2
+        "nivel": 1
     },
     {
         "id": 263,
@@ -1009,28 +1016,11 @@ window.techAddons =
         "conceitos": [
             "unicidade"
         ],
-        "nivel": 3
+        "nivel": 2
     },
     /*
      * Técnicas Especiais
      */
-    {
-        "id": 204,
-        "tipo": "especial",
-        "nome": "Avatar of Destruction",
-        "nomeLimpo": "Avatar of Destruction",
-        "efeitos": [
-            "O usuário se transforma em um monstro praticamente invencível até o fim do combate. Ao fim da transformação, o HP do usuário é reduzido a 0. Ao ativar a transformação, o HP do usuário se torna 3 + Nível e não pode aumentar. No início do turno do usuário, o HP dele volta a ser 3 + Nível, caso tenha caído abaixo disso",
-            "Enquanto a transformação durar, o MP do personagem é 30 e não desce. Além disso, toda vez que o personagem causar o dano de uma Forma de Ataque, o dano é aumentado em ½ Nível.",
-            "Enquanto a transformação durar, aumente todos os seus atributos de combate em 2.",
-            "Esse efeito não pode se ativar em lutas contra outros jogadores. Além disso, você deve escolher certas regras sobre quando e como esse poder se ativa e decidir isso junto ao mestre.",
-            "As condições para ativar esse poder devem ser bem específicas e mestres devem vetar condições que possam acontecer na maioria dos episódios. Esse addon é uma ferramenta narrativa, não algo para ser usado com frequência. Em geral, se a condição escolhida fosse acontecer mais de 3 vezes durante a história inteira do RPG, ela acontece demais e outra, mais específica, deve ser escolhida."
-        ],
-        "conceitos": [
-
-        ],
-        "nivel": 3
-    },
     {
         "id": 209,
         "tipo": "especial",
@@ -1081,14 +1071,14 @@ window.techAddons =
         "nome": "Bloqueio Agressivo I",
         "nomeLimpo": "Bloqueio Agressivo I",
         "efeitos": [
-            "Técnica pode ser usada para consumir o turno do usuário. Se o personagem realizar um contra-ataque antes do seu próximo turno, recebe apenas metade do dano que o oponente causaria.",
+            "Técnica pode ser usada para consumir o turno do usuário. Se o personagem realizar um contra-ataque antes do seu próximo turno, recebe apenas metade do dano que o oponente causaria. Isso só vale para o primeiro contra-ataque realizado antes do seu próximo turno.",
             "Quando esse efeito é utilizado, fica completamente claro para o oponente e todos os participantes da luta que o usuário está preparando um contra-ataque.",
             "Custo da técnica em 4."
         ],
         "conceitos": [
             "unicidade"
         ],
-        "nivel": 2
+        "nivel": 1
     },
     {
         "id": 224,
@@ -1096,14 +1086,14 @@ window.techAddons =
         "nome": "Bloqueio Agressivo II",
         "nomeLimpo": "Bloqueio Agressivo II",
         "efeitos": [
-            "Técnica pode ser usada para consumir o turno do usuário. Se o personagem realizar um contra-ataque antes do seu próximo turno, não recebe dano pelo ataque do oponente. ",
+            "Técnica pode ser usada para consumir o turno do usuário. Se o personagem realizar um contra-ataque antes do seu próximo turno, não recebe dano pelo ataque do oponente.  Isso só vale para o primeiro contra-ataque realizado antes do seu próximo turno.",
             "Quando esse efeito é utilizado, fica completamente claro para o oponente e todos os participantes da luta que o usuário está preparando um contra-ataque.",
             "Custo da técnica em 8."
         ],
         "conceitos": [
             "unicidade"
         ],
-        "nivel": 3
+        "nivel": 2
     },
     {
         "id": 365,
@@ -1286,7 +1276,7 @@ window.techAddons =
         "conceitos": [
 
         ],
-        "nivel": 2
+        "nivel": 1
     },
     {
         "id": 200,
@@ -1393,13 +1383,13 @@ window.techAddons =
         "nomeLimpo": "Purify",
         "efeitos": [
             "Escolha um aliado e uma aflição ou debuff que ele esteja sofrendo. Ele não está mais sob esse efeito.",
-            "Esse addon gasta o turno do usuário quando usado.",
-            "Aumente o custo em 4 MP."
+            "Ativar esse efeito não consome o turno do personagem, mas só pode ser ativado uma vez por rodada. Ativar esse efeito também custa 4 MP.",
+            "Pode-se consumir o próprio turno ao ativar esse efeito para reduzir seu custo de MP a 0."
         ],
         "conceitos": [
 
         ],
-        "nivel": 2
+        "nivel": 1
     },
     {
         "id": 309,
@@ -1478,7 +1468,7 @@ window.techAddons =
         "conceitos": [
 
         ],
-        "nivel": 2
+        "nivel": 1
     },
     {
         "id": 369,
@@ -1796,7 +1786,7 @@ window.techAddons =
         "conceitos": [
 
         ],
-        "nivel": 2
+        "nivel": 1
     },
     {
         "id": 354,
@@ -1925,7 +1915,7 @@ window.techAddons =
         "conceitos": [
             "unicidade"
         ],
-        "nivel": 2
+        "nivel": 1
     },
     {
         "id": 196,
@@ -1940,7 +1930,7 @@ window.techAddons =
         "conceitos": [
             "unicidade"
         ],
-        "nivel": 2
+        "nivel": 1
     },
     /*
      * Estilos de Luta
