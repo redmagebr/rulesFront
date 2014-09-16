@@ -10,7 +10,8 @@ window.techChangelog = [
             "Novas formas de busca para addons",
             "Clarificação adicionada ao addon High Spell Voltage Zone.",
             "Overload não acumula com Overload.",
-            "Change Form e Leadership - Now you do it tem suas notas de manutenção alteradas para algo menos assustador."
+            "Change Form e Leadership - Now you do it tem suas notas de manutenção alteradas para algo menos assustador.",
+            "Vulnerability deixou de dar bônus de dano em porcentagem em alguma atualização passada, mas sua descrição não foi atualizada completamente. 'Acumula multiplicativamente' é a forma como bônus de dano em porcentagem se acumulam, não bônus brutos. Essa mensagem foi retirada."
         ]
     },
     {
@@ -1000,7 +1001,7 @@ window.techAddons =
         "nome": "Vulnerability",
         "nomeLimpo": "Vulnerability",
         "efeitos": [
-            "Caso o ataque acerte, o próximo ataque realizado contra o alvo antes do seu próximo turno recebe um bônus de +2 dano. Esse bônus acumula multiplicativamente com outros bônus de dano.",
+            "Caso o ataque acerte, o próximo ataque realizado contra o alvo antes do seu próximo turno recebe um bônus de +2 dano.",
             "Ao ativar esse ataque, pague mais 1 MP para cada alvo que a técnica possuir. Esse pagamento não pode ser reduzido por nenhum efeito e conta como um custo de ativação.",
             "O custo extra desse addon não é pago quando esse ataque é usado como contra-ataque e os efeitos desse addon são ignorados quando o ataque é feito como contra-ataque.",
             "Aumenta Custo da técnica em 2."
