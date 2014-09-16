@@ -58,12 +58,80 @@ function TechsUI (ui) {
             }, {tipo : tipoid}));
             $tipos.append($a);
         }
-        this.$conteudo.append($tipos);
+        
+        var $filtros = $('<div id="addonFiltros" />').append('<h1>Filtros Alternativos (não compatíveis com os de cima)</h1>');
+        
+        var $nivelInput = $('<input type="text" placeholder="Buscar por maior nível" />').on('keyup', function () {
+            var $this = $(this);
+            var val = $this.val();
+            if (isNaN(val,10) || val === '') {
+                val = 100;
+            } else {
+                val = parseInt(val);
+            }
+            var $addons = window.app.ui.techs.$conteudo.children('div.addon');
+            var tipos = [];
+            var $addon;
+            var nivel;
+            for (var i = 0; i < $addons.length; i++) {
+                $addon = $($addons[i]).stop(true,true).hide();
+                nivel = parseInt($addon.attr('data-nivel'));
+                if (nivel <= val) {
+                    $addon.show();
+                    if (tipos.indexOf($addon.attr('data-tipo')) === -1) {
+                        tipos.push($addon.attr('data-tipo'));
+                    }
+                }
+            }
+            
+            $addons = window.app.ui.techs.$conteudo.children(".techHeader");
+            for (i = 0; i < $addons.length; i++) {
+                $addon = $($addons[i]).stop(true,true).hide();
+                if (tipos.indexOf($addon.attr('data-tipo')) !== -1) {
+                    $addon.show();
+                }
+            }
+            
+        });
+        
+        $filtros.append($nivelInput);
+        
+        var $searchInput = $("<input type='text' placeholder='Buscar por palavras' />").on('keyup', function () {
+            var $this = $(this);
+            var val = $this.val().trim().toUpperCase();
+            var $addons = window.app.ui.techs.$conteudo.children('div.addon');
+            var tipos = [];
+            var $addon;
+            var texto;
+            for (var i = 0; i < $addons.length; i++) {
+                $addon = $($addons[i]).stop(true,true).hide();
+                texto = $addon.text().toUpperCase();
+                if (texto.indexOf(val) !== -1) {
+                    $addon.show();
+                    if (tipos.indexOf($addon.attr('data-tipo')) === -1) {
+                        tipos.push($addon.attr('data-tipo'));
+                    }
+                }
+            }
+            
+            $addons = window.app.ui.techs.$conteudo.children(".techHeader");
+            for (i = 0; i < $addons.length; i++) {
+                $addon = $($addons[i]).stop(true,true).hide();
+                if (tipos.indexOf($addon.attr('data-tipo')) !== -1) {
+                    $addon.show();
+                }
+            }
+            
+        });
+        
+        $filtros.append($searchInput);
+        
+        this.$conteudo.append($tipos).append($filtros);
         for (var tipoid in addonsByTipo) {
             tipo = window.tiposHash[tipoid];
-            this.$conteudo.append($("<h1 class='addonHeader tipo" + tipoid + "' />").text(tipo.nome));
+            this.$conteudo.append($("<h1 class='addonHeader tipo" + tipoid + " techHeader' data-tipo='" + tipoid + "' />").text(tipo.nome));
             for (var i = 0; i < tipo.descricao.length; i++) {
-                this.$conteudo.append($("<p class='addonExp tipo" + tipoid + "' />").text(tipo.descricao[i]));
+                this.$conteudo.append($("<p class='addonExp tipo" + tipoid + " techHeader' data-tipo='" + tipoid + "' />").text(tipo.descricao[i]));
             }
             var $addon;
             for (var i = 0; i < addonsByTipo[tipoid].length; i++) {
@@ -77,7 +145,11 @@ function TechsUI (ui) {
     
     
     this.$createAddon = function (addon) {
-        var $div = $('<div class="addon" />').attr("id", "addon" + addon.id).attr("data-nivel", addon.nivel).addClass("tipo" + addon.tipo);
+        var $div = $('<div class="addon" />')
+                .attr("id", "addon" + addon.id)
+                .attr("data-nivel", addon.nivel)
+                .addClass("tipo" + addon.tipo)
+                .attr("data-tipo", addon.tipo);
         if (addon.conceitos.length > 0) {
             var $conceitos = $('<div class="conceitos" />').append("<h1>Conceitos</h1>");
             var $conceito;

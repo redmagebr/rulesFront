@@ -122,3 +122,26 @@ p.addonExp:hover {
 #addonTipos > a:active {
     color: #2520c6;
 }
+
+
+#addonFiltros {
+    display: block;
+}
+
+#addonFiltros > input {
+    width: 200px;
+    display: block;
+    margin: auto;
+    margin-bottom: 10px;
+    margin-top: 5px;
+    padding: 3px;
+    font-family: alegreya;
+    text-align: center;
+}
+
+#addonFiltros > h1 {
+    font-size: 1.1em;
+    margin: 0px;
+    margin-top: 30px;
+    text-align: center;
+}

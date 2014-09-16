@@ -7,6 +7,7 @@ window.techChangelog = [
     {
         version : [3, 1],
         description : [
+            "Novas formas de busca para addons",
             "Clarificação adicionada ao addon High Spell Voltage Zone.",
             "Overload não acumula com Overload.",
             "Change Form e Leadership - Now you do it tem suas notas de manutenção alteradas para algo menos assustador."
