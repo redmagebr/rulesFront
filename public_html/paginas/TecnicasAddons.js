@@ -7,7 +7,7 @@ window.techChangelog = [
     {
         version : [3, 1],
         description : [
-            "Novas formas de busca para addons",
+            "Novas formas de busca para addons. Os filtros agora são compatíveis uns com os outros.",
             "Clarificação adicionada ao addon High Spell Voltage Zone.",
             "Overload não acumula com Overload.",
             "Change Form e Leadership - Now you do it tem suas notas de manutenção alteradas para algo menos assustador.",
@@ -2191,3 +2191,32 @@ for (var i = 0; i < window.techAddons.length; i++) {
     addon = window.techAddons[i];
     window.techAddonsHash[addon.tipo.toUpperCase() + '-' + addon.nome.toUpperCase()] = addon;
 }
+
+
+
+/**
+ * Custos e técnicas
+ */
+window.techCustos = {
+    "descricaoNiveis" : [
+        "Ao passar de nível, todos os personagens ganham uma quantidade de Pontos de Habilidade (5, no sistema padrão) e uma nova Técnica em branco. A técnica virá com um número de slots apropriado ao nível do personagem (como na tabela abaixo).",
+        "A técnica ganha pode ser feita como qualquer tipo de técnica, com uma exceção: se feita como um Estilo de Luta, ela sempre terá apenas 2 Slots."
+    ],
+    "niveis" : [
+        ["1-2", "1 Slot"],
+        ["3-4", "2 Slots"],
+        ["5-6", "3 Slots"],
+        ["7+", "4 Slots"]
+    ],
+    "descricaoPontos" : [
+        "Pontos de Habilidade ganhos podem ser gastos para alterar técnicas existentes ou criar novas técnicas. Os custos podem ser encontrados na tabela abaixo."
+    ],
+    "pontos" : [
+        [0, "Divide uma técnica de Forma Especial em mais de uma. Cada técnica especial resultante deve ter pelo menos 1 Slot. Você não pode dividir em técnicas especiais caso isso não fosse ser possível de outra maneira (Exemplo: se a divisão resultasse na quebra de alguma regra, como a regra de unicidade, ela não pode ser feita)"],
+        [1, "Recria a técnica da forma que quiser (não abuse!). Caso a mudança na técnica tenha sido forçada por alterações nos addons, o custo é 0. O jeito esperado de se usar isso é para consertar técnicas cujos addons você entendeu errado e não está funcionando como você quer ou apagar uma técnica que você fez tão errado que não tem conserto. O objetivo dessas alterações não é fazer uma técnica temporária e se livrar dela quando não for mais útil."],
+        [4, "Nova técnica de 1 Slot. Número máximo de slots é 4. Essa técnica não pode ser uma forma especial."],
+        [4, "Nova técnica Forma Especial de 1 Slot. Número máximo de slots é 4."],
+        [3, "Aumenta a quantidade de slots de uma técnica, que não seja Forma Especial, em 1. Técnicas de Forma Especial custam 4 pontos para aumentar em 1 Slot."],
+        [4, "Novo estilo de Luta com 2 Slots."]
+    ]
+};

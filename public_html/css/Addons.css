@@ -114,6 +114,10 @@ p.addonExp:hover {
     text-decoration: none;
 }
 
+#addonTipos > a.toggled {
+    text-decoration: underline;
+}
+
 #addonTipos > a:hover {
     color: #5650ff;
     cursor: pointer;
@@ -144,4 +148,47 @@ p.addonExp:hover {
     margin: 0px;
     margin-top: 30px;
     text-align: center;
+}
+
+
+#informativosTechs > h1 {
+    font-size: 1.1em;
+    text-align: left;
+}
+
+#informativosTechs > p {
+    text-align: justify;
+    text-indent: 1em;
+    padding: 3px;
+    margin: 0px;
+    font-size: 0.9em;
+}
+
+#informativosTechs > p:hover {
+    background-color: #f2f2f2;
+}
+
+#informativosTechs > ul {
+    list-style-position: inside;
+    padding: 0px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    list-style-type: circle;
+}
+
+#informativosTechs > ul > li {
+    font-size: 0.85em;
+    padding: 3px;
+    padding-left: 20px;
+    padding-right: 10px;
+    text-align: justify;
+}
+
+#informativosTechs > ul > li:hover {
+    background-color: #f2f2f2;
+}
+
+#informativosTechs > ul > li > b {
+    display: inline-block;
+    width: 25px;
 }

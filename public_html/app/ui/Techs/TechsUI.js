@@ -5,6 +5,7 @@ function TechsUI (ui) {
     this.ajax = new AjaxTechs(this);
     this.stale = window.techAddons === undefined;
     this.$conteudo = $('#content');
+    this.lastTipo = null;
     
     $('#addonsButton').on('click', function (e) {
         e.preventDefault();
@@ -43,85 +44,67 @@ function TechsUI (ui) {
         
         this.$conteudo.empty().append($changelog);
         
+        var $infos = $('<div id="informativosTechs" />').append("<h1>Informações</h1>");
+        for (var i = 0; i < window.techCustos.descricaoNiveis.length; i++) {
+            $infos.append(
+                $('<p />').text(window.techCustos.descricaoNiveis[i])
+            );
+        }
+        
+        var $ul = $('<ul />');
+        var $li;
+        var li;
+        for (var i = 0; i < window.techCustos.niveis.length; i++) {
+            li = window.techCustos.niveis[i];
+            $li = $('<li />').text(li[1]).prepend(
+                $('<b />').text(li[0] + ": ")
+            );
+            $ul.append($li);
+        }
+        $infos.append($ul);
+        
+        for (var i = 0; i < window.techCustos.descricaoPontos.length; i++) {
+            $infos.append(
+                $('<p />').text(window.techCustos.descricaoPontos[i])
+            );
+        }
+        
+        $ul = $('<ul />');
+        for (var i = 0; i < window.techCustos.pontos.length; i++) {
+            li = window.techCustos.pontos[i];
+            $li = $('<li />').text(li[1]).prepend(
+                $('<b />').text(li[0] + ": ")
+            );
+            $ul.append($li);
+        }
+        $infos.append($ul);
+        
+        this.$conteudo.append($infos);
+        
         var addonsByTipo = handler.addonsByTipo;
         var tipo;
         var $a;
         var $tipos = $('<div id="addonTipos" />').append("<h1>Filtros:</h1>");
         for (var tipoid in addonsByTipo) {
             tipo = window.tiposHash[tipoid];
-            $a = $('<a href="#" />').text(tipo.nome);
+            $a = $('<a id="techFiltro' + tipoid + '" href="#" />').text(tipo.nome);
             $a.on("click", this.app.emulateBind(function (e) {
                 e.preventDefault();
-                var $parent = $('#content');
-                $parent.children('.addonHeader, .addonExp, .addon').hide();
-                $parent.children('.tipo' + this.tipo).stop(true,true).fadeIn(200);
+                window.app.ui.techs.search(this.tipo);
             }, {tipo : tipoid}));
             $tipos.append($a);
         }
         
-        var $filtros = $('<div id="addonFiltros" />').append('<h1>Filtros Alternativos (não compatíveis com os de cima)</h1>');
+        var $filtros = $('<div id="addonFiltros" />');
         
-        var $nivelInput = $('<input type="text" placeholder="Buscar por maior nível" />').on('keyup', function () {
-            var $this = $(this);
-            var val = $this.val();
-            if (isNaN(val,10) || val === '') {
-                val = 100;
-            } else {
-                val = parseInt(val);
-            }
-            var $addons = window.app.ui.techs.$conteudo.children('div.addon');
-            var tipos = [];
-            var $addon;
-            var nivel;
-            for (var i = 0; i < $addons.length; i++) {
-                $addon = $($addons[i]).stop(true,true).hide();
-                nivel = parseInt($addon.attr('data-nivel'));
-                if (nivel <= val) {
-                    $addon.show();
-                    if (tipos.indexOf($addon.attr('data-tipo')) === -1) {
-                        tipos.push($addon.attr('data-tipo'));
-                    }
-                }
-            }
-            
-            $addons = window.app.ui.techs.$conteudo.children(".techHeader");
-            for (i = 0; i < $addons.length; i++) {
-                $addon = $($addons[i]).stop(true,true).hide();
-                if (tipos.indexOf($addon.attr('data-tipo')) !== -1) {
-                    $addon.show();
-                }
-            }
-            
+        var $nivelInput = $('<input id="techSearchLevel" type="text" placeholder="Buscar por maior nível" />').on('keyup', function () {
+            window.app.ui.techs.search();
         });
         
         $filtros.append($nivelInput);
         
-        var $searchInput = $("<input type='text' placeholder='Buscar por palavras' />").on('keyup', function () {
-            var $this = $(this);
-            var val = $this.val().trim().toUpperCase();
-            var $addons = window.app.ui.techs.$conteudo.children('div.addon');
-            var tipos = [];
-            var $addon;
-            var texto;
-            for (var i = 0; i < $addons.length; i++) {
-                $addon = $($addons[i]).stop(true,true).hide();
-                texto = $addon.text().toUpperCase();
-                if (texto.indexOf(val) !== -1) {
-                    $addon.show();
-                    if (tipos.indexOf($addon.attr('data-tipo')) === -1) {
-                        tipos.push($addon.attr('data-tipo'));
-                    }
-                }
-            }
-            
-            $addons = window.app.ui.techs.$conteudo.children(".techHeader");
-            for (i = 0; i < $addons.length; i++) {
-                $addon = $($addons[i]).stop(true,true).hide();
-                if (tipos.indexOf($addon.attr('data-tipo')) !== -1) {
-                    $addon.show();
-                }
-            }
-            
+        var $searchInput = $("<input id='techsSearch' type='text' placeholder='Buscar por palavras' />").on('keyup', function () {
+            window.app.ui.techs.search();
         });
         
         $filtros.append($searchInput);
@@ -192,5 +175,48 @@ function TechsUI (ui) {
     
     this.openConceito = function (conceito) {
         console.log(conceito);
+    };
+    
+    this.search = function (tipo) {
+        if (tipo === this.lastTipo) {
+            $('#techFiltro' + tipo).removeClass('toggled');
+            this.lastTipo = null;
+            tipo = null;
+        } else if (tipo !== undefined) {
+            $('#techFiltro' + this.lastTipo).removeClass('toggled');
+            $('#techFiltro' + tipo).addClass('toggled');
+            this.lastTipo = tipo;
+        } else {
+            var tipo = this.lastTipo;
+        }
+        var nivel = $('#techSearchLevel').val();
+        var words = $('#techsSearch').val().trim().toUpperCase();
+        if (isNaN(nivel,10) || nivel === '') {
+            nivel = 100;
+        } else {
+            nivel = parseInt(nivel);
+        }
+        var $addons = this.$conteudo.children('div.addon');
+        var tipos = [];
+        var $addon;
+        var text;
+        for (var i = 0; i < $addons.length; i++) {
+            $addon = $($addons[i]).stop(true,true).hide();
+            text = $addon.text().toUpperCase();
+            if ((tipo === null || $addon.attr('data-tipo') === tipo) && parseInt($addon.attr('data-nivel')) <= nivel && text.indexOf(words) !== -1) {
+                $addon.show();
+                if (tipos.indexOf($addon.attr('data-tipo')) === -1) {
+                    tipos.push($addon.attr('data-tipo'));
+                }
+            }
+        }
+            
+        $addons = this.$conteudo.children(".techHeader");
+        for (i = 0; i < $addons.length; i++) {
+            $addon = $($addons[i]).stop(true,true).hide();
+            if (tipos.indexOf($addon.attr('data-tipo')) !== -1) {
+                $addon.show();
+            }
+        }
     };
 }
