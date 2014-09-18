@@ -12,6 +12,7 @@ window.techChangelog = [
             "Summon Ally consertada.",
             "Clarificação adicionada ao addon High Spell Voltage Zone.",
             "Overload não acumula com Overload.",
+            "Um detalhe havia faltado no 'Exausto' da Overload. Ele foi readicionado.",
             "Change Form e Leadership - Now you do it tem suas notas de manutenção alteradas para algo menos assustador.",
             "Vulnerability deixou de dar bônus de dano em porcentagem em alguma atualização passada, mas sua descrição não foi atualizada completamente. 'Acumula multiplicativamente' é a forma como bônus de dano em porcentagem se acumulam, não bônus brutos. Essa mensagem foi retirada.",
             "Purify alterada para ficar mais viável. Consumir o turno era muito pesado em cima do custo de MP.",
@@ -1576,7 +1577,7 @@ window.techAddons =
             "Você recebe um Bônus de +X Bônus de Overload em testes de combate e um Bônus de +(2 * X) Bônus de Overload dano até o término daquela ação, que não pode durar mais do que um turno.",
             "Após ativar Overload em alguma ação, o personagem entra no estado 'Overloaded'.",
             "- Overloaded: Você está explodindo poder. O personagem não pode ser curado de maneira alguma. Realizar qualquer ação de combate sem ativar Overload cancela esse efeito e faz o personagem entrar no estado 'Exausto'.",
-            "- Exausto: Você usou todas as suas forças. Receba -1 em qualquer Teste e -2 Dano. Esse efeito dura até o personagem poder descansar, não podendo ser removido antes do final do combate."
+            "- Exausto: Você usou todas as suas forças. Receba -1 em qualquer Teste e -2 Dano. Esse efeito dura até o personagem poder descansar, não podendo ser removido antes do final do combate. Personagens Exaustos não podem mais ativar Overload."
         ],
         "conceitos": [
 
