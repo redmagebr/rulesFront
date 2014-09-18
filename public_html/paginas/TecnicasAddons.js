@@ -157,19 +157,215 @@ for (var i = 0; i < window.techTipos.length; i++) {
 }
 
 
+window.techConceitosExplain = [
+    "Existem algumas regras por fora das técnicas em si que fazem parte do sistema e ajudam a definir melhor seu funcionamento. Essas regras estão sempre ativas e aqui são chamadas de conceitos. À direita, você verá conceitos BEM gerais que são considerados importantes. Addons com conceitos mais pessoais terão eles listados junto delas.",
+    "Alguns conceitos são clarificações sobre alguma parte específica do sistema, mas outros conceitos são novas regras. Todos os conceitos valem de uma forma geral por cima do sistema inteiro. Um conceito só pode ser ignorado por efeitos que digam que os ignorem.",
+    "Se algum addon não menciona algum conceito, assuma que o conceito vale para ele também."
+];
+
 /**
  * Conceitos!
  * @type Array
  */
 window.techConceitos = [
     {
-        "id" : "stacking",
-        "nome" : "Bônus Nomeados",
-        "descricao" : "Bonus e Redutores se acumulam quando tem nomes idferentes blablabla",
-        "listado" : false,
-        "impresso" : true
+        "id": "slots",
+        "nome": "Addons, Slots e Custo",
+        "listado": false,
+        "impresso": false,
+        "descricao": [
+            "O template para addons é: Ocupa 1 Slot, requer Nível 1 para ser Pego e não aumenta o custo da técnica.",
+            "Assim sendo, Addons que não fogem dessas regras não repetirão elas. Mas addons que as alteram irão avisar isso.",
+            "Como um exemplo: se um addon não menciona aumentos no custo da técnica, ele não altera o custo da técnica. Se um addon não menciona que ocupa um slot, ele ocupa um slot. Se ele não mencionar requerimento de nível de personagem, ele requer nível 1. E por aí vai.",
+            "Dê uma olhada em Regras Específicas X Regras Gerais."
+        ]
+    },
+    {
+        "id": "basicos",
+        "nome": "Ataques Básicos",
+        "listado": true,
+        "impresso": false,
+        "descricao": [
+            "Um ataque é considerado básico quando ele é uma técnica Forma de Ataque que não possui quaisquer addons.",
+            "Algumas ações especiais também contam como ataques básicos: \"Brigar\" e \"Usar Arma\"."
+        ]
+    },
+    {
+        "id": "stacking",
+        "nome": "Bônus Nomeados",
+        "listado": true,
+        "impresso": false,
+        "descricao": [
+            "Existem vários efeitos que garantem Bônus (ou Redutor) para certas rolagens de dados. Alguns desses efeitos colocam um nome no efeito (Bônus de Poder, Bônus de Habilidade, Bônus de Item...).",
+            "Sempre que mais de um Bônus (ou redutor) com o mesmo nome estiverem envolvidos em uma rolagem, apenas o maior é utilizado e eles não se acumulam.",
+            "Exemplo: se o personagem recebe +1 Bônus de Poder em Agilidade e +2 Bônus de Poder em Acrobacia, quando ele rolar o teste ele vai ganhar um bônus final de +2 (o maior), mesmo os dois bônus indo em lugares diferentes.",
+            "Então o bônus continua segurando seu tipo, mesmo enquanto adicionado em algum lugar, e isso é contabilizado na hora da rolagem."
+        ]
+    },
+    {
+        "id": "caalvos",
+        "nome": "Contra Ataque e Alvos",
+        "listado": true,
+        "impresso": false,
+        "descricao": [
+            "Durante um contra-ataque, o único alvo válido para seu contra-ataque é o oponente. E o seu contra-ataque só pode incluir você e o oponente em seus efeitos.",
+            "Assim sendo, é impossível utilizar um contra-ataque com \"Inspire\" e dar bônus para um aliado: ele não era um alvo válido para o contra-ataque. Também é impossível utilizar ataques como Leadership - On My Command ou Leadership - Now you do it: ambos exigem um aliado para te ajudar, e um aliado não faz parte dos alvos válidos durante um contra-ataque."
+        ]
+    },
+    {
+        "id": "habesp1",
+        "nome": "Entendendo Habilidades Especiais",
+        "listado": false,
+        "impresso": false,
+        "descricao": [
+            "Uma habilidade especial é algo simples que seu personagem é capaz de fazer que, por mais que não o dê grandes vantagens, ajuda a defini-lo melhor dentro do universo do RPG.",
+            "Uma habilidade especial não deve ser algo que o dê vantagens consideráveis e constantes, mas é aceitável que em situações bem específicas uma habilidade especial faça uma diferença de valor inestimável.",
+            "Para tal, não se pode criar Habilidades Especiais que repitam o efeito de uma Vantagem."
+        ]
+    },
+    {
+        "id": "habesp2",
+        "nome": "Exemplos de Habilidades Especiais",
+        "listado": false,
+        "impresso": false,
+        "descricao": [
+            "Voar, Teleporte, Telepatia, Telecinésia, Pequenas Ilusões..."
+        ]
+    },
+    {
+        "id": "fusaoha",
+        "nome": "Fusão de Técnicas",
+        "listado": true,
+        "impresso": false,
+        "descricao": [
+            "Unir duas técnicas do mesmo tipo (Ataque-Ataque, Especial-Especial, Passiva-Passiva) custa apenas 1 Ponto de Habilidade.",
+            "Depois de fundir as duas técnicas, é como se as duas deixassem de existir e sobrasse apenas uma com os addons das duas.",
+            "Teoricamente, essa nova técnica deveria realmente ser as duas outras ao mesmo tempo em questão de descrição, mas isso não é tão obrigatório.",
+            "Se a fusão ficaria com mais de 4 slots, você deve escolher quais Addons você vai retirar, pois não poderão ser mantidos."
+        ]
+    },
+    {
+        "id": "porcentagem",
+        "nome": "Lidando com Porcentagens",
+        "listado": true,
+        "impresso": false,
+        "descricao": [
+            "Quando muitas porcentagens são envolvidas ao mesmo tempo, acaba ficando complicado de lidar com elas. Para facilitar isso, usaremos as seguintes regras:",
+            "Bônus de Porcentagens são SOMADOS.",
+            "Redutores de Porcentagens são MULTIPLICADOS.",
+            "Assim sendo, um bônus de +50% dano resulta 150% dano. Se o dano já fosse 125% por algum outro motivo, ao invés de multiplicar esses 125% simplesmente aumentamos para 175% (125% + 50%).",
+            "Para redutores, não temos escolha a não ser multiplicar: então se o dano fosse ser 125% e existe um redutor de 50%, o dano final fica 62.5%! (125% * 50%).",
+            "Quando resolvendo contas com porcentagens, sempre somamos primeiro e multiplicamos apenas no final. Ou seja: adicionam-se todos os bônus e só então se multiplica pelos redutores, como:",
+            "((100% + 25%) * (50%))"
+        ]
+    },
+    {
+        "id": "marcas",
+        "nome": "Marcas",
+        "listado": false,
+        "impresso": false,
+        "descricao": [
+            "Alguns addons possuem efeitos que criam Marcas no alvo. Uma marca é o equivalente a você ficar de guarda e pronto para atrapalhar esse alvo.",
+            "Se um inimigo marcado por você tentar realizar um ataque que não inclui você como alvo, você pode realizar um ataque básico contra ele, mesmo fora do seu turno. Esse efeito não se ativa se o ataque for realizado dentro de um contra-ataque, apenas para ataques realizados no turno do alvo marcado. Quando você realizar o seu ataque, o inimigo pode decidir se ele vai receber seu dano sem se defender ou se tentará esquivar - ele não tem tempo suficiente para realizar outras ações de defesa.",
+            "Um alvo pode estar marcado por vários personagens, mas apenas um pode ativar sua marca quando ele faz um ataque."
+        ]
+    },
+    {
+        "id": "nomes",
+        "nome": "Nomenclatura de Addons",
+        "listado": true,
+        "impresso": false,
+        "descricao": [
+            "Quando se considerando a Unicidade em Addons é necessário pensar um pouco sobre quando um addon é considerado igual a outro, mesmo quando são dois addons diferentes. Existem algumas formas de nomear addons:",
+            "[Nome]: Um nome simples. Não existe outro addon equivalente a esse. Exemplos: Smoke and Mirrors, Sadism.",
+            "[Nome] - [Versão]: O addon possui várias versões diferentes para serem usadas em casos diferentes. O número romano não é a única marca de uma versão, podendo ser qualquer coisa. Exemplos: Leadership - The time is NOW, Leadership - Now you do it. Para facilitar, alguns addons que possuem versões bem claras não vão possuir o traço (\" - \") separando ela do nome, mas ainda é o mesmo addon. Exemplos: Special Attack I, Special Attack Ranged I."
+        ]
+    },
+    {
+        "id": "prioridade",
+        "nome": "Prioridade",
+        "listado": true,
+        "impresso": false,
+        "descricao": [
+            "Na maior parte do tempo, as ações dentro de um combate só se realizam ou não se realizam, sem necessidade de complicações. Mas no caso de um Ataque X Contra-Ataque, com ambos acertando, acaba sendo importante saber qual acertou primeiro e quais foram seus resultados.",
+            "Isso é chamado de Prioridade e todos os ataques possuem uma prioridade base de 0, podendo ser aumentada por efeitos ou addons (Ranged oferece um bônus de alcance +1 em prioridade, First Strike oferece um bônus de velocidade +1 em prioridade). No caso de um conflito Ataque X Contra-Ataque, os ataques são realizados do com maior prioridade para o com menor prioridade.",
+            "Quaisquer efeitos do primeiro ataque são efetivados para o segundo. Então um ataque que coloque um redutor de dano no oponente já reduziria seu dano se fosse realizado antes dele.",
+            "Ataques com prioridades iguais ocorrem ao mesmo tempo, aplicando dano, e seus efeitos só são aplicados no final. Quaisquer efeitos do ataque do dono do turno devem ser aplicados primeiro caso a ordem fosse criar alguma diferença (Exemplo: dono do turno usou um ataque que utiliza um ponto de stamina para se curar, oponente contra-atacou com ataque que reduz stamina do alvo em 1, mas o dono do turno só tem 1 de stamina. Como a ordem muda o que acontece, o dono do turno tem seu efeito aplicado antes para resolver o impasse)."
+        ]
+    },
+    {
+        "id": "rawriw",
+        "nome": "Read as Intended X Read as Written",
+        "listado": true,
+        "impresso": false,
+        "descricao": [
+            "Existem duas formas de se ler qualquer regra no jogo: Ler como está escrito e ler como deveria ser.",
+            "Se for para resolver um problema na mesa, em geral lê-se como está escrito (pois todos podem concordar assim). Esse é um sistema em testes: caso Read as Written não bata com Read as Intended, o sistema será alterado.",
+            "Assim sendo, jogadores são incentivados a interpretarem texto exatamente como ele está ali. Se algo parecer um abuso que não foi previsto, é recomendável falar com o mestre antes.",
+            "Temos um número realmente grande de Addons e as vezes certas combinações não foram planejadas e acabam conseguindo um efeito muito grande. Nesses casos mudanças terão de ser feitas. Combinações fortes demais acabariam tomando controle do jogo inteiro, e isso não é legal...",
+            "Caso não se consiga decidir entre RaW ou RaI durante a sessão, o mestre deve resolver da forma que quiser (até criando regras temporárias para resolver o problema) e o sistema precisa ser alterado para que essa ambiguidade desapareça."
+        ]
+    },
+    {
+        "id": "especificade",
+        "nome": "Regras Específicas X Regras Gerais",
+        "listado": true,
+        "impresso": false,
+        "descricao": [
+            "Grande parte do sistema se baseia em Regras Gerais que definem o funcionamento das coisas.",
+            "Um exemplo de uma regra geral é \"Um Addon de Técnica preenche um Slot de Addon\".",
+            "Porém regras específicas ganham prioridade contra isso. Uma regra do tipo \"monstros azuis não são afetados por poderes amarelos\" não valeria para um poder amarelo com o efeito \"ESSE poder amarelo em específico funciona em monstros azuis\". O específico sempre ganha quando ocorre um conflito.",
+            "Outros exemplos: a regra geral diz que seu ataque causa 1d6 + um atributo de dano, porém algumas armas dizem que alguns ataques causam +2 dano. Regra Específica > Regra Geral, então esses ataques recebem o bônus adequado."
+        ]
+    },
+    {
+        "id": "habesp3",
+        "nome": "Regras para Habilidades Especiais",
+        "listado": false,
+        "impresso": false,
+        "descricao": [
+            "O maior efeito de uma Habilidade Especial é permitir algo que não seria possível de outras maneiras, como Vôo ou criar ilusões que podem alterar completamente o desfecho de testes sociais.",
+            "Quando for necessário decidir o quanto uma Habilidade Especial pode alterar o fluxo das coisas, considerar o seguinte:",
+            "- Uma habilidade especial pode permitir, em situações bem específicas, a realização de testes de certa perícia com outra ou de um atributo-tste com outro. Exemplo: Telecinésia poderia permitir o uso de Inteligência ou Força de Vontade no lugar de Força.",
+            "- Uma habilidade especial não garante quaisquer bônus no teste sendo realizado. Então se você utiliza uma habilidade especial de controle mental como Blefar, a dificuldade pode muito bem ser a mesma, só que feita com seu nível de Arcanismo ou outra perícia mais relevante.",
+            "- Caso uma Habilidade Especial possa fazer muitas coisas ao mesmo tempo (como algo que funciona como Diplomacia, Blefe e Intimidação ao mesmo tempo) é recomendável que o mestre exija que essa habilidade especial conte como três. Durante a criação, deve-se fazer um esforço para pensar no maior número possível de situações em que uma habilidade especial acabaria funcionando. Deve-se evitar sair desse planejamento durante a sessão.",
+            "- Algo deve ser lembrado: as variáveis mudaram. Talvez fosse realmente difícil convencer o guarda a te deixar passar sem o cartão, mesmo para alguém bom em Blefe, mas convencer ele a ir no banheiro com controle mental pode ser uma tarefa menos complicada, a depender do nível de força de vontade dele. Então usso de habilidades especiais devem ser levadas caso a caso.",
+            "E por fim, uma habilidade especial é uma habilidade especial. Você não deve fazer nada grande o suficiente para ser digno de pontos de Vantagem. Para esses, você deve comprar a vantagem como os outros fariam.",
+            "Por final: algumas coisas são fortes demais para habilidade especial, por mais que não exista uma Vantagem para isso. Mestres devem vetar habilidades especiais que saiam muito da norma. Dependendo do mestre e da história que ele está planejando, ele pode vetar habilidades que seriam perfeitamente aceitáveis em outros casos.",
+            "Um mestre que planeja narrar uma história que acontece dentro de um labirinto de plantas, por exemplo, pode vetar Vôo, pois um personagem capaz de voar poderia simplesmente subir, encontrar o fim do labirinto e ir embora, tirando a graça da aventura toda. Então uma Habilidade Especial sempre vai envolver um acordo entre o jogador as criando e o mestre aprovando."
+        ]
+    },
+    {
+        "id": "coragem",
+        "nome": "Técnica: Buscar Coragem",
+        "listado": false,
+        "impresso": false,
+        "descricao": [
+            "Gaste um ponto de Espírito de Luta e cure seu HP na sua cura normal de Espírito de Luta. Essa ação consome seu turno e gasta 5% MP.",
+            "Todo personagem possui essa técnica, mas ela não pode ser utilizada.",
+            "Algumas habilidades Passivas liberam o uso de \"Buscar Coragem\" e algumas habilidades Especiais substituem \"Buscar Coragem\".",
+            "Mesmo que \"Buscar Coragem\" seja substituida por uma versão melhor, ela mantém as restrições de não poder ser utilizada sem a Passiva adequada ativa."
+        ]
+    },
+    {
+        "id": "unicidade",
+        "nome": "Unicidade em Addons",
+        "listado": true,
+        "impresso": false,
+        "descricao": [
+            "Cada addon de técnica é considerado Único. Isso significa que addons de técnicas não podem ser repetidos.",
+            "A regra de Unicidade também se extende a famílias de addons. Então se você escolher algum addon como Leadership - X, você não poderá adicionar Leadership - Y na mesma técnica.",
+            "Addons de forma passivas também possuem unicidade enquanto ativos, então um personagem não pode ativar duas passivas que possuam 'Immovable Object' ao mesmo tempo. Ele ainda pode ter mais de uma técnica passiva com 'Immovable Object', ele só não pode ativar ambas ao mesmo tempo.",
+            "Como sempre, uma regra específica derruba uma regra geral: se algum addon disser claramente que pode ser adicionado mais de uma vez, então ele pode ser adicionado mais de uma vez. Caso contrário: apenas um."
+        ]
     }
-];
+].sort(function (a, b) {
+    var na = a.nome.toUpperCase();
+    var nb = b.nome.toUpperCase();
+    if (na < nb) return -1;
+    if (na > nb) return 1;
+    return 0;
+});
 window.conceitosHash = {};
 for (var i = 0; i < window.techConceitos.length; i++) {
     window.conceitosHash[window.techConceitos[i].id] = window.techConceitos[i];

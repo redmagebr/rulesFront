@@ -6,6 +6,8 @@ function TechsUI (ui) {
     this.stale = window.techAddons === undefined;
     this.$conteudo = $('#content');
     this.lastTipo = null;
+    this.$conceito = $('#conceitoHover').hide();
+    this.$window = $('#window');
     
     $('#addonsButton').on('click', function (e) {
         e.preventDefault();
@@ -44,6 +46,7 @@ function TechsUI (ui) {
         
         this.$conteudo.empty().append($changelog);
         
+        
         var $infos = $('<div id="informativosTechs" />').append("<h1>Informações</h1>");
         for (var i = 0; i < window.techCustos.descricaoNiveis.length; i++) {
             $infos.append(
@@ -80,6 +83,25 @@ function TechsUI (ui) {
         $infos.append($ul);
         
         this.$conteudo.append($infos);
+        
+        var $conceitos = $('<div id="addonConceitos" />').append("<h1>Conceitos</h1>");
+        var $conceito;
+        var conceito;
+        for (var i = 0; i < window.techConceitos.length; i++) {
+            conceito = window.techConceitos[i];
+            if (!conceito.listado) continue;
+            $conceito = $('<a class="conceitoHover" />').text(window.techConceitos[i].nome);
+            this.conceitize($conceito, window.techConceitos[i].id);
+            $conceitos.append($conceito);
+        }
+        for (var i = 0; i < window.techConceitosExplain.length; i++) {
+            $conceito = $('<p />').text(window.techConceitosExplain[i]);
+            $conceitos.append($conceito);
+        }
+        
+        $conceitos.append("<span></span>");
+        
+        this.$conteudo.append($conceitos);
         
         var addonsByTipo = handler.addonsByTipo;
         var tipo;
@@ -146,14 +168,11 @@ function TechsUI (ui) {
             });
             for (var i = 0; i < addon.conceitos.length; i++) {
                 if (window.conceitosHash[addon.conceitos[i]] === undefined) {
-                    $conceito = $('<a href="#" />').text(addon.conceitos[i]);
+                    $conceito = $('<a class="conceitoHover" />').text(addon.conceitos[i]);
                 } else {
-                    $conceito = $('<a href="#" />').text(window.conceitosHash[addon.conceitos[i]].nome);
+                    $conceito = $('<a class="conceitoHover" />').text(window.conceitosHash[addon.conceitos[i]].nome);
                 }
-                $conceito.on('click', this.app.emulateBind(function (e) {
-                    e.preventDefault();
-                    window.techs.openConceito(this.conceito);
-                }, {conceito : addon.conceitos[i]}));
+                this.conceitize($conceito, addon.conceitos[i]);
                 $conceitos.append($conceito);
             }
             $div.append($conceitos);
@@ -218,5 +237,58 @@ function TechsUI (ui) {
                 $addon.show();
             }
         }
+    };
+    
+    this.showConceito = function (conceito) {
+        var $h1 = $('<h1 />');
+        this.$conceito.empty().append($h1);
+        if (window.conceitosHash[conceito] === undefined) {
+            $h1.text("Conceito não encontrado");
+            this.$conceito.append($("<p />").text("O conceito " + conceito + " não foi encontrado no sistema."));
+        } else {
+            conceito = window.conceitosHash[conceito];
+            $h1.text(conceito.nome);
+            var $p;
+            for (var i = 0; i < conceito.descricao.length; i++) {
+                $p = $('<p />').text(conceito.descricao[i]);
+                this.$conceito.append($p);
+            }
+        }
+        this.$conceito.stop(true,false).fadeIn(100);
+    };
+    
+    this.moveConceito = function (e) {
+        var top = event.pageY - (this.$conceito.height() / 2);
+        var offsetLeft = ($(window).width() - this.$window.width())/2;
+        var left = event.pageX - (this.$conceito.width()) - 20 - offsetLeft;
+        if (left < 0) {
+            left = 0;
+        }
+        if (top + this.$conceito.height() > this.$window.height()) {
+            top = this.$window.height() - this.$conceito.height() - 10;
+        }
+        if (top < 0) {
+            top = 0;
+        }
+        this.$conceito.css({
+            top: top,
+            left: left
+        });
+    };
+    
+    this.hideConceito = function () {
+        this.$conceito.stop(true,false).fadeOut(100);
+    };
+    
+    this.conceitize = function ($dom, conceito) {
+        $dom.attr('data-conceito', conceito);
+        $dom.off('.conceito').on('mouseenter', function (e) {
+            window.app.ui.techs.showConceito($(this).attr('data-conceito'));
+            window.app.ui.techs.moveConceito(e);
+        }).on('mouseleave', function () {
+            window.app.ui.techs.hideConceito();
+        }).on('mousemove', function (e) {
+            window.app.ui.techs.moveConceito(e);
+        });
     };
 }

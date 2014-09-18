@@ -1,3 +1,55 @@
+#addonConceitos > h1 {
+    font-size: 1.2em;
+    margin: 0px;
+    padding-bottom: 10px;
+}
+
+#addonConceitos > p {
+    text-align: justify;
+    text-indent: 1em;
+    font-size: 0.9em;
+    padding: 3px;
+}
+
+#addonConceitos > a {
+    float: right;
+    text-align: right;
+    width: 250px;
+    clear: right;
+}
+
+#addonConceitos > span {
+    display: block;
+    width: 1px;
+    height: 1px;
+    clear: right;
+}
+
+#conceitoHover {
+    position: absolute;
+    background-color: white;
+    display: block;
+    width: 80%;
+    border: solid 1px #000;
+    font-family: alegreya;
+    z-index: 100;
+}
+
+#conceitoHover > h1 {
+    text-align: center;
+    margin: 0px;
+    padding-bottom: 10px;
+    font-size: 1.1em;
+}
+
+#conceitoHover > p {
+    text-align: justify;
+    padding: 3px;
+    text-indent: 1em;
+    font-size: 0.8em;
+}
+
+
 div.addon:hover {
     background-color: #ebebeb;
 }
@@ -28,7 +80,7 @@ div.addon > div.conceitos {
     font-size: 0.9em;
 }
 
-div.addon > div.conceitos > a {
+a.conceitoHover {
     display: block;
     padding-left: 15px;
     padding-right: 15px;
@@ -37,7 +89,7 @@ div.addon > div.conceitos > a {
     text-decoration: none;
 }
 
-div.addon > div.conceitos > a:hover {
+a.conceitoHover:hover {
     cursor: pointer;
     color: #4d47ff;
 }
