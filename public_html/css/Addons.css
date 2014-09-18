@@ -33,6 +33,7 @@
     border: solid 1px #000;
     font-family: alegreya;
     z-index: 100;
+    pointer-events: none;
 }
 
 #conceitoHover > h1 {
