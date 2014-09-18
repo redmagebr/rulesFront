@@ -9,6 +9,7 @@ window.techChangelog = [
         description : [
             "Novas formas de busca para addons. Os filtros agora são compatíveis uns com os outros.",
             "Palavreado de Magical Flux alterado para permitir mais interação entre addons.",
+            "Summon Ally consertada.",
             "Clarificação adicionada ao addon High Spell Voltage Zone.",
             "Overload não acumula com Overload.",
             "Change Form e Leadership - Now you do it tem suas notas de manutenção alteradas para algo menos assustador.",
@@ -1569,9 +1570,8 @@ window.techAddons =
             "O aliado possui dois slots de addons.",
             " Autômato sem alma não ocupa slots.",
             "Summon Ally pode ser ativada uma vez durante a fase de preparação. Caso ativada durante o combate, Summon Ally consome o turno do personagem. O consumo do turno pode ser ignorado mediante um pagamento extra de 9 MP durante a ativação.",
-            "Custo reduzido para 1.Você conjura um aliado que lutará junto de você até o fim da batalha ou até receber um ataque. O aliado pode ser utilizado em técnicas que usem um Atributo decidido na criação da técnica como dano puro. Enquanto ele estiver disponível, você pode gastar o seu turno para ordenar um ataque com dano 1d6 + O Atributo Escolhido.  Você pode considerar a criatura como um aliado para alguns efeitos relevantes (como o efeito de redirecionar um ataque a um aliado).",
-            "O nível da criatura invocada é igual ao seu, e ela é um equipamento que obrigatóriamente tem Autômato sem Alma (arma de duas mãos). A \"arma\" não pode receber técnicas por addons.",
-            "Custo da técnica em 6 por conjuração."
+            "Custo de invocação em 1 MP. Você conjura um aliado que lutará junto de você até o fim da batalha ou até receber um ataque. O aliado pode ser utilizado em técnicas que usem um Atributo decidido na criação da técnica como dano puro. Enquanto ele estiver disponível, você pode gastar o seu turno para ordenar um ataque com dano 1d6 + O Atributo Escolhido.  Você pode considerar a criatura como um aliado para alguns efeitos relevantes (como o efeito de redirecionar um ataque a um aliado).",
+            "O nível da criatura invocada é igual ao seu, e ela é um equipamento que obrigatóriamente tem Autômato sem Alma (arma de duas mãos). A \"arma\" não pode receber técnicas por addons."
         ],
         "conceitos": [
 
