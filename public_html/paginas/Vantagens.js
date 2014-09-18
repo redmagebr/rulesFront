@@ -776,7 +776,7 @@ window.vantagensArray = [
 
 window.vantagensHash = {};
 for (var i = 0; i < window.vantagensArray.length; i++) {
-    window.vantagensHash[window.vantagensArray[i].nome.toUpperCase()] = window.vantagensArray[i];
+    window.vantagensHash[window.vantagensArray[i].nome.toUpperCase().replace(/ *\([^)]*\) */, '').trim()] = window.vantagensArray[i];
 }
 
 window.desvantagensArray = [
@@ -1835,5 +1835,5 @@ window.desvantagensArray = [
 
 window.desvantagensHash = {};
 for (var i = 0; i < window.desvantagensArray.length; i++) {
-    window.desvantagensHash[window.desvantagensArray[i].nome.toUpperCase()] = window.desvantagensArray[i];
+    window.desvantagensHash[window.desvantagensArray[i].nome.toUpperCase().replace(/ *\([^)]*\) */, '').trim()] = window.desvantagensArray[i];
 }
