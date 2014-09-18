@@ -2217,5 +2217,7 @@ window.techAddonsHash = {};
 var addon;
 for (var i = 0; i < window.techAddons.length; i++) {
     addon = window.techAddons[i];
-    window.techAddonsHash[addon.tipo.toUpperCase() + '-' + addon.nome.toUpperCase()] = addon;
+    window.techAddonsHash[addon.tipo.toUpperCase() + '-' + 
+                addon.nome.toUpperCase().replace(/ *\([^)]*\) */, '').trim()
+    ] = addon;
 }
