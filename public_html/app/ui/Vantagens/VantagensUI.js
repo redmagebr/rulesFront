@@ -10,6 +10,8 @@ function VantagensUI (ui) {
     this.$lastType = null;
     this.$pontos;
     this.$search;
+    this.$allowArquetipos;
+    this.$allowRacas;
     
     $('#vantagensButton').on('click', function (e) {
         e.preventDefault();
@@ -59,7 +61,11 @@ function VantagensUI (ui) {
         }
         
         $vantagem.attr('data-pontos', vantagem.pontos);
-        
+        if (vantagem.requisitos !== undefined) {
+            $vantagem.attr('data-requisitos', vantagem.requisitos);
+        } else {
+            $vantagem.attr('data-requisitos', '-');
+        }
         return $vantagem;
     };
     
@@ -79,7 +85,19 @@ function VantagensUI (ui) {
             window.app.ui.vantagens.search();
         });
         
-        this.$conteudo.append($tipos).append(this.$pontos).append(this.$search);
+        this.$allowArquetipos = $('<input id="vAllowArquetipos" type="checkbox" />').on('change', function () {
+            window.app.ui.vantagens.search();
+        });
+        
+        this.$allowRacas = $('<input id="vAllowRacas" type="checkbox" />').on('change', function () {
+            window.app.ui.vantagens.search();
+        });
+        
+        var $checkboxes = $('<div id="vCheckBoxes" />').append(this.$allowArquetipos).append("<label for='vAllowArquetipos'>Mostrar vantagens de Arquétipos</label>")
+            .append("<br />")
+            .append(this.$allowRacas).append("<label for='vAllowRacas'>Mostrar vantagens de Raças</label>");
+        
+        this.$conteudo.append($tipos).append(this.$pontos).append(this.$search).append($checkboxes);
         
         var tipo;
         for (var i = 0; i < window.tiposVant.length; i++) {
@@ -100,6 +118,8 @@ function VantagensUI (ui) {
         }
         
         this.$conteudo.append($vantagens);
+        
+        this.search();
     };
     
     this.search = function ($dom) {
@@ -132,6 +152,10 @@ function VantagensUI (ui) {
             searchWords = searchWords.toUpperCase();
         }
         
+        var allowArquetipos = this.$allowArquetipos[0].checked;
+        console.log(allowArquetipos);
+        var allowRacas = this.$allowRacas[0].checked;
+        
         var $vantagens = $('#vantagensDiv');
         $vantagens.children().hide();
         
@@ -143,10 +167,20 @@ function VantagensUI (ui) {
         var words;
         var k;
         var failed;
+        var requisitos;
         for (var i = 0; i < $vantagens.length; i++) {
             $vantagem = $($vantagens[i]);
             if (searchType !== null && searchType !== $vantagem.attr('data-tipo')) {
                 continue;
+            }
+            if (!allowArquetipos || !allowRacas) {
+                requisitos = $vantagem.attr('data-requisitos').trim().toUpperCase();
+                if (!allowArquetipos && requisitos.indexOf('ARQUÉTIPO') === 0) {
+                    continue;
+                }
+                if (!allowRacas && requisitos.indexOf("RAÇA") === 0) {
+                    continue;
+                }
             }
             if (searchPoints !== null) {
                 pontos = $vantagem.attr('data-pontos');
