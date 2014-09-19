@@ -5,6 +5,13 @@
  */
 window.techChangelog = [
     {
+        version : [3, 2],
+        description : [
+            "Addons de itens adicionados.",
+            "Filtros de Tipos organizados."
+        ]
+    },
+    {
         version : [3, 1],
         description : [
             "Novas formas de busca para addons. Os filtros agora são compatíveis uns com os outros.",

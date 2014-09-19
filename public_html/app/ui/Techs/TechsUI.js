@@ -107,13 +107,13 @@ function TechsUI (ui) {
         var tipo;
         var $a;
         var $tipos = $('<div id="addonTipos" />').append("<h1>Filtros:</h1>");
-        for (var tipoid in addonsByTipo) {
-            tipo = window.tiposHash[tipoid];
-            $a = $('<a id="techFiltro' + tipoid + '" href="#" />').text(tipo.nome);
+        for (var tipoid in window.techTipos) {
+            tipo = window.techTipos[tipoid];
+            $a = $('<a id="techFiltro' + tipo.id + '" href="#" />').text(tipo.nome);
             $a.on("click", this.app.emulateBind(function (e) {
                 e.preventDefault();
                 window.app.ui.techs.search(this.tipo);
-            }, {tipo : tipoid}));
+            }, {tipo : tipo.id}));
             $tipos.append($a);
         }
         
