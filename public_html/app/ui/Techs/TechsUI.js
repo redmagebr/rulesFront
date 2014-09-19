@@ -264,8 +264,8 @@ function TechsUI (ui) {
         if (left < 0) {
             left = 0;
         }
-        if (top + this.$conceito.height() > this.$window.height()) {
-            top = this.$window.height() - this.$conceito.height() - 10;
+        if (top + this.$conceito.height() + 4 > this.$window.height()) {
+            top = this.$window.height() - this.$conceito.height() - 4;
         }
         if (top < 0) {
             top = 0;

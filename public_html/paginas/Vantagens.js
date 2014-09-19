@@ -7,7 +7,8 @@ window.vantagensChangelog = [
     {
         "version" : [3, 0],
         "description" : [
-            "Website criado. Alguma pobre alma precisa verificar se todos os arquétipos ainda estão up to date."
+            "Website criado.",
+            "O palavreado de pontos de algumas Vantagens e Desvantagens inclui muitos 'ou'. Isso é intencional e permite que buscas por quantidade de pontos sejam possíveis."
         ]
     }
 ].sort(function (a, b) {
@@ -26,28 +27,16 @@ window.tiposVant = [
     {
         id : "vantagens",
         nome : "Vantagens",
-        pontos : "Preço",
-        descricao : "Um personagem pode ter quantas vantagens puder pagar. Algumas raças concedem pontos de vantagens. Desvantagens concedem pontos para se comprar mais vantagens."
+        descricao : [
+            "Um personagem pode ter quantas vantagens puder pagar. Algumas raças concedem pontos de vantagens. Desvantagens concedem pontos para se comprar mais vantagens."
+        ]
     },
     {
         id : 'desvantagens',
         nome : 'Desvantagens',
-        pontos : 'Concede',
-        descricao : 'Um personagem pode ter quantas desvantagens quiser, mas apenas as 4 maiores irão conceder pontos. Um personagem não pode ganhar mais do que 10 pontos de vantagens por desvantagens.'
-    },
-    {
-        id : 'vantagensr',
-        nome : "Vantagens Raciais",
-        pontos : "Preço",
-        descricao : "Essas vantagens funcionam como vantagens comuns, mas exigem que vocẽ faça parte de alguma raça.",
-        requisito : "Exige raça"
-    },
-    {
-        id : 'desvantagensr',
-        nome : "Desvantagens Raciais",
-        pontos : "Concede",
-        descricao : "Essas vantagens funcionam como desvantagens comuns, mas exigem que vocẽ faça parte de alguma raça.",
-        requisito : "Exige raça"
+        descricao : [
+            'Um personagem pode ter quantas desvantagens quiser, mas apenas as 4 maiores irão conceder pontos. Um personagem não pode ganhar mais do que 10 pontos de vantagens por desvantagens.'
+        ]
     }
 ];
 
@@ -201,14 +190,14 @@ window.vantagensArray = [
     },
     {
         "nome": "Corajoso",
-        "pontos": "1 a 3",
+        "pontos": "1 ou 2 ou 3",
         "descricao": [
             "O personagem ganha um bônus de +1 nos testes de medo e insanidade. Se gastar mais pontos de vantagem, ganha +1 para cada ponto gasto, até um máximo de +3 (3 pontos)."
         ]
     },
     {
         "nome": "Defesa Mental",
-        "pontos": "1 a 3",
+        "pontos": "1 ou 2 ou 3",
         "descricao": [
             "O personagem possui uma alta resistência mental contra certos ataques psíquicos ou mágicos. Isso funciona como um bônus adicionado a testes de Força de Vontade quando sendo atacado por algo assim e o tamanho do bônus varia de acordo com a quantidade de pontos gasta.",
             "1 ponto: Recebe um bônus de +1 no testes contra ataques mentais.",
@@ -225,7 +214,7 @@ window.vantagensArray = [
     },
     {
         "nome": "Deus Grego",
-        "pontos": "1 a 3",
+        "pontos": "1 ou 2 ou 3",
         "descricao": [
             "O personagem possui um corpo perfeito, bem acima da média para sua raça.",
             "1 Ponto: Você pode usar Constituição no lugar de Carisma quando se tratando de Aparência. Isso também vale para testes de sedução.",
@@ -264,7 +253,7 @@ window.vantagensArray = [
     },
     {
         "nome": "Equipamento Épico",
-        "pontos": "X Pontos – Ver descrição",
+        "pontos": "1 ou 2",
         "descricao": [
             "Você possui uma peça de equipamento poderosa para você e sua história, além de ter um significado grande para algum acontecimento ou para alguém. Esses equipamentos não mudam de nível, mas são sempre de nível 2 (portanto, possuem 2 slots de addons) e são criados por você. Esses equipamentos não mudam de nível. Você pode comprar Equipamento Épico várias vezes, mas ela não se acumula no mesmo equipamento.",
             "O custo dessa vantagem varia com o tipo do equipamento criado:",
@@ -277,7 +266,7 @@ window.vantagensArray = [
     },
     {
         "nome": "Equipamento Lendário",
-        "pontos": "X Pontos – Ver descrição",
+        "pontos": "2 ou 4",
         "descricao": [
             "Você possui uma peça de equipamento incrivelmente rara e poderosa. Esse equipamento sempre será de nível 3 (portanto, possui 3 slots de addons)  e são criados por você. Esses equipamentos não mudam de nível. Você pode comprar Equipamento Lendário várias vezes, mas ela não se acumula no mesmo equipamento.",
             "O custo dessa vantagem varia com o tipo do equipamento criado:",
@@ -290,14 +279,14 @@ window.vantagensArray = [
     },
     {
         "nome": "Equipamento de Valor Emocional",
-        "pontos": "X Pontos – Ver descrição",
+        "pontos": "1",
         "descricao": [
             "Você possui uma peça de equipamento muito importante para você e sua história. Ela pode não ser a melhor de todas, mas você vai se esforçar e fazer ela funcionar. Esses equipamentos não mudam de nível. Você pode comprar Equipamento de Valor Emocional várias vezes, mas os equipamentos ganhos ainda serão nível 1 (portanto, possui 1 slot de addons).",
             "O custo dessa vantagem varia com o tipo do equipamento criado:",
             "1 Ponto: Arma Defensiva + Arma de uma mão",
             "1 Ponto: Duas armas de uma mão",
-            "1 Pontos: Arma de duas mãos",
-            "1 Pontos: Armadura.",
+            "1 Ponto: Arma de duas mãos",
+            "1 Ponto: Armadura.",
             "Você pode pegar essa vantagem várias vezes, mas para equipamentos diferentes."
         ]
     },
@@ -403,7 +392,7 @@ window.vantagensArray = [
     },
     {
         "nome": "Herdeiro",
-        "pontos": "1,3 ou 5",
+        "pontos": "1 ou 3 ou 5",
         "descricao": [
             "Você é herdeiro de alguma fortuna de algum tipo ou origem. Isso te faz iniciar a história com um pouco mais de dinheiro do que o normal. Você só pode comprar Herdeiro uma vez. O motivo e origem da herança devem ser explicados na história do personagem.",
             "1 ponto: Comece a história com 750 moedas ao invés de 500.",
@@ -541,7 +530,7 @@ window.vantagensArray = [
     },
     {
         "nome": "Não comer / beber",
-        "pontos": "1 a 3",
+        "pontos": "1 ou 2 ou 3",
         "descricao": [
             "O personagem não necessita comer ou beber para sobreviver. Ele sustenta seu corpo por algum outro meio (luz solar, magia, tecnologia, etc.). Ele não perde MP por falta de comida (perda normal de 8 MP por dia, não recuperáveis a não ser com alimentação, por falta de comida e 16 MP por dia, não recuperáveis a não ser com água, por falta de água). O jogador deve especificar o porquê o personagem não precisa comer ou beber e dizer qual tipo de alimentação alternativa usa. Se você não precisa, mas pode comer, você pode ganhar os bônus normais de alimentação comendo.",
             "1 Ponto: Você não precisa se alimentar, não ganhando as vantagens de alimentação normais.",
@@ -688,7 +677,7 @@ window.vantagensArray = [
     },
     {
         "nome": "Super Audição",
-        "pontos": "1 a 3",
+        "pontos": "1 ou 3",
         "descricao": [
             "1 ponto: Você é capaz de escutar claramente um alfinete caindo na sala ao lado. Isso te dá novas oportunidades para testes de percepção auditiva.",
             "3 pontos: Você pode ouvir claramente sussurros realizados longe (25m) de você. Também pode escutar frequências inaudíveis para ouvidos normais. Isso te dá novas oportunidades para testes de percepção auditiva."
@@ -1393,7 +1382,7 @@ window.desvantagensArray = [
     },
     {
         "nome": "Inimigo Pessoal",
-        "pontos": "?",
+        "pontos": "3 ou 5",
         "descricao": [
             "O personagem possui um inimigo pessoal, que o persegue durante as aventuras. O inimigo sempre tem nível superior ao seu e pode ser bem poderoso, influente e ter capangas. Essa desvantagem concede 3 pontos para um inimigo de nível equivalente ao seu e 5 pontos para um inimigo de nível superior ao seu."
         ]
@@ -1690,7 +1679,7 @@ window.desvantagensArray = [
         ]
     },
     {
-        "nome": "Sexita",
+        "nome": "Sexista",
         "pontos": "2",
         "descricao": [
             "Você não consegue suportar pessoas do sexo oposto e sente uma terrível repulsa por elas. Isso inclui pessoas de outras raças diferentes."
@@ -1775,7 +1764,7 @@ window.desvantagensArray = [
     },
     {
         "nome": "Vantagem Imaginária",
-        "pontos": "X",
+        "pontos": "1 ou 2 ou 3",
         "descricao": [
             "Escolha uma vantagem na lista de vantagens. Essa desvantagem concede pontos na metade do custo daquela vantagem, arredondado para cima. O personagem deve agir como se possuísse aquela vantagem, mas ele não a possui. Exemplos: um personagem com Vantagem Imaginária: Direção Absoluta faria coisas como “É por ali! Eu sei que é!”, mas estaria errado. Um personagem com Vantagem imaginária: Imortalidade Avançada pode acabar se colocando em situações perigosas, acreditando que não pode morrer. O mestre deve vetar a compra dessa desvantagem caso a vantagem escolhida vá ser irrelevante como vantagem imaginária."
         ]

@@ -8,6 +8,7 @@ window.techChangelog = [
         version : [3, 1],
         description : [
             "Novas formas de busca para addons. Os filtros agora são compatíveis uns com os outros.",
+            "Special Attack III consertada.",
             "Palavreado de Magical Flux alterado para permitir mais interação entre addons.",
             "Summon Ally consertada.",
             "Clarificação adicionada ao addon High Spell Voltage Zone.",
@@ -1062,7 +1063,7 @@ window.techAddons =
         "nome": "Special Attack III",
         "nomeLimpo": "Special Attack III",
         "efeitos": [
-            "O dano base dessa técnica passa a ser 1d6, perdendo a adição do atributo.",
+            "O dano base dessa técnica se reduz ao dado e bônus base da arma, sem adicionar nenhum atributo de dano.",
             "Aumente o dano dessa técnica em duas vezes a sua Sabedoria de Combate.",
             "Essa técnica passa a ter como tipo todos os seus atributos que estejam acima de 0. Você deve fazer uma descrição que explique isso.",
             "Uma técnica só pode ter um Special Attack e você não pode utilizar Special Attack III caso você esteja usando menos do que 3 atributos de dano. Caso a diferença entre seus atributos acima de 0 for maior do que 2, você não pode utilizar esse addon. [3, 2, 1] pode, [4, 2, 1] não.",

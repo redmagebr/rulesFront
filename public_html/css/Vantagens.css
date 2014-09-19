@@ -1,0 +1,79 @@
+#vantagensTipos > a {
+    color: #0000ba;
+    font-weight: bold;
+    display: inline-block;
+    padding: 5px;
+}
+
+#vantagensTipos > a.toggled {
+    text-decoration: underline;
+}
+
+#vantagensTipos > a:hover {
+    cursor: pointer;
+    color: #4242ff;
+}
+
+#vantagensTipos > a:active {
+    color: #1515c5;
+}
+
+#vantagensTipos {
+    text-align: center;
+}
+
+
+#vantagensTipos > h1 {
+    text-align: center;
+    margin: 0px;
+    padding: 5px;
+    font-size: 1.3em;
+}
+
+.vantagensInput {
+    display: block;
+    margin: auto;
+    margin-bottom: 10px;
+    padding: 3px;
+    font-family: alegreya;
+    text-align: center;
+    font-size: 1em;
+    width: 200px;
+}
+
+
+#vantagensDiv > h1 {
+    font-size: 1.2em;
+}
+
+#vantagensDiv > p {
+    font-size: 0.9em;
+    text-align: justify;
+    text-indent: 1em;
+    padding: 5px;
+    margin: 0px;
+}
+
+#vantagensDiv > p:hover {
+    background-color: #ececec;
+}
+
+
+div.vantagem:hover {
+    background-color: #ececec;
+}
+
+div.vantagem > h1 {
+    font-size: 1.2em;
+    margin: 0px;
+    padding-top: 10px;
+    padding-bottom: 6px;
+    padding-left: 5px;
+}
+
+div.vantagem > p {
+    padding: 6px;
+    margin: 0px;
+    text-align: justify;
+    text-indent: 1em;
+}
