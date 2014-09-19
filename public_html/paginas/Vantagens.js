@@ -554,6 +554,14 @@ window.vantagensArray = [
         ],
         "requisitos": "Ser um Yuqun"
     },
+    {
+        "nome": "Linguagem",
+        "pontos": "0",
+        "descricao": [
+            "O personagem compreende e sabe falar uma outra língua."
+        ],
+        "requisitos" : "A língua falada e compreendida depende da Raça escolhida."
+    },
     /* Vantagens de Arquétipo */
     
     
