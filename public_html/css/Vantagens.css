@@ -58,6 +58,9 @@
     background-color: #ececec;
 }
 
+div.vantagem {
+    border-top: 1px solid #dcdcdc;;
+}
 
 div.vantagem:hover {
     background-color: #ececec;

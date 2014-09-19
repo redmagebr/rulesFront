@@ -13,6 +13,7 @@ window.techChangelog = [
             "Summon Ally consertada.",
             "Clarificação adicionada ao addon High Spell Voltage Zone.",
             "Overload não acumula com Overload.",
+            "Department of Redundancy Department, DRD, fez algumas alterações nos Pontos de Habilidade.",
             "Um detalhe havia faltado no 'Exausto' da Overload. Ele foi readicionado.",
             "Change Form e Leadership - Now you do it tem suas notas de manutenção alteradas para algo menos assustador.",
             "Vulnerability deixou de dar bônus de dano em porcentagem em alguma atualização passada, mas sua descrição não foi atualizada completamente. 'Acumula multiplicativamente' é a forma como bônus de dano em porcentagem se acumulam, não bônus brutos. Essa mensagem foi retirada.",
@@ -21,7 +22,8 @@ window.techChangelog = [
             "Clarificação adicionada em Bloqueio Agressivo.",
             "Door Knocker havia sido alterada para algo que só precisava de um Slot, mas não havia sido rebalanceada para tal, ainda carregando custos e penalidades mais baixas, como se cada degrau do seu efeito também estivesse consumindo um Slot. Ela foi alterada para dois degraus.",
             "Avatar of Destruction existia para preencher a função de um Power Up custoso para algum personagem, principalmente útil na narrativa. Mas agora já temos tanto arquétipos quanto outros addons que fazem exatamente isso de uma forma mais controlada. Avatar of Destruction é removida.",
-            "Requerimento de Nível em muitos addons foi reduzido."
+            "Requerimento de Nível em muitos addons foi reduzido.",
+            "Misplaced Elses são amigos dos Ifs denovo."
         ]
     },
     {
@@ -394,8 +396,7 @@ window.techCustos = {
     "pontos" : [
         [0, "Divide uma técnica de Forma Especial em mais de uma. Cada técnica especial resultante deve ter pelo menos 1 Slot. Você não pode dividir em técnicas especiais caso isso não fosse ser possível de outra maneira (Exemplo: se a divisão resultasse na quebra de alguma regra, como a regra de unicidade, ela não pode ser feita)"],
         [1, "Recria a técnica da forma que quiser (não abuse!). Caso a mudança na técnica tenha sido forçada por alterações nos addons, o custo é 0. O jeito esperado de se usar isso é para consertar técnicas cujos addons você entendeu errado e não está funcionando como você quer ou apagar uma técnica que você fez tão errado que não tem conserto. O objetivo dessas alterações não é fazer uma técnica temporária e se livrar dela quando não for mais útil."],
-        [4, "Nova técnica de 1 Slot. Número máximo de slots é 4. Essa técnica não pode ser uma forma especial."],
-        [4, "Nova técnica Forma Especial de 1 Slot. Número máximo de slots é 4."],
+        [4, "Nova técnica de 1 Slot. Número máximo de slots é 4."],
         [3, "Aumenta a quantidade de slots de uma técnica, que não seja Forma Especial, em 1. Técnicas de Forma Especial custam 4 pontos para aumentar em 1 Slot."],
         [4, "Novo estilo de Luta com 2 Slots."]
     ]
@@ -1407,7 +1408,7 @@ window.techAddons =
         "nome": "Esforço Especial",
         "nomeLimpo": "Esforco Especial",
         "efeitos": [
-            "Você pode ativar esse efeito quando realizar uma ação de ataque ou defesa para receber +1 Bônus de Habilidade rolagem de teste, caso ela aconteça.",
+            "Você pode ativar esse efeito quando realizar uma ação de ataque ou defesa para receber +1 Bônus de Habilidade na rolagem de teste, caso ela aconteça. O efeito pode ser ativado para os dois tipos de teste sem exigir que o personagem possua mais de uma Esforço Especial.",
             "Esteja atento que por ser um Bônus de Habilidade, esse bônus não se acumula com outros do mesmo tipo advindos de Estilos de Luta (que também são bônus de habilidade)",
             "Você deve decidir usar Esforço Especial antes de qualquer rolagem acontecer, junto da sua decisão do que fazer com a sua ação. Você não pode utilizar Esforço Especial só para receber o +1 que faltou para vencer.",
             "O custo de ativação desse efeito é 4."
@@ -2058,10 +2059,9 @@ window.techAddons =
             "Divida os modificadores das suas rolagens de dano por 2. Se você fosse rolar 1d6 + 10, role 1d6 +5 ao invés disso. Se sua rolagem de dano já ia ser reduzida por um efeito similar, o efeito não se acumula.",
             "Ataques Básicos não tem seus modificadores reduzidos.",
             "Enquanto essa passiva estiver ativa, você não pode ativar suas Marcas para realizar ataques básicos. Ao invés disso, você pode redirecionar ataques de inimigos marcados por você para você mesmo. Quando você faz isso, você só pode Bloquear o ataque, não esquivar.",
-            "Se esse addon for o único addon em uma técnica, o personagem pode decidir fazer essa técnica ser o estado natural dele. Nesse caso, a técnica não possui mais custo e está SEMPRE ativa.",
+            "Se esse addon for o único addon em uma técnica, o personagem pode decidir fazer essa técnica ser o estado natural dele. Nesse caso, a técnica não possui mais custo e está SEMPRE ativa. Caso contrário, aumente custo total da técnica em 2 (não acumulativo, mas somatório entre outros addons) para cada rodada que a habilidade com este addon ficar ativa.",
             "Enquanto essa passiva estiver ativa, você pode realizar a ação \"Buscar Coragem\".",
-            "Ativar essa passiva consome o turno do personagem. Desativar essa passiva consome o turno do personagem.",
-            "Caso contrário, aumente custo total da técnica em 2 (não acumulativo, mas somatório entre outros addons) para cada rodada que a habilidade com este addon ficar ativa."
+            "Ativar essa passiva consome o turno do personagem. Desativar essa passiva consome o turno do personagem."
         ],
         "conceitos": [
             "unicidade",
@@ -2102,10 +2102,9 @@ window.techAddons =
             "No fim de cada um de seus turnos, marque até dois oponentes.",
             "Divida os modificadores das suas rolagens de dano por 2. Se você fosse rolar 1d6 + 10, role 1d6 +5 ao invés disso. Se sua rolagem de dano já ia ser reduzida por um efeito similar, o efeito não se acumula.",
             "Ataques Básicos não tem seus modificadores reduzidos.",
-            "Se esse addon for o único addon em uma técnica, o personagem pode decidir fazer essa técnica ser o estado natural dele. Nesse caso, a técnica não possui mais custo e está SEMPRE ativa.",
+            "Se esse addon for o único addon em uma técnica, o personagem pode decidir fazer essa técnica ser o estado natural dele. Nesse caso, a técnica não possui mais custo e está SEMPRE ativa. Caso contrário, aumenta o custo da técnica em 2 por rodada.",
             "Enquanto essa passiva estiver ativa, você pode realizar a ação \"Buscar Coragem\".",
-            "Ativar essa passiva consome o turno do personagem. Desativar essa passiva consome o turno do personagem.",
-            "Caso contrário, aumenta o custo da técnica em 2 por rodada."
+            "Ativar essa passiva consome o turno do personagem. Desativar essa passiva consome o turno do personagem."
         ],
         "conceitos": [
             "marcas",
