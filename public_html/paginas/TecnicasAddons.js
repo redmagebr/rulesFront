@@ -112,7 +112,7 @@ window.techTipos = [
         "nome" : "Armas Defensivas",
         "descricao" : [
             "Armas Defensivas são itens de defesa e possuem um número de slots igual ao nível delas.",
-            "Estar equipado com uma Arma Defensiva garante um bônus de +1 RD Geral. Armas Defensivas também dão um bônus de +1 Bônus de Arma RD para algum atributo de dano, especificado na sua criação.",
+            "Estar equipado com uma Arma Defensiva garante um bônus de +1 RD Geral. Armas Defensivas também dão um bônus de +1 Bônus de Equipamento RD para algum atributo de dano, especificado na sua criação.",
             "Armas defensivas não equipadas possuem um peso no inventário e tem um peso inicial de 2."
         ],
         "conceitos" : [
@@ -2401,6 +2401,473 @@ window.techAddons =
         "conceitos" : [
             
         ]
+    },
+    /* Addons de Armas */
+    {
+        "tipo": "arma",
+        "nome": "Aliada",
+        "nomeLimpo": "Aliada",
+        "efeitos": [
+            "A arma é, na verdade, um aliado que luta junto de você. Um companheiro animal pode ser transformado em uma arma com o addon Aliada para se explicar dentro do sistema.",
+            "Esse addon não aumenta o nível da arma. A arma é um companheiro que não pode ser atacado e te ajuda. Isso pode ser um robô, uma espada que flutua e ataca quase que por conta própria, um lobo... Isso é mais um addon da narrativa do que do sistema em si.",
+            "Observação: por questões de balanceamento, essa arma ainda preenche um slot de \"mão\". Ou seja, você não pode ter uma arma Aliada de duas mãos ao mesmo tempo que utiliza um escudo."
+        ],
+        "conceitos": [],
+        "nivel": 1
+    },
+    {
+        "tipo": "arma",
+        "nome": "Arma Pesada",
+        "nomeLimpo": "Arma Pesada",
+        "efeitos": [
+            "A arma é mais pesada que o normal para os padrões. Aumente todo dano causado em ataques envolvendo essa arma em +1. Diminua rolagens de acerto (Ataque/ATK) enquanto utilizando essa arma em -1. A arma passa a ocupar 4 slots de inventário ao invés de 2. Quando adicionada em armas de uma mão, o bônus só é recebido quando se utilizando duas armas com o addon arma pesada."
+        ],
+        "conceitos": [],
+        "nivel": 1
+    },
+    {
+        "tipo": "arma",
+        "nome": "Artefato",
+        "nomeLimpo": "Artefato",
+        "efeitos": [
+            "Crie uma técnica do tipo Forma de Ataque junto dessa arma. Essa técnica tem uma quantia de addons igual a quantidade de vezes que Artefato aparece nessa arma, com um máximo de 4. Enquanto equipado com essa arma, você pode utilizar essa técnica, e o custo dela é cobrado normalmente. Quaisquer atributos usados na técnica usam os atributos do personagem que utiliza o item.",
+            "Poderes de equipamentos utilizados por personagens de nível 0 possuem efeitos aumentados. Substitua os valores de atributos usados no ataque pelo nível da arma quando esses poderes forem utilizados por NPCs.",
+            "Esse addon pode ser usado em armas criadas pelos jogadores através de vantagens, mas nunca por addons que permitam criação de itens através de técnicas."
+        ],
+        "conceitos": [],
+        "nivel": 1
+    },
+    {
+        "tipo": "arma",
+        "nome": "Autômato sem Alma",
+        "nomeLimpo": "Automato sem Alma",
+        "efeitos": [
+            "A arma existe como um personagem próprio e com vida que ataca sob o comando do personagem que a possui. Essa arma não ocupa slots de equipamento. Essa arma passa a poder ser atacada por outros personagens e combatentes. Essa arma tem 1 HP e RD 0, sendo quebrada ao receber algum ataque com sucesso. Quando atacada, essa arma irá tentar esquivar em resposta, utilizando a Defesa (DEF) do personagem que a utiliza, mas não recebendo quaisquer bônus que ele possua.",
+            "Enquanto a arma estiver viva, a arma conta como um aliado e pode ser afetada por efeitos que funcionassem em Aliados, como Bônus, Redirecionamento de Ataques e outros, com durações de efeito padrões.",
+            "Ataques realizados com essa arma são tratados como ataques do personagem original, utilizando seus atributos e os addons dessa Arma para decidir os efeitos. Personagens que sejam atacados por essa arma podem incluir tanto a Arma quanto o personagem que a utiliza em alvos de contra-ataques. A arma sempre tenta esquivar quando atacada, como dito antes.",
+            "Contra-ataques contra o personagem que possui a arma funcionam como sempre, com o personagem, por exemplo, perdendo a concentração necessária para finalizar o ataque após um bloqueio ou uma esquiva mal-sucedida.",
+            "Enquanto um Autômato sem Alma estiver em campo, o personagem e seus aliados podem realizar a ação \"Se esconder\". Se esconder - 0 MP: Consome o turno do personagem e só pode ser realizada no turno do personagem. Se esconde atrás de um Autômato sem Alma. Todos os ataques realizados contra o personagem são redirecionados para o Autômato sem Alma enquanto ele estiver inteiro."
+        ],
+        "conceitos": [],
+        "nivel": 1
+    },
+    {
+        "tipo": "arma",
+        "nome": "Confiável",
+        "nomeLimpo": "Confiavel",
+        "efeitos": [
+            "A arma é menos potente que o normal, mas garante maior firmeza e precisão em seus golpes, fazendo com que seu poder destrutivo não seja tão oscilante. A arma com esse addon passa a rolar 1d4 para danos ao invés de 1d6. Adicionalmente, esse addon concede um bônus de +2 de dano em danos que a arma entre como fator de uso (esse efeito não pode ser comprado múltiplas vezes). Esse addon só funciona quando todas as armas usadas pelo personagem (equipadas no momento) possuem \"Confiável\", caso contrário não aumenta o dano nem reduz o dado."
+        ],
+        "conceitos": [],
+        "nivel": 1
+    },
+    {
+        "tipo": "arma",
+        "nome": "Dano Mínimo",
+        "nomeLimpo": "Dano Minimo",
+        "efeitos": [
+            "Se a rolagem de dano dessa arma resultar no dano mínimo (resultado de 1 no dado), você pode rolar o teste de dano novamente (rejogar o dado). Esse efeito também se ativa nas re-rolagens."
+        ],
+        "conceitos": [],
+        "nivel": 1
+    },
+    {
+        "tipo": "arma",
+        "nome": "Devorador de Almas",
+        "nomeLimpo": "Devorador de Almas",
+        "efeitos": [
+            "Se você nocautear um oponente com essa arma, você pode gastar um ponto de Stamina imediatamente. O efeito só funciona em inimigos de nivel igual ou maior ao seu."
+        ],
+        "conceitos": [],
+        "nivel": 1
+    },
+    {
+        "tipo": "arma",
+        "nome": "Efeito Narrativo",
+        "nomeLimpo": "Efeito Narrativo",
+        "efeitos": [
+            "Essa arma possui um efeito narrativo apenas dentro da história ou cena acontecendo. Efeitos narrativos são necessários para efeitos que talvez não encaixem em outros addons ou não fossem permitidos / sejam grandes demais. O mestre deve informar ao jogador sobre quando o Efeito Narrativo é necessário para manter a descrição escolhida.",
+            "Um efeito narrativo dá alguns efeitos como, por exemplo:",
+            "Uma espada que brilha azul quando goblins estão por perto;",
+            "Uma armadura tecnológica que pode fazer ligações;",
+            "Um escudo que se dobra e desaparece.",
+            "O que o efeito narrativo vai fazer, depende da criatividade do jogador."
+        ],
+        "conceitos": [],
+        "nivel": 1
+    },
+    {
+        "tipo": "arma",
+        "nome": "Escondido a plena vista",
+        "nomeLimpo": "Escondido a plena vista",
+        "efeitos": [
+            "A arma, quando desativada, não pode ser reconhecida como uma arma. Talvez a espada se reduza a uma caneta, ou a pistola fique encaixada e bem reduzida perto do pulso. Alguém que não tenha familiaridade com aquele equipamento não será capaz de reconhecer ele como uma arma, podendo passar despercebida."
+        ],
+        "conceitos": [],
+        "nivel": 1
+    },
+    {
+        "tipo": "arma",
+        "nome": "Fácil de Usar",
+        "nomeLimpo": "Facil de Usar",
+        "efeitos": [
+            "Apenas para armas de uma mão. Ser mais simples e intuitiva nem sempre é uma desvantagem. Quando utilizando duas armas de uma mão  Fáceis de Usar, o personagem recebe +1 Bônus de Item em testes de Ataque (ATK). É necessário que as duas armas possuam Fácil de Usar."
+        ],
+        "conceitos": [],
+        "nivel": 1
+    },
+    {
+        "tipo": "arma",
+        "nome": "Forma",
+        "nomeLimpo": "Forma",
+        "efeitos": [
+            "A arma possui múltiplas formas, que podem ser trocadas como uma ação grátis. Esse addon não aumenta o nível do item. Para cada vez que você adicionar esse addon no item, crie uma nova forma para ela (com tudo podendo ser diferente).",
+            "Para cada Forma em uma arma, aumente o gasto de materiais em 50% (somando). Use bom senso quando adicionando Forma a uma arma ganha por vantagens, recomenda-se que o mestre puna jogadores que tentam abusar da mecânica."
+        ],
+        "conceitos": [],
+        "nivel": 1
+    },
+    {
+        "tipo": "arma",
+        "nome": "Grande Área",
+        "nomeLimpo": "Grande Area",
+        "efeitos": [
+            "Apenas para armas de duas mãos. Os golpes da arma cobrem uma grande área e dificultam erros. +1 Bônus de Item em teste de Ataque (ATK)."
+        ],
+        "conceitos": [],
+        "nivel": 1
+    },
+    {
+        "tipo": "arma",
+        "nome": "Lado Defensivo",
+        "nomeLimpo": "Lado Defensivo",
+        "efeitos": [
+            "Apenas para armas de duas mãos e não aumenta o nível da arma. A arma possui um lado defensivo, passando a funcionar como uma Arma de uma Mão e uma Arma Defensiva. Recrie a arma com duas partes de nível igual ao anterior: uma arma de uma mão e uma arma defensiva. Equipar a arma equipa ambas partes ao mesmo tempo.",
+            "Nota: Você não estará utilizando uma arma de duas mãos e não pode se beneficiar de addons específicos para armas de duas mãos."
+        ],
+        "conceitos": [],
+        "nivel": 1
+    },
+    {
+        "tipo": "arma",
+        "nome": "Múltiplos Atributos",
+        "nomeLimpo": "Multiplos Atributos",
+        "efeitos": [
+            "A arma é útil para mais de um atributo de dano. Cada vez que esse addon for adicionado, escolha mais um atributo de dano para a arma."
+        ],
+        "conceitos": [],
+        "nivel": 1
+    },
+    {
+        "tipo": "arma",
+        "nome": "Melee",
+        "nomeLimpo": "Melee",
+        "efeitos": [
+            "A arma é feita para ser usada em combates corpo à corpo. Com esse addon, a arma causa +2 de dano quando um oponente tentar contra-ataques \"Ranged\". Esse addon não preenche slots nem aumenta o nível do equipamento."
+        ],
+        "conceitos": [],
+        "nivel": 1
+    },
+    {
+        "tipo": "arma",
+        "nome": "Melee Option",
+        "nomeLimpo": "Melee Option",
+        "efeitos": [
+            "A arma funciona tanto em longo alcance quanto em curto alcance. Se você fizer um ataque corpo a corpo (melee), você causa +2 de dano quando um oponente tentar te contra-atacar com ataques a distância (ranged). Se você fizer um ataque ranged, você recebe +1 em Defesa (DEF) quando o oponente tentar te contra-atacar com ataques corpo a corpo (melee). Esse addon aumenta o nível do item, e portanto, consome slot. É necessário levar em consideração a descrição do ataque para decidir se ele é ranged ou não."
+        ],
+        "conceitos": [],
+        "nivel": 1
+    },
+    {
+        "tipo": "arma",
+        "nome": "Larga e Pesada",
+        "nomeLimpo": "Larga e Pesada",
+        "efeitos": [
+            "A arma é realmente pesada. Você recebe -2 em testes de ataque contra esquiva enquanto estiver utilizando ela. Caso um oponente tente bloquear um ataque feito com essa arma, aumente o dano causado em 4. Para armas de uma mão, o redutor e o bônus são reduzidos pela metade."
+        ],
+        "conceitos": [],
+        "nivel": 1
+    },
+    {
+        "tipo": "arma",
+        "nome": "Ranged",
+        "nomeLimpo": "Ranged",
+        "efeitos": [
+            "A arma é feita para ser usada em combates a distância. Com esse addon, todos os ataques que utilizem a arma são considerados à distância e ganham um Bônus de Prioridade igual à +1 contra ataques \"Melee\" quando relevante (esse efeito não se acumula com o bônus de Special Attack Ranged). O personagem recebe +1 de Defesa (DEF) quando o oponente tentar contra atacá-lo com ataques \"Melee\". Não pode ser adicionado junto do addon \"Melee\".",
+            "Esse addon pode ser adicionado de duas formas: consumindo slot e não consumindo slot de uma arma.",
+            "Não consumir slot faz com que essa arma seja obrigada a consumir munição OU faz o usuário pagar 1 MP a mais para cada vez que usar a arma (habilidades inclusas).",
+            "Gastar slot faz com que a arma não use munições nem pague o 1 MP extra."
+        ],
+        "conceitos": [],
+        "nivel": 1
+    },
+    {
+        "tipo": "arma",
+        "nome": "Utiliza Munição",
+        "nomeLimpo": "Utiliza Munição",
+        "efeitos": [
+            "A arma utiliza munição e passa a seguir as regras de munição que estejam funcionando para a sua campanha. Uma arma que utiliza munição tem seu custo em lojas ou de criação reduzido em 50%. Esse addon não ocupa slots nem aumenta o nível da arma."
+        ],
+        "conceitos": [],
+        "nivel": 1
+    },
+    {
+        "tipo": "escudo",
+        "nome": "Efeito Narrativo",
+        "nomeLimpo": "Efeito Narrativo",
+        "efeitos": [
+            "Essa arma defensiva possui um efeito narrativo apenas dentro da história ou cena acontecendo. Efeitos narrativos são necessários para efeitos que talvez não encaixem em outros addons ou não fossem permitidos / sejam grandes demais. O mestre deve informar ao jogador sobre quando o Efeito Narrativo é necessário para manter a descrição escolhida.",
+            "Um efeito narrativo dá alguns efeitos como, por exemplo:",
+            "Uma espada que brilha azul quando goblins estão por perto;",
+            "Uma armadura tecnológica que pode fazer ligações;",
+            "Um escudo que se dobra e desaparece.",
+            "O que o efeito narrativo vai fazer, depende da criatividade do jogador."
+        ],
+        "conceitos": [],
+        "nivel": 1
+    },
+    {
+        "tipo": "escudo",
+        "nome": "Escondido a Plena Vista",
+        "nomeLimpo": "Escondido a Plena Vista",
+        "efeitos": [
+            "A arma, quando desativada, não pode ser reconhecida como uma arma. Talvez o escudo se reduza a um bracelete, ou a espada defensiva vire um anel no dedo indicador do usuário. Alguém que não tenha familiaridade com aquele equipamento não será capaz de reconhecer ele como uma arma, podendo passar despercebida."
+        ],
+        "conceitos": [],
+        "nivel": 1
+    },
+    {
+        "tipo": "escudo",
+        "nome": "Esponja",
+        "nomeLimpo": "Esponja",
+        "efeitos": [
+            "Até uma vez por combate, você pode rolar 1d4 antes de receber um dano e reduzi-lo de forma aprimorada através da ação de bloqueio. Isso é além da sua redução normal pelo bloqueio. Esse efeito só pode ser utilizado contra ataques de um tipo que essa arma defensiva proteja. Adicionar esse addon várias vezes aumenta a quantidade de absorções por combate, de 1 em 1, não podendo ser utilizados mais de um num ataque só."
+        ],
+        "conceitos": [],
+        "nivel": 1
+    },
+    {
+        "tipo": "escudo",
+        "nome": "Material Especial",
+        "nomeLimpo": "Material Especial",
+        "efeitos": [
+            "Escolha mais um atributo de dano. A arma defensiva passa a estar protegendo contra ele, garantindo +1 RD específico ali também. Esse ganho não se acumula com o de armaduras. Você pode adicionar Material Especial várias vezes, mas um atributo só pode ser protegido uma vez."
+        ],
+        "conceitos": [],
+        "nivel": 1
+    },
+    {
+        "tipo": "escudo",
+        "nome": "Torre",
+        "nomeLimpo": "Torre",
+        "efeitos": [
+            "O tamanho do item defensivo é grande a ponto de facilitar, e muito, o seu uso. Ganhe +1 em Bônus de Item em testes que envolvam o atributo Defesa (DEF)."
+        ],
+        "conceitos": [],
+        "nivel": 1
+    },
+    {
+        "tipo": "armadura",
+        "nome": "Armadura Leve",
+        "nomeLimpo": "Armadura Leve",
+        "efeitos": [
+            "Essa armadura é mais leve que o normal, mas concede menor proteção geral. Esse addon garante uma penalidade de -2 RD Geral para armaduras, mas ao utilizar uma armadura leve o personagem recebe +1 em testes de Defesa (DEF) e +1 em testes de Ataque (ATK). Esse addon não aumenta o nível da armadura e nem preenche slot ao ser adicionado.",
+            "Qualquer roupa que não impede movimentos, mesmo que não tenha sido feita para combate, é considerada armadura leve."
+        ],
+        "conceitos": [],
+        "nivel": 1
+    },
+    {
+        "tipo": "armadura",
+        "nome": "Armadura Média",
+        "nomeLimpo": "Armadura Media",
+        "efeitos": [
+            "Essa armadura é uma mistura entre a armadura leve e pesada, permitindo movimentos diversos com leveza e flexibilidade ao mesmo tempo que oferece boa proteção (sem necessariamente se especializar em ambas as propriedades). Esse addon concede os bônus naturais de +2 RD Geral que armaduras tem e ao mesmo tempo concede +1 de Bônus de Item em rolagens de Ataque (ATK). Esse addon não aumenta o nível da armadura e nem preenche slot ao ser adicionado."
+        ],
+        "conceitos": [],
+        "nivel": 1
+    },
+    {
+        "tipo": "armadura",
+        "nome": "Armadura Pesada",
+        "nomeLimpo": "Armadura Pesada",
+        "efeitos": [
+            "Essa armadura é mais pesada que o normal, mas muito mais reforçada e trabalhada que as outras. Esse addon aumenta a RD Geral em +2. do personagem (em cima dos +2 RD Geral naturais, ficando +4 no total). Esse addon não aumenta o nível da armadura e nem preenche slot ao ser adicionado."
+        ],
+        "conceitos": [],
+        "nivel": 1
+    },
+    {
+        "tipo": "armadura",
+        "nome": "Efeito Contínuo",
+        "nomeLimpo": "Efeito Continuo",
+        "efeitos": [
+            "Crie uma técnica Passiva de 1 slot para essa armadura. Essa técnica passiva ganhará o addon \"Natural\" sem gastar slots por isso nem ter seu custo reduzido e não poderá ter Natural escolhido novamente. A técnica passiva está ativa em combates enquanto você utilizar essa armadura. Quaisquer atributos usados na técnica usam os atributos do personagem que utiliza o item."
+        ],
+        "conceitos": [],
+        "nivel": 1
+    },
+    {
+        "tipo": "armadura",
+        "nome": "Efeito Narrativo",
+        "nomeLimpo": "Efeito Narrativo",
+        "efeitos": [
+            "Essa armadura possui um efeito narrativo apenas dentro da história ou cena acontecendo. Efeitos narrativos são necessários para efeitos que talvez não encaixem em outros addons ou não fossem permitidos / sejam grandes demais. O mestre deve informar ao jogador sobre quando o Efeito Narrativo é necessário para manter a descrição escolhida.",
+            "Um efeito narrativo dá alguns efeitos como, por exemplo:",
+            "Uma espada que brilha azul quando goblins estão por perto;",
+            "Uma armadura tecnológica que pode fazer ligações;",
+            "Um escudo que se dobra e desaparece.",
+            "O que o efeito narrativo vai fazer, depende da criatividade do jogador."
+        ],
+        "conceitos": [],
+        "nivel": 1
+    },
+    {
+        "tipo": "armadura",
+        "nome": "Escondido a Plena Vista",
+        "nomeLimpo": "Escondido a Plena Vista",
+        "efeitos": [
+            "A armadura, quando desativada, não pode ser reconhecida como uma armadura. Talvez a pesada cota de malha se reduza a uma camisa simples, ou a armadura de batalha cheia de espinhos fique reduzida à uma placa metálica fina com alguns espinhos discretos na altura do ombro. Alguém que não tenha familiaridade com aquele equipamento não será capaz de reconhecer ele como uma arma, podendo passar despercebida."
+        ],
+        "conceitos": [],
+        "nivel": 1
+    },
+    {
+        "tipo": "armadura",
+        "nome": "Proteção Especial",
+        "nomeLimpo": "Protecao Especial",
+        "efeitos": [
+            "Escolha mais um atributo de dano. Ele também está protegido por essa armadura, ganhando +1 RD Específico. Você pode adicionar Proteção Especial várias vezes, mas um atributo só pode ser protegido uma vez."
+        ],
+        "conceitos": [],
+        "nivel": 1
+    },
+    {
+        "tipo": "acessorio",
+        "nome": "Ferramenta",
+        "nomeLimpo": "Ferramenta",
+        "efeitos": [
+            "Escolha uma perícia. Esse acessório garante um +1 Bônus de Item em testes dessa perícia. Um mesmo acessório pode ser uma Ferramenta para mais de uma perícia."
+        ],
+        "conceitos": [],
+        "nivel": 1
+    },
+    {
+        "tipo": "acessorio",
+        "nome": "Efeito Narrativo",
+        "nomeLimpo": "Efeito Narrativo",
+        "efeitos": [
+            "Esse acessório possui um efeito narrativo apenas dentro da história ou cena acontecendo. Efeitos narrativos são necessários para efeitos que talvez não encaixem em outros addons ou não fossem permitidos / sejam grandes demais. O mestre deve informar ao jogador sobre quando o Efeito Narrativo é necessário para manter a descrição escolhida.",
+            "Um efeito narrativo dá alguns efeitos como, por exemplo:",
+            "Uma espada que brilha azul quando goblins estão por perto;",
+            "Uma armadura tecnológica que pode fazer ligações;",
+            "Um escudo que se dobra e desaparece.",
+            "O que o efeito narrativo vai fazer, depende da criatividade do jogador."
+        ],
+        "conceitos": [],
+        "nivel": 1
+    },
+    {
+        "tipo": "acessorio",
+        "nome": "Largo",
+        "nomeLimpo": "Largo",
+        "efeitos": [
+            "Esse item ocupa dois slots em seu inventário. Esse addon não aumenta o nível do item e é adicionado pelo mestre onde ele achar relevante."
+        ],
+        "conceitos": [],
+        "nivel": 1
+    },
+    {
+        "tipo": "acessorio",
+        "nome": "Poder Ativado",
+        "nomeLimpo": "Poder Ativado",
+        "efeitos": [
+            "Crie uma técnica Forma Especial de um slot e aumente o custo dela em 2 MP. Você pode utilizar ela através desse item. Caso a técnica escolhida fosse utilizar mais de 8 MP, aumente o custo dela em +4 MP ao invés de +2 MP. Quaisquer atributos usados na técnica usam os atributos do personagem que utiliza o item.",
+            "Caso seja relevante à técnica criada: o usuário do poder é VOCÊ e ela funciona igual a uma técnica criada por pontos de habilidade ou ganha naturalmente, com exceção ao custo elevado."
+        ],
+        "conceitos": [],
+        "nivel": 1
+    },
+    {
+        "tipo": "acessorio",
+        "nome": "Super Leve",
+        "nomeLimpo": "Super Leve",
+        "efeitos": [
+            "Esse item ocupa apenas meio slot / espaço em seu inventário. Esse addon não aumenta o nível do item e é adicionado pelo mestre onde ele achar relevante. Acessórios do Tipo Ferramenta devem ter esse addon a maior quantidade de vezes possível, enquanto não for nenhum objeto grande demais que simplesmente não possa ser leve."
+        ],
+        "conceitos": [],
+        "nivel": 1
+    },
+    {
+        "tipo": "consumivel",
+        "nome": "Efeito Destrutivo",
+        "nomeLimpo": "Efeito Destrutivo",
+        "efeitos": [
+            "O item explode ou algo assim. Crie uma técnica de ataque com um número de slots igual à quantidade de Efeito Destrutivo nesse item e máximo de 2 slots. Utilizar esse item consome seu turno e realiza um ataque com essa técnica (utilizando os atributos do personagem)."
+        ],
+        "conceitos": [],
+        "nivel": 1
+    },
+    {
+        "tipo": "consumivel",
+        "nome": "Efeito Especial",
+        "nomeLimpo": "Efeito Especial",
+        "efeitos": [
+            "Crie uma técnica especial de um slot. Utilizar esse item ativa essa técnica (sem gastar MP). Utilizar itens sempre resulta no fim do seu turno atual. Quaisquer atributos usados na técnica usam os atributos do personagem que utiliza o item.",
+            "Para caso seja relevante à técnica criada, o usuário da técnica é O ITEM, mesmo que o seu personagem seja o alvo."
+        ],
+        "conceitos": [],
+        "nivel": 1
+    },
+    {
+        "tipo": "consumivel",
+        "nome": "Ferramenta de uso único",
+        "nomeLimpo": "Ferramenta de uso unico",
+        "efeitos": [
+            "O item serve para auxiliar em um tipo de teste (fora os de puro combate), como uma poção de coragem para diplomacia ou um grampo de ladrões pra abrir uma fechadura. Consuma o item e adicione +2 ao teste da perícia."
+        ],
+        "conceitos": [],
+        "nivel": 1
+    },
+    {
+        "tipo": "consumivel",
+        "nome": "Grando/Pesado",
+        "nomeLimpo": "Grande Pesado",
+        "efeitos": [
+            "O item ocupa 2 slots ao invés de 1. Esse addon deve ser colocado pelo mestre em itens onde seja relevante e não ocupa slots nem aumenta o nível do item. Opcionalmente, itens com esse addon podem ter seu custo reduzido em 25% quando vendidos em uma loja de NPC."
+        ],
+        "conceitos": [],
+        "nivel": 1
+    },
+    {
+        "tipo": "consumivel",
+        "nome": "Pesado",
+        "nomeLimpo": "Pesado",
+        "efeitos": [
+            "Esse item ocupa dois slots em seu inventário. Esse addon não aumenta o nível do item e é adicionado pelo mestre onde ele achar relevante."
+        ],
+        "conceitos": [],
+        "nivel": 1
+    },
+    {
+        "tipo": "consumivel",
+        "nome": "Super-Leve",
+        "nomeLimpo": "Super-Leve",
+        "efeitos": [
+            "Esse item ocupa apenas meio slot / espaço em seu inventário. Esse addon não aumenta o nível do item e é adicionado pelo mestre onde ele achar relevante. Acessórios do Tipo Ferramenta devem ter esse addon a maior quantidade de vezes possível, enquanto não for nenhum objeto grande demais que simplesmente não possa ser leve."
+        ],
+        "conceitos": [],
+        "nivel": 1
+    },
+    {
+        "tipo": "consumivel",
+        "nome": "Uso Médico",
+        "nomeLimpo": "Uso Medico",
+        "efeitos": [
+            "Esse item conta como \"Bandagens\" ou algum outro item consumível para a perícia \"Socorrer / Primeiros Socorros\", dando +2 Bônus de Item em testes dessas perícias, ou outros efeitos que exijam isso. Caso esse seja o único addon adicionado no item, o preço dele cai para 25 moedas de ouro."
+        ],
+        "conceitos": [],
+        "nivel": 1
     }
 ].sort(function (a,b) {
     var na = a.nome.toUpperCase();

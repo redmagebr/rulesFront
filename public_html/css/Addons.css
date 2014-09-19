@@ -153,6 +153,9 @@ p.addonExp:hover {
 
 #addonTipos {
     text-align: center;
+    display: block;
+    max-width: 600px;
+    margin: auto;
 }
 
 #addonTipos > h1 {
