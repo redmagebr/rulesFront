@@ -5,6 +5,14 @@
  */
 window.techChangelog = [
     {
+        version : [3,3],
+        description : [
+            "All I have passa a ser All I have I. All I have II criada. Ambas não funcionam em eventos PVP e coisas do tipo.",
+            "Novas Avatar of Destruction I e II.",
+            "Armas: Ranged e Melee nunca deveriam acumular em duas armas. Agora isso está escrito lá."
+        ]
+    },
+    {
         version : [3, 2],
         description : [
             "Addons de itens adicionados.",
@@ -417,18 +425,34 @@ window.techCustos = {
 window.techAddons = 
 [
     {
-        "id": 385,
         "tipo": "ataque",
-        "nome": "All I have",
-        "nomeLimpo": "All I have",
+        "nome": "All I have I",
+        "nomeLimpo": "All I have I",
         "efeitos": [
             "Aumenta o custo da técnica em 1 MP.",
             "Quando essa técnica é utilizada, pague um múltiplo de 5 como um custo extra de MP. Esse custo extra não pode ser reduzido de nenhuma maneira. Você não pode escolher custos extras que fossem te deixar com MP inferior a -10.",
             "Para cada 5 MPs pagos dessa maneira, aumente o dano do ataque em +1.",
-            "O gasto extra de MP acontece junto da ação de iniciar o ataque, antes do oponente escolher uma defesa."
+            "O gasto extra de MP acontece junto da ação de iniciar o ataque, antes do oponente escolher uma defesa.",
+            "Esse addon é ignorado em eventos onde a morte do personagem não signifique nada para a narrativa, como eventos PVP."
         ],
         "conceitos": [
-
+            'unicidade'
+        ],
+        "nivel": 1
+    },
+    {
+        "tipo": "ataque",
+        "nome": "All I have II",
+        "nomeLimpo": "All I have II",
+        "efeitos": [
+            "Essa técnica recebe um bônus de dano igual ao seu MP restante dividido por 5, arredondando para baixo, somado ao seu HP restante.",
+            "Exemplo: Um personagem com 10 MP e 4 HP usando essa técnica receberia um bônus de +6 Dano.",
+            "Esse ataque passa a ser em área e acertará todos os participantes da luta com 100% dano. Recomenda-se deixar aliados saírem do combate antes de usá-lo.",
+            "Após o final do ataque, independente de ele ter acertado ou não, o personagem que o utilizou morre. Essa morte irá acontecer independente de quais vantagens ou efeitos o personagem tenha. A morte é inevitável.",
+            "Esse addon é ignorado em eventos onde a morte do personagem não signifique nada para a narrativa, como eventos PVP."
+        ],
+        "conceitos": [
+            'unicidade'
         ],
         "nivel": 1
     },
@@ -1255,6 +1279,33 @@ window.techAddons =
     /*
      * Técnicas Especiais
      */
+    {
+        tipo : 'especial',
+        nome : 'Avatar of Destruction I',
+        nomeLimpo : 'Avatar of Destruction I',
+        efeitos :[
+            "Ao ativar esse efeito, o personagem recebe +1 Bônus de Overload em testes de combate e +2 Bônus de Overload dano até o final do combate.",
+            "Após o final da luta (ou se o personagem for derrotado), os danos ao corpo do personagem serão gigantes. Coisas como ossos quebrados pelo corpo inteiro, músculos estourados, etc. O personagem não será capaz de lutar nem de fazer nada que exija muito do físico até tudo estar em ordem novamente.",
+            "Mestres devem levar em conta quanto tempo o efeito durou para decidir o dano recebido pelo corpo do personagem. O jogador fazendo essa técnica também deve explicar como esse dano é capaz de ignorar qualquer vantagem que ele tenha, realmente exigindo tempo para se recuperar.",
+            "Caso seja impossível encontrar uma forma de causar esse dano e a passagem de tempo para o personagem, pode-se cobrar 10% da Experiência TOTAL do personagem, sem volta."
+        ],
+        conceitos : [],
+        nivel : 2
+    },
+    {
+        tipo : 'especial',
+        nome : 'Avatar of Destruction II',
+        nomeLimpo : 'Avatar of Destruction II',
+        efeitos :[
+            "Ao ativar esse efeito, o personagem recebe +3 Bônus de Overload em testes de combate e +6 Bônus de Overload em dano até o final do combate.",
+            "O MP do personagem se torna o máximo e não desce. Custos extras de técnicas devem ser sempre o mínimo possível (Ataques com All I have não poderiam gastar MP para aumentar seu dano).",
+            "Toda vez que o turno do personagem chegar, o HP Atual dele é aumentado para 7 caso seja menor do que 7. Isso não conta como uma cura e não gasta stamina.",
+            "Se o HP do personagem chegar a 0 ou menos em algum momento, esse efeito termina e o HP do personagem não se recuperará no turno dele.",
+            "Ao final da luta (ou se o personagem for derrotado), o personagem que ativou esse efeito morre. Essa morte irá acontecer independente de quais vantagens ou efeitos o personagem tenha. A morte é inevitável."
+        ],
+        conceitos : [],
+        nivel : 3
+    },
     {
         "id": 209,
         "tipo": "especial",
@@ -2570,7 +2621,8 @@ window.techAddons =
         "nome": "Melee",
         "nomeLimpo": "Melee",
         "efeitos": [
-            "A arma é feita para ser usada em combates corpo à corpo. Com esse addon, a arma causa +2 de dano quando um oponente tentar contra-ataques \"Ranged\". Esse addon não preenche slots nem aumenta o nível do equipamento."
+            "A arma é feita para ser usada em combates corpo à corpo. Com esse addon, a arma causa +2 de dano quando um oponente tentar contra-ataques \"Ranged\". Esse addon não preenche slots nem aumenta o nível do equipamento.",
+            "Esse bônus não se acumula quando usando duas armas Melee. Esse bônus não é recebido quando usando duas armas e uma dela não é melee."
         ],
         "conceitos": [],
         "nivel": 1
@@ -2580,7 +2632,8 @@ window.techAddons =
         "nome": "Melee Option",
         "nomeLimpo": "Melee Option",
         "efeitos": [
-            "A arma funciona tanto em longo alcance quanto em curto alcance. Se você fizer um ataque corpo a corpo (melee), você causa +2 de dano quando um oponente tentar te contra-atacar com ataques a distância (ranged). Se você fizer um ataque ranged, você recebe +1 em Defesa (DEF) quando o oponente tentar te contra-atacar com ataques corpo a corpo (melee). Esse addon aumenta o nível do item, e portanto, consome slot. É necessário levar em consideração a descrição do ataque para decidir se ele é ranged ou não."
+            "A arma funciona tanto em longo alcance quanto em curto alcance. Se você fizer um ataque corpo a corpo (melee), você causa +2 de dano quando um oponente tentar te contra-atacar com ataques a distância (ranged). Se você fizer um ataque ranged, você recebe +1 em Defesa (DEF) quando o oponente tentar te contra-atacar com ataques corpo a corpo (melee). Esse addon aumenta o nível do item, e portanto, consome slot. É necessário levar em consideração a descrição do ataque para decidir se ele é ranged ou não.",
+            "Ver os addons Melee e Ranged."
         ],
         "conceitos": [],
         "nivel": 1
@@ -2601,6 +2654,7 @@ window.techAddons =
         "nomeLimpo": "Ranged",
         "efeitos": [
             "A arma é feita para ser usada em combates a distância. Com esse addon, todos os ataques que utilizem a arma são considerados à distância e ganham um Bônus de Prioridade igual à +1 contra ataques \"Melee\" quando relevante (esse efeito não se acumula com o bônus de Special Attack Ranged). O personagem recebe +1 de Defesa (DEF) quando o oponente tentar contra atacá-lo com ataques \"Melee\". Não pode ser adicionado junto do addon \"Melee\".",
+            "Se usando duas armas e uma delas não for Ranged, o bônus não é recebido. Se usando duas armas Ranged, o bônus não acumula consigo mesmo.",
             "Esse addon pode ser adicionado de duas formas: consumindo slot e não consumindo slot de uma arma.",
             "Não consumir slot faz com que essa arma seja obrigada a consumir munição OU faz o usuário pagar 1 MP a mais para cada vez que usar a arma (habilidades inclusas).",
             "Gastar slot faz com que a arma não use munições nem pague o 1 MP extra."

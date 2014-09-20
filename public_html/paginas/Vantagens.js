@@ -5,6 +5,12 @@
  */
 window.vantagensChangelog = [
     {
+        "version" : [3, 1],
+        "description" : [
+            "Convocação Extraplanar tem o nome certo."
+        ]
+    },
+    {
         "version" : [3, 0],
         "description" : [
             "Website criado.",
@@ -986,7 +992,7 @@ window.vantagensArray = [
         "requisitos": "Arquétipo Inquisidor"
     },
     {
-        "nome": "Convocação Astral",
+        "nome": "Convocação Extraplanar",
         "pontos": "0",
         "descricao": [
             "Você pode convocar uma criatura extraplanar / celestial / mágica / astral, e de outras categorias ao pagar um custo igual a 2 de MP.",
