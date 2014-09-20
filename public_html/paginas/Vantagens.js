@@ -2041,8 +2041,16 @@ window.vantagensArray = [
 });
 
 window.vantagensHash = {};
+var nome;
 for (var i = 0; i < window.vantagensArray.length; i++) {
-    window.vantagensHash[window.vantagensArray[i].nome.toUpperCase().replace(/ *\([^)]*\) */, '').trim()] = window.vantagensArray[i];
+    nome = window.vantagensArray[i].nome.toUpperCase().replace(/ *\([^)]*\) */, '').trim();
+    if (window.vantagensHash[nome] !== undefined) {
+        console.log("Vantagem repetido. Antigo: ");
+        console.log(window.vantagensHash[nome]);
+        console.log("Novo:");
+        console.log(window.vantagensArray[i]);
+    }
+    window.vantagensHash[nome] = window.vantagensArray[i];
 }
 
 window.desvantagensArray = [
@@ -3503,6 +3511,14 @@ window.desvantagensArray = [
 });
 
 window.desvantagensHash = {};
+var nome;
 for (var i = 0; i < window.desvantagensArray.length; i++) {
-    window.desvantagensHash[window.desvantagensArray[i].nome.toUpperCase().replace(/ *\([^)]*\) */, '').trim()] = window.desvantagensArray[i];
+    nome = window.desvantagensArray[i].nome.toUpperCase().replace(/ *\([^)]*\) */, '').trim();
+    if (window.desvantagensHash[nome] !== undefined) {
+        console.log("Desvantagem repetido. Antigo: ");
+        console.log(window.desvantagensHash[nome]);
+        console.log("Novo:");
+        console.log(window.desvantagensArray[i]);
+    }
+    window.desvantagensHash[nome] = window.desvantagensArray[i];
 }

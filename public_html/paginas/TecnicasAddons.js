@@ -2886,9 +2886,16 @@ window.techAddons =
 
 window.techAddonsHash = {};
 var addon;
+var nome;
 for (var i = 0; i < window.techAddons.length; i++) {
     addon = window.techAddons[i];
-    window.techAddonsHash[addon.tipo.toUpperCase() + '-' + 
-                addon.nome.toUpperCase().replace(/ *\([^)]*\) */, '').trim()
-    ] = addon;
+    nome = addon.tipo.toUpperCase() + '-' + 
+                addon.nome.toUpperCase().replace(/ *\([^)]*\) */, '').trim();
+    if (window.techAddonsHash[nome] !== undefined) {
+        console.log("Addon repetido. Antigo: ");
+        console.log(window.techAddonsHash[nome]);
+        console.log("Novo:");
+        console.log(addon);
+    }
+    window.techAddonsHash[nome] = addon;
 }
