@@ -9,7 +9,8 @@ window.techChangelog = [
         description : [
             "All I have passa a ser All I have I. All I have II criada. Ambas não funcionam em eventos PVP e coisas do tipo.",
             "Novas Avatar of Destruction I e II.",
-            "Armas: Ranged e Melee nunca deveriam acumular em duas armas. Agora isso está escrito lá."
+            "Armas: Ranged e Melee nunca deveriam acumular em duas armas. Agora isso está escrito lá.",
+            "Armas e Munições: Addons foram adicionados para padronizar as funcionalidades de Munição e Munição Especial. Armas passam a precisar do addon \"Capacidade Especial\" antes de poderem utilizar Munições Especiais."
         ]
     },
     {
@@ -2462,6 +2463,16 @@ window.techAddons =
     },
     /* Addons de Armas */
     {
+        "tipo" : "arma",
+        "nome" : "Capacidade Especial",
+        "nomeLimpo" : "Capacidade Especial",
+        "efeitos" : [
+            "Essa arma pode utilizar Itens Consumíveis com o addon \"Munição Especial\", recebendo efeitos extras nesse momento."
+        ],
+        "conceitos": [],
+        "nivel" : 1
+    },
+    {
         "tipo": "arma",
         "nome": "Aliada",
         "nomeLimpo": "Aliada",
@@ -2855,6 +2866,33 @@ window.techAddons =
         "nomeLimpo": "Super Leve",
         "efeitos": [
             "Esse item ocupa apenas meio slot / espaço em seu inventário. Esse addon não aumenta o nível do item e é adicionado pelo mestre onde ele achar relevante. Acessórios do Tipo Ferramenta devem ter esse addon a maior quantidade de vezes possível, enquanto não for nenhum objeto grande demais que simplesmente não possa ser leve."
+        ],
+        "conceitos": [],
+        "nivel": 1
+    },
+    /* Addons para Itens Consumíveis */
+    {
+        "tipo": "consumivel",
+        "nome": "Munição",
+        "nomeLimpo": "Municao",
+        "efeitos": [
+            "Esse item passa a poder ser usado como munição.",
+            "Caso esse seja o único addon no item, é recomendável utilizar preços diferenciados para criação ou venda.",
+            "Antes de usar Munições, veja de que forma o mestre irá tratar munições. Elas podem ser gastas para cada ataque ou depois de certa quantidade de tempo, conforme explicado no Manual DFS."
+        ],
+        "conceitos": [],
+        "nivel": 1
+    },
+    {
+        "tipo": "consumivel",
+        "nome": "Munição Especial",
+        "nomeLimpo": "Municao Especial",
+        "efeitos": [
+            "Esse item passa a poder ser usado como Munição Especial, podendo ser utilizada por armas com o addon \"Capacidade Especial\".",
+            "Ao criar esse item, escolha um atributo de dano. Ao atacar com a arma, o tipo do dano se torna o tipo da munição no lugar de todos os atributos que essa arma possa funcionar junto.",
+            "Exemplo: Uma pistola que funciona com Arma e Tecnologia, junto de uma Munição Especial para Artes Marciais iria trocar danos de tipo Arma ou Tecnologia para Artes Marciais, mas não afetaria um dano de tipo Magia.",
+            "Caso esse seja o único addon no item, é recomendável utilizar preços diferenciados para criação ou venda.",
+            "Antes de usar Munições, veja de que forma o mestre irá tratar munições. Elas podem ser gastas para cada ataque ou depois de certa quantidade de tempo, conforme explicado no Manual DFS."
         ],
         "conceitos": [],
         "nivel": 1
