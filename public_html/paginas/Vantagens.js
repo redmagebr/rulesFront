@@ -5,6 +5,12 @@
  */
 window.vantagensChangelog = [
     {
+        "version" : [3, 2],
+        "description" : [
+            "Androgenia, Narcisista e Androgenia adicionadas."
+        ]
+    },
+    {
         "version" : [3, 1],
         "description" : [
             "Convocação Extraplanar tem o nome certo."
@@ -2037,6 +2043,15 @@ window.vantagensArray = [
         "descricao": [
             "Você fala com um tom calmo que passa o quanto você aprendeu sobre a vida. Você pode usar sua Sabedoria no lugar de Carisma para testes de Diplomacia."
         ]
+    },
+    {
+        nome : 'Androgenia',
+        pontos : '1',
+        descricao : [
+            'Algo na sua espécie, ou em você em particular, faz ser bem difícil identificar seu gênero.',
+            'A sua situação específica acabou sendo um resultado muito bom e tudo encaixa muito bem.',
+            'Vocẽ não ganha vantagens em interações sociais, mas você sempre pode agir como o gênero que fosse se beneficiar mais em certo momento.'
+        ]
     }
 ].sort(function (a,b) {
     var na = a.nome.toUpperCase();
@@ -3506,6 +3521,24 @@ window.desvantagensArray = [
         "pontos": "3",
         "descricao": [
             "Talvez seu personagem tenha um desejo oculto de morrer, talvez ele não se dê valor ou talvez ele dê valor demais às outras pessoas. O que importa é que seu personagem vai se fazer disponível a qualquer trabalho suicida se isso for trazer alguma vantagem para os outros e estaria pronto até para se sacrificar diretamente para salvar alguém."
+        ]
+    },
+    {
+        "nome": "Androgenia",
+        "pontos": "1 ou 3",
+        "descricao": [
+            "Algo na sua espécie, ou em você em particular, faz ser bem difícil identificar qual seu gênero. Isso pode atrapalhar muito algumas interações sociais e algumas pessoas até ficarão zangadas ao lidar com você.",
+            "Por 3 pontos, a sua situação específica acaba por fazer essas situações ruins acontecerem quase sempre que possíveis."
+        ]
+    },
+    {
+        "nome": "Narcisista",
+        "pontos": "2 ou 4",
+        "descricao": [
+            "O personagem é extremamente vaidoso, cuidando de sua aparência a todo momento. Por 2 pontos, o personagem precisa tomar todas as precauções possíveis para manter sua boa aparência.",
+            "Por 4 pontos, o personagem irá exigir reconhecimento externo de sua aparência, não aceitando que alguém não o considere lindo.",
+            "Nos dois casos, o personagem pode acabar perdendo o auto-controle ao se ferir de uma forma ruim.",
+            "Você não pode escolher essa desvantagem caso sua aparência seja inferior a 3. Aparência é igual ao seu nível em Carisma, mas isso pode ser alterado através de vantagens."
         ]
     }
 ].sort(function (a,b) {
