@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style type=text/css>
+            html, body {
+                position: relative;
+                height: 100%;
+                width: 100%;
+                display: block;
+            }
+            
+            html {
+                overflow: auto;
+            }
+            
+            body {
+                overflow: hidden;
+                min-width: 900px;
+                max-width: 1000px;
+                margin: auto;
+            }
+            
+            #form {
+                position: absolute;
+                left: 0px;
+                top: 0px;
+                width: 400px;
+                height: 100%;
+                overflow-y: auto;
+            }
+            
+            #form > input {
+                display: block;
+                width: 90%;
+                margin: auto;
+                margin-bottom: 10px;
+            }
+            
+            #form > textarea {
+                display: block;
+                margin: auto;
+                width: 90%;
+                margin-bottom: 10px;
+                height: 100px;
+            }
+            
+            #result {
+                position: absolute;
+                right: 10px;
+                bottom: 10px;
+                top: 10px;
+                width: 400px;
+            }
+            
+            #clear {
+                position: absolute;
+                left: 50%;
+                margin-left: -41px;
+                width: 60px;
+                height: 20px;
+                border: #000 1px solid;
+            }
+            
+            #clear:hover {
+                cursor: pointer;
+            }
+        </style>
+    </head>
+    <body>
+        <a id="clear">Limpar</a>
+        <form id="form">
+            
+        </form>
+        <textarea id="result"></textarea>
+        <script type="text/javascript" src="http://redpg.com.br/js/jquery-2.1.1.min.js"></script>
+        <script type="text/javascript" src="http://redpg.com.br/js/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="http://rules.redpg.com.br/paginas/TecnicasAddons.js"></script>
+        <script type="text/javascript">
+            window.$result = $('#result');
+            window.$form = $('#form');
+            
+            $('#clear').on('click', function () {
+                for (var id in window.$formItems) {
+                    window.$formItems[id].val('');
+                }
+                window.process();
+            });
+            
+            
+            window.getValue = function (id) {
+                var result = window.$formItems[id].val();
+                if (result.trim() === '') {
+                    result = 'Vazio';
+                }
+                return result;
+            };
+            
+            window.$formItems = {
+                InfoNome : $('<input type="text" />'),
+                InfoLargeImage : $('<input type="text" />'),
+                InfoArquetipo : $('<input type="text" />'),
+                InfoAfiliacao : $('<input type="text" />'),
+                InfoLinhadotempo : $('<input type="text" />'),
+                InfoRaca : $('<input type="text" />'),
+                InfoSexo : $('<input type="text" />'),
+                InfoIdade : $('<input type="text" />'),
+                InfoStatus : $('<input type="text" />'),
+                InfoRelativos : $('<input type="text" />'),
+                Resumo : $('<textarea />'),
+                Aparencia : $('<textarea />'),
+                Historia : $('<textarea />'),
+                ArcoX : $('<textarea />'),
+                EventoImportante : $('<textarea />'),
+                Personalidade : $('<textarea />'),
+                Habilidades : $('<textarea />'),
+                Curiosidades : $('<textarea />')
+            };            
+            
+            window.process = function () {
+                var text =  "{{Infobox_Arco1_NPC\n" +
+                            "|Name = " + getValue('InfoNome') + "\n" +
+                            "|LargeImage = " + getValue('InfoLargeImage') + "\n" +
+                            "|Arquétipo = " + getValue('InfoArquetipo') + "\n" +
+                            "|Afiliação = " + getValue('InfoAfiliacao') + "\n" +
+                            "|Linhadotempo = " + getValue('InfoLinhadotempo') + "\n" +
+                            "|Raça = " + getValue('InfoRaca') + "\n" +
+                            "|Sexo = " + getValue('InfoSexo') + "\n" +
+                            "|Idade = " + getValue('InfoIdade') + "\n" +
+                            "|Status = " + getValue('InfoStatus') + "\n" +
+                            "|Relativos = " + getValue('InfoRelativos') + "}}\n" +
+                            "\n" +
+                            getValue('Resumo') + "\n" +
+                            "=='''Aparência'''==\n" +
+                            getValue('Aparencia') + "\n" +
+                            "=='''História'''==\n" +
+                            getValue('Historia') + "\n" +
+                            "==='''<Arco X>'''===\n" +
+                            getValue('ArcoX') + "\n" +
+                            "==='''<Evento importante>'''===\n" +
+                            getValue('EventoImportante') + "\n" +
+                            "=='''Personalidade'''==\n" +
+                            getValue('Personalidade') + "\n" +
+                            "=='''Habilidades'''==\n" +
+                            getValue('Habilidades') + "\n" +
+                            "=='''Curiosidades'''==\n" +
+                            getValue('Curiosidades') + "\n" +
+                            "\n" +
+                            "=='''Galeria de Imagens'''==\n" +
+                            "Eventuais imagens sobre o NPC ou que tenham a ver com ele (fan arts incluidas).\n" +
+                            "\n" +
+                            "[[Category:NPCs]]";
+                window.$result.text(text);
+            };
+            
+            for (var id in $formItems) {
+                $formItems[id].attr('placeholder', id).on('change', function () {
+                    window.process();
+                });
+                window.$form.append($formItems[id]);
+            }
+            
+            window.process();
+        </script>
+    </body>
+</html>
