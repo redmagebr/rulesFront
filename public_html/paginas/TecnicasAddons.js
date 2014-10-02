@@ -7,6 +7,14 @@ window.techChangelog = [
     {
         version : [3,3],
         description : [
+            "Berserking fica mais clara em relação ao seu redutor de RD.",
+            "Aparentemente isso se perdeu em algum momento, mas reintroduzindo o conceito de \"Ataque Normalizado\".",
+            "Stalwart Protector deveria ser uma versão +Dano das outras Protections, então foi alterada para voltar a isso, ainda sem deixar de ser um addon para Guardiões."
+        ]
+    },
+    {
+        version : [3,3],
+        description : [
             "All I have passa a ser All I have I. All I have II criada. Ambas não funcionam em eventos PVP e coisas do tipo.",
             "Novas Avatar of Destruction I e II.",
             "Armas: Ranged e Melee nunca deveriam acumular em duas armas. Agora isso está escrito lá.",
@@ -189,6 +197,18 @@ window.techConceitosExplain = [
  */
 window.techConceitos = [
     {
+        id : 'normalizado',
+        nome : 'Ataques Normalizados',
+        listado : true,
+        impresso : false,
+        descricao : [
+            "Um ataque normalizado é nada mais nada menos do que um ataque reduzido à um ataque básico. Um ataque tende a ser normalizado por algum efeito que tenha sido feito para ataques mais fracos (ataques básicos).",
+            "A normalização de um ataque é realizada por cortar o seu modificador de dano ao meio. Então um dano de 1d6 + 6 viraria 1d6 + 3.",
+            "Exceção: Ataques Básicos não são afetados por normalização.",
+            "Exceção: Um ataque só é normalizado uma única vez. Normalizações seguintes não surtem efeito."
+        ]
+    },
+    {
         "id": "slots",
         "nome": "Addons, Slots e Custo",
         "listado": false,
@@ -276,18 +296,19 @@ window.techConceitos = [
             "Assim sendo, um bônus de +50% dano resulta 150% dano. Se o dano já fosse 125% por algum outro motivo, ao invés de multiplicar esses 125% simplesmente aumentamos para 175% (125% + 50%).",
             "Para redutores, não temos escolha a não ser multiplicar: então se o dano fosse ser 125% e existe um redutor de 50%, o dano final fica 62.5%! (125% * 50%).",
             "Quando resolvendo contas com porcentagens, sempre somamos primeiro e multiplicamos apenas no final. Ou seja: adicionam-se todos os bônus e só então se multiplica pelos redutores, como:",
-            "((100% + 25%) * (50%))"
+            "((100% + 25%) * (50%)) = (125%) * (50%) = 62.5%"
         ]
     },
     {
         "id": "marcas",
         "nome": "Marcas",
-        "listado": false,
+        "listado": true,
         "impresso": false,
         "descricao": [
             "Alguns addons possuem efeitos que criam Marcas no alvo. Uma marca é o equivalente a você ficar de guarda e pronto para atrapalhar esse alvo.",
-            "Se um inimigo marcado por você tentar realizar um ataque que não inclui você como alvo, você pode realizar um ataque básico contra ele, mesmo fora do seu turno. Esse efeito não se ativa se o ataque for realizado dentro de um contra-ataque, apenas para ataques realizados no turno do alvo marcado. Quando você realizar o seu ataque, o inimigo pode decidir se ele vai receber seu dano sem se defender ou se tentará esquivar - ele não tem tempo suficiente para realizar outras ações de defesa.",
-            "Um alvo pode estar marcado por vários personagens, mas apenas um pode ativar sua marca quando ele faz um ataque."
+            "Se um inimigo marcado por você tentar realizar um ataque que não inclui você como alvo, você pode realizar um Ataque Normalizado contra ele, mesmo fora do seu turno. Esse efeito não se ativa se o ataque for realizado dentro de um contra-ataque, apenas para ataques realizados no turno do alvo marcado. Quando você realizar o seu ataque, o inimigo pode decidir se ele vai receber seu dano sem se defender ou se tentará esquivar - ele não tem tempo suficiente para realizar outras ações de defesa.",
+            "Um alvo pode estar marcado por vários personagens, mas apenas um pode ativar sua marca quando ele faz um ataque.",
+            "Nota: Ver regras de Ataques Normalizados"
         ]
     },
     {
@@ -411,6 +432,7 @@ window.techCustos = {
     ],
     "pontos" : [
         [0, "Divide uma técnica de Forma Especial em mais de uma. Cada técnica especial resultante deve ter pelo menos 1 Slot. Você não pode dividir em técnicas especiais caso isso não fosse ser possível de outra maneira (Exemplo: se a divisão resultasse na quebra de alguma regra, como a regra de unicidade, ela não pode ser feita)"],
+        [1, "Funde duas técnicas do mesmo tipo em uma só. Ver regras de Fusão de Técnicas."],
         [1, "Recria a técnica da forma que quiser (não abuse!). Caso a mudança na técnica tenha sido forçada por alterações nos addons, o custo é 0. O jeito esperado de se usar isso é para consertar técnicas cujos addons você entendeu errado e não está funcionando como você quer ou apagar uma técnica que você fez tão errado que não tem conserto. O objetivo dessas alterações não é fazer uma técnica temporária e se livrar dela quando não for mais útil."],
         [4, "Nova técnica de 1 Slot. Número máximo de slots é 4."],
         [3, "Aumenta a quantidade de slots de uma técnica, que não seja Forma Especial, em 1. Técnicas de Forma Especial custam 4 pontos para aumentar em 1 Slot."],
@@ -826,7 +848,8 @@ window.techAddons =
         ],
         "conceitos": [
             "marcas",
-            "basicos"
+            "basicos",
+            "normalizado"
         ],
         "nivel": 1
     },
@@ -1814,7 +1837,8 @@ window.techAddons =
         ],
         "conceitos": [
             "marcas",
-            "basicos"
+            "basicos",
+            "normalizado"
         ],
         "nivel": 1
     },
@@ -1916,7 +1940,7 @@ window.techAddons =
         "efeitos": [
             "Caso você receba um dano final que exceda sua cura por Stamina, você pode gastar um ponto de Stamina se curar.",
             "Quando você realiza um ataque dentro do seu turno e você recebeu algum dano desde o seu último turno, aumente seu dano em +2, esse bônus só é ganho no seu turno atual desde que a condição seja obedecida. No fim do seu turno, esse efeito é resetado.",
-            "Enquanto esse efeito estiver ativo, reduza todas as suas RDs em 2 pontos.",
+            "Enquanto esse efeito estiver ativo, reduza sua RD Geral em 2 pontos.",
             "Aumente custo total da técnica em 2 (não acumulativo, mas somatório entre outros addons) para cada rodada que a habilidade com este addon ficar ativa."
         ],
         "conceitos": [
@@ -1947,12 +1971,13 @@ window.techAddons =
         "nomeLimpo": "Boon of the Protector",
         "efeitos": [
             "Inimigos marcados por você causam 1 ponto de dano a menos contra você, redução aplicada após o cálculo de danos e podendo reduzir o dano tomado a 0.",
-            "Ataques realizados com técnicas dentro do seu turno tem o modificador de sua rolagem de dano reduzido ao meio. Ataques básicos não são afetados.",
+            "Ataques realizados no seu turno são Normalizados.",
             "Aumente custo total da técnica em 1 (não acumulativo, mas somatório entre outros addons) para cada rodada que a habilidade com este addon ficar ativa."
         ],
         "conceitos": [
             "marcas",
-            "basicos"
+            "basicos",
+            "normalizado"
         ],
         "nivel": 1
     },
@@ -2115,18 +2140,18 @@ window.techAddons =
         "nomeLimpo": "Protection - Defend the Weak",
         "efeitos": [
             "No fim de cada um de seus turnos, marque até um oponente.",
-            "Divida os modificadores das suas rolagens de dano por 2. Se você fosse rolar 1d6 + 10, role 1d6 +5 ao invés disso. Se sua rolagem de dano já ia ser reduzida por um efeito similar, o efeito não se acumula.",
-            "Ataques Básicos não tem seus modificadores reduzidos.",
-            "Enquanto essa passiva estiver ativa, você não pode ativar suas Marcas para realizar ataques básicos. Ao invés disso, você pode redirecionar ataques de inimigos marcados por você para você mesmo. Quando você faz isso, você só pode Bloquear o ataque, não esquivar.",
-            "Se esse addon for o único addon em uma técnica, o personagem pode decidir fazer essa técnica ser o estado natural dele. Nesse caso, a técnica não possui mais custo e está SEMPRE ativa. Caso contrário, aumente custo total da técnica em 2 (não acumulativo, mas somatório entre outros addons) para cada rodada que a habilidade com este addon ficar ativa.",
+            "Todos os seus ataques passam a ser Normalizados. Ver regras de Ataques Normalizados.",
+            "Enquanto essa passiva estiver ativa, você não pode ativar suas Marcas para realizar ataques básicos. Ao invés disso, você pode redirecionar ataques de inimigos marcados por você para você mesmo. Quando você faz isso, você só pode Bloquear o ataque, não esquivar. Isso é equivalente ao seu personagem entrar no meio do caminho e receber o ataque.",
             "Enquanto essa passiva estiver ativa, você pode realizar a ação \"Buscar Coragem\".",
-            "Ativar essa passiva consome o turno do personagem. Desativar essa passiva consome o turno do personagem."
+            "Ativar essa passiva consome o turno do personagem. Desativar essa passiva consome o turno do personagem.",
+            "Se esse addon for o único addon em uma técnica, o personagem pode decidir fazer essa técnica ser o estado natural dele. Nesse caso, a técnica não possui mais custo e está SEMPRE ativa. Caso contrário, aumente custo total da técnica em 2 (não acumulativo, mas somatório entre outros addons) para cada rodada que a habilidade com este addon ficar ativa."
         ],
         "conceitos": [
             "unicidade",
             "coragem",
             "basicos",
-            "marcas"
+            "marcas",
+            "normalizado"
         ],
         "nivel": 1
     },
@@ -2137,8 +2162,7 @@ window.techAddons =
         "nomeLimpo": "Protection - Protector Wall",
         "efeitos": [
             "No fim de cada um de seus turnos, marque até dois oponentes.",
-            "Divida os modificadores das suas rolagens de dano por 2. Se você fosse rolar 1d6 + 10, role 1d6 +5 ao invés disso. Se sua rolagem de dano já ia ser reduzida por um efeito similar, o efeito não se acumula.",
-            "Ataques Básicos não tem seus modificadores reduzidos.",
+            "Todos os seus ataques passam a ser Normalizados. Ver regras de Ataques Normalizados.",
             "Enquanto essa passiva estiver ativa, seus ataques por ativação de Marca passam a acontecer antes dos ataques do alvo.",
             "Se você atingir um ataque causado pela ativação de Marca, o inimigo não pode mais atacar o seu aliado. Ele pode decidir entre redirecionar o ataque dele para você ou cancelar o ataque. Se ele cancelar o ataque, ele ainda perde o turno dele. Se ele redirecionar o ataque para você, você pode realizar a defesa normalmente.",
             "Enquanto essa técnica estiver ativa, você pode realizar a ação \"Buscar Coragem\".",
@@ -2148,7 +2172,8 @@ window.techAddons =
         "conceitos": [
             "marcas",
             "basicos",
-            "coragem"
+            "coragem",
+            "normalizado"
         ],
         "nivel": 1
     },
@@ -2159,16 +2184,17 @@ window.techAddons =
         "nomeLimpo": "Protection - Stalwart Protector",
         "efeitos": [
             "No fim de cada um de seus turnos, marque até dois oponentes.",
-            "Divida os modificadores das suas rolagens de dano por 2. Se você fosse rolar 1d6 + 10, role 1d6 +5 ao invés disso. Se sua rolagem de dano já ia ser reduzida por um efeito similar, o efeito não se acumula.",
-            "Ataques Básicos não tem seus modificadores reduzidos.",
-            "Se esse addon for o único addon em uma técnica, o personagem pode decidir fazer essa técnica ser o estado natural dele. Nesse caso, a técnica não possui mais custo e está SEMPRE ativa. Caso contrário, aumenta o custo da técnica em 2 por rodada.",
+            "Todos os ataques realizados fora do seu turno passam a ser Normalizados. Ver regras de Ataques Normalizados.",
+            "Você passa a causar -2 dano em ataques realizados durante seu turno.",
             "Enquanto essa passiva estiver ativa, você pode realizar a ação \"Buscar Coragem\".",
-            "Ativar essa passiva consome o turno do personagem. Desativar essa passiva consome o turno do personagem."
+            "Ativar essa passiva consome o turno do personagem. Desativar essa passiva consome o turno do personagem.",
+            "Se esse addon for o único addon em uma técnica, o personagem pode decidir fazer essa técnica ser o estado natural dele. Nesse caso, a técnica não possui mais custo e está SEMPRE ativa. Caso contrário, aumenta o custo da técnica em 2 por rodada."
         ],
         "conceitos": [
             "marcas",
             "basicos",
-            "coragem"
+            "coragem",
+            "normalizado"
         ],
         "nivel": 1
     },
