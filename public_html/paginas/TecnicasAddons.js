@@ -5,7 +5,26 @@
  */
 window.techChangelog = [
     {
-        version : [3,3],
+        version : [3,5],
+        description : [
+            "Vários addons estavam de um jeito que suas versões maiores eram simplesmente multiplicações das anteriores. Isso é errado. As versões menores devem ter custos e efeitos menores, as versões maiores devem ter custos maiores. \"Ocupar um Slot\" é um custo que acaba sendo cobrado várias vezes nas pequenas, então deve haver uma diferença entre elas por esse ângulo.",
+            "Addons alterados para isso: Incontrollable Power III, Strong But Slow II e III, Unblockable II.",
+            "Caso alguma versão mais alta de algum addon esteja \"Simplesmente Melhor\" que as anteriores, ela será alterada no futuro, quando encontrada.",
+            "----------------------------",
+            "Bloqueio Agressivo I removida numa continuação do esforço anterior para remover porcentagens de dano o máximo possível. Bloqueio Agressivo II se torna Bloqueio Agressivo e recebe um buff considerável.",
+            "----------------------------",
+            "Posição Fortificada em Estilos de Luta tinha um efeito que não encaixava com estilo de luta. Talvez com passivas, mas muito mais provavelmente com Vantagens. Então foi removida. Fragilidade teve o mesmo destino.",
+            "Custos de vários addons de estilos de luta reajustados para tentar fazer eles ficarem viáveis. Addons afetados: Força Descontrolada, Excesso de Poder.",
+            "Nota para ajudar iniciantes adicionada em Adepto de Batalha e Maestria de Combate",
+            "----------------------------",
+            "Novos addons para armas: Capacidade Destrutiva",
+            "Nota adicionada em Confiável.",
+            "Melee Option passa a ocupar dois slots.",
+            "Utiliza Munição fica mais legal junto de vantagens."
+        ]
+    },
+    {
+        version : [3,4],
         description : [
             "Berserking fica mais clara em relação ao seu redutor de RD.",
             "Aparentemente isso se perdeu em algum momento, mas reintroduzindo o conceito de \"Ataque Normalizado\".",
@@ -732,7 +751,7 @@ window.techAddons =
         "nome": "Incontrollable Power III",
         "nomeLimpo": "Incontrollable Power III",
         "efeitos": [
-            "Diminui o custo da técnica em 10.",
+            "Diminui o custo da técnica em 8.",
             "Usuário recebe -3 no teste de acerto da técnica."
         ],
         "conceitos": [
@@ -1203,7 +1222,8 @@ window.techAddons =
         "efeitos": [
             "Aumenta o dano da técnica em +2.",
             "Esse addon não pode ser usado em conjunto com addons que dão bônus em acerto.",
-            "Usuário recebe -2 no teste de acerto da técnica."
+            "Usuário recebe -2 no teste de acerto da técnica.",
+            "Aumenta o custo dessa técnica em 1."
         ],
         "conceitos": [
             "unicidade"
@@ -1216,9 +1236,10 @@ window.techAddons =
         "nome": "Strong but Slow III",
         "nomeLimpo": "Strong but Slow III",
         "efeitos": [
-            "Aumenta o dano da técnica em +4.",
+            "Aumenta o dano da técnica em +3.",
             "Não pode ser utilizado em conjunto com addons que dão bônus em acerto.",
-            "Usuário recebe -3 no teste de Ataque."
+            "Usuário recebe -3 no teste de Ataque.",
+            "Aumenta o custo dessa técnica em 3."
         ],
         "conceitos": [
             "unicidade"
@@ -1276,7 +1297,7 @@ window.techAddons =
         "nome": "Unblockable II",
         "nomeLimpo": "Unblockable II",
         "efeitos": [
-            "Garante um bônus de +4 dano caso o oponente tente bloquear seu golpe.",
+            "Garante um bônus de +3 dano caso o oponente tente bloquear seu golpe.",
             "Aumenta Custo da técnica em 4."
         ],
         "conceitos": [
@@ -1375,29 +1396,14 @@ window.techAddons =
         "nivel": 1
     },
     {
-        "id": 225,
-        "tipo": "especial",
-        "nome": "Bloqueio Agressivo I",
-        "nomeLimpo": "Bloqueio Agressivo I",
-        "efeitos": [
-            "Técnica pode ser usada para consumir o turno do usuário. Se o personagem realizar um contra-ataque antes do seu próximo turno, recebe apenas metade do dano que o oponente causaria. Isso só vale para o primeiro contra-ataque realizado antes do seu próximo turno.",
-            "Quando esse efeito é utilizado, fica completamente claro para o oponente e todos os participantes da luta que o usuário está preparando um contra-ataque.",
-            "Custo da técnica em 4."
-        ],
-        "conceitos": [
-            "unicidade"
-        ],
-        "nivel": 1
-    },
-    {
         "id": 224,
         "tipo": "especial",
-        "nome": "Bloqueio Agressivo II",
-        "nomeLimpo": "Bloqueio Agressivo II",
+        "nome": "Bloqueio Agressivo",
+        "nomeLimpo": "Bloqueio Agressivo",
         "efeitos": [
             "Técnica pode ser usada para consumir o turno do usuário. Se o personagem realizar um contra-ataque antes do seu próximo turno, não recebe dano pelo ataque do oponente.  Isso só vale para o primeiro contra-ataque realizado antes do seu próximo turno.",
             "Quando esse efeito é utilizado, fica completamente claro para o oponente e todos os participantes da luta que o usuário está preparando um contra-ataque.",
-            "Custo da técnica em 8."
+            "Custo da técnica em 4."
         ],
         "conceitos": [
             "unicidade"
@@ -2324,7 +2330,7 @@ window.techAddons =
         "nomeLimpo" : "Forca Descontrolada",
         "efeitos" : [
             "+2 Dano, -1 Ataque",
-            "Aumenta o custo em 4 MP por rodada."
+            "Aumenta o custo em 2 MP por rodada."
         ],
         "conceitos" : [
             
@@ -2352,7 +2358,7 @@ window.techAddons =
         "nomeLimpo" : "Excesso de Poder",
         "efeitos" : [
             "+2 Dano ",
-            "Aumenta o custo em 6 MP por rodada."
+            "Aumenta o custo em 4 MP por rodada."
         ],
         "conceitos" : [
             
@@ -2422,7 +2428,8 @@ window.techAddons =
         "nomeLimpo" : "Adepto de Batalha",
         "efeitos" : [
             "Receba +1 em testes de Ataque e Defesa, contanto que o nível base (sem bônus) do atributo sendo rolado não seja maior do que sua Sabedoria de Combate.",
-            "Aumenta o custo em 2 MP por rodada."
+            "Aumenta o custo em 2 MP por rodada.",
+            "Nota: Esse estilo de luta é fortemente recomendado para personagens que possuam quatro atributos de combate (defesa, ataque e dois atributos de dano) sempre no mesmo nível."
         ],
         "conceitos" : [
             
@@ -2436,37 +2443,8 @@ window.techAddons =
         "nomeLimpo" : "Maestria de Combate",
         "efeitos" : [
             "Se seus dois maiores atributos de dano possuirem o mesmo nível, receba +1 em rolagens de dano que envolvam qualquer um deles. Se uma rolagem de dano envolver os dois atributos juntos, receba +2 Dano ao invés disso.",
-            "Aumenta o custo em 2 MP por rodada."
-        ],
-        "conceitos" : [
-            
-        ]
-    },
-    {
-        "id" : 5014,
-        "nivel" : 1,
-        "tipo" : "estilo",
-        "nome" : "Posição Fortificada",
-        "nomeLimpo" : "Posicao Fortificada",
-        "efeitos" : [
-            "Ao ativar esse estilo de luta, seu HP Atual e Máximo aumentam em 2. Isso não conta como uma cura.",
-            "Ao desativar esse estilo de luta, seu HP Atul e Máximo diminuem em 2. Isso não conta como um dano, mas se seu HP ficar inferior a 1, isso deverá ser tratado normalmente.",
-            "Aumenta o custo em 2 MP por rodada."
-        ],
-        "conceitos" : [
-            
-        ]
-    },
-    {
-        "id" : 5015,
-        "nivel" : 1,
-        "tipo" : "estilo",
-        "nome" : "Fragilidade",
-        "nomeLimpo" : "Fragilidade",
-        "efeitos" : [
-            "Quando esse estilo for ativado, reduza seu HP máximo e atual em 3, isso não conta como um dano, mas pode reduzir seu HP para baixo de 1 e isso deve ser tratado normalmente se acontecer.",
-            "Quando esse estilo for desativado, aumente seu HP máximo em 3, seu HP atual não é modificado.",
-            "Diminui o custo em 2 MP por rodada."
+            "Aumenta o custo em 2 MP por rodada.",
+            "Nota: Esse estilo de luta é fortemente recomendado para personagens que possuam quatro atributos de combate (defesa, ataque e dois atributos de dano) sempre no mesmo nível."
         ],
         "conceitos" : [
             
@@ -2494,6 +2472,18 @@ window.techAddons =
         "nomeLimpo" : "Capacidade Especial",
         "efeitos" : [
             "Essa arma pode utilizar Itens Consumíveis com o addon \"Munição Especial\", recebendo efeitos extras nesse momento."
+        ],
+        "conceitos": [],
+        "nivel" : 1
+    },
+    {
+        "tipo" : "arma",
+        "nome" : "Capacidade Destrutiva",
+        "nomeLimpo" : "Capacidade Especial",
+        "efeitos" : [
+            "A arma é capaz de causar uma destruição muito além do normal. É capaz.",
+            "Ataques realizados com a arma passam a rolar 1d10-2 no lugar de 1d6. Não é compatível com outros addons que alterem o dado sendo rolado.",
+            "Capacidade Destrutiva altera o \"alcance\" da arma para -1 a 8, efetivamente aumentando o dano máximo em 2 e reduzindo o dano mínimo em 2."
         ],
         "conceitos": [],
         "nivel" : 1
@@ -2551,7 +2541,8 @@ window.techAddons =
         "nome": "Confiável",
         "nomeLimpo": "Confiavel",
         "efeitos": [
-            "A arma é menos potente que o normal, mas garante maior firmeza e precisão em seus golpes, fazendo com que seu poder destrutivo não seja tão oscilante. A arma com esse addon passa a rolar 1d4 para danos ao invés de 1d6. Adicionalmente, esse addon concede um bônus de +2 de dano em danos que a arma entre como fator de uso (esse efeito não pode ser comprado múltiplas vezes). Esse addon só funciona quando todas as armas usadas pelo personagem (equipadas no momento) possuem \"Confiável\", caso contrário não aumenta o dano nem reduz o dado."
+            "A arma é menos potente que o normal, mas garante maior firmeza e precisão em seus golpes, fazendo com que seu poder destrutivo não seja tão oscilante. A arma com esse addon passa a rolar 1d4 para danos ao invés de 1d6. Adicionalmente, esse addon concede um bônus de +2 de dano em danos que a arma entre como fator de uso (esse efeito não pode ser comprado múltiplas vezes). Esse addon só funciona quando todas as armas usadas pelo personagem (equipadas no momento) possuem \"Confiável\", caso contrário não aumenta o dano nem reduz o dado.",
+            "Esse addon efetivamente altera o \"alcance\" do dano da arma para 3 a 6, sendo equivalente a aumentar o dano mínimo em 2."
         ],
         "conceitos": [],
         "nivel": 1
@@ -2670,7 +2661,8 @@ window.techAddons =
         "nomeLimpo": "Melee Option",
         "efeitos": [
             "A arma funciona tanto em longo alcance quanto em curto alcance. Se você fizer um ataque corpo a corpo (melee), você causa +2 de dano quando um oponente tentar te contra-atacar com ataques a distância (ranged). Se você fizer um ataque ranged, você recebe +1 em Defesa (DEF) quando o oponente tentar te contra-atacar com ataques corpo a corpo (melee). Esse addon aumenta o nível do item, e portanto, consome slot. É necessário levar em consideração a descrição do ataque para decidir se ele é ranged ou não.",
-            "Ver os addons Melee e Ranged."
+            "Ver os addons Melee e Ranged.",
+            "Esse addon ocupa dois slots de addon."
         ],
         "conceitos": [],
         "nivel": 1
@@ -2704,7 +2696,8 @@ window.techAddons =
         "nome": "Utiliza Munição",
         "nomeLimpo": "Utiliza Munição",
         "efeitos": [
-            "A arma utiliza munição e passa a seguir as regras de munição que estejam funcionando para a sua campanha. Uma arma que utiliza munição tem seu custo em lojas ou de criação reduzido em 50%. Esse addon não ocupa slots nem aumenta o nível da arma."
+            "A arma utiliza munição e passa a seguir as regras de munição que estejam funcionando para a sua campanha. Uma arma que utiliza munição tem seu custo em lojas ou de criação reduzido em 50%. Esse addon não ocupa slots nem aumenta o nível da arma.",
+            "Para armas criadas através de vantagens, colocar esse addon reduz o custo da vantagem em 1 ponto. Esse addon não pode ser adicionado caso a arma já fosse utilizar munição através de Ranged."
         ],
         "conceitos": [],
         "nivel": 1
