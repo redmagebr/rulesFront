@@ -5,6 +5,15 @@
  */
 window.techChangelog = [
     {
+        version : [3,6],
+        description : [
+            "Protection - Protector Wall não permite mais contra-ataques.",
+            "Summon Ally e Sword of the Holy Titans passam a compartilhar a família \"Summon\".",
+            "Summon - Ally tem seu custo mínimo aumentado levemente e seu custo máximo reduzido significativamente. Summon Ally passa a restringir a quantidade de aliados que se pode ter (entre todos os Summon - Ally).",
+            "Summon - Sword of the Holy Titans passa a permitir invocação instantânea e também invocação durante a Fase de Preparação."
+        ]
+    },
+    {
         version : [3,5],
         description : [
             "Vários addons estavam de um jeito que suas versões maiores eram simplesmente multiplicações das anteriores. Isso é errado. As versões menores devem ter custos e efeitos menores, as versões maiores devem ter custos maiores. \"Ocupar um Slot\" é um custo que acaba sendo cobrado várias vezes nas pequenas, então deve haver uma diferença entre elas por esse ângulo.",
@@ -1851,15 +1860,16 @@ window.techAddons =
     {
         "id": 201,
         "tipo": "especial",
-        "nome": "Summon Ally",
-        "nomeLimpo": "Summon Ally",
+        "nome": "Summon - Ally",
+        "nomeLimpo": "Summon - Ally",
         "efeitos": [
-            "Invoca um aliado que lutará ao seu lado. O aliado é representado por uma Arma de Duas Mãos que sempre possui o addon \"Autômato sem alma\".",
-            "O aliado possui dois slots de addons.",
-            " Autômato sem alma não ocupa slots.",
-            "Summon Ally pode ser ativada uma vez durante a fase de preparação. Caso ativada durante o combate, Summon Ally consome o turno do personagem. O consumo do turno pode ser ignorado mediante um pagamento extra de 9 MP durante a ativação.",
-            "Custo de invocação em 1 MP. Você conjura um aliado que lutará junto de você até o fim da batalha ou até receber um ataque. O aliado pode ser utilizado em técnicas que usem um Atributo decidido na criação da técnica como dano puro. Enquanto ele estiver disponível, você pode gastar o seu turno para ordenar um ataque com dano 1d6 + O Atributo Escolhido.  Você pode considerar a criatura como um aliado para alguns efeitos relevantes (como o efeito de redirecionar um ataque a um aliado).",
-            "O nível da criatura invocada é igual ao seu, e ela é um equipamento que obrigatóriamente tem Autômato sem Alma (arma de duas mãos). A \"arma\" não pode receber técnicas por addons."
+            "Invoca um aliado que lutará ao seu lado. O aliado é representado por uma Arma de Duas Mãos de nível 2 que sempre possui o addon \"Autômato sem alma\".",
+            "O aliado possui dois slots de addons, mas Autômato sem Alma não ocupa slots.",
+            "Ativar essa técnica consome 2 MP e o turno do personagem. É possível invocar rapidamente, sem consumir o turno do personagem, mas isso aumenta o custo de invocação para 6 MP.",
+            "Pagando 6 MP, é possível ativar essa técnica durante a fase de preparação.",
+            "A \"Arma\" criada por essa técnica não pode possuir addons de armas que criem outras técnicas dentro dela.",
+            "Um personagem só pode ter um único aliado invocado por \"Summon - Ally\" de cada vez. O personagem pode abandonar aliados invocados anteriormente como uma ação grátis durante seu turno.",
+            "Addons \"Summon\" não são afetados pelas regras de unicidade e pode-se ter vários deles em uma mesma técnica e são todos tratados separadamente."
         ],
         "conceitos": [
 
@@ -1869,16 +1879,17 @@ window.techAddons =
     {
         "id": 202,
         "tipo": "especial",
-        "nome": "Sword of the Holy Titans",
-        "nomeLimpo": "Sword of the Holy Titans",
+        "nome": "Summon - Sword of the Holy Titans",
+        "nomeLimpo": "Summon - Sword of the Holy Titans",
         "efeitos": [
             "Você conjura uma peça de equipamento de nível 2, com dois slots de addon.",
-            "A técnica com esse addon só pode conjurar um único tipo de equipamento e ele deve ser decidido na criação da técnica.",
-            "Colocar cópias desse addon permite conjurar outros equipamentos.",
-            "Custo da técnica em 1 por conjuração.",
-            "Este addon gasta o turno do usuário ao ser usado.",
             "O equipamento conjurado deve ser uma Arma de Duas Mãos, Arma de uma Mão, Arma Defensiva ou Armadura. Ele não pode ser um item consumível nem um acessório.",
-            "Além disso, itens criados por essa técnica nunca podem possuir uma técnica dentro deles."
+            "O item a ser invocado deve ser definido durante a criação dessa técnica.",
+            "Ativar esse efeito para invocar o equipamento consome 1 MP e o turno do personagem. É possível invocar rapidamente, sem consumir o turno do personagem, gastando 4 MP ao invés de 1 MP.",
+            "Consumindo 4 MP, é possível ativar essa técnica durante a fase de preparação.",
+            "O item criado por essa técnica não pode possuir addons que criem outras técnicas dentro dele.",
+            "A qualquer momento, só deve existir uma cópia do item criado por essa técnica. O personagem pode fazer um equipamento criado por essa técnica desaparecer como uma ação grátis durante seu turno.",
+            "Addons \"Summon\" não são afetados pelas regras de unicidade e pode-se ter vários deles em uma mesma técnica e são todos tratados separadamente."
         ],
         "conceitos": [
 
@@ -2170,7 +2181,7 @@ window.techAddons =
             "No fim de cada um de seus turnos, marque até dois oponentes.",
             "Todos os seus ataques passam a ser Normalizados. Ver regras de Ataques Normalizados.",
             "Enquanto essa passiva estiver ativa, seus ataques por ativação de Marca passam a acontecer antes dos ataques do alvo.",
-            "Se você atingir um ataque causado pela ativação de Marca, o inimigo não pode mais atacar o seu aliado. Ele pode decidir entre redirecionar o ataque dele para você ou cancelar o ataque. Se ele cancelar o ataque, ele ainda perde o turno dele. Se ele redirecionar o ataque para você, você pode realizar a defesa normalmente.",
+            "Se você atingir um ataque causado pela ativação de Marca, o inimigo não pode mais atacar o seu aliado. Ele pode decidir entre redirecionar o ataque dele para você ou cancelar o ataque. Se ele cancelar o ataque, ele ainda perde o turno dele. Se ele redirecionar o ataque para você, você pode realizar a defesa normalmente, mas sem poder contra-atacar.",
             "Enquanto essa técnica estiver ativa, você pode realizar a ação \"Buscar Coragem\".",
             "Ativar essa técnica consome o turno do personagem. Desativar essa técnica consome o turno do personagem.",
             "Aumente custo total da técnica em 2 (não acumulativo, mas somatório entre outros addons) para cada rodada que a habilidade com este addon ficar ativa."
