@@ -5,6 +5,19 @@
  */
 window.techChangelog = [
     {
+        version : [3,7],
+        description : [
+            "Maestria de Combate é renomeada para Maestria de Batalha e é alterada de forma profunda.",
+            "Novo addon para estilos de luta: Poderes Complementares.",
+            "Special Attack Ranged III adicionada.",
+            "Master of One alterada de uma forma que deve ficar mais fácil de entender. Alguns de seus buracos foram tapados.",
+            "Immovable Object passa a implicar na normalização de dano.",
+            "--------------------------------",
+            "IMPORTANTE: Personagens passam a só poder ativar Marcas uma vez por rodada. Addons de Protection foram alterados para levar isso em consideração.",
+            "Novos addons: Mocking Strike, Gaze of the Guardian, Esforço Agressivo"
+        ]
+    },
+    {
         version : [3,6],
         description : [
             "Protection - Protector Wall não permite mais contra-ataques.",
@@ -336,6 +349,7 @@ window.techConceitos = [
             "Alguns addons possuem efeitos que criam Marcas no alvo. Uma marca é o equivalente a você ficar de guarda e pronto para atrapalhar esse alvo.",
             "Se um inimigo marcado por você tentar realizar um ataque que não inclui você como alvo, você pode realizar um Ataque Normalizado contra ele, mesmo fora do seu turno. Esse efeito não se ativa se o ataque for realizado dentro de um contra-ataque, apenas para ataques realizados no turno do alvo marcado. Quando você realizar o seu ataque, o inimigo pode decidir se ele vai receber seu dano sem se defender ou se tentará esquivar - ele não tem tempo suficiente para realizar outras ações de defesa.",
             "Um alvo pode estar marcado por vários personagens, mas apenas um pode ativar sua marca quando ele faz um ataque.",
+            "IMPORTANTE: Um personagem só pode ativar uma de suas marcas uma vez por rodada.",
             "Nota: Ver regras de Ataques Normalizados"
         ]
     },
@@ -501,6 +515,21 @@ window.techAddons =
             "Esse ataque passa a ser em área e acertará todos os participantes da luta com 100% dano. Recomenda-se deixar aliados saírem do combate antes de usá-lo.",
             "Após o final do ataque, independente de ele ter acertado ou não, o personagem que o utilizou morre. Essa morte irá acontecer independente de quais vantagens ou efeitos o personagem tenha. A morte é inevitável.",
             "Esse addon é ignorado em eventos onde a morte do personagem não signifique nada para a narrativa, como eventos PVP."
+        ],
+        "conceitos": [
+            'unicidade'
+        ],
+        "nivel": 1
+    },
+    {
+        "tipo": "ataque",
+        "nome": "Mocking Strike",
+        "nomeLimpo": "Mocking Strike",
+        "efeitos": [
+            "Caso essa técnica cause algum dano e o alvo dela esteja marcado por você, até o início do seu próximo turno, você é o único alvo válido para ataques realizados por ele.",
+            "Caso um personagem esteja afetado por mais de um mocking strike ou efeitos similares ao mesmo tempo, ele pode realizar ataques contra qualquer um dos personagens que aplicaram esses efeitos nele.",
+            "Mocking Strike é sempre processada no final, então é possível aplicar uma marca e aplicar mocking strike com um único ataque.",
+            "Aumente o custo da técnica em 2 MP."
         ],
         "conceitos": [
             'unicidade'
@@ -1159,6 +1188,24 @@ window.techAddons =
         "nivel": 1
     },
     {
+        "id": 339,
+        "tipo": "ataque",
+        "nome": "Special Attack Ranged III",
+        "nomeLimpo": "Special Attack Ranged III",
+        "efeitos": [
+            "O dano base dessa técnica se reduz ao dado e bônus base da arma, sem adicionar nenhum atributo de dano.",
+            "Aumente o dano dessa técnica em duas vezes a sua Sabedoria de Combate.",
+            "Essa técnica passa a ter como tipo todos os seus atributos que estejam acima de 0. Você deve fazer uma descrição que explique isso.",
+            "Uma técnica só pode ter um Special Attack e você não pode utilizar Special Attack III caso você esteja usando menos do que 3 atributos de dano. Caso a diferença entre seus atributos acima de 0 for maior do que 2, você não pode utilizar esse addon. [3, 2, 1] pode, [4, 2, 1] não.",
+            "Sua técnica se torna Ranged e recebe +1 Bônus de Alcance em sua prioridade.",
+            "Aumente o custo da técnica em 3."
+        ],
+        "conceitos": [
+            "unicidade"
+        ],
+        "nivel": 1
+    },
+    {
         "id": 291,
         "tipo": "ataque",
         "nome": "Special Attack Ranged I",
@@ -1333,6 +1380,30 @@ window.techAddons =
     /*
      * Técnicas Especiais
      */
+    {
+        tipo : 'especial',
+        nome : 'Gaze of the Guardian',
+        nomeLimpo : 'Gaze of the Guardian',
+        efeitos :[
+            "Escolha um inimigo marcado por você. Até o seu próximo turno, você se torna o único alvo válido para ataques realizados pelo inimigo escolhido.",
+            "Caso um personagem esteja afetado por vários Gaze of the Guardian ou efeitos similares, ele pode realizar ataques contra qualquer um dos personagens que aplicaram esses efeitos nele.",
+            "Ativar esse efeito consome seu turno. O custo de ativação desse efeito é 2 MP."
+        ],
+        conceitos : [],
+        nivel : 2
+    },
+    {
+        tipo : 'especial',
+        nome : 'Esforço Agressivo',
+        nomeLimpo : 'Esforco Agressivo',
+        efeitos :[
+            "Esse efeito pode ser ativado quando usando algum efeito de Formas Especiais que consome o turno do próprio personagem.",
+            "O turno do personagem não é consumido pelo efeito em questão.",
+            "O custo de ativação desse efeito é 10 MP, cobrados além do custo de ativação do efeito que altera."
+        ],
+        conceitos : [],
+        nivel : 2
+    },
     {
         tipo : 'especial',
         nome : 'Avatar of Destruction I',
@@ -2057,10 +2128,11 @@ window.techAddons =
         "nomeLimpo": "Immovable Object",
         "efeitos": [
             "Aumente cada uma de suas RDs específicas num valor igual ao menor entre os valores de RESISTÊNCIA e O ATRIBUTO RELEVANTE do personagem.  Isso significa que um guerreiro com Arma 3 e Resistência 1 teria sua RD em Arma aumentada em 1 (1 < 3). Caso o mesmo guerreiro tenha uma Liderança de 0, sua RD de Liderança seria aumentada por 0 (0 < 1)",
+            "IMPORTANTE: Todos os seus ataques passam a ser normalizados. Ver regras de Ataques Normalizados.",
             "Aumente custo total da técnica em 2 (não acumulativo, mas somatório entre outros addons) para cada rodada que a habilidade com este addon ficar ativa."
         ],
         "conceitos": [
-
+            "normalizado"
         ],
         "nivel": 2
     },
@@ -2122,14 +2194,10 @@ window.techAddons =
         "nome": "Master of One",
         "nomeLimpo": "Master of One",
         "efeitos": [
-            "Escolha seu maior atributo de dano durante a criação da técnica com esse addon. Sempre que você fosse utilizar ele para causar dano, substitua ele pela sua Sabedoria de Combate.",
-            "Se o atributo escolhido deixar de ser o maior atributo ele se torna inválido e, portanto, a técnica com Master of one não pode ser ativada.",
-            "Sua sabedoria de combate passa a ser tratada como um outro atributo de dano e pode ser utilizada tanto em ataques comuns quanto em técnicas. Técnicas que utilizem Sabedoria de Combate no seu dano não podem ser utilizadas sem Master of One estar ativa.",
-            "Para quaisquer efeitos que exijam dois atributos de dano com o mesmo nível base, sua sabedoria de combate e seu maior atributo de dano contam como tendo o mesmo nível base.",
-            "Quando sabedoria de combate é envolvida em um ataque, ela é tratada como o seu maior atributo de dano comum. Um personagem que utilizou master of one em Arma iria causar ataques do tipo Arma quando atacando com sabedoria de combate.",
-            "Aumente custo total da técnica em 2 (não acumulativo, mas somatório entre outros addons) para cada rodada que a habilidade com este addon ficar ativa.",
-            "Caso esse addon seja o único addon na técnica, você pode fazer ela estar sempre ativa e não gastar MP.",
-            "Explicação: Essa técnica resulta em seu um atributo passar a funcionar exatamente como se fosse 2. Isso significa que você perde as vantagens conferidas por se ter apenas um atributo (ataques básicos muito fortes) mas recebe as vantagens de dois atributos (ataques especiais muito fortes). Esse addon possui utilidade questionável para personagens com mais de um atributo de dano."
+            "Enquanto essa técnica estiver ativa, sempre que você for rolar danos, substitua o valor de qualquer atributo de dano que você esteja adicionando a rolagem pela sua sabedoria de combate.",
+            "Seus ataques passam a ter como tipo todos os seus atributos de dano que estejam acima de 0.",
+            "Caso te falte metade ou menos da exp para conseguir um Level Up na sua Sabedoria de Combate (como em 12.5 de 25 Exp), você pode tratá-la como uma fração até o momento da rolagem. Qualquer número após a vírgula deve ser ignorado na hora de rolar o seu dano, mas se você possuir uma sabedoria de combate de 4.5, você poderia somá-la em 9 com Special Attack II, ao invés dos 8 que seriam obtidos por se ignorar a parte incompleta. Se nenhum número quebrado for adicionado à rolagem, essa fração não o altera de forma alguma: 1d6 + 4.5 se torna 1d6 + 4, simplesmente.",
+            "Aumente o custo por rodada dessa passiva em 1 MP. Se esse for o único addon em uma passiva, é possível fazê-la estar ativa sempre e não poder ser desativada, nesse caso o custo cai para 0 MP por rodada."
         ],
         "conceitos": [
 
@@ -2156,7 +2224,7 @@ window.techAddons =
         "nome": "Protection - Defend the Weak",
         "nomeLimpo": "Protection - Defend the Weak",
         "efeitos": [
-            "No fim de cada um de seus turnos, marque até um oponente.",
+            "No fim de cada um de seus turnos, marque um oponente.",
             "Todos os seus ataques passam a ser Normalizados. Ver regras de Ataques Normalizados.",
             "Enquanto essa passiva estiver ativa, você não pode ativar suas Marcas para realizar ataques básicos. Ao invés disso, você pode redirecionar ataques de inimigos marcados por você para você mesmo. Quando você faz isso, você só pode Bloquear o ataque, não esquivar. Isso é equivalente ao seu personagem entrar no meio do caminho e receber o ataque.",
             "Enquanto essa passiva estiver ativa, você pode realizar a ação \"Buscar Coragem\".",
@@ -2178,7 +2246,7 @@ window.techAddons =
         "nome": "Protection - Protector Wall",
         "nomeLimpo": "Protection - Protector Wall",
         "efeitos": [
-            "No fim de cada um de seus turnos, marque até dois oponentes.",
+            "No fim de cada um de seus turnos, marque um oponente.",
             "Todos os seus ataques passam a ser Normalizados. Ver regras de Ataques Normalizados.",
             "Enquanto essa passiva estiver ativa, seus ataques por ativação de Marca passam a acontecer antes dos ataques do alvo.",
             "Se você atingir um ataque causado pela ativação de Marca, o inimigo não pode mais atacar o seu aliado. Ele pode decidir entre redirecionar o ataque dele para você ou cancelar o ataque. Se ele cancelar o ataque, ele ainda perde o turno dele. Se ele redirecionar o ataque para você, você pode realizar a defesa normalmente, mas sem poder contra-atacar.",
@@ -2200,9 +2268,9 @@ window.techAddons =
         "nome": "Protection - Stalwart Protector",
         "nomeLimpo": "Protection - Stalwart Protector",
         "efeitos": [
-            "No fim de cada um de seus turnos, marque até dois oponentes.",
-            "Todos os ataques realizados fora do seu turno passam a ser Normalizados. Ver regras de Ataques Normalizados.",
-            "Você passa a causar -2 dano em ataques realizados durante seu turno.",
+            "No fim de cada um de seus turnos, marque um oponente.",
+            "Todos os seus ataques passam a ser normalizados. Ver regras de Ataques Normalizados.",
+            "Você passa a poder ativar suas marcas até duas vezes por rodada, ao invés de uma.",
             "Enquanto essa passiva estiver ativa, você pode realizar a ação \"Buscar Coragem\".",
             "Ativar essa passiva consome o turno do personagem. Desativar essa passiva consome o turno do personagem.",
             "Se esse addon for o único addon em uma técnica, o personagem pode decidir fazer essa técnica ser o estado natural dele. Nesse caso, a técnica não possui mais custo e está SEMPRE ativa. Caso contrário, aumenta o custo da técnica em 2 por rodada."
@@ -2450,12 +2518,25 @@ window.techAddons =
         "id" : 5013,
         "nivel" : 1,
         "tipo" : "estilo",
-        "nome" : "Maestria de Combate",
-        "nomeLimpo" : "Maestria de Combate",
+        "nome" : "Maestria de Batalha",
+        "nomeLimpo" : "Maestria de Batalha",
         "efeitos" : [
-            "Se seus dois maiores atributos de dano possuirem o mesmo nível, receba +1 em rolagens de dano que envolvam qualquer um deles. Se uma rolagem de dano envolver os dois atributos juntos, receba +2 Dano ao invés disso.",
-            "Aumenta o custo em 2 MP por rodada.",
+            "Quando rolando o dano de um ataque  com Special Attack II ou Special Attack Ranged II, se os dois atributos sendo somados possuirem o mesmo valor você recebe +2 dano.",
+            "Aumenta o custo em 1 MP por rodada.",
             "Nota: Esse estilo de luta é fortemente recomendado para personagens que possuam quatro atributos de combate (defesa, ataque e dois atributos de dano) sempre no mesmo nível."
+        ],
+        "conceitos" : [
+            
+        ]
+    },
+    {
+        "nivel" : 1,
+        "tipo" : "estilo",
+        "nome" : "Poderes Complementares",
+        "nomeLimpo" : "Poderes Complementares",
+        "efeitos" : [
+            "Quando rolando o dano de uma técnica com o addon Special Attack II ou III (ou suas versões Ranged), você recebe +2 dano.",
+            "Aumenta o custo por rodada em 3 MP"
         ],
         "conceitos" : [
             
