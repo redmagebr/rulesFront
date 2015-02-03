@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <input id="nome" type="text" placeholder="nome" style="width: 500px" /> <br />
+        <input id="nomeLimpo" type="text" placeholder="nome em letras inglesas" style="width: 500px" /> <br />
+        <input id="nivel" type="text" placeholder="nivel" style="width: 500px" /> <br />
+        <select id="tipoTech"></select><br />
+        <textarea id="descricao" placeholder="descricao"  style="width: 500px; height: 200px"></textarea>
+        <br />
+        <input id="submit" type="submit" />
+        <br /><br /><br />
+        <textarea id="result" placeholder="JSON comes here" style="width: 500px; height: 300px"></textarea>
+        <script type="text/javascript" src="http://redpg.com.br/js/jquery-2.1.1.min.js"></script>
+        <script type="text/javascript" src="http://redpg.com.br/js/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="http://rules.redpg.com.br/paginas/TecnicasAddons.js"></script>
+        <script type="text/javascript">
+            window.addons = [];
+            $('#submit').on('click', function () {
+                var efeitos = $('#descricao').val().split('\n');
+                var addon = {
+                    tipo : $('#tipoTech').val().trim(),
+                    nome : $('#nome').val().trim(),
+                    nomeLimpo : $('#nomeLimpo').val().trim(),
+                    efeitos: [],
+                    conceitos : [],
+                    nivel : parseInt($('#nivel').val().trim())
+                };
+                
+                for (var i in efeitos) {
+                    efeitos[i] = efeitos[i].trim();
+                    if (efeitos[i] !== '') {
+                        addon.efeitos.push(efeitos[i]);
+                    }
+                }
+                
+                window.addons.push(addon);
+                window.fixJSON();
+                $('#nome').val('').focus();
+                $('#nomeLimpo').val('');
+                $('#descricao').val('');
+                $('#nivel').val('');
+            });
+            
+            var $select = $('#tipoTech');
+            var $option;
+            for (var i = 0; i < window.techTipos.length; i++) {
+                $option = $('<option />').val(window.techTipos[i].id).text(window.techTipos[i].nome);
+                $select.append($option);
+            }
+            
+            window.fixJSON = function () {
+                $('#result').val(JSON.stringify(window.addons, undefined, 4));
+            };
+            
+            window.fixJSON();
+        </script>
+    </body>
+</html>

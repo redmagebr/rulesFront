@@ -13,15 +13,19 @@ and open the template in the editor.
     <body>
         <input id="nome" type="text" placeholder="nome" style="width: 500px" /> <br />
         <input id="pontos" type="text" placeholder="pontos" style="width: 500px" /> <br />
+        <input id="requisitos" type="text" placeholder="requisitos" style="width: 500px" /> <br />
         <textarea id="descricao" placeholder="descricao"  style="width: 500px; height: 400px"></textarea>
         <br />
         <input id="submit" type="submit" />
         <br /><br /><br />
         <textarea id="result" placeholder="JSON comes here" style="width: 500px; height: 400px"></textarea>
+        <br /><br /><br />
+        <textarea id="result2" placeholder="JSON comes here" style="width: 500px; height: 400px"></textarea>
         <script type="text/javascript" src="http://redpg.com.br/js/jquery-2.1.1.min.js"></script>
         <script type="text/javascript" src="http://redpg.com.br/js/jquery-ui.min.js"></script>
         <script type="text/javascript">
             window.vantagens = [];
+            window.desvantagens = [];
             $('#submit').on('click', function () {
                 var descricao = [];
                 var other = $('#descricao').val().trim().split('\n');
@@ -36,7 +40,16 @@ and open the template in the editor.
                     pontos : $('#pontos').val(),
                     descricao : descricao
                 };
-                window.vantagens.push(vantagem);
+                var req = $('#requisitos').val().trim();
+                if (req !== '') {
+                    vantagem.requisitos = req;
+                }
+                if (vantagem.pontos.charAt(0) === '-') {
+                    vantagem.pontos = vantagem.pontos.substring(1, vantagem.pontos.length);
+                    window.desvantagens.push(vantagem);
+                } else {
+                    window.vantagens.push(vantagem);
+                }
                 window.fixJSON();
                 $('#descricao').val('');
                 $('#nome').val('').focus();
@@ -45,6 +58,7 @@ and open the template in the editor.
             
             window.fixJSON = function () {
                 $('#result').val(JSON.stringify(window.vantagens, undefined, 4));
+                $('#result2').val(JSON.stringify(window.desvantagens, undefined, 4));
             };
             
             window.fixJSON();
