@@ -5,7 +5,6 @@
  */
 window.techChangelog = [
     {
-<<<<<<< HEAD
         version : [4,0],
         description : [
             "ATENÇÃO: Todas as mudanças aqui feitas estarão passando por um intenso período de testes e observação. Como sempre, os addons novos e antigos que foram alterados poderão ser revertidos, excluídos ou alterados conforme o balanceamento pedir. É extremamente importante que o feedback dos addons novos seja dado bem como as alterações dos antigos. Em breve contaremos com um novo funcionamento nessa página que vai favorecer dar feedback e testá-los, aguardem.",
@@ -69,8 +68,6 @@ window.techChangelog = [
         ]
     },
     {
-=======
->>>>>>> origin/master
         version : [3,7],
         description : [
             "Maestria de Combate é renomeada para Maestria de Batalha e é alterada de forma profunda.",
@@ -244,14 +241,9 @@ window.techTipos = [
         "nome" : "Armas Defensivas",
         "descricao" : [
             "Armas Defensivas são itens de defesa e possuem um número de slots igual ao nível delas.",
-<<<<<<< HEAD
             "Estar equipado com uma Arma Defensiva garante um bônus de +1 RD Geral. Armas Defensivas também dão um bônus de +1 Bônus de Item RD Específica para algum atributo de dano, especificado na sua criação.",
             "Armas defensivas não equipadas possuem um peso no inventário e tem um peso inicial de 2.",
 			"Um personagem só pode equipar uma arma defensiva de mesmo nível que ele."
-=======
-            "Estar equipado com uma Arma Defensiva garante um bônus de +1 RD Geral. Armas Defensivas também dão um bônus de +1 Bônus de Equipamento RD para algum atributo de dano, especificado na sua criação.",
-            "Armas defensivas não equipadas possuem um peso no inventário e tem um peso inicial de 2."
->>>>>>> origin/master
         ],
         "conceitos" : [
             
@@ -325,7 +317,6 @@ window.techConceitos = [
             "Exceção: Um ataque só é normalizado uma única vez. Normalizações seguintes não surtem efeito."
         ]
     },
-<<<<<<< HEAD
 	{
         id : 'superioridade',
         nome : 'Superioridade',
@@ -352,8 +343,6 @@ window.techConceitos = [
 			"Se o personagem tiver algo que permita ele rolar o dado novamente e ele tiver inferioridade nessa situação, ele deve apenas rolar um dos dados em questão e não os dois.",
         ]
     },
-=======
->>>>>>> origin/master
     {
         "id": "slots",
         "nome": "Addons, Slots e Custo",
@@ -458,7 +447,6 @@ window.techConceitos = [
             "Nota: Ver regras de Ataques Normalizados"
         ]
     },
-<<<<<<< HEAD
 	 {
         "id": "selo",
         "nome": "Selos",
@@ -497,8 +485,6 @@ window.techConceitos = [
             "IMPORTANTE: Um personagem só pode ativar um de seus símbolos uma vez por rodada.",
         ]
     },
-=======
->>>>>>> origin/master
     {
         "id": "nomes",
         "nome": "Nomenclatura de Addons",
@@ -665,11 +651,7 @@ window.techAddons =
         "conceitos": [
             'unicidade'
         ],
-<<<<<<< HEAD
         "nivel": 3
-=======
-        "nivel": 1
->>>>>>> origin/master
     },
     {
         "tipo": "ataque",
@@ -970,7 +952,6 @@ window.techAddons =
             "Ataques com essa técnica também recebem -3 ou -6 em testes de acerto, de forma respectiva à porcentagem de penetração escolhida.",
             "Esse addon não pode ser usado lado-a-lado com addons que fornecem bônus em testes de acerto ou testes contra defesa, nem junto de addons que impeçam o oponente de se esquivar. Esse addon ainda pode ser usado caso o personagem esteja recebendo o bônus de outra fonte (como uma passiva ou um buff com duração).",
             "De acordo com a penetração escolhida para essa técnica, aumente o custo dela em 5 ou 10 MP."
-<<<<<<< HEAD
         ],
         "conceitos": [
 
@@ -985,8 +966,6 @@ window.techAddons =
             "O ataque ganha +50% de penetração. A técnica com esse addon tem o seu dano causado reduzido pela metade, acumulando multiplicativamente com outras reduções de dano. ",
             "Esse addon não pode ser usado lado-a-lado com addons que fornecem bônus em testes de acerto ou testes contra defesa, nem junto de addons que impeçam o oponente de se esquivar. Esse addon ainda pode ser usado caso o personagem esteja recebendo o bônus de outra fonte (como uma passiva ou um buff com duração).",
             "Aumenta o custo da técnica em 8."
-=======
->>>>>>> origin/master
         ],
         "conceitos": [
 
@@ -1101,11 +1080,7 @@ window.techAddons =
         "nome": "Incontrollable Power III",
         "nomeLimpo": "Incontrollable Power III",
         "efeitos": [
-<<<<<<< HEAD
             "Diminui o custo da técnica em 5.",
-=======
-            "Diminui o custo da técnica em 8.",
->>>>>>> origin/master
             "Usuário recebe -3 no teste de acerto da técnica."
         ],
         "conceitos": [
@@ -1166,11 +1141,7 @@ window.techAddons =
         "efeitos": [
             "Aumenta o custo da técnica em 4.",
             "Essa técnica não pode receber outros addons que aumentem ou diminuam seu dano.",
-<<<<<<< HEAD
             "Para decidir o dano final dessa técnica, escolha um aliado: o aliado realiza um teste de ataque contra esquiva no mesmo alvo que você estiver atacando (você também joga o teste de ataque). Se o ataque básico dele acertar, ele rola o dano dele e adiciona esse dano ao seu dano. Caso contrário, essa técnica terá como dano apenas o seu dano básico (dado de dano + bônus de arma + um atributo).",
-=======
-            "Para decidir o dano final dessa técnica, escolha um aliado: o aliado realiza um teste de ataque contra esquiva no mesmo alvo que você estiver atacando. Se o ataque básico dele acertar, ele rola o dano dele e adiciona esse dano ao seu dano. Caso contrário, essa técnica terá como dano apenas o seu dano básico (dado de dano + bônus de arma + um atributo).",
->>>>>>> origin/master
             "Para qualquer efeito acontecendo nessa técnica, VOCÊ é o único usuário. Então efeitos como Mark of the Guardian podem ser utilizados por você e addons como Inspire terão todos os seus aliados como alvos válidos.",
             "Redutores ou Bônus de dano em porcentagem para o dano do aliado são ignorados durante esse seu ataque, mas qualquer Bônus ou Redutor adicionado no SEU ataque é considerado para o ataque final.",
             "O dano final desse ataque é a soma do seu dano com o dano do seu aliado e possui como tipos quaisquer atributos de dano que tenham sido usados por você e ele.",
@@ -1291,15 +1262,9 @@ window.techAddons =
         "nome": "Nullify Magic",
         "nomeLimpo": "Nullify Magic",
         "efeitos": [
-<<<<<<< HEAD
             "Caso esse ataque cause 1 ponto de dano ou mais, reduza o MP do alvo em 4. Esse addon acumula consigo mesmo.",
             "Como um custo extra para utilizar essa técnica, pague 2 MP para cada alvo que o ataque possua. Esse custo extra não se ativa para alvos únicos. Isso conta como um custo de ativação, mas não pode ser reduzido de nenhuma maneira.",
             "O custo extra desse addon não é pago quando esse ataque é usado como contra-ataque.",
-=======
-            "Caso esse ataque cause 1 ponto de dano ou mais, reduza o MP do alvo em 2. Esse addon acumula consigo mesmo.",
-            "Como um custo extra para utilizar essa técnica, pague 3 MP para cada alvo que o ataque possua. Isso conta como um custo de ativação, mas não pode ser reduzido de nenhuma maneira.",
-            "O custo extra desse addon não é pago quando esse ataque é usado como contra-ataque e os efeitos desse addon são ignorados quando o ataque é feito como contra-ataque.",
->>>>>>> origin/master
             "Não aumenta o custo da técnica diretamente."
         ],
         "conceitos": [
@@ -1555,7 +1520,6 @@ window.techAddons =
         ],
         "nivel": 3
     },
-<<<<<<< HEAD
 	{
         "id": 232,
         "tipo": "ataque",
@@ -1570,8 +1534,6 @@ window.techAddons =
         ],
         "nivel": 1
     },
-=======
->>>>>>> origin/master
     {
         "id": 339,
         "tipo": "ataque",
@@ -1583,20 +1545,12 @@ window.techAddons =
             "Essa técnica passa a ter como tipo todos os seus atributos que estejam acima de 0. Você deve fazer uma descrição que explique isso.",
             "Uma técnica só pode ter um Special Attack e você não pode utilizar Special Attack III caso você esteja usando menos do que 3 atributos de dano. Caso a diferença entre seus atributos acima de 0 for maior do que 2, você não pode utilizar esse addon. [3, 2, 1] pode, [4, 2, 1] não.",
             "Sua técnica se torna Ranged e recebe +1 Bônus de Alcance em sua prioridade.",
-<<<<<<< HEAD
             "Aumente o custo da técnica em 4."
-=======
-            "Aumente o custo da técnica em 3."
->>>>>>> origin/master
         ],
         "conceitos": [
             "unicidade"
         ],
-<<<<<<< HEAD
         "nivel": 3
-=======
-        "nivel": 1
->>>>>>> origin/master
     },
     {
         "id": 291,
@@ -1668,11 +1622,7 @@ window.techAddons =
             "Aumenta o dano da técnica em +2.",
             "Esse addon não pode ser usado em conjunto com addons que dão bônus em acerto.",
             "Usuário recebe -2 no teste de acerto da técnica.",
-<<<<<<< HEAD
             "Aumenta o custo dessa técnica em21."
-=======
-            "Aumenta o custo dessa técnica em 1."
->>>>>>> origin/master
         ],
         "conceitos": [
             "unicidade"
@@ -2687,11 +2637,7 @@ window.techAddons =
         "efeitos": [
             "Inimigos marcados por você causam 1 ponto de dano a menos contra você, redução aplicada após o cálculo de danos e podendo reduzir o dano tomado a 0.",
             "Ataques realizados no seu turno são Normalizados.",
-<<<<<<< HEAD
             "Aumente custo total da técnica em 2 (não acumulativo, mas somatório entre outros addons) para cada rodada que a habilidade com este addon ficar ativa."
-=======
-            "Aumente custo total da técnica em 1 (não acumulativo, mas somatório entre outros addons) para cada rodada que a habilidade com este addon ficar ativa."
->>>>>>> origin/master
         ],
         "conceitos": [
             "marcas",
@@ -2706,20 +2652,11 @@ window.techAddons =
         "nome": "Change Form",
         "nomeLimpo": "Change Form",
         "efeitos": [
-<<<<<<< HEAD
             "Escolha dois atributos durante a criação dessa técnica, um primário e um secundário. Enquanto essa passiva estiver ativa, você pode usar o seu atributo de dano primário como atributo se fosse o atributo de dano secundário, contanto que os dois não sejam usados ao mesmo tempo. ",
             "Exemplo: um personagem pode escolher na criação trocar arma com magia, assim sendo, ele pode ativar a passiva e usar seu valor de arma como se fosse magia.",
             "Aumente o custo total da técnica em +2 (não acumulativo, mas somatório entre outros addons) pra cada rodada ativa.",
             "Ativar não consome o turno, mas dobra o custo de MP pago pela habilidade nesse turno. A técnica pode ser desativada sem gastar o turno.",
             "Esse addon consome dois slots."
-=======
-            "Escolha dois atributos de dano durante a criação dessa técnica. Enquanto ela estiver ativa, troque esses atributos de lugar.",
-            "Ataques utilizando os atributos escolhidos sempre incluem o outro atributo como tipo de dano. Um personagem que troca seus valores de Arma e Magia e realiza ataques com qualquer um dos dois estará causando um dano do tipo (Arma, Magia).",
-            "Aumente custo total da técnica em 2 (não acumulativo, mas somatório entre outros addons) para cada rodada que a habilidade com este addon ficar ativa.",
-            "Ativar ou desativar essa técnica passa a consumir o turno do personagem.",
-            "Esse addon consome dois slots e deve ser o único addon na técnica.",
-            "Esse é um addon em fase de testes e seus efeitos de balanceamento são desconhecidos. É bem provável que esse addon mude de forma significativa, ou até seja removido, no futuro."
->>>>>>> origin/master
         ],
         "conceitos": [
 
@@ -2963,11 +2900,7 @@ window.techAddons =
         "conceitos": [
             "unicidade"
         ],
-<<<<<<< HEAD
         "nivel": 3
-=======
-        "nivel": 1
->>>>>>> origin/master
     },
 		    {
         "tipo": "passiva",
@@ -3199,7 +3132,6 @@ window.techAddons =
         "nome" : "Efeito do Estilo de Luta",
         "nomeLimpo" : "Efeitos",
         "efeitos" : [
-<<<<<<< HEAD
             "Superioridade para si",
             "Superioridade para um único inimigo da sua escolha",
 		    "Superioridade para um único aliado da sua escolha",
@@ -3210,10 +3142,6 @@ window.techAddons =
             "Inferioridade para um único aliado da sua escolha",
 		    "Inferioridade para um único inimigo aleatório",
             "Inferioridade para um único aliado aleatório"
-=======
-            "+2 Dano, -1 Ataque",
-            "Aumenta o custo em 2 MP por rodada."
->>>>>>> origin/master
         ],
         "conceitos" : [
             
@@ -3247,165 +3175,6 @@ window.techAddons =
         "nome" : "Capacidade Especial",
         "nomeLimpo" : "Capacidade Especial",
         "efeitos" : [
-<<<<<<< HEAD
-            "Essa arma pode utilizar Itens Consumíveis com o addon \"Munição Especial\", recebendo efeitos extras nesse momento."
-=======
-            "+2 Dano ",
-            "Aumenta o custo em 4 MP por rodada."
->>>>>>> origin/master
-        ],
-        "conceitos": [],
-        "nivel" : 1
-    },
-    {
-        "tipo" : "arma",
-        "nome" : "Capacidade Destrutiva",
-        "nomeLimpo" : "Capacidade Especial",
-        "efeitos" : [
-            "A arma é capaz de causar uma destruição muito além do normal. É capaz.",
-            "Ataques realizados com a arma passam a rolar 1d10-2 no lugar de 1d6. Não é compatível com outros addons que alterem o dado sendo rolado.",
-            "Capacidade Destrutiva altera o \"alcance\" da arma para -1 a 8, efetivamente aumentando o dano máximo em 2 e reduzindo o dano mínimo em 2."
-        ],
-        "conceitos": [],
-        "nivel" : 1
-    },
-    {
-        "tipo": "arma",
-        "nome": "Aliada",
-        "nomeLimpo": "Aliada",
-        "efeitos": [
-            "A arma é, na verdade, um aliado que luta junto de você. Um companheiro animal pode ser transformado em uma arma com o addon Aliada para se explicar dentro do sistema.",
-            "Esse addon não aumenta o nível da arma. A arma é um companheiro que não pode ser atacado e te ajuda. Isso pode ser um robô, uma espada que flutua e ataca quase que por conta própria, um lobo... Isso é mais um addon da narrativa do que do sistema em si.",
-            "Observação: por questões de balanceamento, essa arma ainda preenche um slot de \"mão\". Ou seja, você não pode ter uma arma Aliada de duas mãos ao mesmo tempo que utiliza um escudo."
-        ],
-        "conceitos": [],
-        "nivel": 1
-    },
-    {
-        "tipo": "arma",
-        "nome": "Arma Pesada",
-        "nomeLimpo": "Arma Pesada",
-        "efeitos": [
-            "A arma é mais pesada que o normal para os padrões. Aumente todo dano causado em ataques envolvendo essa arma em +1. Diminua rolagens de acerto (Ataque/ATK) enquanto utilizando essa arma em -1. A arma passa a ocupar 4 slots de inventário ao invés de 2. Quando adicionada em armas de uma mão, o bônus só é recebido quando se utilizando duas armas com o addon arma pesada."
-        ],
-        "conceitos": [],
-        "nivel": 1
-    },
-    {
-        "tipo": "arma",
-        "nome": "Artefato",
-        "nomeLimpo": "Artefato",
-        "efeitos": [
-            "Crie uma técnica do tipo Forma de Ataque junto dessa arma. Essa técnica tem uma quantia de addons igual a quantidade de vezes que Artefato aparece nessa arma, com um máximo de 4. Enquanto equipado com essa arma, você pode utilizar essa técnica, e o custo dela é cobrado normalmente. Quaisquer atributos usados na técnica usam os atributos do personagem que utiliza o item.",
-            "Poderes de equipamentos utilizados por personagens de nível 0 possuem efeitos aumentados. Substitua os valores de atributos usados no ataque pelo nível da arma quando esses poderes forem utilizados por NPCs.",
-            "Esse addon pode ser usado em armas criadas pelos jogadores através de vantagens, mas nunca por addons que permitam criação de itens através de técnicas."
-        ],
-        "conceitos": [],
-        "nivel": 1
-    },
-    {
-<<<<<<< HEAD
-        "tipo": "arma",
-        "nome": "Autômato sem Alma",
-        "nomeLimpo": "Automato sem Alma",
-        "efeitos": [
-            "A arma existe como um personagem próprio e com vida que ataca sob o comando do personagem que a possui. Essa arma não ocupa slots de equipamento. Essa arma passa a poder ser atacada por outros personagens e combatentes. Essa arma tem 1 HP e RD 0, sendo quebrada ao receber algum ataque com sucesso. Quando atacada, essa arma irá tentar esquivar em resposta, utilizando a Defesa (DEF) do personagem que a utiliza, mas não recebendo quaisquer bônus que ele possua.",
-            "Enquanto a arma estiver viva, a arma conta como um aliado e pode ser afetada por efeitos que funcionassem em Aliados, como Bônus, Redirecionamento de Ataques e outros, com durações de efeito padrões.",
-            "Ataques realizados com essa arma são tratados como ataques do personagem original, utilizando seus atributos e os addons dessa Arma para decidir os efeitos. Personagens que sejam atacados por essa arma podem incluir tanto a Arma quanto o personagem que a utiliza em alvos de contra-ataques. A arma sempre tenta esquivar quando atacada, como dito antes.",
-            "Contra-ataques contra o personagem que possui a arma funcionam como sempre, com o personagem, por exemplo, perdendo a concentração necessária para finalizar o ataque após um bloqueio ou uma esquiva mal-sucedida.",
-            "Enquanto um Autômato sem Alma estiver em campo, o personagem e seus aliados podem realizar a ação \"Se esconder\". Se esconder - 0 MP: Consome o turno do personagem e só pode ser realizada no turno do personagem. Se esconde atrás de um Autômato sem Alma. Todos os ataques realizados contra o personagem são redirecionados para o Autômato sem Alma enquanto ele estiver inteiro."
-=======
-        "id" : 5012,
-        "nivel" : 1,
-        "tipo" : "estilo",
-        "nome" : "Adepto de Batalha",
-        "nomeLimpo" : "Adepto de Batalha",
-        "efeitos" : [
-            "Receba +1 em testes de Ataque e Defesa, contanto que o nível base (sem bônus) do atributo sendo rolado não seja maior do que sua Sabedoria de Combate.",
-            "Aumenta o custo em 2 MP por rodada.",
-            "Nota: Esse estilo de luta é fortemente recomendado para personagens que possuam quatro atributos de combate (defesa, ataque e dois atributos de dano) sempre no mesmo nível."
->>>>>>> origin/master
-        ],
-        "conceitos": [],
-        "nivel": 1
-    },
-    {
-<<<<<<< HEAD
-        "tipo": "arma",
-        "nome": "Confiável",
-        "nomeLimpo": "Confiavel",
-        "efeitos": [
-            "A arma é menos potente que o normal, mas garante maior firmeza e precisão em seus golpes, fazendo com que seu poder destrutivo não seja tão oscilante. A arma com esse addon passa a rolar 1d4 para danos ao invés de 1d6. Adicionalmente, esse addon concede um bônus de +2 de dano em danos que a arma entre como fator de uso (esse efeito não pode ser comprado múltiplas vezes). Esse addon só funciona quando todas as armas usadas pelo personagem (equipadas no momento) possuem \"Confiável\", caso contrário não aumenta o dano nem reduz o dado.",
-            "Esse addon efetivamente altera o \"alcance\" do dano da arma para 3 a 6, sendo equivalente a aumentar o dano mínimo em 2."
-=======
-        "id" : 5013,
-        "nivel" : 1,
-        "tipo" : "estilo",
-        "nome" : "Maestria de Batalha",
-        "nomeLimpo" : "Maestria de Batalha",
-        "efeitos" : [
-            "Quando rolando o dano de um ataque  com Special Attack II ou Special Attack Ranged II, se os dois atributos sendo somados possuirem o mesmo valor você recebe +2 dano.",
-            "Aumenta o custo em 1 MP por rodada.",
-            "Nota: Esse estilo de luta é fortemente recomendado para personagens que possuam quatro atributos de combate (defesa, ataque e dois atributos de dano) sempre no mesmo nível."
->>>>>>> origin/master
-        ],
-        "conceitos": [],
-        "nivel": 1
-    },
-    {
-<<<<<<< HEAD
-        "tipo": "arma",
-        "nome": "Dano Mínimo",
-        "nomeLimpo": "Dano Minimo",
-        "efeitos": [
-            "Se a rolagem de dano dessa arma resultar no dano mínimo (resultado de 1 no dado), você pode rolar o teste de dano novamente (rejogar o dado). Esse efeito também se ativa nas re-rolagens."
-        ],
-        "conceitos": [],
-        "nivel": 1
-    },
-    {
-        "tipo": "arma",
-        "nome": "Devorador de Almas",
-        "nomeLimpo": "Devorador de Almas",
-        "efeitos": [
-            "Se você nocautear um oponente com essa arma, você pode gastar um ponto de Stamina imediatamente. O efeito só funciona em inimigos de nivel igual ou maior ao seu."
-=======
-        "nivel" : 1,
-        "tipo" : "estilo",
-        "nome" : "Poderes Complementares",
-        "nomeLimpo" : "Poderes Complementares",
-        "efeitos" : [
-            "Quando rolando o dano de uma técnica com o addon Special Attack II ou III (ou suas versões Ranged), você recebe +2 dano.",
-            "Aumenta o custo por rodada em 3 MP"
->>>>>>> origin/master
-        ],
-        "conceitos": [],
-        "nivel": 1
-    },
-    {
-        "tipo": "arma",
-        "nome": "Efeito Narrativo",
-        "nomeLimpo": "Efeito Narrativo",
-        "efeitos": [
-            "Essa arma possui um efeito narrativo apenas dentro da história ou cena acontecendo. Efeitos narrativos são necessários para efeitos que talvez não encaixem em outros addons ou não fossem permitidos / sejam grandes demais. O mestre deve informar ao jogador sobre quando o Efeito Narrativo é necessário para manter a descrição escolhida.",
-            "Um efeito narrativo dá alguns efeitos como, por exemplo:",
-            "Uma espada que brilha azul quando goblins estão por perto;",
-            "Uma armadura tecnológica que pode fazer ligações;",
-            "Um escudo que se dobra e desaparece.",
-            "O que o efeito narrativo vai fazer, depende da criatividade do jogador."
-        ],
-<<<<<<< HEAD
-=======
-        "conceitos" : [
-            
-        ]
-    },
-    /* Addons de Armas */
-    {
-        "tipo" : "arma",
-        "nome" : "Capacidade Especial",
-        "nomeLimpo" : "Capacidade Especial",
-        "efeitos" : [
             "Essa arma pode utilizar Itens Consumíveis com o addon \"Munição Especial\", recebendo efeitos extras nesse momento."
         ],
         "conceitos": [],
@@ -3514,7 +3283,6 @@ window.techAddons =
             "Um escudo que se dobra e desaparece.",
             "O que o efeito narrativo vai fazer, depende da criatividade do jogador."
         ],
->>>>>>> origin/master
         "conceitos": [],
         "nivel": 1
     },
