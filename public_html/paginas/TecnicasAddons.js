@@ -3,7 +3,7 @@
  * Changelog
  * @type Array
  */
-window.techChangelog = [
+window.techChangelog = [  
     {
         version : [4,0],
         description : [
@@ -24,7 +24,7 @@ window.techChangelog = [
 			"Leadership - The time is NOW: Custo da técnica se torna 3 (old: 2).",
 			"Mark of the Guardian: Custo de MP se torna 1.",
 			"No flaws: custo de MP se torna 2.",
-			"Nullify Magic: a quantidade de MP reduzida se acertar passa a ser 4 (old: 2), continua acumulando consigo mesmo. Custo de ativação se torna 2 MP (old: 3). Pode ser usado em contra-ataques.",
+			"Nullify Magic: a quantidade de MP reduzida se acertar passa a ser 4 (old: 2), continua acumulando consigo mesmo. Custo de ativação se torna 2 MP (old: 3). Pode ser usado em contra-ataques. Custo base aumentado para 2 MP.",
 			"Overwhelming Force: Custo de MP se torna 3 e passa a requerir nível 2",
 			"Penalty: Custo extra só é gasto em mais de dois alvos, não mais em um alvo único.",
 			"Set Trap I e II: Custo de MP se tora 2 para ambos.",
@@ -55,12 +55,12 @@ window.techChangelog = [
 			"--------------------------------------------",
 			"A true leader shows no weakness permanece como está, mas seu nível minimo é aumentado para 2",
 			"Aura foi completamente reformulado",
-			"Berserking permanece como está, com a adição de uma clarificação que a cura em questão acontece sempre depois do dano recebido",
+			"Berserking agora tem a penalidade de 1 RD, devido as mudanças em equips. Além disso tem a adição de uma clarificação que a cura em questão acontece sempre depois do dano recebido",
 			"Boon of the Pacifist tem seu custo de MP aumentado para 2 (old: 1)",
 			"Boon of the protector tem seu custo de MP aumentado para 2 (old: 1)",
 			"Change Form foi completamente reformulado",
 			"Troca Perigosa I teve uma pequena mudança:  ao invés de ser apenas -2 de dano agora é: “-2 dano ou -2 RD, escolhido durante a criação da técnica.",
-			"Novos Addons Passivos: Punishing Volt, Mage Killer, Delay Pain, Sharing is Caring, Spellcaster, Energy Coat, Crusader Training, Knight Training, Boon of the Opressor, Boon of the Agressor e Domínio Absoluto",
+			"Novos Addons Passivos: Punishing Volt, Mage Killer, Delay Pain, Sharing is Caring, Spellcaster, Energy Coat, Crusader Training, Knight Training, Aegis Domini, Boon of the Opressor, Boon of the Agressor e Domínio Absoluto",
 			"--------------------------------------------",
 			"Estilos de luta foram reformulados de acordo com o novo funcionamento explicado no manual",
 			"Novos addons e alterações nos equipamentos e vantagens ainda estão por vir, mas todas elas já se encontram no manual básico",
@@ -769,7 +769,7 @@ window.techAddons =
     },
 			 {
         "tipo": "ataque",
-        "nome": "Negate Attack",
+        "nome": "Negate - Attack",
         "nomeLimpo": "Negate Attack",
         "efeitos": [
             "Se a técnica causar 1 de dano ou mais, o alvo afetado fica incapaz de usar habilidades de ataque até o início do próximo turno do usuário.",
@@ -785,7 +785,7 @@ window.techAddons =
     },
 				 {
         "tipo": "ataque",
-        "nome": "Negate Special",
+        "nome": "Negate - Special",
         "nomeLimpo": "Negate Special",
         "efeitos": [
             "Se a técnica causar 1 de dano ou mais, o alvo afetado fica incapaz de usar habilidades do tipo especial até o início do próximo turno do usuário. ",
@@ -801,7 +801,7 @@ window.techAddons =
     },
 					 {
         "tipo": "ataque",
-        "nome": "Negate Passive",
+        "nome": "Negate - Passive",
         "nomeLimpo": "Negate Passive",
         "efeitos": [
             "Se a técnica causar 1 de dano ou mais, o alvo afetado fica incapaz de ativar ou desativar habilidades do tipo passiva até o início do próximo turno do usuário (com a exceção de não ter mais MP para mantê-las ativas).",
@@ -1965,7 +1965,7 @@ window.techAddons =
         "nomeLimpo": "Expertise III",
         "efeitos": [
             "Use esse addon e ganhe superioridade em no próximo teste de uma perícia escolhida na criação dessa técnica.",
-			"Custo de MP igual à 5" 
+			"Custo de MP igual à 5 e só pode ser usado 1x por combate ou a cada 30 minutos dentro do jogo." 
         ],
         "conceitos": [
             "stacking",
@@ -2131,7 +2131,7 @@ window.techAddons =
         "nomeLimpo": "Praying Shield",
         "efeitos": [
             "Escolha um dos atributos de dano na criação dessa técnica: ao usar os efeitos desse addon, ganhe proteção contra esse atributo.",
-			"Um personagem protegido contra um atributo ganha +1 RD Específica temporária naquele atributo, não se acumulando caso o personagem já tenha algum tipo de proteção prévia nesse atributo (seja por item ou outros efeitos).",
+			"Um personagem protegido contra um atributo ganha +1 RD Específica durante 1 rodada naquele atributo, não se acumulando caso o personagem já tenha algum tipo de proteção prévia nesse atributo (seja por item ou outros efeitos).",
             "Custo de MP: 2 e gasta o turno ou 4 e não gasta o turno.",
         ],
         "conceitos": [
@@ -2146,7 +2146,7 @@ window.techAddons =
         "nomeLimpo": "Windwall Shield",
         "efeitos": [
             "O alvo fica imune ao primeiro ataque do tipo Ranged (à distância) que receber após o uso desse addon.",
-			"Este efeito não pode ser aplicado mais do que 1x por rodada num mesmo alvo.",
+			"Este efeito não pode ser aplicado mais do que 1x por combate num mesmo alvo.",
             "Custo de MP: 3 e gasta o turno ou 5 e não gasta o turno, podendo ser usado em aliados mas somente uma vez por rodada.",
         ],
         "conceitos": [
@@ -2160,7 +2160,7 @@ window.techAddons =
         "nomeLimpo": "Spike Shield",
         "efeitos": [
             "O alvo fica imune ao primeiro ataque do tipo Melee (físico).",
-			"Este efeito não pode ser aplicado mais do que 1x por rodada num mesmo alvo.",
+			"Este efeito não pode ser aplicado mais do que 1x por combate num mesmo alvo.",
             "Custo de MP: 3 e gasta o turno ou 5 e não gasta o turno, podendo ser usado em aliados mas somente uma vez por rodada.",
         ],
         "conceitos": [
@@ -2175,8 +2175,8 @@ window.techAddons =
         "efeitos": [
             "O alvo fica invisível, e em termos narrativos ele não pode ser visto por ninguém. Enquanto invisível, um personagem:",
 			"Ganha um bônus de poder igual à +1 em seu Ataque e Dano, caso ataque um alvo que não o detecte.",
-            "Ganha superioridade em testes de Furtividade e Prestidigitação.",
-			"Perde a invisibilidade se tomar dano de qualquer tipo (Damage Over Time Incluso), for curado ou afetado por qualquer habilidade aliada direta (passivas que afetam vários alvos não revelam o personagem invisível).",
+            "Ganha superioridade no primeiro teste de Furtividade e Prestidigitação da rodada.",
+			"Perde a invisibilidade tomar dano de qualquer tipo (Damage Over Time Incluso), for curado ou afetado por qualquer habilidade aliada direta (passivas que afetam vários alvos não revelam o personagem invisível). O personagem também perde a invisibilidade APÓS causar dano por qualquer fonte direta ou após usar habilidades em geral. A invisibilidade não é perdida ao pagar o custo de manutenção de passivas.",
 			"Enquanto invisível, um personagem não pode:",
 			"Falar, usar itens ou qualquer ação que teoricamente quebraria sua invisibilidade.",
 			"Alvos que estejam lutando contra um personagem invisível, podem fazer um teste de 1d10 + SAB + Percepção VS 1d10 + AGI + Furtividade do alvo invisível para detectá-lo.",
@@ -2605,7 +2605,7 @@ window.techAddons =
         "efeitos": [
             "Caso você receba um dano final que exceda sua cura por Stamina, você pode gastar um ponto de Stamina se curar depois do dano ter sido recebido.",
             "Quando você realiza um ataque dentro do seu turno e você recebeu algum dano desde o seu último turno, aumente seu dano em +2, esse bônus só é ganho no seu turno atual desde que a condição seja obedecida. No fim do seu turno, esse efeito é resetado.",
-            "Enquanto esse efeito estiver ativo, reduza sua RD Geral em 2 pontos.",
+            "Enquanto esse efeito estiver ativo, reduza sua RD Geral em 1 pontos.",
             "Aumente custo total da técnica em 2 (não acumulativo, mas somatório entre outros addons) para cada rodada que a habilidade com este addon ficar ativa."
         ],
         "conceitos": [
@@ -2652,7 +2652,7 @@ window.techAddons =
         "nome": "Change Form",
         "nomeLimpo": "Change Form",
         "efeitos": [
-            "Escolha dois atributos durante a criação dessa técnica, um primário e um secundário. Enquanto essa passiva estiver ativa, você pode usar o seu atributo de dano primário como atributo se fosse o atributo de dano secundário, contanto que os dois não sejam usados ao mesmo tempo. ",
+            "Escolha dois atributos durante a criação dessa técnica, um primário e um secundário. Enquanto essa passiva estiver ativa, você pode usar o seu atributo de dano primário como se fosse o atributo de dano secundário, contanto que os dois não sejam usados ao mesmo tempo. ",
             "Exemplo: um personagem pode escolher na criação trocar arma com magia, assim sendo, ele pode ativar a passiva e usar seu valor de arma como se fosse magia.",
             "Aumente o custo total da técnica em +2 (não acumulativo, mas somatório entre outros addons) pra cada rodada ativa.",
             "Ativar não consome o turno, mas dobra o custo de MP pago pela habilidade nesse turno. A técnica pode ser desativada sem gastar o turno.",
@@ -2976,7 +2976,7 @@ window.techAddons =
         "nomeLimpo": "Crusader Training",
         "efeitos": [
             "Reduza todos os danos por ataques ranged em 1 ponto enquanto essa passiva estiver ativa, mas aumente todo o dano recebido por ataques melee em +1.",
-			"Esse efeito por si p´roprio não permite que o dano reduzido chegue a 0.",
+			"Esse efeito por si próprio não permite que o dano reduzido chegue a 0.",
             "Aumente o custo total da técnica em 2."
         ],
         "conceitos": [
@@ -2990,11 +2990,28 @@ window.techAddons =
         "nomeLimpo": "Knight Training",
         "efeitos": [
             "Reduza todos os danos por ataques melee em 1 ponto enquanto essa passiva estiver ativa, mas aumente todo o dano recebido por ataques ranged em +1.",
-			"Esse efeito por si p´roprio não permite que o dano reduzido chegue a 0.",
+			"Esse efeito por si próprio não permite que o dano reduzido chegue a 0.",
             "Aumente o custo total da técnica em 2."
         ],
         "conceitos": [
             "unicidade"
+        ],
+        "nivel": 2
+    },
+		 {
+        "tipo": "passiva",
+        "nome": "Aegis Domini",
+        "nomeLimpo": "Aegis Domini",
+        "efeitos": [
+            "Enquanto essa passiva estiver ativa o personagem pode adicionar o seu valor de RES como bônus nos testes Bloqueio.",
+			"Esse efeito por si próprio não permite que o dano reduzido chegue a 0.",
+			"Todos os seus ataques passam a ser normalizados.",
+            "Aumente o custo total da técnica em 2."
+        ],
+        "conceitos": [
+            "unicidade",
+			"normalizado",
+			"basicos"
         ],
         "nivel": 2
     },
@@ -3021,7 +3038,7 @@ window.techAddons =
         "efeitos": [
             "Inimigos já atacados previamente por você em turnos passados seus, recebem 2 pontos de dano a mais quando atacados por você em seu turno e somente no seu turno.",
 			"Caso outro alvo seja atacado (isso inclui Area of Effect ou ataques em marcas), o efeito do addon é resetado.",
-			"O bônus de dano concedido por esse addon não sofre normalização, porém é reduzido normalmente em addons que exigem que o modificador de dano seja cortado pela (Area of Effect, Think Fast, etc).",
+			"O bônus de dano concedido por esse addon não sofre normalização, porém é reduzido normalmente em addons que exigem que o modificador de dano seja cortado pela metade(Area of Effect, Think Fast, etc).",
 			"Não pode ser usado jundo de Boon of the Opressor.",
             "Aumente custo total da técnica em 3 (não acumulativo, mas somatório entre outros addons) para cada rodada que a habilidade com este addon ficar ativa."
         ],
