@@ -4,8 +4,18 @@
  * @type Array
  */
 window.techChangelog = [  
-    {
-        version : [4,0],
+       {
+        version : [4,1],
+        description : [
+           "Strong But Slow II teve seu nível ajustado para 2 e custo alterado para 2 como deveria, e não 21.",
+			"Removido o texto de Area of Effect que fazia menção ao custo extra de múltiplos alvos, uma vez que ele já tem um texto dizendo que não pode ser usado em múltiplos alvos.",
+			"A parte dos equipamentos foi inteiramente atualizada, com a adição dos novos addons, correção de antigos e remoção de outros, como dito no changelog do manual versão 4.0",
+			"Nullify magic agora tem o seu custo de MP base corretamente colocado.",
+			"Corrigidos diversos typos da versão 4.0",
+        ]
+    },  
+	 {
+		version : [4,0],
         description : [
             "ATENÇÃO: Todas as mudanças aqui feitas estarão passando por um intenso período de testes e observação. Como sempre, os addons novos e antigos que foram alterados poderão ser revertidos, excluídos ou alterados conforme o balanceamento pedir. É extremamente importante que o feedback dos addons novos seja dado bem como as alterações dos antigos. Em breve contaremos com um novo funcionamento nessa página que vai favorecer dar feedback e testá-los, aguardem.",
 			"--------------------------------------------",
@@ -934,7 +944,6 @@ window.techAddons =
             "Nos dois casos, não significa que o personagem se livrou do efeito do ataque pela narrativa. Ele apenas conseguiu se livrar do Damage Over Time pelo restante do combate.",
             "Aumenta o custo da técnica em 3 MP.",
 			"O custo extra desse addon não é pago quando esse ataque é usado como contra-ataque. Os efeitos desse addon são ignorados quando o ataque é feito como contra-ataque.", 
-			"Para cada alvo extra da técnica, gaste um extra de 2 MP por alvo. Esse custo extra não é aplicado para um único alvo. Exemplo: Se DoT estiver sendo usado contra um alvo, o custo dele se mantém em 2, mas se for usado contra dois alvos o custo extra aumenta em +6 MP.",
             "Esse addon é considerado um bônus de dano do ponto de vista de outros addons.Esse addon não pode ser adicionado em ataques com mais de um alvo."
         ],
         "conceitos": [
@@ -1265,7 +1274,7 @@ window.techAddons =
             "Caso esse ataque cause 1 ponto de dano ou mais, reduza o MP do alvo em 4. Esse addon acumula consigo mesmo.",
             "Como um custo extra para utilizar essa técnica, pague 2 MP para cada alvo que o ataque possua. Esse custo extra não se ativa para alvos únicos. Isso conta como um custo de ativação, mas não pode ser reduzido de nenhuma maneira.",
             "O custo extra desse addon não é pago quando esse ataque é usado como contra-ataque.",
-            "Não aumenta o custo da técnica diretamente."
+            "Aumenta o custo da técnica em 2."
         ],
         "conceitos": [
 
@@ -1622,12 +1631,12 @@ window.techAddons =
             "Aumenta o dano da técnica em +2.",
             "Esse addon não pode ser usado em conjunto com addons que dão bônus em acerto.",
             "Usuário recebe -2 no teste de acerto da técnica.",
-            "Aumenta o custo dessa técnica em21."
+            "Aumenta o custo dessa técnica em 2."
         ],
         "conceitos": [
             "unicidade"
         ],
-        "nivel": 3
+        "nivel": 2
     },
     {
         "id": 303,
@@ -3200,9 +3209,9 @@ window.techAddons =
     {
         "tipo" : "arma",
         "nome" : "Capacidade Destrutiva",
-        "nomeLimpo" : "Capacidade Especial",
+        "nomeLimpo" : "Capacidade Destrutiva",
         "efeitos" : [
-            "A arma é capaz de causar uma destruição muito além do normal. É capaz.",
+            "A arma é capaz de causar uma destruição muito além do normal.",
             "Ataques realizados com a arma passam a rolar 1d10-2 no lugar de 1d6. Não é compatível com outros addons que alterem o dado sendo rolado.",
             "Capacidade Destrutiva altera o \"alcance\" da arma para -1 a 8, efetivamente aumentando o dano máximo em 2 e reduzindo o dano mínimo em 2."
         ],
@@ -3315,31 +3324,11 @@ window.techAddons =
     },
     {
         "tipo": "arma",
-        "nome": "Fácil de Usar",
-        "nomeLimpo": "Facil de Usar",
-        "efeitos": [
-            "Apenas para armas de uma mão. Ser mais simples e intuitiva nem sempre é uma desvantagem. Quando utilizando duas armas de uma mão  Fáceis de Usar, o personagem recebe +1 Bônus de Item em testes de Ataque (ATK). É necessário que as duas armas possuam Fácil de Usar."
-        ],
-        "conceitos": [],
-        "nivel": 1
-    },
-    {
-        "tipo": "arma",
         "nome": "Forma",
         "nomeLimpo": "Forma",
         "efeitos": [
             "A arma possui múltiplas formas, que podem ser trocadas como uma ação grátis. Esse addon não aumenta o nível do item. Para cada vez que você adicionar esse addon no item, crie uma nova forma para ela (com tudo podendo ser diferente).",
             "Para cada Forma em uma arma, aumente o gasto de materiais em 50% (somando). Use bom senso quando adicionando Forma a uma arma ganha por vantagens, recomenda-se que o mestre puna jogadores que tentam abusar da mecânica."
-        ],
-        "conceitos": [],
-        "nivel": 1
-    },
-    {
-        "tipo": "arma",
-        "nome": "Grande Área",
-        "nomeLimpo": "Grande Area",
-        "efeitos": [
-            "Apenas para armas de duas mãos. Os golpes da arma cobrem uma grande área e dificultam erros. +1 Bônus de Item em teste de Ataque (ATK)."
         ],
         "conceitos": [],
         "nivel": 1
@@ -3415,7 +3404,7 @@ window.techAddons =
     {
         "tipo": "arma",
         "nome": "Utiliza Munição",
-        "nomeLimpo": "Utiliza Munição",
+        "nomeLimpo": "Utiliza Municao",
         "efeitos": [
             "A arma utiliza munição e passa a seguir as regras de munição que estejam funcionando para a sua campanha. Uma arma que utiliza munição tem seu custo em lojas ou de criação reduzido em 50%. Esse addon não ocupa slots nem aumenta o nível da arma.",
             "Para armas criadas através de vantagens, colocar esse addon reduz o custo da vantagem em 1 ponto. Esse addon não pode ser adicionado caso a arma já fosse utilizar munição através de Ranged."
@@ -3473,7 +3462,30 @@ window.techAddons =
         "nome": "Torre",
         "nomeLimpo": "Torre",
         "efeitos": [
-            "O tamanho do item defensivo é grande a ponto de facilitar, e muito, o seu uso. Ganhe +1 em Bônus de Item em testes que envolvam o atributo Defesa (DEF)."
+            "A arma defensiva reduz em 1 ponto todo e qualquer dano de origem à distância (Ranged).",
+			"Esse addon não pode ser usado em conjunto com o addon “\Reforçado”\."
+        ],
+        "conceitos": [],
+        "nivel": 1
+    },
+	    {
+        "tipo": "escudo",
+        "nome": "Reforçado",
+        "nomeLimpo": "Reforcado",
+        "efeitos": [
+            "A arma defensiva reduz em 1 ponto todo e qualquer dano de origem Corpo à Corpo (Melee).",
+			"Esse addon não pode ser usado em conjunto com o addon “\Torre”\."
+        ],
+        "conceitos": [],
+        "nivel": 1
+    },
+	 {
+        "tipo": "escudo",
+        "nome": "Couraça",
+        "nomeLimpo": "Couraca",
+        "efeitos": [
+            "Essa arma defensiva possui espinhos, placas metálicas pontudas ou algo que repele aqueles que atacam-a.",
+			"Sempre que usar a opção “Bloquear”, você devolve 1 de dano contra o atacante, automaticamente. Esse addon não pode ser comprado junto de “\Esponja\”, e só pode devolver um máximo de cinco ataques (5 pontos de dano).",
         ],
         "conceitos": [],
         "nivel": 1
@@ -3483,8 +3495,9 @@ window.techAddons =
         "nome": "Armadura Leve",
         "nomeLimpo": "Armadura Leve",
         "efeitos": [
-            "Essa armadura é mais leve que o normal, mas concede menor proteção geral. Esse addon garante uma penalidade de -2 RD Geral para armaduras, mas ao utilizar uma armadura leve o personagem recebe +1 em testes de Defesa (DEF) e +1 em testes de Ataque (ATK). Esse addon não aumenta o nível da armadura e nem preenche slot ao ser adicionado.",
-            "Qualquer roupa que não impede movimentos, mesmo que não tenha sido feita para combate, é considerada armadura leve."
+            "Essa armadura é mais leve que o normal, mas concede menor proteção geral. Esse addon garante uma penalidade de +0 RD Geral para armaduras, mas ao utilizar uma armadura leve o personagem recebe +1 em testes de Defesa (DEF) e +1 em testes de Ataque (ATK). Esse addon não aumenta o nível da armadura e nem preenche slot ao ser adicionado.",
+            "Qualquer roupa que não impede movimentos, mesmo que não tenha sido feita para combate, é considerada armadura leve.",
+			"Um personagem com esse addon também recebe +1 RD Específica em um atributo da sua escolha, na criação do item"
         ],
         "conceitos": [],
         "nivel": 1
@@ -3494,7 +3507,8 @@ window.techAddons =
         "nome": "Armadura Média",
         "nomeLimpo": "Armadura Media",
         "efeitos": [
-            "Essa armadura é uma mistura entre a armadura leve e pesada, permitindo movimentos diversos com leveza e flexibilidade ao mesmo tempo que oferece boa proteção (sem necessariamente se especializar em ambas as propriedades). Esse addon concede os bônus naturais de +2 RD Geral que armaduras tem e ao mesmo tempo concede +1 de Bônus de Item em rolagens de Ataque (ATK). Esse addon não aumenta o nível da armadura e nem preenche slot ao ser adicionado."
+            "Essa armadura é uma mistura entre a armadura leve e pesada, permitindo movimentos diversos com leveza e flexibilidade ao mesmo tempo que oferece boa proteção (sem necessariamente se especializar em ambas as propriedades). Esse addon concede um bônus de item igual à +1 RD Geral e ao mesmo tempo concede +1 de Bônus de Item em rolagens de Ataque (ATK). Esse addon não aumenta o nível da armadura e nem preenche slot ao ser adicionado.",
+			"Um personagem com esse addon também recebe +1 RD Específica em um atributo da sua escolha, na criação do item"
         ],
         "conceitos": [],
         "nivel": 1
@@ -3504,7 +3518,8 @@ window.techAddons =
         "nome": "Armadura Pesada",
         "nomeLimpo": "Armadura Pesada",
         "efeitos": [
-            "Essa armadura é mais pesada que o normal, mas muito mais reforçada e trabalhada que as outras. Esse addon aumenta a RD Geral em +2. do personagem (em cima dos +2 RD Geral naturais, ficando +4 no total). Esse addon não aumenta o nível da armadura e nem preenche slot ao ser adicionado."
+            "Essa armadura é mais pesada que o normal, mas muito mais reforçada e trabalhada que as outras. Esse addon aumenta a RD Geral em +2. do personagem. Esse addon não aumenta o nível da armadura e nem preenche slot ao ser adicionado.",
+			"Um personagem com esse addon também recebe +1 RD Específica em um atributo da sua escolha, na criação do item"
         ],
         "conceitos": [],
         "nivel": 1
@@ -3670,7 +3685,7 @@ window.techAddons =
     },
     {
         "tipo": "consumivel",
-        "nome": "Grando/Pesado",
+        "nome": "Grande/Pesado",
         "nomeLimpo": "Grande Pesado",
         "efeitos": [
             "O item ocupa 2 slots ao invés de 1. Esse addon deve ser colocado pelo mestre em itens onde seja relevante e não ocupa slots nem aumenta o nível do item. Opcionalmente, itens com esse addon podem ter seu custo reduzido em 25% quando vendidos em uma loja de NPC."
