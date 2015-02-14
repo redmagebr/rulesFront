@@ -2152,7 +2152,7 @@ window.techAddons =
 				    {
         "tipo": "especial",
         "nome": "Windwall Shield",
-        "nomeLimpo": "Windwall Shield",
+        "nomeLimpo": "Windwall",
         "efeitos": [
             "O alvo fica imune ao primeiro ataque do tipo Ranged (à distância) que receber após o uso desse addon.",
 			"Este efeito não pode ser aplicado mais do que 1x por combate num mesmo alvo.",
@@ -3430,7 +3430,7 @@ window.techAddons =
     {
         "tipo": "escudo",
         "nome": "Escondido a Plena Vista",
-        "nomeLimpo": "Escondido a Plena Vista",
+        "nomeLimpo": "Escondido a plena vista",
         "efeitos": [
             "A arma, quando desativada, não pode ser reconhecida como uma arma. Talvez o escudo se reduza a um bracelete, ou a espada defensiva vire um anel no dedo indicador do usuário. Alguém que não tenha familiaridade com aquele equipamento não será capaz de reconhecer ele como uma arma, podendo passar despercebida."
         ],
@@ -3552,7 +3552,7 @@ window.techAddons =
     {
         "tipo": "armadura",
         "nome": "Escondido a Plena Vista",
-        "nomeLimpo": "Escondido a Plena Vista",
+        "nomeLimpo": "Escondido a plena vista",
         "efeitos": [
             "A armadura, quando desativada, não pode ser reconhecida como uma armadura. Talvez a pesada cota de malha se reduza a uma camisa simples, ou a armadura de batalha cheia de espinhos fique reduzida à uma placa metálica fina com alguns espinhos discretos na altura do ombro. Alguém que não tenha familiaridade com aquele equipamento não será capaz de reconhecer ele como uma arma, podendo passar despercebida."
         ],

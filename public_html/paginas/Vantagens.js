@@ -4,6 +4,14 @@
  * @type Array
  */
 window.vantagensChangelog = [
+	{
+        "version" : [4, 0],
+        "description" : [
+            "Todas as alterações da versão 4.0 estão presentes.",
+			"Novas vantagens: Analista, Caminhando nas Sombras, Curandeiro, Engenheiro de Masmorras, Existência Kármica, Segunda Raça - Elemental e Terreno Favorito.",
+			"Novas desvantagens: Sotaque, Quirk e Pequena Maldição."
+        ]
+    },
     {
         "version" : [3, 2],
         "description" : [
@@ -64,13 +72,13 @@ window.vantagensArray = [
         "nome": "Visão Treinada",
         "pontos": "0",
         "descricao": [
-            "Os anões viveram muitos anos dentro de montanhas, túneis, cavernas e complexos subterrâneos como um todo, e por isso adquiriram uma facilidade maior de ver coisas no escuro ou com uma iluminação muito baixa. O anão então pode enxergar no escuro e com pouca iluminação normalmente sem penalidades."
+			"Os anões viveram muitos anos dentro de montanhas, túneis, cavernas e complexos subterrâneos como um todo, e por isso adquiriram uma facilidade maior de ver coisas no escuro ou com uma iluminação muito baixa. O anão então pode enxergar no escuro numa distância de até 50 metros e com pouca iluminação, como se estivesse em um ambiente bem iluminado, sem penalidades. Você não é capaz de ver cores na escuridão, apenas tonalidades diferentes de cinzas."
         ],
         "requisitos": "Raça Anão"
     },
     {
         "nome": "Força dos Anciões",
-        "pontos": "2",
+        "pontos": "1",
         "descricao": [
             "Devido a sua constituição e força natural, os anões são capazes de carregar diversos equipamentos, itens e objetos em geral sem ter muitos problemas com espaços ou facilidade de carregar. Anões usam (FOR+2) x4 para calcular a carga do que podem carregar."
         ],
@@ -102,7 +110,7 @@ window.vantagensArray = [
     },
     {
         "nome": "Sentidos Aguçados",
-        "pontos": "2",
+        "pontos": "1",
         "descricao": [
             "Sua espécie é ainda mais especializada quando lidando com sentidos. Você recebe +2 em rolagens de atributos-teste ou perícias relacionadas a tentar ouvir, sentir cheiro ou enxergar."
         ],
@@ -120,7 +128,7 @@ window.vantagensArray = [
         "nome": "Olhos da Selva",
         "pontos": "1",
         "descricao": [
-            "Seus olhos são adaptados a uma vida noturna. Você enxerga durante situações de baixa iluminação sem lidar com penalidades, apenas podendo ser afetado pela ausência absoluta de luz. Você não é afetado por mudanças rápidas de claridade."
+            "Seus olhos são adaptados a uma vida noturna. Você enxerga durante situações de baixa iluminação sem lidar com penalidades, apenas podendo ser afetado pela ausência absoluta de luz. Você não é afetado por mudanças rápidas de claridade e enxerga até 50 metros na escuridão ou com baixa iluminação."
         ],
         "requisitos": "Raça Bestial"
     },
@@ -142,7 +150,7 @@ window.vantagensArray = [
     },
     {
         "nome": "Sexto Sentido",
-        "pontos": "2",
+        "pontos": "1",
         "descricao": [
             "Outra herança genética oriunda dos antigos dragões quando os mesmos lutavam incansavelmente contra os caçadores: estar sempre preparado para um confronto. Com isso, o personagem ganha um bônus de +2 em rolagens de iniciativa."
         ],
@@ -183,7 +191,7 @@ window.vantagensArray = [
     },
     {
         "nome": "Auto-suficiência Biológia",
-        "pontos": "3",
+        "pontos": "1",
         "descricao": [
             "O personagem tem instalações em seu corpo de Droid que o permite ser auto-suficiente em questões mudanças que outros seres vivos são dependentes. Isto é, o Droid não precisa comer, beber, dormir ou respirar, ficando imune à penalidades de fadiga por sono ou por falta de alimento. Isso não deixa o Droid imune à recarregar suas baterias, calibrar circuitos, injetar óleo em suas articulações ou quaisquer aspectos mais narrativos que ele esteja sujeito ou queira ter presente em seu corpo (especificar na história)."
         ],
@@ -191,7 +199,7 @@ window.vantagensArray = [
     },
     {
         "nome": "Gadget",
-        "pontos": "3",
+        "pontos": "2",
         "descricao": [
             "Muitos Droids possuem inúmeros compartimentos e mecanismos que permitem que eles carreguem pequenas possessões ou aparatos de utilidade geral para situações diversas. Assim, até uma vez por sessão ou dia (o que acontecer primeiro) o personagem pode criar uma pequena máquina / aparato / invenção que tenha um único propósito de existência, e quando completado deixa de existir logo depois.",
             "Exemplos: Uma corda especial de aço que sai do peito do droid e é disparada até 20 metros pro alto com um gancho e permitindo que ele seja puxado até o local desejado, ou então um pequeno robô em formato de morcego que tira  fotos com flash e voe por locais diversos ao comando do droid."
@@ -200,7 +208,7 @@ window.vantagensArray = [
     },
     {
         "nome": "Mente Cibernética",
-        "pontos": "2",
+        "pontos": "1",
         "descricao": [
             "Por serem compostos por diversos fios, células virtuais e outros aparelhos com alta diversidade tecnológica, os Droids acabam ficando pouco afetados por encantamentos ou feitiços de ação mental, uma vez que a mente deles funciona diferente de um ser vivo. Justamente por isso, o personagem ganha um bônus de +3 em rolagens quaisquer que envolvam evitar ou resistir à domínio mental ou ataques mentais em geral."
         ],
@@ -208,7 +216,7 @@ window.vantagensArray = [
     },
     {
         "nome": "Beleza Élfica",
-        "pontos": "1",
+        "pontos": "0",
         "descricao": [
             "Elfos são criaturas belas por natureza, seja do sexo masculino ou feminino e isso é reconhecido por muitas pessoas, mundialmente. Embora o conceito de \"beleza\" seja algo subjetivo, os traços finos, suaves e refinados dos elfos são bem distintos e únicos, gerando fãs e admiradores de sua beleza por todas as partes. Um personagem elfo com essa vantagem pode adicionar um bônus de +2 em testes de Carisma onde sua aparência seja relevante (em testes de Sedução ou outros que forem relevantes e o Mestre permitir)."
         ],
@@ -242,7 +250,7 @@ window.vantagensArray = [
         "nome": "Andarilho das Sombras",
         "pontos": "0",
         "descricao": [
-            "Por viverem muito em cidadelas e complexos subterrâneos, os El'zels se acostumaram com a escuridão e aprenderam a viver à partir dela. Com isso, o personagem que pegar essa vantagem ganha a capacidade de enxergar no escuro sem problemas e também é capaz de ter uma boa visão em lugares com baixa iluminação, não sofrendo penalidades de qualquer tipo. Entretanto, durante a luz do sol ou sobre muita iluminação, a visão do personagem pode sofrer penalidades ou ficar sutilmente ofuscada. Essa vantagem não se acumula com outras de efeito similar."
+			"Por viverem muito em cidadelas e complexos subterrâneos, os El’zels se acostumaram com a escuridão e aprenderam a viver à partir dela. Com isso, o personagem que pegar essa vantagem ganha a capacidade de enxergar no escuro sem problemas e também é capaz de ter uma boa visão em lugares com baixa iluminação, não sofrendo penalidades de qualquer tipo. Entretanto, durante a luz do sol ou sobre muita iluminação, a visão do personagem pode sofrer penalidades ou ficar sutilmente ofuscada. Essa vantagem não se acumula com outras de efeito similar. El’zels enxergam cerca de 50 metros na escuridão e são capazes de distinguir cores e formas com facilidade."
         ],
         "requisitos": "Raça El'zel"
     },
@@ -256,7 +264,7 @@ window.vantagensArray = [
     },
     {
         "nome": "Sedução",
-        "pontos": "2",
+        "pontos": "1",
         "descricao": [
             "Se há algo que os El'zels mantiveram de seus primos da superfície (os Elfos) é o vínculo carismático que possuem frente aos seus discursos e necessidades. Diferentemente de um carisma de beleza estética, os El'zels são capazes de seduzir muito mais facilmente e influenciar as emoções e percepção de um alvo desejado. Com isso, o personagem el'zel que adquirir essa vantagem ganha um bônus de +2 em rolagens que envolvam algum tipo de Sedução. Esse bônus não se aplica contra alvos que são elfos."
         ],
@@ -264,7 +272,7 @@ window.vantagensArray = [
     },
     {
         "nome": "Sono dos Rejeitados",
-        "pontos": "2",
+        "pontos": "1",
         "descricao": [
             "Diferentemente de seus primos da superfície (os elfos), os El'zels não são totalmente imunes aos efeitos do sono e de encantamentos com propriedades desse tipo. Por outro lado, eles ainda se diferenciam de outros seres vivos por possuírem um sono bem leve e sutil, permitindo que eles acordem quando bem desejarem e que ganhem um bônus de resistência igual à +1 em testes que envolvam tentar evitar ou resistir à encantamentos do sono."
         ],
@@ -296,7 +304,7 @@ window.vantagensArray = [
     },
     {
         "nome": "Rápida Aprendizagem",
-        "pontos": "2",
+        "pontos": "1",
         "descricao": [
             "Acostumados a terem contato com muitas informações de diversas fontes, os Fayris conseguiram também desenvolver uma forma de rápida aprendizagem para os assuntos relevantes dos dia-dia. Com isso, um personagem com essa vantagem recebe 2 pontos extras de perícias para gastar na criação de personagem e 1 ponto extra de perícia a cada novo nível que atingir. Essa vantagem não se acumula com outras vantagens de efeito similar."
         ],
@@ -320,7 +328,7 @@ window.vantagensArray = [
     },
     {
         "nome": "Fisiologia de Golem",
-        "pontos": "2",
+        "pontos": "1",
         "descricao": [
             "Um Golem não precisa se alimentar nem beber para sobreviver, sua constituição feita de diversos minerais e rochas já lhe dão tudo o que ele precisa para sobreviver de forma auto-suficiente. Um personagem com essa vantagem não perde MP ou Stamina por falta de comida, água ou coisas do tipo."
         ],
@@ -360,7 +368,7 @@ window.vantagensArray = [
     },
     {
         "nome": "Conexão Animalesca",
-        "pontos": "2",
+        "pontos": "1",
         "descricao": [
             "A cultura dos Jorns exalta muitos animais da natureza e conta histórias épicas sobre como os espíritos deles guiaram essa civilização ao triunfo em inúmeros confrontos. Assim, um personagem Jorn com essa vantagem consegue entender melhor as motivações e comportamentos de animais em geral (não se aplica à Bestiais por razões óbvias), além de ser capaz de tentar estabelecer uma forma de comunicação ou controle sobre o animal em questão com um teste de Natureza, recebendo um bônus de +2 neste teste."
         ],
@@ -368,7 +376,7 @@ window.vantagensArray = [
     },
     {
         "nome": "Espírito Guia",
-        "pontos": "2",
+        "pontos": "1",
         "descricao": [
             "Escolha um animal para ser o seu guia espiritual em sua jornada, ele não aparecerá diretamente para você como um espírito mas poderá lhe dar dicas através de visões, sonhos ou sinais indiretos sobre algo. Você pode uma vez por dia ou sessão (o que acontecer primeiro) se concentrar e fazer uma oferenda, rezar, pedir um sinal ou meditar para o seu espírito escolhido e ele lhe atenderá com alguma resposta (à critério do Mestre). É necessário que o personagem esteja concentrado e não faça outras coisas além de tentar se comunicar com o espírito, para conseguir estabelecer uma conexão."
         ],
@@ -384,7 +392,7 @@ window.vantagensArray = [
     },
     {
         "nome": "Tamanho não é documento, mas pode ser útil",
-        "pontos": "2",
+        "pontos": "1",
         "descricao": [
             "Devido à baixa estatura que é algo natural dessa raça, os Kalkans conseguem usar isso ao seu favor mais facilmente em situações em que seu tamanho seja relevante. Um personagem com essa vantagem recebe um bônus de +2 em rolagens onde o tamanho dele seja relevante."
         ],
@@ -400,7 +408,7 @@ window.vantagensArray = [
     },
     {
         "nome": "Coragem Kalkan",
-        "pontos": "2",
+        "pontos": "1",
         "descricao": [
             "Um Kalkan não sente medo facilmente, por mais assustadora que seja a situação e por mais que ela ameace sua própria vida - Kalkans tendem a ver isso como uma chance de se sentirem vivos e testar o que aconteceria se fizessem algo que as pessoas tendem a não fazer. Um personagem com essa vantagem recebe um bônus de +3 contra testes que envolvam sentir, resistir ou encarar o medo e insanidade."
         ],
@@ -416,7 +424,7 @@ window.vantagensArray = [
     },
     {
         "nome": "Corpo Superior",
-        "pontos": "4",
+        "pontos": "2",
         "descricao": [
             "As várias encarnações de um espírito que forma um Ogrekin carrega consigo algumas memórias e experiências de vidas passadas, e justamente por isso eventualmente esta velha alma pode reencarnar e trazer consigo parte dessas experiências e transferi-las para o ambiente biológico. Assim, um personagem com essa vantagem conseguiu uma reencarnação boa o suficiente para ampliar seus sentidos naturais, sendo capaz de ouvir claramente acontecimentos à 25 metros de distância dele, ouvir freqüências inaudíveis para pessoas normais, além de também possuir uma visão que vê 10x mais longe que um humano comum e ser capaz de possuir um olfato superior, identificando cheiros e fragrâncias impossíveis de um humano comum sentir."
         ],
@@ -424,7 +432,7 @@ window.vantagensArray = [
     },
     {
         "nome": "Awareness",
-        "pontos": "2",
+        "pontos": "1",
         "descricao": [
             "O perigo está à espreita em todos os lugares quando você menos espera, e os Ogrekins sabem muito bem disso e levam esse ensinamento para suas vidas. Dessa forma, um personagem com essa vantagem ganha um bônus de +4 em qualquer teste que envolva a perícia Percepção afim de perceber perigos ou emboscadas no ambiente onde está. Mesmo falhando no teste o personagem com essa vantagem ainda pode agir na rodada surpresa, sendo assim, o último na ordem de iniciativas."
         ],
@@ -432,7 +440,7 @@ window.vantagensArray = [
     },
     {
         "nome": "Imagem Sobrenatural",
-        "pontos": "1",
+        "pontos": "0",
         "descricao": [
             "Há algo de peculiar na existência dos Ogrekins; por mais que eles possuam um corpo físico e uma alma que já conheceu inúmeras outras existências, ainda há algo que fica de fora misteriosamente: a imagem dos mesmos. Isso pode soar sem sentido, mas estudos diversos tentam explicar o porque de muitos Ogrekins nunca saírem em fotos ou serem capturados por imagens de câmeras (mesmo as mais avançadas tecnologicamente), nenhum deles ainda obteve uma resposta. Assim, um personagem com essa vantagem não pode ter sua imagem capturada por nenhum aparato tecnológico, seja por foto ou vídeo."
         ],
@@ -448,7 +456,7 @@ window.vantagensArray = [
     },
     {
         "nome": "Ferocidade dos Orc",
-        "pontos": "3",
+        "pontos": "2",
         "descricao": [
             "Uma vez por episódio ou por dia (o que acontecer primeiro) o personagem com essa vantagem pode canalizar suas forças mais primitivas e instintivas, fazendo com que seu sangue borbulhe de raiva e o coloque num modo implacável de confronto. O personagem não é nocauteado quando atinge 0 pontos de HP se passar num teste de Força de Vontade (dificuldade à critério do mestre) e pode continuar lutando normalmente até -10 HP, onde morre instantaneamente sem direito à testes de morte. Caso o personagem fique com o HP menor que 1 quando a batalha acabar, ele cai inconsciente e faz testes de morte normalmente."
         ],
@@ -456,7 +464,7 @@ window.vantagensArray = [
     },
     {
         "nome": "Andarilho do Sol",
-        "pontos": "1",
+        "pontos": "0",
         "descricao": [
             "Acostumados a andar longas distâncias em vários ambientes diferentes, os Orcs aprenderam que a natureza não é sua inimiga; mas sim mais um desafio à ser vencido. Dessa forma, personagens com essa vantagem conseguem enxergar 10x mais longe que a visão normal humana durante o dia, tendo facilidade em detectar pequenos detalhes sob a luz do sol ou iluminação ambiente artificial."
         ],
@@ -464,7 +472,7 @@ window.vantagensArray = [
     },
     {
         "nome": "Ameaça Natural",
-        "pontos": "2",
+        "pontos": "1",
         "descricao": [
             "Dificilmente um Orc não conseguirá intimidar seu alvo quando desejar, seja usando sua força, sua constituição ou seus argumentos (geralmente pouco) elaborados. Ainda assim, o que mais conta num Orc é geralmente sua aparência intimidadora, e assim, para testes da perícia Intimidação que o personagem com essa vantagem fizer, ganhe um bônus de +2."
         ],
@@ -480,7 +488,7 @@ window.vantagensArray = [
     },
     {
         "nome": "Jóia do Oceano",
-        "pontos": "1",
+        "pontos": "0",
         "descricao": [
             "A beleza herdada de seus primos distantes, os Elfos e os El'zels também floresceu por baixo da água e se adaptou com o tempo. Muitas lendas sobre sereias e tritões na verdade fazem referências à Quellsirs de tempos antigos que ainda estavam se desenvolvendo, mas a beleza deles sempre foi o traço mais marcante e encantador da raça. Um personagem com essa vantagem pode adicionar um bônus de +2 em testes de Carisma onde sua aparência seja relevante (em testes de Sedução ou outros que forem relevantes e o Mestre permitir)."
         ],
@@ -488,7 +496,7 @@ window.vantagensArray = [
     },
     {
         "nome": "Artesanato Subaquático",
-        "pontos": "2",
+        "pontos": "1",
         "descricao": [
             "Existem incontáveis relíquias, artefatos e objetos com valores inestimáveis que possuem sua origem vinda dos profundos oceanos. Quellsirs possuem um talento natural para trabalhar com materiais incomuns como corais, pérolas rochas, algas e outros minérios e plantas provindas do mar. Assim, o trabalho dos mesmos é sempre muito bem reconhecido e apreciado (na maioria das sociedades), fazendo com que o personagem com essa vantagem ganhe um valor adicional de +25% moedas de ouro quando trabalhando com a perícia Emprego em referência à criação de algum objeto não-consumível."
         ],
@@ -504,7 +512,7 @@ window.vantagensArray = [
     },
     {
         "nome": "Fruto da Árvore mãe",
-        "pontos": "1",
+        "pontos": "0",
         "descricao": [
             "Membros dessa raça tendem a envelhecer mais devagar que outras raças, embora não sejam totalmente imortais e imunes aos efeitos do tempo. Dessa forma, um personagem Zahari com essa vantagem dificilmente terá algum traço de envelhecimento físico externo notável, e provavelmente morrerá com a aparência jovem quando sua hora chegar."
         ],
@@ -512,7 +520,7 @@ window.vantagensArray = [
     },
     {
         "nome": "Contato Natural",
-        "pontos": "2",
+        "pontos": "1",
         "descricao": [
             "Estar no meio de animais de diversos tipos, selvagens ou não, é algo natural para os Zaharis e isso na verdade é algo até esperado entre eles. Membros dessa raça com essa vantagem são capazes de se comunicar com animais e entender seus sentimentos ou motivações, mesmo que não seja através de uma comunicação verbal direta. Além disso, animais não atacarão o Zahari a não ser que ele os ataque primeiro. O personagem pode rolar um teste da perícia Natureza e adicionar um bônus de +2 sempre que esse teste envolver alguma tentativa de lidar com animais selvagens ou domá-los."
         ],
@@ -553,7 +561,7 @@ window.vantagensArray = [
     },
     {
         "nome": "Olhar Frio",
-        "pontos": "2",
+        "pontos": "1",
         "descricao": [
             "A sua neutralidade como Yu'qun é muito forte e presente em suas falas e pensamentos. Dessa forma, ganhe um bônus de +2 em testes que envolvam perícias ou atributos para sentir as motivações de um alvo ou identificar mentiras / falsos testemunhos (mesmo que você não tenha provas sólidas para acreditar nisso)."
         ],
@@ -561,7 +569,7 @@ window.vantagensArray = [
     },
     {
         "nome": "Senso de Corrupção",
-        "pontos": "3",
+        "pontos": "1",
         "descricao": [
             "A elevada percepção de Yu'qun pode ser bem útil em casos de perigo; o personagem com essa vantagem é capaz de, através de um teste da perícia Percepção, notar em até 8 metros de distância qualquer tipo de corrupção anormal (de origem mágica ou algo do tipo) e estabelecer uma breve escala do quão perigoso isso é para ele ou para as pessoas à sua volta. O jogador pode assim, perguntar privadamente ao Mestre qual o grau de perigo frente ao que ele percebeu e o Mestre dizer numa escala de 1 à 5 o nível de perigo (sendo 5 o mais perigoso)."
         ],
@@ -617,11 +625,19 @@ window.vantagensArray = [
         "requisitos": "Arquétipo Arauto da Profecia"
     },
     {
-        "nome": "Observador Nato",
+        "nome": "Andarilho do Mundo",
         "pontos": "0",
         "descricao": [
-            "Criaturas ou alvos quaisquer não podem se esconder de seus sentidos. Caso alguém esteja se escondendo de você (ou no local onde está), você sempre consegue encontrar pistas ou falhas na manobra para encontrar tal alvo muito mais facilmente que qualquer outra pessoa conseguiria. Esses efeitos não se aplicam em combate e também funcionam para aparatos tecnológicos ou magia."
-        ],
+			"Seu treinamento te deixou apto a agir com maior precisão, facilidade e sobrevivência em um tipo de terreno. Assim sendo, escolha um terreno que represente o seu treinamento: Neve, Desertos, Pântanos, Montanhas, Planícies, Cavernas, Florestas, Praias ou Urbano. Sempre que estiver no seu estilo de terreno escolhido, você pode declarar ao Mestre que irá tomar um tempo para se familiarizar com ele. Esse tempo pode ser de 5 à 30 minutos.",
+ "Dependendo da quantidade de tempo gasta, você ganha os seguintes benefícios (a critério do mestre frente ao tempo usado) enquanto permanecer nesse tipo de terreno:",
+"- Você e seu grupo não podem se perder de qualquer forma, a não ser que seja por influências mágicas;",
+"- Você está sempre alerta ao perigo, não podendo ser surpreendido em combate e sabendo automaticamente quando alguma criatura ou alguém está na espreita;",
+"- Você ignora qualquer penalidade que o terreno imponha contra você dentro e fora de combate;",
+"- Você passa automaticamente em testes de Furtividade e os seus relacionados;",
+"- Você é capaz de encontrar comida sem rolar qualquer teste. Em ambientes urbanos isso pode significar uma facilidade pra encontrar restaurantes ou locais com comida;",
+"- Você passa automaticamente em testes relacionados à Rastreamento e identificação de pegadas, trilhas ou vida local;",
+"Alternativamente, você pode não pegar alguma outra vantagem de arquétipo para comprar treinamento em um segundo tipo de terreno da sua escolha. Essa vantagem só pode ser pega no máximo duas vezes. Os terrenos escolhidos devem fazer sentido com a história e passado / presente do seu personagem."
+		],
         "requisitos": "Arquétipo Artilheiro"
     },
     {
@@ -644,15 +660,22 @@ window.vantagensArray = [
         "nome": "Débito de Sangue",
         "pontos": "0",
         "descricao": [
-            "Enquanto existirem pelo menos duas pessoas no mundo, alguém vai querer alguém morto. O assassino sempre sabe como conseguir alvos e pode conseguir um sem a necessidade de testes, contanto que esteja em uma cidade/vilarejo. Um assassino não pode conseguir um alvo novo enquanto não tiver se livrado do último. Se livrar de um alvo dá uma quantia de dinheiro para o assassino apropriado ao seu nível. O nível do assassino também define a dificuldade do trabalho."
-        ],
+            "Enquanto existirem pelo menos duas pessoas no mundo, alguém vai querer alguém morto. O assassino sempre sabe como conseguir alvos e pode conseguir um sem a necessidade de testes, contanto que esteja em uma cidade/vilarejo. Um assassino não pode conseguir um alvo novo enquanto não tiver se livrado do último. Se livrar de um alvo dá uma quantia de dinheiro para o assassino apropriado ao seu nível. O nível do assassino também define a dificuldade do trabalho.",
+			"Esse trabalho pode ser executado tanto dentro dos episódios de jogo como uma atividade em tempo livre (ver capítulo 11 do manual)."
+		],
         "requisitos": "Arquétipo Assassino"
     },
     {
-        "nome": "Mercenário",
+        "nome": "Informante Silencioso",
         "pontos": "0",
         "descricao": [
-            "Você não liga para quem morre, você só está fazendo o que te dá dinheiro. Você ganha o dobro do Dinheiro provido de qualquer inimigo considerado Boss (Chefe) - isso pode ser interpretado de várias formas e o dinheiro não precisa vir diretamente no Boss, você pode receber ele mais tarde ou o que for: ALGUÉM te mandou matar aquela pessoa."
+			"O trabalho de um assassino não é só matar um alvo em plena luz do dia, mas inclui também a coleta de pistas e informações para que o assassinato seja o grand finale, o ápice de tudo.",
+			"Você desenvolveu uma aptidão natural em perceber detalhes e informações sociais das pessoas, principalmente sobre aquilo que te interessa: a vida pessoal delas. Uma vez por sessão ou dia (o que acontecer primeiro), você pode usar uma ação grátis de perguntar privadamente ao Mestre um número de questões bastante pessoais sobre um personagem que você pode ver e ouvir (naquele momento).",
+			"O número de questões a serem feitas é sempre igual ao nível do personagem. As perguntas só podem ser feitas quando o personagem está vendo ou ouvindo o seu alvo, como dito anteriormente e não podem ser feitas em dois momentos diferentes da mesma sessão. Exemplos de perguntas:",
+			"• \"Qual a profissão dele?\";",
+			"• \"Qual tipo de música ele mais gosta?\";",
+			"• \"Onde ele mora?\"",
+			"O que o personagem vai fazer com essas informações, é de critério dele. O mestre pode negar responder perguntas que seriam inadequadas ou que favoreçam o metajogo intenso (ver capítulo 12 do manual básico para saber a definição de metajogo), como por exemplo: \"Quem é que contratou ele pra tentar matar o meu empregador?\". Esse tipo de pergunta até pode ser respondida, mas talvez de uma forma mais enigmática ou que instigue o jogador e seu personagem a irem atrás de maiores detalhes."
         ],
         "requisitos": "Arquétipo Assassino"
     },
@@ -660,7 +683,7 @@ window.vantagensArray = [
         "nome": "Implacável",
         "pontos": "0",
         "descricao": [
-            "Se você estiver com 2 de HP ou menos mas ainda for capaz de agir e lutar, você entra num estado corporal e espiritual que transcendem a normalidade. Assim, caso seja reduzido para 0 de HP ou menos (a não ser que os danos te levem para -10 de HP imediatamente), você automaticamente passa nos dois primeiros testes de morte (seja de Força de Vontade ou Constituição)."
+			"Caso você receba um dano que te jogue pra 0 de HP imediatamente enquanto estiver com a vida cheia, ou com o seu valor na metade, você entra num estado corporal e espiritual que transcendem a normalidade. Assim, caso seja reduzido para 0 de HP ou menos (a não ser que os danos te levem para -10 de HP imediatamente), você automaticamente passa nos dois primeiros testes de morte (seja de Força de Vontade ou Constituição). Esse efeito só ocorre uma vez por sessão ou dia, o que acontecer primeiro."
         ],
         "requisitos": "Arquétipo Bárbaro"
     },
@@ -684,8 +707,11 @@ window.vantagensArray = [
         "nome": "Bard's Song",
         "pontos": "0",
         "descricao": [
-            "Por cantar, tocar ou fazer uma performance de uma música relacionada ao teste que está fazendo (você pode inventar uma pequena letra, não precisa ser uma obra de arte, mas precisa existir) você recebe até +4 em um teste de perícia, com um mínimo de +2. Você também pode cantar músicas relacionadas ao teste de aliados, dando um bônus de +2 para eles. Pode atrapalhar em certas situações. O tamanho do bônus varia de acordo com a qualidade do Poema/Música em questão.",
-            "Exemplo:“Minta, minta para o rei~! Faça ele de bobo e nos salve da lei~!”"
+			"Você começa a tocar uma música improvisada, a cantar algo ou mesmo a traçar uma performance na hora (caso seja uma música tocada, ela pode ter uma breve letra para acompanhar a canção mas não precisa ser nenhuma obra de arte) e imediatamente direcionando-a para um alvo da sua escolha.",
+			"Esse alvo precisa ser capaz de ouvir ou ver a sua performance para então ganhar um dado de harmonia. O dado de harmonia é 1d4 extra que pode ser rolado e somado como bônus num teste de Perícia ou de Atributo-Teste. O dado de harmonia fica ativo por 1 rodada ou 10 minutos num personagem e caso não seja usado, é perdido.",
+			"O usuário pode decidir usar o dado depois que a rolagem de uma perícia ou atributo-teste for feita, mas nunca depois que o Mestre dizer a dificuldade do teste ou o que aconteceu. Depois de rolado, o dado de harmonia é perdido.",
+			"Um alvo só pode ter um dado de harmonia ativo por vez. O bardo pode conceder uma quantidade de dados de harmonia igual ao seu nível atual, mas nunca mais de um dado de harmonia por vez pra um mesmo alvo.",
+			"Essa performance pode atrapalhar em certas situações e narrativamente ser inadequada ou ter outras complicações (chamar a atenção, por exemplo). Exemplo de performance:“Minta, minta para o rei~! Faça ele de bobo e nos salve da lei~!”"
         ],
         "requisitos": "Arquétipo Bardo"
     },
@@ -714,18 +740,29 @@ window.vantagensArray = [
         "requisitos": "Arquétipo Caçador"
     },
     {
-        "nome": "Sua reputação te precede",
+        "nome": "Energia Negativa",
         "pontos": "0",
         "descricao": [
-            "Ao lidar com capangas ou outros empregados de ranking baixo, todos os seus testes de intimidação ficam mais fáceis (tem sua dificuldade reduzida em uma categoria na tabela de dificuldades)."
+			"A energia negativa é o principal recurso que Cavaleiros Negros dominam. Similarmente aos Necromantes, os Cavaleiros Negros dão um passo em frente aos vários tipos de energias caóticas da realidade, mas optam por dominar o que eles chamam de Energia Negativa, ao invés da Energia Caótica dos necromantes.",
+            "A energia negativa influencia principalmente nas emoções, estado corporal e mente de um alvo, permitindo que os cavaleiros manipulem essas pessoas ou enfraqueçam-a da forma desejada.",
+            "Com essa vantagem, você pode converter 18 pontos de MP em 2 pontos de energia negativa. Um personagem só pode ter 4 pontos máximos de energia negativa por vez.",
+            "Essa energia não-usada se dissipa após 1 rodada, 10 minutos ou um curto tempo sem uso. A energia negativa pode ser usada da seguinte forma:",
+            "• Ouvir os pensamentos de um único alvo por 1 minuto (Custa 2 pontos);",
+            "• Causar inferioridade numa rolagem de Atributo-Teste de um alvo (Custa 2 pontos);",
+            "• Proteger a sua mente de feitiços de dominação mental e leitura de pensamentos por 10 minutos ou 1 rodada (Custa 1 ponto);",
+            "• Assumir uma forma negativa falsa - você copia a aparência de alguém, mas não a sua voz, mente e personalidade. Assim sendo, se você falar qualquer coisa ou levantar suspeitas de algo que o alvo copiado não faria, o efeito acaba. Receber danos de qualquer tipo acaba com esse efeito imediatamente também.",
+            "A manutenção da sua aparência depende da sua energia negativa, e isso depende do quanto o alvo acredita que você é aquela pessoa pela qual está se passando. Esse efeito não pode ser usado em combate.",
+            "Assumir uma forma negativa falsa dura 2 rodadas ou 20 minutos. Um personagem não pode assumir a mesma forma várias vezes em seguida e precisa de no mínimo 1 hora de descanso para usar esses efeitos novamente (Custa 4 pontos)."
         ],
         "requisitos": "Arquétipo Cavaleiro Negro"
     },
     {
-        "nome": "O mundo é dos espertos",
+        "nome": "Aura Profana",
         "pontos": "0",
         "descricao": [
-            "Se você estiver com 2 de HP ou menos, mas de pé e capaz de agir sem problemas, você pode escapar do combate de alguma forma apropriada e sem chance de falhar. Assim que o Cavaleiro Negro percebe que a situação não está em seu favor, ele se manda... Viver para lutar outro dia. Isso é considerado uma Derrota por rendição caso seja relevante. Essa vantagem só pode ser usada se outros integrantes do seu grupo estiverem segurando os inimigos até o limite do bom senso. Exemplos: Em uma luta de 2x5 até pode funcionar você sair e deixar seu último aliado sozinho, mas em uma 2x20 não. Da mesma forma, em uma luta 1x1 seria impossível fugir sorrateiramente."
+			"Um grande fluxo de energia negativa se concentra na sua existência. Justamente por isso, outras formas de vida acabam sendo afetadas por consequência imediata. Você pode ativar a sua Aura Profana uma vez por episódio ou dia, o que acontecer primeiro.",
+            "Ao ativar, você distorce sutilmente as emoções dos alvos próximos (incluindo seus aliados), fazendo com que eles ganhem inferioridade (veja o capítulo 5 para maiores detalhes) em testes de origem social até que a aura se dissipe.",
+            "A aura dura 1 rodada ou 10 minutos dentro de uma cena. Paralelamente, enquanto esse efeito durar, você é capaz de identificar movimentações em volta de si e não pode ser pego de surpresa num combate."
         ],
         "requisitos": "Arquétipo Cavaleiro Negro"
     },
@@ -733,7 +770,19 @@ window.vantagensArray = [
         "nome": "Símbolos Sagrados",
         "pontos": "0",
         "descricao": [
-            "Qualquer símbolo ou objeto feito em honra ao deus escolhido na criação do personagem se torna um símbolo sagrado, podendo funcionar como uma arma para seus ataques que envolvem a sua divindade. Símbolos sagrados nunca estão em nível inferior ao seu, mas símbolos realmente bem acabados ou poderosos podem ter nível superior."
+			"Toda divindade, crença ou conceito geralmente é acompanhada por uma espécie de símbolo que o define ou o representa conceitualmente. Assim sendo, qualquer símbolo ou objeto feito em honra ao deus escolhido na criação do personagem se torna um símbolo sagrado.",
+            "Um Clérigo pode ter um símbolo sagrado de graça nos seus equipamentos iniciais, e pode usá-lo para tentar clamar por uma intervenção divina, algo que a sua crença possa lhe ajudar ou guiar seu caminho. O clérigo pode rolar 1d100 enquanto gasta uma rodada ou 5 minutos evocando e se concentrando para pedir ajuda, onde:",
+            "• Resultado entre 1 e 10: O seu chamado não foi forte o suficiente, e portanto, em vão;",
+            "• Resultado entre 11 e 50: O seu chamado por ajuda foi atendido, de uma forma modesta e sutilmente útil;",
+            "• Resultado entre 51 e 89: O seu chamado por ajuda foi atendido e a sua divindade / crença te garante uma ajuda adequada;",
+            "• Resultado entre 90 e 100: O seu chamado por ajuda foi atendido e a sua divindade / crença te garante uma grande ajuda. Em alguns casos, talvez até um milagre inexplicável.",
+            "Regras de uso: Um clérigo só pode evocar o seu símbolo sagrado uma vez por sessão e o tipo de ajuda dependendo do resultado é descrito e dado à critério do mestre. Um resultado \"modesto e sutilmente útil\" não deveria ser algo exatamente da forma que o personagem pediu, mas que ainda possa ser usado de alguma forma.",
+            "Um resultado adequado seria um O Aventureiro transcende e continua o seu caminho, de combate, transformando-se no honroso Defensor. Essa figura representa o ápice do vigor e capacidade defensiva em proteger aqueles que amamos ou acreditamos - é a personificação do conceito de proteção, mesmo que essa proteção seja um ataque contra o próximo.",
+            "A trilha da justiça e da honra o atendimento do que foi pedido, mas não perfeito. Um resultado de grande ajuda",
+            "deve ser considerado algo extraordinário e que ajuda imensamente o clérigo e/ ou seu grupo. A intensidade da ajuda varia tanto com o resultado do dado quanto do nível do Clérigo em questão. Clérigos de nível 1 não deveriam ser capazes de elaborar milagres incríveis e extremamente fortes somente pelo resultado alto do dado.",
+            "Após invocar a sua divindade através do símbolo sagrado, o Clérigo precisa ao menos passar 7 horas (tempo de uma noite de sono inteira) em devoção completa, medidando, rezando ou pagando algum tipo de tributo pela ajuda da divindade em questão. Caso a ajuda não tenha sido conseguida, ele não precisa fazer isso.",
+            "Um personagem não pode invocar sua divindade sem um símbolo sagrado presente e caso o símbolo seja destruído durante uma invocação, a concentração do Clérigo é perdida e ele precisa recomeçar o processo (mas não fica ilegível para usar essa vantagem).",
+            "Essa vantagem pode não ser usada em certas situações que o mestre desejar, para manter o controle sobre a história e os acontecimentos. Todavia, pede-se descrição e bom senso do mesmo para que essa habilidade não seja totalmente tirada de um jogador."
         ],
         "requisitos": "Arquétipo Clérigo"
     },
@@ -749,7 +798,10 @@ window.vantagensArray = [
         "nome": "Friends in High Places",
         "pontos": "0",
         "descricao": [
-            "Sempre que você chegar atrasado e do alto para salvar alguém/um grupo de pessoas, você recebe sucesso automático nos três primeiros testes que forem possíveis para você dos atributos-teste: Força ou Agilidade."
+            "Você tem uma facilidade além do normal em identificar tensões no ar ou mudanças no ambiente que possam ser perigosas para você e seus aliados. Além disso, você é treinado para não deixar que o mal aconteça contra aqueles que protege. Dessa forma, se o Defensor montar um turno de guarda noturna, diurna ou o que for enquanto seus aliados dormem ou descansam, o grupo não pode ser emboscado e as criaturas na espreita ficam alerta da presença protetora do Defensor.",
+            "Criaturas que ainda assim resolvam atacar ou ficar na espreita não podem iniciar um combate surpresa contra o Defensor e seus aliados protegidos, pois ele sempre os avisará (se plausível) da ameaça.",
+            "Aliados protegidos não sofrem penalidades de perda ou má recuperação de Stamina quando tratando-se de um sono resguardado. Se o Defensor escolher usar essa vantagem, ele ficará relativamente cansado no dia seguinte quando seus aliados acordarem, mas não muito.",
+            "Escolha um: perder 1 ponto de Stamina atual ou sofrer inferioridade (ver capítulo 5) em todas as rolagens de perícias e atributos-teste por conta do cansaço acumulado."
         ],
         "requisitos": "Arquétipo Defensor"
     },
@@ -766,7 +818,8 @@ window.vantagensArray = [
         "nome": "Vanguarda",
         "pontos": "0",
         "descricao": [
-            "Você pode não ser o melhor protetor de todos e pode nem sempre estar em todos os lugares, mas fará de tudo para proteger seus aliados mais estimados. Caso esteja na frente do grupo durante uma exploração, movimentação ou cena, você pode agir como uma força de aviso e alerta para o grupo, permitindo que eles ganhem um bônus de +2 na primeira rolagem de qualquer coisa que possa vir a acontecer nesse caso, você também ganha esse bônus, mas reduzido para +0. Esse bônus só acontece novamente depois de um certo tempo (a critério do mestre)."
+            "Você pode não ser o melhor protetor de todos e pode nem sempre estar em todos os lugares, mas fará de tudo para proteger seus aliados mais estimados.",
+            "Caso esteja na frente do grupo durante uma exploração, movimentação ou cena, você pode agir como uma força de aviso e alerta para o grupo, permitindo que eles ganhem superioridade (ver capítulo 5) na primeira rolagem executada a partir de então. Você não ganha esse bônus. Esse bônus só acontece novamente depois de um certo tempo (a critério do mestre)."
         ],
         "requisitos": "Arquétipo Defensor"
     },
@@ -782,15 +835,31 @@ window.vantagensArray = [
         "nome": "O filho pródigo retorna",
         "pontos": "0",
         "descricao": [
-            "Quando em uma selva, pântano ou floresta realmente densa, você evita perigos e perigos evitam você. As árvores parecem guiar o seu caminho e os predadores se afastam. Criaturas mágicas da floresta também podem te auxiliar, a depender do misticismo do local."
+            "Escolha um tipo de terreno para representar a sua origem: Neve, Desertos, Pântanos, Montanhas, Planícies, Cavernas, Florestas ou Praias. Quando em um desses terrenos ou suas variantes, você evita perigos e perigos evitam você. As árvores parecem guiar o seu caminho e os predadores se afastam.",
+            "Criaturas mágicas desse local também podem te auxiliar, a depender do misticismo do local. Escolha também um traço físico na aparência do seu personagem que represente de onde ele veio. Podem ser coisas como um atributo animal, exemplo: manchas de leopardo na pele, olhos parecidos com o de um tigre, chifres de cervo, ou algo mais geral: cabelo como se fossem folhas secas, pele branca como a neve ou vermelha como o deserto. Isso é apenas um traço narrativo e de aparência e não deve conceder nenhum bônus prático ou mecânico."
         ],
         "requisitos": "Arquétipo Druida"
     },
     {
-        "nome": "Comandar Plantas",
+        "nome": "Metamorfose",
         "pontos": "0",
         "descricao": [
-            "Você pode se concentrar para fazer plantas morrerem ou florescerem. Seu toque pode levar uma flor murcha a algo com beleza sem preço. Em poucas semanas, você poderia transformar uma pequena área de um deserto em um Oasis, usando apenas o seu dom."
+            "Você pode se transformar em qualquer animal natural do seu local de origem como uma ação grátis. Você pode se transformar até duas vezes por dia ou sessão (o que acontecer primeiro). O tipo de criatura que você irá assumir a forma depende do seu nível atual, onde:",
+            "• Nível 1 e 2: Não são permitidas criaturas que voem ou nadem (como recurso primário);",
+            "• Nível 3: Não são permitidas criaturas que voem (como recurso primário);",
+            "• Nível 4: Qualquer animal conhecido ou estudado é permitido.",
+            "Pontos importantes:",
+            "• Os seus itens e possessões se transformam junto de você, transformando-se numa cópia perfeita desse animal.",
+            "• Você ainda mantém seus atributos de combate como são, seus atributos-teste podem aumentar ou diminuir de acordo com o animal que assumir, e o quanto eles vão ser alterados é de critério do Mestre.",
+            "Valores de Inteligência, Sabedoria e Carisma não devem mudar. É recomendado que o jogador e/ou o mestre anotem essas variações de atributos pra cada forma numa pequena lista para ficar fácil de ser lembrado. Recomenda-se que as variações sejam de +1 ou -1 nos atributos.",
+            "• Ao assumir a forma animal, o druida ganha automaticamente as características naturais dessa criatura. Exemplo: capacidade de respirar em baixo d'água, voar, ter garras, penas, visão no escuro, etc.",
+            "• O druida pode ter novas ações básicas nas suas formas animais, mas recomenda-se que isso seja discutido e decidido entre mestre e jogador. Um druida não pode usar suas técnicas ou habilidades mágicas enquanto transformado.",
+            "• Um animal não pode ter técnicas e habilidades mágicas naturalmente, caso isso seja necessário, deverá ser estabelecida uma regra da casa entre mestre e jogador e decidido como será feito.",
+            "• Um druida pode reverter a sua forma original como ação grátis à qualquer momento. A duração da transformação é igual a 1 hora.",
+            "• Pede-se bom senso, descrição e fidelidade ao aspecto narrativo do mestre e do jogador ao lidarem com as formas e o combate. Um gato doméstico não deveria ser capaz de lutar contra um dragão, ou um cavalo não deveria ser capaz de derrotar um ogro meramente por conta dos seus atributos.",
+            "• O druida pode gastar 10 minutos ou 1 rodada estudando um animal que ele possa ver, ouvir ou tocar (ou todas as opções) para então adicionar a forma do mesmo à sua lista de formas conhecidas.",
+            "• O druida não pode falar ou fazer qualquer ação que tome como vantagem o uso de suas mãos ou habilidade motora se aquele animal não for capaz naturalmente disso. Isso inclui coisas como se transformar numa águia e tentar manipular com as patas uma faca da mesma forma que você manipularia da forma humana.",
+            "• Um druida mantém suas vantagens e desvantagens quando se transformar, sejam elas de arquétipo, raça ou do personagem."
         ],
         "requisitos": "Arquétipo Druida"
     },
@@ -798,7 +867,8 @@ window.vantagensArray = [
         "nome": "Ascendência Elemental",
         "pontos": "0",
         "descricao": [
-            "Ao criar o seu personagem, escolha um elemento. Você só poderá usar esse elemento até obter outras formas de manipular os que não detêm controle. Você pode usar esse elemento para qualquer coisa que desejar em questões interpretativas, como formar um cantil de gelo, um escudo temporário de pedra (para fins que não sejam de combate), uma corda de trovões para segurá-lo num penhasco ou mesmo um furacão de ar para prevenir que você e seus aliados recebam dano por queda numa situação especial."
+            "Ao criar o seu personagem, escolha um elemento. Você só poderá usar esse elemento até obter outras formas de manipular os que não detêm controle. Você pode usar esse elemento para qualquer coisa que desejar em questões interpretativas, como formar um cantil de gelo, um escudo temporário de pedra (para fins que não sejam de combate), uma corda de trovões para segurá-lo num penhasco ou mesmo um furacão de ar para prevenir que você e seus aliados recebam dano por queda numa situação especial.",
+			"Esse efeito não pode ser usado em combate para causar dano direto, prevenir dano ou coisas do tipo. Esta vantagem só pode ser usada em, combate caso contribua com situações exclusivamente narrativas. O custo de MP ao usar essa vantagem fica a critério do Mestre."
         ],
         "requisitos": "Arquétipo Elementalista"
     },
@@ -806,8 +876,9 @@ window.vantagensArray = [
         "nome": "Espírito Elemental",
         "pontos": "0",
         "descricao": [
-            "Esta vantagem usa o elemento escolhido pela vantagem anterior durante a criação do personagem (Fogo, Eletricidade, Ar, Gelo e Água, Bio ou Terra). Você pode ter um objeto que é sua posse inquestionável encantado para não poder ser utilizado por outras pessoas. Você pode definir as especificidades desse encantamento, mas como exemplos: uma espada encantada por água pode se desfazer e passar pelas mãos dos outros quando tentarem a segurar. Uma espada encantada por terra pode aumentar o próprio peso em várias toneladas. O fato é que se alguém que não for você tentar usar o item encantado, não vai poder."
-        ],
+            "Esta vantagem usa o elemento escolhido pela vantagem anterior durante a criação do personagem (Fogo, Eletricidade, Ar, Gelo e Água, Bio ou Terra). Você pode ter um objeto que é sua posse inquestionável encantado para não poder ser utilizado por outras pessoas. Você pode definir as especificidades desse encantamento, mas como exemplos: uma espada encantada por água pode se desfazer e passar pelas mãos dos outros quando tentarem a segurar. Uma espada encantada por terra pode aumentar o próprio peso em várias toneladas. O fato é que se alguém que não for você tentar usar o item encantado, não vai poder.",
+            "Os efeitos desse item devem ser mais narrativos do que qualquer outra coisa. Entretanto, caso o jogador queira unir esse artefato com alguma vantagem que permita a criação de um item, como \"Equipamento Lendário\" por exemplo, fica a seu critério."
+			],
         "requisitos": "Arquétipo Elementalista"
     },
     {
@@ -824,7 +895,8 @@ window.vantagensArray = [
         "nome": "Reação Improvisada",
         "pontos": "0",
         "descricao": [
-            "Quase sempre sua agilidade natural e graça permitem que você reaja de forma adequada as situações diversas e mais inesperadas. Com isso, você ganha um bônus natural de +2 em testes que são reações contra alguma  coisa que esteja acontecendo (fora de combate)."
+            "Você quase nunca é pego de surpresa devido aos seus reflexos treinados. Quando alguém ou alguma criatura tentar te pegar ou te atingir de alguma forma, você ganha superioridade (veja o capítulo 5) na rolagem em questão.",
+            "Adicionalmente, você também tem superioridade em testes com o atributo teste Agilidade sempre que envolver coisas como: reação ou reflexos."
         ],
         "requisitos": "Arquétipo Esgrimista"
     },
@@ -877,10 +949,13 @@ window.vantagensArray = [
         "requisitos": "Arquétipo Ferreiro"
     },
     {
-        "nome": "My Profession!",
+        "nome": "Reputação",
         "pontos": "0",
         "descricao": [
-            "Sempre que realizar testes de perícia relacionados a motivar aliados para um combate, adicione +2 ao resultado do dado."
+            "A vida de um gladiador é lutar, seja por algum ideal ou meramente por esporte e para provar-se forte. Com isso, a cada nível que o Gladiador ganhar, ele aumenta sua reputação base em +1. O Mestre pode dar pontos de reputação conforme desejar para esse personagem, como por exemplo, boa interpretação, não fugir de lutas, vencer lutas difíceis, etc. Um gladiador perde 1 ponto de reputação também quando o Mestre achar justo, como em derrotas em lutas importantes (ou qualquer luta), agir fora do personagem ou simplesmente fazer algo que afete sua reputação negativamente.",
+            "Para cada ponto em sua reputação, o Gladiador se sente mais motivado, querido e capaz de fazer qualquer coisa, assim, ele reduz a dificuldade de testes de perícias e/ou atributos-teste num valor igual a metadte da reputação atual dele (arredondado para cima). Ter reputação não significa só ser conhecido pra um Gladiador, mas sim empenhar-se mais e treinar para corresponder as expectativas das histórias e canções sobre si. Quanto menor a reputação, menos motivado e concentrado um Gladiador está.",
+            "Adicionalmente, um Gladiador pode conseguir descontos e redução de preço de itens em lojas ou vendedores em geral durante o jogo, de acordo com a sua reputação.",
+            "A reputação máxima de um personagem deve ser 20, e a mínima 0. A forma que a reputação vai ser dada, retirada ou usada, depende muito da descrição do Mestre e também de um acordo prévio com o jogador. Essa vantagem fornece inúmeras possibilidades e ganchos interpretativos que podem enriquecer uma campanha e o desenvolvimento do próprio personagem."
         ],
         "requisitos": "Arquétipo Gladiador"
     },
@@ -893,18 +968,19 @@ window.vantagensArray = [
         "requisitos": "Arquétipo Gladiador"
     },
     {
-        "nome": "Herói",
+        "nome": "Lutador Natural",
         "pontos": "0",
         "descricao": [
-            "Você não se abate fácil e possui uma grande força de vontade interna. Ao ficar com 2 de HP ou menos (contanto que ainda seja positivo) você pode ativar esta vantagem e continuar lutando normalmente mesmo depois que cair para 0 de HP ou menos, podendo ficar com o HP negativo (indo até -10). Se você atingir -10 de HP você morre automaticamente, mas, se a luta terminar e você ficar com o HP menor que 1, os testes de morte são feitos normalmente."
+			"Você luta da forma que pode, como pode, com quem pode e usando do que sabe. Um guerreiro é um lutador experiente que não precisa se ater em empregar só um tipo de tática ou uma arma, ele usará tudo ao seu dispor para vencer. O Guerreiro com essa vantagem começa com dois estilos de luta ao invés de um, em seu primeiro nível."
         ],
         "requisitos": "Arquétipo Guerreiro"
     },
     {
-        "nome": "Presença Inspiradora",
+        "nome": "A Jornada do Herói",
         "pontos": "0",
         "descricao": [
-            "Sua vontade interior é algo admirável, mesmo que não se mostre sempre que possível. Com isso, sempre que estiver na companhia de dois (2) aliados ou mais, ganhe um bônus de +1 nas três primeiras rolagens que fizer durante o episódio ou dia (o que demorar mais para acontecer), desde que essas atividades ou testes envolvam uma forma de ajudar os aliados."
+            "Todo guerreiro tem um objetivo e morrer cedo não faz parte dos planos dele. Uma vez por sessão ou dia (o que acontecer primeiro), caso o Guerreiro caia para 30% do seu HP total, ele evoca todo o seu ser com o máximo de força de vontade que conseguir, recebendo superioridade (veja o capítulo 5 para maiores detalhes) nos dois próximos testes que fizer, seja em combate ou não.",
+            "Esse efeito é cancelado caso o guerreiro seja curado para mais de 30% do seu HP antes de usar as rolagens. Ao mesmo tempo, caso o efeito se ative mas não seja usado parcial ou totalmente, ele é perdido."
         ],
         "requisitos": "Arquétipo Guerreiro"
     },
@@ -974,10 +1050,16 @@ window.vantagensArray = [
         "requisitos": "Arquétipo Inquisidor"
     },
     {
-        "nome": "Fogo Sagrado",
+        "nome": "Fervor",
         "pontos": "0",
         "descricao": [
-            "Por um curto período de alguns minutos, se torna dia (ou extremamente claro) na região onde você estiver. Além disso, qualquer escuridão artificial ou mágica enfraquece, deixando tudo mais claro. Você só consegue realizar essa façanha uma vez por dia ou episódio, o que demorar mais para passar."
+            "Você é capaz de manifestar um pequeno efeito sobrenatural garantido pela sua divindade, uma demonstração da sua força e treinamento como Inquisidor. Você pode evocar os seguintes efeitos:",
+            "• Abrir ou fechar uma porta ou janela destrancada de forma violenta e instantânea;",
+            "• Sua voz fica três vezes mais alta e forte que o normal por alguns 2 minutos;",
+            "• Você pode fazer com que as luzes e chamas de um local fiquem piscantes, mais fracas, mais intensas ou mudem de cor por 1 minuto;",
+            "• Você pode criar um som instantâneo em um ponto desejado da sua escolha, desde que você possa vê-lo. Exemplo: uma voz desconhecida, o barulho do vento, etc;",
+            "• Você pode criar tremores inofensivos por 1 minuto;",
+            "• Você pode parecer mais forte e intimidador do que realmente parece, por 1 minuto."
         ],
         "requisitos": "Arquétipo Inquisidor"
     },
@@ -1028,37 +1110,32 @@ window.vantagensArray = [
         "nome": "O monstro acorda",
         "pontos": "0",
         "descricao": [
-            "Em situações bem específicas, geralmente, mas não necessariamente, relacionadas à raiva, o personagem se transforma ou perde boa parte do controle, se tornando uma fera selvagem. Quando o monstro acorda, o personagem pode gastar 1 Stamina para curar seu HP totalmente. O monstro costuma dormir quando o que o acordou não existe mais, mas em situações mais intensas a transformação pode durar mais tempo. O jogador tem controle sobre quando \"O monstro acorda\", sendo quem julga se uma situação é boa o suficiente ou não.",
-            "Caso o jogador queira, o personagem pode ter seus atributos de combate reduzidos a 0 enquanto o monstro estiver dormente. Nesse caso, a primeira ativação de \"O monstro acorda\" em uma sessão não consome Stamina."
+            "Dentro do personagem, vive um monstro incontrolável. Certas emoções fortes (definidas na criação do personagem) acordam esse monstro, transformando o personagem e alterando sua personalidade. Para a maioria das transformações, o personagem ainda exercerá um certo controle sobre o monstro, mas o mestre pode decidir que a emoção que transformou o personagem foi simplesmente forte demais e que, com isso, o monstro obtém controle completo, transformando o personagem em uma arma de destruição em massa sem mira.",
+            "A descrição, personalidade e forma de agir desse monstro devem ser descritas na história do personagem. Enquanto transformado o personagem não é mais aquele de antes e agora pensa diferente, age diferente e acima de tudo: tem sede de destruição. Escolha uma opção abaixo:",
+            "• Você ganha superioridade (ver capítulo 5) em testes de Agilidade e perícias relacionadas na primeira transformação do dia ou episódio (o que demorar mais pra acontecer);",
+            "• Você ganha superioridade em testes de Força e perícias relacionadas na primeira transformação do dia ou episódio (o que demorar mais pra acontecer);",
+            "• Você causa medo e insegurança para aqueles proximos de você, que recebem inferioridade (ver capítulo 5) no primeiro teste que fizerem contra o seu personagem, independente do que for. Não se aplica em combate;",
+            "• Pode usar pontos de Stamina para se curar normalmente dentro do seu turno. Consome o turno. Só pode ser usada na primeira transformação do dia ou episódio (o que demorar mais pra acontecer);",
+            "O monstro costuma dormir quando o que o acordou não existe mais, mas em situações mais intensas a transformação pode durar mais tempo. O jogador tem controle sobre quando \"O monstro acorda\", sendo quem julga se uma situação é boa o suficiente ou não. Caso o jogador queira, o personagem pode ter seus atributos de combate reduzidos a 0 enquanto o monstro estiver dormente."
         ],
-        "requisitos": "Arquétipo Juggernaut"
+        "requisitos": "Arquétipo Juggernaut, não ter escolhido \"Fúria é minha escolha, não uma doença\""
     },
     {
         "nome": "Fúria é minha escolha, não uma doença",
         "pontos": "0",
         "descricao": [
-            "O personagem enfrentou o monstro e venceu. A fera nunca sai do seu controle e faz o que ele quer que faça, não que isso seja fácil para o personagem. O personagem passa a receber +2 em testes de Força de Vontade para se controlar ou testes contra medo. O personagem pode ativar \"O monstro acorda\" quando quiser, sem exigir nenhuma situação."
+            "O personagem enfrentou o monstro e venceu, ou talvez tenha perdido e sido consumido por ele. Sua transformação passa a ser eterna e irreversível. A força e violência do personagem são claras para todos os que o vêem. O personagem passa a receber -2 em testes para convencer outros de que não é uma ameaça, mas +2 em testes de Intimidação onde usa sua natureza como ameaça. O monstro também pode escolher uma das vantagens a seguir:",
+            "• O Maior Desafio: O personagem já enfrentou o que tem de pior no mundo. O personagem não sente mais medo nem é capaz de ter sua mente dominada ou encantada.",
+            "• Indomável: Uma vez por sessão ou dia (o que demorar mais a acontecer), o personagem pode invocar os poderes do seu monstro interior para se liberar de qualquer coisa que o esteja prendendo através de força bruta física e de espírito."
         ],
-        "requisitos": "Arquétipo Juggernaut, não ter escolhido \"Você não quer me ver zangado\""
+        "requisitos": "Arquétipo Juggernaut, não ter escolhido \"O monstro acorda\""
     },
-    {
-        "nome": "Você não quer me ver zangado",
+     {
+        "nome": "Informantes",
         "pontos": "0",
         "descricao": [
-            "Em situações especiais das condições \tde sua perda de controle, circunstâncias ainda mais fortes (muita, muita raiva) o personagem se torna o monstro... Mas totalmente fora de controle e sem um pingo de auto controle. O monstro irá  destruir o que o trouxe e então passará a destruir tudo que existe a \tsua volta, sejam apenas objetos, amigos ou o amor da sua vida. \tDurante a duração da transformação, todas as rolagens de \tcombate do  personagem recebem +1. Além disso, o HP máximo do \tpersonagem aumenta em +20 temporariamente e ele é \tcurado \tcompletamente. O personagem passará a atacar aliados depois de eliminar seu inimigo atual e precisará ser parado por eles.",
-            "Enquanto fora de controle você não irá matar seus amigos e quando eles seriam nocauteados eles são nocauteados com 0 de HP sem risco de morte.",
-            "Atenção: Você ainda pode causar a morte deles indiretamente. Alguém nocauteado não pode se defender de outras ameaças.",
-            "Atenção: se seu HP ficar -10 ou menor do que isso de uma vez só, você morre imediatamente ao invés de retornar ao normal.",
-            "Esse poder não se ativa em eventos PVP e é controlado pelo mestre nas outras ocasiões, sendo recomendável não a ativar para uma luta entre jogadores (o monstro precisa enfrentar \t\tmúltiplos jogadores). Então o jogador não escolhe quando ativar essa vantagem, o mestre escolhe.",
-            "Essa vantagem pode ser trocada por \"Fúria é minha escolha, não uma doença\" no decorrer da história caso seja relevante aos acontecimentos."
-        ],
-        "requisitos": "Arquétipo Juggernaut, não ter escolhido \"Fúria é minha escolha, não uma doença\""
-    },
-    {
-        "nome": "Ouvinte Silencioso",
-        "pontos": "0",
-        "descricao": [
-            "Você sempre escuta o que lhe convém, podendo uma vez por sessão ou semana (o que demorar mais para acontecer) requisitar uma informação especial de sua escolha diretamente para o mestre. Essa informação pode chegar aos seus ouvidos por meio de conversas aleatórias de pessoas nas ruas ou mesmo pequenos informantes que podem vir a te conhecer / possuem um débito contigo."
+            "Você sempre escuta o que lhe convém, podendo uma vez por sessão ou semana (o que demorar mais para acontecer) requisitar uma informação especial de sua escolha diretamente para o mestre.",
+            "Essa informação pode chegar aos seus ouvidos por meio de conversas aleatórias de pessoas nas ruas ou mesmo pequenos informantes que podem vir a te conhecer / possuem um débito contigo."
         ],
         "requisitos": "Arquétipo Ladrão"
     },
@@ -1066,15 +1143,36 @@ window.vantagensArray = [
         "nome": "Malícia",
         "pontos": "0",
         "descricao": [
-            "Você sempre está prevenido para as coisas ruins que podem vir a acontecer numa aventura. Com isso, ignore qualquer necessidade de ferramentas especiais para destrancar uma porta, baú, container ou armadilha; você sempre tem o que precisa para trabalhar. Adicionalmente, você ganha +2 em testes relacionados à abrir fechaduras e desarmar armadilhas."
+            "A sua carreira como Ladrão te ensinou muitas coisas, inclusive como salvar a sua própria pele de maneiras diferentes, enquanto mantém as riquezas debaixo da manga. Escolha somente um desses efeitos:",
+            "• Experiente em Armadilhas: Você é capaz de analisar o ambiente e dizer se existem armadilhas ali. Pessoas normais acham isso impossível de ser feito, mas você não... Afinal, detectar armadilhas é o que te separa de ir pra cadeia, fugir ou perder uma mão. Quando você gastar 10 minutos ou 1 rodada observando uma área intensivamente (você precisa declarar isso ao mestre), role 1d10 + Sabedoria + Percepção, onde:",
+            "• Resultado entre 1 e 5: Pergunte uma das questões abaixo ao mestre.",
+            "• Resultado entre 6 e 14: Pergunte duas questões.",
+            "• Resultado de 15+: Pergunte três questões.",
+            "O mestre deve responder essas perguntas em particular para o Ladrão. Se o mestre desejar, ele não precisa responder exatamente com clareza, mas deve ser o suficiente para sanar o óbvio da pergunta. Perguntas:",
+            "- Existem armadilhas por aqui?",
+            "- O que a ativa?",
+            "- É possível desativá-la?",
+            "- Existe algo mais por aqui?",
+            "- Existem portas escondidas?",
+            "- Há alguém nos observando?",
+            "• Língua Afiada: Uma vez por sessão ou dia (o que demorar mais pra acontecer), você pode mentir para um alvo desejado e fazer com que ele acredite em suas palavras. Você deve avisar o mestre que está usando essa vantagem para dar respaldo à sua fala. Mentiras muito absurdas falham automaticamente e não podem ser usadas nessa vantagem, então pede-se bom senso e criatividade do jogador em questão.",
+            "Essa mentira pode ser revelada pela vantagem \"Vingador Sagrado\" de Paladino, tendo prioridade sobre a mentira.",
+            "• Príncipe dos Ladrões: Você sempre está prevenido para as coisas ruins que podem vir a acontecer numa aventura. Com isso, ignore qualquer necessidade de ferramentas especiais para destrancar uma porta, baú, container ou armadilha; você sempre tem o que precisa para trabalhar. Adicionalmente, ganhe um bônus de +2 em testes de Prestidigitação."
         ],
         "requisitos": "Arquétipo Ladrão"
     },
     {
-        "nome": "Granger",
+        "nome": "Passe de Mágica",
         "pontos": "0",
         "descricao": [
-            "Sempre que você tentar adquirir informações sobre um tópico com uma perícia de Conhecimento e sua rolagem resultar em menos de 5, o resultado do dado é aumentado para 5."
+            "Todos os magos sabem alguns truques simples o suficiente para impressionar as pessoas quando necessário ou somente para ajudá-los a terem uma vida mais confortável durante o dia-dia. Você pode conjurar os seguinte efeitos abaixo:",
+            "• Apagar ou acender instantaneamente uma vela, lanterna, tocha ou uma pequena fogueira;",
+            "• Você pode aquecer, esfriar ou adicionar sabor à um objeto não-vivo de até 1 metro cúbico;",
+            "• Você pode fazer uma marca, cor ou símbolo aparecerem na superfície de um objeto por 1 hora;",
+            "• Você pode criar uma imagem ilusória do tamanho da sua mão por 5 minutos;",
+            "• Você pode criar um efeito sensorial inofensivo, como o som de chuva e trovões, faíscas dançantes no ar, um cheiro esquisito ou uma corrente de vento inexistente.",
+            "A quantidade de MP que cada efeito desses usa deve ser baixa ao ponto de serem quase insignificantes. Ainda assim, caso o Mestre queira taxar essas habilidades, ele poderia comprar algo em torno de 2 ou 3 pontos de MP.",
+            "O personagem pode cortar o efeito de uma evocação quando desejar e pode usá-las em sequência se desejar e se for permitido."
         ],
         "requisitos": "Arquétipo Mago"
     },
@@ -1100,15 +1198,15 @@ window.vantagensArray = [
         "descricao": [
             "Você possui uma fé muito forte dentro de si, seja em uma entidade específica ou em traços humanos abstratos (como força de vontade), e por isso a cada fim de episódio ganha +2 ponto de fé.  Um personagem começa a história com 3 pontos de fé e ganha mais 3 a cada término de sessão. Podendo acumular eles até qualquer quantidade. Pontos de fé podem ser acumulados e usados para fins específicos:",
             "- 1 Ponto: Escolha uma rolagem de Perícia e/ou Atributo-Teste. O resultado aumenta em +1. Se usando em uma rolagem sua, você deve usar a Fé antes de rolar o dado. Se usando em aliados, não tem problema usar depois da rolagem, entretanto, a rolagem do aliado ganha um bônus de +2 ao invés de +1. Não é possível gastar vários pontos de Fé para adicionar bônus ao mesmo teste. Só +1 e só uma vez.",
-            "- 2 Pontos: Escolha um alvo (podendo ser você mesmo). Esse alvo é curado para 100% HP e 100% MP. Não pode ser usada em combate e não gasta Stamina."
+            "- 3 Pontos: Escolha um alvo (podendo ser você mesmo). Esse alvo é curado para 100% HP e 100% MP. Não pode ser usada em combate e não gasta Stamina."
         ],
         "requisitos": "Arquétipo Mago Branco"
     },
     {
-        "nome": "Falsificação ou tesouro?",
+        "nome": "Eu tenho a coisa certa",
         "pontos": "0",
         "descricao": [
-            "Com um pequeno investimento de (Nível do Objeto a ser copiado ou criado) x 50 moedas de ouro, você pode criar uma falsificação quase perfeita de um artefato ou objeto que desejar, exceto que ele SEMPRE terá um defeito e não funcionará para o seu propósito original (ou se funcionar, não funcionará totalmente como deveria). Você também pode criar artefatos que sejam totalmente novos (desde que providencie uma descrição de como ele é e o que faz) para servirem à algum propósito social ou simples o suficiente. Os artefatos não são como invenções de engenheiros, portanto eles são bem mais simples e obedecem a regras de funcionalidade e objetivos mais diretos."
+            "Uma vez por episódio ou sessão (o que demorar mais para acontecer), você por acaso tem um pedaço de algum equipamento, item mudano ou mesmo consegue criar algo útil provindo do ambiente ou de uma criatura derrotada / morta. Criar ou ter esse objeto é um sucesso automático e uma ação grátis."
         ],
         "requisitos": "Arquétipo Mercante Príncipe"
     },
@@ -1149,7 +1247,7 @@ window.vantagensArray = [
         "nome": "Hamon",
         "pontos": "0",
         "descricao": [
-            "Você consegue controlar uma energia sobrenatural presente em todos os seres vivos tendo como a respiração como canalizador principal. Por meditar fora de combate por alguns minutos e gastar 1 ponto de Stamina você recupera seu HP e MP ao máximo."
+            "Você consegue controlar uma energia sobrenatural presente em todos os seres vivos tendo como a respiração como canalizador principal. Por meditar fora de combate por 1 hora e gastar 1 ponto de Stamina você recupera seu HP e MP ao máximo. É necessário que o monge não seja perturbado durante esse tempo e que ele seja capaz de manter sua concentração durante 1 hora ininterrupta."
         ],
         "requisitos": "Arquétipo Monge"
     },
@@ -1157,7 +1255,7 @@ window.vantagensArray = [
         "nome": "Discplina do Punho de Ferro",
         "pontos": "0",
         "descricao": [
-            "Quando não estiver com nenhuma arma equipada, os punhos do monge contam como duas armas de Nível 0 de uma mão (+1 de dano cada)."
+            "Quando não estiver com nenhuma arma equipada, os punhos do monge contam como duas armas de Nível 0 de uma mão que usam 1d6 como dano (+1 de dano cada)."
         ],
         "requisitos": "Arquétipo Monge"
     },
@@ -1182,7 +1280,7 @@ window.vantagensArray = [
         "pontos": "0",
         "descricao": [
             "Você é um exímio observador frente às demonstrações de poder e força que acontecem próximas de você. O mímico pode improvisar em suas técnicas qualquer atributo de dano, mesmo que o atributo usado não tenha muito haver com a técnica em questão. (Exemplo: Utilizar uma técnica que claramente usa Arma como atributo de dano, baseado no guerreiro do grupo, mas usando seu atributo Tecnologia.)",
-            "Além disso, o mímico pode ativar Estilos de Luta de aliados como se fossem seus."
+            "Além disso, o mímico pode ativar Estilos de Luta de aliados como se fossem seus. Quando copiando um estilo de luta, o Mímico copia todas as suas condições, áreas afetadas e efeitos."
         ],
         "requisitos": "Arquétipo Mímico"
     },
@@ -1220,7 +1318,7 @@ window.vantagensArray = [
         "nome": "Acrobata Natural",
         "pontos": "0",
         "descricao": [
-            "Uma vez por episódio você pode jogar novamente uma rolagem nas perícias: Acrobacias ou Furtividade e usar o resultado que mais lhe agradar."
+            "Uma vez por episódio você pode jogar novamente uma rolagem do atributoteste Agilidade ou qualquer perícia que use-a como atributo base e então, usar o resultado que mais lhe agradar."
         ],
         "requisitos": "Arquétipo Ninja"
     },
@@ -1236,8 +1334,9 @@ window.vantagensArray = [
         "nome": "Ordem dos Paladinos",
         "pontos": "0",
         "descricao": [
-            "Você faz parte da milenar ordem dos Paladinos. Se você precisar de ajuda, eles responderão com outros guardiões, mas você também pode ser chamado.",
-            "Essa vantagem é opcional."
+            "Você faz parte da milenar ordem dos Paladinos. Se você precisar de ajuda, eles responderão com outros guardiões, mas você também pode ser chamado. ",
+			"Você pode seguiras regras de divindades conforme apresentado no arquétipo Clérigo, para então dar maiores detalhes e definições sobre a sua ordem e quedivindade ou conceito eles seguem.",
+            "Essa vantagem é opcional. "
         ],
         "requisitos": "Arquétipo Paladino"
     },
@@ -1309,7 +1408,8 @@ window.vantagensArray = [
         "nome": "Corte de Alta Frequência",
         "pontos": "0",
         "descricao": [
-            "Quando você realizar um teste para quebrar ou cortar algum objeto usando sua espada, adicione +4 à rolagem. Esse corte, diferentemente dos cortes normais, atravessa e abre caminho em metais ou materiais de extrema resistência que não poderiam ser cortados normalmente. Não pode ser usado em combate."
+            "Quando você realizar um teste para quebrar ou cortar algum objeto usando sua arma, adicione +4 à rolagem. Esse corte, diferentemente dos cortes normais, atravessa e abre caminho em metais ou materiais de extrema resistência que não poderiam ser cortados normalmente.", 
+            "Não pode ser usado em combate."
         ],
         "requisitos": "Arquétipo Samurai"
     },
@@ -1371,14 +1471,24 @@ window.vantagensArray = [
         "nome": "Alta Resistência a Dor",
         "pontos": "2 ou 4",
         "descricao": [
-            "O personagem é capaz de resistir melhor quando dor é utilizada como uma arma contra ele. Em testes para resistir enquanto está sendo machucado ou torturado, o personagem recebe bônus de +2 em rolagens de Força de Vontade (FV). Pagando 4 pontos por essa vantagem, a vontade do personagem é inquebrável e o personagem nunca se rende à dor."
+            "O personagem é capaz de resistir melhor quando dor é utilizada como uma arma contra ele. Em testes para resistir enquanto está sendo machucado ou torturado, o personagem recebe superioridade em rolagens de Força de Vontade (FV). Pagando 4 pontos por essa vantagem, a vontade do personagem é inquebrável e o personagem nunca se rende à dor."
         ]
     },
+	{
+        "nome": "Analista",
+        "pontos": "2",
+        "descricao": [
+            "Você é extremamente observador e detalhista sobre as pessoas e coisas a sua volta. Numa olhada rápida em alguém ou algo, você consegue descrever três detalhes marcantes do seu alvo ou três perícias na qual ele tenha mais pontos (se for alguém vivo).",
+            "A quantidade de vezes que você pode usar essa vantagem depende do mestre, mas não deve levar muito tempo entre uma observação ou outra. Naturalmente, você precisa de um tempo entre observações."
+        ]
+    },	
     {
         "nome": "Anfíbio",
-        "pontos": "1",
+        "pontos": "1 ou 2 Pontos",
         "descricao": [
-            "O personagem possui traços de criaturas aquáticas dentro de si (e não necessariamente na sua fisiologia externa). Permite que o personagem respire debaixo d’água."
+            "O personagem possui traços de criaturas aquáticas dentro de si (e não necessariamente na sua fisiologia externa).",
+            "1 Ponto: Permite que o personagem ganhe superioridade em testes de atletismo quando tratando de natação.",
+            "2 Pontos: Permite que o personagem respire debaixo d’água e ganhe superioridade em testes de atletismo quando tratando de natação."
         ]
     },
     {
@@ -1445,11 +1555,18 @@ window.vantagensArray = [
         ]
     },
     {
+        "nome": "Caminhando nas Sombras",
+        "pontos": "2",
+        "descricao": [
+            "O personagem é treinado em se esconder e usar as sombras ao seu favor. Quando rolando um teste de Furtividade pra se esconder ou camuflar-se em algum local com sombras, você passa automaticamente no teste desde que a dificuldade seja até 8. Caso você seja do Arquétipo Ladrão, Sabotador ou Assassino, reduza o custo dessa perícia para 1 ponto."
+        ]
+    },	
+    {
         "nome": "Ciência da Informação",
         "pontos": "1",
         "descricao": [
             "Você trata contatos e informação como um produto, comprando e vendendo com cuidado. Arquivando, calculando e pensando em tudo como se fosse um pesquisador.",
-            "Você pode utilizar Inteligência no lugar de Carisma para testes com a perícia Manha."
+            "Você pode utilizar Inteligência no lugar de Carisma para um teste de conseguir informações nas ruas, ouvir fofocas, boatos e rumores pelos locais onde visitar."
         ]
     },
     {
@@ -1484,6 +1601,13 @@ window.vantagensArray = [
             "O personagem ganha um bônus de +1 nos testes de medo e insanidade. Se gastar mais pontos de vantagem, ganha +1 para cada ponto gasto, até um máximo de +3 (3 pontos)."
         ]
     },
+	{
+        "nome": "Curandeiro",
+        "pontos": "2",
+        "descricao": [
+            "O personagem tem aptidão natural com a medicina e procedimentos de primeiros socorros. Quando utilizando bandagens ou alguma ferramenta que ajude um personagem ferido à se estabilizar, o personagem ganha superioridade nos testes de Socorro."
+        ]
+    },	
     {
         "nome": "Defesa Mental",
         "pontos": "1 ou 2 ou 3",
@@ -1514,8 +1638,8 @@ window.vantagensArray = [
         "nome": "Direção Absoluta",
         "pontos": "2",
         "descricao": [
-            "O personagem nunca se perde, como se tivesse uma bússola embutida no cérebro, sempre sabe onde é o norte, voltar pelo caminho que fez, etc. O personagem ganha sucesso automático em testes para encontrar o caminho ou direção de até dificuldade 10, recebendo um +2 em testes com dificuldades maiores."
-        ]
+            "O personagem dificilmente se perde, como se tivesse uma bússola embutida no cérebro, sempre sabe onde é o norte, voltar pelo caminho que fez, etc. O personagem ganha sucesso automático em testes para encontrar o caminho ou direção de até dificuldade 10, recebendo um superioridade em testes com dificuldades maiores."        
+		]
     },
     {
         "nome": "Disposofobia",
@@ -1537,7 +1661,15 @@ window.vantagensArray = [
         "nome": "Empatia com Animais",
         "pontos": "3",
         "descricao": [
-            "Animais selvagens não atacam o personagem a menos que ele os ataque primeiro e ele pode tentar controlar um animal selvagem com um teste de Natureza. Recebe +2 em testes que envolvam lidar com animais diversos."
+            "Animais selvagens não atacam o personagem a menos que ele os ataque primeiro e ele pode tentar controlar um animal selvagem com um teste de Natureza. O personagem recebe superioridade em testes que envolvam lidar com animais diversos."
+			]
+    },
+	{
+        "nome": "Engenheiro de Masmorras",
+        "pontos": "3",
+        "descricao": [
+            "Você é um expert e conhecedor de masmorras, castelos, calabouços e afins quando se diz a respeito de armadilhas e passagens secretas. Ganhe superioridade em testes de Percepção e Inteligência para encontrar a presença de passagens secretas.",
+            "Armadilhas que forem te causar dano ganham inferioridade nas rolagens de dano. Se o seu arquétipo for Ladrão, você pode comprar essa vantagem por 2 pontos."
         ]
     },
     {
@@ -1550,8 +1682,8 @@ window.vantagensArray = [
             "1 Ponto: Arma de uma mão",
             "2 Pontos: Arma de duas mãos",
             "2 Pontos: Armadura.",
-            "Você pode pegar essa vantagem várias vezes, mas para equipamentos diferentes."
-        ]
+            "Você pode pegar essa vantagem várias vezes, mas para equipamentos diferentes. Veja as “Regras para Equipamento Épico, Lendário, Natural, de Valor Sentimental e X” na página 236 para saber como proceder ao comprar essa vantagem."
+	     ]
     },
     {
         "nome": "Equipamento Lendário",
@@ -1563,8 +1695,8 @@ window.vantagensArray = [
             "2 Ponto: Arma de uma mão",
             "4 Pontos: Arma de Duas Mãos",
             "4 Pontos: Armadura",
-            "Você pode pegar essa vantagem várias vezes, mas para equipamentos diferentes"
-        ]
+            "Você pode pegar essa vantagem várias vezes, mas para equipamentos diferentes. Veja as “Regras para Equipamento Épico, Lendário, Natural, de Valor Sentimental e X” na página 236 para saber como proceder ao comprar essa vantagem."       
+		 ]
     },
     {
         "nome": "Equipamento de Valor Emocional",
@@ -1576,8 +1708,8 @@ window.vantagensArray = [
             "1 Ponto: Duas armas de uma mão",
             "1 Ponto: Arma de duas mãos",
             "1 Ponto: Armadura.",
-            "Você pode pegar essa vantagem várias vezes, mas para equipamentos diferentes."
-        ]
+            "Você pode pegar essa vantagem várias vezes, mas para equipamentos diferentes. Veja as “Regras para Equipamento Épico, Lendário, Natural, de Valor Sentimental e X” na página 236 para saber como proceder ao comprar essa vantagem."      
+		  ]
     },
     {
         "nome": "Equipamento Natural",
@@ -1599,8 +1731,9 @@ window.vantagensArray = [
             "Você pode escolher qualquer quantidade de equipamentos que você tenha na sua ficha no momento de criação dela, podendo ser equipamentos comprados na loja ou equipamentos criados com vantagem. Esses equipamentos passam a fazer parte do corpo de seu personagem e não podem ser desequipados sem desmembrá-lo.",
             "Você pode (e deve) alterar as descrições desses \"equipamentos\" para algo que encaixe com essa vantagem. Um personagem orgânico provavelmente teria armas naturais. Um personagem robô talvez simplesmente tivesse a arma encaixada ali. Fazer upgrades nessas armas durante a história pode ser algo muito traumático para o personagem caso o equipamento seja uma arma natural dele. É recomendável que mestres explorem uma situação assim.",
             "Exemplo: Cria-se uma arma de duas mãos para Magia com Equipamento de Valor Sentimental e usa-se Equipamento X para transformá-la em uma Antena que atira raios. O custo final das duas vantagens juntas é 2.",
-            "Exemplo 2: Criam-se duas armas para o atributo Arma com Equipamento Lendário e usa-se Equipamento X para transformá-las em duas garras que saem dos punhos. O custo final das duas vantagens juntas é 5."
-        ]
+            "Exemplo 2: Criam-se duas armas para o atributo Arma com Equipamento Lendário e usa-se Equipamento X para transformá-las em duas garras que saem dos punhos. O custo final das duas vantagens juntas é 5.",
+            "Você pode pegar essa vantagem várias vezes, mas para equipamentos diferentes. Veja as “Regras para Equipamento Épico, Lendário, Natural, de Valor Sentimental e X” na página 236 para saber como proceder ao comprar essa vantagem."
+			]
     },
     {
         "nome": "Espírito Inabalável",
@@ -1636,6 +1769,13 @@ window.vantagensArray = [
         "pontos": "3",
         "descricao": [
             "Você entende a importância do aprendizado e presta mais atenção em tudo que você faz. Durante a criação da ficha, você ganha 2 pontos extras para distribuir em Perícias. Além disso, a cada nível você ganha 1 ponto extra para distribuir em Perícias."
+        ]
+    },
+    {
+        "nome": "Existência Kármica",
+        "pontos": "2",
+        "descricao": [
+            "O personagem é regido pelo Karma com uma força muito maior do que o normal. Faça coisas boas e coisas boas acontecem para você, mas faça coisas ruins e o Karma vai acabar te matando."
         ]
     },
     {
@@ -1707,8 +1847,8 @@ window.vantagensArray = [
         "nome": "Imortalidade Simples",
         "pontos": "2",
         "descricao": [
-            "O personagem não envelhece, nunca morrendo de causas naturais. O personagem ainda pode morrer de outras maneiras normais, ele é apenas imune aos efeitos do tempo."
-        ]
+            "O personagem não envelhece, nunca morrendo de causas naturais. O personagem ainda pode morrer de outras maneiras normais, ele é apenas imune aos efeitos do tempo. Se o personagem for da raça Elfo, El'zel ou Quellsir, ele pode comprar essa vantagem por 1 ponto."
+	    ]
     },
     {
         "nome": "Imunidade à Doença",
@@ -1742,7 +1882,7 @@ window.vantagensArray = [
         "nome": "Leitura Labial",
         "pontos": "2",
         "descricao": [
-            "Seja por capacidade natural ou uma incrível paciência e treino, você possui a habilidade de entender o que outras pessoas falam mesmo sem ouví-los, apenas pelo fato de observar como seus lábios se movem à distância. Dessa forma, se você tiver em uma situação onde não pode ouvir o que alguma pessoa está dizendo em até 8 metros de distância de você, faça um teste de Percepção contra uma dificuldade colocada pelo mestre para entender sobre o quê essa pessoa está falando. Você ganha um bônus de +1 nesse teste para cada ponto extra comprado nesta vantagem (além do custo básico de 2), até ela custar um máximo de 4 pontos."
+            "Seja por capacidade natural ou uma incrível paciência e treino, você possui a habilidade de entender o que outras pessoas falam mesmo sem ouví-los, apenas pelo fato de observar como seus lábios se movem à distância. Dessa forma, se você tiver em uma situação onde não pode ouvir o que alguma pessoa está dizendo em até 8 metros de distância de você, faça um teste de Percepção contra uma dificuldade colocada pelo mestre para entender sobre o quê essa pessoa está falando. Você ganha um bônus de superioridade nesse teste."
         ]
     },
     {
@@ -1785,7 +1925,8 @@ window.vantagensArray = [
         "nome": "Mente Veloz",
         "pontos": "3",
         "descricao": [
-            "Seu personagem é capaz de pensar muito mais rápido que outras pessoas, independente da sua inteligência. O efeito disso é que ele é capaz de tomar decisões complexas mesmo em pouco tempo sem afetar seu julgamento. Isso significa que você, o jogador, não precisa responder rapidamente à situação (como mestres realizando contagens de tempo) e você pode pensar um pouco para tomar a melhor decisão, sem tempo passar na história."
+            "Seu personagem é capaz de pensar muito mais rápido que outras pessoas, independente da sua inteligência. O efeito disso é que ele é capaz de tomar decisões complexas mesmo em pouco tempo sem afetar seu julgamento. Isso significa que você, o jogador, não precisa responder rapidamente à situação (como mestres realizando contagens de tempo) e você pode pensar um pouco para tomar a melhor decisão, sem tempo passar na história.",
+            "Adicionalmente, ganhe um bônus permanente na sua Percepção Passiva igual à +3 pontos."
         ]
     },
     {
@@ -1865,9 +2006,9 @@ window.vantagensArray = [
     },
     {
         "nome": "Pequeno",
-        "pontos": "3",
+        "pontos": "2",
         "descricao": [
-            "Seu personagem é menor que os padrões de sua raça (defina nas informações da ficha o quanto), por isso, ele recebe um bônus de +2 em rolagens onde seu tamanho seja relevante para executar alguma ação."
+            "Seu personagem é menor que os padrões de sua raça (defina nas informações da ficha o quanto), por isso, ele recebe superioridade em rolagens onde seu tamanho seja relevante para executar alguma ação" 
         ]
     },
     {
@@ -1957,19 +2098,39 @@ window.vantagensArray = [
             "-2 - Morte pelo sol: Funciona exatamente como a desvantagem de mesmo nome e o personagem não pode possuir essa desvantagem dentro de Morto-Vivo e por fora ao mesmo tempo."
         ]
     },
+	    {
+        "nome": "Segunda Raça - Elemental",
+        "pontos": "3",
+        "descricao": [
+            "Os ancestrais do personagem tiveram uma ligação bem próxima às forças primais da natureza. Um personagem não pode ter duas ou mais vantagens de \"Segunda Raça\".",
+            "Escolha um tipo de elemental para ser a sua segunda raça:",
+            "• Água: Você ganha superioridade em testes de Acrobacia.",
+            "• Areia: Você ganha superioridade em testes de Prestidigitação.",
+            "• Cristal: Seu valor de Aparência é aumentado em +2.",
+            "• Escuridão: Você ganha superioridade em testes de Furtividade quando se escondendo no escuro e uma visão noturna.",
+            "• Fogo: Ignore danos fora de batalha, efeitos temporais e obstáculos que sejam feitos de fogo.",
+            "• Fumaça / Névoa: Você ganha superioridade em testes de Furtividade quando se camuflando.",
+            "• Gelo: Ignore danos fora de batalha, efeitos temporais e obstáculos que sejam feitos de gelo.",
+            "• Luz: Você pode intensificar seu corpo e irradiar luz própria num raio de 10 metros em volta de você.",
+            "• Terra: Aumente sua constituição em +1. Você não pode ter outras vantagens que aumentem sua constituição funcionando junto dessa (elas não se acumulam).",
+            "• Trovão: Ganhe +2 de iniciativa bônus. Esse efeito não se acumula com outras vantagens que aumentem sua iniciativa.",
+            "• Madeira: Aumente seu HP máximo em +2. Esse efeito não se acumula com outras vantagens que aumentem seu HP máximo.",
+            "• Metal: Reduza os três primeiros danos dano que receber fora de batalha num episódio ou dia (o que acontecer primeiro) em 1 ponto.",
+            "• Vento: Você ganha superioridade em testes brutos de Agilidade e ignora danos por queda ou contusão."
+        ]
+    },
     {
         "nome": "Sono Leve",
         "pontos": "3",
         "descricao": [
-            "O personagem tem sono leve nunca dorme pesado, sempre vai poder acordar quando quiser. Ele também ganha resistência em qualquer situação de desmaio, ou sono induzido."
-        ]
+            "O personagem tem sono leve nunca dorme pesado, sempre vai poder acordar quando quiser. Ele também ganha superioridade para resistir em qualquer situação de desmaio, ou sono induzido."        ]
     },
     {
         "nome": "Super Audição",
         "pontos": "1 ou 3",
         "descricao": [
-            "1 ponto: Você é capaz de escutar claramente um alfinete caindo na sala ao lado. Isso te dá novas oportunidades para testes de percepção auditiva.",
-            "3 pontos: Você pode ouvir claramente sussurros realizados longe (25m) de você. Também pode escutar frequências inaudíveis para ouvidos normais. Isso te dá novas oportunidades para testes de percepção auditiva."
+            "• 1 ponto: Você é capaz de escutar claramente um alfinete caindo na sala ao lado. Você ganha superioridade em testes de percepção auditiva.",
+            "• 3 pontos: Você pode ouvir claramente sussurros realizados longe (25m) de você. Também pode escutar frequências inaudíveis para ouvidos normais. Você passa automaticamente em testes de percepção auditiva com dificuldades iguais até um valor de 12 ou menos."
         ]
     },
     {
@@ -1987,6 +2148,21 @@ window.vantagensArray = [
             "Enxerga 10x a visão normal humana. Sucesso automático em testes para enxergar pequenos detalhes de longe."
         ]
     },
+    {
+        "nome": "Terreno Favorito",
+        "pontos": "2",
+        "descricao": [
+			"Você conhece um tipo de terreno como a palma da sua mão, seja por treinamento ou por ter nascido nele como ambiente natural. Escolha um:",
+            "• Aquático: Você consegue segurar a sua respiração em até 2x o tempo normal para um membro comum da sua raça;",
+            "• Ártico: Ignore os efeitos do clima frio, mesmo que sejam bastante severos. Você não perde pontos de Stamina por hipotermia;",
+            "• Deserto: Ignore os efeitos do clima desértico e do forte sol, mesmo que sejam bastante severos. Você não perde pontos de Stamina por falta de água ou comida;",
+            "• Floresta: Ganhe superioridade em testes de Furtividade ou Agilidade quando tentando se camuflar nesse tipo de ambiente;",
+            "• Interiores / Urbano: Ganhe superioridade em testes de Furtividade ou Agilidade quando tentando se mover silenciosamente nesse tipo de ambiente;",
+            "• Pântanos: Ganhe imunidade à venenos e doenças originárias desse tipo de ambiente;",
+            "• Planícies: Ganhe superioridade em testes de Percepção ou Sabedoria quando tentando procurar algo nesse ambiente;",
+            "• Montanhas: Ganhe superioridade em testes de Atletismo ou Força quando escalando uma superfície desse tipo de ambiente;"
+        ]
+    },	
     {
         "nome": "Trabalho Duro",
         "pontos": "2",
@@ -2517,14 +2693,14 @@ window.desvantagensArray = [
         "nome": "Anacrônico",
         "pontos": "2",
         "descricao": [
-            "O personagem não consegue usar equipamentos modernos, tem muita dificuldade de se adaptar à tecnologia. Isso faz com que o personagem não possa usar Armas de Fogo ou usar qualquer tipo de equipamento que não seja básico e razoavelmente intuitivo para um ser vivo. O personagem também não pode colocar pontos na perícia \"Sistemas\" e falha automaticamente sempre que lidar com máquinas modernas."
+            "O personagem não consegue usar equipamentos modernos, tem muita dificuldade de se adaptar à tecnologia. Isso faz com que o personagem não possa usar Equipamentos Tecnológicos ou usar qualquer tipo de equipamento que não seja básico e razoavelmente intuitivo para um ser vivo. O personagem também não pode colocar pontos na perícia \"Sistemas\" e falha automaticamente sempre que lidar com máquinas modernas."
         ]
     },
     {
         "nome": "Analfabetismo",
         "pontos": "1",
         "descricao": [
-            "O Personagem não sabe ler ou escrever."
+            "O Personagem não sabe ler ou escrever. Ele não pode investir pontos na perícia \"Linguagem\" e não pode ter nenhuma outra língua conhecida que não seja \"Comum\" e a natural da sua raça."
         ]
     },
     {
@@ -2749,7 +2925,7 @@ window.desvantagensArray = [
         "nome": "Curioso",
         "pontos": "2",
         "descricao": [
-            "O personagem não consegue evitar saciar sua curiosidade, mesmo em detrimento do seu bem estar."
+            "O personagem não consegue evitar saciar sua curiosidade, mesmo em detrimento do seu bem estar e de outros."
         ]
     },
     {
@@ -2812,14 +2988,14 @@ window.desvantagensArray = [
         "nome": "Dislexia",
         "pontos": "1",
         "descricao": [
-            "O personagem tem grande dificuldade de leitura."
+            "O personagem tem grande dificuldade de leitura, recebendo inferioridade em testes relacionados."
         ]
     },
     {
         "nome": "Distraído",
         "pontos": "2",
         "descricao": [
-            "O personagem tem penalidades em testes de Percepção e tem dificuldade de se concentrar em uma tarefa."
+            "O personagem sofre inferioridade em testes de Percepção e tem dificuldade de se concentrar em uma tarefa."
         ]
     },
     {
@@ -2861,7 +3037,7 @@ window.desvantagensArray = [
         "nome": "Enxaqueca",
         "pontos": "2",
         "descricao": [
-            "O personagem sofre periodicamente de enxaquecas fortíssima que criam grandes penalidades em todos os testes."
+            "O personagem sofre periodicamente de enxaquecas fortíssima que criam dificuldades para ele durante esse período. Enquanto sofrendo da enxaqueca, o personagem sofre de inferioridade em todos os testes."
         ]
     },
     {
@@ -2896,14 +3072,14 @@ window.desvantagensArray = [
         "nome": "Extremamente Alto",
         "pontos": "2",
         "descricao": [
-            "Sua altura é muito maior que a média, as pessoas o tratam quase como um monstro. Tem dificuldades de andar em ônibus, de se mover em espaços pequenos, etc. O personagem sofre penalidades em testes de esquivas, movimento e defesas onde sua altura possa o prejudicar."
+            "Sua altura é muito maior que a média, as pessoas o tratam quase como um monstro. Você tem dificuldades de andar em ônibus, de se mover em espaços pequenos, lugares com teto baixo, etc. O personagem sofre penalidades ou inferioridade (o mestre escolhe dependendo da situação) em testes de esquivas, movimento e defesas onde sua altura possa o prejudicar."
         ]
     },
     {
         "nome": "Extremamente Preguiçoso",
         "pontos": "1",
         "descricao": [
-            "O personagem tem muita dificuldade de encontrar motivação para o que quer que seja fazendo com que seja afetado de variadas formas dentro e fora de combate (principalmente)."
+            "O personagem tem muita dificuldade de encontrar motivação para o que quer que seja fazendo com que seja afetado de variadas formas dentro e fora de combate (principalmente). Ele pode receber inferioridade em rolagens que necessitem que ele saia da sua zona de conforto ou faça algo que não quer."
         ]
     },
     {
@@ -2959,14 +3135,14 @@ window.desvantagensArray = [
         "nome": "Fraqueza Especial",
         "pontos": "2",
         "descricao": [
-            "O personagem tem algum tipo de fraqueza, pela qual sofre penalidades. Tal fraqueza deve ser explicitada na história do personagem."
+            "O personagem tem algum tipo de fraqueza, pela qual sofre penalidades. Tal fraqueza deve ser explicitada na história do personagem. Quando a fraqueza estiver ativa, o personagem pode sofrer inferioridade em todas as suas rolagens ou outras penalidades que o mestre desejar."
         ]
     },
     {
         "nome": "Fraqueza Sobrenatural",
         "pontos": "4",
         "descricao": [
-            "O personagem possui algum tipo de ponto fraco, que causa o dobro de dano ou pode levá-lo à morte instantaneamente. Tal fraqueza deve ser explicitada na história do personagem."
+            "O personagem possui algum tipo de ponto fraco, que causa o dobro de dano ou pode levá-lo à morte instantaneamente. Tal fraqueza deve ser explicitada na história do personagem. Com 3 pontos a fraqueza faz com que o personagem receba o dobro de dano enquanto ela estiver ativa. Com 5 pontos o personagem morre instantaneamente quando a fraqueza ficar ativa por muito tempo."
         ]
     },
     {
@@ -2981,7 +3157,7 @@ window.desvantagensArray = [
         "nome": "Gagueira",
         "pontos": "2",
         "descricao": [
-            "O personagem é gago, sofrendo assim, penalidades em testes sociais devido a dificuldade para passar informações. Penalidades em testes de Sedução e em testes de Diplomacia também são aplicadas."
+            "O personagem é gago, sofrendo assim, penalidades em testes sociais devido a dificuldade para passar informações. O personagem sofre penalidades ou inferioridade em todos os testes de Diplomacia, Intimidação e Atuação onde a sua voz for relevante."
         ]
     },
     {
@@ -3037,14 +3213,14 @@ window.desvantagensArray = [
         "nome": "Idoso",
         "pontos": "2",
         "descricao": [
-            "O personagem possui uma idade avançada para a sua raça, sofrendo assim penalidades generalizadas em todos os atributos em certas ações."
+            "O personagem possui uma idade avançada para a sua raça, sofrendo assim penalidades generalizadas em todos os atributos em certas ações ou inferioridade em ações físicas e mentais (a critério do mestre)."
         ]
     },
     {
         "nome": "Imbecil",
         "pontos": "3",
         "descricao": [
-            "O personagem é burro como uma porta. Tem penalidade em qualquer tipo de teste de conhecimento e pode eventualmente falar besteiras absurdas. Sua Inteligência (INT) é reduzida para um valor igual à 1 e não pode ser maior do que isso."
+            "O personagem é burro como uma porta. Ele possui penalidades e/ou inferioridade em qualquer tipo de teste de conhecimento e pode eventualmente falar besteiras absurdas. Sua Inteligência (INT) é reduzida para um valor igual à 1 e não pode ser maior do que isso."
         ]
     },
     {
@@ -3107,14 +3283,14 @@ window.desvantagensArray = [
         "nome": "Insônia",
         "pontos": "4",
         "descricao": [
-            "O personagem tem dificuldades de dormir, e na maior parte do tempo realmente não consegue dormir e descansar apropriadamente. Isso causa diversas penalidades na vida do personagem, como fadiga, penalidades em atributos-teste (dependendo de quantos dias o personagem não dormiu) e quando o personagem dormir ele sempre recupera um ponto de Stamina  a menos, nunca ficando com sua Stamina no máximo através desse método. Essa desvantagem não pode coexistir com a vantagem \"Não Dorme\"."
+            "O personagem tem dificuldades de dormir, e na maior parte do tempo realmente não consegue dormir e descansar apropriadamente. Isso causa diversas penalidades na vida do personagem, como fadiga, inferioridade / penalidades em atributosteste (dependendo de quantos dias o personagem não dormiu) e quando o personagem dormir ele sempre recupera um ponto de Stamina a menos, nunca ficando com sua Stamina no máximo através desse método. Essa desvantagem não pode coexistir com a vantagem \"Não Dorme\"."
         ]
     },
     {
         "nome": "Jogo Compulsivo",
         "pontos": "2",
         "descricao": [
-            "O personagem tem o vício de jogar compulsivamente, não consegue parar de gastar todo o seu dinheiro em apostas."
+            "O personagem tem o vício de jogar compulsivamente, não consegue parar de gastar todo o seu dinheiro ou pertences em apostas."
         ]
     },
     {
@@ -3128,7 +3304,7 @@ window.desvantagensArray = [
         "nome": "Língua Solta",
         "pontos": "2",
         "descricao": [
-            "O personagem é incapaz de guardar segredos e tem que fazer testes de Força de Vontade para se controlar. Quebrar a confiança de alguém é a forma mais rápida de se perder um amigo para sempre."
+            "O personagem é incapaz de guardar segredos e tem que fazer testes de Força de Vontade para se controlar. Ele recebe inferioridade nesses testes onde se controlar é importante. Quebrar a confiança de alguém é a forma mais rápida de se perder um amigo para sempre."
         ]
     },
     {
@@ -3142,7 +3318,7 @@ window.desvantagensArray = [
         "nome": "Loucura",
         "pontos": "2",
         "descricao": [
-            "O personagem tem algum tipo de distúrbio psiquiátrico, esquizofrenia, mania, paranóia, delírios e isso eventualmente a afeta nas horas mais inoportunas."
+            "O personagem tem algum tipo de distúrbio psiquiátrico, esquizofrenia, mania, paranóia, delírios e isso eventualmente a afeta nas horas mais inoportunas. As penalidades ou inferioridade oriunda das crises de loucura são definidas pelo Mestre."
         ]
     },
     {
@@ -3171,7 +3347,7 @@ window.desvantagensArray = [
         "nome": "Medroso",
         "pontos": "1",
         "descricao": [
-            "O personagem não tem nenhuma coragem e busca sempre não se envolver em combates ou eventos perigosos."
+            "O personagem não tem nenhuma coragem e busca sempre não se envolver em combates ou eventos perigosos. Ele pode receber inferioridade em testes onde precisa fazer algo que não tem coragem natural para fazer."
         ]
     },
     {
@@ -3192,7 +3368,7 @@ window.desvantagensArray = [
         "nome": "Mentira Compulsiva",
         "pontos": "2",
         "descricao": [
-            "O personagem mente compulsivamente, inventa histórias fictícias sobre si e seus companheiros para ganhar vantagens."
+            "O personagem mente compulsivamente, inventa histórias fictícias sobre si e seus companheiros para ganhar vantagens. Alvos que tentarem Discernir a verdade do personagem mentiroso, ganham superioridade."
         ]
     },
     {
@@ -3220,7 +3396,7 @@ window.desvantagensArray = [
         "nome": "Nervos à flor da pele",
         "pontos": "2",
         "descricao": [
-            "O personagem tem baixa força de vontade e não consegue se controlar, estourando de raiva por qualquer motivo. O personagem recebe penalidades em teste do atributo “Força Vontade”."
+            "O personagem tem baixa força de vontade e não consegue se controlar, estourando de raiva por qualquer motivo. O personagem recebe penalidades ou inferioridade em teste do atributo Força Vontade (FV)."
         ]
     },
     {
@@ -3249,7 +3425,7 @@ window.desvantagensArray = [
         "nome": "Olhos deficientes",
         "pontos": "2",
         "descricao": [
-            "O personagem não consegue ver bem, possui algum tipo de deficiência visual, seja uma miopia fortíssima ou outro problema. O problema pode ser consertado por meio de lentes ou óculos. O personagem tem penalidade em testes de Percepção e pode eventualmente receber penalidades em testes de mira / precisão."
+            "O personagem não consegue ver bem, possui algum tipo de deficiência visual, seja uma miopia fortíssima ou outro problema. O problema pode ser consertado por meio de lentes ou óculos. O personagem tem penalidade ou inferioridade em testes de Percepção e pode eventualmente receber penalidades em testes de mira / precisão."
         ]
     },
     {
@@ -3278,6 +3454,14 @@ window.desvantagensArray = [
         "pontos": "2",
         "descricao": [
             "O personagem possui um segredo em seu passado, pode ser um crime, uma maldição, um trauma horrendo, e isso atrapalha seus relacionamentos e sua sanidade. Pessoas não ficam felizes quando descobrem esse passado negro."
+        ]
+    },
+    {
+        "nome": "Pequena Maldição",
+        "pontos": "1",
+        "descricao": [
+            "Seu personagem foi alvo de alguma maldição bem simples (e boba) ou simplesmente nasceu com o universo conspirando contra ele de alguma forma menor.",
+            "Inclui coisas como sempre sair em fotos de olhos fechados ou um cabelo que se recusa a ficar arrumado não importa o que aconteça. Defina como ele ganhou essa maldição e qual ela é na história do mesmo."
         ]
     },
     {
@@ -3323,6 +3507,14 @@ window.desvantagensArray = [
         ]
     },
     {
+        "nome": "Quirk",
+        "pontos": "1",
+        "descricao": [
+            "Seu personagem tem algum hábito constante que pode ser usado para identificá-lo. Personagens que conhecem o seu personagem tem mais chance de reconhecê-lo através de disfarces, assim como percebem esse hábito como algo errado caso você se disfarce como um conhecido.",
+            "Sempre que tentando enganar alguém que te conhece ou se disfarçando como alguma pessoa específica, você recebe um redutor de -4 em suas rolagens relacionadas ao disfarce. Inclui tentativas de passar despercebido por alguém que te conhece. Você deve definir qual é esse hábito."
+        ]
+    },	
+    {
         "nome": "Rejeição Cibernética",
         "pontos": "2",
         "descricao": [
@@ -3356,8 +3548,7 @@ window.desvantagensArray = [
         "nome": "Rosto de Mentiroso",
         "pontos": "2",
         "descricao": [
-            "O rosto do personagem não inspira confiança, causando penalidades em testes sociais onde convencer alguém de que fala a verdade é relevante."
-        ]
+            "O rosto do personagem não inspira confiança, causando penalidades ou inferioridade em testes sociais onde convencer alguém de que fala a verdade é relevante."        ]
     },
     {
         "nome": "Saco sem fundo",
@@ -3416,6 +3607,13 @@ window.desvantagensArray = [
         ]
     },
     {
+        "nome": "Sotaque",
+        "pontos": "1",
+        "descricao": [
+            "A forma de falar do seu personagem carrega um sotaque da região onde você foi criado, impedindo que esconda suas origens. Defina algo que torne esse sotaque reconhecido."
+        ]
+    },
+    {
         "nome": "Suicida",
         "pontos": "1",
         "descricao": [
@@ -3440,8 +3638,7 @@ window.desvantagensArray = [
         "nome": "Tagarela",
         "pontos": "2",
         "descricao": [
-            "O personagem fala sem parar, causando penalidades nos tratos sociais."
-        ]
+            "O personagem fala sem parar, causando penalidades ou inferioridade nos tratos sociais."        ]
     },
     {
         "nome": "Teimoso",
@@ -3491,7 +3688,7 @@ window.desvantagensArray = [
         "nome": "Viciado",
         "pontos": "3",
         "descricao": [
-            "O personagem tem comportamento autodestrutivo e é viciado em algum tipo de substância entorpecente ou hábito em específico. Ele necessita usar a substância ou fazer tal hábito constantemente ou tem grandes penalidades em todos os testes. Pode perder pontos de vida ao ficar sem executar seu vício."
+            "O personagem tem comportamento autodestrutivo e é viciado em algum tipo de substância entorpecente ou hábito em específico. Ele necessita usar a substância ou fazer tal hábito constantemente ou tem grandes penalidades e/ou inferioridade em todos os testes. Pode perder pontos de vida ao ficar sem executar seu vício."
         ]
     },
     {
