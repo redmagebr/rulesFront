@@ -12,6 +12,7 @@ window.techChangelog = [
 			"A parte dos equipamentos foi inteiramente atualizada, com a adição dos novos addons, correção de antigos e remoção de outros, como dito no changelog do manual versão 4.0",
 			"Nullify magic agora tem o seu custo de MP base corretamente colocado.",
 			"Corrigidos diversos typos da versão 4.0",
+			"HOTFIX: Artefato agora respeita o nível do item em termos de addons a serem adicionados nele"
         ]
     },  
 	 {
@@ -3247,6 +3248,7 @@ window.techAddons =
         "efeitos": [
             "Crie uma técnica do tipo Forma de Ataque junto dessa arma. Essa técnica tem uma quantia de addons igual a quantidade de vezes que Artefato aparece nessa arma, com um máximo de 4. Enquanto equipado com essa arma, você pode utilizar essa técnica, e o custo dela é cobrado normalmente. Quaisquer atributos usados na técnica usam os atributos do personagem que utiliza o item.",
             "Poderes de equipamentos utilizados por personagens de nível 0 possuem efeitos aumentados. Substitua os valores de atributos usados no ataque pelo nível da arma quando esses poderes forem utilizados por NPCs.",
+			"Os efeitos adicionados por esse addon devem ser iguais ao nível do item em questão. Dessa forma, não é possível adicionar um addon de nível 2, 3 ou 4 num equipamento que seja de nível 1, por exemplo.",
             "Esse addon pode ser usado em armas criadas pelos jogadores através de vantagens, mas nunca por addons que permitam criação de itens através de técnicas."
         ],
         "conceitos": [],

@@ -190,7 +190,7 @@ window.vantagensArray = [
         "requisitos": "Raça Changeling"
     },
     {
-        "nome": "Auto-suficiência Biológia",
+        "nome": "Auto-suficiência Biológica",
         "pontos": "1",
         "descricao": [
             "O personagem tem instalações em seu corpo de Droid que o permite ser auto-suficiente em questões mudanças que outros seres vivos são dependentes. Isto é, o Droid não precisa comer, beber, dormir ou respirar, ficando imune à penalidades de fadiga por sono ou por falta de alimento. Isso não deixa o Droid imune à recarregar suas baterias, calibrar circuitos, injetar óleo em suas articulações ou quaisquer aspectos mais narrativos que ele esteja sujeito ou queira ter presente em seu corpo (especificar na história)."
