@@ -770,7 +770,6 @@ window.techAddons =
         "efeitos": [
             "Se você contra-atacar um oponente com uma técnica com este addon, receba um bônus de poder igual à +1 no seu teste de Ataque.",
 			"Esse addon não pode ser comprado múltiplas vezes.",
-            "Ao ativar esse ataque, pague mais 1 MP para cada alvo que a técnica possuir. O custo extra não é ativado em alvos únicos. Esse pagamento não pode ser reduzido por nenhum efeito e conta como um custo de ativação.",
             "Aumenta Custo da técnica em 6."
         ],
         "conceitos": [
