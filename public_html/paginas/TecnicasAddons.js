@@ -4,7 +4,15 @@
  * @type Array
  */
 window.techChangelog = [  
-       {
+ {
+        version : [4,2],
+        description : [
+			"Damage Over Time foi refeito para melhor se adaptar a nova versão.",
+			"Novo conceito: Damage Over Time.",
+			"Purify ganha um novo efeito em relação ao novo DoT, com suas próprias regras de uso."
+        ]
+    },  
+ {
         version : [4,1],
         description : [
            "Strong But Slow II teve seu nível ajustado para 2 e custo alterado para 2 como deveria, e não 21.",
@@ -354,6 +362,18 @@ window.techConceitos = [
 			"Se o personagem tiver algo que permita ele rolar o dado novamente e ele tiver inferioridade nessa situação, ele deve apenas rolar um dos dados em questão e não os dois.",
         ]
     },
+		{
+        id : 'damageovertime',
+        nome : 'Damage Over Time',
+        listado : true,
+        impresso : false,
+        descricao : [
+            "Quando um personagem recebe Damage Over Time, esse dano é adicionado ao seu DoT Counter e aplicado nele durante as próximas 3 rodadas.",
+            "Toda vez que um personagem recebe Damage Over Time, seus counters são divididos em 3 partes (arredondado para cima) e ele irá receber essa quantidade de dano no início de todos os seus turnos. Cada vez que ele recebe o dano, seu DoT Counter é reduzido na mesma quantidade. Caso a quantidade atual de dano por rodada vá ultrapassar o número atual do DoT Counter, ele recebe apenas o número atual do DoT Counter como dano e seu DoT Counter se torna 0.",
+			"A quantidade de dano recebida por turno é atualizada apenas quando o personagem recebe uma nova quantidade de Damage Over Time.",
+			"Ao receber dano de Damage Over Time, um personagem pode sacrificar seu turno - antes de fazer qualquer outra ação - para purificar o seu DoT Counter imediatamente.",
+        ]
+    },	
     {
         "id": "slots",
         "nome": "Addons, Slots e Custo",
@@ -935,18 +955,12 @@ window.techAddons =
         "nome": "Damage over Time",
         "nomeLimpo": "Damage over Time",
         "efeitos": [
-            "Caso esse ataque cause mais do que um ponto de dano, adicione um contador de Damage over Time no alvo.",
-            "Caso o alvo já tivesse algum contador de damage over time nele, adicione dois ao invés de um.",
-            "No início do turno de um personagem com contadores de Damage Over Time, esse personagem recebe a quantidade de contadores como dano direto no seu HP.",
-			"Imediatamente após a aplicação do contador de Damage Over Time, o alvo já recebe dano direto no HP igual a quantidade de contadores ativos",
-            "Depois de receber o segundo dano dos contadores (aquele que acontece no início do turno do personagem), o personagem pode rolar 1d6 + Constituição (CON), Força de Vontade (FV) ou outro atributo relevante dependendo da natureza do ataque contra uma dificuldade baseada na tabela de atributos-teste da página 392 do manual, para se livrar dos efeitos. Um sucesso no teste significa a remoção de um contador de Damage over Time, um crítico significa a remoção de todos os contadores.",
-            "O personagem também pode passar seu turno para retirar todos os contadores de Damage Over Time sem a necessidade de testes.",
-            "Nos dois casos, não significa que o personagem se livrou do efeito do ataque pela narrativa. Ele apenas conseguiu se livrar do Damage Over Time pelo restante do combate.",
-            "Aumenta o custo da técnica em 3 MP.",
-			"O custo extra desse addon não é pago quando esse ataque é usado como contra-ataque. Os efeitos desse addon são ignorados quando o ataque é feito como contra-ataque.", 
-            "Esse addon é considerado um bônus de dano do ponto de vista de outros addons.Esse addon não pode ser adicionado em ataques com mais de um alvo."
-        ],
+			"Esse ataque passa a ser normalizado. Esse addon não funciona quando um ataque já fosse normalizado.",
+			"Caso esse ataque acerte o alvo, o alvo recebe um dano direto de 1. A rolagem de dano não aplica danos no oponente, mas sim aumenta seu DoT Counter na mesma quantidade.",
+			"Veja o conceito de Damage Over Time."
+       ],
         "conceitos": [
+			"damageovertime"
 
         ],
         "nivel": 2
@@ -2313,9 +2327,11 @@ window.techAddons =
         "efeitos": [
             "Escolha um aliado e uma aflição ou debuff que ele esteja sofrendo. Ele não está mais sob esse efeito.",
             "Ativar esse efeito não consome o turno do personagem, mas só pode ser ativado uma vez por rodada. Ativar esse efeito também custa 4 MP.",
-            "Pode-se consumir o próprio turno ao ativar esse efeito para reduzir seu custo de MP a 0."
+            "Pode-se consumir o próprio turno ao ativar esse efeito para reduzir seu custo de MP a 0.",
+			"Alternativamente aos efeitos listados acima, o usuário pode escolher um aliado, gastar o seu turno e zerar o contador de Damage Over Time dele. Esse efeito custa 2 MP."
         ],
         "conceitos": [
+			"damageovertime",
 
         ],
         "nivel": 1
