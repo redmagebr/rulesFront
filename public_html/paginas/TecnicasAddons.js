@@ -2578,9 +2578,7 @@ window.techAddons =
             "Aumenta o custo por rodada da técnica passiva em 2 MP."
         ],
         "conceitos": [
-            "marcas",
-            "basicos",
-            "normalizado"
+            "marcas"
         ],
         "nivel": 1
     },
