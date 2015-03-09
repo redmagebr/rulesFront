@@ -5,6 +5,14 @@
  */
 window.techChangelog = [  
  {
+        version : [4,3],
+        description : [
+			"Os addons: Glyph of the Punisher, Seal of Disruption, Symbol of the Saint e seus respectivos conceitos foram totalmente retrabalhados para ficar mais fácil e com menos conceitos para serem aprendidos. Selos e símbolos agora são habilidades passivas.",
+			"Novos addons passivos: Symbol of Protection, Symbol of Pain, Symbol of Recovery, Symbol of Peace e Symbol of Destruction.",
+			"Novo addon especial: Bull Rush."
+        ]
+    },  
+ {
         version : [4,2],
         description : [
 			"Damage Over Time foi refeito para melhor se adaptar a nova versão.",
@@ -476,44 +484,6 @@ window.techConceitos = [
             "Um alvo pode estar marcado por vários personagens, mas apenas um pode ativar sua marca quando ele faz um ataque.",
             "IMPORTANTE: Um personagem só pode ativar uma de suas marcas uma vez por rodada.",
             "Nota: Ver regras de Ataques Normalizados"
-        ]
-    },
-	 {
-        "id": "selo",
-        "nome": "Selos",
-        "listado": true,
-        "impresso": false,
-        "descricao": [
-            "Alguns addons possuem efeitos que criam Selos no alvo. Um selo é equivalente ao personagem colocar um encantamento ou uma marca que tem algum efeito quando a vítima faz algo em específico.",
-            "Sempre que um alvo selado por você usar uma habilidade qualquer, aumente o custo de MP dela em +2 sobre o custo original. Isso não se aplica à  Passivas, somente se o alvo ligá-las naquele momento, mas não depois.",
-			"A penalidade imposta pelo selo não pode ser reduzida por nenhum addon que altere o custo de MP de uma técnica.",
-            "Um alvo pode estar sob efeito de vários selos ao mesmo tempo, mas um personagem só pode colocar um selo por vez em um alvo.",
-            "IMPORTANTE: Um personagem só pode ativar um de seus selos uma vez por rodada.",
-        ]
-    },
-		 {
-        "id": "glifo",
-        "nome": "Glifos",
-        "listado": true,
-        "impresso": false,
-        "descricao": [
-            "Alguns addons possuem efeitos que criam Glifos no alvo. Um glifo é equivalente ao personagem colocar um encantamento dormente dentro do corpo do alvo, que se manifestará quando ele menos espera através de um comando mental (ou outro tipo) seu. ",
-            "Se um inimigo com um glifo colocado por você tentar contra-atacar qualquer personagem que não seja você, aumente o dano que esse alvo viria a receber em +1 caso o resultado das reações termine com ele recebendo dano de alguma forma.",
-            "Um alvo pode estar com um glifo de vários personagens, mas apenas um pode ativar seu glifo quando ele faz um contra-ataque.",
-            "IMPORTANTE: Um personagem só pode ativar um de seus glifos uma vez por rodada.",
-        ]
-    },
-		{
-        "id": "simbolo",
-        "nome": "Símbolos",
-        "listado": true,
-        "impresso": false,
-        "descricao": [
-            "Alguns addons possuem efeitos que criam Símbolos no alvo. Um símbolo é equivalente ao personagem ficar em extrema prontidão, pronto para usar de seus recursos espirituais / mágicos para si ou um aliado.",
-            "Se um inimigo com um símbolo feito por você tentar realizar um ataque que não inclui você como alvo, você pode instantaneamente curar +1 HP seu OU do personagem atacado pelo alvo marcado. Essa cura acontece ANTES das rolagens de ataque, defesa, reação e dano. ",
-			"Esse efeito não se ativa se o ataque for realizado dentro de um contra-ataque, apenas para ataques realizados no turno do alvo marcado.",
-            "Um alvo pode estar com um símbolo de vários personagens, mas apenas um pode ativar seu símbolo quando ele faz um contra-ataque.",
-            "IMPORTANTE: Um personagem só pode ativar um de seus símbolos uma vez por rodada.",
         ]
     },
     {
@@ -1226,45 +1196,6 @@ window.techAddons =
         ],
         "nivel": 1
     },
-	{
-        "tipo": "ataque",
-        "nome": "Seal of Disruption",
-        "nomeLimpo": "Seal of Disruption",
-        "efeitos": [
-            "Todos os alvos que receberam dano por essa técnica ficam com um selo até o início do seu próximo turno.",
-            "Aumente o custo da técnica em 1."
-        ],
-        "conceitos": [
-            "selo"
-        ],
-        "nivel": 2
-    },
-		{
-        "tipo": "ataque",
-        "nome": "Glyph of the Punisher",
-        "nomeLimpo": "Glyph of the Punisher",
-        "efeitos": [
-            "Todos os alvos que receberam dano por essa técnica ficam com um glifo até o início do seu próximo turno.",
-            "Aumente o custo da técnica em 1."
-        ],
-        "conceitos": [
-            "glifo"
-        ],
-        "nivel": 2
-    },
-		{
-        "tipo": "ataque",
-        "nome": "Symbol of the Saint",
-        "nomeLimpo": "Symbol of the Saint",
-        "efeitos": [
-            "Todos os alvos que receberam dano por essa técnica ficam com um símbolo até o início do seu próximo turno.",
-            "Aumente o custo da técnica em 2."
-        ],
-        "conceitos": [
-            "simbolo"
-        ],
-        "nivel": 3
-    },
     {
         "id": 261,
         "tipo": "ataque",
@@ -1856,6 +1787,21 @@ window.techAddons =
         ],
         "nivel": 2
     },
+    {
+        "tipo": "especial",
+        "nome": "Bull Rush",
+        "nomeLimpo": "Bullrush",
+        "efeitos": [
+			"Usável apenas no turno do personagem. Esse poder pode ser ativado durante o seu turno, antes de você realizar qualquer ação que fosse acabar seu turno.",
+			"Quando esse turno fosse acabar, faça um novo ataque (básico ou por técnicas de ataque).",
+			"Até o início do seu próximo turno, você fica indefeso e não pode reagir a nada.",
+			"Você não pode agir no seu próximo turno e ele acaba assim que começa. Seus turnos se normalizam depois disso."
+        ],
+        "conceitos": [
+            "unicidade"
+        ],
+        "nivel": 1
+    },	
     {
         "id": 365,
         "tipo": "especial",
@@ -2622,6 +2568,78 @@ window.techAddons =
         ],
         "nivel": 1
     },
+{
+        "tipo": "passiva",
+        "nome": "Symbol of Protection",
+        "nomeLimpo": "Symbol of Protection",
+        "efeitos": [
+            "Quando um inimigo marcado por você faz um ataque que não inclui você como alvo, cure um aliado da sua escolha em 2 HP.",
+			"Você não pode mais ativar suas marcas.",
+            "Aumenta o custo por rodada da técnica passiva em 2 MP."
+        ],
+        "conceitos": [
+            "marcas",
+            "basicos",
+            "normalizado"
+        ],
+        "nivel": 1
+    },
+{
+        "tipo": "passiva",
+        "nome": "Symbol of Pain",
+        "nomeLimpo": "Symbol of Pain",
+        "efeitos": [
+			"Quando um inimigo marcado por você faz um ataque não inclui você como alvo, contra-ataques bem sucedidos contra esse ataque fazem o inimigo receber 1 ponto de dano direto causado por você.",
+			"Você não pode mais ativar suas marcas.",
+            "Aumenta o custo por rodada da técnica passiva em 2 MP."
+        ],
+        "conceitos": [
+            "marcas",
+        ],
+        "nivel": 2
+    },
+{
+        "tipo": "passiva",
+        "nome": "Symbol of Recovery",
+        "nomeLimpo": "Symbol of Recovery",
+        "efeitos": [
+			"Quando um inimigo marcado por você faz um ataque que não inclui você como alvo, recupere 2 MP.",
+			"Você não pode mais ativar suas marcas.",
+            "Aumenta o custo por rodada da técnica passiva em 2 MP."
+        ],
+        "conceitos": [
+            "marcas",
+        ],
+        "nivel": 2
+    },
+{
+        "tipo": "passiva",
+        "nome": "Symbol of Peace",
+        "nomeLimpo": "Symbol of Peace",
+        "efeitos": [
+			"Quando um inimigo marcado por você faz um ataque que não inclui você como alvo, o ataque causa -2 dano.",
+			"Você não pode mais ativar suas marcas.",
+            "Aumenta o custo por rodada da técnica passiva em 2 MP."
+        ],
+        "conceitos": [
+            "marcas"
+        ],
+        "nivel": 2
+    },
+{
+        "tipo": "passiva",
+        "nome": "Symbol of Destruction",
+        "nomeLimpo": "Symbol of Destruction",
+        "efeitos": [
+			"Quando um inimigo marcado por você faz um ataque que não inclui você como alvo, o seu próximo ataque realizado antes do final do seu próximo turno naquele oponente causará +2 dano.",
+			"Você não pode mais ativar suas marcas.",
+            "Aumenta o custo por rodada da técnica passiva em 2 MP."
+        ],
+        "conceitos": [
+            "marcas"
+        ],
+        "nivel": 2
+    },		
     {
         "id": 341,
         "tipo": "passiva",
