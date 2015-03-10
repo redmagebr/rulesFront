@@ -1,4 +1,4 @@
-/**
+ /**
  * 
  * Changelog
  * @type Array
@@ -2578,7 +2578,9 @@ window.techAddons =
             "Aumenta o custo por rodada da técnica passiva em 2 MP."
         ],
         "conceitos": [
-            "marcas"
+            "marcas",
+            "basicos",
+            "normalizado"
         ],
         "nivel": 1
     },
@@ -3155,8 +3157,7 @@ window.techAddons =
 			"Quando receber um golpe crítico, após ele você recebe...",
 			"Quando acertar um golpe crítico, após ele você recebe...",
 			"Quando acertar uma esquiva crítica, após ela você recebe...",
-			"Quando receber dano pelo atributo <X>",
-			"Escolha um único atributo de dano para essa condição.",
+			"Quando receber dano pelo atributo <X>. Escolha um único atributo de dano para essa condição.",
 			"Quando um inimigo acertar uma esquiva crítica, após ela você recebe...",
 			"Quando manipular o terreno de alguma forma ao seu favor ou de seus aliados",
 			"Quando lutando sozinho",
@@ -3214,14 +3215,14 @@ window.techAddons =
         "efeitos" : [
             "Testes com uma única perícia da sua escolha enquanto a condição for obedecida. Escolha uma perícia da lista",
 		    "Testes com um único atributo-teste enquanto a condição for obedecida. Escolha um atributo da lista.",
-			"O primeiro (seu) teste de Ataque (ATK) da rodada enquanto a condição for obedecida.",
-            "O primeiro teste (seu) de Defesa (DEF) da rodada enquanto a condição for obedecida.",	
-			"O primeiro teste (seu) de Dano Melee da rodada enquanto a condição for obedecida. Escolha um atributo de dano.",
-            "O primeiro teste (seu) de Dano Ranged da rodada enquanto a condição for obedecida.Escolha um atributo de dano.",
-		    "O primeiro teste (seu) de Bloqueio da rodada enquanto a condição for obedecida.",
-            "O primeiro teste (seu) Restaurativo de Habilidade da rodada enquanto a condição for obedecida.",
-			"O primeiro teste (seu) de Ataque Básico da rodada enquanto a condição for obedecida.",
-			"O primeiro teste (seu) de Contra-Ataque (ATK) da rodada enquanto a condição for obedecida."
+			"O primeiro (seu ou do alvo) teste de Ataque (ATK) da rodada enquanto a condição for obedecida.",
+            "O primeiro teste (seu ou do alvo) de Defesa (DEF) da rodada enquanto a condição for obedecida.",	
+			"O primeiro teste (seu ou do alvo) de Dano Melee da rodada enquanto a condição for obedecida. Escolha um atributo de dano.",
+            "O primeiro teste (seu ou do alvo) de Dano Ranged da rodada enquanto a condição for obedecida.Escolha um atributo de dano.",
+		    "O primeiro teste (seu ou do alvo) de Bloqueio da rodada enquanto a condição for obedecida.",
+            "O primeiro teste (seu ou do alvo) Restaurativo de Habilidade da rodada enquanto a condição for obedecida.",
+			"O primeiro teste (seu ou do alvo) de Ataque Básico da rodada enquanto a condição for obedecida.",
+			"O primeiro teste (seu ou do alvo) de Contra-Ataque (ATK) da rodada enquanto a condição for obedecida."
         ],
         "conceitos" : [
             
