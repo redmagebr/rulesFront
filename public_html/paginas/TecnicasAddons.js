@@ -5,6 +5,13 @@
  */
 window.techChangelog = [  
  {
+        version : [4,4],
+        description : [
+			"O seguinte addon foi refeito para evitar abusos: Forma",
+			"Corrigido um typo na parte de Pontos de Habilidade que ainda fazia referência à slots para estilos de luta.",
+        ]
+    },  
+ {
         version : [4,3],
         description : [
 			"Os addons: Glyph of the Punisher, Seal of Disruption, Symbol of the Saint e seus respectivos conceitos foram totalmente retrabalhados para ficar mais fácil e com menos conceitos para serem aprendidos. Selos e símbolos agora são habilidades passivas.",
@@ -594,7 +601,7 @@ for (var i = 0; i < window.techConceitos.length; i++) {
 window.techCustos = {
     "descricaoNiveis" : [
         "Ao passar de nível, todos os personagens ganham uma quantidade de Pontos de Habilidade (5, no sistema padrão) e uma nova Técnica em branco. A técnica virá com um número de slots apropriado ao nível do personagem (como na tabela abaixo).",
-        "A técnica ganha pode ser feita como qualquer tipo de técnica, com uma exceção: se feita como um Estilo de Luta, ela sempre terá apenas 2 Slots."
+        "A técnica ganha pode ser feita como qualquer tipo de técnica."
     ],
     "niveis" : [
         ["1-2", "1 Slot"],
@@ -611,7 +618,7 @@ window.techCustos = {
         [1, "Recria a técnica da forma que quiser (não abuse!). Caso a mudança na técnica tenha sido forçada por alterações nos addons, o custo é 0. O jeito esperado de se usar isso é para consertar técnicas cujos addons você entendeu errado e não está funcionando como você quer ou apagar uma técnica que você fez tão errado que não tem conserto. O objetivo dessas alterações não é fazer uma técnica temporária e se livrar dela quando não for mais útil."],
         [4, "Nova técnica de 1 Slot. Número máximo de slots é 4."],
         [3, "Aumenta a quantidade de slots de uma técnica, que não seja Forma Especial, em 1. Técnicas de Forma Especial custam 4 pontos para aumentar em 1 Slot."],
-        [4, "Novo estilo de Luta com 2 Slots."]
+        [4, "Novo estilo de Luta."]
     ]
 };
 
@@ -3361,8 +3368,12 @@ window.techAddons =
         "nome": "Forma",
         "nomeLimpo": "Forma",
         "efeitos": [
-            "A arma possui múltiplas formas, que podem ser trocadas como uma ação grátis. Esse addon não aumenta o nível do item. Para cada vez que você adicionar esse addon no item, crie uma nova forma para ela (com tudo podendo ser diferente).",
-            "Para cada Forma em uma arma, aumente o gasto de materiais em 50% (somando). Use bom senso quando adicionando Forma a uma arma ganha por vantagens, recomenda-se que o mestre puna jogadores que tentam abusar da mecânica."
+            "A arma possui múltiplas formas, que podem ser trocadas como uma ação grátis durante o turno do personagem.",
+            "Inicialmente, a arma possui uma única forma. Para cada vez que Forma é comprada, a arma ganha uma forma extra.",
+			"Cada forma deve ser feita como uma arma diferente. Cada forma tem a quantidade padrão de addons reduzida no número de vezes que Forma foi colocada na arma.",
+			"Exemplo A: Arma de Duas mãos Nível 3 com um addon Forma. A arma se tornaria duas armas de duas mãos, cada uma com dois addons (3 - 1).",
+			"Exemplo B: Arma de uma mão Nível 4 com dois addons Forma. A arma se tornaria três armas de uma mão, cada uma com dois addons (4 - 2).",
+			"Em todos os casos, apenas uma forma da arma pode estar ativa ao mesmo tempo."
         ],
         "conceitos": [],
         "nivel": 1
