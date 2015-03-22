@@ -9,6 +9,9 @@ window.techChangelog = [
         description : [
 			"O seguinte addon foi refeito para evitar abusos: Forma",
 			"Corrigido um typo na parte de Pontos de Habilidade que ainda fazia referência à slots para estilos de luta.",
+			"Novo addon: Tudo ou nada.",
+			"O addon \"Look\" passa a requerir nível 1 ao invés de 2.",
+			"Os seguintes addons foram corrigidos para evitar combos desbalanceados: Windwall Shield e Spike Shield.",
         ]
     },  
  {
@@ -1746,7 +1749,20 @@ window.techAddons =
             "Custo da técnica em 2."
         ],
         "conceitos": [
-
+        ],
+        "nivel": 1
+    },
+	    {
+        "tipo": "especial",
+        "nome": "Tudo ou Nada",
+        "nomeLimpo": "Tudonada",
+        "efeitos": [
+            "Você pode ativar esse efeito como uma ação de defesa contra um ataque do oponente que possa ser esquivado. Você só pode ativar esse efeito uma vez por rodada.",
+            "Caso ative esse efeito, faça uma ação de esquiva normalmente. Se você esquivar do ataque do oponente com sucesso, você pode realizar um ataque imediato contra ele (e apenas ele). Esse ataque recebe um bônus de acerto de +1 Bônus de Habilidade.",
+			"Quando seu próximo turno começar, ele termina imediatamente, sem você poder agir.",
+            "Ativar este efeito consome 2 MP."
+        ],
+        "conceitos": [
         ],
         "nivel": 1
     },
@@ -2052,7 +2068,7 @@ window.techAddons =
         "conceitos": [
 
         ],
-        "nivel": 2
+        "nivel": 1
     },
     {
         "id": 205,
@@ -2122,7 +2138,7 @@ window.techAddons =
         "nomeLimpo": "Windwall",
         "efeitos": [
             "O alvo fica imune ao primeiro ataque do tipo Ranged (à distância) que receber após o uso desse addon.",
-			"Este efeito não pode ser aplicado mais do que 1x por combate num mesmo alvo.",
+						"Este efeito não pode ser aplicado mais do que 1x por combate num mesmo alvo e não pode estar ativo ao mesmo tempo em que o addon Spike Shield.",
             "Custo de MP: 3 e gasta o turno ou 5 e não gasta o turno, podendo ser usado em aliados mas somente uma vez por rodada.",
         ],
         "conceitos": [
@@ -2136,7 +2152,7 @@ window.techAddons =
         "nomeLimpo": "Spike Shield",
         "efeitos": [
             "O alvo fica imune ao primeiro ataque do tipo Melee (físico).",
-			"Este efeito não pode ser aplicado mais do que 1x por combate num mesmo alvo.",
+			"Este efeito não pode ser aplicado mais do que 1x por combate num mesmo alvo e não pode estar ativo ao mesmo tempo em que o addon Windwall Shield.",
             "Custo de MP: 3 e gasta o turno ou 5 e não gasta o turno, podendo ser usado em aliados mas somente uma vez por rodada.",
         ],
         "conceitos": [
