@@ -12,6 +12,7 @@ window.techChangelog = [
 			"Novo addon: Tudo ou nada.",
 			"O addon \"Look\" passa a requerir nível 1 ao invés de 2.",
 			"Os seguintes addons foram corrigidos para evitar combos desbalanceados: Windwall Shield e Spike Shield.",
+			"Clarificado que \"Tudo ou Nada\" não pode ser usado em combo com \"Bull Rush\"",
         ]
     },  
  {
@@ -1760,6 +1761,7 @@ window.techAddons =
             "Você pode ativar esse efeito como uma ação de defesa contra um ataque do oponente que possa ser esquivado. Você só pode ativar esse efeito uma vez por rodada.",
             "Caso ative esse efeito, faça uma ação de esquiva normalmente. Se você esquivar do ataque do oponente com sucesso, você pode realizar um ataque imediato contra ele (e apenas ele). Esse ataque recebe um bônus de acerto de +1 Bônus de Habilidade.",
 			"Quando seu próximo turno começar, ele termina imediatamente, sem você poder agir.",
+			"Esse addon não pode funcionar em conjunto com efeitos colaterais de addons que forcem o personagem a ficar indefeso, como por exemplo, o addon \"Bull Rush\"",
             "Ativar este efeito consome 2 MP."
         ],
         "conceitos": [
