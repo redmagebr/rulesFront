@@ -5,6 +5,12 @@
  */
 window.vantagensChangelog = [
 	{
+        "version" : [4, 1],
+        "description" : [
+            "Vantagem 'Trabalho Duro' renomeada para 'Trabalhador Esforçado' para resolver conflito com a vantagem 'Trabalho Duro' de Alquimista.",
+        ]
+    },
+	{
         "version" : [4, 0],
         "description" : [
             "Todas as alterações da versão 4.0 estão presentes.",
@@ -40,6 +46,81 @@ window.vantagensChangelog = [
     if (a.version[1] < b.version[1]) return 1;
     return 0;
 });
+
+
+window.arquetipos = [
+     "Alquimista",
+     "Arauto da Profecia",
+     "Artilheiro",
+     "Assassino",
+     "Bárbaro",
+     "Bardo",
+     "Caçador",
+     "Cavaleiro Negro",
+     "Clérigo",
+     "Defensor",
+     "Druida",
+     "Elementalista",
+     "Engenheiro",
+     "Esgrimista",
+     "Estrategista",
+     "Ferreiro",
+     "Gladiador",
+     "Guerreiro",
+     "Hematologista",
+     "Homem de Lata",
+     "Ilusionista",
+     "Inquisidor",
+     "Invocador Astral",
+     "Juggernaut",
+     "Ladrão",
+     "Mago",
+     "Mago Branco",
+     "Mercante Príncipe",
+     "Mestre das Runas",
+     "Monge",
+     "Mímico",
+     "Necromante",
+     "Ninja",
+     "Paladino",
+     "Pirata",
+     "Sabotador",
+     "Samurai",
+     "Senhor das Bestas"
+].sort(function (a,b) {
+	var nA = a.latinize().toUpperCase();
+	var nB = b.latinize().toUpperCase();
+	if (nA < nB) return -1;
+	if (nA > nB) return 1;
+	return 0;
+});
+
+window.racas = [
+	"Anão",
+	"Bestial",
+	"Changeling",
+	"Draconiano",
+	"Droid",
+	"Elfo",
+	"El'zel",
+	"Fayri",
+	"Golem",
+	"Humano",
+	"Jorn",
+	"Kalkan",
+	"Ogrekin",
+	"Orc",
+	"Quellsir",
+	"Yu'qun",
+	"Zahari"
+].sort(function (a,b) {
+	var nA = a.latinize().toUpperCase();
+	var nB = b.latinize().toUpperCase();
+	if (nA < nB) return -1;
+	if (nA > nB) return 1;
+	return 0;
+});
+
 
 /**
  * Tipos
@@ -2164,7 +2245,7 @@ window.vantagensArray = [
         ]
     },	
     {
-        "nome": "Trabalho Duro",
+        "nome": "Trabalhador Esforçado",
         "pontos": "2",
         "descricao": [
             "O personagem se esforça mais do que o normal quando está trabalhando. Aumente a quantia de moedas de ouro ganhas trabalhando com Emprego em 25%."
@@ -2230,8 +2311,8 @@ window.vantagensArray = [
         ]
     }
 ].sort(function (a,b) {
-    var na = a.nome.toUpperCase();
-    var nb = b.nome.toUpperCase();
+    var na = a.nome.toUpperCase().latinize();
+    var nb = b.nome.toUpperCase().latinize();
     if (na < nb) return -1;
     if (na > nb) return 1;
     return 0;
@@ -3739,8 +3820,8 @@ window.desvantagensArray = [
         ]
     }
 ].sort(function (a,b) {
-    var na = a.nome.toUpperCase();
-    var nb = b.nome.toUpperCase();
+    var na = a.nome.toUpperCase().latinize();
+    var nb = b.nome.toUpperCase().latinize();
     if (na < nb) return -1;
     if (na > nb) return 1;
     return 0;
