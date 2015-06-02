@@ -88,8 +88,8 @@ window.arquetipos = [
      "Samurai",
      "Senhor das Bestas"
 ].sort(function (a,b) {
-	var nA = a.latinize().toUpperCase();
-	var nB = b.latinize().toUpperCase();
+	var nA = a.toUpperCase();
+	var nB = b.toUpperCase();
 	if (nA < nB) return -1;
 	if (nA > nB) return 1;
 	return 0;
@@ -114,8 +114,8 @@ window.racas = [
 	"Yu'qun",
 	"Zahari"
 ].sort(function (a,b) {
-	var nA = a.latinize().toUpperCase();
-	var nB = b.latinize().toUpperCase();
+	var nA = a.toUpperCase();
+	var nB = b.toUpperCase();
 	if (nA < nB) return -1;
 	if (nA > nB) return 1;
 	return 0;
@@ -2311,8 +2311,8 @@ window.vantagensArray = [
         ]
     }
 ].sort(function (a,b) {
-    var na = a.nome.toUpperCase().latinize();
-    var nb = b.nome.toUpperCase().latinize();
+    var na = a.nome.toUpperCase();
+    var nb = b.nome.toUpperCase();
     if (na < nb) return -1;
     if (na > nb) return 1;
     return 0;
@@ -3820,8 +3820,8 @@ window.desvantagensArray = [
         ]
     }
 ].sort(function (a,b) {
-    var na = a.nome.toUpperCase().latinize();
-    var nb = b.nome.toUpperCase().latinize();
+    var na = a.nome.toUpperCase();
+    var nb = b.nome.toUpperCase();
     if (na < nb) return -1;
     if (na > nb) return 1;
     return 0;
