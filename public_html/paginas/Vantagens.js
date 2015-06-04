@@ -49,6 +49,7 @@ window.vantagensChangelog = [
 
 
 window.arquetipos = [
+     "",
      "Alquimista",
      "Arauto da Profecia",
      "Artilheiro",
@@ -113,7 +114,17 @@ window.racas = [
 	"Quellsir",
 	"Yu'qun",
 	"Zahari"
-].sort(function (a,b) {
+];
+
+var racasLength = window.racas.length;
+for (var i = 0; i < racasLength; i++) {
+	for (var k = 0; k < racasLength; k++) {
+		if (k === i) continue;
+		window.racas.push(window.racas[i]) + "/" + window.racas[k]);
+	}
+}
+
+window.racas.sort(function (a,b) {
 	var nA = a.toUpperCase();
 	var nB = b.toUpperCase();
 	if (nA < nB) return -1;
