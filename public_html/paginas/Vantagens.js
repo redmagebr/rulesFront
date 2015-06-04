@@ -120,7 +120,7 @@ var racasLength = window.racas.length;
 for (var i = 0; i < racasLength; i++) {
 	for (var k = 0; k < racasLength; k++) {
 		if (k === i) continue;
-		window.racas.push(window.racas[i]) + "/" + window.racas[k]);
+		window.racas.push(window.racas[i] + "/" + window.racas[k]);
 	}
 }
 
