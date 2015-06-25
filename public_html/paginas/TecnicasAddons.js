@@ -5,16 +5,38 @@
  */
 window.techChangelog = [  
  {
-        version : [4,4],
+        version : [4,5],
         description : [
+            "Embrace the shadows pode ser ativada no turno 0.",
+            "Special Attack I e Special Attack Ranged I: Arredondamento do bônus de dano passa a ser feito para BAIXO. Custo de ambas reduzido a 1 para refletir essa mudança.",
+            "'Protegido' para atributos de combate alterado para Bônus de Proteção para seguir o padrão do resto do sistema e diminuir dores de cabeça.",
+            "Boon of the Opressor/Agressor renomeados para Boon of the Oppressor/Aggressor.",
+            "Boon of the Aggressor reescrita para ficar mais clara.",
+			"Estilos de Luta refeitos novamente.",
+			"Special Attack III e Ranged III tem sua descrição alterada para algo mais fácil de entender. O efeito permanece o mesmo.",
+			"Todas as Special Attack tem seu nível exigido reduzido a 1.",
+			"Door Poker: Custo reduzido.",
+			"First Strike: Custo removido.",
+			"Haymaker: Haymaker é afetado por unicidade, então não ser comprado múltiplas vezes faz parte das regras padrões.",
+			"Expertise III: Alterado para ficar comparável a Experise I e II.",
+			"Vários addons de nível 2 passam para nível 1. Vários addons de nível 3 passam para nível 2.",
+			"Capacidade destrutiva foi refeita para uma forma melhor de funcionamento",
+			"Area of No Effect: Custo de MP reduzido para 6 (antigo: 10)",
+			
+		
+        ]
+ },
+ {
+     version : [4,4],
+     description : [
 			"O seguinte addon foi refeito para evitar abusos: Forma",
 			"Corrigido um typo na parte de Pontos de Habilidade que ainda fazia referência à slots para estilos de luta.",
 			"Novo addon: Tudo ou nada.",
 			"O addon \"Look\" passa a requerir nível 1 ao invés de 2.",
 			"Os seguintes addons foram corrigidos para evitar combos desbalanceados: Windwall Shield e Spike Shield.",
-			"Clarificado que \"Tudo ou Nada\" não pode ser usado em combo com \"Bull Rush\"",
-        ]
-    },  
+			"Clarificado que \"Tudo ou Nada\" não pode ser usado em combo com \"Bull Rush\""
+     ]
+ },
  {
         version : [4,3],
         description : [
@@ -102,7 +124,7 @@ window.techChangelog = [
 			"--------------------------------------------",
 			"Estilos de luta foram reformulados de acordo com o novo funcionamento explicado no manual",
 			"Novos addons e alterações nos equipamentos e vantagens ainda estão por vir, mas todas elas já se encontram no manual básico",
-			"Novos conceitos: Superioridade, Inferioridade, Glifo, Símbolo e Selo",
+			"Novos conceitos: Superioridade, Inferioridade, Glifo, Símbolo e Selo"
         ]
     },
     {
@@ -251,9 +273,10 @@ window.techTipos = [
         "id" : "estilo",
         "nome" : "Estilos de Luta",
         "descricao" : [
-            "Um estilo de luta só pode ser ativado quando certas condições de batalha são obedecidas. Estilo de Luta não possuem custo em MP.",
-            "Um personagem só pode ter um único estilo de luta ativo ao mesmo tempo.",
-            "Bônus concedidos por estilos de luta são sempre relacionado à inferioridade e superioridade."
+           "Personagens podem sempre ter apenas um estilo de luta ativo ao mesmo tempo. Por mais que esse estilo de luta esteja sempre ativo, seus efeitos só são recebidos quando as Condições escolhidas para o estilo de luta estiverem acontecendo.",
+           "Cada estilo de luta é composto por apenas UM Addon de Condição e então quantos Addons de Efeito o estilo possa pagar (a quantidade de pontos varia de acordo com a condição escolhida).",
+           "Ao trocar de estilos de luta, o personagem não irá receber vantagens de estilos de luta até o começo do seu próximo turno.",
+           "Para facilitar a busca, addons de Condição seguem a nomenclatura C# - Nome, com # sendo a quantidade de pontos que eles fornecem, enquanto todos os efeitos possuem a nomenclatura de E - Nome."
         ],
         "conceitos" : [
             
@@ -587,8 +610,8 @@ window.techConceitos = [
         ]
     }
 ].sort(function (a, b) {
-    var na = a.nome.toUpperCase();
-    var nb = b.nome.toUpperCase();
+    var na = a.nome.toUpperCase().latinize();
+    var nb = b.nome.toUpperCase().latinize();
     if (na < nb) return -1;
     if (na > nb) return 1;
     return 0;
@@ -730,7 +753,7 @@ window.techAddons =
         "conceitos": [
             "stacking"
         ],
-        "nivel": 2
+        "nivel": 1
     },
     {
         "id": 253,
@@ -762,7 +785,7 @@ window.techAddons =
         "conceitos": [
             "stacking"
         ],
-        "nivel": 2
+        "nivel": 1
     },
 		 {
         "tipo": "ataque",
@@ -770,13 +793,12 @@ window.techAddons =
         "nomeLimpo": "Haymaker",
         "efeitos": [
             "Se você contra-atacar um oponente com uma técnica com este addon, receba um bônus de poder igual à +1 no seu teste de Ataque.",
-			"Esse addon não pode ser comprado múltiplas vezes.",
             "Aumenta Custo da técnica em 6."
         ],
         "conceitos": [
             "stacking"
         ],
-        "nivel": 2
+        "nivel": 1
     },
 			 {
         "tipo": "ataque",
@@ -808,7 +830,7 @@ window.techAddons =
         "conceitos": [
             "unicidade"
         ],
-        "nivel": 2
+        "nivel": 1
     },
 					 {
         "tipo": "ataque",
@@ -840,7 +862,7 @@ window.techAddons =
         "conceitos": [
             "unicidade"
         ],
-        "nivel": 2
+        "nivel": 1
     },
 							 {
         "tipo": "ataque",
@@ -870,7 +892,7 @@ window.techAddons =
         "conceitos": [
             "unicidade"
         ],
-        "nivel": 2
+        "nivel": 1
     },
 		 {
         "tipo": "ataque",
@@ -886,7 +908,7 @@ window.techAddons =
         "conceitos": [
             "unicidade"
         ],
-        "nivel": 2
+        "nivel": 1
     },
     {
         "id": 304,
@@ -914,7 +936,7 @@ window.techAddons =
         "conceitos": [
             "unicidade"
         ],
-        "nivel": 2
+        "nivel": 1
     },
     {
         "id": 238,
@@ -928,7 +950,7 @@ window.techAddons =
         "conceitos": [
             "unicidade"
         ],
-        "nivel": 3
+        "nivel": 2
     },
     {
         "id": 335,
@@ -960,7 +982,7 @@ window.techAddons =
         "conceitos": [
 
         ],
-        "nivel": 3
+        "nivel": 2
     },
 	{
         "tipo": "ataque",
@@ -969,12 +991,12 @@ window.techAddons =
         "efeitos": [
             "O ataque ganha +50% de penetração. A técnica com esse addon tem o seu dano causado reduzido pela metade, acumulando multiplicativamente com outras reduções de dano. ",
             "Esse addon não pode ser usado lado-a-lado com addons que fornecem bônus em testes de acerto ou testes contra defesa, nem junto de addons que impeçam o oponente de se esquivar. Esse addon ainda pode ser usado caso o personagem esteja recebendo o bônus de outra fonte (como uma passiva ou um buff com duração).",
-            "Aumenta o custo da técnica em 8."
+            "Aumenta o custo da técnica em 4."
         ],
         "conceitos": [
 
         ],
-        "nivel": 3
+        "nivel": 2
     },
     {
         "id": 313,
@@ -1012,8 +1034,7 @@ window.techAddons =
         "nome": "First Strike",
         "nomeLimpo": "First Strike",
         "efeitos": [
-            "Adiciona +1 Bônus de Velocidade à prioridade desse ataque.",
-			"Aumente o custo de MP em 1.",
+            "Adiciona +1 Bônus de Velocidade à prioridade desse ataque."
         ],
         "conceitos": [
             "prioridade"
@@ -1135,7 +1156,7 @@ window.techAddons =
         "conceitos": [
             "unicidade"
         ],
-        "nivel": 2
+        "nivel": 1
     },
     {
         "id": 379,
@@ -1262,7 +1283,7 @@ window.techAddons =
         "conceitos": [
             "unicidade"
         ],
-        "nivel": 2
+        "nivel": 1
     },
     {
         "id": 265,
@@ -1276,7 +1297,7 @@ window.techAddons =
         "conceitos": [
             "unicidade"
         ],
-        "nivel": 3
+        "nivel": 2
     },
     {
         "id": 284,
@@ -1290,7 +1311,7 @@ window.techAddons =
         "conceitos": [
 
         ],
-        "nivel": 2
+        "nivel": 1
     },
     {
         "id": 257,
@@ -1306,7 +1327,7 @@ window.techAddons =
         "conceitos": [
             "stacking"
         ],
-        "nivel": 2
+        "nivel": 1
     },
     {
         "id": 381,
@@ -1445,8 +1466,8 @@ window.techAddons =
         "nome": "Special Attack I",
         "nomeLimpo": "Special Attack I",
         "efeitos": [
-            "Adiciona um segundo atributo de dano, diferente do primeiro, dividido por 2  (arredondado para cima) ao dano da técnica. Uma técnica só pode ter um Special Attack.",
-            "Aumente o custo da técnica em 2 MP.",
+            "Adiciona um segundo atributo de dano, diferente do primeiro, dividido por 2 (arredondando para BAIXO) ao dano da técnica. Uma técnica só pode ter um Special Attack.",
+            "Aumente o custo da técnica em 1 MP.",
             "Special Attack I pode ser adicionada a uma técnica sem ocupar slots. Nesse caso: aumente o custo da técnica em 3 ao invés de 2. Não é possível ignorar o limite de apenas uma Special Attack dessa maneira."
         ],
         "conceitos": [
@@ -1466,7 +1487,7 @@ window.techAddons =
         "conceitos": [
             "unicidade"
         ],
-        "nivel": 2
+        "nivel": 1
     },
     {
         "id": 339,
@@ -1477,13 +1498,13 @@ window.techAddons =
             "O dano base dessa técnica se reduz ao dado e bônus base da arma, sem adicionar nenhum atributo de dano.",
             "Aumente o dano dessa técnica em duas vezes a sua Sabedoria de Combate.",
             "Essa técnica passa a ter como tipo todos os seus atributos que estejam acima de 0. Você deve fazer uma descrição que explique isso.",
-            "Uma técnica só pode ter um Special Attack e você não pode utilizar Special Attack III caso você esteja usando menos do que 3 atributos de dano. Caso a diferença entre seus atributos acima de 0 for maior do que 2, você não pode utilizar esse addon. [3, 2, 1] pode, [4, 2, 1] não.",
+            "Uma técnica só pode ter um Special Attack e você só pode utilizar Special Attack III quando cada um dos atributos de dano do usuário for menor ou igual a sua sabedoria de combate.",
             "Aumente o custo da técnica em 4."
         ],
         "conceitos": [
             "unicidade"
         ],
-        "nivel": 3
+        "nivel": 1
     },
 	{
         "id": 232,
@@ -1508,14 +1529,14 @@ window.techAddons =
             "O dano base dessa técnica se reduz ao dado e bônus base da arma, sem adicionar nenhum atributo de dano.",
             "Aumente o dano dessa técnica em duas vezes a sua Sabedoria de Combate.",
             "Essa técnica passa a ter como tipo todos os seus atributos que estejam acima de 0. Você deve fazer uma descrição que explique isso.",
-            "Uma técnica só pode ter um Special Attack e você não pode utilizar Special Attack III caso você esteja usando menos do que 3 atributos de dano. Caso a diferença entre seus atributos acima de 0 for maior do que 2, você não pode utilizar esse addon. [3, 2, 1] pode, [4, 2, 1] não.",
+            "Uma técnica só pode ter um Special Attack e você só pode utilizar Special Attack Ranged III quando cada um dos atributos de dano do usuário for menor ou igual a sua sabedoria de combate.",
             "Sua técnica se torna Ranged e recebe +1 Bônus de Alcance em sua prioridade.",
             "Aumente o custo da técnica em 4."
         ],
         "conceitos": [
             "unicidade"
         ],
-        "nivel": 3
+        "nivel": 1
     },
     {
         "id": 291,
@@ -1523,9 +1544,9 @@ window.techAddons =
         "nome": "Special Attack Ranged I",
         "nomeLimpo": "Special Attack Ranged I",
         "efeitos": [
-            "Adiciona um segundo atributo de dano, diferente do primeiro, dividido por 2 ao dano da técnica. Uma técnica só pode ter um Special Attack.",
+            "Adiciona um segundo atributo de dano, diferente do primeiro, dividido por 2 ao dano da técnica (arredondando para BAIXO). Uma técnica só pode ter um Special Attack.",
             "Sua técnica se torna Ranged e recebe +1 Bônus de Alcance em sua prioridade.",
-            "Aumenta Custo da técnica em 2."
+            "Aumenta Custo da técnica em 1."
         ],
         "conceitos": [
             "unicidade",
@@ -1547,7 +1568,7 @@ window.techAddons =
             "unicidade",
             "prioridade"
         ],
-        "nivel": 2
+        "nivel": 1
     },
 		{
         "tipo": "ataque",
@@ -1683,7 +1704,7 @@ window.techAddons =
         "conceitos": [
             "unicidade"
         ],
-        "nivel": 2
+        "nivel": 1
     },
     /*
      * Técnicas Especiais
@@ -1958,14 +1979,14 @@ window.techAddons =
         "nome": "Expertise III",
         "nomeLimpo": "Expertise III",
         "efeitos": [
-            "Use esse addon e ganhe superioridade em no próximo teste de uma perícia escolhida na criação dessa técnica.",
+            "Use esse addon e ganhe superioridade no seu próximo teste de perícia ou atributo-teste.",
 			"Custo de MP igual à 5 e só pode ser usado 1x por combate ou a cada 30 minutos dentro do jogo." 
         ],
         "conceitos": [
             "stacking",
             "unicidade"
         ],
-        "nivel": 2
+        "nivel": 1
     },
     {
         "id": 374,
@@ -2124,9 +2145,8 @@ window.techAddons =
         "nome": "Praying Shield",
         "nomeLimpo": "Praying Shield",
         "efeitos": [
-            "Escolha um dos atributos de dano na criação dessa técnica: ao usar os efeitos desse addon, ganhe proteção contra esse atributo.",
-			"Um personagem protegido contra um atributo ganha +1 RD Específica durante 1 rodada naquele atributo, não se acumulando caso o personagem já tenha algum tipo de proteção prévia nesse atributo (seja por item ou outros efeitos).",
-            "Custo de MP: 2 e gasta o turno ou 4 e não gasta o turno.",
+            "Escolha um dos atributos de dano na criação dessa técnica: ao usar os efeitos desse addon, ganhe Bônus de Proteção +1 na RD desse atributo.",
+			"Custo de MP: 2 e gasta o turno ou 4 e não gasta o turno.",
         ],
         "conceitos": [
 	 "unicidade",
@@ -2175,7 +2195,8 @@ window.techAddons =
 			"Falar, usar itens ou qualquer ação que teoricamente quebraria sua invisibilidade.",
 			"Alvos que estejam lutando contra um personagem invisível, podem fazer um teste de 1d10 + SAB + Percepção VS 1d10 + AGI + Furtividade do alvo invisível para detectá-lo.",
 			"Este mesmo teste deve ser feito toda vez que o combatente invisível for atacar alguém de qualquer forma ou fizer uma ação. Caso um combatente que seja alvo passe neste teste de identificação, o personagem invisível perde seus bônus contra esse alvo e é imediatamente relevado para todos.",
-			"Custo: 5 MP, gasta o turno"
+			"Custo: 5 MP, gasta o turno",
+			"Pode ser ativada no turno de preparação da luta."
         ],
         "conceitos": [
 	 "unicidade",
@@ -2205,7 +2226,7 @@ window.techAddons =
         "efeitos": [
             "Uma força envolve você e seus aliados temporariamente, fazendo com que o primeiro ataque com o addon Area of Effect que for jogado contra você ou seus aliados, seja negado.",
 			"Esse efeito não pode ocorrer mais do que 1x por combate, independente de qual aliado usar.",
-			"Custo: 10 MP, gasta o turno."
+			"Custo: 6 MP, gasta o turno."
         ],
         "conceitos": [
 	 "unicidade",
@@ -2621,7 +2642,7 @@ window.techAddons =
         "conceitos": [
             "marcas",
         ],
-        "nivel": 2
+        "nivel": 1
     },
 {
         "tipo": "passiva",
@@ -2635,7 +2656,7 @@ window.techAddons =
         "conceitos": [
             "marcas",
         ],
-        "nivel": 2
+        "nivel": 1
     },
 {
         "tipo": "passiva",
@@ -2649,7 +2670,7 @@ window.techAddons =
         "conceitos": [
             "marcas"
         ],
-        "nivel": 2
+        "nivel": 1
     },
 {
         "tipo": "passiva",
@@ -2663,7 +2684,7 @@ window.techAddons =
         "conceitos": [
             "marcas"
         ],
-        "nivel": 2
+        "nivel": 1
     },		
     {
         "id": 341,
@@ -2695,7 +2716,7 @@ window.techAddons =
         "conceitos": [
 
         ],
-        "nivel": 2
+        "nivel": 1
     },
     {
         "id": 306,
@@ -3085,8 +3106,8 @@ window.techAddons =
     },
 							  {
         "tipo": "passiva",
-        "nome": "Boon of the Opressor",
-        "nomeLimpo": "Boon of the Opressor",
+        "nome": "Boon of the Oppressor",
+        "nomeLimpo": "Boon of the Oppressor",
         "efeitos": [
             "Inimigos marcados por você recebem 1 ponto de dano a mais quando atacados por você.",
 			"O dano é aplicado após passar pelas RDs do alvo, dessa forma causando um dano final mínimo igual a 2 (ou um, caso o alvo possua Boon of the Protector).",
@@ -3101,13 +3122,12 @@ window.techAddons =
     },
 							  {
         "tipo": "passiva",
-        "nome": "Boon of the Agressor",
-        "nomeLimpo": "Boon of the Agressor",
+        "nome": "Boon of the Aggressor",
+        "nomeLimpo": "Boon of the Aggressor",
         "efeitos": [
-            "Inimigos já atacados previamente por você em turnos passados seus, recebem 2 pontos de dano a mais quando atacados por você em seu turno e somente no seu turno.",
-			"Caso outro alvo seja atacado (isso inclui Area of Effect ou ataques em marcas), o efeito do addon é resetado.",
-			"O bônus de dano concedido por esse addon não sofre normalização, porém é reduzido normalmente em addons que exigem que o modificador de dano seja cortado pela metade(Area of Effect, Think Fast, etc).",
-			"Não pode ser usado jundo de Boon of the Opressor.",
+            "Quando realizando um novo ataque contra o último inimigo que você atacou, receba +2 nas suas rolagens de dano.",
+            "Ataques em área alteram seu último inimigo atacado para \"Nenhum\" e não recebem o bônus desse addon. Ataques de ativação de marca também são considerados para o primeiro efeito, alterando seu último alvo.",
+            "Não pode ser usado jundo de Boon of the Oppressor.",
             "Aumente custo total da técnica em 3 (não acumulativo, mas somatório entre outros addons) para cada rodada que a habilidade com este addon ficar ativa."
         ],
         "conceitos": [
@@ -3149,105 +3169,231 @@ window.techAddons =
      * ID Range: 5000~5999
      */
     {
-        "id" : 5000,
         "nivel" : 1,
         "tipo" : "estilo",
-        "nome" : "Condições a serem obedecidas",
-        "nomeLimpo" : "Condicoes",
+        "nome" : "C1 - Natural",
+        "nomeLimpo" : "C1 - Natural",
         "efeitos" : [
-            "Quando lutando sozinho",
-			"Quando lutando com uma quantidade de inimigos maior que o seu grupo",
-			"Quando um aliado estiver com 0 de HP ou menos",
-			"Quando um terreno aplicar mais penalidades do que bônus para você",
-			"Quando lutando em Terreno X, onde X deve ser somente um entre: Montanhas, Cavernas, Pântanos, Planícies, Desertos,Neve, Ambientes Urbanos, Florestas ou Aquático.",
-			"Quando lutando durante a noite",
-			"Quando lutando durante uma chuva ou tempestade",
-			"Quando lutando durante a presença de névoa",
-			"Quando lutando em um ambiente apertado (mínimo: 2 m de largura)",
-			"Quando lutando em um ambiente largo e amplo (mínimo: 20 m x 20 m)",
-			"Quando um aliado tiver com HP máximo igual ou menor à 20%",
-			"Quando lutando com o MP cheio por mais de um turno",
-			"Quando lutando com MP máximo igual ou menor à 5",
-			"Quando lutando contra um inimigo muito maior que você (mínimo: 2 metros de diferença pra mais)",
-			"Quando lutando contra um inimigo muito menor que você (mínimo: metade do seu tamanho pra menos)",
-			"Quando lutando sem armas equipadas",
-			"Quando lutando sem armaduras equipadas",
-			"Quando sua RD geral for igual a 0",
-			"Quando todas as suas RDs específicas forem igual a 0",
-			"Quando usando um item restaurativo",
-			"Quando usando um item destrutivo",
-			"Quando usando uma perícia física (definir qual) e passar no teste dela",
-			"Quando usando uma perícia mental (definir qual) e passar no teste dela",
-			"Quando usando uma perícia social (definir qual) e passar no teste dela",
-			"Quando receber um golpe crítico, após ele você recebe...",
-			"Quando acertar um golpe crítico, após ele você recebe...",
-			"Quando acertar uma esquiva crítica, após ela você recebe...",
-			"Quando receber dano pelo atributo <X>. Escolha um único atributo de dano para essa condição.",
-			"Quando um inimigo acertar uma esquiva crítica, após ela você recebe...",
-			"Quando manipular o terreno de alguma forma ao seu favor ou de seus aliados",
-			"Quando lutando sozinho",
-            "Quando usar algum objeto do ambiente ao seu favor",
-			"Quando curar uma condição negativa de si",
-			"Quando curar uma condição negativa de um aliado",
-			"Quando um inimigo não estiver visível por algum motivo",
-			"Quando um inimigo for um animal da família... (escolha o tipo de animal)",
-			"Quando um inimigo for um do tipo... (escolha uma família de inimigos. Como as criaturas de uma campanha variam de mestre pra mestre, abaixo seguem algumas sugestões que o Mestre pode adotar ou incrementar mais): Elemental, Dragão, Voador, Gigante, Orc, El'zel, Elfo, Humano, Quellsir, Yu'qun, Zahari, Ogrekin, Bestial, Golem, Fayri, Morto-vivo, Mágica, Gosma, Planta, Verme, Demônio, Anjo, Extraplanar",
-			"Quando se manter com o HP cheio por mais de um turno",
-			"Quando estiver num terreno de nível acima aos inimigos",
-			"Quando estiver num terreno de nível abaixo aos inimigos",
-			"Quando estiver fugindo dos inimigos",
-			"Quando estiver se escondendo dos inimigos",
-			"Quando voltar à vida numa luta",
-			"Quando lutando próximo de algo que lhe dá cobertura (objeto ou parte do cenário)",
-			"Quando lutando com HP máximo igual ou menor à 10%",
-			"Quando lutando com HP máximo igual ou menor à 20%",
-			"Quando estiver afetado por uma condição negativa (debuff)",
-			"Quando infringir uma condição negativa (debuff)",
-			"Quando interpretar uma desvantagem (deve avisar que está fazendo isso intencionalmente)"
+             "Esse estilo de luta é bem básico e oferece suas vantagens para o personagem em qualquer situação.",
+             "Fornece 1 ponto de Estilo."
         ],
         "conceitos" : [
             
         ]
     },
     {
-        "id" : 5001,
         "nivel" : 1,
         "tipo" : "estilo",
-        "nome" : "Efeito do Estilo de Luta",
-        "nomeLimpo" : "Efeitos",
+        "nome" : "C2 - Participantes",
+        "nomeLimpo" : "C2 - Participantes",
         "efeitos" : [
-            "Superioridade para si",
-            "Superioridade para um único inimigo da sua escolha",
-		    "Superioridade para um único aliado da sua escolha",
-            "Superioridade para um único inimigo aleatório",
-			"Superioridade para um único aliado aleatório",
-            "Inferioridade para si",	
-			"Inferioridade para um único inimigo da sua escolha",
-            "Inferioridade para um único aliado da sua escolha",
-		    "Inferioridade para um único inimigo aleatório",
-            "Inferioridade para um único aliado aleatório"
+             "Esse estilo de luta oferece suas vantagens para o personagem de acordo com os participantes da luta.",
+             "Fornece 2 pontos de Estilo.",
+             "Escolha uma das situações a seguir para ser a condição de funcionamento:",
+             "- Quando lutando sem aliados.",
+             "- Quando o grupo de inimigos possui mais participantes do que o seu grupo.",
+             "- Quando um aliado estiver nocauteado.",
+             "- Quando um aliado estiver com HP igual ou menor do que 3, mas sem estar nocauteado.",
+             "- Quando algum participante do seu grupo recebeu dano, mas nenhum oponente recebeu dano.",
+             "- Quando algum participante do grupo inimigo recebeu dano, mas nenhum aliado recebeu dano.",
+             "- Quando seu HP for igual ou menor do que (2 + (Seu Nível / 2)), arredondado para baixo.",
+             "- Enquanto você não tiver recebido dano nessa luta (independente do seu HP atual)",
+             "- Enquanto seu HP atual for igual ao seu HP Máximo",
+             "- Enquanto seu MP for 5 ou menos.",
+             "- Enquanto seu MP permanecer no máximo.",
+             "- Enquanto lutando sem armaduras equipadas.",
+             "- Enquanto lutando sem armas equipadas.",
+             "- Quando um inimigo for um animal da família... (escolha o tipo de animal)",
+             "- Quando um inimigo for um do tipo... (escolha uma família de inimigos. Como as criaturas de uma campanha variam de mestre pra mestre, abaixo seguem algumas sugestões que o Mestre pode adotar ou incrementar mais): Elemental, Dragão, Voador, Gigante, Orc, El'zel, Elfo, Humano, Quellsir, Yu'qun, Zahari, Ogrekin, Bestial, Golem, Fayri, Morto-vivo, Mágica, Gosma, Planta, Verme, Demônio, Anjo, Extraplanar"
         ],
         "conceitos" : [
             
         ]
     },
     {
-        "id" : 5002,
         "nivel" : 1,
         "tipo" : "estilo",
-        "nome" : "Área afetada",
-        "nomeLimpo" : "Areas",
+        "nome" : "C2 - Localização",
+        "nomeLimpo" : "C2 - Localizacao",
         "efeitos" : [
-            "Testes com uma única perícia da sua escolha enquanto a condição for obedecida. Escolha uma perícia da lista",
-		    "Testes com um único atributo-teste enquanto a condição for obedecida. Escolha um atributo da lista.",
-			"O primeiro (seu ou do alvo) teste de Ataque (ATK) da rodada enquanto a condição for obedecida.",
-            "O primeiro teste (seu ou do alvo) de Defesa (DEF) da rodada enquanto a condição for obedecida.",	
-			"O primeiro teste (seu ou do alvo) de Dano Melee da rodada enquanto a condição for obedecida. Escolha um atributo de dano.",
-            "O primeiro teste (seu ou do alvo) de Dano Ranged da rodada enquanto a condição for obedecida.Escolha um atributo de dano.",
-		    "O primeiro teste (seu ou do alvo) de Bloqueio da rodada enquanto a condição for obedecida.",
-            "O primeiro teste (seu ou do alvo) Restaurativo de Habilidade da rodada enquanto a condição for obedecida.",
-			"O primeiro teste (seu ou do alvo) de Ataque Básico da rodada enquanto a condição for obedecida.",
-			"O primeiro teste (seu ou do alvo) de Contra-Ataque (ATK) da rodada enquanto a condição for obedecida."
+             "O estilo de luta oferece suas vantagens a depender da sua posição ou o local onde a luta está acontecendo.",
+             "Fornece 2 pontos de Estilo.",
+             "Escolha uma situação a seguir para ser a condição de funcionamento:",
+             "- Quando lutando em Terreno X, onde X deve ser somente um entre: Montanhas, Cavernas, Pântanos, Planícies, Desertos,Neve, Ambientes Urbanos, Florestas ou Aquático.",
+             "- Quando lutando durante uma chuva ou tempestade",
+             "- Quando lutando durante a noite",
+             "- Quando lutando durante a presença de névoa",
+             "- Quando lutando em um ambiente apertado (mínimo: 2 m de largura)",
+             "- Quando lutando em um ambiente largo e amplo (mínimo: 20 m x 20 m)",
+             "- Quando estiver num terreno de nível acima aos inimigos",
+             "- Quando estiver num terreno de nível abaixo aos inimigos",
+             "- Quando lutando próximo de algo que lhe dá cobertura (objeto ou parte do cenário)"
+        ],
+        "conceitos" : [
+            
+        ]
+    },
+    {
+        "nivel" : 1,
+        "tipo" : "estilo",
+        "nome" : "C2 - Ação",
+        "nomeLimpo" : "C2 - Acao",
+        "efeitos" : [
+             "O estilo de luta entra em efeito após uma certa ação ser executada. Após a ação ser executada, as vantagens do estilo de luta ficam disponíveis até o término do seu próximo turno.",
+             "Fornece 2 pontos de Estilo.",
+             "Escolha uma ação a seguir para a restrição:",
+             "- Depois de utilizar uma perícia (escolha qual) e obter sucesso",
+             "- Depois de atacar e causar dano a algum inimigo",
+             "- Depois de utilizar um efeito especial e curar algum aliado",
+             "- Depois de interpretar uma desvantagem (deve avisar que está fazendo isso intencionalmente)",
+             "- Depois de colocar uma condição negativa em algum inimigo",
+             "- Depois de colocar uma condição positiva em algum aliado",
+             "- Depois de realizar uma esquiva bem sucedida",
+             "- Depois de utilizar um item restaurativo",
+             "- Depois de utilizar um item destrutivo",
+             "- Depois de retirar uma condição negativa de si",
+             "- Depois de retirar uma condição negativa de um aliado",
+             "- Depois de utilizar algum objeto do ambiente a seu favor",
+             "- Depois de receber dano pelo atributo <X>. Escolha um único atributo de dano para essa condição."
+        ],
+        "conceitos" : [
+            
+        ]
+    },
+    {
+        "nivel" : 1,
+        "tipo" : "estilo",
+        "nome" : "C2 - Situação",
+        "nomeLimpo" : "C2 - Situacao",
+        "efeitos" : [
+             "O estilo de luta oferece suas vantagens a depender de alguma situação específica da luta.",
+             "Fornece 2 pontos de Estilo.",
+             "Escolha uma situação a seguir para ser a condição de funcionamento:",
+             "- Quando lutando contra um inimigo muito maior que você (mínimo: 2 metros de diferença pra mais)",
+             "- Quando lutando contra um inimigo muito menor que você (mínimo: metade do seu tamanho pra menos)",
+             "- Quando um inimigo não estiver visível por algum motivo",
+             "- Quando um inimigo for um animal da família... (escolha o tipo de animal)",
+           	 "- Quando um inimigo for um do tipo... (escolha uma família de inimigos. Como as criaturas de uma campanha variam de mestre pra mestre, abaixo seguem algumas sugestões que o Mestre pode adotar ou incrementar mais): Elemental, Dragão, Voador, Gigante, Orc, El'zel, Elfo, Humano, Quellsir, Yu'qun, Zahari, Ogrekin, Bestial, Golem, Fayri, Morto-vivo, Mágica, Gosma, Planta, Verme, Demônio, Anjo, Extraplanar"
+        ],
+        "conceitos" : [
+            
+        ]
+    },
+    {
+        "nivel" : 1,
+        "tipo" : "estilo",
+        "nome" : "C3 - Ação Especial",
+        "nomeLimpo" : "C3 - Acao Especial",
+        "efeitos" : [
+             "O estilo de luta entra em efeito após uma certa ação ser executada. Após a ação ser executada, as vantagens do estilo de luta ficam disponíveis até o término do seu próximo turno.",
+             "Fornece 3 pontos de Estilo.",
+             "- Após realizar uma esquiva crítica.",
+             "- Após realizar um acerto crítico.",
+             "- Após rolar um resultado máximo de dano contra um oponente.",
+             "- Depois de nocautear um oponente.",
+             "- Depois de ver um aliado ser nocauteado.",
+             "- Depois de socorrer um aliado que estivesse morrendo e ser bem-sucedido nesse teste."
+        ],
+        "conceitos" : [
+            
+        ]
+    },
+    {
+        "nivel" : 1,
+        "tipo" : "estilo",
+        "nome" : "E - Força Confiável",
+        "nomeLimpo" : "E - Forca Confiavel",
+        "efeitos" : [
+             "O estilo de luta te coloca em posição favorável para causar dano de uma forma mais prática e confiável.",
+             "1 Ponto de Estilo: Ganhe superioridade nas suas duas primeiras rolagens de dano de cada rodada.",
+             "2 Pontos de Estilo: Ganhe superioridade em todas as suas rolagens de dano."
+        ],
+        "conceitos" : [
+            
+        ]
+    },
+    {
+        "nivel" : 1,
+        "tipo" : "estilo",
+        "nome" : "E - Posição de Dano",
+        "nomeLimpo" : "E - Posicao de Dano",
+        "efeitos" : [
+             "O estilo de luta te coloca em posição favorável para causar dano de formas específicas.",
+             "1 Ponto de Estilo: Ganhe superioridade em rolagens de dano realizadas dentro do seu turno.",
+             "1 Ponto de Estilo: Ganhe superioridade em rolagens de dano realizadas fora do seu turno."
+        ],
+        "conceitos" : [
+            
+        ]
+    },
+    {
+        "nivel" : 1,
+        "tipo" : "estilo",
+        "nome" : "E - Neutralizador",
+        "nomeLimpo" : "E - Neutralizador",
+        "efeitos" : [
+             "O estilo de luta não te oferece vantagens, mas ele neutraliza vantagens que oponentes utilizariam contra você.",
+             "Esse addon é Exclusivo e não pode ser escolhido junto de outros addons de Efeito.",
+             "1 Ponto de Estilo: Inimigos não recebem Superioridade por estilos de luta quando realizando testes contra você. Esse efeito só funciona contra superioridades entregues por apenas 1 Ponto de Estilo de Luta.",
+             "2 Pontos de Estilo: Inimigos não recebem Superioridade por estilos de luta quando realizando testes contra você."
+        ],
+        "conceitos" : [
+            
+        ]
+    },
+    {
+        "nivel" : 1,
+        "tipo" : "estilo",
+        "nome" : "E - Liderança",
+        "nomeLimpo" : "E - Lideranca",
+        "efeitos" : [
+             "O estilo de luta visa colocar inimigos em posições desfavoráveis ou aliados em posições favoráveis.",
+             "1 Ponto: Receba superioridade em rolagens de efeitos que tenham aliados como alvo.",
+             "2 Pontos: Inimigos com os quais você interagiu desde o seu último turno recebem inferioridade em rolagens de Ataque, Defesa ou Dano (escolher um durante a criação dessa tecnica) contra seus aliados. \"Interagir com um inimigo\" significa ter realizado algum ataque ou ativação de efeito sob um oponente ou ter sido alvo de algum desses realizados por ele.",
+             "2 Pontos: Aliados com os quais você interagiu desde o seu último turno recebem superioridade em rolagens de Ataque, Defesa ou Dano contra oponentes (escolher um durante a criação dessa tecnica). \"Interagir com um aliado\" significa ter utilizado algum efeito que tenha como alvo o aliado ou utilizar a perícia Socorrer sob ele."
+        ],
+        "conceitos" : [
+            
+        ]
+    },
+    {
+        "nivel" : 1,
+        "tipo" : "estilo",
+        "nome" : "E - Sem aberturas",
+        "nomeLimpo" : "E - Sem aberturas",
+        "efeitos" : [
+             "O estilo de luta sacrifica a possibilidade de vantagens para garantir que não exista nada de que um oponente possa tirar vantagem.",
+             "Esse addon é Exclusivo e não pode ser escolhido junto de outros addons de Efeito.",
+             "1 Ponto de Estilo: Suas rolagens não podem receber inferioridade nem superioridade."
+        ],
+        "conceitos" : [
+            
+        ]
+    },
+    {
+        "nivel" : 1,
+        "tipo" : "estilo",
+        "nome" : "E - Precisão",
+        "nomeLimpo" : "E - Precisao",
+        "efeitos" : [
+             "O estilo de luta tenta ser certeiro mais do que o normal.",
+             "1 Ponto de Estilo: Ganhe superioridade nas suas duas primeiras rolagens de Ataque da rodada.",
+             "2 Pontos de Estilo: Ganhe superioridade em todas as suas rolagens de Ataque.",
+        ],
+        "conceitos" : [
+            
+        ]
+    },
+    {
+        "nivel" : 1,
+        "tipo" : "estilo",
+        "nome" : "E - Evasão",
+        "nomeLimpo" : "E - Evasao",
+        "efeitos" : [
+             "O estilo de luta tenta evitar ataques do oponente mais do que o normal.",
+             "1 Ponto de Estilo: Ganhe superioridade na sua primeira rolagem de Defesa da rodada.",
+             "2 Pontos de Estilo: Ganhe superioridade nas suas duas primeiras rolagens de Defesa da rodada.",
+             "3 Pontos de Estilo: Ganhe superioridade em todas as suas rolagens de Defesa.",
         ],
         "conceitos" : [
             
@@ -3269,9 +3415,8 @@ window.techAddons =
         "nome" : "Capacidade Destrutiva",
         "nomeLimpo" : "Capacidade Destrutiva",
         "efeitos" : [
-            "A arma é capaz de causar uma destruição muito além do normal.",
-            "Ataques realizados com a arma passam a rolar 1d10-2 no lugar de 1d6. Não é compatível com outros addons que alterem o dado sendo rolado.",
-            "Capacidade Destrutiva altera o \"alcance\" da arma para -1 a 8, efetivamente aumentando o dano máximo em 2 e reduzindo o dano mínimo em 2."
+            "Se causando dano através de armas com Capacidade Destrutiva, role 1d8-1 ao invés de 1d6 se apenas uma arma possuir capacidade destrutiva.",
+	"Se ambas as armas de uma mão, ou uma arma de duas mãos, possuirem Capacidade Destrutiva, role 1d10-2 ao invés de 1d6 para o dano."
         ],
         "conceitos": [],
         "nivel" : 1
@@ -3515,7 +3660,7 @@ window.techAddons =
         "nome": "Material Especial",
         "nomeLimpo": "Material Especial",
         "efeitos": [
-            "Escolha mais um atributo de dano. A arma defensiva passa a estar protegendo contra ele, garantindo +1 RD específico ali também. Esse ganho não se acumula com o de armaduras. Você pode adicionar Material Especial várias vezes, mas um atributo só pode ser protegido uma vez."
+            "Escolha mais um atributo de dano. A arma defensiva passa a estar protegendo contra ele, garantindo +1 Bônus de Proteção no RD específico ali também."
         ],
         "conceitos": [],
         "nivel": 1
@@ -3560,7 +3705,7 @@ window.techAddons =
         "efeitos": [
             "Essa armadura é mais leve que o normal, mas concede menor proteção geral. Esse addon garante uma penalidade de +0 RD Geral para armaduras, mas ao utilizar uma armadura leve o personagem recebe +1 em testes de Defesa (DEF) e +1 em testes de Ataque (ATK). Esse addon não aumenta o nível da armadura e nem preenche slot ao ser adicionado.",
             "Qualquer roupa que não impede movimentos, mesmo que não tenha sido feita para combate, é considerada armadura leve.",
-			"Um personagem com esse addon também recebe +1 RD Específica em um atributo da sua escolha, na criação do item"
+			"Um personagem com esse addon também recebe +1 Bônus de Proteção na RD Específica em um atributo da sua escolha, na criação do item"
         ],
         "conceitos": [],
         "nivel": 1
@@ -3571,7 +3716,7 @@ window.techAddons =
         "nomeLimpo": "Armadura Media",
         "efeitos": [
             "Essa armadura é uma mistura entre a armadura leve e pesada, permitindo movimentos diversos com leveza e flexibilidade ao mesmo tempo que oferece boa proteção (sem necessariamente se especializar em ambas as propriedades). Esse addon concede um bônus de item igual à +1 RD Geral e ao mesmo tempo concede +1 de Bônus de Item em rolagens de Ataque (ATK). Esse addon não aumenta o nível da armadura e nem preenche slot ao ser adicionado.",
-			"Um personagem com esse addon também recebe +1 RD Específica em um atributo da sua escolha, na criação do item"
+			"Um personagem com esse addon também recebe +1 Bônus de Proteção na RD Específica em um atributo da sua escolha, na criação do item"
         ],
         "conceitos": [],
         "nivel": 1
@@ -3582,7 +3727,7 @@ window.techAddons =
         "nomeLimpo": "Armadura Pesada",
         "efeitos": [
             "Essa armadura é mais pesada que o normal, mas muito mais reforçada e trabalhada que as outras. Esse addon aumenta a RD Geral em +2. do personagem. Esse addon não aumenta o nível da armadura e nem preenche slot ao ser adicionado.",
-			"Um personagem com esse addon também recebe +1 RD Específica em um atributo da sua escolha, na criação do item"
+			"Um personagem com esse addon também recebe +1 Bônus de Proteção na RD Específica em um atributo da sua escolha, na criação do item"
         ],
         "conceitos": [],
         "nivel": 1
@@ -3787,8 +3932,8 @@ window.techAddons =
         "nivel": 1
     }
 ].sort(function (a,b) {
-    var na = a.nome.toUpperCase();
-    var nb = b.nome.toUpperCase();
+    var na = a.nome.toUpperCase().latinize();
+    var nb = b.nome.toUpperCase().latinize();
     if (na < nb) return -1;
     if (na > nb) return 1;
     return 0;

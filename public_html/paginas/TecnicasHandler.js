@@ -10,8 +10,8 @@ function TecnicasHandler (addons) {
     
     for (var tipo in this.addonsByTipo) {
         this.addonsByTipo[tipo].sort(function (a,b) {
-            var na = a.nome.toUpperCase();
-            var nb = b.nome.toUpperCase();
+            var na = a.nome.toUpperCase().latinize();
+            var nb = b.nome.toUpperCase().latinize();
             if (na < nb) return -1;
             if (na > nb) return 1;
             return 0;

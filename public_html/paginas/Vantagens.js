@@ -5,9 +5,18 @@
  */
 window.vantagensChangelog = [
 	{
-        "version" : [4, 1],
+        "version" : [4, 2],
         "description" : [
-            "Vantagem 'Trabalho Duro' renomeada para 'Trabalhador Esforçado' para resolver conflito com a vantagem 'Trabalho Duro' de Alquimista.",
+             "Vantagem 'Mais do Mesmo' refeita como 'Mais do Mesmo?'.",
+             "Nova vantagem: Perfeito.",
+             "Aparência, Deus Grego, Beleza Élfica e Jóia do Oceano alteradas para resolver confusões.",
+			 "\Deus Grego\" agora custa somente 1 ponto e só possui esse nível.",
+			 "Vantagem de Cavaleiro Negro: \"Energia Negativa\" agora custa 12 MP (anterior: 18)",
+			 "Nova vantagem para Mercante Príncipe: Guarda-Costas e Negócios (esta segunda susbistui a antiga \"Influência\")",
+			 "Novo texto em \"Ascendência Elemental\" para ajudar mestres e jogadores em como adquirir novos elementos",
+			 "Vantagem 'Trabalho Duro' renomeada para 'Trabalhador Esforçado' para resolver conflito com a vantagem 'Trabalho Duro' de Alquimista.",
+			 "Todas as vantagens raciais agora foram padronizadas para terem a nomeação de 'Bônus de Vantagem', assim, não acumulando entre si mesmo com vantagens do tipo 'sub-raça' ou 'melhor de ambos os lados'.",
+			 "Nova vantagem para Necromantes, Invocadores Astrais e Senhores das Bestas: 'Aprimoramento Especial'"
         ]
     },
 	{
@@ -89,8 +98,8 @@ window.arquetipos = [
      "Samurai",
      "Senhor das Bestas"
 ].sort(function (a,b) {
-	var nA = a.toUpperCase();
-	var nB = b.toUpperCase();
+	var nA = a.toUpperCase().latinize();
+	var nB = b.toUpperCase().latinize();
 	if (nA < nB) return -1;
 	if (nA > nB) return 1;
 	return 0;
@@ -125,8 +134,8 @@ for (var i = 0; i < racasLength; i++) {
 }
 
 window.racas.sort(function (a,b) {
-	var nA = a.toUpperCase();
-	var nB = b.toUpperCase();
+	var nA = a.toUpperCase().latinize();
+	var nB = b.toUpperCase().latinize();
 	if (nA < nB) return -1;
 	if (nA > nB) return 1;
 	return 0;
@@ -180,7 +189,7 @@ window.vantagensArray = [
         "nome": "Mapa dos Anões",
         "pontos": "1",
         "descricao": [
-            "Andar em complexos subterrâneos, perímetros de montanhas e cidades anãs não é uma tarefa fácil! Justamente por isso, os anões desenvolveram um senso de direção incrível que se ampliou pra todo e qualquer lugar que visitam, impossibilitando que eles se percam ou falhem a encontrar o caminho mais adequado para suas necessidades. Em termos gerais um anão não costuma se perder e ganha sucesso automático em testes para encontrar o caminho ou direção  em ambientes subterrâneos ou montanhosos com uma dificuldade de até 10, recebendo um bônus de +2 em dificuldades maiores."
+            "Andar em complexos subterrâneos, perímetros de montanhas e cidades anãs não é uma tarefa fácil! Justamente por isso, os anões desenvolveram um senso de direção incrível que se ampliou pra todo e qualquer lugar que visitam, impossibilitando que eles se percam ou falhem a encontrar o caminho mais adequado para suas necessidades. Em termos gerais um anão não costuma se perder e ganha sucesso automático em testes para encontrar o caminho ou direção  em ambientes subterrâneos ou montanhosos com uma dificuldade de até 10, recebendo um bônus de +2 Bônus de Vantagem em ificuldades maiores."
         ],
         "requisitos": "Raça Anão"
     },
@@ -204,7 +213,7 @@ window.vantagensArray = [
         "nome": "Sentidos Aguçados",
         "pontos": "1",
         "descricao": [
-            "Sua espécie é ainda mais especializada quando lidando com sentidos. Você recebe +2 em rolagens de atributos-teste ou perícias relacionadas a tentar ouvir, sentir cheiro ou enxergar."
+            "Sua espécie é ainda mais especializada quando lidando com sentidos. Você recebe +2 Bônus de Vantagem em rolagens de atributos-teste ou perícias relacionadas a tentar ouvir, sentir cheiro ou enxergar."
         ],
         "requisitos": "Raça Bestial"
     },
@@ -228,7 +237,7 @@ window.vantagensArray = [
         "nome": "Herança dos Dragões",
         "pontos": "2",
         "descricao": [
-            "Uma herança anciã corre nas suas veias e faz com que sua resistência seja levemente superior aos de outras criaturas. Ganhe +2 de HP máximo com isso. Essa vantagem não se acumula com \"Duro de matar\"."
+            "Uma herança anciã corre nas suas veias e faz com que sua resistência seja levemente superior aos de outras criaturas. Ganhe um Bônus de Vantagem de +2 de HP máximo com isso. Essa vantagem não se acumula com \"Duro de matar\"."
         ],
         "requisitos": "Raça Draconiano"
     },
@@ -244,7 +253,7 @@ window.vantagensArray = [
         "nome": "Sexto Sentido",
         "pontos": "1",
         "descricao": [
-            "Outra herança genética oriunda dos antigos dragões quando os mesmos lutavam incansavelmente contra os caçadores: estar sempre preparado para um confronto. Com isso, o personagem ganha um bônus de +2 em rolagens de iniciativa."
+            "Outra herança genética oriunda dos antigos dragões quando os mesmos lutavam incansavelmente contra os caçadores: estar sempre preparado para um confronto. Com isso, o personagem ganha um Bônus de Vantagem de +2 em rolagens de iniciativa."
         ],
         "requisitos": "Raça Draconiano"
     },
@@ -302,7 +311,7 @@ window.vantagensArray = [
         "nome": "Mente Cibernética",
         "pontos": "1",
         "descricao": [
-            "Por serem compostos por diversos fios, células virtuais e outros aparelhos com alta diversidade tecnológica, os Droids acabam ficando pouco afetados por encantamentos ou feitiços de ação mental, uma vez que a mente deles funciona diferente de um ser vivo. Justamente por isso, o personagem ganha um bônus de +3 em rolagens quaisquer que envolvam evitar ou resistir à domínio mental ou ataques mentais em geral."
+            "Por serem compostos por diversos fios, células virtuais e outros aparelhos com alta diversidade tecnológica, os Droids acabam ficando pouco afetados por encantamentos ou feitiços de ação mental, uma vez que a mente deles funciona diferente de um ser vivo. Justamente por isso, o personagem ganha um Bônus de Vantagem de +3 em rolagens quaisquer que envolvam evitar ou resistir à domínio mental ou ataques mentais em geral."
         ],
         "requisitos": "Raça Droid"
     },
@@ -310,7 +319,9 @@ window.vantagensArray = [
         "nome": "Beleza Élfica",
         "pontos": "0",
         "descricao": [
-            "Elfos são criaturas belas por natureza, seja do sexo masculino ou feminino e isso é reconhecido por muitas pessoas, mundialmente. Embora o conceito de \"beleza\" seja algo subjetivo, os traços finos, suaves e refinados dos elfos são bem distintos e únicos, gerando fãs e admiradores de sua beleza por todas as partes. Um personagem elfo com essa vantagem pode adicionar um bônus de +2 em testes de Carisma onde sua aparência seja relevante (em testes de Sedução ou outros que forem relevantes e o Mestre permitir)."
+            "Elfos são criaturas belas por natureza, seja do sexo masculino ou feminino e isso é reconhecido por muitas pessoas, mundialmente. Embora o conceito de \"beleza\" seja algo subjetivo, os traços finos, suaves e refinados dos elfos são bem distintos e únicos, gerando fãs e admiradores de sua beleza por todas as partes.",
+            "Essa vantagem concede um Bônus de Vantagem +2 para a Aparência do personagem.",
+            "Aparência é inicialmente definida por Carisma e é utilizada para testes de sedução e relacionados, mas efeitos podem alterar isso."
         ],
         "requisitos": "Raça Elfo"
     },
@@ -358,7 +369,7 @@ window.vantagensArray = [
         "nome": "Sedução",
         "pontos": "1",
         "descricao": [
-            "Se há algo que os El'zels mantiveram de seus primos da superfície (os Elfos) é o vínculo carismático que possuem frente aos seus discursos e necessidades. Diferentemente de um carisma de beleza estética, os El'zels são capazes de seduzir muito mais facilmente e influenciar as emoções e percepção de um alvo desejado. Com isso, o personagem el'zel que adquirir essa vantagem ganha um bônus de +2 em rolagens que envolvam algum tipo de Sedução. Esse bônus não se aplica contra alvos que são elfos."
+            "Se há algo que os El'zels mantiveram de seus primos da superfície (os Elfos) é o vínculo carismático que possuem frente aos seus discursos e necessidades. Diferentemente de um carisma de beleza estética, os El'zels são capazes de seduzir muito mais facilmente e influenciar as emoções e percepção de um alvo desejado. Com isso, o personagem el'zel que adquirir essa vantagem ganha um Bônus de Vantagem de +2 em rolagens que envolvam algum tipo de Sedução. Esse bônus não se aplica contra alvos que são elfos."
         ],
         "requisitos": "Raça El'zel"
     },
@@ -382,7 +393,7 @@ window.vantagensArray = [
         "nome": "Diminuto",
         "pontos": "0",
         "descricao": [
-            "Fayris são muito pequenos por natureza e isso permite que eles acessem lugares mais remotos e difíceis com maior facilidade. Dessa forma, o personagem ganha um bônus de +2 sempre que seu tamanho for relevante para entrar em locais apertados, pequenos ou estreitos. Esse bônus não se acumula com outros bônus de efeito similar."
+            "Fayris são muito pequenos por natureza e isso permite que eles acessem lugares mais remotos e difíceis com maior facilidade. Dessa forma, o personagem ganha um Bônus de Vantagem de +2 sempre que seu tamanho for relevante para entrar em locais apertados, pequenos ou estreitos. Esse bônus não se acumula com outros bônus de efeito similar."
         ],
         "requisitos": "Raça Fayri"
     },
@@ -462,7 +473,7 @@ window.vantagensArray = [
         "nome": "Conexão Animalesca",
         "pontos": "1",
         "descricao": [
-            "A cultura dos Jorns exalta muitos animais da natureza e conta histórias épicas sobre como os espíritos deles guiaram essa civilização ao triunfo em inúmeros confrontos. Assim, um personagem Jorn com essa vantagem consegue entender melhor as motivações e comportamentos de animais em geral (não se aplica à Bestiais por razões óbvias), além de ser capaz de tentar estabelecer uma forma de comunicação ou controle sobre o animal em questão com um teste de Natureza, recebendo um bônus de +2 neste teste."
+            "A cultura dos Jorns exalta muitos animais da natureza e conta histórias épicas sobre como os espíritos deles guiaram essa civilização ao triunfo em inúmeros confrontos. Assim, um personagem Jorn com essa vantagem consegue entender melhor as motivações e comportamentos de animais em geral (não se aplica à Bestiais por razões óbvias), além de ser capaz de tentar estabelecer uma forma de comunicação ou controle sobre o animal em questão com um teste de Natureza, recebendo um Bônus de Vantagem de +2 neste teste."
         ],
         "requisitos": "Raça Jorn"
     },
@@ -478,7 +489,7 @@ window.vantagensArray = [
         "nome": "Rápida Habituação",
         "pontos": "1",
         "descricao": [
-            "Existem Kalkans por todos os lugares do mundo e em inúmeras sociedades diferentes que os aceitam ou meramente os suportam como membros integrantes. Dessa forma, essas pequenas criaturas aprenderam o que puderam pra sobreviver em diversos ambientes que muitas vezes não foram feitos para eles. Um personagem com essa vantagem ganha um bônus de +2 em testes de que envolvam a perícia Percepção ou sub-testes que tratem de algum tipo de Rastreamento  afim de encontrar atalhos e rotas alternativas para o Kalkan ou seu grupo."
+            "Existem Kalkans por todos os lugares do mundo e em inúmeras sociedades diferentes que os aceitam ou meramente os suportam como membros integrantes. Dessa forma, essas pequenas criaturas aprenderam o que puderam pra sobreviver em diversos ambientes que muitas vezes não foram feitos para eles. Um personagem com essa vantagem ganha um Bônus de Vantagem de +2 em testes de que envolvam a perícia Percepção ou sub-testes que tratem de algum tipo de Rastreamento  afim de encontrar atalhos e rotas alternativas para o Kalkan ou seu grupo."
         ],
         "requisitos": "Raça Kalkan"
     },
@@ -486,7 +497,7 @@ window.vantagensArray = [
         "nome": "Tamanho não é documento, mas pode ser útil",
         "pontos": "1",
         "descricao": [
-            "Devido à baixa estatura que é algo natural dessa raça, os Kalkans conseguem usar isso ao seu favor mais facilmente em situações em que seu tamanho seja relevante. Um personagem com essa vantagem recebe um bônus de +2 em rolagens onde o tamanho dele seja relevante."
+            "Devido à baixa estatura que é algo natural dessa raça, os Kalkans conseguem usar isso ao seu favor mais facilmente em situações em que seu tamanho seja relevante. Um personagem com essa vantagem recebe um Bônus de Vantagem de +2 em rolagens onde o tamanho dele seja relevante."
         ],
         "requisitos": "Raça Kalkan"
     },
@@ -494,7 +505,7 @@ window.vantagensArray = [
         "nome": "Desmoralizar",
         "pontos": "0",
         "descricao": [
-            "A arte do insulto é para poucos - não se trata só de xingar com enormes palavrões de baixo nível que provoquem a mais profunda ira do inimigo. Um bom Kalkan sabe brincar com as palavras e desmoralizar seu oponente com xingamentos e nomes que o fazem parecer ridículo na frente dos outros, claro, somado ao contexto de seus argumentos. Assim, um personagem Kalkan que tentar fazer um teste com a perícia Intimidação quando envolver de forma criativa alguma forma de insulto afim de ridicularizar e desmoralizar o alvo, ganha um bônus de +1 na rolagem."
+            "A arte do insulto é para poucos - não se trata só de xingar com enormes palavrões de baixo nível que provoquem a mais profunda ira do inimigo. Um bom Kalkan sabe brincar com as palavras e desmoralizar seu oponente com xingamentos e nomes que o fazem parecer ridículo na frente dos outros, claro, somado ao contexto de seus argumentos. Assim, um personagem Kalkan que tentar fazer um teste com a perícia Intimidação quando envolver de forma criativa alguma forma de insulto afim de ridicularizar e desmoralizar o alvo, ganha um Bônus de Vantagem de +1 na rolagem."
         ],
         "requisitos": "Raça Kalkan"
     },
@@ -502,7 +513,7 @@ window.vantagensArray = [
         "nome": "Coragem Kalkan",
         "pontos": "1",
         "descricao": [
-            "Um Kalkan não sente medo facilmente, por mais assustadora que seja a situação e por mais que ela ameace sua própria vida - Kalkans tendem a ver isso como uma chance de se sentirem vivos e testar o que aconteceria se fizessem algo que as pessoas tendem a não fazer. Um personagem com essa vantagem recebe um bônus de +3 contra testes que envolvam sentir, resistir ou encarar o medo e insanidade."
+            "Um Kalkan não sente medo facilmente, por mais assustadora que seja a situação e por mais que ela ameace sua própria vida - Kalkans tendem a ver isso como uma chance de se sentirem vivos e testar o que aconteceria se fizessem algo que as pessoas tendem a não fazer. Um personagem com essa vantagem recebe um Bônus de Vantagem de +3 contra testes que envolvam sentir, resistir ou encarar o medo e insanidade."
         ],
         "requisitos": "Raça Kalkan"
     },
@@ -526,7 +537,7 @@ window.vantagensArray = [
         "nome": "Awareness",
         "pontos": "1",
         "descricao": [
-            "O perigo está à espreita em todos os lugares quando você menos espera, e os Ogrekins sabem muito bem disso e levam esse ensinamento para suas vidas. Dessa forma, um personagem com essa vantagem ganha um bônus de +4 em qualquer teste que envolva a perícia Percepção afim de perceber perigos ou emboscadas no ambiente onde está. Mesmo falhando no teste o personagem com essa vantagem ainda pode agir na rodada surpresa, sendo assim, o último na ordem de iniciativas."
+            "O perigo está à espreita em todos os lugares quando você menos espera, e os Ogrekins sabem muito bem disso e levam esse ensinamento para suas vidas. Dessa forma, um personagem com essa vantagem ganha um Bônus de Vantagem de +4 em qualquer teste que envolva a perícia Percepção afim de perceber perigos ou emboscadas no ambiente onde está. Mesmo falhando no teste o personagem com essa vantagem ainda pode agir na rodada surpresa, sendo assim, o último na ordem de iniciativas."
         ],
         "requisitos": "Raça Ogrekin"
     },
@@ -566,7 +577,7 @@ window.vantagensArray = [
         "nome": "Ameaça Natural",
         "pontos": "1",
         "descricao": [
-            "Dificilmente um Orc não conseguirá intimidar seu alvo quando desejar, seja usando sua força, sua constituição ou seus argumentos (geralmente pouco) elaborados. Ainda assim, o que mais conta num Orc é geralmente sua aparência intimidadora, e assim, para testes da perícia Intimidação que o personagem com essa vantagem fizer, ganhe um bônus de +2."
+            "Dificilmente um Orc não conseguirá intimidar seu alvo quando desejar, seja usando sua força, sua constituição ou seus argumentos (geralmente pouco) elaborados. Ainda assim, o que mais conta num Orc é geralmente sua aparência intimidadora, e assim, para testes da perícia Intimidação que o personagem com essa vantagem fizer, ganhe um Bônus de Vantagem de +2."
         ],
         "requisitos": "Raça Orc"
     },
@@ -582,7 +593,7 @@ window.vantagensArray = [
         "nome": "Jóia do Oceano",
         "pontos": "0",
         "descricao": [
-            "A beleza herdada de seus primos distantes, os Elfos e os El'zels também floresceu por baixo da água e se adaptou com o tempo. Muitas lendas sobre sereias e tritões na verdade fazem referências à Quellsirs de tempos antigos que ainda estavam se desenvolvendo, mas a beleza deles sempre foi o traço mais marcante e encantador da raça. Um personagem com essa vantagem pode adicionar um bônus de +2 em testes de Carisma onde sua aparência seja relevante (em testes de Sedução ou outros que forem relevantes e o Mestre permitir)."
+            "A beleza herdada de seus primos distantes, os Elfos e os El'zels também floresceu por baixo da água e se adaptou com o tempo. Muitas lendas sobre sereias e tritões na verdade fazem referências à Quellsirs de tempos antigos que ainda estavam se desenvolvendo, mas a beleza deles sempre foi o traço mais marcante e encantador da raça. Um personagem com essa vantagem pode adicionar um Bônus de Vantagem de +2 em testes de Carisma onde sua aparência seja relevante (em testes de Sedução ou outros que forem relevantes e o Mestre permitir)."
         ],
         "requisitos": "Raça Quellsir"
     },
@@ -598,7 +609,7 @@ window.vantagensArray = [
         "nome": "Mente Forte",
         "pontos": "2",
         "descricao": [
-            "Obrigados a sobreviver em diversas condições e situações tensas durante suas vidas na superfície ou em baixo da água, os Quellsirs desenvolveram uma mente resistente e são capazes de enfrentar aqueles que tendam eliminar suas forças mentais. Um personagem com essa vantagem ganha um bônus de vantagem de +3 em qualquer teste de resistência contra ataques mentais."
+            "Obrigados a sobreviver em diversas condições e situações tensas durante suas vidas na superfície ou em baixo da água, os Quellsirs desenvolveram uma mente resistente e são capazes de enfrentar aqueles que tendam eliminar suas forças mentais. Um personagem com essa vantagem ganha um Bônus de Vantagem de +3 em qualquer teste de resistência contra ataques mentais."
         ],
         "requisitos": "Raça Quellsir"
     },
@@ -614,7 +625,7 @@ window.vantagensArray = [
         "nome": "Contato Natural",
         "pontos": "1",
         "descricao": [
-            "Estar no meio de animais de diversos tipos, selvagens ou não, é algo natural para os Zaharis e isso na verdade é algo até esperado entre eles. Membros dessa raça com essa vantagem são capazes de se comunicar com animais e entender seus sentimentos ou motivações, mesmo que não seja através de uma comunicação verbal direta. Além disso, animais não atacarão o Zahari a não ser que ele os ataque primeiro. O personagem pode rolar um teste da perícia Natureza e adicionar um bônus de +2 sempre que esse teste envolver alguma tentativa de lidar com animais selvagens ou domá-los."
+            "Estar no meio de animais de diversos tipos, selvagens ou não, é algo natural para os Zaharis e isso na verdade é algo até esperado entre eles. Membros dessa raça com essa vantagem são capazes de se comunicar com animais e entender seus sentimentos ou motivações, mesmo que não seja através de uma comunicação verbal direta. Além disso, animais não atacarão o Zahari a não ser que ele os ataque primeiro. O personagem pode rolar um teste da perícia Natureza e adicionar um Bônus de Vantagem de +2 sempre que esse teste envolver alguma tentativa de lidar com animais selvagens ou domá-los."
         ],
         "requisitos": "Raça Zahari"
     },
@@ -655,7 +666,7 @@ window.vantagensArray = [
         "nome": "Olhar Frio",
         "pontos": "1",
         "descricao": [
-            "A sua neutralidade como Yu'qun é muito forte e presente em suas falas e pensamentos. Dessa forma, ganhe um bônus de +2 em testes que envolvam perícias ou atributos para sentir as motivações de um alvo ou identificar mentiras / falsos testemunhos (mesmo que você não tenha provas sólidas para acreditar nisso)."
+            "A sua neutralidade como Yu'qun é muito forte e presente em suas falas e pensamentos. Dessa forma, ganhe um Bônus de Vantagem de +2 em testes que envolvam perícias ou atributos para sentir as motivações de um alvo ou identificar mentiras / falsos testemunhos (mesmo que você não tenha provas sólidas para acreditar nisso)."
         ],
         "requisitos": "Raça Yuqun"
     },
@@ -676,6 +687,15 @@ window.vantagensArray = [
         "requisitos" : "A língua falada e compreendida depende da Raça escolhida."
     },
     /* Vantagens de Arquétipo */
+    {
+        "nome": "Aprimoramento Especial",
+        "pontos": "0",
+        "descricao": [
+            "Você ganha acesso à profissão “Encantador” num valor inicial e automático igual à 2 pontos. Essa profissão permite o aprimoramento de criaturas conjuradas (ver o capítulo 10 para maiores detalhes).",
+			"Durante a criação de personagem, você pode investir pontos de perícia nessa comprada, podendo levá-la até o máximo do nível quatro (4). Níveis subsequentes permitem elevar o nível da profissão até o seis (6) normalmente (ver o capítulo 5 para maiores detalhes)."
+        ],
+        "requisitos": "Arquétipo Senhor das Bestas, Necromante ou Invocador Astral "
+    },
     {
         "nome": "Trabalho Duro",
         "pontos": "0",
@@ -837,7 +857,7 @@ window.vantagensArray = [
         "descricao": [
 			"A energia negativa é o principal recurso que Cavaleiros Negros dominam. Similarmente aos Necromantes, os Cavaleiros Negros dão um passo em frente aos vários tipos de energias caóticas da realidade, mas optam por dominar o que eles chamam de Energia Negativa, ao invés da Energia Caótica dos necromantes.",
             "A energia negativa influencia principalmente nas emoções, estado corporal e mente de um alvo, permitindo que os cavaleiros manipulem essas pessoas ou enfraqueçam-a da forma desejada.",
-            "Com essa vantagem, você pode converter 18 pontos de MP em 2 pontos de energia negativa. Um personagem só pode ter 4 pontos máximos de energia negativa por vez.",
+            "Com essa vantagem, você pode converter 12 pontos de MP em 2 pontos de energia negativa. Um personagem só pode ter 4 pontos máximos de energia negativa por vez.",
             "Essa energia não-usada se dissipa após 1 rodada, 10 minutos ou um curto tempo sem uso. A energia negativa pode ser usada da seguinte forma:",
             "• Ouvir os pensamentos de um único alvo por 1 minuto (Custa 2 pontos);",
             "• Causar inferioridade numa rolagem de Atributo-Teste de um alvo (Custa 2 pontos);",
@@ -960,8 +980,9 @@ window.vantagensArray = [
         "pontos": "0",
         "descricao": [
             "Ao criar o seu personagem, escolha um elemento. Você só poderá usar esse elemento até obter outras formas de manipular os que não detêm controle. Você pode usar esse elemento para qualquer coisa que desejar em questões interpretativas, como formar um cantil de gelo, um escudo temporário de pedra (para fins que não sejam de combate), uma corda de trovões para segurá-lo num penhasco ou mesmo um furacão de ar para prevenir que você e seus aliados recebam dano por queda numa situação especial.",
-			"Esse efeito não pode ser usado em combate para causar dano direto, prevenir dano ou coisas do tipo. Esta vantagem só pode ser usada em, combate caso contribua com situações exclusivamente narrativas. O custo de MP ao usar essa vantagem fica a critério do Mestre."
-        ],
+			"Esse efeito não pode ser usado em combate para causar dano direto, prevenir dano ou coisas do tipo. Esta vantagem só pode ser usada em, combate caso contribua com situações exclusivamente narrativas. O custo de MP ao usar essa vantagem fica a critério do Mestre.",
+			"A forma de adquirir novos elementos dependerá de um acordo entre Mestre e Jogador, seja por missões dentro do jogo, desafios narrativos ou crescimento do personagem conforme os níveis passarem."
+       ],
         "requisitos": "Arquétipo Elementalista"
     },
     {
@@ -1303,10 +1324,35 @@ window.vantagensArray = [
         "requisitos": "Arquétipo Mercante Príncipe"
     },
     {
-        "nome": "Influência",
+        "nome": "Negócios",
         "pontos": "0",
         "descricao": [
-            "Você possui certa influência por incorporar o arquétipo do Mercante Príncipe, isso lhe permite vender ou comprar um item em qualquer lugar com um bônus de 20% de desconto/lucro sobre o preço de venda/compra."
+            "Você possui algum tipo de negócio bem estabelecido em algum lugar do mundo. Defina que tipo de negócio é este em sua história, o que você vende / oferece, onde se localiza e como é.",
+	"Adicional a isso, o seu negócio te dá um lucro de (200 * seu nível atual) moedas de ouro a cada duas sessões de jogo da sua mesa."
+        ],
+        "requisitos": "Arquétipo Mercante Príncipe"
+    },
+    {
+        "nome": "Corpo como um templo",
+        "pontos": "0",
+        "descricao": [
+            "Runas espalhadas por todo o corpo do personagem, como tatuagens mágicas, o protegem de todo o mal que tenta invadir. O personagem recebe +3 em testes de resistência contra efeitos mágicos que tentem corromper seu corpo ou sua mente diretamente. O personagem não pode ter sua mente nem emoções lidas por efeitos mágicos. As runas entram na sua carne profundamente, mas se forem arrancadas de alguma forma esses efeitos são perdidos."
+        ],
+        "requisitos": "Arquétipo Mestre das Runas"
+    },
+	    {
+        "nome": "Guarda-Costas",
+        "pontos": "0",
+        "descricao": [
+            "Essa vantagem só pode ser adquirida com a permissão do Mestre da mesa.",
+	"O personagem possui acesso à um Mercenário inicial bem simples que o segue durante sua aventura. Leia o capítulo 11 - “Aventurando-se” para saber mais sobre os mercenários.",
+	"O mercenário em questão está restrito à:",
+	"• Ser do mesmo nível que o personagem (1);",
+	"• Ter 5 pontos para serem gastos em seus valores de lealdade, traço de ocupação, perícia principal e perícias secundárias;",
+    "• Ter informações básicas (raça, arquétipo, nome, idade, sexo, e um pequeno resumo que explique como ele e o personagem se conheceram);",
+	"• Custo definido;",
+	"• Ter uma ocupação definida."
+
         ],
         "requisitos": "Arquétipo Mercante Príncipe"
     },
@@ -1595,8 +1641,9 @@ window.vantagensArray = [
         "nome": "Aparência",
         "pontos": "1 ou 3",
         "descricao": [
-            "O personagem é belo e possui traços relativamente acima da média para a sua raça, encantando até aqueles que não simpatizam muito com determinada raça. Essa vantagem aumenta sua Carisma em 1 a 3 pontos quando considerando aparência. Isso significa que um personagem com Carisma 3 e Aparência 3 teria um valor de aparência final de 6.",
-            "Esse bônus em carisma só é considerado em testes de Sedução, mas pode ser utilizado em outros lugares à escolha do mestre. Assuma que esse bônus não será adicionado em testes de Diplomacia, Manha ou Blefe quando Sedução não está sendo feita."
+            "O personagem é belo e possui traços relativamente acima da média para a sua raça, encantando até aqueles que não simpatizam muito com determinada raça.",
+            "Essa vantagem concede um Bônus de Vantagem igual ao seu custo para Aparência.",
+            "Aparência é inicialmente igual a \"Carisma\" e é utilizado em testes de sedução, mas isso pode ser alterado por outros efeitos."
         ]
     },
     {
@@ -1719,11 +1766,10 @@ window.vantagensArray = [
     },
     {
         "nome": "Deus Grego",
-        "pontos": "1 ou 3",
+        "pontos": "1",
         "descricao": [
             "O personagem possui um corpo perfeito, bem acima da média para sua raça.",
-            "1 Ponto: Você pode usar Constituição no lugar de Carisma quando se tratando de Aparência. Isso também vale para testes de sedução.",
-            "3 Pontos: Mesma coisa que o de cima, mas você usa (Constituição + 2) ao invés de Constituição. De novo, apenas para questões de aparência."
+            "Seu valor base para Aparência passa a ser \"Constituição\" ao invés de \"Carisma\"."
         ]
     },
     {
@@ -1993,10 +2039,11 @@ window.vantagensArray = [
         ]
     },
     {
-        "nome": "Mais do Mesmo",
-        "pontos": "1",
+        "nome": "Mais do Mesmo?",
+        "pontos": "0 ou 1",
         "descricao": [
-            "Testes de sedução executados por personagens do sexo oposto falham automaticamente contra você. Testes de sedução executados por personagens do mesmo sexo tem chances de sucesso comuns contra você."
+            "0 Pontos: Escolha um gênero. Seu personagem é imune a testes de sedução realizados por personagens do gênero escolhido, mas é afetado normalmente por personagens do outro gênero.",
+            "1 Ponto: Seu personagem é imune a testes de sedução realizados por outros personagens."
         ]
     },
     {
@@ -2004,6 +2051,15 @@ window.vantagensArray = [
         "pontos": "4",
         "descricao": [
             "Escolha uma raça primária e uma raça secundária. Você é uma mistura das duas raças, contendo partes positivas da segunda raça em relação à primeira. Você recebe todos os bônus da primeira raça normalmente. Escolha um dos atributos raciais que a segunda raça fornecia: você passa a receber esse bônus. Além disso, você passa a poder comprar as Vantagens e Desvantagens Raciais oferecidas para a segunda raça. (Nota: Quando \"Humano\" é escolhido como raça secundária, você recebe +2 pontos de vantagem ao invés de um bônus em atributo-teste, efetivamente reduzindo o custo dessa vantagem para 2). Não é compatível com a desvantagem \"Pior de ambos os lados\" nem com a raça Changeling."
+        ]
+    },
+    {
+        "nome": "Perfeito.",
+        "pontos": "2 ou 3",
+        "descricao": [
+            "Você foi criado ou modificado para ser um exemplo perfeito da sua raça.",
+            "2 Pontos: Todos seus atributos-teste começam no nível 3. Você ainda recebe seus bônus raciais, mas não recebe os 4 pontos destinados a atributos-teste e não pode comprar outras vantagens que alterassem seus atributos-teste.",
+            "3 Pontos: Tudo de 2 pontos, mas você pode escolher mais dois atributos-teste para estarem no nível 4. Os atributos-teste escolhidos não podem ser os mesmos que estejam recebendo bônus raciais."
         ]
     },
     {
@@ -2322,8 +2378,8 @@ window.vantagensArray = [
         ]
     }
 ].sort(function (a,b) {
-    var na = a.nome.toUpperCase();
-    var nb = b.nome.toUpperCase();
+    var na = a.nome.toUpperCase().latinize();
+    var nb = b.nome.toUpperCase().latinize();
     if (na < nb) return -1;
     if (na > nb) return 1;
     return 0;
@@ -3831,8 +3887,8 @@ window.desvantagensArray = [
         ]
     }
 ].sort(function (a,b) {
-    var na = a.nome.toUpperCase();
-    var nb = b.nome.toUpperCase();
+    var na = a.nome.toUpperCase().latinize();
+    var nb = b.nome.toUpperCase().latinize();
     if (na < nb) return -1;
     if (na > nb) return 1;
     return 0;
