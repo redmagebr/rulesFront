@@ -3298,6 +3298,73 @@ window.techAddons =
             
         ]
     },
+   {
+        "nivel" : 1,
+        "tipo" : "estilo",
+        "nome" : "E - Impenetrável",
+        "nomeLimpo" : "E - Impenetravel",
+        "efeitos" : [
+             "O estilo de luta te coloca numa posição fortificada, impedindo que se machuque demais.",
+             "1 Ponto de Estilo: Ganhe superioridade na primeira rolagem de bloqueio de cada rodada.",
+             "2 Pontos de Estilo: Ganhe superioridade em todas as suas rolagens de bloqueio."
+        ],
+        "conceitos" : [
+            
+        ]
+    },
+	    {
+        "nivel" : 1,
+        "tipo" : "estilo",
+        "nome" : "E - Habilidades Aprimoradas",
+        "nomeLimpo" : "E - Habilidades Aprimoradas",
+        "efeitos" : [
+             "O estilo de luta favorece o desempenho de certas áreas físicas, mentais ou sociais do personagem.",
+             "1 Ponto de Estilo: Ganhe superioridade na primeira rolagem de um único atributo-teste da sua escolha (na criação deste estilo de luta) de cada rodada."
+        ],
+        "conceitos" : [
+            
+        ]
+    },
+	    {
+        "nivel" : 1,
+        "tipo" : "estilo",
+        "nome" : "E - Flagelo",
+        "nomeLimpo" : "E - Flagelo",
+        "efeitos" : [
+             "O estilo de luta causa algum problema para o personagem em certas situações.",
+             "1 Ponto de Estilo: Ganhe inferioridade na primeira rolagem de Dano, Defesa, Bloqueio, Ataque, Atributos-Teste, Perícia ou Restauração de cada rodada. Escolha um na criação deste estilo."
+        ],
+        "conceitos" : [
+            
+        ]
+    },
+	    {
+        "nivel" : 1,
+        "tipo" : "estilo",
+        "nome" : "E - Inspirador",
+        "nomeLimpo" : "E - Inspirador",
+        "efeitos" : [
+             "O estilo de luta melhoria as capacidades e desempenho de atividades específicas do personagem.",
+             "1 Ponto de Estilo: Ganhe superioridade na primeira rolagem de uma perícia (escolhida na criação desse estilo) de cada rodada.",
+             "2 Pontos de Estilo: Ganhe superioridade nas primeiras rolagens de duas perícias (escolhidas na criação desse estilo) de cada rodada."		 
+        ],
+        "conceitos" : [
+            
+        ]
+    },
+	    {
+        "nivel" : 1,
+        "tipo" : "estilo",
+        "nome" : "E - Curandeiro",
+        "nomeLimpo" : "E - Curandeiro",
+        "efeitos" : [
+             "O estilo de luta favorece as ações e habilidades restaurativas do personagem.",
+             "2 Pontos de Estilo: Ganhe superioridade na primeira rolagem de um efeito restaurativo de cada rodada. Isso vale para itens."		 
+        ],
+        "conceitos" : [
+            
+        ]
+    },			
     {
         "nivel" : 1,
         "tipo" : "estilo",
