@@ -4,7 +4,39 @@
  * @type Array
  */
 window.techChangelog = [  
- {
+ {	 
+        version : [4,6],
+        description : [
+			"Novos addons de técnicas: Restauração - Lifebloom, Disruption, Collateral Damage, Multiple Crush, Killing Intent, Frenzy Eater",
+			"Novos addons de armas: Brutal e Rápida",
+			"Novo addon para armas defensivas: Blindado", 
+			"Novo addon para armaduras: Impenetrável e Energizada",
+			"Novo addon para acessórios: Zephyr e Vigor",
+			"Nova opção para Pontos de Habilidade: Quebrar addons em técnicas menores (2 PH).",
+			"Mage Killer agora remove metade do dano causado (pós-RDs) de MP do atacante (antigo: 1 MP). Custo aumentado também.",
+			"Clarificado que causar dano em si mesmo por lifelink não repassa o dano para o inimigo.",
+			"Punishing volt remove a restrição de não poder acertar o atacante, incluindo agora todos os inimigos de combate. Também pode ser usado em combates 1x1, porém seu custo agora não pode ser reduzido por nenhum outro addon.",
+			"Haymaker tem seu custo reduzido para 3 MP (antigo: 6).",
+			"Soul Strike modificado - Agora você pode cancelar 50% do dano causado e ainda reduzir um ponto de stamina do alvo, enquanto ainda causa a outra metade do dano.",
+			"Strong But Slow I e II tem seus custos restaurados aos seus valores originais de fábrica (0 e 1, respectivamente).",
+			"Último Recurso - clarificado a relação das reações de um alvo atingido por este addon.",
+			"Praying Shield teve seu bônus renomeado para a versão 4.1 do sistema.",
+			"Look teve seu segundo efeito escrito de uma forma mais clara para entender que o usuário do addon escolhe um dos efeitos, não os dois.",
+			"Spellthief teve seu custo de MP reduzido para 4 (old: 6).",
+			"Incontrollable Power tem seu nome corrigido para a gramática correta: Uncontrollable Power",
+			"Ícone de Immovable Object alterado para não ser o mesmo de Supress",
+			"Wooden Skin teve seu custo de MP reduzido para 2 e 4 (old: 3 e 6). O nível necessário para pegar esse addon agora é 2 (old: 3).",
+			"Esforço Agressivo teve seu custo de MP reduzido para 6 (old: 10).",
+			"Overwhelming Force teve seu custo de MP reduzido para 1 (old: 3).",
+			"No Flaws teve seu custo de MP reduzido para 1 (old: 2).",
+			"Bloodlust teve seu nível mínimo requerido para 3, ao invés de 4.",
+			"Bloqueio Agressivo teve uma linha clarificada quanto ao seu funcionamento e sobre esquivas em contra-ataques.",
+			"Crusader e Knight Training levemente refeitos pra tornarem-se mais atrativos. Agora fazem parte de uma mesma família também.",
+			"Corrigido um bug onde \"Buscar Coragem\" requeria 5% do MP. Esta é uma versão antiga, então agora foi migrado para o correto (2 MP).",
+        ]
+ },
+	 
+ {	 
         version : [4,5],
         description : [
             "Embrace the shadows pode ser ativada no turno 0.",
@@ -22,7 +54,6 @@ window.techChangelog = [
 			"Vários addons de nível 2 passam para nível 1. Vários addons de nível 3 passam para nível 2.",
 			"Capacidade destrutiva foi refeita para uma forma melhor de funcionamento",
 			"Area of No Effect: Custo de MP reduzido para 6 (antigo: 10)",
-			
 		
         ]
  },
@@ -591,7 +622,7 @@ window.techConceitos = [
         "listado": false,
         "impresso": false,
         "descricao": [
-            "Gaste um ponto de Espírito de Luta e cure seu HP na sua cura normal de Espírito de Luta. Essa ação consome seu turno e gasta 5% MP.",
+            "Gaste um ponto de Espírito de Luta e cure seu HP na sua cura normal de Espírito de Luta. Essa ação consome seu turno e gasta 2 MP.",
             "Todo personagem possui essa técnica, mas ela não pode ser utilizada.",
             "Algumas habilidades Passivas liberam o uso de \"Buscar Coragem\" e algumas habilidades Especiais substituem \"Buscar Coragem\".",
             "Mesmo que \"Buscar Coragem\" seja substituida por uma versão melhor, ela mantém as restrições de não poder ser utilizada sem a Passiva adequada ativa."
@@ -643,8 +674,9 @@ window.techCustos = {
         [0, "Divide uma técnica de Forma Especial em mais de uma. Cada técnica especial resultante deve ter pelo menos 1 Slot. Você não pode dividir em técnicas especiais caso isso não fosse ser possível de outra maneira (Exemplo: se a divisão resultasse na quebra de alguma regra, como a regra de unicidade, ela não pode ser feita)"],
         [1, "Funde duas técnicas do mesmo tipo em uma só. Ver regras de Fusão de Técnicas."],
         [1, "Recria a técnica da forma que quiser (não abuse!). Caso a mudança na técnica tenha sido forçada por alterações nos addons, o custo é 0. O jeito esperado de se usar isso é para consertar técnicas cujos addons você entendeu errado e não está funcionando como você quer ou apagar uma técnica que você fez tão errado que não tem conserto. O objetivo dessas alterações não é fazer uma técnica temporária e se livrar dela quando não for mais útil."],
-        [4, "Nova técnica de 1 Slot. Número máximo de slots é 4."],
-        [3, "Aumenta a quantidade de slots de uma técnica, que não seja Forma Especial, em 1. Técnicas de Forma Especial custam 4 pontos para aumentar em 1 Slot."],
+		[2, "Quebra uma técnica de Forma de Ataque ou Passiva, removendo um (e somente um) addon da mesma e realocando ela numa nova técnica com 1 slot que é preenchido por este addon removido. Um jogador pode quebrar uma mesma técnica mais de uma vez ) "],
+		[3, "Aumenta a quantidade de slots de uma técnica, que não seja Forma Especial, em 1. Técnicas de Forma Especial custam 4 pontos para aumentar em 1 Slot."],
+		[4, "Nova técnica de 1 Slot. Número máximo de slots é 4."],
         [4, "Novo estilo de Luta."]
     ]
 };
@@ -656,7 +688,80 @@ window.techCustos = {
  */
 window.techAddons = 
 [
-    {
+{
+        "tipo": "ataque",
+        "nome": "Frenzy Eater",
+        "nomeLimpo": "Frenzy Eater",
+        "efeitos": [
+            "Caso a técnica com este addon cause 1 de dano ou mais, a primeira cura que fosse aplicada no alvo em questão é negada (cura 0, ainda gastando a stamina da vítima). O efeito é consumido quando a cura é usada. Esse efeito dura até o início do turno do usuário deste addon caso esta primeira cura não ocorra. ", 
+			"Se usado com o addon \"Disrupt\" este addon nega as duas primeiras curas da vítima, mas não aumenta sua duração (continuando a ser uma rodada).",
+			"Aumenta Custo da técnica em 4."
+        ],
+        "conceitos": [
+            "unicidade"
+        ],
+        "nivel": 2
+    },
+	{
+        "tipo": "ataque",
+        "nome": "Killing Intent",
+        "nomeLimpo": "Killing Intent",
+        "efeitos": [
+            "Aumente o dano da técnica com este addon em +1 para cada passiva do alvo que estiver ativa.", 
+			"Esse bônus de dano se aplica somente ao alvo que origina as passivas, ou seja, aliados que recebam bônus passivos (Exemplo: Aura) de um outro aliado não são elegíveis para receber esse dano extra.",
+			"Aumenta Custo da técnica em 5."
+        ],
+        "conceitos": [
+            "unicidade"
+        ],
+        "nivel": 2
+    },
+	{
+        "tipo": "ataque",
+        "nome": "Multiple Crush",
+        "nomeLimpo": "Multiple Crush",
+        "efeitos": [
+            "Caso esse técnica seja contra-atacada por uma técnica que use mais de um atributo de dano, aumente o dano dessa técnica em +2, esse efeito também se aplica quando essa ténica é usada em contra-ataques de técnicas com mais de um atributo.",
+			"Aumenta Custo da técnica em 4."
+        ],
+        "conceitos": [
+            "unicidade"
+        ],
+        "nivel": 2
+    },
+	{
+        "tipo": "ataque",
+        "nome": "Collateral Damage",
+        "nomeLimpo": "Collateral Damage",
+        "efeitos": [
+            "Caso o ataque com este addon erre um alvo, o usuário pode escolher pagar o custo desta técnica novamente e causar 1 de dano mínimo mesmo assim.", 
+            "O custo extra desse addon não é pago quando esse ataque é usado como contra-ataque ou contra um alvo único.  Os efeitos desse addon são ignorados quando o ataque é feito como contra-ataque.",
+            "A técnica com este addon não pode conter outros addons que causem qualquer condição negativa (debuff), caso contrário, Collateral Damage não funciona.",
+			"Aumenta Custo da técnica em 2."
+        ],
+        "conceitos": [
+            "unicidade"
+        ],
+        "nivel": 1
+    },
+	{
+        "tipo": "ataque",
+        "nome": "Disruption",
+        "nomeLimpo": "Disruption",
+        "efeitos": [
+            "Ao acertar o ataque com este addon, escolha um efeito negativo (debuff) que o alvo esteja sofrendo e aumente a duração dele em +1 rodada.", 
+			"Isso é valido para efeitos que funcionem em conjunto com este addon, portanto, é possível já aplicar uma condição negativa com uma duração de duas rodadas diretamente num alvo.",
+			"Uma condição negativa não pode ser estendida mais de uma vez, mas caso a mesma termine e seja recolocada tempos depois, então volta a ser um alvo válido.",
+            "Ao ativar esse ataque, pague mais 2 MP para cada alvo que a técnica possuir. Esse pagamento não pode ser reduzido por nenhum efeito e conta como um custo de ativação.",
+            "O custo extra desse addon não é pago quando esse ataque é usado como contra-ataque ou contra um alvo único.  Os efeitos desse addon são ignorados quando o ataque é feito como contra-ataque.",
+            "Aumenta Custo da técnica em 2."
+        ],
+        "conceitos": [
+            "unicidade"
+        ],
+        "nivel": 2
+    },
+	{
         "tipo": "ataque",
         "nome": "All I have I",
         "nomeLimpo": "All I have I",
@@ -793,7 +898,7 @@ window.techAddons =
         "nomeLimpo": "Haymaker",
         "efeitos": [
             "Se você contra-atacar um oponente com uma técnica com este addon, receba um bônus de poder igual à +1 no seu teste de Ataque.",
-            "Aumenta Custo da técnica em 6."
+            "Aumenta Custo da técnica em 3."
         ],
         "conceitos": [
             "stacking"
@@ -1074,7 +1179,7 @@ window.techAddons =
     {
         "id": 326,
         "tipo": "ataque",
-        "nome": "Incontrollable Power I",
+        "nome": "Uncontrollable Power I",
         "nomeLimpo": "Incontrollable Power I",
         "efeitos": [
             "Diminui o custo da técnica em 2.",
@@ -1088,7 +1193,7 @@ window.techAddons =
     {
         "id": 327,
         "tipo": "ataque",
-        "nome": "Incontrollable Power II",
+        "nome": "Uncontrollable Power II",
         "nomeLimpo": "Incontrollable Power II",
         "efeitos": [
             "Diminui o custo da técnica em 3.",
@@ -1102,7 +1207,7 @@ window.techAddons =
     {
         "id": 328,
         "tipo": "ataque",
-        "nome": "Incontrollable Power III",
+        "nome": "Uncontrollable Power III",
         "nomeLimpo": "Incontrollable Power III",
         "efeitos": [
             "Diminui o custo da técnica em 5.",
@@ -1235,7 +1340,7 @@ window.techAddons =
         "nomeLimpo": "No Flaws",
         "efeitos": [
             "Se o oponente tentar um contra-ataque contra a técnica que possui este addon, você reduz o dano causado pelo oponente em 2 pontos durante esse contra-ataque.",
-			"Aumente o custo da técnica em 2."
+			"Aumente o custo da técnica em 1."
         ],
         "conceitos": [
 
@@ -1306,7 +1411,7 @@ window.techAddons =
         "nomeLimpo": "Overwhelming Force",
         "efeitos": [
             "Caso o oponente tente um contra-ataque, você pode fazer sua técnica engolir o ataque do oponente. Isso significa que ao invés das três opções normais, você tentará Dano VS Dano. Você joga o dano dessa técnica e o oponente joga o dano da dele. A diferença é causada como dano direto (ignora resistências) em quem tirou o resultado menor. Se você jogar 14 de dano e o oponente jogar 12 de dano na dele, você causa 2 pontos de dano diretos no HP dele.",
-			"Aumente o custo da técnica em 3."
+			"Aumente o custo da técnica em 1."
         ],
         "conceitos": [
 
@@ -1452,8 +1557,8 @@ window.techAddons =
         "nome": "Soul Strike",
         "nomeLimpo": "Soul Strike",
         "efeitos": [
-            "Caso você cause mais pontos de dano com esse ataque do que a sua própria cura por Stamina, você pode cancelar o dano causado (oponente é curado desse dano) e reduzir a quantidade de Stamina do alvo em 1 ponto.",
-            "Aumente o custo da técnica em 2"
+            "Caso você cause mais pontos de dano com esse ataque do que a sua própria cura por Stamina, você pode reduzir o resultado final do seu dano (antes de passar pelas RDs) pela metade (arredonda para baixo, o oponente é curado desse dano) e reduzir a quantidade de Stamina do alvo em 1 ponto. Você ainda causa a outra metade de dano.",
+            "Aumente o custo da técnica em 2 MP."
         ],
         "conceitos": [
 
@@ -1592,7 +1697,7 @@ window.techAddons =
             "Aumenta o dano da técnica em +1.",
             "Esse addon não pode ser usado em conjunto com addons que dão bônus em acerto.",
             "Usuário recebe -1 no teste de acerto da técnica.",
-			"Aumenta Custo da técnica em 1."
+			"Não aumenta o custo da técnica."
         ],
         "conceitos": [
             "unicidade"
@@ -1608,7 +1713,7 @@ window.techAddons =
             "Aumenta o dano da técnica em +2.",
             "Esse addon não pode ser usado em conjunto com addons que dão bônus em acerto.",
             "Usuário recebe -2 no teste de acerto da técnica.",
-            "Aumenta o custo dessa técnica em 2."
+            "Aumenta o custo dessa técnica em 1."
         ],
         "conceitos": [
             "unicidade"
@@ -1652,7 +1757,8 @@ window.techAddons =
         "nomeLimpo": "Ultimo Recurso",
         "efeitos": [
             "Se o usuário estiver com menos de 20% do HP máximo quando utilizar a técnica, ela não erra. Se o combate não terminar nesse turno, o usuário tem seu HP reduzido a 0 e é nocauteado, independente de quaisquer outros efeitos que estejam ativos. Se o combate terminar, o HP do usuário é reduzido para 1.",
-            "O uso da técnica quando esse efeito é ativado envolve uma cena que precisa deixar claro para o inimigo e todos os outros jogadores que essa técnica é um Último Recurso.",
+            "\"Não errar\" significa que o alvo ainda pode tentar esquivar, bloquear ou contra-atacar, mas independente de tudo isso: quem estiver usando a técnica com este addon SEMPRE acerta o alvo. Ou seja, testes de esquiva dos oponentes sempre falham independente dos resultados; contra-ataques podem acontecer mas a técnica com este addon sempre acerta sua vítima, mesmo que ela tenha uma prioridade superior.",
+			"O uso da técnica quando esse efeito é ativado envolve uma cena que precisa deixar claro para o inimigo e todos os outros jogadores que essa técnica é um Último Recurso.",
             "Aumenta custo da técnica em 4.",
             "Último Recurso não pode ser usada em um contra-ataque.",
             "Último Recurso não pode ser usada junto de addons que lidem com testes de acerto de forma alguma. Também não pode ser usada junto de addons que impeçam o alvo de realizar ações padrão como resposta ao ataque."
@@ -1728,7 +1834,7 @@ window.techAddons =
         efeitos :[
             "Esse efeito pode ser ativado quando usando algum efeito de Formas Especiais que consome o turno do próprio personagem.",
             "O turno do personagem não é consumido pelo efeito em questão.",
-            "O custo de ativação desse efeito é 10 MP, cobrados além do custo de ativação do efeito que altera."
+            "O custo de ativação desse efeito é 6 MP, cobrados além do custo de ativação do efeito que altera."
         ],
         conceitos : [],
         nivel : 2
@@ -1824,7 +1930,7 @@ window.techAddons =
         "nome": "Bloqueio Agressivo",
         "nomeLimpo": "Bloqueio Agressivo",
         "efeitos": [
-            "Técnica pode ser usada para consumir o turno do usuário. Se o personagem realizar um contra-ataque antes do seu próximo turno, não recebe dano pelo ataque do oponente.  Isso só vale para o primeiro contra-ataque realizado antes do seu próximo turno.",
+            "A técnica pode ser usada para consumir o turno do usuário. Se o personagem realizar um contra-ataque antes do seu próximo turno, não recebe dano pelo ataque do oponente.  Isso só vale para o primeiro contra-ataque realizado antes do seu próximo turno. Entretanto, caso o oponente resolva esquivar do seu contra-ataque e passe no teste, gerando assim um dano crítico, o personagem usando esta técnica recebe o dano normalmente.",
             "Quando esse efeito é utilizado, fica completamente claro para o oponente e todos os participantes da luta que o usuário está preparando um contra-ataque.",
             "Custo da técnica em 4."
         ],
@@ -2084,7 +2190,7 @@ window.techAddons =
         "nomeLimpo": "Look",
         "efeitos": [
             "Escolha um dos dois efeitos: 1 - Você consegue visualizar o que um alvo está portando (Equipamentos, dinheiro e itens).",
-			"2 - Adicionalmente, você pode fazer um teste de Percepção contra uma dificuldade colocada pelo Mestre pra perceber uma fraqueza, potencial ou detalhe narrativo ou mecânica do alvo. O que vai ser analisado é determinado na hora da ação",
+			"2 - Você pode fazer um teste de Percepção contra uma dificuldade colocada pelo Mestre pra perceber uma fraqueza, potencial ou detalhe narrativo ou mecânica do alvo. O que vai ser analisado é determinado na hora da ação",
             "A habilidade não gasta o turno do usuário, mas somente um efeito pode ser usado por rodada.",
             "Aumente o custo da técnica em 2."
         ],
@@ -2132,20 +2238,20 @@ window.techAddons =
         "efeitos": [
             "Escolha um aliado e conceda um bônus de poder na RD geral dele igual à +1 até o início da sua próxima rodada.",
             "Esse efeito não pode acontecer mais de 1x por combate sobre um mesmo alvo.",
-            "Custo de MP: 3 e gasta o turno OU 6 e não gasta o turno.",
+            "Custo de MP: 2 e gasta o turno OU 4 e não gasta o turno.",
         ],
         "conceitos": [
 	 "unicidade",
 	 "stacking"
         ],
-        "nivel": 3
+        "nivel": 2
     },
 			    {
         "tipo": "especial",
         "nome": "Praying Shield",
         "nomeLimpo": "Praying Shield",
         "efeitos": [
-            "Escolha um dos atributos de dano na criação dessa técnica: ao usar os efeitos desse addon, ganhe Bônus de Proteção +1 na RD desse atributo.",
+            "Escolha um dos atributos de dano na criação dessa técnica: ao usar os efeitos desse addon, ganhe um Bônus de RD Protegida nesse atributo.",
 			"Custo de MP: 2 e gasta o turno ou 4 e não gasta o turno.",
         ],
         "conceitos": [
@@ -2437,6 +2543,21 @@ window.techAddons =
         ],
         "nivel": 1
     },
+	    {
+        "tipo": "especial",
+        "nome": "Restauração - Lifebloom",
+        "nomeLimpo": "Restauracao - Lifebloom",
+        "efeitos": [
+            "Escolha um aliado. Você coloca um efeito adormecido que só se ativa no início do próximo turno de tal aliado.",
+            "Quando esse efeito se ativar, o alvo se cura numa quantidade igual ao seu valor de cura automaticamente.",
+            "Custo de ativação em 2 MP sem gastar o turno, mas somente uma vez por rodada em um único alvo.",
+			"Custo de ativação em 8 MP uma única vez, sem gastar o turno, mas podendo usar em até três alvos totais."
+        ],
+        "conceitos": [
+            "unicidade"
+        ],
+        "nivel": 1
+    },
     {
         "id": 353,
         "tipo": "especial",
@@ -2477,7 +2598,7 @@ window.techAddons =
             "Faça um teste de Ataque contra Defesa do alvo. Esse teste conta como um teste de esquiva. Se obtiver sucesso, escolha uma condição positiva (buff) ativa sobre o alvo e remova dele, trazendo para você. Isso não se aplica para buffs de Estilos de Luta e outros naturais do personagem (originários de itens, efeitos naturais, etc).",
             "O buff roubado dura até o início da sua próxima rodada. Um alvo que tiver um buff roubado ganha um bônus não-nomeado de +1 no teste de Defesa na próxima vez que for alvo DESSE mesmo addon, acumulando-se até um máximo de +4. Caso o alvo não seja alvo desse addon por duas rodadas ou mais, esse contador é resetado para zero.",
 			"Um personagem que roubar uma passiva, ganha os efeitos dela somente se ela não for de estado natural do alvo, e o alvo em questão precisa reativar a passiva em seu turno. A habilidade passiva fica ativa somente até o início do próximo turno do personagem que a roubou.",
-			"Gasto de MP igual à 6."
+			"Gasto de MP igual à 4."
         ],
         "conceitos": [
         ],
@@ -2509,7 +2630,7 @@ window.techAddons =
         ],
         "conceitos": [
         ],
-        "nivel": 4
+        "nivel": 3
     },
 			 {
         "tipo": "especial",
@@ -2811,8 +2932,9 @@ window.techAddons =
             "Sempre que o inimigo escolhido receber dano de alguém que não é você, você recebe a mesma quantia de dano (pós-reduções) como dano direto.",
             "Sempre que você receber dano de alguém que não é o inimigo escolhido, o inimigo escolhido recebe a mesma quantia de dano (pós-reduções) como dano direto.",
             "O inimigo pode sacrificar o turno dele para interromper essa técnica. Se ele fizer isso, você não pode usar essa técnica nele novamente até o fim da batalha.",
-            "Sua descrição para essa técnica deve levar como esse addom funciona em conta, incluindo a forma pela qual o inimigo cancela o efeito.",
+            "Sua descrição para essa técnica deve levar como esse addon funciona em conta, incluindo a forma pela qual o inimigo cancela o efeito.",
             "Os efeitos deste addon acabam quando o usuário ou vítima chegam a 0 de HP.",
+			"Causar dano em si mesmo por quaisquer efeitos de addons não faz o dano ser repassado para o inimigo.",
             "Aumente custo total da técnica em 1 (não acumulativo, mas somatório entre outros addons) para cada rodada que a habilidade com este addon ficar ativa."
         ],
         "conceitos": [
@@ -2982,9 +3104,9 @@ window.techAddons =
         "nome": "Punishing Volt",
         "nomeLimpo": "Punishing Volt",
         "efeitos": [
-            "Toda vez que você for atingido com 1 ou mais de dano por qualquer inimigo, cause 1 de dano aleatório direto no HP em um aliado deste atacante, mas nunca ele diretamente.",
-            "Em combates 1x1 esse efeito não se ativa.",
-            "Aumente o custo total da técnica em 2 MP por rodada para se manter ativo e 1 MP extra toda vez que for atingido e esse efeito se propagar."
+            "Toda vez que você for atingido com 1 ou mais de dano por qualquer inimigo, cause 1 de dano aleatório direto no HP de um inimigo, podendo ser o próprio atacante.",
+			"A forma de definir a aleatoriedade é decidida entre Mestre e Jogador, podendo ser rolagens de dados, jogada de moedas, etc.",
+            "Aumente o custo total da técnica em 2 MP por rodada para se manter ativo e 1 MP extra toda vez que for atingido e esse efeito se propagar. Ambos os custos dessa técnica não podem ser reduzidos por nenhum addon."
         ],
         "conceitos": [
             "unicidade"
@@ -2996,8 +3118,8 @@ window.techAddons =
         "nome": "Mage Killer",
         "nomeLimpo": "Mage Killer",
         "efeitos": [
-            "Toda vez que você for atingido com 1 ou mais de dano por qualquer inimigo, remova 1 de MP dos mesmos imediatamente.",
-            "Aumente o custo total da técnica em 1 MP por rodada ou 0 MP se ele for o único addon dessa técnica."
+            "Toda vez que você for atingido com 1 ou mais de dano por qualquer inimigo, remova metade do dano recebido (após passar pelas RDs e arredondado para cima) de MP do(s) atacante(s).",
+            "Aumente o custo total da técnica em 2 MP por rodada ou 0 MP se ele for o único addon dessa técnica."
         ],
         "conceitos": [
             "unicidade"
@@ -3061,11 +3183,12 @@ window.techAddons =
     },
 						    {
         "tipo": "passiva",
-        "nome": "Crusader Training",
+        "nome": "Training - Crusader",
         "nomeLimpo": "Crusader Training",
         "efeitos": [
-            "Reduza todos os danos por ataques ranged em 1 ponto enquanto essa passiva estiver ativa, mas aumente todo o dano recebido por ataques melee em +1.",
+            "Reduza todos os danos por ataques ranged em 1 ponto enquanto essa passiva estiver ativa.",
 			"Esse efeito por si próprio não permite que o dano reduzido chegue a 0.",
+			"Esse addon não pode funcionar em conjunto com \"Training - Knight\"",
             "Aumente o custo total da técnica em 2."
         ],
         "conceitos": [
@@ -3075,11 +3198,12 @@ window.techAddons =
     },
 							    {
         "tipo": "passiva",
-        "nome": "Knight Training",
+        "nome": "Training - Knight",
         "nomeLimpo": "Knight Training",
         "efeitos": [
-            "Reduza todos os danos por ataques melee em 1 ponto enquanto essa passiva estiver ativa, mas aumente todo o dano recebido por ataques ranged em +1.",
+            "Reduza todos os danos por ataques melee em 1 ponto enquanto essa passiva estiver ativa.",
 			"Esse efeito por si próprio não permite que o dano reduzido chegue a 0.",
+			"Esse addon não pode funcionar em conjunto com \"Training - Crusader\"",
             "Aumente o custo total da técnica em 2."
         ],
         "conceitos": [
@@ -3467,6 +3591,28 @@ window.techAddons =
         ]
     },
     /* Addons de Armas */
+	{
+        "tipo": "arma",
+        "nome": "Rápida",
+        "nomeLimpo": "Rapida",
+        "efeitos": [
+            "Sua arma é mais rápida que o comum, permitindo golpes mais velozes que o normal. Todos os seus ataques e técnicas usando a arma com este addon ganham +1 de Prioridade.",
+            "Este addon consome 1 slot."
+        ],
+        "conceitos": [],
+        "nivel": 1
+    },
+	{
+        "tipo": "arma",
+        "nome": "Brutal",
+        "nomeLimpo": "Brutal",
+        "efeitos": [
+            "Sua arma é capaz de desempenhar golpes mais poderosos que o normal, penetrando as defesas dos inimigos mais facilmente. Ataques e técnicas usando essa arma possuem um Bônus de Item de +10% de Penetração.",
+            "Este addon consome 2 slots e não pode ser comprado na criação de personagem."
+        ],
+        "conceitos": [],
+        "nivel": 2
+    },	
     {
         "tipo" : "arma",
         "nome" : "Capacidade Especial",
@@ -3687,6 +3833,19 @@ window.techAddons =
         "conceitos": [],
         "nivel": 1
     },
+	{
+        "tipo": "escudo",
+        "nome": "Blindado",
+        "nomeLimpo": "Blindado",
+        "efeitos": [
+            "Essa arma defensiva possui um revestimento especial que protege contra golpes mais pesados.",
+			"A arma defensiva reduz toda a penetração extra de dano que você fosse receber em 5%. Por exemplo: uma técnica com Door Poker teria apenas 45% de penetração contra você, ao invés de 50%.",
+			"Este addon consome 1 slots e não pode ser comprado na criação de personagem.",
+			"Este addon pode funcionar junto de Impenetrável de armaduras."
+        ],
+        "conceitos": [],
+        "nivel": 1
+    },
     {
         "tipo": "escudo",
         "nome": "Efeito Narrativo",
@@ -3765,6 +3924,45 @@ window.techAddons =
         "conceitos": [],
         "nivel": 1
     },
+	{
+        "tipo": "armadura",
+        "nome": "Energizada",
+        "nomeLimpo": "Energizada",
+        "efeitos": [
+            "A armadura possui uma reserva de energia mágica e espiritual que auxilia seu usuário",
+			"Se um personagem chegar a 0 de MP enquanto usar uma armadura com este addon, ele não perde a consciência ou fica fora de combate, apenas fica incapaz de usar manobras que gastem MP."
+        ],
+        "conceitos": [],
+        "nivel": 1
+    },
+	{
+        "tipo": "armadura",
+        "nome": "Impenetrável",
+        "nomeLimpo": "Impenetravel",
+        "efeitos": [
+            "Essa armadura possui um revestimento especial que protege contra golpes mais pesados.",
+			"A armadura reduz toda a penetração extra de dano que você fosse receber em 5%. Por exemplo: uma técnica com Door Poker teria apenas 45% de penetração contra você, ao invés de 50%.",
+			"Este addon consome 1 slot e não pode ser comprado na criação de personagem.",
+			"Este addon pode funcionar junto de Blindado de armas defensivas."
+        ],
+        "conceitos": [],
+        "nivel": 1
+    },
+	 {
+        "tipo": "armadura",
+        "nome": "Último Suspiro",
+        "nomeLimpo": "Ultimo Suspiro",
+        "efeitos": [
+            "Essa armadura aguenta impactos que seriam fatais, dando ao usuário um último suspiro de ação antes que o real impacto se espalhe pelo corpo",
+			"Quando um personagem com uma armadura que tenha este addon chegar a 0 de HP ou menos, ele fica no estado \"Abatido\" ainda podendo agir na rodada atual ou seguinte (dependendo da ordem de iniciativas) num estado reduzido de mobilidade e ações, ficando caído ao chão. Após isso ser concluído, ele cai inconsciente e passa a fazer testes de morte de acordo com a sua situação atual.", 
+			"Durante esse estado, o personagem só pode fazer um ataque básico, usar alguma perícia ou outras ações narrativas menores. Uso de técnicas, itens e quaisquer tentativas de curar a si mesmo são negadas automaticamente, mesmo que por efeitos passivos.",
+			"Um personagem abatido ainda é um alvo válido para inimigos, podendo agravar a sua situação ao ser alvo de golpes inimigos. Suas reações ficam limitadas à contra-ataques básicos, esquivas ou bloqueios.",
+			"Este addon consome 1 slot e não pode ser comprado na criação de personagem.",
+			"Este addon não funciona junto de efeitos que permitam que o personagem continue lutando mesmo após chegar à 0 ou menos de HP."
+        ],
+        "conceitos": [],
+        "nivel": 1
+    },	
     {
         "tipo": "armadura",
         "nome": "Armadura Leve",
@@ -3896,6 +4094,29 @@ window.techAddons =
         "nomeLimpo": "Super Leve",
         "efeitos": [
             "Esse item ocupa apenas meio slot / espaço em seu inventário. Esse addon não aumenta o nível do item e é adicionado pelo mestre onde ele achar relevante. Acessórios do Tipo Ferramenta devem ter esse addon a maior quantidade de vezes possível, enquanto não for nenhum objeto grande demais que simplesmente não possa ser leve."
+        ],
+        "conceitos": [],
+        "nivel": 1
+    },
+	{
+        "tipo": "acessorio",
+        "nome": "Zephyr",
+        "nomeLimpo": "Zephyr",
+        "efeitos": [
+            "Esse item aumenta passivamente a iniciativa do personagem que o utiliza em +1.",
+			"Este addon ocupa um slot.",
+			"Os efeitos desse addon se acumulam múltiplas vezes até o máximo de +4."
+        ],
+        "conceitos": [],
+        "nivel": 1
+    },
+	{
+        "tipo": "acessorio",
+        "nome": "Vigor",
+        "nomeLimpo": "Vigor",
+        "efeitos": [
+            "O addon com este item permite que o usuário ao chegar em 20% do seu HP máximo, possa usar da ação \"Buscar Coragem\"",
+			"Este addon ocupa um slot.",
         ],
         "conceitos": [],
         "nivel": 1

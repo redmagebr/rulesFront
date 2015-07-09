@@ -907,7 +907,7 @@ window.vantagensArray = [
         "requisitos": "Arquétipo Clérigo"
     },
     {
-        "nome": "Friends in High Places",
+        "nome": "Vigia Incansável",
         "pontos": "0",
         "descricao": [
             "Você tem uma facilidade além do normal em identificar tensões no ar ou mudanças no ambiente que possam ser perigosas para você e seus aliados. Além disso, você é treinado para não deixar que o mal aconteça contra aqueles que protege. Dessa forma, se o Defensor montar um turno de guarda noturna, diurna ou o que for enquanto seus aliados dormem ou descansam, o grupo não pode ser emboscado e as criaturas na espreita ficam alerta da presença protetora do Defensor.",
