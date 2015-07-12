@@ -10,7 +10,7 @@ window.techChangelog = [
 			"Novos addons de técnicas: Restauração - Lifebloom, Disruption, Collateral Damage, Multiple Crush, Killing Intent, Frenzy Eater",
 			"Novos addons de armas: Brutal e Rápida",
 			"Novo addon para armas defensivas: Blindado", 
-			"Novo addon para armaduras: Impenetrável e Energizada",
+			"Novo addon para armaduras: Impenetrável, Energizada e Último Suspiro",
 			"Novo addon para acessórios: Zephyr e Vigor",
 			"Nova opção para Pontos de Habilidade: Quebrar addons em técnicas menores (2 PH).",
 			"Mage Killer agora remove metade do dano causado (pós-RDs) de MP do atacante (antigo: 1 MP). Custo aumentado também.",
@@ -33,7 +33,8 @@ window.techChangelog = [
 			"Bloqueio Agressivo teve uma linha clarificada quanto ao seu funcionamento e sobre esquivas em contra-ataques.",
 			"Crusader e Knight Training levemente refeitos pra tornarem-se mais atrativos. Agora fazem parte de uma mesma família também.",
 			"Corrigido um bug onde \"Buscar Coragem\" requeria 5% do MP. Esta é uma versão antiga, então agora foi migrado para o correto (2 MP).",
-        ]
+			"HOTFIX: Impenetrável e Blindado agora reduzem qualquer tipo de dano em 5% respectivamente, ficando matematicamente mais apropriado para neutralizar alguém que use o addo \"Buscar Coragem\"",
+			]
  },
 	 
  {	 
@@ -3839,8 +3840,8 @@ window.techAddons =
         "nomeLimpo": "Blindado",
         "efeitos": [
             "Essa arma defensiva possui um revestimento especial que protege contra golpes mais pesados.",
-			"A arma defensiva reduz toda a penetração extra de dano que você fosse receber em 5%. Por exemplo: uma técnica com Door Poker teria apenas 45% de penetração contra você, ao invés de 50%.",
-			"Este addon consome 1 slots e não pode ser comprado na criação de personagem.",
+			"A armadura reduz todo o dano que você fosse receber em 5%. Reduções em porcentagem são multiplicadas.",
+			"Este addon consome 1 slot e não pode ser comprado na criação de personagem.",
 			"Este addon pode funcionar junto de Impenetrável de armaduras."
         ],
         "conceitos": [],
@@ -3941,7 +3942,7 @@ window.techAddons =
         "nomeLimpo": "Impenetravel",
         "efeitos": [
             "Essa armadura possui um revestimento especial que protege contra golpes mais pesados.",
-			"A armadura reduz toda a penetração extra de dano que você fosse receber em 5%. Por exemplo: uma técnica com Door Poker teria apenas 45% de penetração contra você, ao invés de 50%.",
+			"A armadura reduz todo o dano que você fosse receber em 5%. Reduções em porcentagem são multiplicadas.",
 			"Este addon consome 1 slot e não pode ser comprado na criação de personagem.",
 			"Este addon pode funcionar junto de Blindado de armas defensivas."
         ],
@@ -4115,7 +4116,7 @@ window.techAddons =
         "nome": "Vigor",
         "nomeLimpo": "Vigor",
         "efeitos": [
-            "O addon com este item permite que o usuário ao chegar em 20% do seu HP máximo, possa usar da ação \"Buscar Coragem\"",
+            "O item com este addon permite que o usuário ao chegar em 20% do seu HP máximo, possa usar da ação \"Buscar Coragem\"",
 			"Este addon ocupa um slot.",
         ],
         "conceitos": [],
