@@ -4,6 +4,20 @@
  * @type Array
  */
 window.techChangelog = [  
+{	 
+        version : [4,7],
+        description : [
+			"Clarificado que o bônus de Bloodlust duram até o início da próxima rodada do usuário, tapando buracos dessa forma.",
+			"Readicionada a condição pra Estilos de Luta: Quando estiver lutando invisível...",
+			"Punishing Volt clarificado que não se ativa com danos passivos e/ou de DoT.",
+			"Area Of Effect: Clarificado que o dano é normalizado.",
+			"Praying Shield: Escrita a duração do efeito que estava faltando.",
+			"Novos addons especiais: Restauração - Dispel to Heal e Restauração - Chain Heal.",
+			"Novo addon para armaduras que não havia sido documentado: Último Suspiro.",
+			"Novo addon para itens consumíveis: Reator de Mana.",
+			"Novos addons para armas: Atordoante, Obliterante e Vorpal.",
+			]			
+ },
  {	 
         version : [4,6],
         description : [
@@ -816,7 +830,7 @@ window.techAddons =
         "nomeLimpo": "Area of Effect",
         "efeitos": [
             "A técnica afeta todos os inimigos.",
-            "Durante a rolagem de dano dessa técnica, corte o modificador da rolagem pela metade. Se você iria rolar 1d6 + 8 para dano, role 1d6 + 4 e etc. Arredonda para cima.",
+            "Esse ataque passa a ser normalizado.",
             "Ao ativar esse efeito, o seu ataque é dividido em um ataque em cada inimigo, então você rola o dano uma vez para cada alvo.",
             "Inimigos podem se desviar dessa técnica ou contra-atacar com ataques básicos. Outras ações de defesa não são válidas contra esse ataque.",
             "Cópias e aliados criados por outros addons também são alvos do Area of Effect.",
@@ -2252,7 +2266,7 @@ window.techAddons =
         "nome": "Praying Shield",
         "nomeLimpo": "Praying Shield",
         "efeitos": [
-            "Escolha um dos atributos de dano na criação dessa técnica: ao usar os efeitos desse addon, ganhe um Bônus de RD Protegida nesse atributo.",
+            "Escolha um dos atributos de dano na criação dessa técnica: ao usar os efeitos desse addon, ganhe um Bônus de RD Protegida nesse atributo até o fim do seu próximo turno.",
 			"Custo de MP: 2 e gasta o turno ou 4 e não gasta o turno.",
         ],
         "conceitos": [
@@ -2559,6 +2573,36 @@ window.techAddons =
         ],
         "nivel": 1
     },
+		    {
+        "tipo": "especial",
+        "nome": "Restauração - Chain Heal",
+        "nomeLimpo": "Restauracao - Chain Heal",
+        "efeitos": [
+            "Escolha um aliado. Esse aliado pode gastar um ponto de Stamina e se curar a quantidade normal.",
+			"Escolha um segundo aliado (que não seja você): Restaure 1 de HP instantaneamente dele sem gastar pontos de Stamina.",
+            "Custo de ativação de 4 MP e gasta o turno."
+        ],
+        "conceitos": [
+            "unicidade"
+        ],
+        "nivel": 2
+    },
+		    {
+        "tipo": "especial",
+        "nome": "Restauração - Dispel to Heal",
+        "nomeLimpo": "Restauracao - Dispel to Heal",
+        "efeitos": [
+            "Escolha um aliado e remova uma condição positiva (buff) ativa sobre ele. Ao remover a condição o alvo se cura num valor igual à 1/2 (arredondado para baixo, com o mínimo de 1).",
+            "Curar um alvo dessa forma não faz ele gastar Stamina.",
+			"Este efeito só pode ser usado uma vez por rodada.",
+			"A condição a ser removida não pode ser uma passiva de estado natural ou proveniente de um item que sempre a ative em seguida.",
+            "Custo de ativação em 5 MP e gasta o turno."
+        ],
+        "conceitos": [
+            "unicidade"
+        ],
+        "nivel": 2
+    },
     {
         "id": 353,
         "tipo": "especial",
@@ -2624,7 +2668,7 @@ window.techAddons =
         "nome": "Bloodlust",
         "nomeLimpo": "Bloodlust",
         "efeitos": [
-            "Esse efeito não consome o turno do personagem. Gaste um ponto de Stamina para aumentar a sua próxima rolagem de dano em +2.",
+            "Esse efeito não consome o turno do personagem. Gaste um ponto de Stamina para aumentar a sua próxima rolagem de dano em +2. Esse efeito se perde se não for gasto até o começo do seu próximo turno.",
             "Você não pode gastar vários pontos de stamina de uma vez.",
 			"Esse efeito não pode ser usado múltiplas vezes de uma vez e um alvo entra num estado de exaustão após usá-lo, sendo incapaz de usá-lo na sua rodada seguinte. Dessa forma, é necessário um intervalo de 1 rodada até que possa usar novamente.",
 			"Custo de 5 MP e 1 ponto de Stamina"
@@ -2950,7 +2994,7 @@ window.techAddons =
         "nomeLimpo": "Magical Flux",
         "efeitos": [
             "Enquanto essa passiva estiver ativa, toda vez que você, o usuário dessa técnica, pagar 4 MP ou mais de uma vez só, você deve pagar 4 MP a mais.",
-            "\"De uma vez só\" significa durante a resolução de um único efeito. Como o custo de manter um Estilo de Luta ativo, ou o custo de manter uma Passiva ativa, o custo de Ativar algum Efeito Especial, então dá tempo desse custo ser alterado por outros efeitos, como aumentos ou reduções, e isso também afeta se Magical Flux irá se ativar ou não.",
+            "\"De uma vez só\" significa durante a resolução de um único efeito. Como o custo de manter uma Passiva ativa, o custo de Ativar algum Efeito Especial, então dá tempo desse custo ser alterado por outros efeitos, como aumentos ou reduções, e isso também afeta se Magical Flux irá se ativar ou não.",
             "Magical Flux não pode ser incluída em Passivas criadas por Armaduras.",
             "Diminua o custo dessa passiva em 2 MP por rodada.",
             "Exemplo: Realizar um ataque de custo 6 MP com Magical Flux ativa aumenta o custo para 10 MP.",
@@ -3107,6 +3151,7 @@ window.techAddons =
         "efeitos": [
             "Toda vez que você for atingido com 1 ou mais de dano por qualquer inimigo, cause 1 de dano aleatório direto no HP de um inimigo, podendo ser o próprio atacante.",
 			"A forma de definir a aleatoriedade é decidida entre Mestre e Jogador, podendo ser rolagens de dados, jogada de moedas, etc.",
+			"Esse efeito não se ativa com danos passivos que aconteçam sobre o usuário do addon, apenas danos diretos. Assim sendo, danos provenientes de Damage Over Time não ativam este addon, por exemplo.",
             "Aumente o custo total da técnica em 2 MP por rodada para se manter ativo e 1 MP extra toda vez que for atingido e esse efeito se propagar. Ambos os custos dessa técnica não podem ser reduzidos por nenhum addon."
         ],
         "conceitos": [
@@ -3397,6 +3442,7 @@ window.techAddons =
              "- Quando lutando contra um inimigo muito maior que você (mínimo: 2 metros de diferença pra mais)",
              "- Quando lutando contra um inimigo muito menor que você (mínimo: metade do seu tamanho pra menos)",
              "- Quando um inimigo não estiver visível por algum motivo",
+			 "- Quando lutando invisível ou você não estiver visível para o seu alvo por algum motivo",
              "- Quando um inimigo for um animal da família... (escolha o tipo de animal)",
            	 "- Quando um inimigo for um do tipo... (escolha uma família de inimigos. Como as criaturas de uma campanha variam de mestre pra mestre, abaixo seguem algumas sugestões que o Mestre pode adotar ou incrementar mais): Elemental, Dragão, Voador, Gigante, Orc, El'zel, Elfo, Humano, Quellsir, Yu'qun, Zahari, Ogrekin, Bestial, Golem, Fayri, Morto-vivo, Mágica, Gosma, Planta, Verme, Demônio, Anjo, Extraplanar"
         ],
@@ -3834,6 +3880,39 @@ window.techAddons =
         "conceitos": [],
         "nivel": 1
     },
+    {
+        "tipo": "arma",
+        "nome": "Vorpal",
+        "nomeLimpo": "Vorpal",
+        "efeitos": [
+			"Se o inimigo ficar fora da batalha (seja por atingir 0 de HP ou algo do tipo) em um ataque com essa arma, um efeito devastador acontece contra a vítima ao ponto de destruí-la completamente (Ex: sua cabeça é arrancada, seu corpo é rasgado, etc).",
+			"Personagens que ainda possam lutar até -10 HP por algum motivo não são afetados por este addon. Este efeito não se ativa em lutas contra outros jogadores (PvP)."
+        ],
+        "conceitos": [],
+        "nivel": 1
+    },
+    {
+        "tipo": "arma",
+        "nome": "Obliterante",
+        "nomeLimpo": "Obliterante",
+        "efeitos": [
+			"Sua arma possui o fio mais afiado ou os disparos dela são mais profundos. Uma arma com esse addon causa, em resultados críticos, dano máximo com 75% de penetração ao invés de 50%.",
+			"Esse addon só pode ser adicionado em armas de nível 2 para cima e não pode ser adicionado durante a criação de personagem.  Este efeito não acumula entre si entre múltiplas ou a mesma arma.",
+			"O efeito de aumento da % de dano crítico só se ativa também se a arma estiver sendo utilizada no ataque de alguma forma (isso inclui técnicas)."
+        ],
+        "conceitos": [],
+        "nivel": 2
+    },
+    {
+        "tipo": "arma",
+        "nome": "Atordoante",
+        "nomeLimpo": "Atordoante",
+        "efeitos": [
+			"A arma é capaz de atordoar um inimigo por um curto espaço de tempo. Sempre que você rolar um acerto crítico em uma rolagem de dano utilizando uma arma com este addon, o próximo ataque executado contra o mesmo alvo não poderá ser bloqueado por ele. A vítima ainda tem a opção de esquivar ou contra-atacar."
+		],
+        "conceitos": [],
+        "nivel": 1
+    },			
 	{
         "tipo": "escudo",
         "nome": "Blindado",
@@ -4216,6 +4295,17 @@ window.techAddons =
         "nomeLimpo": "Uso Medico",
         "efeitos": [
             "Esse item conta como \"Bandagens\" ou algum outro item consumível para a perícia \"Socorrer / Primeiros Socorros\", dando +2 Bônus de Item em testes dessas perícias, ou outros efeitos que exijam isso. Caso esse seja o único addon adicionado no item, o preço dele cai para 25 moedas de ouro."
+        ],
+        "conceitos": [],
+        "nivel": 1
+    },
+    {
+        "tipo": "consumivel",
+        "nome": "Reator de Mana",
+        "nomeLimpo": "Reator de Mana",
+        "efeitos": [
+			"Esse item funciona como um produtor de Mana ou meramente algum item que possa ser consumido e explique uma restauração sobrenatural / química de MP.",
+			"O item restaura +5 MP quando consumido. Este valor é acumulativo até o máximo de 4 slots (+20 MP). Este addon ocupa um slot."
         ],
         "conceitos": [],
         "nivel": 1

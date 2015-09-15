@@ -4,6 +4,23 @@
  * @type Array
  */
 window.vantagensChangelog = [
+{
+        "version" : [4, 3],
+        "description" : [
+             "Vantagem 'Carga Extra' agora está listada.",
+             "Vantagem: 'Fraqueza Sobrenatural' agora tem seus pontos corrigidos (antes estava listado 4, deveria ser 3 ou 5).",
+			 "Vantagem: 'Acrobata Natural' de Ninja foi substituída por 'Reiki'.",
+			 "Vantagem: 'Ultimate Lifeform' de Arauto da Profecia foi reformulada.",
+			 "Vantagem: 'Fé Intensa' de Mago Branco foi substituída por 'Infusão de Ether'.",
+			 "Novas Desvantagens: Parasita e Palavra-Gatilho",
+			 "Nova Vantagem: Fornecedor.",
+			 "Nova Vantagem de Mímico: Simulacrum.",
+			 "Novas Vantagem de Ferreiro: Caminho da Ferraria.",
+			 "Novas Vantagem de Alquimista: Caminho da Alquimia.",	
+			 "Novas Vantagem de Engenheiro: Caminho da Engenharia.",
+			 "Vantagens: Equipamento Épico, Lendário e de Valor Sentimental removidos. Nova vantagem 'Equipamento Evolutivo' entra em seus lugares."
+        ]
+    },
 	{
         "version" : [4, 2],
         "description" : [
@@ -189,7 +206,7 @@ window.vantagensArray = [
         "nome": "Mapa dos Anões",
         "pontos": "1",
         "descricao": [
-            "Andar em complexos subterrâneos, perímetros de montanhas e cidades anãs não é uma tarefa fácil! Justamente por isso, os anões desenvolveram um senso de direção incrível que se ampliou pra todo e qualquer lugar que visitam, impossibilitando que eles se percam ou falhem a encontrar o caminho mais adequado para suas necessidades. Em termos gerais um anão não costuma se perder e ganha sucesso automático em testes para encontrar o caminho ou direção  em ambientes subterrâneos ou montanhosos com uma dificuldade de até 10, recebendo um bônus de +2 Bônus de Vantagem em ificuldades maiores."
+            "Andar em complexos subterrâneos, perímetros de montanhas e cidades anãs não é uma tarefa fácil! Justamente por isso, os anões desenvolveram um senso de direção incrível que se ampliou pra todo e qualquer lugar que visitam, impossibilitando que eles se percam ou falhem a encontrar o caminho mais adequado para suas necessidades. Em termos gerais um anão não costuma se perder e ganha sucesso automático em testes para encontrar o caminho ou direção em ambientes subterrâneos ou montanhosos com uma dificuldade de até 10, recebendo um bônus de +2 Bônus de Vantagem em dificuldades maiores."
         ],
         "requisitos": "Raça Anão"
     },
@@ -713,6 +730,15 @@ window.vantagensArray = [
         "requisitos": "Arquétipo Alquimista"
     },
     {
+        "nome": "Caminho da Alquimia",
+        "pontos": "0",
+        "descricao": [
+			"A alquimia é o seu trabalho e a sua vida. Seja por experiência ou aptidão, você conhece ao menos os básicos para trabalhar com tal profissão.",
+			"Ganhe a perícia/emprego “Alquimia” num nível inicial igual à 1 de graça. Você também começa com o acessório “Kit do Alquimista” de graça no seu inventário."
+        ],
+        "requisitos": "Arquétipo Alquimista"
+    },	
+    {
         "nome": "O Poder do Cinto",
         "pontos": "0",
         "descricao": [
@@ -724,7 +750,9 @@ window.vantagensArray = [
         "nome": "Ultimate Life Form",
         "pontos": "0",
         "descricao": [
-            "Em um marco importante da história, você pode ter aprendido o segredo da sua forma final, junto do seu artefato. Ao ativar sua forma final, você pode transformar uma luta 1x1 em uma batalha cinemática (seguindo as regras apropriadas para essas lutas). Inimigos de nível igual ou superior ao seu são muito fortes para serem enfrentados dessa maneiraAlquimista. Você também pode incluir sua Forma Final em suas técnicas a partir desse ponto da história, mas isso não é obrigatório nem te dá bônus extras."
+			"Em um marco importante da história, você pode ter aprendido o segredo da sua forma final, junto do seu artefato. ",
+			"Crie uma condição (ou peça ao mestre para criar) para que a sua forma final se ative. Seja por uma ativação limitada e especial do seu artefato, uma condição emocional, física ou algo do tipo. Quando ela for obedecida e você ativar sua forma final, todos os seus atributos-teste se elevam para um valor igual à 5 automaticamente. Atributos com valores maiores que isso não são afetados e permanecem no valor original.",
+			"Dentro de combate esse efeito dura 1 rodada, enquanto narrativamente pode durar um pouco mais ou menos (critério do mestre a combinar com o jogador de antemão). Sua forma final exige muita energia e esforço de você, o que não lhe permite permanecer muito tempo nela."
         ],
         "requisitos": "Arquétipo Arauto da Profecia"
     },
@@ -990,7 +1018,7 @@ window.vantagensArray = [
         "pontos": "0",
         "descricao": [
             "Esta vantagem usa o elemento escolhido pela vantagem anterior durante a criação do personagem (Fogo, Eletricidade, Ar, Gelo e Água, Bio ou Terra). Você pode ter um objeto que é sua posse inquestionável encantado para não poder ser utilizado por outras pessoas. Você pode definir as especificidades desse encantamento, mas como exemplos: uma espada encantada por água pode se desfazer e passar pelas mãos dos outros quando tentarem a segurar. Uma espada encantada por terra pode aumentar o próprio peso em várias toneladas. O fato é que se alguém que não for você tentar usar o item encantado, não vai poder.",
-            "Os efeitos desse item devem ser mais narrativos do que qualquer outra coisa. Entretanto, caso o jogador queira unir esse artefato com alguma vantagem que permita a criação de um item, como \"Equipamento Lendário\" por exemplo, fica a seu critério."
+            "Os efeitos desse item devem ser mais narrativos do que qualquer outra coisa. Entretanto, caso o jogador queira unir esse artefato com alguma vantagem que permita a criação de um item, como \"Equipamento Evolutivo\" por exemplo, fica a seu critério."
 			],
         "requisitos": "Arquétipo Elementalista"
     },
@@ -1004,6 +1032,15 @@ window.vantagensArray = [
         ],
         "requisitos": "Arquétipo Engenheiro"
     },
+    {
+        "nome": "Caminho da Engenharia",
+        "pontos": "0",
+        "descricao": [
+			"A engenharia é o seu trabalho e a sua vida. Seja por experiência ou aptidão, você conhece ao menos os básicos para trabalhar com tal profissão.",
+			"Ganhe a perícia/emprego “Engenharia” num nível inicial igual à 1 de graça. Você também começa com o acessório “Kit do Engenheiro” de graça no seu inventário."
+        ],
+        "requisitos": "Arquétipo Engenheiro"
+    },		
     {
         "nome": "Reação Improvisada",
         "pontos": "0",
@@ -1061,6 +1098,15 @@ window.vantagensArray = [
         ],
         "requisitos": "Arquétipo Ferreiro"
     },
+    {
+        "nome": "Caminho da Ferraria",
+        "pontos": "0",
+        "descricao": [
+			"A ferraria é o seu trabalho e a sua vida. Seja por experiência ou aptidão, você conhece ao menos os básicos para trabalhar com tal profissão.",
+			"Ganhe a perícia/emprego “Ferraria” num nível inicial igual à 1 de graça. Você também começa com o acessório “Kit do Ferreiro” de graça no seu inventário."
+        ],
+        "requisitos": "Arquétipo Ferreiro"
+    },		
     {
         "nome": "Reputação",
         "pontos": "0",
@@ -1306,12 +1352,13 @@ window.vantagensArray = [
         "requisitos": "Arquétipo Mago Branco"
     },
     {
-        "nome": "Fé Intensa",
+        "nome": "Infusão de Ether",
         "pontos": "0",
         "descricao": [
-            "Você possui uma fé muito forte dentro de si, seja em uma entidade específica ou em traços humanos abstratos (como força de vontade), e por isso a cada fim de episódio ganha +2 ponto de fé.  Um personagem começa a história com 3 pontos de fé e ganha mais 3 a cada término de sessão. Podendo acumular eles até qualquer quantidade. Pontos de fé podem ser acumulados e usados para fins específicos:",
-            "- 1 Ponto: Escolha uma rolagem de Perícia e/ou Atributo-Teste. O resultado aumenta em +1. Se usando em uma rolagem sua, você deve usar a Fé antes de rolar o dado. Se usando em aliados, não tem problema usar depois da rolagem, entretanto, a rolagem do aliado ganha um bônus de +2 ao invés de +1. Não é possível gastar vários pontos de Fé para adicionar bônus ao mesmo teste. Só +1 e só uma vez.",
-            "- 3 Pontos: Escolha um alvo (podendo ser você mesmo). Esse alvo é curado para 100% HP e 100% MP. Não pode ser usada em combate e não gasta Stamina."
+			"Você é capaz de converter a Mana em uma energia purificada usada para a criação, restauração e encontrada no fluxo de vida do universo, o chamado Ether. Você pode converter metade do seu MP máximo em dois pontos de Ether para usar de acordo com o que a sua fé ou necessidade mandar.",
+			"O domínio do Ether é algo sério e de difícil manipulação, o que geralmente te exaure após muita manipulação. Os usos de Ether incluem:",
+			"• 1 Ponto: Conceder Superioridade no próximo teste que um aliado ou você for fazer. Se você usar esta opção em si mesmo, então o custo vai para 2 pontos de Ether. O uso desta infusão só funciona para testes que não envolvam a rolagem de qualquer atributo de dano ou primário (Ataque e Defesa). Se usada em combate, gasta o turno.",
+			"• 2 Pontos: Re-converte os 2 pontos de Ether no gasto de MP que você teve para criá-los, dando-o para um aliado da sua escolha e curando seu MP na mesma quantidade. Esse efeito não pode ser usado em você mesmo e pode ser usado em combate como uma ação que gasta o turno."
         ],
         "requisitos": "Arquétipo Mago Branco"
     },
@@ -1390,10 +1437,10 @@ window.vantagensArray = [
         "requisitos": "Arquétipo Monge"
     },
     {
-        "nome": "Discplina do Punho de Ferro",
+        "nome": "Disciplina do Punho de Ferro",
         "pontos": "0",
         "descricao": [
-            "Quando não estiver com nenhuma arma equipada, os punhos do monge contam como duas armas de Nível 0 de uma mão que usam 1d6 como dano (+1 de dano cada)."
+			"Quando não estiver com nenhuma arma equipada, os punhos do monge contam como duas armas de Nível 0 de uma mão que usam 1d6 como dano (+1 de dano cada, totalizando 1d6 + 2 + Valor de Artes Marciais, em dano)."
         ],
         "requisitos": "Arquétipo Monge"
     },
@@ -1431,6 +1478,28 @@ window.vantagensArray = [
         "requisitos": "Arquétipo Mímico"
     },
     {
+        "nome": "Simulacrum",
+        "pontos": "0",
+        "descricao": [
+			"Cópia é a principal ferramenta de um mímico. Dentro dessa forma, comece a história do personagem apenas com uma técnica de 1 slot e um estilo de luta.",
+			"O mímico ganha acesso à uma nova ação de combate: “Observar”. O personagem que usar esta ação e terminar o seu turno imediatamente, escolhendo um combatente para observar e estudar seus próximos movimentos.",
+			"A última habilidade mágica ou técnica que o alvo observado executar, o mímico conseguirá copiar com sucesso até o fim do combate ou até observar outro alvo / outra ação.",
+			"Assim sendo, quando o personagem escolher observar outro combatente, ele automaticamente “esquece” a técnica que estava copiada até então, substituindo-a pela nova.",
+			"O personagem paga todos os custos originais da técnica copiada, seja em MP, HP, etc. Você também fica sujeito à eventuais redutores ou bônus que a técnica possua ou sofra por variáveis da luta.",
+			"Outras regras:",
+			"• Um mímico não pode copiar técnicas de um alvo que tenha dois ou mais níveis que ele;",
+			"• Técnicas passivas ou que sejam de estado natural de um item ou personagem não podem ser copiadas. Técnicas passivas que tenham sido ativadas durante o combate podem ser copiadas (O personagem não pode copiar ativações da fase 0);",
+			"• Durante o nível 1, o mímico tem o dano de todas as técnicas copiadas reduzido em 25%. Essa penalidade deixa de existir do nível 2 para cima;",
+			"• Técnicas copiadas devem ser executadas exatamente como são na sua forma original, sem alterações por parte do mímico (salvo o uso de Copycat);",
+			"• O personagem não pode copiar técnicas copiadas de outro mímico do grupo ou de um inimigo que tenha o mesmo funcionamento.",
+			"• A partir do nível 4, Simulacrum não gasta mais o turno do personagem e é considerada uma ação grátis.",
+			"• (IMPORTANTE) O mestre pode vetar cópias de habilidades que chefes ou inimigos especiais / muito fortes venham a usar. O jogador que interpreta o mímico pode ser avisado de antemão que certas (ou todas) habilidades daquele combatente em específico não podem ser copiadas.",
+			"Isso serve para manter o controle sobre NPCs ou inimigos que usem addons improvisados, não existentes ou mais fortes que os existentes nas bases das regras, ou seja, aqueles que são alvos de “regras da casa” do mestre.",
+			"• Personagens-gestalt não possuem acesso à essa vantagem por padrão. Isso pode mudar se o mestre permitir, mas ele deve estar avisado das possíveis quebras de balançeamento do jogo."
+        ],
+        "requisitos": "Arquétipo Mímico"
+    },	
+    {
         "nome": "Pacto",
         "pontos": "0",
         "descricao": [
@@ -1453,10 +1522,12 @@ window.vantagensArray = [
         "requisitos": "Arquétipo Necromante"
     },
     {
-        "nome": "Acrobata Natural",
+        "nome": "Reiki",
         "pontos": "0",
         "descricao": [
-            "Uma vez por episódio você pode jogar novamente uma rolagem do atributoteste Agilidade ou qualquer perícia que use-a como atributo base e então, usar o resultado que mais lhe agradar."
+			"Todos os Ninjas que se prezem controlam uma poderosa energia espiritual que flutua no universo conhecida como Ki. A manipulação do Ki para os ninjas funciona de diversas formas, sendo usada pra termos ofensivos, suportivos ou estratégicos.",
+			"O Reiki é a manipulação dessa energia espiritual para fins restaurativos, dando o suporte mínimo necessário para um ninja se manter um combatente incansável dentro de situações necessárias.",
+			"Sempre que se curar com o gasto de Stamina, role 1d4 e cure seu MP na quantidade obtida. Esse efeito ocorre até o máximo de cinco vezes por episódio ou sessão."
         ],
         "requisitos": "Arquétipo Ninja"
     },
@@ -1558,7 +1629,7 @@ window.vantagensArray = [
             "Você pode domar um animal com um teste bem sucedido de Natureza. Animais hostis precisam ser acalmados antes de serem domados.",
             "O animal é como uma Arma de nível 1, sempre;",
             "Você pode começar a história com um Animal de Nível 1 ao seu lado;",
-            "Você também pode utilizar as vantagens Equipamento de Valor Emocional e Equipamento Lendário no seu animal;",
+            "Você também pode utilizar a vantagem Equipamento de Evolutivo no seu animal;",
             "Animais sempre acompanham o Senhor das Bestas, e ao contrário de Necromantes e Invocadores Astrais, não requerem gasto de MP para serem usadas."
         ],
         "requisitos": "Arquétipo Senhor das Bestas"
@@ -1694,6 +1765,13 @@ window.vantagensArray = [
         ]
     },
     {
+        "nome": "Carga Extra",
+        "pontos": "3",
+        "descricao": [
+            "Personagem usa (FOR + 2) x4 para calcular a Carga que pode carregar."
+        ]
+    },
+    {
         "nome": "Caminhando nas Sombras",
         "pontos": "2",
         "descricao": [
@@ -1811,42 +1889,21 @@ window.vantagensArray = [
         ]
     },
     {
-        "nome": "Equipamento Épico",
-        "pontos": "1 ou 2",
-        "descricao": [
-            "Você possui uma peça de equipamento poderosa para você e sua história, além de ter um significado grande para algum acontecimento ou para alguém. Esses equipamentos não mudam de nível, mas são sempre de nível 2 (portanto, possuem 2 slots de addons) e são criados por você. Esses equipamentos não mudam de nível. Você pode comprar Equipamento Épico várias vezes, mas ela não se acumula no mesmo equipamento.",
-            "O custo dessa vantagem varia com o tipo do equipamento criado:",
-            "1 Ponto: Arma Defensiva",
-            "1 Ponto: Arma de uma mão",
-            "2 Pontos: Arma de duas mãos",
-            "2 Pontos: Armadura.",
-            "Você pode pegar essa vantagem várias vezes, mas para equipamentos diferentes. Veja as “Regras para Equipamento Épico, Lendário, Natural, de Valor Sentimental e X” na página 236 para saber como proceder ao comprar essa vantagem."
-	     ]
-    },
-    {
-        "nome": "Equipamento Lendário",
-        "pontos": "2 ou 4",
-        "descricao": [
-            "Você possui uma peça de equipamento incrivelmente rara e poderosa. Esse equipamento sempre será de nível 3 (portanto, possui 3 slots de addons)  e são criados por você. Esses equipamentos não mudam de nível. Você pode comprar Equipamento Lendário várias vezes, mas ela não se acumula no mesmo equipamento.",
-            "O custo dessa vantagem varia com o tipo do equipamento criado:",
-            "2 Ponto: Arma Defensiva",
-            "2 Ponto: Arma de uma mão",
-            "4 Pontos: Arma de Duas Mãos",
-            "4 Pontos: Armadura",
-            "Você pode pegar essa vantagem várias vezes, mas para equipamentos diferentes. Veja as “Regras para Equipamento Épico, Lendário, Natural, de Valor Sentimental e X” na página 236 para saber como proceder ao comprar essa vantagem."       
-		 ]
-    },
-    {
-        "nome": "Equipamento de Valor Emocional",
+        "nome": "Equipamento Evolutivo",
         "pontos": "1",
         "descricao": [
-            "Você possui uma peça de equipamento muito importante para você e sua história. Ela pode não ser a melhor de todas, mas você vai se esforçar e fazer ela funcionar. Esses equipamentos não mudam de nível. Você pode comprar Equipamento de Valor Emocional várias vezes, mas os equipamentos ganhos ainda serão nível 1 (portanto, possui 1 slot de addons).",
-            "O custo dessa vantagem varia com o tipo do equipamento criado:",
-            "1 Ponto: Arma Defensiva + Arma de uma mão",
-            "1 Ponto: Duas armas de uma mão",
-            "1 Ponto: Arma de duas mãos",
-            "1 Ponto: Armadura.",
-            "Você pode pegar essa vantagem várias vezes, mas para equipamentos diferentes. Veja as “Regras para Equipamento Épico, Lendário, Natural, de Valor Sentimental e X” na página 236 para saber como proceder ao comprar essa vantagem."      
+		"Você possui uma peça de equipamento bastante poderosa para você e sua história, além de ter um significado grande para algum acontecimento ou para alguém.",
+		"Esse equipamento se encontra num estado “adormecido” e embora possa fazer parte de lendas, histórias ou talvez uma herança familiar, ele progride conforme seu usuário também o faz.",
+		"Equipamentos criados por essa vantagem possuem sempre o mesmo nível do personagem (portanto, possuem quantidades de slots apropriadas ao nível) e são criados por você.  Por exemplo, o personagem começa nível 1 e com estes equipamentos nível 1 também, mas conforme muda de nível (indo para o nível 2, por exemplo) os equipamentos também evoluem e mudam de nível junto.",
+		"O jogador pode escolher os novos addons para os novos slots assim que mudar de nível junto com seu equipamento, ou se preferir, pode esperar e construir junto do mestre uma pequena história/aventura que justifique a escolha de um addon específico.",
+		"Você pode comprar Equipamento Evolutivo várias vezes, mas ela não se acumula no mesmo equipamento.",
+		"O custo dessa vantagem varia com o tipo do equipamento criado:",
+			"• 1 Ponto: Arma Defensiva;",
+			"• 2 Pontos: Uma Arma de uma mão;",
+			"• 3 Pontos: Duas Armas de uma mão;",
+			"• 3 Pontos: Arma de duas mãos;",
+			"• 4 Pontos: Armadura.",
+		"Você pode pegar essa vantagem várias vezes, mas para equipamentos diferentes. Um equipamento criado por essa vantagem não pode sofrer melhoria (upgrade) conforme explicado no capítulo 10."	
 		  ]
     },
     {
@@ -1868,9 +1925,9 @@ window.vantagensArray = [
             "Você possui equipamentos que fazem parte do seu corpo (você pode fazer uma descrição para encaixar com isso). A vantagem se resume a nunca estar desarmado.",
             "Você pode escolher qualquer quantidade de equipamentos que você tenha na sua ficha no momento de criação dela, podendo ser equipamentos comprados na loja ou equipamentos criados com vantagem. Esses equipamentos passam a fazer parte do corpo de seu personagem e não podem ser desequipados sem desmembrá-lo.",
             "Você pode (e deve) alterar as descrições desses \"equipamentos\" para algo que encaixe com essa vantagem. Um personagem orgânico provavelmente teria armas naturais. Um personagem robô talvez simplesmente tivesse a arma encaixada ali. Fazer upgrades nessas armas durante a história pode ser algo muito traumático para o personagem caso o equipamento seja uma arma natural dele. É recomendável que mestres explorem uma situação assim.",
-            "Exemplo: Cria-se uma arma de duas mãos para Magia com Equipamento de Valor Sentimental e usa-se Equipamento X para transformá-la em uma Antena que atira raios. O custo final das duas vantagens juntas é 2.",
-            "Exemplo 2: Criam-se duas armas para o atributo Arma com Equipamento Lendário e usa-se Equipamento X para transformá-las em duas garras que saem dos punhos. O custo final das duas vantagens juntas é 5.",
-            "Você pode pegar essa vantagem várias vezes, mas para equipamentos diferentes. Veja as “Regras para Equipamento Épico, Lendário, Natural, de Valor Sentimental e X” na página 236 para saber como proceder ao comprar essa vantagem."
+			"Exemplo: Cria-se uma arma de duas mãos para Magia com Equipamento Evolutivo e usa-se Equipamento X para transformá-la em uma Antena que atira raios. O custo final das duas vantagens juntas é 4.",
+			"Exemplo 2: Criam-se duas armas de uma mão para o atributo Arma com Equipamento Evolutivo e usa-se Equipamento X para transformá-las em duas garras que saem dos punhos. O custo final das duas vantagens juntas é 4.",
+            "Você pode pegar essa vantagem várias vezes, mas para equipamentos diferentes."
 			]
     },
     {
@@ -1947,6 +2004,21 @@ window.vantagensArray = [
             "Trocar de forma consome 4 MP e é uma ação grátis que deve ser realizada durante o seu turno."
         ]
     },
+    {
+        "nome": "Fornecedor",
+        "pontos": "1, 2 ou 5",
+        "descricao": [
+            "Você possui um NPC ou organização empregada / contratada que lhe fornece produtos específicos de acordo com a sua demanda.",
+			"Na criação de personagem, escolha somente uma das opções: Herborismo, Mineração, Carpintaria ou Caça - o seu fornecedor te providencia materiais relacionados ao processo de “Coleta de Materiais” (ver capítulo 10) numa quantidade igual ao equivalente de você rolar o teste de coleta e passar nele.",
+			"Os materiais enviados pelo NPC ou  organização só podem ser sempre aqueles que o Mestre cataloga na lista de materiais disponíveis. A explicação narrativa de como o fornecedor conseguiu ou enviou tais materiais para você, fica a critério do mestre ou do próprio jogador para explicar.",
+			"Um maior investimento nessa vantagem significa ter mais pessoas ajudando o personagem, ou uma organização maior. Onde:",
+			"- 1 ponto: Seu fornecedor só possui acesso à uma das profissões de coleta de materiais.",
+			"- 3 pontos: Seu fornecedor possui acesso à duas das profissões de coleta.",
+			"- 5 pontos: Seu fornecedor possui acesso à três profissões de coleta.",
+			"Em termos mecânicos, o personagem só precisa pedir que o fornecedor envie tais materiais e eles eventualmente chegarão para o mesmo. O mestre pode escolher explorar essa quantidade de tempo ou fazer ser instantâneo.",
+			"O material sempre vem numa quantia média, nunca abaixo da média ou excepcionalmente bom (o que faz a variante de quantidade de materiais obtidas por resultados e falhas críticas serem exclusivas das outras formas de coleta que não sejam por essa vantagem)."
+        ]
+    },	
     {
         "nome": "Hardcore",
         "pontos": "0",
@@ -3288,7 +3360,7 @@ window.desvantagensArray = [
     },
     {
         "nome": "Fraqueza Sobrenatural",
-        "pontos": "4",
+        "pontos": "3 ou 5",
         "descricao": [
             "O personagem possui algum tipo de ponto fraco, que causa o dobro de dano ou pode levá-lo à morte instantaneamente. Tal fraqueza deve ser explicitada na história do personagem. Com 3 pontos a fraqueza faz com que o personagem receba o dobro de dano enquanto ela estiver ativa. Com 5 pontos o personagem morre instantaneamente quando a fraqueza ficar ativa por muito tempo."
         ]
@@ -3591,12 +3663,27 @@ window.desvantagensArray = [
         ]
     },
     {
+        "nome": "Palavra-Gatilho",
+        "pontos": "1",
+        "descricao": [
+            "	Sempre que seu personagem ouvir uma palavra ou frase, especificada na criação da ficha, direcionada a ele, seu personagem perde a cabeça ficando extremamente irritado. Suas ações se tornam explosivas e você precisa resolver isso. Geralmente com um soco na boca de quem te xingou."
+        ]
+    },
+    {
         "nome": "Paranóico",
         "pontos": "2",
         "descricao": [
             "O personagem acha que está sendo perseguido e não consegue confiar em ninguém muito profundamente."
         ]
     },
+    {
+        "nome": "Parasita",
+        "pontos": "4",
+        "descricao": [
+            "Algo vive dentro do personagem, mas é algo que ao mesmo tempo que lhe faz mal, também lhe dá a possibilidade de viver. Explique na história do personagem porque tal parasita habita o corpo do personagem e como ele altera o funcionamento biológico do mesmo (Ex: dores pela manhã, dificuldade de ingerir líquidos, voz fraca, etc).",
+			"Escolha também um tipo de alimento ou forma de se alimentar que o parasita precise receber para manter o personagem vivo. Caso isso lhe seja negado por muito tempo, o personagem pode morrer ou se tornar algo muito pior..."
+        ]
+    },	
     {
         "nome": "Passado Negro",
         "pontos": "2",
