@@ -5,6 +5,45 @@
  */
 window.vantagensChangelog = [
 {
+        "version" : [5, 0],
+        "description" : [
+			 "Novidade: Todos os arquétipos agora possuem as chamadas Desvantagens Arquetípicas.",
+			 "Novidade: Todas as vantagens arquetípicas agora possuem custos devido à nova dinâmica envolvendo-as e envolvendo as desvantagens arquetípicas.",
+			 "Nova Raça: Kash'nir - Suas vantagens e desvantagens raciais estão catalogadas.",
+			 "Novos Arquétipos: Aventureiro, Dragoon, Astromante, Dançarino, Maquinista, Acólito da Luz, Duelista e Escriba - Suas vantagens e desvantagens estão catalogadas.",			 
+             "Novas Vantagens gerais: \"Graça Felina\", \"Segunda Raça - Espectro\", \"Aspecto Diferenciado\" e \"Profissional\" .",
+             "Novas Desvantagens gerais: \"Envelhecimento Acelerado\", \"Ímã de Esquisitisses\", \"Desempregado\" \"Sono Pesado\".",			 
+			 "Arquétipo Duelista é o antigo Esgrimista. Maquinista é uma fusão de Engenheiro e Homem de Lata. Acólito da Luz é o antigo mago branco, renomeado.",
+			 "Arquétipo \"Juggernaut\" refeito.  Suas novas vantagens e desvantagens estão catalogadas. O arquétipo agora é renomeado também para \"Abominação\", eliminando uma palavra estrangeira da lista de arquétipos e aproximando ao seu sentido original.",
+			 "Vantagem de Droid \"Mente Cibernética\", refeita.",
+			 "Vantagem de Draconiano \"Herança dos Dragões\", agora concede +4 HP iniciais (antigo: +2).",
+			 "Vantagem de Golem \"Resistência Superior\", agora concede +4 HP iniciais (antigo: +2).",
+			 "Vantagem \"Fornecedor\" foi alterada de acordo com as alterações no sistema de coleta.",
+			 "Vantagem \"Espírito Inabalável\" alterada de acordo com a remoção do sistema de Stamina. Seu custo agora é 3 (antigo: 5).",
+			 "Desvantagem \"Avareza\" teve seu bônus para Mercante Príncipe clarificado.",
+			 "Desvantagem \"Fiel\" teve seus pontos concedidos reduzidos para 2 (antigo: 4).",
+			 "Desvantagem \"Insônia\" alterada de acordo com a remoção do sistema de Stamina.",
+			 "Vantagem de Alquimista - \"Caminho da Alquimia\" agora concede +2 Pontos no emprego de alquimia (antigo: 1).",
+			 "Vantagem de Arauto da Profecia - \"Poder do Cinto\" removida e transformada em uma desvantagem: Vida comum.",
+			 "Vantagem de Bárbaro - \"Implacável\" refeita.",
+			 "Vantagem de Bardo - \"Bard's Song\" renomeada para Cação do Menestrel.",
+			 "Vantagem de Bardo - \"Harmonia Improvisada\" removida. Carisma Natural entra em seu lugar.",
+			 "Vantagem de Druida - \"Como se fosse minha casa\" renomeada apropriadamente para \"Como se fosse a minha casa\".",
+			 "Vantagem de Duelista - \"Duelista\" removida. Novas vantagens: Postura Refinada e Elegância Natural.",
+			 "Vantagem de Guerreiro - \"Lutador Natural\" renomeada para Manobras de Combate e alterada de acordo com a remoção dos EdLs.",
+			 "Vantagem de Ilusionista - \"O Maior Truque\" renomeada para O Grande Truque.",
+			 "Vantagem de Mímico - \"Copycat\" e \"Simulacrum\" clarificam agora sobre os atributos copiados de técnicas.",
+			 "Vantagem de Monge - \"Hamon\" agora restaura seu HP e SP para 50% dos valores (antigo: 100%).",
+			 "Vantagem de Ninja - \"Reiki\" tem seu efeito alterado devido as alterações de Stamina.",
+			 "Vantagem de Pirata - \"Vida de Corsário\" renomeado para Vida Boêmia.",
+			 "Vantagem de Mestre das Runas - \"O Preço do Conhecimento\" torna-se uma desvantagem.",
+			 "Vantagem de Paladino - \"Penitência\" torna-se uma desvantagem.",
+			 "Todas as vantagens que faziam menção à stamina foram alteradas para novos efeitos que fazem mais sentido com as novas regras do sistema.",
+			 "Desvantagem de Inquisidor - \"Humilhação Inconsolável\" movida para Desvantagens de Arquétipo.",
+			 "Desvantagem de Clérigo - \"Religioso\" removida.",
+        ]
+    },
+{
         "version" : [4, 3],
         "description" : [
              "Vantagem 'Carga Extra' agora está listada.",
@@ -28,7 +67,7 @@ window.vantagensChangelog = [
              "Nova vantagem: Perfeito.",
              "Aparência, Deus Grego, Beleza Élfica e Jóia do Oceano alteradas para resolver confusões.",
 			 "\Deus Grego\" agora custa somente 1 ponto e só possui esse nível.",
-			 "Vantagem de Cavaleiro Negro: \"Energia Negativa\" agora custa 12 MP (anterior: 18)",
+			 "Vantagem de Cavaleiro Negro: \"Energia Negativa\" agora custa 12 SP (anterior: 18)",
 			 "Nova vantagem para Mercante Príncipe: Guarda-Costas e Negócios (esta segunda susbistui a antiga \"Influência\")",
 			 "Novo texto em \"Ascendência Elemental\" para ajudar mestres e jogadores em como adquirir novos elementos",
 			 "Vantagem 'Trabalho Duro' renomeada para 'Trabalhador Esforçado' para resolver conflito com a vantagem 'Trabalho Duro' de Alquimista.",
@@ -76,33 +115,37 @@ window.vantagensChangelog = [
 
 window.arquetipos = [
      "",
+     "Abominação",
+	 "Acólito da Luz",
      "Alquimista",
      "Arauto da Profecia",
      "Artilheiro",
      "Assassino",
+	 "Astromante",
+	 "Aventureiro",
      "Bárbaro",
      "Bardo",
      "Caçador",
      "Cavaleiro Negro",
      "Clérigo",
+	 "Dançarino",
+	 "Dragoon",
      "Defensor",
      "Druida",
+	 "Duelista",
+	 "Escriba",
      "Elementalista",
-     "Engenheiro",
-     "Esgrimista",
      "Estrategista",
      "Ferreiro",
      "Gladiador",
      "Guerreiro",
      "Hematologista",
-     "Homem de Lata",
      "Ilusionista",
      "Inquisidor",
      "Invocador Astral",
-     "Juggernaut",
      "Ladrão",
      "Mago",
-     "Mago Branco",
+	 "Maquinista",
      "Mercante Príncipe",
      "Mestre das Runas",
      "Monge",
@@ -135,6 +178,7 @@ window.racas = [
 	"Humano",
 	"Jorn",
 	"Kalkan",
+	"Kash'nir",
 	"Ogrekin",
 	"Orc",
 	"Quellsir",
@@ -175,7 +219,7 @@ window.tiposVant = [
         id : 'desvantagens',
         nome : 'Desvantagens',
         descricao : [
-            'Um personagem pode ter quantas desvantagens quiser, mas apenas as 4 maiores irão conceder pontos. Um personagem não pode ganhar mais do que 10 pontos de vantagens por desvantagens.'
+            'Um personagem pode ter quantas desvantagens quiser, mas apenas as 5 maiores irão conceder pontos. Um personagem não pode ganhar mais do que 12 pontos (15 se for da raça Humana) de vantagens por desvantagens.'
         ]
     }
 ];
@@ -254,7 +298,7 @@ window.vantagensArray = [
         "nome": "Herança dos Dragões",
         "pontos": "2",
         "descricao": [
-            "Uma herança anciã corre nas suas veias e faz com que sua resistência seja levemente superior aos de outras criaturas. Ganhe um Bônus de Vantagem de +2 de HP máximo com isso. Essa vantagem não se acumula com \"Duro de matar\"."
+            "Uma herança anciã corre nas suas veias e faz com que sua resistência seja levemente superior aos de outras criaturas. Ganhe um Bônus de Vantagem de +4 de HP máximo com isso. Essa vantagem não se acumula com \"Duro de matar\"."
         ],
         "requisitos": "Raça Draconiano"
     },
@@ -328,7 +372,7 @@ window.vantagensArray = [
         "nome": "Mente Cibernética",
         "pontos": "1",
         "descricao": [
-            "Por serem compostos por diversos fios, células virtuais e outros aparelhos com alta diversidade tecnológica, os Droids acabam ficando pouco afetados por encantamentos ou feitiços de ação mental, uma vez que a mente deles funciona diferente de um ser vivo. Justamente por isso, o personagem ganha um Bônus de Vantagem de +3 em rolagens quaisquer que envolvam evitar ou resistir à domínio mental ou ataques mentais em geral."
+			"O droid tem uma rede de informações em seu cérebro que lhe permite ter um rápido acesso à conhecimentos gerais ou específicas. Testes de qualquer tipo de conhecimento com dificuldade até 10 possuem sucesso automático para o droid conseguir tal informação."
         ],
         "requisitos": "Raça Droid"
     },
@@ -354,7 +398,7 @@ window.vantagensArray = [
         "nome": "Sono dos Imortais",
         "pontos": "0",
         "descricao": [
-            "Diferentemente de outros seres vivos, um elfo não precisa ter 8 horas de sono para reorganizar sua mente e ter mais disposição física. Ao contrário disso, um elfo pode meditar por apenas 6 horas e estar considerado no estado de \"descanso pleno\", recuperando seus pontos em Stamina e também seu MP. Enquanto meditando, um elfo está consciente do ambiente à sua volta e pode voluntariamente voltar à si em qualquer momento que desejar, diferentemente do sono comum que é um estado alterado de consciência."
+            "Diferentemente de outros seres vivos, um elfo não precisa ter 8 horas de sono para reorganizar sua mente e ter mais disposição física. Ao contrário disso, um elfo pode meditar por apenas 6 horas e estar considerado no estado de \"descanso pleno\", cancelando penalidades em sua Condição e também restaurando seu SP. Enquanto meditando, um elfo está consciente do ambiente à sua volta e pode voluntariamente voltar à si em qualquer momento que desejar, diferentemente do sono comum que é um estado alterado de consciência."
         ],
         "requisitos": "Raça Elfo"
     },
@@ -442,7 +486,7 @@ window.vantagensArray = [
         "nome": "Resistência Superior",
         "pontos": "2",
         "descricao": [
-            "Um Golem é naturalmente mais resistente que outras raças feitas de carne e osso, e por isso ganham um bônus fixo de +2 no HP máximo, representando a dificuldade que é de se derrotar uma criatura dessa raça. Essa vantagem não se acumula com outras de efeitos similares."
+            "Um Golem é naturalmente mais resistente que outras raças feitas de carne e osso, e por isso ganham um bônus fixo de +4 no HP máximo, representando a dificuldade que é de se derrotar uma criatura dessa raça. Essa vantagem não se acumula com outras de efeitos similares."
         ],
         "requisitos": "Raça Golem"
     },
@@ -450,7 +494,7 @@ window.vantagensArray = [
         "nome": "Fisiologia de Golem",
         "pontos": "1",
         "descricao": [
-            "Um Golem não precisa se alimentar nem beber para sobreviver, sua constituição feita de diversos minerais e rochas já lhe dão tudo o que ele precisa para sobreviver de forma auto-suficiente. Um personagem com essa vantagem não perde MP ou Stamina por falta de comida, água ou coisas do tipo."
+            "Um Golem não precisa se alimentar nem beber para sobreviver, sua constituição feita de diversos minerais e rochas já lhe dão tudo o que ele precisa para sobreviver de forma auto-suficiente. Um personagem com essa vantagem não perde SP ou sofre penalidades em sua Condição por falta de comida, água ou coisas do tipo."
         ],
         "requisitos": "Raça Golem"
     },
@@ -534,6 +578,30 @@ window.vantagensArray = [
         ],
         "requisitos": "Raça Kalkan"
     },
+    {
+        "nome": "Sobrevivência do mais apto",
+        "pontos": "0",
+        "descricao": [
+			"A vida no deserto te fez resistente às condições mais severas de sobrevivência. Você consegue passar o dia com somente uma refeição sendo feita no mínimo, não recebendo penalidades por fome. Penalidades de fome só se aplicam a você quando o personagem passar ao menos um dia sem se alimentar, e ainda assim a penalidade não deve ser tão severa quanto seria em seres normais."
+        ],
+        "requisitos": "Raça Kash'nir"
+    },
+    {
+        "nome": "Eu conheço esses cantos",
+        "pontos": "2",
+        "descricao": [
+			"Os Khash'nir são andarilhos natos, e possuem conhecimento mediano sobre a maioria dos tipos de habitat e certas coisas presentes neles. Você ganha um Bônus de Vantagem de +1 em qualquer teste relacionado com natureza, com exceção da coleta de materiais (ver Empregos)."
+        ],
+        "requisitos": "Raça Kash'nir"
+    },
+    {
+        "nome": "Mão de Obra",
+        "pontos": "1",
+        "descricao": [
+			"Sua raça é constantemente recrutada para fazer missões ou cumprir tarefas, o que acaba resultando numa preferência natural para os contratantes escolherem um Kash’nir. Você começa a história com uma missão de complexidade simples ou mediana dada por um NPC ou organização. Ao completá-la, você recebe uma quantidade em dinheiro equivalente a: (Seu nível atual) * 150. Adicionalmente você recebe um extra em moedas de ouro de (Seu nível atual) * 25 toda vez que vender um item para alguém. Sua opinião como mercenário ou mercador é altamente considerada."
+        ],
+        "requisitos": "Raça Kash'nir"
+    },		
     {
         "nome": "Diplomacia Ogrekin",
         "pontos": "0",
@@ -639,10 +707,10 @@ window.vantagensArray = [
         "requisitos": "Raça Zahari"
     },
     {
-        "nome": "Contato Natural",
+        "nome": "Olhos da Natureza",
         "pontos": "1",
         "descricao": [
-            "Estar no meio de animais de diversos tipos, selvagens ou não, é algo natural para os Zaharis e isso na verdade é algo até esperado entre eles. Membros dessa raça com essa vantagem são capazes de se comunicar com animais e entender seus sentimentos ou motivações, mesmo que não seja através de uma comunicação verbal direta. Além disso, animais não atacarão o Zahari a não ser que ele os ataque primeiro. O personagem pode rolar um teste da perícia Natureza e adicionar um Bônus de Vantagem de +2 sempre que esse teste envolver alguma tentativa de lidar com animais selvagens ou domá-los."
+			"Por sua origem mística e natural enraizada nas profundezas da Árvore Mãe, os Zaharis desenvolveram um sentido extra que os permite se comunicar e entender as plantas de um habitat onde se encontra. Assim sendo, o personagem pode rolar um teste com a perícia Natureza e receber um Bônus de Vantagem de +2 afim de comunicar-se com as plantas de um ambiente. As plantas conseguem dizer sobre eventos que viram, sentiram ou souberam que outras plantas no mundo viram/sentiram."
         ],
         "requisitos": "Raça Zahari"
     },
@@ -706,7 +774,7 @@ window.vantagensArray = [
     /* Vantagens de Arquétipo */
     {
         "nome": "Aprimoramento Especial",
-        "pontos": "0",
+        "pontos": "1",
         "descricao": [
             "Você ganha acesso à profissão “Encantador” num valor inicial e automático igual à 2 pontos. Essa profissão permite o aprimoramento de criaturas conjuradas (ver o capítulo 10 para maiores detalhes).",
 			"Durante a criação de personagem, você pode investir pontos de perícia nessa comprada, podendo levá-la até o máximo do nível quatro (4). Níveis subsequentes permitem elevar o nível da profissão até o seis (6) normalmente (ver o capítulo 5 para maiores detalhes)."
@@ -715,7 +783,7 @@ window.vantagensArray = [
     },
     {
         "nome": "Trabalho Duro",
-        "pontos": "0",
+        "pontos": "1",
         "descricao": [
             "Você possui aptidões naturais para trabalhar com Alquimia e componentes químicos, assim, esta vantagem concede um bônus de +2 em testes de criação de itens pelo Emprego: Alquimia."
         ],
@@ -723,32 +791,23 @@ window.vantagensArray = [
     },
     {
         "nome": "Apotecário",
-        "pontos": "0",
+        "pontos": "1",
         "descricao": [
-            "Uma vez por sessão ou dia (o que demorar mais para acontecer) você pode puxar uma poção que possua um efeito narrativo relativamente simples voltado para um propósito único. Essa poção não pode ser usada em combate para fins de aumentar HP, MP ou coisas que o influenciem diretamente. Exemplos: um frasco que faz crescer uma densa vegetação entre o usuário e os inimigos, impossibilitando que eles o alcancem dali, permitindo que o grupo fuja, ou mesmo uma poção que cria um efeito ilusório de fogo intenso, assustando qualquer ameaça que tente se aproximar (sem saberem que é um fogo falso). O mestre pode vetar um efeito se achar que ele não corresponde às regras ou foge dos objetivos dessa vantagem."
+            "Uma vez por sessão ou dia (o que demorar mais para acontecer) você pode puxar uma poção que possua um efeito narrativo relativamente simples voltado para um propósito único. Essa poção não pode ser usada em combate para fins de aumentar HP, SP ou coisas que o influenciem diretamente. Exemplos: um frasco que faz crescer uma densa vegetação entre o usuário e os inimigos, impossibilitando que eles o alcancem dali, permitindo que o grupo fuja, ou mesmo uma poção que cria um efeito ilusório de fogo intenso, assustando qualquer ameaça que tente se aproximar (sem saberem que é um fogo falso). O mestre pode vetar um efeito se achar que ele não corresponde às regras ou foge dos objetivos dessa vantagem."
         ],
         "requisitos": "Arquétipo Alquimista"
     },
     {
         "nome": "Caminho da Alquimia",
-        "pontos": "0",
+        "pontos": "1",
         "descricao": [
-			"A alquimia é o seu trabalho e a sua vida. Seja por experiência ou aptidão, você conhece ao menos os básicos para trabalhar com tal profissão.",
-			"Ganhe a perícia/emprego “Alquimia” num nível inicial igual à 1 de graça. Você também começa com o acessório “Kit do Alquimista” de graça no seu inventário."
+			"A alquimia é o seu trabalho e a sua vida. Seja por experiência ou aptidão, você conhece ao menos os básicos para trabalhar com tal profissão. Ganhe a perícia/profissão “Alquimia” num nível inicial igual à 2 de graça. Você também começa com o acessório “Kit do Alquimista” de graça no seu inventário."
         ],
         "requisitos": "Arquétipo Alquimista"
     },	
     {
-        "nome": "O Poder do Cinto",
-        "pontos": "0",
-        "descricao": [
-            "O Arauto carrega consigo um artefato especial. O Arauto tem todos seus atributos de combate reduzidos em -1 (inclui Ataque e Defesa), para um mínimo de 0.  O jogador pode decidir reduzir seus atributos para 0 sem o artefato, se relevante. Ele deve ativar o seu artefato para poder utilizar seus atributos (como uma ação grátis que pode ser realizada na Fase de Preparação).  O jogador também pode decidir incluir alguns atributos-teste e/ou perícias nessa separação, se quiser. O artefato não precisa ser um cinto, esta é só a definição da vantagem."
-        ],
-        "requisitos": "Arquétipo Arauto da Profecia"
-    },
-    {
         "nome": "Ultimate Life Form",
-        "pontos": "0",
+        "pontos": "1",
         "descricao": [
 			"Em um marco importante da história, você pode ter aprendido o segredo da sua forma final, junto do seu artefato. ",
 			"Crie uma condição (ou peça ao mestre para criar) para que a sua forma final se ative. Seja por uma ativação limitada e especial do seu artefato, uma condição emocional, física ou algo do tipo. Quando ela for obedecida e você ativar sua forma final, todos os seus atributos-teste se elevam para um valor igual à 5 automaticamente. Atributos com valores maiores que isso não são afetados e permanecem no valor original.",
@@ -758,7 +817,7 @@ window.vantagensArray = [
     },
     {
         "nome": "Segredos Antigos",
-        "pontos": "0",
+        "pontos": "1",
         "descricao": [
             "O seu artefato possui muitos segredos místicos que você está apenas começando a despertar. A cada novo nível que você adquirir, você ganha 1 ponto de habilidade a mais do que o normal."
         ],
@@ -766,7 +825,7 @@ window.vantagensArray = [
     },
     {
         "nome": "Andarilho do Mundo",
-        "pontos": "0",
+        "pontos": "1",
         "descricao": [
 			"Seu treinamento te deixou apto a agir com maior precisão, facilidade e sobrevivência em um tipo de terreno. Assim sendo, escolha um terreno que represente o seu treinamento: Neve, Desertos, Pântanos, Montanhas, Planícies, Cavernas, Florestas, Praias ou Urbano. Sempre que estiver no seu estilo de terreno escolhido, você pode declarar ao Mestre que irá tomar um tempo para se familiarizar com ele. Esse tempo pode ser de 5 à 30 minutos.",
  "Dependendo da quantidade de tempo gasta, você ganha os seguintes benefícios (a critério do mestre frente ao tempo usado) enquanto permanecer nesse tipo de terreno:",
@@ -790,7 +849,7 @@ window.vantagensArray = [
     },
     {
         "nome": "Dedos Rápidos",
-        "pontos": "0",
+        "pontos": "1",
         "descricao": [
             "Sempre que você iniciar combate com alguém (você tomou a primeira ação), você não rola os dados de iniciativa: você é o primeiro a agir na rodada e pronto."
         ],
@@ -798,7 +857,7 @@ window.vantagensArray = [
     },
     {
         "nome": "Débito de Sangue",
-        "pontos": "0",
+        "pontos": "1",
         "descricao": [
             "Enquanto existirem pelo menos duas pessoas no mundo, alguém vai querer alguém morto. O assassino sempre sabe como conseguir alvos e pode conseguir um sem a necessidade de testes, contanto que esteja em uma cidade/vilarejo. Um assassino não pode conseguir um alvo novo enquanto não tiver se livrado do último. Se livrar de um alvo dá uma quantia de dinheiro para o assassino apropriado ao seu nível. O nível do assassino também define a dificuldade do trabalho.",
 			"Esse trabalho pode ser executado tanto dentro dos episódios de jogo como uma atividade em tempo livre (ver capítulo 11 do manual)."
@@ -807,7 +866,7 @@ window.vantagensArray = [
     },
     {
         "nome": "Informante Silencioso",
-        "pontos": "0",
+        "pontos": "1",
         "descricao": [
 			"O trabalho de um assassino não é só matar um alvo em plena luz do dia, mas inclui também a coleta de pistas e informações para que o assassinato seja o grand finale, o ápice de tudo.",
 			"Você desenvolveu uma aptidão natural em perceber detalhes e informações sociais das pessoas, principalmente sobre aquilo que te interessa: a vida pessoal delas. Uma vez por sessão ou dia (o que acontecer primeiro), você pode usar uma ação grátis de perguntar privadamente ao Mestre um número de questões bastante pessoais sobre um personagem que você pode ver e ouvir (naquele momento).",
@@ -820,44 +879,74 @@ window.vantagensArray = [
         "requisitos": "Arquétipo Assassino"
     },
     {
-        "nome": "Implacável",
+        "nome": "Deck Cósmico",
+        "pontos": "4",
+        "descricao": [
+			"O personagem utiliza do Deck Cósmico de Tarô para pautar suas ações e traçar as decisões do seu destino. Este é um deck que ele carrega consigo sempre que possível. Antes de executar um Golpe Básico, Habilidade Ofensiva, Habilidade Especial ou Passiva, escolha um alvo (você pode ser alvo também), role 1d10 e cheque qual carta foi retirada do deck para entrar em efeito:",
+			"• 1 - O Tolo: Nada ocorre.",
+			"• 2 - O Imperador: Reduz o próximo dano recebido em 1 ponto antes de passar pelas RDs do alvo. Dura até o ínicio do próximo turno do usuário ou até ser consumida.",
+			"• 3 - O Mago: Aumenta a iniciativa do alvo em +2. Ocorre uma vez por combate, um alvo que receber este efeito na segunda vez tem o bônus mudado para +1.",
+			"• 4 - O Papa: Restaura +2 SP instantaneamente do alvo.",
+			"• 5 - O Enforcado: Restaura +1 HP instantaneamente do alvo.",
+			"• 6 - A Roda da Vida: Aumenta o dano do próximo golpe em +1. Dura até o ínicio do próximo turno do usuário ou até ser consumida.",
+			"• 7 - A Morte: O alvo escolhido perde 2 HP ignorando as RDs e qualquer outra proteção.",
+			"• 8 - A Força: O alvo escolhido causa 1 ponto de dano a menos no seu próximo golpe. Dura até o ínicio do próximo turno do usuário ou até ser consumida.",
+			"• 9 - O Sol: O alvo escolhido perde 4 SP ignorando qualquer proteção.",
+			"• 10 - O Mundo: O alvo escolhido recebe inferioridade na próxima rolagem que fizer. Dura até o ínicio do próximo turno do usuário ou até ser consumida.",
+			"Este arquétipo pode comprar essa vantagem por 2 pontos. Todos os bônus descritos são Bônus de Arquétipo."
+        ],
+        "requisitos": "Arquétipo Astromante"
+    },	
+    {
+        "nome": "Aprendizado por Aventuras",
         "pontos": "0",
         "descricao": [
-			"Caso você receba um dano que te jogue pra 0 de HP imediatamente enquanto estiver com a vida cheia, ou com o seu valor na metade, você entra num estado corporal e espiritual que transcendem a normalidade. Assim, caso seja reduzido para 0 de HP ou menos (a não ser que os danos te levem para -10 de HP imediatamente), você automaticamente passa nos dois primeiros testes de morte (seja de Força de Vontade ou Constituição). Esse efeito só ocorre uma vez por sessão ou dia, o que acontecer primeiro."
+			"Durante suas aventuras, você aprendeu coisas diferentes. Você pode escolher uma vantagem de algum outro arquétipo. Você ainda paga o custo da vantagem escolhida. Aprendizado por Aventuras só pode ser comprada uma vez."
+        ],
+        "requisitos": "Arquétipo Aventureiro"
+    },	
+    {
+        "nome": "Implacável",
+        "pontos": "1",
+        "descricao": [
+			"Uma vez por dia ou episódio (o que demorar mais para acontecer) o Bárbaro pode utilizar da força dos seus músculos de explosão e selvageria interna para vencer um desafio. A vantagem reduz a dificuldade de um teste de perícia relacionado aos atributos Força e Constituição sendo executado, em uma categoria (ver o Grimório de Especialidades para entender melhor)."
         ],
         "requisitos": "Arquétipo Bárbaro"
     },
     {
         "nome": "Fúria Renovada",
-        "pontos": "0",
+        "pontos": "1",
         "descricao": [
             "Uma vez por dia ou episódio (o que demorar mais para acontecer) você pode entrar num estado de fúria mediante à uma situação tensa ou que necessite de tal mobilização psíquica. Enquanto neste estado, você ignora qualquer dificuldade de terreno para se mover, não ganhando penalidades nisso. Adicionalmente, você também pode se mover com o dobro de velocidade normal, para cenas narrativas isso significa que você é quase um perseguidor implacável. Durante esse tempo você também não pode sofrer efeitos de dominação mental ou alteração de emoções, muito menos ser pego de surpresa em combate (portanto, se um combate iniciar e você estiver em modo de fúria previamente, você age primeiro que todos independente dos resultados). A fúria dura 1d4 rodadas ou 5 minutos."
         ],
         "requisitos": "Arquétipo Bárbaro"
     },
     {
-        "nome": "Harmonia Improvisada",
-        "pontos": "0",
+        "nome": "Carisma Natural",
+        "pontos": "1",
         "descricao": [
-            "Você começa a tocar uma música improvisada, a cantar algo ou mesmo a traçar uma performance na hora (caso seja uma música tocada, ela pode ter uma breve letra para acompanhar a canção, mas não precisa ser nenhuma obra de arte) e imediatamente todos os ouvintes do local começam a prestar atenção em você, num raio de até 10 metros. Os ouvintes suspendem todas as suas atividades atuais e passam a observá-lo até que sua canção acabe ou até que o efeito vá lentamente se dissipando. Isso não funciona em combate."
+			"Bardos possuem um carisma natural para lidar com o público, e isso se reflete na relação pessoal com cada membro de sua platéia. Assim, toda vez que você for completamente franco e honesto com alguém, você pode fazer uma uma pergunta para essa pessoa e ela só pode responder com a verdade (de acordo com o que ela sabe). Em contrapartida, essa mesma pessoa pode fazer uma pergunta honesta em seguida e você é obrigado também a responder somente com a verdade. Exemplos de perguntas:",
+			"• O que você quer que eu faça?",
+			"• Qual é o seu maior desejo?",
+			"• O quê você está sentindo agora?",
+			"O que o personagem vai fazer com essas informações, é de critério dele. O mestre pode negar responder perguntas que seriam inadequadas ou que favoreçam o metajogo intenso (ver o Grimório da Realidade para saber a definição de metajogo), como por exemplo: \"Diga-me quem está por trás da corrupção dessa cidade\". Esse tipo de pergunta até pode ser respondida, mas talvez de uma forma mais enigmática ou que instigue o jogador e seu personagem a irem atrás de maiores detalhes... Por exemplo, a pessoa em questão poderia não saber responder com toda certeza, mas sim falar o que ela sabe até então (o que não necessariamente significa que é uma mentira, mas sim que é a verdade dessa pessoa)."
         ],
         "requisitos": "Arquétipo Bardo"
     },
     {
-        "nome": "Bard's Song",
-        "pontos": "0",
+        "nome": "Canção do Menestrel",
+        "pontos": "1",
         "descricao": [
-			"Você começa a tocar uma música improvisada, a cantar algo ou mesmo a traçar uma performance na hora (caso seja uma música tocada, ela pode ter uma breve letra para acompanhar a canção mas não precisa ser nenhuma obra de arte) e imediatamente direcionando-a para um alvo da sua escolha.",
-			"Esse alvo precisa ser capaz de ouvir ou ver a sua performance para então ganhar um dado de harmonia. O dado de harmonia é 1d4 extra que pode ser rolado e somado como bônus num teste de Perícia ou de Atributo-Teste. O dado de harmonia fica ativo por 1 rodada ou 10 minutos num personagem e caso não seja usado, é perdido.",
-			"O usuário pode decidir usar o dado depois que a rolagem de uma perícia ou atributo-teste for feita, mas nunca depois que o Mestre dizer a dificuldade do teste ou o que aconteceu. Depois de rolado, o dado de harmonia é perdido.",
-			"Um alvo só pode ter um dado de harmonia ativo por vez. O bardo pode conceder uma quantidade de dados de harmonia igual ao seu nível atual, mas nunca mais de um dado de harmonia por vez pra um mesmo alvo.",
-			"Essa performance pode atrapalhar em certas situações e narrativamente ser inadequada ou ter outras complicações (chamar a atenção, por exemplo). Exemplo de performance:“Minta, minta para o rei~! Faça ele de bobo e nos salve da lei~!”"
+			"Você começa a tocar uma música improvisada, a cantar algo ou mesmo a traçar uma performance na hora (caso seja uma música tocada, ela pode ter uma breve letra para acompanhar a canção, mas não precisa ser nenhuma obra de arte) e imediatamente direcionando-a para um alvo da sua escolha.",
+			"Esse alvo precisa ser capaz de ouvir ou ver a sua performance para então ganhar um dado de harmonia. O dado de harmonia é 1d4 extra que pode ser rolado e somado como bônus num teste de Perícia ou de Atributo-Teste. ",
+			"O dado de harmonia fica ativo por 1 rodada ou 10 minutos num personagem e caso não seja usado, é perdido. O usuário pode decidir usar o dado depois que a rolagem de uma perícia ou atributo-teste for feita, mas nunca depois que o Mestre dizer a dificuldade do teste ou o que aconteceu. Depois de rolado, o dado de harmonia é perdido. Um alvo só pode ter um dado de harmonia ativo por vez.", 
+			"O bardo pode conceder uma quantidade de dados de harmonia igual ao seu nível atual, mas nunca mais de um dado de harmonia por vez pra um mesmo alvo. Essa performance pode atrapalhar em certas situações e narrativamente ser inadequada ou ter outras complicações cchamar a atenção, por exemplo). Exemplo de performance:“Minta, minta para o rei~! Faça ele de bobo e nos salve da lei~!”"
         ],
         "requisitos": "Arquétipo Bardo"
     },
     {
         "nome": "Líder do Bando",
-        "pontos": "0",
+        "pontos": "1",
         "descricao": [
             "Orgulho é o que separa o amador do profissional, e um caçador é movido pela sua vontade de superar qualquer obstáculo. Sempre que um caçador estiver realizando testes de uma forma competitiva com outro personagem ou criatura, ele recebe +1 Bônus de Arquétipo em testes de atributos-teste e +2 Bônus de Arquétipo em testes de perícia com atributo-teste. Estar realizando exatamente o mesmo teste que o resto do grupo e ao mesmo tempo conta como  atividade competitiva."
         ],
@@ -865,7 +954,7 @@ window.vantagensArray = [
     },
     {
         "nome": "Combatente Alfa",
-        "pontos": "0",
+        "pontos": "1",
         "descricao": [
             "O caçador é um mestre de armas e está sempre pronto para um combate com sua presa. Todas as armas passam a funcionar para seu maior atributo de dano, independente de qual arma seja e qual o atributo de dano do caçador seja, ele faz funcionar. O caçador também pode utilizar qualquer arma improvisada como uma arma de nível 0 para seu atributo de dano principal."
         ],
@@ -881,11 +970,11 @@ window.vantagensArray = [
     },
     {
         "nome": "Energia Negativa",
-        "pontos": "0",
+        "pontos": "1",
         "descricao": [
 			"A energia negativa é o principal recurso que Cavaleiros Negros dominam. Similarmente aos Necromantes, os Cavaleiros Negros dão um passo em frente aos vários tipos de energias caóticas da realidade, mas optam por dominar o que eles chamam de Energia Negativa, ao invés da Energia Caótica dos necromantes.",
             "A energia negativa influencia principalmente nas emoções, estado corporal e mente de um alvo, permitindo que os cavaleiros manipulem essas pessoas ou enfraqueçam-a da forma desejada.",
-            "Com essa vantagem, você pode converter 12 pontos de MP em 2 pontos de energia negativa. Um personagem só pode ter 4 pontos máximos de energia negativa por vez.",
+            "Com essa vantagem, você pode converter 12 pontos de SP em 2 pontos de energia negativa. Um personagem só pode ter 4 pontos máximos de energia negativa por vez.",
             "Essa energia não-usada se dissipa após 1 rodada, 10 minutos ou um curto tempo sem uso. A energia negativa pode ser usada da seguinte forma:",
             "• Ouvir os pensamentos de um único alvo por 1 minuto (Custa 2 pontos);",
             "• Causar inferioridade numa rolagem de Atributo-Teste de um alvo (Custa 2 pontos);",
@@ -898,7 +987,7 @@ window.vantagensArray = [
     },
     {
         "nome": "Aura Profana",
-        "pontos": "0",
+        "pontos": "1",
         "descricao": [
 			"Um grande fluxo de energia negativa se concentra na sua existência. Justamente por isso, outras formas de vida acabam sendo afetadas por consequência imediata. Você pode ativar a sua Aura Profana uma vez por episódio ou dia, o que acontecer primeiro.",
             "Ao ativar, você distorce sutilmente as emoções dos alvos próximos (incluindo seus aliados), fazendo com que eles ganhem inferioridade (veja o capítulo 5 para maiores detalhes) em testes de origem social até que a aura se dissipe.",
@@ -908,7 +997,7 @@ window.vantagensArray = [
     },
     {
         "nome": "Símbolos Sagrados",
-        "pontos": "0",
+        "pontos": "2",
         "descricao": [
 			"Toda divindade, crença ou conceito geralmente é acompanhada por uma espécie de símbolo que o define ou o representa conceitualmente. Assim sendo, qualquer símbolo ou objeto feito em honra ao deus escolhido na criação do personagem se torna um símbolo sagrado.",
             "Um Clérigo pode ter um símbolo sagrado de graça nos seus equipamentos iniciais, e pode usá-lo para tentar clamar por uma intervenção divina, algo que a sua crença possa lhe ajudar ou guiar seu caminho. O clérigo pode rolar 1d100 enquanto gasta uma rodada ou 5 minutos evocando e se concentrando para pedir ajuda, onde:",
@@ -927,27 +1016,44 @@ window.vantagensArray = [
         "requisitos": "Arquétipo Clérigo"
     },
     {
-        "nome": "Religioso",
-        "pontos": "0",
+        "nome": "Ritmo da Noite",
+        "pontos": "1",
         "descricao": [
-            "Você deve seguir as regras da religião apropriada ao seu personagem. Você não ganha pontos por isso e não pode tomar a desvantagem religioso da forma normal. Essa desvantagem não é tão pesada quanto a normal, então você pode ir até o ponto em que estiver confortável ao definir as regras."
-        ],
-        "requisitos": "Arquétipo Clérigo"
+			"O personagem é capaz de se beneficiar da dança como uma profissão propriamente dita. Enquanto estiver num vilarejo, cidade, metrópole ou maior com algum estabelecimento similar à uma taverna, boate ou algo do tipo, o personagem pode oferecer seus serviços como um performista. A presença de um Dançarino é quase sempre bem-vista por donos de estabelecimentos devido ao fato de ser uma atração simples e animadora. O personagem que conseguir ser empregado dessa forma, ganha (Nível do personagem) x100 Moedas de Ouro como salário."
+			],
+        "requisitos": "Arquétipo Dançarino"
     },
+    {
+        "nome": "Sedutor Natural",
+        "pontos": "1",
+        "descricao": [
+			"Dançarinos possuem um ritmo corporal e movimentos sensuais mais acentuados que pessoas sem treinamento. O personagem com essa vantagem ganha +2 Bônus de Arquétipo em testes que envolvam algum tipo de Sedução ou teste social com viés sedutor."
+			],
+        "requisitos": "Arquétipo Dançarino"
+    },
+    {
+        "nome": "Levantar a Moral",
+        "pontos": "1",
+        "descricao": [
+			"Em um grupo que o Dançarino esteja presente, levantar a moral de seus companheiros é importante para que ele ou ela não sejam afetados pela negatividade e percam sua elegância e paz de mente necessária para executar suas funções.",
+			"O personagem com essa vantagem, sempre que tentar animar ou levantar a moral de um companheiro de uma forma narrativa boa o suficiente (para o Mestre), concede Superioridade em testes de um atributo-teste específico até o fim do dia. Apenas um aliado pode ter sua moral levantada diariamente através deste efeito."
+		],
+        "requisitos": "Arquétipo Dançarino"
+    },		
     {
         "nome": "Vigia Incansável",
         "pontos": "0",
         "descricao": [
             "Você tem uma facilidade além do normal em identificar tensões no ar ou mudanças no ambiente que possam ser perigosas para você e seus aliados. Além disso, você é treinado para não deixar que o mal aconteça contra aqueles que protege. Dessa forma, se o Defensor montar um turno de guarda noturna, diurna ou o que for enquanto seus aliados dormem ou descansam, o grupo não pode ser emboscado e as criaturas na espreita ficam alerta da presença protetora do Defensor.",
             "Criaturas que ainda assim resolvam atacar ou ficar na espreita não podem iniciar um combate surpresa contra o Defensor e seus aliados protegidos, pois ele sempre os avisará (se plausível) da ameaça.",
-            "Aliados protegidos não sofrem penalidades de perda ou má recuperação de Stamina quando tratando-se de um sono resguardado. Se o Defensor escolher usar essa vantagem, ele ficará relativamente cansado no dia seguinte quando seus aliados acordarem, mas não muito.",
-            "Escolha um: perder 1 ponto de Stamina atual ou sofrer inferioridade (ver capítulo 5) em todas as rolagens de perícias e atributos-teste por conta do cansaço acumulado."
-        ],
+            "Aliados protegidos não sofrem penalidades de perda ou má recuperação de SP quando tratando-se de um sono resguardado. Se o Defensor escolher usar essa vantagem, ele ficará relativamente cansado no dia seguinte quando seus aliados acordarem, mas não muito.",
+			"Escolha um: perder 8 SPs que não podem ser recuperados ate o próximo descanso ou sofrer inferioridade (ver Grimório de Especialidades) em todas as rolagens de perícias e atributos-teste por conta do cansaço acumulado."
+			],
         "requisitos": "Arquétipo Defensor"
     },
     {
         "nome": "Patrono",
-        "pontos": "0",
+        "pontos": "1",
         "descricao": [
             "Uma grande organização, empresa, governo ou NPC poderoso ajuda você. Dentro de certos limites um Patrono pode fornecer transporte, equipamento e informação para você. Um Patrono também pode ajudar e enviar reforços quando você mais precisar. Ter um Patrono também significa que você precisa ser leal e seguir ordens. Muitas vezes vai precisar cumprir missões especiais para o seu Patrono.",
             "Essa vantagem é opcional."
@@ -956,7 +1062,7 @@ window.vantagensArray = [
     },
     {
         "nome": "Vanguarda",
-        "pontos": "0",
+        "pontos": "1",
         "descricao": [
             "Você pode não ser o melhor protetor de todos e pode nem sempre estar em todos os lugares, mas fará de tudo para proteger seus aliados mais estimados.",
             "Caso esteja na frente do grupo durante uma exploração, movimentação ou cena, você pode agir como uma força de aviso e alerta para o grupo, permitindo que eles ganhem superioridade (ver capítulo 5) na primeira rolagem executada a partir de então. Você não ganha esse bônus. Esse bônus só acontece novamente depois de um certo tempo (a critério do mestre)."
@@ -964,12 +1070,36 @@ window.vantagensArray = [
         "requisitos": "Arquétipo Defensor"
     },
     {
-        "nome": "Como se fosse minha casa",
+        "nome": "Perfuração Vorpal",
+        "pontos": "1",
+        "descricao": [
+			"De todos os tipos de dano e forma de destruição, o Dragoon é um especialista em perfurar coisas possíveis e impossíveis. Uma vez por episódio o personagem pode executar uma poderosa manobra envolvendo a sua arma de haste que perfura qualquer coisa em uma distância de até 10 metros da posição inicial. O personagem ganha um Bônus de Arquétipo igual à +4 em testes que envolvam perfurar ou penetrar algo."
+        ],
+        "requisitos": "Arquétipo Dragoon"
+    },
+    {
+        "nome": "Maestria em Armas de Haste",
+        "pontos": "1",
+        "descricao": [
+			"O personagem viveu treinando com armas de haste de todos os tipos, sejam elas alabardas, lanças, tridentes, glaives ou coisas do tipo. Enquanto equipado com armas do tipo, o personagem ganha automaticamente +1 Bônus de Item de Prioridade em seus golpes usando a arma."
+        ],
+        "requisitos": "Arquétipo Dragoon"
+    },
+    {
+        "nome": "Maestria em Armas de Haste",
+        "pontos": "1",
+        "descricao": [
+			"O personagem viveu treinando com armas de haste de todos os tipos, sejam elas alabardas, lanças, tridentes, glaives ou coisas do tipo. Enquanto equipado com armas do tipo, o personagem ganha automaticamente +1 Bônus de Item de Prioridade em seus golpes usando a arma."
+        ],
+        "requisitos": "Arquétipo Dragoon"
+    },		
+    {
+        "nome": "Vôo do Dragoon",
         "pontos": "0",
         "descricao": [
-            "Qualquer teste para busca de alimentos em uma área selvagem que fosse exigir um teste possível de até dificuldade média (15) passa a ser sucesso automático, você conhece a natureza como a palma da sua mão. O mesmo vale para testes para não se perder ou encontrar alguém que passou por ali."
+			"O treinamento de um Dragoon não envolve somente a parte ofensiva, mas também manobras e táticas evasivas que podem ser usadas para ganhar vantagem em certas situações. Enquanto equipado com qualquer tipo de arma de haste o personagem pode executar um poderoso salto apoiado em sua arma, sendo capaz de ir em até 8 metros acima do chão em distância. Manobras com a perícia Acrobacia ou Atletismo que envolvam saltar, são sucessos automáticos em dificuldades até 8, maiores que isso, o personagem requer testes, mas ganha um Bônus de Arquétipo igual à +1."
         ],
-        "requisitos": "Arquétipo Druida"
+        "requisitos": "Arquétipo Dragoon"
     },
     {
         "nome": "O filho pródigo retorna",
@@ -982,7 +1112,7 @@ window.vantagensArray = [
     },
     {
         "nome": "Metamorfose",
-        "pontos": "0",
+        "pontos": "1",
         "descricao": [
             "Você pode se transformar em qualquer animal natural do seu local de origem como uma ação grátis. Você pode se transformar até duas vezes por dia ou sessão (o que acontecer primeiro). O tipo de criatura que você irá assumir a forma depende do seu nível atual, onde:",
             "• Nível 1 e 2: Não são permitidas criaturas que voem ou nadem (como recurso primário);",
@@ -1005,17 +1135,17 @@ window.vantagensArray = [
     },
     {
         "nome": "Ascendência Elemental",
-        "pontos": "0",
+        "pontos": "1",
         "descricao": [
             "Ao criar o seu personagem, escolha um elemento. Você só poderá usar esse elemento até obter outras formas de manipular os que não detêm controle. Você pode usar esse elemento para qualquer coisa que desejar em questões interpretativas, como formar um cantil de gelo, um escudo temporário de pedra (para fins que não sejam de combate), uma corda de trovões para segurá-lo num penhasco ou mesmo um furacão de ar para prevenir que você e seus aliados recebam dano por queda numa situação especial.",
-			"Esse efeito não pode ser usado em combate para causar dano direto, prevenir dano ou coisas do tipo. Esta vantagem só pode ser usada em, combate caso contribua com situações exclusivamente narrativas. O custo de MP ao usar essa vantagem fica a critério do Mestre.",
+			"Esse efeito não pode ser usado em combate para causar dano direto, prevenir dano ou coisas do tipo. Esta vantagem só pode ser usada em, combate caso contribua com situações exclusivamente narrativas. O custo de SP ao usar essa vantagem fica a critério do Mestre.",
 			"A forma de adquirir novos elementos dependerá de um acordo entre Mestre e Jogador, seja por missões dentro do jogo, desafios narrativos ou crescimento do personagem conforme os níveis passarem."
        ],
         "requisitos": "Arquétipo Elementalista"
     },
     {
         "nome": "Espírito Elemental",
-        "pontos": "0",
+        "pontos": "1",
         "descricao": [
             "Esta vantagem usa o elemento escolhido pela vantagem anterior durante a criação do personagem (Fogo, Eletricidade, Ar, Gelo e Água, Bio ou Terra). Você pode ter um objeto que é sua posse inquestionável encantado para não poder ser utilizado por outras pessoas. Você pode definir as especificidades desse encantamento, mas como exemplos: uma espada encantada por água pode se desfazer e passar pelas mãos dos outros quando tentarem a segurar. Uma espada encantada por terra pode aumentar o próprio peso em várias toneladas. O fato é que se alguém que não for você tentar usar o item encantado, não vai poder.",
             "Os efeitos desse item devem ser mais narrativos do que qualquer outra coisa. Entretanto, caso o jogador queira unir esse artefato com alguma vantagem que permita a criação de um item, como \"Equipamento Evolutivo\" por exemplo, fica a seu critério."
@@ -1023,44 +1153,33 @@ window.vantagensArray = [
         "requisitos": "Arquétipo Elementalista"
     },
     {
-        "nome": "Inventor",
-        "pontos": "0",
-        "descricao": [
-            "Você pode criar uma invenção de tamanho pequeno / médio com  um único propósito objetivo e bem definido para justificar sua existência. Essa  invenção dura 1d4 horas ao seu lado e eventualmente para de funcionar, perdendo  seu funcionamento. A invenção não pode ser usada em combate e para  fins de testes sempre utilizam o atributo Inteligência, no valor sendo  igual ao do engenheiro que a criou. Sua resistência é baixa e qualquer  golpe simples a destrói facilmente. A invenção pode ter diversas funções  simples, como: iluminar uma área enquanto se move, funcionar como  um detector de metais, ser um sonar, servir café, aspirar pó, suportar  peso, etc. O engenheiro sempre tem pequenas peças desimportantes  em seus bolsos/mochila para criar uma invenção simples do tipo.",
-            "O personagem pode fazer duas invenções pequenas e  simples por dia ou episódio (o que demorar mais para acontecer),  entretanto, elas não podem funcionar juntas ou serem criadas ao  mesmo tempo.",
-            "O personagem pode sacrificar as duas invenções  e fazer uma invenção média no lugar, somente uma vez por dia ou episódio (o que demorar mais para acontecer). Uma invenção  média pode ter até duas funções que ficam ativas ao mesmo tempo e ela possui uma resistência maior, equivalendo à  5 pontos de HP e 1 RD geral, mas não pode ser usada em  combate como um integrante extra ou mesmo causar dano. Criar uma invenção leva certo tempo dependendo da função  dela e se é uma invenção simples ou média. Invenções médias levam mais tempo que as pequenas, e a quantia de tempo é estipulada pelo mestre, mas sempre deve ser superior à 20 minutos (ou 1 rodada dentro do jogo)."
-        ],
-        "requisitos": "Arquétipo Engenheiro"
-    },
-    {
-        "nome": "Caminho da Engenharia",
-        "pontos": "0",
-        "descricao": [
-			"A engenharia é o seu trabalho e a sua vida. Seja por experiência ou aptidão, você conhece ao menos os básicos para trabalhar com tal profissão.",
-			"Ganhe a perícia/emprego “Engenharia” num nível inicial igual à 1 de graça. Você também começa com o acessório “Kit do Engenheiro” de graça no seu inventário."
-        ],
-        "requisitos": "Arquétipo Engenheiro"
-    },		
-    {
         "nome": "Reação Improvisada",
         "pontos": "0",
         "descricao": [
             "Você quase nunca é pego de surpresa devido aos seus reflexos treinados. Quando alguém ou alguma criatura tentar te pegar ou te atingir de alguma forma, você ganha superioridade (veja o capítulo 5) na rolagem em questão.",
             "Adicionalmente, você também tem superioridade em testes com o atributo teste Agilidade sempre que envolver coisas como: reação ou reflexos."
         ],
-        "requisitos": "Arquétipo Esgrimista"
+        "requisitos": "Arquétipo Duelista"
     },
     {
-        "nome": "Duelista",
-        "pontos": "0",
+        "nome": "Postura Refinada",
+        "pontos": "1",
         "descricao": [
-            "Uma vez por sessão ou dia (o que demorar mais para acontecer) você pode desafiar um alvo específico para um duelo 1x1 onde ninguém mais poderá intervir. Esse duelo automaticamente passa de um combate clássico para um combate cinemático especial (ver regras e informações de C.E.C. no manual básico). Caso você ganhe o duelo, você recebe uma quantia bônus de experiência - a quantidade nesse bônus é critério do mestre."
+			"Uma vez por episódio o personagem pode adicionar metade do seu valor de Carisma como bônus em um teste com as perícias Atletismo, Acrobacia, Prestidigitação ou Furtividade. O jogador deve fazer uma descrição detalhando como a beleza do personagem ou a finesse de movimentos do mesmo permitiu que tal feito ocorresse."
         ],
-        "requisitos": "Arquétipo Esgrimista"
+        "requisitos": "Arquétipo Duelista"
     },
+    {
+        "nome": "Elegância Natural",
+        "pontos": "1",
+        "descricao": [
+			"A postura de batalha e o seu treinamento como um Duelista o fazem mais elegante que a maioria dos guerreiros e bárbaros brutos. Esse e um traço que é facilmente reconhecido principalmente pela nobreza local, que tende a te dar mais crédito do que ao resto do seu grupo, talvez. O personagem com essa vantagem possui superioridade em testes com as perícias Diplomacia e Blefe sempre que passar num teste de Carisma, antes da rolagem da perícia em questão."
+        ],
+        "requisitos": "Arquétipo Duelista"
+    },	
     {
         "nome": "O plano do estrategista",
-        "pontos": "0",
+        "pontos": "1",
         "descricao": [
             "O estrategista sabe muito bem o que faz e suas ordens são exatamente o que precisava ser feito. Sempre que personagens forem realizar passos de um plano que o estrategista definiu, eles recebem +1 em qualquer teste de Atributo-teste ou perícia."
         ],
@@ -1068,7 +1187,7 @@ window.vantagensArray = [
     },
     {
         "nome": "Ordens Superiores",
-        "pontos": "0",
+        "pontos": "1",
         "descricao": [
             "A presença física do estrategista não é necessária. Contanto que o estrategista tenha como saber o que está acontecendo e passar seus comandos, o estrategista pode participar de um combate. Dessa maneira, o estrategista não pode ser alvo de nenhum efeito e não pode realizar nenhuma ação que fosse exigir sua presença no local, mas pode continuar participando do combate como suporte."
         ],
@@ -1084,7 +1203,7 @@ window.vantagensArray = [
     },
     {
         "nome": "Trabalhador",
-        "pontos": "0",
+        "pontos": "1",
         "descricao": [
             "Semanalmente o seu personagem pode dar o melhor de si para conseguir os melhores resultados para seu próprio trabalho. Em termos de jogo isso significa que toda vez que você fosse criar itens através do sistema de empregos (sistema opcional) você pode usar um \"efeito especial\" que permite ter um resultado otimizado e usar menos materiais que o normal. Esse efeito pode ser usado 4 vezes por semana e só vale para materiais do tipo: Madeira, Gemas e Minerais. Usar um efeito significa reduzir a quantia de materiais usados pela metade do que seriam usados normalmente."
         ],
@@ -1092,7 +1211,7 @@ window.vantagensArray = [
     },
     {
         "nome": "A arte da criação",
-        "pontos": "0",
+        "pontos": "1",
         "descricao": [
             "Seus sentidos foram treinados além do normal quando o assunto é uma peça forjada seja por uma máquina ou a mão. Com isso, você ganha bônus de +4 em qualquer teste que envolver o reconhecimento de falsificações, origens de um objeto, saber sua função real ou possíveis habilidades escondidas e até mesmo a história do objeto (completa ou não, a critério do mestre)."
         ],
@@ -1109,7 +1228,7 @@ window.vantagensArray = [
     },		
     {
         "nome": "Reputação",
-        "pontos": "0",
+        "pontos": "1",
         "descricao": [
             "A vida de um gladiador é lutar, seja por algum ideal ou meramente por esporte e para provar-se forte. Com isso, a cada nível que o Gladiador ganhar, ele aumenta sua reputação base em +1. O Mestre pode dar pontos de reputação conforme desejar para esse personagem, como por exemplo, boa interpretação, não fugir de lutas, vencer lutas difíceis, etc. Um gladiador perde 1 ponto de reputação também quando o Mestre achar justo, como em derrotas em lutas importantes (ou qualquer luta), agir fora do personagem ou simplesmente fazer algo que afete sua reputação negativamente.",
             "Para cada ponto em sua reputação, o Gladiador se sente mais motivado, querido e capaz de fazer qualquer coisa, assim, ele reduz a dificuldade de testes de perícias e/ou atributos-teste num valor igual a metadte da reputação atual dele (arredondado para cima). Ter reputação não significa só ser conhecido pra um Gladiador, mas sim empenhar-se mais e treinar para corresponder as expectativas das histórias e canções sobre si. Quanto menor a reputação, menos motivado e concentrado um Gladiador está.",
@@ -1120,23 +1239,23 @@ window.vantagensArray = [
     },
     {
         "nome": "Mestre da Arena",
-        "pontos": "0",
+        "pontos": "1",
         "descricao": [
             "Você nunca está desprevenido num combate ou situação que exija uma ação drástica, você pode ir contra tudo e todos usando qualquer coisa ou qualquer tipo de arma. Em termos práticos, isso permite que o personagem ache / crie uma rápida arma simples e rústica para atender suas necessidades. A arma é sempre de nível 0 e usa o atributo apropriado / que mais fizer sentido."
         ],
         "requisitos": "Arquétipo Gladiador"
     },
     {
-        "nome": "Lutador Natural",
-        "pontos": "0",
+        "nome": "Manobras de Combate",
+        "pontos": "1",
         "descricao": [
-			"Você luta da forma que pode, como pode, com quem pode e usando do que sabe. Um guerreiro é um lutador experiente que não precisa se ater em empregar só um tipo de tática ou uma arma, ele usará tudo ao seu dispor para vencer. O Guerreiro com essa vantagem começa com dois estilos de luta ao invés de um, em seu primeiro nível."
+			"Você luta da forma que pode, como pode, com quem pode e usando do que sabe. Um guerreiro é um lutador experiente que não precisa se ater em empregar só um tipo de tática ou uma arma, ele usará tudo ao seu dispor para vencer. O Guerreiro com essa vantagem tem Superioridade na sua primeira rolagem dentro de combate."
         ],
         "requisitos": "Arquétipo Guerreiro"
     },
     {
         "nome": "A Jornada do Herói",
-        "pontos": "0",
+        "pontos": "1",
         "descricao": [
             "Todo guerreiro tem um objetivo e morrer cedo não faz parte dos planos dele. Uma vez por sessão ou dia (o que acontecer primeiro), caso o Guerreiro caia para 30% do seu HP total, ele evoca todo o seu ser com o máximo de força de vontade que conseguir, recebendo superioridade (veja o capítulo 5 para maiores detalhes) nos dois próximos testes que fizer, seja em combate ou não.",
             "Esse efeito é cancelado caso o guerreiro seja curado para mais de 30% do seu HP antes de usar as rolagens. Ao mesmo tempo, caso o efeito se ative mas não seja usado parcial ou totalmente, ele é perdido."
@@ -1145,7 +1264,7 @@ window.vantagensArray = [
     },
     {
         "nome": "Flagelo Vermelho",
-        "pontos": "0",
+        "pontos": "1",
         "descricao": [
             "Seus sentidos ficam extremamente mais apurados quando um alvo ou uma pessoa que está com ferimentos (e/ou sangrando) se localiza próxima ou numa distância considerável. Obedecendo a essas condições, você pode sentir o cheiro de tal alvo, saber a localização aproximada do mesmo e até saber dizer quão ferido ele (a) está e até onde poderia ir. Caso feche seus olhos, você abdica da sua visão geral, mas ganha uma forma de ver a silhueta do alvo com um tom vermelho vibrante e saber a direção onde ele está."
         ],
@@ -1153,39 +1272,23 @@ window.vantagensArray = [
     },
     {
         "nome": "Venábulo Carmesim",
-        "pontos": "0",
+        "pontos": "1",
         "descricao": [
             "Você consegue manipular o sangue como ninguém, e isso lhe permite moldá-lo em algum objeto desejado ou desenho / escritura qualquer. Adicionalmente, você pode usar quantias de sangue (sua ou de outra origem) como uma arma de nível 0 que utiliza o atributo Magia."
         ],
         "requisitos": "Arquétipo Hematologista"
     },
     {
-        "nome": "Ás do Volante",
-        "pontos": "0",
-        "descricao": [
-            "Seu foco é na sua armadura, mas um bom piloto é capaz de pilotar qualquer coisa. Quando utilizando Sistemas para pilotar qualquer máquina, receba +3 em quaisquer testes."
-        ],
-        "requisitos": "Arquétipo Homem de Lata"
-    },
-    {
-        "nome": "Meu Melhor Amigo",
-        "pontos": "0",
-        "descricao": [
-            "A armadura do Homem de Lata é seu bem mais precioso. Essa armadura é capaz de ter vários Acessórios e Equipamentos anexados a ela, se tornando parte dela e sendo facilmente acessíveis para o piloto. Efetivamente, a armadura funciona como uma mochila, com a exceção de que tudo está pendurado nela. Se você precisa da outra arma, a armadura engole a atual e a outra arma sai de outro compartimento. Isso significa que é igual à uma mochila sem limites, mas que só carrega itens do tipo Acessórios e Equipamentos (itens consumíveis, destrutivos, e outros não são incluídos). O personagem ainda tem sua própria mochila, fora de sua armadura."
-        ],
-        "requisitos": "Arquétipo Homem de Lata"
-    },
-    {
         "nome": "Fumaça e Espelhos",
-        "pontos": "0",
+        "pontos": "1",
         "descricao": [
             "“O que” você faz é menos importante do que o “Como” você faz. Por manter as pessoas em volta de si entretidas, o Ilusionista é capaz de realizar ações sem revelar suas intenções. Isso efetivamente permite que o Ilusionista consiga sucessos automáticos em testes de Ladinagem enquanto mantiver a atenção da audiência em outro lugar. Testes muito difíceis de Ladinagem têm a dificuldade levemente reduzida, ao invés de serem sucessos automáticos."
         ],
         "requisitos": "Arquétipo Ilusionista"
     },
     {
-        "nome": "O Maior Truque",
-        "pontos": "0",
+        "nome": "O Grande Truque",
+        "pontos": "1",
         "descricao": [
             "Se os outros membros do grupo te ajudarem a montar um plano especial, você é capaz de participar de um combate tendo todos seus atributos de combate aumentados em +10. Exceto que você não pode causar danos ou efeitos de verdade em nenhum lugar! É tudo ilusão! Mas os inimigos não precisam saber disso, não é?"
         ],
@@ -1195,13 +1298,13 @@ window.vantagensArray = [
         "nome": "Quando ninguém estava olhando",
         "pontos": "0",
         "descricao": [
-            "No meio da confusão, é normal que as pessoas se esqueçam das coisas realmente importantes. Mas não o Ilusionista. A falta de atenção dos outros é justamente o que o Ilusionista usa. Assim sendo, o Ilusionista pode se aproveitar desses momentos para pegar algo “emprestado”. Durante uma sessão, caso o grupo se esqueça de algo, o Ilusionista pode realizar um teste de Ladinagem retroativo para ter pego essa coisa durante a última oportunidade, mesmo que o jogador do Mágico também tivesse se esquecido."
+            "No meio da confusão, é normal que as pessoas se esqueçam das coisas realmente importantes. Mas não o Ilusionista. A falta de atenção dos outros é justamente o que o Ilusionista usa. Assim sendo, o Ilusionista pode se aproveitar desses momentos para pegar algo “emprestado”. Durante uma sessão, caso o grupo se esqueça de algo, o Ilusionista pode realizar um teste de Ladinagem retroativo para ter pego essa coisa durante a última oportunidade, mesmo que o jogador do Ilusionista também tivesse se esquecido."
         ],
         "requisitos": "Arquétipo Ilusionista"
     },
     {
         "nome": "Ordem dos Inquisidores",
-        "pontos": "0",
+        "pontos": "1",
         "descricao": [
             "Você faz parte da milenar ordem dos Inquisidores. Precisar de ajuda é uma fraqueza vergonhosa, mas pedidos de ajuda em geral serão respondidos. Dependendo das circunstâncias, você também pode receber missões.",
             "Essa vantagem é opcional."
@@ -1210,7 +1313,7 @@ window.vantagensArray = [
     },
     {
         "nome": "Fervor",
-        "pontos": "0",
+        "pontos": "1",
         "descricao": [
             "Você é capaz de manifestar um pequeno efeito sobrenatural garantido pela sua divindade, uma demonstração da sua força e treinamento como Inquisidor. Você pode evocar os seguintes efeitos:",
             "• Abrir ou fechar uma porta ou janela destrancada de forma violenta e instantânea;",
@@ -1231,18 +1334,10 @@ window.vantagensArray = [
         "requisitos": "Arquétipo Inquisidor"
     },
     {
-        "nome": "Humilhação inconsolável",
-        "pontos": "0",
-        "descricao": [
-            "Se você falhar em destruir algum usuário de magia negra após tentar caçá-lo, a Fúria Divina te consumirá, pouco a pouco, com um ódio incontrolável. Quanto mais tempo você demorar para corrigir esse erro, pior fica. Eventualmente, você será incapaz de pensar em nada a não ser terminar o trabalho."
-        ],
-        "requisitos": "Arquétipo Inquisidor"
-    },
-    {
         "nome": "Convocação Extraplanar",
         "pontos": "0",
         "descricao": [
-            "Você pode convocar uma criatura extraplanar / celestial / mágica / astral, e de outras categorias ao pagar um custo igual a 2 de MP.",
+            "Você pode convocar uma criatura extraplanar / celestial / mágica / astral, e de outras categorias ao pagar um custo igual a 2 de SP.",
             "A criatura conjurada é tratada como se fosse uma arma de nível 1, sempre (portanto, essa criatura fica passível das escolhas de um único addon na lista de addons para equipamentos como um todo).",
             "A criatura também deve ter um atributo que a rege (dos atributos de combate);",
             "Uma criatura não tem o turno próprio, portanto ela é sempre comandada pelo Invocador Astral para fazer algo, no turno dele. E como é considerada uma arma pra termos técnicos do sistema, o Invocador pode \"usar\" a criatura conjurada em um ataque, mas perde os efeitos da atual arma equipada;",
@@ -1256,9 +1351,9 @@ window.vantagensArray = [
     },
     {
         "nome": "Invocação Rápida",
-        "pontos": "0",
+        "pontos": "1",
         "descricao": [
-            "Com o gasto de 2 de MP, o Invocador pode, por alguns segundos, conjurar uma criatura celestial / mágica / astral / extraplanar e de outras categorias para auxiliá-lo em uma tarefa ou causar algum efeito que tenha a ver com o conceito de tal besta. A criatura é conjurada e executa uma ação, depois sumindo quando completar o propósito pelo qual foi chamada.",
+            "Com o gasto de 2 de SP, o Invocador pode, por alguns segundos, conjurar uma criatura celestial / mágica / astral / extraplanar e de outras categorias para auxiliá-lo em uma tarefa ou causar algum efeito que tenha a ver com o conceito de tal besta. A criatura é conjurada e executa uma ação, depois sumindo quando completar o propósito pelo qual foi chamada.",
             "Exemplo: a conjuração de um leão mágico com asas poderia ser para carregar o grupo voando em direção de uma torre de magia distante, para depois desaparecer.",
             "Uma criatura nunca pode executar uma ação ou auxiliar de uma forma que ela naturalmente não seria capaz.",
             "Somente uma criatura pode ser conjurada por vez e caso o mestre decida vetar o uso da invocação ou de uma propriedade da besta, ele pode (desde que isso danifique o progresso da aventura ou quebre demais o jogo, facilitando muito)."
@@ -1267,31 +1362,33 @@ window.vantagensArray = [
     },
     {
         "nome": "O monstro acorda",
-        "pontos": "0",
+        "pontos": "1",
         "descricao": [
-            "Dentro do personagem, vive um monstro incontrolável. Certas emoções fortes (definidas na criação do personagem) acordam esse monstro, transformando o personagem e alterando sua personalidade. Para a maioria das transformações, o personagem ainda exercerá um certo controle sobre o monstro, mas o mestre pode decidir que a emoção que transformou o personagem foi simplesmente forte demais e que, com isso, o monstro obtém controle completo, transformando o personagem em uma arma de destruição em massa sem mira.",
-            "A descrição, personalidade e forma de agir desse monstro devem ser descritas na história do personagem. Enquanto transformado o personagem não é mais aquele de antes e agora pensa diferente, age diferente e acima de tudo: tem sede de destruição. Escolha uma opção abaixo:",
-            "• Você ganha superioridade (ver capítulo 5) em testes de Agilidade e perícias relacionadas na primeira transformação do dia ou episódio (o que demorar mais pra acontecer);",
-            "• Você ganha superioridade em testes de Força e perícias relacionadas na primeira transformação do dia ou episódio (o que demorar mais pra acontecer);",
-            "• Você causa medo e insegurança para aqueles proximos de você, que recebem inferioridade (ver capítulo 5) no primeiro teste que fizerem contra o seu personagem, independente do que for. Não se aplica em combate;",
-            "• Pode usar pontos de Stamina para se curar normalmente dentro do seu turno. Consome o turno. Só pode ser usada na primeira transformação do dia ou episódio (o que demorar mais pra acontecer);",
-            "O monstro costuma dormir quando o que o acordou não existe mais, mas em situações mais intensas a transformação pode durar mais tempo. O jogador tem controle sobre quando \"O monstro acorda\", sendo quem julga se uma situação é boa o suficiente ou não. Caso o jogador queira, o personagem pode ter seus atributos de combate reduzidos a 0 enquanto o monstro estiver dormente."
+			"O personagem pode se transformar  no monstro que está adormecido dentro dele. Se transformar em combate consome seu turno, mas permite o uso da ação “Buscar Coragem”. Essa vantagem pode ser comprada por 0 pontos, mas isso faz com que o personagem tenha os atributos de combate reduzidos para 0 antes de se transformar."
         ],
-        "requisitos": "Arquétipo Juggernaut, não ter escolhido \"Fúria é minha escolha, não uma doença\""
+        "requisitos": "Arquétipo Abominação"
     },
     {
-        "nome": "Fúria é minha escolha, não uma doença",
-        "pontos": "0",
+        "nome": "Controle Constante",
+        "pontos": "1",
         "descricao": [
-            "O personagem enfrentou o monstro e venceu, ou talvez tenha perdido e sido consumido por ele. Sua transformação passa a ser eterna e irreversível. A força e violência do personagem são claras para todos os que o vêem. O personagem passa a receber -2 em testes para convencer outros de que não é uma ameaça, mas +2 em testes de Intimidação onde usa sua natureza como ameaça. O monstro também pode escolher uma das vantagens a seguir:",
-            "• O Maior Desafio: O personagem já enfrentou o que tem de pior no mundo. O personagem não sente mais medo nem é capaz de ter sua mente dominada ou encantada.",
-            "• Indomável: Uma vez por sessão ou dia (o que demorar mais a acontecer), o personagem pode invocar os poderes do seu monstro interior para se liberar de qualquer coisa que o esteja prendendo através de força bruta física e de espírito."
+			"O personagem venceu seu monstro interior de alguma maneira ou por um evento que deve ser descrito em sua história. Após vencer o monstro e obter controle, o personagem se torna incapaz de sentir medo de qualquer coisa. Testes com o atributo Força de Vontade para esses fins são sucesso-automático para o personagem."
         ],
-        "requisitos": "Arquétipo Juggernaut, não ter escolhido \"O monstro acorda\""
+        "requisitos": "Arquétipo Abominação"
     },
+    {
+        "nome": "Monstruosidade",
+        "pontos": "1",
+        "descricao": [
+			"Varia de acordo com outras vantagens escolhidas.",
+			"•	O Monstro Acorda: Enquanto transformado, você sempre pode gastar seu turno para usar a ação “Buscar Coragem”. Além disso, a transformação inicial cura 1d4 HP a mais.",
+			"•	Controle Constante: Com a dominação do monstro interior, a força do personagem se torna clara a todos. Você recebe um Bônus de Arquétipo igual à +2 em testes com a perícia Intimidação, mas também recebe -2 em testes quando tentando convencer outros de que não é uma ameaça."
+			],
+        "requisitos": "Arquétipo Abominação"
+    },	
      {
         "nome": "Informantes",
-        "pontos": "0",
+        "pontos": "1",
         "descricao": [
             "Você sempre escuta o que lhe convém, podendo uma vez por sessão ou semana (o que demorar mais para acontecer) requisitar uma informação especial de sua escolha diretamente para o mestre.",
             "Essa informação pode chegar aos seus ouvidos por meio de conversas aleatórias de pessoas nas ruas ou mesmo pequenos informantes que podem vir a te conhecer / possuem um débito contigo."
@@ -1300,7 +1397,7 @@ window.vantagensArray = [
     },
     {
         "nome": "Malícia",
-        "pontos": "0",
+        "pontos": "1",
         "descricao": [
             "A sua carreira como Ladrão te ensinou muitas coisas, inclusive como salvar a sua própria pele de maneiras diferentes, enquanto mantém as riquezas debaixo da manga. Escolha somente um desses efeitos:",
             "• Experiente em Armadilhas: Você é capaz de analisar o ambiente e dizer se existem armadilhas ali. Pessoas normais acham isso impossível de ser feito, mas você não... Afinal, detectar armadilhas é o que te separa de ir pra cadeia, fugir ou perder uma mão. Quando você gastar 10 minutos ou 1 rodada observando uma área intensivamente (você precisa declarar isso ao mestre), role 1d10 + Sabedoria + Percepção, onde:",
@@ -1322,7 +1419,7 @@ window.vantagensArray = [
     },
     {
         "nome": "Passe de Mágica",
-        "pontos": "0",
+        "pontos": "1",
         "descricao": [
             "Todos os magos sabem alguns truques simples o suficiente para impressionar as pessoas quando necessário ou somente para ajudá-los a terem uma vida mais confortável durante o dia-dia. Você pode conjurar os seguinte efeitos abaixo:",
             "• Apagar ou acender instantaneamente uma vela, lanterna, tocha ou uma pequena fogueira;",
@@ -1330,41 +1427,73 @@ window.vantagensArray = [
             "• Você pode fazer uma marca, cor ou símbolo aparecerem na superfície de um objeto por 1 hora;",
             "• Você pode criar uma imagem ilusória do tamanho da sua mão por 5 minutos;",
             "• Você pode criar um efeito sensorial inofensivo, como o som de chuva e trovões, faíscas dançantes no ar, um cheiro esquisito ou uma corrente de vento inexistente.",
-            "A quantidade de MP que cada efeito desses usa deve ser baixa ao ponto de serem quase insignificantes. Ainda assim, caso o Mestre queira taxar essas habilidades, ele poderia comprar algo em torno de 2 ou 3 pontos de MP.",
+            "A quantidade de SP que cada efeito desses usa deve ser baixa ao ponto de serem quase insignificantes. Ainda assim, caso o Mestre queira taxar essas habilidades, ele poderia comprar algo em torno de 2 ou 3 pontos de SP.",
             "O personagem pode cortar o efeito de uma evocação quando desejar e pode usá-las em sequência se desejar e se for permitido."
         ],
         "requisitos": "Arquétipo Mago"
     },
     {
         "nome": "Olho Arcano",
-        "pontos": "0",
+        "pontos": "1",
         "descricao": [
             "Uma vez por episódio você consegue usar esse efeito e ver passagens secretas, armadilhas escondidas, pisos falsos, perigos naturais, objetos e criaturas invisíveis que são denunciadas por um acúmulo de energia arcana roxa. Adicionalmente, também é possível ver locais que tenham traços de magia ou uso de magia recente (de qualquer origem). Somente o personagem vê essas revelações. O efeito fica ativo por 5 minutos e não pode ser usado em combate."
         ],
         "requisitos": "Arquétipo Mago"
     },
     {
-        "nome": "Puro",
+        "nome": "Inventor",
+        "pontos": "1",
+        "descricao": [
+			"Você pode criar uma invenção de tamanho pequeno / médio com um único propósito objetivo e bem definido para justificar sua existência. Essa invenção dura 1d4 horas ao seu lado e eventualmente para de funcionar, perdendo seu funcionamento. A invenção não pode ser usada em combate e para fins de testes sempre utilizam o atributo Inteligência, no valor sendo igual ao do maquinista que a criou. Sua resistência é baixa e qualquer golpe simples a destrói facilmente. A invenção pode ter diversas funções simples, como: iluminar uma área enquanto se move, funcionar como um detector de metais, ser um sonar, servir café, aspirar pó, suportar peso, etc. O maquinista sempre tem pequenas peças desimportantes em seus bolsos/mochila para criar uma invenção simples do tipo. O personagem pode fazer duas invenções pequenas e simples por dia ou episódio (o que demorar mais para acontecer), entretanto, elas não podem funcionar juntas ou serem criadas ao mesmo tempo. O personagem pode sacrificar as duas invenções e fazer uma invenção média no lugar, somente uma vez por dia ou episódio (o que demorar mais para acontecer). Uma invenção média pode ter até duas funções que ficam ativas ao mesmo tempo e ela possui uma resistência maior, equivalendo à 5 pontos de HP e 1 RD geral, mas não pode ser usada em combate como um integrante extra ou mesmo causar dano. Criar uma invenção leva certo tempo dependendo da função dela e se é uma invenção simples ou média. Invenções médias levam mais tempo que as pequenas, e a quantia de tempo é estipulada pelo mestre, mas sempre deve ser superior à 20 minutos (ou 1 rodada dentro do jogo)."
+        ],
+        "requisitos": "Arquétipo Maquinista"
+    },	
+    {
+        "nome": "Caminho da Engenharia",
         "pontos": "0",
+        "descricao": [
+			"A engenharia é o seu trabalho e a sua vida. Seja por experiência ou aptidão, você conhece ao menos os básicos para trabalhar com tal profissão. Ganhe a perícia/profissão “Engenharia” num nível inicial igual à 1 de graça. Você também começa com o acessório “Kit do Engenheiro” de graça no seu inventário."
+        ],
+        "requisitos": "Arquétipo Maquinista"
+    },
+    {
+        "nome": "Caminho da Engenharia",
+        "pontos": "1",
+        "descricao": [
+			"O personagem é um excelent piloto quando se trata de veículos mecânicos, Quando utilizando a perícia Sistemas ou Veículos para pilotar qualquer máquina, receba +3 em quaisquer testes."
+        ],
+        "requisitos": "Arquétipo Maquinista"
+    },
+    {
+        "nome": "Piloto de Mado",
+        "pontos": "1",
+        "descricao": [
+			"O personagem possui uma espécie de armadura mecanica ou robotica na qual ele consegue entra e pilotar. Essa armadura é capaz de ter vários Acessórios e Equipamentos anexados a ela, se tornando parte dela e sendo facilmente acessíveis para o piloto. Efetivamente, a armadura funciona como uma mochila, com a exceção de que tudo está pendurado nela. Se você precisa da outra arma, a armadura engole a atual e a outra arma sai de outro compartimento. Isso ignifica que é igual à uma mochila sem limites, mas que só carrega itens do tipo Acessórios e Equipamentos (itens consumíveis, destrutivos, e outros não são incluídos). O personagem ainda tem sua própria mochila, fora de sua armadura."
+        ],
+        "requisitos": "Arquétipo Maquinista"
+    },		
+    {
+        "nome": "Puro",
+        "pontos": "1",
         "descricao": [
             "Você recebe +3 em testes relacionados a convencer outras pessoas de que você não é uma ameaça ou não lhes deseja mal. Doenças, independente da origem, tem 50% de chance (1d100 <= 50) de não te afetarem, mesmo, ou até principalmente, se forem mágicas."
         ],
-        "requisitos": "Arquétipo Mago Branco"
+        "requisitos": "Arquétipo Acólito da Luz"
     },
     {
         "nome": "Infusão de Ether",
-        "pontos": "0",
+        "pontos": "1",
         "descricao": [
-			"Você é capaz de converter a Mana em uma energia purificada usada para a criação, restauração e encontrada no fluxo de vida do universo, o chamado Ether. Você pode converter metade do seu MP máximo em dois pontos de Ether para usar de acordo com o que a sua fé ou necessidade mandar.",
+			"Você é capaz de converter a Mana em uma energia purificada usada para a criação, restauração e encontrada no fluxo de vida do universo, o chamado Ether. Você pode converter metade do seu SP máximo em dois pontos de Ether para usar de acordo com o que a sua fé ou necessidade mandar.",
 			"O domínio do Ether é algo sério e de difícil manipulação, o que geralmente te exaure após muita manipulação. Os usos de Ether incluem:",
 			"• 1 Ponto: Conceder Superioridade no próximo teste que um aliado ou você for fazer. Se você usar esta opção em si mesmo, então o custo vai para 2 pontos de Ether. O uso desta infusão só funciona para testes que não envolvam a rolagem de qualquer atributo de dano ou primário (Ataque e Defesa). Se usada em combate, gasta o turno.",
-			"• 2 Pontos: Re-converte os 2 pontos de Ether no gasto de MP que você teve para criá-los, dando-o para um aliado da sua escolha e curando seu MP na mesma quantidade. Esse efeito não pode ser usado em você mesmo e pode ser usado em combate como uma ação que gasta o turno."
+			"• 2 Pontos: Re-converte os 2 pontos de Ether no gasto de SP que você teve para criá-los, dando-o para um aliado da sua escolha e curando seu SP na mesma quantidade. Esse efeito não pode ser usado em você mesmo e pode ser usado em combate como uma ação que gasta o turno."
         ],
-        "requisitos": "Arquétipo Mago Branco"
+        "requisitos": "Arquétipo Acólito da Luz"
     },
     {
         "nome": "Eu tenho a coisa certa",
-        "pontos": "0",
+        "pontos": "1",
         "descricao": [
             "Uma vez por episódio ou sessão (o que demorar mais para acontecer), você por acaso tem um pedaço de algum equipamento, item mudano ou mesmo consegue criar algo útil provindo do ambiente ou de uma criatura derrotada / morta. Criar ou ter esse objeto é um sucesso automático e uma ação grátis."
         ],
@@ -1372,50 +1501,42 @@ window.vantagensArray = [
     },
     {
         "nome": "Negócios",
-        "pontos": "0",
+        "pontos": "1",
         "descricao": [
             "Você possui algum tipo de negócio bem estabelecido em algum lugar do mundo. Defina que tipo de negócio é este em sua história, o que você vende / oferece, onde se localiza e como é.",
 	"Adicional a isso, o seu negócio te dá um lucro de (200 * seu nível atual) moedas de ouro a cada duas sessões de jogo da sua mesa."
         ],
         "requisitos": "Arquétipo Mercante Príncipe"
     },
-    {
-        "nome": "Corpo como um templo",
-        "pontos": "0",
-        "descricao": [
-            "Runas espalhadas por todo o corpo do personagem, como tatuagens mágicas, o protegem de todo o mal que tenta invadir. O personagem recebe +3 em testes de resistência contra efeitos mágicos que tentem corromper seu corpo ou sua mente diretamente. O personagem não pode ter sua mente nem emoções lidas por efeitos mágicos. As runas entram na sua carne profundamente, mas se forem arrancadas de alguma forma esses efeitos são perdidos."
-        ],
-        "requisitos": "Arquétipo Mestre das Runas"
-    },
 	    {
         "nome": "Guarda-Costas",
-        "pontos": "0",
+        "pontos": "1",
         "descricao": [
             "Essa vantagem só pode ser adquirida com a permissão do Mestre da mesa.",
-	"O personagem possui acesso à um Mercenário inicial bem simples que o segue durante sua aventura. Leia o capítulo 11 - “Aventurando-se” para saber mais sobre os mercenários.",
+	"O personagem possui acesso à um Mercenário inicial bem simples que o segue durante sua aventura. Leia o Grimório da Realidade para saber mais sobre os mercenários.",
 	"O mercenário em questão está restrito à:",
-	"• Ser do mesmo nível que o personagem (1);",
-	"• Ter 5 pontos para serem gastos em seus valores de lealdade, traço de ocupação, perícia principal e perícias secundárias;",
-    "• Ter informações básicas (raça, arquétipo, nome, idade, sexo, e um pequeno resumo que explique como ele e o personagem se conheceram);",
-	"• Custo definido;",
-	"• Ter uma ocupação definida."
+	"Ser do mesmo nível que o personagem (1);",
+	"Ter 5 pontos para serem gastos em seus valores de lealdade, traço de ocupação, perícia principal e perícias secundárias;",
+    "Ter informações básicas (raça, arquétipo, nome, idade, sexo, e um pequeno resumo que explique como ele e o personagem se conheceram);",
+	"Custo definido;",
+	"Ter uma ocupação definida."
 
         ],
         "requisitos": "Arquétipo Mercante Príncipe"
-    },
+    },	
     {
         "nome": "Corpo como um templo",
-        "pontos": "0",
+        "pontos": "1",
         "descricao": [
             "Runas espalhadas por todo o corpo do personagem, como tatuagens mágicas, o protegem de todo o mal que tenta invadir. O personagem recebe +3 em testes de resistência contra efeitos mágicos que tentem corromper seu corpo ou sua mente diretamente. O personagem não pode ter sua mente nem emoções lidas por efeitos mágicos. As runas entram na sua carne profundamente, mas se forem arrancadas de alguma forma esses efeitos são perdidos."
         ],
         "requisitos": "Arquétipo Mestre das Runas"
     },
     {
-        "nome": "Preço do conhecimento",
-        "pontos": "0",
+        "nome": "Mais uma proteção",
+        "pontos": "1",
         "descricao": [
-            "O traumatizante processo de colocar as runas no corpo do personagem o alterou para sempre. Como um sobrevivente de uma tortura que mataria muitos guerreiros altamente treinados, o personagem nunca mais será o mesmo. Personagens que tentam ler as emoções do mestre das runas por meios não mágicos recebem -3 em seus testes, pois a verdade é que o mestre das runas já não possui muitas. Isso deve ser tratado como uma desvantagem para o mestre das runas e o narrador pode decidir aplicar um redutor de até -3 em todos os testes sociais nos quais isso seja relevante."
+			"O mestre das runas pode aplicar suas runas a algum objeto, protegendo contra algum tipo de corrupção mágica específica. Essas runas são mais simples, não duram tanto e são destruídas já na primeira vez que lidarem com a maldição de que protegem, mas essa primeira maldição também será bloqueada completamente. Se aplicado a uma armadura, elas vão proteger o usuário da armadura. Quando aplicadas a outros itens, devem ser tratadas de forma apropriada, considerando-se que as runas atuam como um pára-raios. Tipos de corrupção mágica que podem ser escolhidas: veneno, invasão de mente. Em geral, qualquer coisa que fosse ser incluída em \"Corpo como um templo\" pode ser escolhida por \"Mais uma proteção\"."
         ],
         "requisitos": "Arquétipo Mestre das Runas"
     },
@@ -1432,7 +1553,7 @@ window.vantagensArray = [
         "nome": "Hamon",
         "pontos": "0",
         "descricao": [
-            "Você consegue controlar uma energia sobrenatural presente em todos os seres vivos tendo como a respiração como canalizador principal. Por meditar fora de combate por 1 hora e gastar 1 ponto de Stamina você recupera seu HP e MP ao máximo. É necessário que o monge não seja perturbado durante esse tempo e que ele seja capaz de manter sua concentração durante 1 hora ininterrupta."
+            "Você consegue controlar uma energia sobrenatural presente em todos os seres vivos tendo como a respiração como canalizador principal. Por meditar fora de combate por 1 hora você recupera seu HP e SP para a metade de seus valores. É necessário que o monge não seja perturbado durante esse tempo e que ele seja capaz de manter sua concentração durante 1 hora ininterrupta."
         ],
         "requisitos": "Arquétipo Monge"
     },
@@ -1446,7 +1567,7 @@ window.vantagensArray = [
     },
     {
         "nome": "Transcender - Andarilho dos Planos",
-        "pontos": "0",
+        "pontos": "1",
         "descricao": [
             "Uma vez por episódio ou dia (o que demorar mais para acontecer) você pode meditar durante alguns minutos e elevar seu estado de espírito para fora de seu corpo. Enquanto estiver assim, você pode caminhar livremente pelo plano astral / espiritual e procurar por algo que deseje, sejam isso uma resposta ou encontrar com alguém que já se foi. Além disso, seu corpo fica inerte num estado de sono profundo enquanto não estiver com o espírito nele, portanto, caso ele seja danificado de alguma forma, você não poderá se defender (e pode até morrer dependendo do caso). Caso seu corpo desfaleça enquanto estiver fora, seu espírito ficará preso pra toda a eternidade no plano astral."
         ],
@@ -1454,7 +1575,7 @@ window.vantagensArray = [
     },
     {
         "nome": "Transcender - Karma Espiritual",
-        "pontos": "0",
+        "pontos": "1",
         "descricao": [
             "Adicionalmente ao transcender original, você pode optar por não ir ao plano espiritual, mas sim trocar de corpo com um aliado ou alvo próximo (que esteja na sua linha de visão). Quando trocar de corpo, a alma do alvo vai para o seu corpo e a sua para o dele durante 10 minutos ou 1d4 rodadas. Caso seu corpo seja danificado ao ponto de não suportar mais conter vida dentro dele, você fica preso pra sempre no corpo atual em que estiver e a alma que estiver no seu, ficará perdida, vagando então como um espírito vingativo contra você pelo resto de sua vida também. Esse efeito não pode ser usado em combate e um alvo precisa ser susceptível espiritualmente para tal troca (critério do mestre). Este efeito não requer muita meditação (e talvez até nenhuma se for de acordo do jogador e mestre) e pode ser usado sem restrições de uso por episódio ou dias. Quando estiver no corpo de um alvo, você ganha as habilidades e potencialidades dele, mas não saberá o que ele pode fazer ou não (pois não retém as memórias e trejeitos do mesmo), mas poderá descobrir acidentalmente (ou não)."
         ],
@@ -1462,16 +1583,15 @@ window.vantagensArray = [
     },
     {
         "nome": "Copycat",
-        "pontos": "0",
+        "pontos": "1",
         "descricao": [
-            "Você é um exímio observador frente às demonstrações de poder e força que acontecem próximas de você. O mímico pode improvisar em suas técnicas qualquer atributo de dano, mesmo que o atributo usado não tenha muito haver com a técnica em questão. (Exemplo: Utilizar uma técnica que claramente usa Arma como atributo de dano, baseado no guerreiro do grupo, mas usando seu atributo Tecnologia.)",
-            "Além disso, o mímico pode ativar Estilos de Luta de aliados como se fossem seus. Quando copiando um estilo de luta, o Mímico copia todas as suas condições, áreas afetadas e efeitos."
+			"Você é um exímio observador frente às demonstrações de poder e força que acontecem próximas de você. O mímico pode improvisar em suas técnicas qualquer atributo de dano, mesmo que o atributo usado não tenha muito a ver com a técnica em questão. (Exemplo: Utilizar uma técnica que claramente usa Arma como atributo de dano, baseado no guerreiro do grupo, mas usando seu atributo Tecnologia.) Em ações que usem mais de um atributo, você pode improvisar apenas um atributo, o outro deve se manter igual."
         ],
         "requisitos": "Arquétipo Mímico"
     },
     {
         "nome": "Som Fantasma",
-        "pontos": "0",
+        "pontos": "1",
         "descricao": [
             "Você consegue reproduzir um som que você já tenha ouvido com extrema precisão com sua voz (pode ser uma voz de outra pessoa, som animal, ruído, assovio, etc)."
         ],
@@ -1481,14 +1601,14 @@ window.vantagensArray = [
         "nome": "Simulacrum",
         "pontos": "0",
         "descricao": [
-			"Cópia é a principal ferramenta de um mímico. Dentro dessa forma, comece a história do personagem apenas com uma técnica de 1 slot e um estilo de luta.",
+			"Cópia é a principal ferramenta de um mímico. Dentro dessa forma, comece a história do personagem apenas com uma técnica de 2 slots e uma de um slot.",
 			"O mímico ganha acesso à uma nova ação de combate: “Observar”. O personagem que usar esta ação e terminar o seu turno imediatamente, escolhendo um combatente para observar e estudar seus próximos movimentos.",
 			"A última habilidade mágica ou técnica que o alvo observado executar, o mímico conseguirá copiar com sucesso até o fim do combate ou até observar outro alvo / outra ação.",
 			"Assim sendo, quando o personagem escolher observar outro combatente, ele automaticamente “esquece” a técnica que estava copiada até então, substituindo-a pela nova.",
-			"O personagem paga todos os custos originais da técnica copiada, seja em MP, HP, etc. Você também fica sujeito à eventuais redutores ou bônus que a técnica possua ou sofra por variáveis da luta.",
+			"O personagem paga todos os custos originais da técnica copiada, seja em SP, HP, etc. Você também fica sujeito à eventuais redutores ou bônus que a técnica possua ou sofra por variáveis da luta.",
 			"Outras regras:",
 			"• Um mímico não pode copiar técnicas de um alvo que tenha dois ou mais níveis que ele;",
-			"• Técnicas passivas ou que sejam de estado natural de um item ou personagem não podem ser copiadas. Técnicas passivas que tenham sido ativadas durante o combate podem ser copiadas (O personagem não pode copiar ativações da fase 0);",
+			"• Técnicas copiadas devem ser executadas exatamente como são na sua forma original, sem alterações por parte do mímico. Técnicas de dano com mais de um atributo, todos devem ser copiados (salvo o uso de Copycat, que pode alterar um deles);",
 			"• Durante o nível 1, o mímico tem o dano de todas as técnicas copiadas reduzido em 25%. Essa penalidade deixa de existir do nível 2 para cima;",
 			"• Técnicas copiadas devem ser executadas exatamente como são na sua forma original, sem alterações por parte do mímico (salvo o uso de Copycat);",
 			"• O personagem não pode copiar técnicas copiadas de outro mímico do grupo ou de um inimigo que tenha o mesmo funcionamento.",
@@ -1504,7 +1624,7 @@ window.vantagensArray = [
         "pontos": "0",
         "descricao": [
             "Você pode selar acordos com criaturas do tipo demônio, com as especificidades mudando caso à caso. Com um acordo selado, o demônio irá te ajudar em combates até o acordo terminar ou ser quebrado.",
-            "Gaste 2 de MP e invoque uma criatura do caos, demônio, morto-vivo, fantasma ou algo do tipo.",
+            "Gaste 2 de SP e invoque uma criatura do caos, demônio, morto-vivo, fantasma ou algo do tipo.",
             "A criatura funciona exatamente como se fosse uma arma de nível 1, portanto, é passível de escolhas de addons para este tipo de equipamento em sua criação (somente na criação). A criatura também deve ter um atributo que a rege (dos atributos de combate);",
             "Uma criatura não tem o turno próprio, portanto ela é sempre comandada pelo Necromante para fazer algo, no turno dele, e como é considerada uma arma pra termos técnicos do sistema, o Necromante pode \"usar\" a criatura conjurada em um ataque, mas perde os efeitos da atual arma equipada;",
             "Um Necromante pode ter, no nível 1, somente um pacto feito com uma criatura e essa deve ser especificada na ficha do personagem (o quê é, o que faz, se tem alguma história, e obviamente, o addon que usa); Novos contratos podem ser feitos com o gasto de Pontos de Habilidade ou simplesmente usando uma técnica em branco para isso, com a escolha dos addons apropriados  (Exemplo: Summon Ally, Sword of the Holy Titans, etc);",
@@ -1515,7 +1635,7 @@ window.vantagensArray = [
     },
     {
         "nome": "Ritual dos Mortos",
-        "pontos": "0",
+        "pontos": "1",
         "descricao": [
             "Você consegue montar e executar um ritual especial que leva cerca de 40 minutos para ficar pronto e necessita de materiais equivalentes a 100 Moedas de ouro x o Nível do personagem/NPC morto. Se o altar que você vai criar for destruído, o espírito desaparece. Esse ritual permite que você evoque uma figura específica já morta, seja um personagem, NPC importante ou qualquer outro que esteja morto. Para evocar o espírito é obrigatório que você use um osso ou objeto pessoal do morto em questão  além dos ingredientes básicos. O espírito convocado só pode ficar ativo por 3 minutos e possui uma forma de comunicação limitada, além de não poder se mover para qualquer lugar além das redondezas do local do ritual. Um espírito convocado não pode ser destruído de forma alguma e nem pode causar mal a qualquer um a sua volta (exceto em situações especiais)."
         ],
@@ -1523,17 +1643,16 @@ window.vantagensArray = [
     },
     {
         "nome": "Reiki",
-        "pontos": "0",
+        "pontos": "1",
         "descricao": [
 			"Todos os Ninjas que se prezem controlam uma poderosa energia espiritual que flutua no universo conhecida como Ki. A manipulação do Ki para os ninjas funciona de diversas formas, sendo usada pra termos ofensivos, suportivos ou estratégicos.",
-			"O Reiki é a manipulação dessa energia espiritual para fins restaurativos, dando o suporte mínimo necessário para um ninja se manter um combatente incansável dentro de situações necessárias.",
-			"Sempre que se curar com o gasto de Stamina, role 1d4 e cure seu MP na quantidade obtida. Esse efeito ocorre até o máximo de cinco vezes por episódio ou sessão."
+			"O Reiki é a manipulação dessa energia espiritual para fins restaurativos, dando o suporte mínimo necessário para um ninja se manter um combatente incansável dentro de situações necessárias.  Uma vez por episódio ou sessão, o personagem pode usar esta vantagem para restaurar 2d8 pontos de SP imediatamente."
         ],
         "requisitos": "Arquétipo Ninja"
     },
     {
         "nome": "Bomba de Fumaça",
-        "pontos": "0",
+        "pontos": "1",
         "descricao": [
             "Você possui sempre três bombas de fumaça pra usar por dia ou por sessão (o que demorar para acontecer mais) e no dia seguinte você refaz o estoque delas para essa quantidade máxima  com alguns momentos de preparo breve. Uma bomba de fumaça pode ser usada em combate e fora dela, e quando usada cria uma enorme cortina de fumaça cinzenta/branca que oculta totalmente quem estiver lá dentro (incluindo você). Portanto devido ao seu treinamento nessas situações, você ganha um bônus de +4 em todos os testes de Furtividade enquanto a bomba de fumaça durar (uma ação após o uso). Esses bônus só se aplicam a você e não são válidos em situações que não sejam oportunas, como por exemplo, usar a bomba se alguém já estiver te vendo ou conseguir te achar facilmente. Usar a bomba não consome seu turno."
         ],
@@ -1541,7 +1660,7 @@ window.vantagensArray = [
     },
     {
         "nome": "Ordem dos Paladinos",
-        "pontos": "0",
+        "pontos": "1",
         "descricao": [
             "Você faz parte da milenar ordem dos Paladinos. Se você precisar de ajuda, eles responderão com outros guardiões, mas você também pode ser chamado. ",
 			"Você pode seguiras regras de divindades conforme apresentado no arquétipo Clérigo, para então dar maiores detalhes e definições sobre a sua ordem e quedivindade ou conceito eles seguem.",
@@ -1551,17 +1670,9 @@ window.vantagensArray = [
     },
     {
         "nome": "Vingador Sagrado",
-        "pontos": "0",
+        "pontos": "1",
         "descricao": [
             "Durante o dia, criaturas e personagens malignos são claramente visíveis para você, não importa onde estejam escondidas. Sempre que outro personagem tentar mentir para você sob a luz do Sol, você obtém sucesso automático para perceber a mentira e seu sexto sentido te faz saber quando há maldade na espreita. Injustos não podem se esconder da sua ira."
-        ],
-        "requisitos": "Arquétipo Paladino"
-    },
-    {
-        "nome": "Penitência",
-        "pontos": "0",
-        "descricao": [
-            "Qualquer Paladino que se corrompa ou se torne maligno perde todos os seus poderes e só pode recuperá-los se fizer penitência. Se fizer parte da Ordem, também será caçado."
         ],
         "requisitos": "Arquétipo Paladino"
     },
@@ -1569,29 +1680,30 @@ window.vantagensArray = [
         "nome": "Poder Resoluto",
         "pontos": "0",
         "descricao": [
-            "Uma vez por episódio e com o custo de 50% de seu MP total, você pode usar seu poder máximo e queimar sua essência na sua totalidade por um breve momento de força interna, aumentando todos os atributos de teste em +2 pontos e concedendo um bônus de +2 em todas as perícias enquanto esse efeito limitado durar."
+            "Uma vez por episódio e com o custo de 50% de seu SP total, você pode usar seu poder máximo e queimar sua essência na sua totalidade por um breve momento de força interna, aumentando todos os atributos de teste em +2 pontos e concedendo um bônus de +2 em todas as perícias enquanto esse efeito limitado durar."
         ],
         "requisitos": "Arquétipo Paladino"
     },
     {
         "nome": "Presença Intimidadora",
-        "pontos": "0",
+        "pontos": "1",
         "descricao": [
             "Você é um combatente impiedoso por natureza (geralmente) e isso faz com que as pessoas temam sua reputação. Você ganha leves descontos em estabelecimentos e vendedores que sejam coagidos por um teste de intimidação bem sucedido. Eles também podem providenciar informações extras que você busque com maior facilidade."
         ],
         "requisitos": "Arquétipo Pirata"
     },
     {
-        "nome": "Vida de Corsário",
-        "pontos": "0",
+        "nome": "Vida Boêmia",
+        "pontos": "1",
         "descricao": [
-            "Por ser um aventureiro de espírito livre e boêmio por natureza, você gosta muito de bares, tavernas e lugares do tipo onde pode comer e beber bem. Você sempre tem alguma amizade ou conexão nesses lugares, fazendo com que a estadia, o consumo de bebidas e comidas para si e seus aliados seja totalmente gratuita ou de preço muito reduzido do normal (à critério do mestre). Adicionalmente, ganhe +1 stamina toda vez que passar uma noite ou descansar completamente nesses lugares. Essa vantagem não implica numa conexão ou fama por que você é extrovertido ou algo do tipo, meramente significa que é conhecido / frequentador de tal lugar e por isso é bem-vindo."
+			"Por ser um aventureiro de espírito livre e boêmio por natureza, você gosta muito de bares, tavernas e lugares do tipo onde pode comer e beber bem. Você sempre tem alguma amizade ou conexão nesses lugares, fazendo com que a estadia, o consumo de bebidas e comidas para si e seus aliados seja totalmente gratuita ou de preço muito reduzido do normal (à critério do mestre).",
+			"Adicionalmente, ganhe um Bônus de Vantagem de +1 em rolagens de Condição do dia seguinte toda vez que passar uma noite ou descansar completamente nesses lugares. Essa vantagem não implica numa conexão ou fama por que você é extrovertido ou algo do tipo, meramente significa que é conhecido / frequentador de tal lugar e por isso é bem-vindo."
         ],
         "requisitos": "Arquétipo Pirata"
     },
     {
         "nome": "Porta Dimensional",
-        "pontos": "0",
+        "pontos": "1",
         "descricao": [
             "Uma vez por  episódio você tem a possibilidade de desenhar uma porta em qualquer superfície que permita desenhos, através de um giz branco ou algo do tipo. Ao desenhar uma segunda porta em outro lugar, você cria uma conexão entre os dois lugares com os desenhos, permitindo assim abri-las e viajar através de uma fenda temporal que conecta os locais. Embora tenha um longo alcance, o mestre dirá se ambos os locais foram conectado com sucesso ou não (locais muito distantes um dos outros tendem a ter conexões mais fracas). Qualquer pessoa pode usar esse mecanismo, entretanto, somente você pode abrir e destruir as portas (a não ser que o local onde ela fora desenhada, seja destruído também)."
         ],
@@ -1599,15 +1711,15 @@ window.vantagensArray = [
     },
     {
         "nome": "Sorvedouro Fantasma",
-        "pontos": "0",
+        "pontos": "1",
         "descricao": [
-            "Uma vez por episódio você pode gastar metade do seu MP total e causar uma intensa desestabilização nas suas proximidades, desativando todos e qualquer aparato tecnológico, mágico e negando certos encantamentos ativos (não funciona dentro de combate). Embora possua uma grande força, esse efeito nem sempre pode funcionar com todos os tipos de máquinas ou energias mágicas."
+            "Uma vez por episódio você pode gastar metade do seu SP total e causar uma intensa desestabilização nas suas proximidades, desativando todos e qualquer aparato tecnológico, mágico e negando certos encantamentos ativos (não funciona dentro de combate). Embora possua uma grande força, esse efeito nem sempre pode funcionar com todos os tipos de máquinas ou energias mágicas."
         ],
         "requisitos": "Arquétipo Sabotador"
     },
     {
         "nome": "Postura Rígida",
-        "pontos": "0",
+        "pontos": "1",
         "descricao": [
             "Você possui a habilidade de reagir ao perigo antes mesmo dos seus sentidos normalmente permitirem. Com isso, sempre que você fosse ser pego de surpresa,  você é tratado como setivesse em uma categoria abaixo para testes relacionados à surpresa ou a reagir contra algo que acabou  de aparecer ou acontecer. Em termos práticos, isso significa que para você, os testes relacionados aos eventos citados acima, são mais fáceis em uma categoria (da lista de dificuldades sugeridas, que pode ser encontrada no manual básico)."
         ],
@@ -1615,7 +1727,7 @@ window.vantagensArray = [
     },
     {
         "nome": "Corte de Alta Frequência",
-        "pontos": "0",
+        "pontos": "1",
         "descricao": [
             "Quando você realizar um teste para quebrar ou cortar algum objeto usando sua arma, adicione +4 à rolagem. Esse corte, diferentemente dos cortes normais, atravessa e abre caminho em metais ou materiais de extrema resistência que não poderiam ser cortados normalmente.", 
             "Não pode ser usado em combate."
@@ -1630,13 +1742,13 @@ window.vantagensArray = [
             "O animal é como uma Arma de nível 1, sempre;",
             "Você pode começar a história com um Animal de Nível 1 ao seu lado;",
             "Você também pode utilizar a vantagem Equipamento de Evolutivo no seu animal;",
-            "Animais sempre acompanham o Senhor das Bestas, e ao contrário de Necromantes e Invocadores Astrais, não requerem gasto de MP para serem usadas."
+            "Animais sempre acompanham o Senhor das Bestas, e ao contrário de Necromantes e Invocadores Astrais, não requerem gasto de SP para serem usadas."
         ],
         "requisitos": "Arquétipo Senhor das Bestas"
     },
     {
         "nome": "Empatia Natural",
-        "pontos": "0",
+        "pontos": "1",
         "descricao": [
             "Você consegue se comunicar com criaturas e animais, podendo compreender a linguagem delas, desde que tenham uma inteligência mínima. Os animais também geralmente compreendem seus sentimentos e motivos mais facilmente que outras pessoas."
         ],
@@ -1717,6 +1829,13 @@ window.vantagensArray = [
             "Aparência é inicialmente igual a \"Carisma\" e é utilizado em testes de sedução, mas isso pode ser alterado por outros efeitos."
         ]
     },
+    {
+        "nome": "Aspecto Diferenciado",
+        "pontos": "1",
+        "descricao": [
+			"O personagem pode escolher trocar o Aspecto de seu Arquétipo por o de um outro da lista. Ao trocar, o personagem desiste do aspecto original do seu arquétipo e adota o escolhido como seu, valendo assim, somente os bônus do novo aspecto escolhido."
+        ]
+    },	
     {
         "nome": "Atalho",
         "pontos": "2",
@@ -1870,7 +1989,7 @@ window.vantagensArray = [
         "pontos": "3",
         "descricao": [
             "Você é mais resistente ou tem uma força de vontade elevada que o faz continuar levantando quando outros já teriam desistido.",
-            "Aumente seu HP Máximo em 2 pontos."
+            "Aumente seu HP Máximo em 4 pontos."
         ]
     },
     {
@@ -1932,10 +2051,9 @@ window.vantagensArray = [
     },
     {
         "nome": "Espírito Inabalável",
-        "pontos": "5",
+        "pontos": "3",
         "descricao": [
-            "Nada te põe para baixo! Aumente sua Força de Vontade em +1. Toda vez que você dormir, você começa o dia com +1 ponto de Stamina além do seu limite normal.",
-            "Essa vantagem também aumenta a quantidade de Stamina que você tem disponível em PVP."
+			"Nada te põe para baixo! Aumente sua Força de Vontade em +1. Toda vez que você dormir, você começa o dia com +4 SP extras além do seu limite normal."
         ]
     },
     {
@@ -2001,7 +2119,7 @@ window.vantagensArray = [
         "descricao": [
             "O personagem possui várias formas diferentes que alteram totalmente como ele luta. Para cada vez que essa vantagem for comprada, crie uma segunda tabela de seus atributos de combate, podendo alterar todos os seus gastos de Experiência (EXP). Essa segunda ficha irá subir de nível e ganhar experiência junto da sua principal.",
             "Você deve dividir todas as suas técnicas entre as fichas criadas. Uma técnica só pode ser usada pela forma à qual foi entregue. Em todos os níveis pares, você não ganha Pontos de Habilidade. Ao invés disso, você ganha a nova técnica do nível uma vez para cada uma de suas formas. Essas técnicas devem ficar uma com cada forma obrigatoriamente.",
-            "Trocar de forma consome 4 MP e é uma ação grátis que deve ser realizada durante o seu turno."
+            "Trocar de forma consome 4 SP e é uma ação grátis que deve ser realizada durante o seu turno."
         ]
     },
     {
@@ -2009,7 +2127,7 @@ window.vantagensArray = [
         "pontos": "1, 2 ou 5",
         "descricao": [
             "Você possui um NPC ou organização empregada / contratada que lhe fornece produtos específicos de acordo com a sua demanda.",
-			"Na criação de personagem, escolha somente uma das opções: Herborismo, Mineração, Carpintaria ou Caça - o seu fornecedor te providencia materiais relacionados ao processo de “Coleta de Materiais” (ver capítulo 10) numa quantidade igual ao equivalente de você rolar o teste de coleta e passar nele.",
+			"Na criação de personagem, escolha somente uma das opções: Botanismo, Mineração ou Caça - o seu fornecedor te providencia materiais relacionados ao processo de “Coleta de Materiais” (ver a seção de Profissões) numa quantidade igual ao equivalente de você rolar o teste de coleta e passar nele.",
 			"Os materiais enviados pelo NPC ou  organização só podem ser sempre aqueles que o Mestre cataloga na lista de materiais disponíveis. A explicação narrativa de como o fornecedor conseguiu ou enviou tais materiais para você, fica a critério do mestre ou do próprio jogador para explicar.",
 			"Um maior investimento nessa vantagem significa ter mais pessoas ajudando o personagem, ou uma organização maior. Onde:",
 			"- 1 ponto: Seu fornecedor só possui acesso à uma das profissões de coleta de materiais.",
@@ -2018,7 +2136,14 @@ window.vantagensArray = [
 			"Em termos mecânicos, o personagem só precisa pedir que o fornecedor envie tais materiais e eles eventualmente chegarão para o mesmo. O mestre pode escolher explorar essa quantidade de tempo ou fazer ser instantâneo.",
 			"O material sempre vem numa quantia média, nunca abaixo da média ou excepcionalmente bom (o que faz a variante de quantidade de materiais obtidas por resultados e falhas críticas serem exclusivas das outras formas de coleta que não sejam por essa vantagem)."
         ]
-    },	
+    },
+    {
+        "nome": "Graça Felina",
+        "pontos": "1",
+        "descricao": [
+			"O personagem possui algum tipo de treinamento, técnica ou composição biológica que o faz não sofrer danos por quedas independente da altura. Alturas extremamente altas podem causar dano ao personagem, mas bem reduzidas em relação à uma pessoa normal."
+        ]
+    },		
     {
         "nome": "Hardcore",
         "pontos": "0",
@@ -2182,11 +2307,12 @@ window.vantagensArray = [
         "nome": "Não comer / beber",
         "pontos": "1 ou 2 ou 3",
         "descricao": [
-            "O personagem não necessita comer ou beber para sobreviver. Ele sustenta seu corpo por algum outro meio (luz solar, magia, tecnologia, etc.). Ele não perde MP por falta de comida (perda normal de 8 MP por dia, não recuperáveis a não ser com alimentação, por falta de comida e 16 MP por dia, não recuperáveis a não ser com água, por falta de água). O jogador deve especificar o porquê o personagem não precisa comer ou beber e dizer qual tipo de alimentação alternativa usa. Se você não precisa, mas pode comer, você pode ganhar os bônus normais de alimentação comendo.",
-            "1 Ponto: Você não precisa se alimentar, não ganhando as vantagens de alimentação normais.",
-            "2 Pontos: Você recebe +1 Stamina depois de uma noite de sono. Isso é equivalente a um personagem normal se alimentar e não acumula esses pontos.",
-            "3 Pontos: Você recebe +2 Stamina depois de uma noite de sono. Isso é equivalente a um personagem normal se alimentar e não acumula esses pontos."
-        ]
+			"O personagem não necessita comer ou beber para sobreviver. Ele sustenta seu corpo por algum outro meio (luz solar, magia, tecnologia, etc.). Ele não perde SP por falta de comida (perda normal de 8 SP por dia, não recuperáveis a não ser com alimentação, por falta de comida e 16 SP por dia, não recuperáveis a não ser com água, por falta de água).",
+			"O jogador deve especificar o porquê o personagem não precisa comer ou beber e dizer qual tipo de alimentação alternativa usa. Se você não precisa, mas pode comer, você pode ganhar os bônus normais de alimentação comendo.",
+			"1 Ponto: Você não precisa se alimentar, não ganhando as vantagens de alimentação normais.",
+			"2 Pontos: Você recebe +1 Bônus de Vantagem no teste de Condição do próximo dia depois de uma noite de sono. Isso é equivalente a um personagem normal se alimentar e não acumula esses pontos.",
+			"• 3 Pontos: Você recebe +2 depois de uma noite de sono. Isso é equivalente a um personagem normal se alimentar e não acumula esses pontos."
+			]
     },
     {
         "nome": "Não dorme",
@@ -2238,6 +2364,13 @@ window.vantagensArray = [
             "O universo conspira a seu favor e você nunca deixa de estar apresentável, não importa o que aconteça. Mesmo que você passe um mês vivendo no meio do pântano sem tomar banho, a sujeira vai se arrumar de um jeito que apenas te faz parecer mais forte, sem realmente afetar sua aparência. Machucados e outros também acabam funcionando assim, seu rosto não pode ficar completamente inchado."
         ]
     },
+    {
+        "nome": "Profissional",
+        "pontos": "2",
+        "descricao": [
+			"O personagem é muito bom em profissões em geral e está expandindo suas áreas de conhecimento. Aumente a quantidade de profissões iniciais para 2 ao invés de 1."
+        ]
+    },	
     {
         "nome": "Protegido Indefeso",
         "pontos": "2",
@@ -2298,12 +2431,27 @@ window.vantagensArray = [
         ]
     },
     {
+        "nome": "Segunda Raça - Espectro",
+        "pontos": "3",
+        "descricao": [
+			"O personagem morreu em algum momento ou apenas perdeu o seu corpo físico, tornandose uma espécie de espectro (ou fantasma).",
+			"O jogador pode decidir não incluir qualquer uma (ou todas) das vantagens e desvantagens à seguir, alterando o custo final da vantagem Espectro. Some o custo/redutor de todas as vantagens/ desvantagens escolhidas ao custo inicial da vantagem morto-vivo para encontrar o custo final. O custo final não pode ser inferior a 0.",
+			"As desvantagens escolhidas não contam para o limite de 5 desvantagens por ficha. Tanto as vantagens quanto as desvantagens escolhidas passam a fazer parte de ‘Segunda Raça - Espectro’ e só existem dentro dela, por mais que possam funcionar exatamente como as normais. Um personagem não pode ter duas ou mais vantagens de “Segunda Raça”.",
+			"+1 - Transmigração: O personagem consegue interagir com seres mortos, sabendo o que aconteceu nos seus últimos instantes de vida seja ao ter um objeto da vítima ou entrar em contato com seu espírito/corpo.",
+			"+2 - Intangível: Através de uma canalização de energia (gasto de SP a ser combinado com o Mestre), o personagem é capaz de atravessar portas e paredes por alguns instantes, podendo ser ou não, notado pelo que há do outro lado.",
+			"+2 - Assombrar: O personagem não está mais vivo e torna-se uma assombração. Sua presença causa calafrios e assusta facilmente aqueles que são vivos. Você ganha superioridade em testes que envolvam inflingir medo através da sua condição.",
+			"-1 - Alimentação Ectoplásmica: O personagem não se alimenta por meios normais. Para poder manifestar a sua imagem e presença, ele depende de algo vivo que esteja ao seu redor e a cada intervalo X de tempo (a combinar com o Mestre), sem a presença de um ser vivo nas proximidades, o personagem perde 4 de SP que não podem ser recuperados até que a condição seja obedecida.",
+			"-2 - Assombrado pela morte: Você é assombrado pela maneira e condições em que morreu. Nos momentos que se lembra disso ou vê algo parecido, o personagem torna-se incapaz de fazer qualquer ação a não ser que passe com sucesso em um teste de Força de Vontade (FV) contra uma dificuldade estabelecida pelo Mestre.",
+			"-2 - Intocável : Você normalmente não consegue interagir com objetos físicos, como pegar objetos ou mover coisas. Só é possível com um gasto muito grande de energia (a ser definido pelo Mestre) em SP."
+        ]
+    },	
+    {
         "nome": "Segunda Raça - Morto Vivo",
         "pontos": "2",
         "descricao": [
             "O personagem se torna um temível morto-vivo. Claro, cada caso é um caso e como isso irá afetar o personagem e sua 'vida' pode variar muito. O jogador pode decidir não incluir qualquer uma (ou todas) das vantagens e desvantagens à seguir, alterando o custo final da vantagem Morto-Vivo. Some o custo/redutor de todas as vantagens/desvantagens escolhidas ao custo inicial da vantagem morto-vivo para encontrar o custo final. O custo final não pode ser inferior a 0.",
             "As desvantagens escolhidas não contam para o limite de 4 desvantagens por ficha. Tanto as vantagens quanto as desvantagens escolhidas passam a fazer parte de 'Segunda Raça - Morto-Vivo' e só existem dentro dela, por mais que possam funcionar exatamente como as normais.",
-            "+0 - Não Comer/Beber: O morto-vivo não pode nem precisa se alimentar/beber. O personagem não é capaz de se alimentar de forma alguma e nunca recebe stamina bônus através de alimentação.",
+            "+0 - Não Comer/Beber: O morto-vivo não pode nem precisa se alimentar/ beber. O personagem não é capaz de se alimentar de forma alguma e nunca recebe SP bônus através de alimentação.",
             "+0 - Morto: Você já está morto. Seus órgãos internos já não funcionam e você não precisa se preocupar tanto com temperatura. Funciona como a vantagem \"Sangue Frio\", com a exceção que você não tem nenhuma defesa natural contra temperaturas. Se ficar frio demais, você congela e não consegue mais se mover. Se ficar quente demais você cozinha, o que deve ser bem desagradável.",
             "+1 - Não Dorme: O morto-vivo não precisa dormir.",
             "+1 - Não Respira: O morto-vivo não precisa respirar.",
@@ -2374,8 +2522,8 @@ window.vantagensArray = [
         "descricao": [
 			"Você conhece um tipo de terreno como a palma da sua mão, seja por treinamento ou por ter nascido nele como ambiente natural. Escolha um:",
             "• Aquático: Você consegue segurar a sua respiração em até 2x o tempo normal para um membro comum da sua raça;",
-            "• Ártico: Ignore os efeitos do clima frio, mesmo que sejam bastante severos. Você não perde pontos de Stamina por hipotermia;",
-            "• Deserto: Ignore os efeitos do clima desértico e do forte sol, mesmo que sejam bastante severos. Você não perde pontos de Stamina por falta de água ou comida;",
+            "• Ártico: Ignore os efeitos do clima frio, mesmo que sejam bastante severos. Você não perde SP por hipotermia;",
+            "• Deserto: Ignore os efeitos do clima desértico e do forte sol, mesmo que sejam bastante severos. Você não perde SP por falta de água ou comida;",
             "• Floresta: Ganhe superioridade em testes de Furtividade ou Agilidade quando tentando se camuflar nesse tipo de ambiente;",
             "• Interiores / Urbano: Ganhe superioridade em testes de Furtividade ou Agilidade quando tentando se mover silenciosamente nesse tipo de ambiente;",
             "• Pântanos: Ganhe imunidade à venenos e doenças originárias desse tipo de ambiente;",
@@ -2402,7 +2550,7 @@ window.vantagensArray = [
         "nome": "Treinamento Pesado",
         "pontos": "3",
         "descricao": [
-            "O treinamento difícil e cansativo realizado pelo personagem aumentou seus limites. O MP máximo do personagem aumenta em +5. Essa vantagem não pode ser comprada múltiplas vezes."
+            "O treinamento difícil e cansativo realizado pelo personagem aumentou seus limites. O SP máximo do personagem aumenta em +5. Essa vantagem não pode ser comprada múltiplas vezes."
         ]
     },
     {
@@ -2448,7 +2596,30 @@ window.vantagensArray = [
             'A sua situação específica acabou sendo um resultado muito bom e tudo encaixa muito bem.',
             'Vocẽ não ganha vantagens em interações sociais, mas você sempre pode agir como o gênero que fosse se beneficiar mais em certo momento.'
         ]
-    }
+    },
+    {
+        "nome": "Ambidestria",
+        "pontos": "3",
+        "descricao": [
+			"O personagem é hábil com as duas mãos, não tendo dificuldades de manuseio com nenhuma arma em situações que exijam sua destreza motora. Essa vantagem nega as penalidades da mão inábil no personagem."
+        ]
+    },	
+    {
+        "nome": "Maestria Melee",
+        "pontos": "3",
+        "descricao": [
+			"O personagem possui treinamento com armas de longo alcance, tendo atingido o perfeito equilíbrio entre os prós e contras deste tipo de arma.",
+			"Personagens com essa vantagem que usem uma arma com o addon “Longo Alcance”, não sofrem as penalidades de não receber os modificadores de dano conforme descritas nele."
+        ]
+    },
+    {
+        "nome": "Maestria Ranged",
+        "pontos": "3",
+        "descricao": [
+			"O personagem possui treinamento com armas de curto alcance, tendo atingido o perfeito equilíbrio entre os prós e contras deste tipo de arma.",
+			"Personagens com essa vantagem que usem uma arma com o addon “Curto Alcance”, não sofrem as penalidades de não receber os modificadores de dano conforme descritas nele."
+        ]
+    }	
 ].sort(function (a,b) {
     var na = a.nome.toUpperCase().latinize();
     var nb = b.nome.toUpperCase().latinize();
@@ -2753,6 +2924,38 @@ window.desvantagensArray = [
         "requisitos": "Raça Kalkan"
     },
     {
+        "nome": "Flagelo Climático",
+        "pontos": "1",
+        "descricao": [
+			"A sua linhagem foi amaldiçoada e o efeito ainda persiste. Uma vez por dia ou sessão, o que durar menos, cada vez que o personagem chegar a um novo lugar, o clima muda para pior e as pessoas atrelam isso à sua maldição e a sua raça. O mestre tem o direito de vetar essa desvantagem na criação de personagem, se relevante."
+        ],
+        "requisitos": "Raça Kash'nir"
+    },
+    {
+        "nome": "Gash'nir",
+        "pontos": "3",
+        "descricao": [
+			"O seu personagem é um Gash’nir, um membro da raça que por algum motivo sofreu uma forte humilhação que o impede de retornar para seu lugar de origem, além de ser automaticamente hostilizado e ridicularizado por outros Kash’nir e outras raças, que não o reconhecem como um Kash’nir comum. Exemplos de humilhações podem ser: rosto revelado, máscara destruída, marcas de traição colocadas na máscara, no corpo, ter desobedecido o Cabal, etc."
+        ],
+        "requisitos": "Raça Kash'nir"
+    },
+    {
+        "nome": "Kush'nir",
+        "pontos": "5",
+        "descricao": [
+			"O personagem é um Kush’nir, significando alguém que elevou sua devoção ao Cabal ao extremo - um fanático com o objetivo de trazer glória, poder e riqueza para sua tribo. A máscara do personagem é grudada em seu rosto e não pode ser removida como prova disso. Removê-la ou causar dano pesado significaria a morte do personagem."
+        ],
+        "requisitos": "Raça Kash'nir"
+    },		
+    {
+        "nome": "Ímã de Desastre",
+        "pontos": "2",
+        "descricao": [
+			"Por serem ótimos sobreviventes e caçadores, os Kash’nirs tendem a serem hostilizados, mau tratados e vítimas de inveja e ciladas diversas. O personagem naturalmente atrai situações complicadas e encrencas em lugares cheios ou onde ele se acabe se destacando. Assim, as pessoas tendem a culpá-lo mesmo por coisas que ele não fez."
+        ],
+        "requisitos": "Raça Kash'nir"
+    },	
+    {
         "nome": "Favor Demoníaco",
         "pontos": "2",
         "descricao": [
@@ -2969,7 +3172,7 @@ window.desvantagensArray = [
         "nome": "Avareza",
         "pontos": "2",
         "descricao": [
-            "O personagem jamais divide o que tem com ninguém, e tem com principal motivação acumular dinheiro. O custo aumenta para 3 caso o personagem seja do arquétipo Mercante Príncipe."
+			"O personagem jamais divide o que tem com ninguém, e tem com principal motivação acumular dinheiro. Essa vantagem aumenta a quantia de pontos dada se o perso nagem for do arquétipo Mercante Príncipe para 3 Pontos."
         ]
     },
     {
@@ -3198,6 +3401,20 @@ window.desvantagensArray = [
         ]
     },
     {
+        "nome": "Desastrado",
+        "pontos": "2",
+        "descricao": [
+			"O personagem é totalmente desastrado e sempre que tenta fazer algo, acaba se enrolando. O personagem recebe penalidades ou inferioridade (a critério do mestre) em testes que requiram alguma habilidade física (Atletismo, Furtividade, Acrobacia, etc) ou ações relacionadas em geral."
+        ]
+    },
+    {
+        "nome": "Desempregado",
+        "pontos": "2 ou 3",
+        "descricao": [
+			"O personagem não tem nenhuma profissão ou talvez não faça questão de trabalhar. Reduza a quantidade de profissões iniciais do personagem para 0. Por três pontos, o personagem não não pode / quer aprender novas profissões, impossibilitando o ganho durante a aventura."
+        ]
+    },	
+    {
         "nome": "Destino Cruel",
         "pontos": "5",
         "descricao": [
@@ -3253,6 +3470,13 @@ window.desvantagensArray = [
             "Você sempre é capaz de dizer quando alguém está com algum sentimento forte e você sabe exatamente qual. Isso acontece por você copiar, involuntariamente, qualquer sentimento forte perto de você. Se alguém estiver depressivo a ponto de suicídio, você ficaria igual. Da mesma forma, se alguém estiver muito feliz, você também ficará!"
         ]
     },
+    {
+        "nome": "Envelhecimento Acelerado",
+        "pontos": "3",
+        "descricao": [
+			"O personagem tem alguma mutação genética, maldição ou -- em geral que o faz envelhecer mais rápido que os membros de sua raça. A velocidade do envelhecimento depende da especificação do jogador em sua história, bem como o motivo para isso estar acontecendo. O fato é que até o fim da campanha, o personagem provavelmente estará em outro estágio do envelhecimento em relação ao que entrou (de adulto para idoso, ou de jovem para adulto, por exemplo)."
+        ]
+    },	
     {
         "nome": "Enxaqueca",
         "pontos": "2",
@@ -3332,7 +3556,7 @@ window.desvantagensArray = [
     },
     {
         "nome": "Fiel",
-        "pontos": "4",
+        "pontos": "2",
         "descricao": [
             "O personagem é capaz de dar a própria vida por seus amigos, sem pensar duas vezes. Às vezes o excesso de fidelidade faz com que o personagem faça coisas que os seus aliados não queriam que fizesse."
         ]
@@ -3444,6 +3668,16 @@ window.desvantagensArray = [
         ]
     },
     {
+        "nome": "Ímã de Esquisitissses",
+        "pontos": "4",
+        "descricao": [
+			"Coisas bizarras e estranhas acontecem com você com uma frequência alarmante. O personagem é como uma força magnética que atrai eventos estranhos para si. Você é aquele com quem os demônios que estão destruindo o mundo param para conversar. Itens mágicos e propriedades assustadoras acham uma forma de te atingir.",
+			"O primeiro cão a falar no século XXI conversa com você sobre os problemas pessoais dele. Entidades cósmicas abrem portais bizarros que teoricamente causariam a destruição do mundo, mas na realidade apenas querem que você os visite amigavelmente.",
+			"Esses são alguns dos exemplos de coisas que podem acontecer e o que exatamente acontece fica a critério do Mestre. O Jogador pode definir na história o porque dele ter essa atração com o bizarro ou pode ser simplesmente algo natural.",
+			"Somente um ou dois (a critério do mestre) jogadores de um grupo podem comprar essa desvantagem."
+       ]
+    },	
+    {
         "nome": "Impulsividade",
         "pontos": "1",
         "descricao": [
@@ -3503,7 +3737,7 @@ window.desvantagensArray = [
         "nome": "Insônia",
         "pontos": "4",
         "descricao": [
-            "O personagem tem dificuldades de dormir, e na maior parte do tempo realmente não consegue dormir e descansar apropriadamente. Isso causa diversas penalidades na vida do personagem, como fadiga, inferioridade / penalidades em atributosteste (dependendo de quantos dias o personagem não dormiu) e quando o personagem dormir ele sempre recupera um ponto de Stamina a menos, nunca ficando com sua Stamina no máximo através desse método. Essa desvantagem não pode coexistir com a vantagem \"Não Dorme\"."
+			"O personagem tem dificuldades de dormir, e na maior parte do tempo realmente não consegue dormir e descansar apropriadamente.  Isso causa diversas penalidades na vida do personagem, uma vez que ele sempre começa o dia com a metade do seu valor rolado de Condição. Quando o personagem dormir ele sempre recupera seu HP e SP para 80% de seus valores máximos, nunca acima nem abaixo. Essa desvantagem não pode coexistir com a vantagem “Não Dorme”."
         ]
     },
     {
@@ -3783,7 +4017,8 @@ window.desvantagensArray = [
         "nome": "Rosto de Mentiroso",
         "pontos": "2",
         "descricao": [
-            "O rosto do personagem não inspira confiança, causando penalidades ou inferioridade em testes sociais onde convencer alguém de que fala a verdade é relevante."        ]
+            "O rosto do personagem não inspira confiança, causando penalidades ou inferioridade em testes sociais onde convencer alguém de que fala a verdade é relevante."
+			]
     },
     {
         "nome": "Saco sem fundo",
@@ -3841,6 +4076,13 @@ window.desvantagensArray = [
             "O personagem tem um sofrimento físico ou mental constante por algum motivo obscuro ou mesmo sem razão. O jogador deve explicar na história do personagem caso isso tenha um motivo."
         ]
     },
+    {
+        "nome": "Sono Pesado",
+        "pontos": "2",
+        "descricao": [
+			"O personagem dorme como uma pedra, dificilmente sendo acordado por barulhos ou até mesmo pessoas tentando acordá-lo. É necessário um esforço muito grande para tirar o personagem do seu sono, como jogar água gelada, uma explosão considerável ou coisas do tipo. Barulhos mundanos como moedas caindo no chão, esbarrar numa lata ou até mesmo acender uma lanterna no rosto da pessoa, não irão acordá-la."
+        ]
+    },	
     {
         "nome": "Sotaque",
         "pontos": "1",
@@ -3972,7 +4214,695 @@ window.desvantagensArray = [
             "Nos dois casos, o personagem pode acabar perdendo o auto-controle ao se ferir de uma forma ruim.",
             "Você não pode escolher essa desvantagem caso sua aparência seja inferior a 3. Aparência é igual ao seu nível em Carisma, mas isso pode ser alterado através de vantagens."
         ]
-    }
+    },
+ /* Desvantagens de Arquétipo */
+    {
+        "nome": "Trigger",
+        "pontos": "3",
+        "descricao": [
+			"Escolha uma emoção que representa sua monstruosidade (exemplo: Raiva). Essa vantagem oferece algumas mudanças a depender da vantagem escolhida para a Abominação:",
+			"•	O Monstro Acorda: Sentir essa emoção em grandes quantidades força uma transformação de O Monstro Acorda. Além disso, você precisa sentir essa emoção para se transformar.",
+			"•	Controle Constante: O personagem passa a sentir medo... medo da sua emoção Trigger. ",
+			"Além desses efeitos, sob o julgamento do mestre, a emoção afetando a Abominação pode ser tão grande que ele simplesmente perde o controle e se torna uma besta que enxerga tudo como inimigos. Abominações que perderam o controle, mas que possuam \"Controle Constante\" podem reter uma quantidade mínima de sua consciência enquanto fora de controle."
+		],
+        "requisitos": "Arquétipo Abominação"
+    },		
+	{
+        "nome": "Incapaz",
+        "pontos": "3",
+        "descricao": [
+			"O personagem não suporta ver aliados ou pessoas próximas em uma situação grave de saúde. Caso um personagem ou NPC do grupo do personagem esteja com HP próximo à 1, com perigo de desmaiar, ficar fora de combate ou em perigo de morte, o Acólito da Luz entra em pânico e não sabe como reagir ao certo.",
+			"As implicações mecânicas e narrativas variam de acordo com o que o Mestre desejar, podendo exigir testes de Força de Vontade para o personagem decidir o que vai fazer, receber penalidades em outros testes ou algo do tipo."
+        ],
+        "requisitos": "Arquétipo Acólito da Luz"
+    },
+    {
+        "nome": "Unidade Especial",
+        "pontos": "2",
+        "descricao": [
+		"O personagem acredita que seus serviços são especiais e mais importantes que as funções de outras unidades de um grupo ou de um exército. Por isso, o personagem costuma agir de forma arrogante cobrando uma taxa monetária para poder desempnhar seus serviços, mesmo que seja para conhecidos e amigos próximos. “Amigos amigos, negócios a parte”.",
+		"O acólito com essa desvantagem acredita que se alguém realmente acha seu trabalho algo imprescindível e excelente, que essa pessoa irá provar sua fidelidade pagando a taxa. Se o personagem deixará a pessoa morrer ou não por isso, é um critério pessoal do jogador em até que nível ele gostaria de levar essa desvantagem. A taxa deve ser sempre por volta de: (Nível do personagem) * 20 moedas de ouro."		
+        ],
+        "requisitos": "Arquétipo Acólito da Luz"
+    },
+    {
+        "nome": "Toxicidade",
+        "pontos": "3",
+        "descricao": [
+			"Essa desvantagem oferece uma série de efeitos negativos e instáveis que acontecem com aqueles que ingerirem as suas poções criadas pela “Profissão: Alquimia” ou pela vantagem “Apotecário”.",
+			"Para cada poção ou item criado por tais fontes, a vítima deve rolar um teste de Constituição contra uma dificuldade  de 6 à 8 (variando com a potência do item a ser consumido). Caso o personagem falhe, ele deve rolar 1d6 e receber uma penalidade. Essas penalidades podem ser narrativas ou mecânicas, a gosto do mestre, onde:",
+			"• 1 e 2: O personagem não consegue ingerir o item consumido com sucesso e sente-se mal, imediatamente vomitando-o e não recebendo os efeitos que o item concederia.",
+			"• 3 e 4: O personagem recebe os efeitos do item mas sente um desconforto grande. Ele começa a ter alucinações dentro e fora do seu turno, vendo coisas que não estão de fato acontecendo. ",
+			"• 5: O personagem recebe os efeitos do item mas perde completamente sua visão (ou outro sentido, caso  personagem já seja cego) por 1 rodada.",
+			"• 6: O personagem recebe os efeitos do item, mas desmaia instantâneamente ao fim do seu turno. Ele fica incapaz de fazer qualquer ação até o início do seu próximo turno, quando o mesmo acordará."
+        ],
+        "requisitos": "Arquétipo Alquimista"
+    },
+    {
+        "nome": "Vida Comum",
+        "pontos": "2",
+        "descricao": [
+			"O personagem não é alguém muito especial sem o seu artefato ou sem estar usando-o. Enquanto não estiver utilizando o poder do seu artefato, o personagem tem todos os seus atributos de combate reduzidos para 0 independente dos valores reais deles."
+        ],
+        "requisitos": "Arquétipo Arauto da Profecia"
+    },
+    {
+        "nome": "Poder Excessivo",
+        "pontos": "2",
+        "descricao": [
+			"O artefato que o personagem carrega é excessivamente poderoso, e de certa forma, perigoso até mesmo para ele. Cada vez que o arauto utiliza dos poderes da sua relíquia, ele perde algo ou fica cada vez mais difícil de controlá-lo. Escolha na história do personagem, e se possível junto com o mestre, quais são as consequências de utilizar o poder da relíquia em questão.",
+			"Podem ser coisas simples que vão se acumulando de formas perigosas ou coisas drásticas logo de começo. Por exemplo, o uso do artefato faz com que lentamente o personagem desenvolva uma tremedeira em suas mãos que vai se agravando até o ponto dele não conseguir segurar mais uma espada normalmente. Ou então, o personagem poderia ficar completamente exausto e cheio de hematomas cada vez que terminar de usar o artefato."
+        ],
+        "requisitos": "Arquétipo Arauto da Profecia"
+    },		
+    {
+        "nome": "Zona de Conforto Fragilizada",
+        "pontos": "3",
+        "descricao": [
+			"O personagem está acostumado a causar grande destruição à distância, mas não a ser golpeado ou se machucar muito. Golpes físicos causados contra o personagem causam +1 de dano final (antes de passar pelas RDs)."
+        ],
+        "requisitos": "Arquétipo Artilheiro"
+    },
+    {
+        "nome": "Disparo prematuro",
+        "pontos": "3",
+        "descricao": [
+			"Em situações tensas ou decisivas o Artilheiro nem sempre pode se concentrar e ter a frieza que deveria. A cada combate, antes do primeiro teste de ATK que o artilheiro fosse fazer com sua arma, ele rola também um teste de Força de Vontade contra uma dificuldade estabelecida pelo Mestre. Caso ele falhe neste teste, o ataque erra automaticamente. Esse efeito ocorre somente uma vez por batalha."
+        ],
+        "requisitos": "Arquétipo Artilheiro"
+    },
+    {
+        "nome": "Lua de Sangue",
+        "pontos": "3",
+        "descricao": [
+			"A vida do assassinato não é para todos - é muito comum ouvir histórias de assassinos e mercenários que foram acometidos por uma desordem psíquica conhecida como “Lua de Sangue”. Ao sentir que uma vítima está fraca ou próxima da morte, o personagem com essa desvantagem entra num estado de insanidade onde não descansará até assassinar a vítima de uma maneira sangrenta. Isso geralmente é visto com repúdio e desnecessário por outras pessoas, mesmo que a vítima “mereça”."
+        ],
+        "requisitos": "Arquétipo Assassino"
+    },
+    {
+        "nome": "Cheiro de Morte",
+        "pontos": "2",
+        "descricao": [
+			"O personagem não é muito bom em esconder pistas ou traços de que fez um trabalho recentemente. Dessa forma, após assassinar um alvo, alguém de alguma maneira encontrará uma pista que pode levar até o personagem e causar complicações com a polícia ou guarda local. Eventualmente, se muitas pistas forem se acumulando, uma organização de segurança maior pode esquematizar uma ação contra o Assassino a fim de derrotá-lo, prendê-lo ou pará-lo."
+        ],
+        "requisitos": "Arquétipo Assassino"
+    },
+    {
+        "nome": "Conexão Astral",
+        "pontos": "2",
+        "descricao": [
+			"O personagem tem uma conexão muito intensa com os astros, tão intensa que isso extrai parte da disposição física, mental e espiritual dele. O personagem com essa desvantagem começa o dia com -10 SP máximos que só podem ser restaurados após uma boa refeição e no mínimo 1 hora de descanso dentro da história."
+        ],
+        "requisitos": "Arquétipo Astromante"
+    },
+    {
+        "nome": "Constelação Errada",
+        "pontos": "2",
+        "descricao": [
+			"Ao início de cada dia, o personagem mistura o seu baralho cósmico e retira algumas cartas para fazer a leitura sobre a sua sorte do dia. A mensagem quase sempre tem uma conotação ruim e que desestimula o personagem à fazer algo. O personagem acredita cegamente que a previsão está certa de que algo ruim vai ocorrer com ele e isso influencia sua relação com o mundo naquele dia."
+        ],
+        "requisitos": "Arquétipo Astromante"
+    },
+    {
+        "nome": "Escola dos Céus",
+        "pontos": "3",
+        "descricao": [
+			"Essa desvantagem só pode ser comprada  caso o jogador também compre a vantagem “Deck Cósmico”. O personagem estudou Astromancia específica em uma das duas sub-escolas principais: A escola diurna ou a escola noturna. Escolha uma delas para si: o personagem só pode usar o Deck Cósmico em um período do dia de acordo com a sua escola.",
+			"Se a escola diurna for escolhida, o Deck só  funciona com seus efeitos descritos durante o período do dia. Se a escola noturna for escolhida, o Deck só  funciona com seus efeitos durante o período da noite."
+        ],
+        "requisitos": "Arquétipo Astromante"
+    },	
+    {
+        "nome": "Hábito Ruim",
+        "pontos": "0",
+        "descricao": [
+			"Durante suas aventuras, você aprendeu um hábito ruim de algum lugar. Você pode escolher uma desvantagem de algum outro arquétipo. Você recebe a quantidade total de pontos dessa desvantagem. Hábito Ruim só pode ser escolhida uma vez."
+        ],
+        "requisitos": "Arquétipo Aventureiro"
+    },
+    {
+        "nome": "Dia de Fúria",
+        "pontos": "2",
+        "descricao": [
+			"A origem do personagem prioriza batalhas e confrontos diversos, mesmo que sejam combates amistosos sem o objetivo de matar alguém. Assim sendo, o personagem precisa ao menos uma vez por episódio entrar em uma batalha contra monstros, inimigos ou simplesmente surrar (ou ser surrado) alguém. Caso o bárbaro passe um dia ou episódio sem entrar em combate, ele começa a tornar-se incontrolavemente raivoso, impulsivo e estressado, recebendo penalidades sociais à critério do Mestre."
+        ],
+        "requisitos": "Arquétipo Bárbaro"
+    },
+    {
+        "nome": "Territorial",
+        "pontos": "3",
+        "descricao": [
+			"O bárbaro vem de uma cultura onde destruir cidades, vilarejos e ídolos de tribos opostas a sua significa dominação, conquista e superioridade. Dessa forma, sempre que chegar em um local novo que contenha, por exemplo, alguma imagem forte, seja de um Deus, aparatos tecnológicos ou um sistema político bem definido, ele tentará destruir tais coisas o vandalizá-las para “mostrar que está ali”. Essa atitude justamente busca atrair a atenção dos membros daquela sociedade para reconhecê-lo como alguém que deve ser temido e respeitado, mas geralmente é o contrário que acontece: o personagem pode ser perseguido, preso ou hostilizado."
+        ],
+        "requisitos": "Arquétipo Bárbaro"
+    },
+    {
+        "nome": "A rima perfeita",
+        "pontos": "2",
+        "descricao": [
+			"O personagem é obcecado em fazer rimas a todo momento que puder, seja isso um costume de suas canções ou algo que ele leva para o lado pessoal. Existe algo que explica esse comportamento - uma crença de que algo ruim irá acontecer se ele não rimar, que algum Deus irá castigá-lo ou algo do tipo. Crie um motivo para o personagem fazer isso - ele agora tentará rimar sempre que possível durante os episódios. Ficar sem rimar por muito tempo é como um crime para ele, podendo acarretar em danos psíquicos ou penalidades em testes diversos (à critério do mestre)."
+        ],
+        "requisitos": "Arquétipo Bardo"
+    },
+    {
+        "nome": "Conto do Bardo",
+        "pontos": "3",
+        "descricao": [
+			"O bardo sabe que se ele estiver morto, não haverão histórias e canções para serem jogadas aos quatro ventos sobre feitos heróicos. Justamente por isso, ele não tem problemas em acompanhar expedições perigosas ou missões suicidas seja para o que for, entretanto, ele não irá se arriscar quando a hora chegar. No momento mais crítico ou decisivo de um importante evento para a história ou episódio, principalmente onde os colegas do Bardo dependam dele, ele irá fugir ou agir com um instinto de auto-preservação, evitando ao máximo colocar-se em um perigo onde a morte clara chame por ele.",
+			"Esse efeito pode ocorrer em combate - caso o Bardo sinta que está extremamente ameaçado e em perigo, ele pode usar uma ação grátis em seu turno para“fugir” do combate, desde que as situações permitam."
+			],
+        "requisitos": "Arquétipo Bardo"
+    },
+    {
+        "nome": "Um dia de caça",
+        "pontos": "3",
+        "descricao": [
+			"Apesar do caçador estar acima de tudo na cadeia de suas presas, há algo além que está acima dele na cadeia alimentar. Escolha uma criatura específica ou um ser que esteja acima das capacidades do caçador nesse quesito. Este ser irá transformar o personagem em sua caça de tempos em tempos, tentando eliminá-lo por algum motivo qualquer que pode ser especificado na história do personagem.",
+			"Embora esta desvantagem seja parecida com “Inimigo Pessoal”, ela é menos severa. O ser que caça o personagem não está aficcionado em destruir o personagem à todo custo, ele é apenas mais um troféu a ser conquistado por tal criatura ou inimigo e eventualmente será alvo do mesmo."
+		],
+        "requisitos": "Arquétipo Caçador"
+    },
+    {
+        "nome": "Odiado pela Selva",
+        "pontos": "2",
+        "descricao": [
+				"Esta desvantagem altera o parcialmente o funcionamento da vantagem “Rei da Selva”, caso o personagem a tenha. O caçador não é mais só temido por algumas criaturas, amedrontando-as. Ele agora e odiado pelas mesmas e visto como um ser repugnante que precisa ser destruído à todo custo. Animais de nível maior ou igual ao do caçador irão atacá-lo e tentar destruí-lo sempre que possível, mesmo que sejam treinados. "
+			],
+        "requisitos": "Arquétipo Caçador"
+    },
+    {
+        "nome": "Corrupção Final",
+        "pontos": "3",
+        "descricao": [
+			"O cavaleiro negro está se tornando lentamente corrupto à um ponto que não há volta. Devido ao intenso uso de artes e magias proibidas, seu corpo está morrendo e cedendo aos efeitos do tempo mais rapidamente. A corrupção corre pelas veias dele e a cada dia que passa ele está mais próximo da sua morte.",
+			"Substitua o SP máximo do personagem para um valor máximo de 35, sendo isso inalterável por nenhum outro efeito ou vantagem. A cada início de novo dia ou episódio (combinado entre Mestre e Jogador) o personagem rola um teste de Força de Vontade contra uma dificuldade imposta pelo Mestre, afim do personagem resistir aos efeitos da morte eminente. Para cada vez que ele falhar, remova 2 pontos de SP máximo do personagem permanentemente. Ao chegar em 0, o personagem morre definitivamente. O mestre pode remover 1 ponto de SP a cada dois episódios, sem a necessidade de testes, se desejar (o jogador deve ser avisado disso)."
+			],
+        "requisitos": "Arquétipo Cavaleiro Negro"
+    },
+    {
+        "nome": "Dízimo",
+        "pontos": "2",
+        "descricao": [
+			"Devido a suas crenças ou talvez a organização religiosa que segue, você sempre compartilha suas riquezas e bens materiais em prol de algo maior. O personagem faz oferendas ao seu deus ou doa parte do seu poder monetário sempre que ganhar moedas de ouro, oferta 30% do valor total recebido à esta causa. Itens podem ser doados por completos também, caso o personagem deseje ou sua religião permita."
+			],
+        "requisitos": "Arquétipo Clérigo"
+    },
+    {
+        "nome": "Fé Cega",
+        "pontos": "3",
+        "descricao": [
+			"O personagem segue cegamente uma religião e todos os seus dogmas. Caso faça parte de uma organização religiosa, ele nunca questionará as ordens dos seus superiores ou mesmo a vontade da sua divindade. Desrespeitar isso pode causar penalidades severas na mente do personagem, fica a critério do Mestre as implicações narrativas disso. ",
+			"Ao mesmo tempo, o personagem também não aceita que sua crença e ensinamentos sejam questionados ou duvidados por terceiros. Caso isso aconteça, o personagem é tomado por uma imensa fúria e pode levar a situação à extremos apenas para convencer os outros de que sua fé é a única correta. "
+		],
+        "requisitos": "Arquétipo Clérigo"
+    },
+    {
+        "nome": "Oprimido",
+        "pontos": "3",
+        "descricao": [
+			"Apesar de serem ótimos performistas e artistas, os Dançarinos também podem ser muitas vezes destratados ou desconsiderados, seja em opinião, utilidade em combate ou sobre suas capacidades. O fato é que o personagem com essa desvantagem é geralmente oprimido pelas outras pessoas, mesmo que sem querer, por passar uma imagem de incapaz ou inútil sobre coisas que envolvam-no.",
+			"Isso resulta em muitas vezes, o Dançarino ser deixado para trás em expedições ou ser o primeiro a ser mandado embora em um estabelecimento. Em planos importantes relacionados ao futuro, o Dançarino é tratado como alguém que mais pode atrapalhar do que ajudar, sendo tratado como “café com leite”."
+			],
+        "requisitos": "Arquétipo Dançarino"
+    },
+    {
+        "nome": "Excessivamente Supérfluo",
+        "pontos": "2",
+        "descricao": [
+			"O personagem é excessivamente supérfluo e otimista em relação ao mundo e as pessoas. Isso é geralmente visto como um traço irritante e desnecessário em momentos onde o melhor que o personagem fazia, era ficar calado e não tentar dizer coisas que não ajudam em nada. ",
+			"Essa desvantagem também faz o personagem se preocupar mais com coisas que não seriam tão importantes do que os grandes detalhes de uma imagem. Por exemplo, em uma guerra, se preocupar se todos os soldados estão com os cintos bem amarrados ou se sabem MESMO lutar."
+			],
+        "requisitos": "Arquétipo Dançarino"
+    },		
+    {
+        "nome": "Síndrome de Conduta",
+        "pontos": "2",
+        "descricao": [
+			"Por ser facilmente reconhecido, respeitado e envolvido em atos de proteção ao outro, o defensor carrega uma grande responsabilidade.  Caso o personagem tome alguma decisão que leve à uma situação catastrófica ou demonstre fraqueza, tudo pode se inverter e você passa a ser ridicularizado e responsabilizado por tudo de ruim que acontecer. Isso ocorre tanto pelas pessoas mais comuns que não entendem o que de fato aconteceu quanto pode acontecer com pessoas próximas. ",
+			"O fato é que o personagem será atrelado como causa das falhas em questão. Ao contrário de “Égide Rachado”, esta vantagem faz o Defensor ser culpabilizado temporariamente como se fosse um alvo preferido para as reclamações de terceiros."
+		],
+        "requisitos": "Arquétipo Defensor"
+    },
+    {
+        "nome": "Égide Rachado",
+        "pontos": "3",
+        "descricao": [
+			"Em algum momento do passado o personagem passou por uma experiência traumática onde não foi capaz de proteger alguém querido ou importante por algum motivo. Isso causou uma enorme repercussão na época até hoje tal fato precede o personagem em ambientes públicos, fazendo-o ser reconhecido por isso. Essa questão causa grande sofrimento no personagem, que luta diariamente para superar este evento.",
+			"Mesmo que o personagem se prove útil ou capaz de proteger alguém nos dias atuais, essa “mancha do passado” nunca sairá da mente das pessoas."
+		],
+        "requisitos": "Arquétipo Defensor"
+    },
+    {
+        "nome": "Confiança Excessiva",
+        "pontos": "3",
+        "descricao": [
+			"O personagem confia  excessivamente em suas capacidades físicas e mentais, especialmente em combates. O Dragoon com essa desvantagem tem a tendência de iniciar confrontos ou aceitar desafios onde ele esteja em desvantagem em termos de número. Por exemplo, o personagem não recuaria diante um confronto onde estivessem ele, dois aliados contra sete inimigos. Por mais que seus aliados possam não desejar participar, o Dragoon nunca recusará um combate ou desafio de alguém em maior número que o seu grupo."
+		],
+        "requisitos": "Arquétipo Dragoon"
+    },
+    {
+        "nome": "Pouco Sutil",
+        "pontos": "2",
+        "descricao": [
+			"Não é dificil encontrar alguém andando com uma arma de haste enorme por aí, seja ela o que for. Desde que esteja usando uma arma de haste, o personagem com essa desvantagem é incapaz de se misturar em multidões afim de dispersar a atenção de alguém e coisas do tipo. Testes sociais ou furtivos que envolvam o personagem são geralmente uma categoria maior do que para os outros caso ele esteja portando sua arma, seja pela dificuldade de carregá-la ou pela sua aparência/altura chamativa."
+		],
+        "requisitos": "Arquétipo Dragoon"
+    },
+    {
+        "nome": "Metamorfose Falha",
+        "pontos": "2",
+        "descricao": [
+			"Esta desvantagem só pode ser adquirida caso o personagem tenha a vantagem “Metamorfose”. Algo no processo de transformação do Druida não é tão natural e flúido como deveria ser - ele só consegue se transformar em um animal desde que carregue algo dele consigo. Podem ser coisas como uma pena, escama, parte do pêlo, dentes de um lobo, etc. Sem a posse de tal objeto, o personagem não pode se transformar. Os objetos em questão possuem o peso de 0,5 no inventário do personagem."
+		],
+        "requisitos": "Arquétipo Druida"
+    },
+    {
+        "nome": "Protetor da Vida Selvagem",
+        "pontos": "3",
+        "descricao": [
+			"O personagem conviveu ou cresceu na natureza por muito tempo, o que mudou completamente a forma que ele encara a vida selvagem. Para o personagem, toda vida é asagrada - desde uma pequena flor indefesa até o maior dos animais e ele fará de tudo para proteger a integridade e vida de tais seres.",
+			"O personagem é capaz de dar a própria vida e levar uma surra se for necessário, nem que seja para proteger uma tartaruga maltratada por um zoológico. Ele irá à níveis extremos de ações para conseguir protegê-los, libertá-los ou meramente fazer o bem para algum ser da natureza que precise.",
+			"Isso não significa que o personagem também não coma vegetais, carne ou frutas - ele pode ter uma própria filosofia na qual acredita sobre a cadeia alimentar e como a balança da vida deve ser preservada."
+		],
+        "requisitos": "Arquétipo Druida"
+    },
+    {
+        "nome": "Pedra no Sapato",
+        "pontos": "3",
+        "descricao": [
+			"Você acredita que seu jeito de lutar é melhor que o de todos os outros combatentes, até mesmo do seu próprio grupo de aliados. Sempre que pode você tenta convencer as pessoas ao seu redor disso, seja com ações ou conversas e sempre que o assunto surge você tenta demonstrar a superioridade de sua tecnica."
+		],
+        "requisitos": "Arquétipo Duelista"
+    },
+    {
+        "nome": "Não no meu uniforme",
+        "pontos": "2",
+        "descricao": [
+			"O personagem não gosta de se sujar ou ter sua beleza afetada desnecessariamente, principalmente em combate. Lama, poeira e principalmente manchas de sangue te tiram o sono e desviam a sua atenção imediatamente. O personagem que tiver suas vestimentas muito sujas, rasgadas ou manchadas sofre penalidades em testes relacionados à concentração, reações, reflexos e até mesmo a Inteligência geral. Ele fará de tudo para arrumar o que estiver errado e pode perder horas tentando limpar suas roupas, armas e armaduras.",
+			"Para o personagem, isso acaba sendo até mais importante do que vencer alguns combates ou resolver uma disputa, o que resulta numa desaprovação por parte dos outros pela atitude egoísta e superficial do mesmo."
+		],
+        "requisitos": "Arquétipo Duelista"
+    },	
+    {
+        "nome": "Bloqueio dos Elementos",
+        "pontos": "2",
+        "descricao": [
+			"or algum motivo, o personagem não é capaz de gerar o próprio elemento e manipular o fluxo de Mana para criar manifestações da natureza num piscar de olhos, como a maioria dos elementalistas. Dessa forma, o personagem só consegue manipular elementos que estejam presentes no ambiente à sua volta e não criá-los. Exemplo: Se o personagem estiver numa colina com árvores e um rio, ele poderia usar do elemento Terra + Água em suas ações.",
+			"Isso vale até mesmo para personagens que controlem apenas um elemento devido as vantagens deste arquétipo. Uma boa solução narrativa que alia às mecânicas do sistema pode ser fazer o personagem carregar algo que gere esse elemento para ele. ",
+			"Exemplo: um cantil com água, um isqueiro, um gerador elétrico, sacos com rochas e areia, etc. Ainda assim, tais objetos devem ser de uso limitado e consumíveis, estimula-se que o Mestre não os faça serem eternos justamente para valorizar esta desvantagem."
+		],
+        "requisitos": "Arquétipo Elementalista"
+    },
+    {
+        "nome": "Instabilidade Natural",
+        "pontos": "3",
+        "descricao": [
+			"O elementalista contém muito poder disponível para uso dentro de si e isso pode ser extremamente perigoso se não for tomado cuidado. Ao usar uma ação que envolva manipulação de elementos tanto dentro ou fora de combate, o personagem deve rolar um teste de Arcanismo com dificuldade a ser definida pelo Mestre. Caso o personagem falhe, narrativamente algo ruim ou uma catástrofe relacionada à aquele elemento pode se iniciar. ",
+			"Por exemplo, ao tentar criar espinhos de pedra do chão para atacar um inimigo, o elementalista pode falhar no controle e criar uma fissura que vai se abrindo em baixo do seu grupo de aliados, colocando-os em perigo."
+		],
+        "requisitos": "Arquétipo Elementalista"
+    },
+    {
+        "nome": "Dificuldade de Concentração",
+        "pontos": "2",
+        "descricao": [
+			"O personagem tem dificuldades em se concentrar para registrar os eventos importantes em questão. Toda vez que ele tentar escrever algo ou precisar se focar para relatar algo, o personagem deve rolar um teste de Força de Vontade (FV) com uma dificuldade a ser definida pelo Mestre afim de conseguir não se distrair com outras coisas."
+		],
+        "requisitos": "Arquétipo Escriba"
+    },
+    {
+        "nome": "Meus escritos",
+        "pontos": "2",
+        "descricao": [
+			"Você carrega com você algum caderno, papiro ou bloco onde você faz anotações sobre tudo o que você vê ou descobre. Além disso, possui impressões pessoais e outras anotações mais íntimas, é a história da sua vida. Esse item é de suma importância pra você e por muitas vezes pode valer mais que a vida de uma pessoa. O escriba não medirá esforços para que tais itens mantenham-se intactos."
+		],
+        "requisitos": "Arquétipo Escriba"
+    },
+    {
+        "nome": "Conhecimento é Poder",
+        "pontos": "3",
+        "descricao": [
+			"O escriba já tinha registros consideráveis sobre diversas coisas e eventos. Muitas das coisas que estavam escritas ainda não estavam completas ou continham informações sigilosas/importantes. Dessa forma, algo aconteceu na história do personagem que o fez perder tais papéis ou que eles se espalhassem pelo mundo de mão em mão. Agora, terríveis segredos ou descobertas importantes que somente o Escriba tinha, estão em outras mãos. Defina na história do personagem quais eram tais fatos e dê uma estimativa do que o personagem perdeu / quantidade de informações perdidas. ",
+			"Além disso, o personagem agora carrega uma imensa culpa e preocupação consigo, tentando recuperar o que lhe foi tirado."
+		],
+        "requisitos": "Arquétipo Escriba"
+    },
+    {
+        "nome": "Mente forte, corpo fraco",
+        "pontos": "3",
+        "descricao": [
+			"Nem todos os estrategistas foram preparados para entrarem em situações de perigo ou que exigam muito das suas capacidades físicas. Dessa forma, um personagem com essa desvantagem recebe inferioridade (ver Grimório de Especialidades) no primeiro teste de um episódio/sessão em perícias onde os atributos Força, Constituição e Agilidade sejam norteadores."
+		],
+        "requisitos": "Arquétipo Estrategista"
+    },
+    {
+        "nome": "Planejamento Excessivo",
+        "pontos": "2",
+        "descricao": [
+			"Apesar do Estrategista ser uma importante peça tática dentro de combate ou fora dele, nem sempre seus planos são fáceis de serem elaborados. O personagem com essa desvantagem tem uma tendência a planejar demais e considerar todas as opções possíveis antes de tomar decisões tanto dentro de combate ou fora dele, o que pode ocasionar penalidades e problemas narrativos (a critério do Mestre). ",
+			"Em termos práticos, seria possível dizer que caso o personagem esteja se preparando para uma guerra daqui à um mês, ele provavelmente começaria desde já a se preparar excessivamente, perdendo noites de sono e afetando pessoas próximas com a sua neurose."
+		],
+        "requisitos": "Arquétipo Estrategista"
+    },
+    {
+        "nome": "Perfeccionismo",
+        "pontos": "3",
+        "descricao": [
+			"O ferreiro não adimite defeito em suas criações e tenta sempre fazer o uso máximo dos materiais disponíveis.  Qualquer criação feita através do sistema de Profissões que tenha Qualidade menor que 100% (ver Grimório de Especialidades) é automaticamente descartada, assim perdendo todos os ingredientes utilizados na criação e destruindo o item no processo."
+		],
+        "requisitos": "Arquétipo Ferreiro"
+    },
+    {
+        "nome": "Casa de Ferreiro, espeto de pau",
+        "pontos": "2",
+        "descricao": [
+			"O Ferreiro não tem muita confiança nas suas próprias criações, seja por não ter confiança própria, nos materiais ou na técnica que emprega. Dessa forma,  ele nem mesmo as usa e sempre que precisa de algum equipamento novo, acaba comprando de outras pessoas. O personagem então não pode usar nenhum tipo de item criado por ele, seja com qual profissão ou situação que for.",
+			"Caso esse fato venha a tona, o personagem enfrenta muitos problemas sociais ou econômicos afim de tentar responder porque outras pessoas deveriam comprar ou usar suas criações se nem ao menos o próprio personagem usa. "
+		],
+        "requisitos": "Arquétipo Ferreiro"
+    },
+    {
+        "nome": "Casta",
+        "pontos": "3",
+        "descricao": [
+			"O personagem é tratado como uma versão inferior da sua raça e também do seu arquétipo, sendo muitas vezes perseguido para servir como escravo para outras pessoas. Na grande maioria das vezes o personagem é visto mais como uma mercadoria do que um ser vivo."
+		],
+        "requisitos": "Arquétipo Gladiador"
+    },
+    {
+        "nome": "Fugitivo",
+        "pontos": "2",
+        "descricao": [
+			"O personagem por algum motivo está fugindo de um grupo de pessoas, de uma pessoa em específico ou de uma organização. Isso poderia ser desde o contexto do gladiador ser um ex-escravo que se libertou do cativeiro ou por ser um mercenário que abandonou um trabalho cruel pela metade ao reparar que não era certo continuar.",
+			"Isso difere da desvantagem “Procurado pelas Autoridades” por não vincular o grupo que procura o personagem à uma autoridade legal. Dessa forma, qualquer tipo de organização (boa ou ruim) pode estar no encalço do personagem.",
+			"As consequências disso se dão de diversas formas que o Mestre pode usar, como problemas sociais, problemas em conseguir informações, etc. Ex: O grupo não pode dormir numa estalagem do vilarejo que encontraram por ele ser secretamente governado por uma organização mafiosa que por acaso, é a mesma que procura o gladiador."
+		],
+        "requisitos": "Arquétipo Gladiador"
+    },
+    {
+        "nome": "Treino Constante",
+        "pontos": "2",
+        "descricao": [
+			"Um bom guerreiro nunca deixa de aperfeiçoar suas técnicas, manobras e táticas de combate. O personagem com essa desvantagem leva isso bem a sério - talvez até demais. A cada início de dia dentro do mundo de jogo, o persoangem irá reservar de uma à duas horas para treinar suas habilidades não fará nada mais durante esse tempo. O personagem pode até mesmo dormir menos apenas para acordar mais cedo e ter tempo de treinar antes que seu grupo parta em viagem.",
+			"Isso causa complicações principalmente físicas para o personagem, podendo acarretar em um cansaço prematuro ou complicações narrativas quando o personagem suspende todas as atividades que tiver que fazer para treinar."
+		],
+        "requisitos": "Arquétipo Guerreiro"
+    },
+    {
+        "nome": "Apenas o melhor",
+        "pontos": "3",
+        "descricao": [
+			"O personagem possui um status de bom guerreiro ou bom combatente e gosta de manter isso dessa forma. Para tal, é importante ter sempre os melhores equipamentos disponíveis. O personagem com essa desvantagem sempre procurará o ferreiro ou loja de armamentos de uma cidade ou vilarejo que chegar, em busca de itens melhores que os seus atuais. ",
+			"Caso o personagem encontre uma peça de equipamento melhor que a sua atual, ele obrigatoriamente irá comprá-la afim de usá-la (caso realmente use ou não, cabe ao Jogador) independente do quão caro for o item. Se ele não tiver as moedas de ouro suficiente para comprá-los, irá tentar fazer um empréstimo de seus aliados, banco, conhecidos ou barganhar com os vendedores ao ponto de ser inconveniente e chato."
+		],
+        "requisitos": "Arquétipo Guerreiro"
+    },
+    {
+        "nome": "Vampirismo",
+        "pontos": "3",
+        "descricao": [
+			"O personagem está amaldiçoado com o que os estudiosos chamam de “Vampirismo”, uma condição mágica e sobrenatural que altera o funcionamento fisiológico e mental do personagem. Além de poder se alimentar normalmente, o personagem agora também sente sede de sangue ou meramente de drenar a energia vital de uma vítima através dos seus encantamentos. Assim sendo, o personagem precisa de tal infusão de energia vital a cada oito horas (dentro do jogo) e caso passe muito tempo além disso ele entra num estado de fome profunda deixando de reconhecer amigos, familiares e incapaz de distinguir aliados de inimigos. Todos tornam-se uma fonte de alimento para o personagem ate que ele sane tal desejo."
+		],
+        "requisitos": "Arquétipo Hematologista"
+    },
+    {
+        "nome": "Marca da Proibição",
+        "pontos": "2",
+        "descricao": [
+			"O personagem se aprofundou no estudo das magias de sangue, o que concedeu à ele marcas e tatuagens mágicas pela sua pele em alguma parte de seu corpo que ficaria normalmente exposta (mãos, peito, pescoço, rosto, costas, braços, etc). Essa marca avermelhada não pode ser removida de nenhuma forma e é um claro indicador físico que o personagem é um hematologista (ou alguém que foi longe demais em seus estudos arcanos). ",
+			"Isso causa repulsa, falta de confiança, medo e dificuldae de cooperação por parte de terceiros para com o personagem. Caso a marca seja removida de uma forma agressiva (ferimento, cirurgia, queimadura), ela reaparece em outro lugar do corpo. O personagem dificilmente será aceito por aqueles que possuem algum estudo em áreas de magia."
+		],
+        "requisitos": "Arquétipo Hematologista"
+    },
+    {
+        "nome": "Dynamo",
+        "pontos": "3",
+        "descricao": [
+			"O ilusionista possui um potencial imenso em criar ilusões e distrações, tão grande que ele mesmo é incapaz de distinguir quais das suas criações ou ações apontam pra um objeto, cena, imagem ou situação falsa da verdadeira. O personagem com essa desvantagem não sabe dizer em seus truques o que é realidade e o que é mentira, mesmo que possua técnicas que o ajudem a lembrar Exemplo: criar duas bolas de plástico falsas num jogo de espelhos a partir de uma verdadeira e ter uma pequena marca na verdadeira que ajude-o a lembrar. Essa marca seria reproduzida nas cópias também."
+		],
+        "requisitos": "Arquétipo Ilusionista"
+    },
+    {
+        "nome": "Contrato",
+        "pontos": "2",
+        "descricao": [
+			"O personagem não consegue se segurar em explicar seus truques e ações, o que o faz contar detalhadamente o que está fazendo e como é o processo ilusório em questão para quem está o observando, seja aliado ou inimigo. Para ele, a grande beleza está em maravilhar as pessoas com a sua engenhosidade e grandeza, sem perceber que está se prejudicando no processo e criando aberturas contra si mesmo.",
+			"Narrativamente, isso dá a oportunidade para inimigos explorarem das fraquezas e falhas nos planos do Ilusionista, podendo ganhar eventuais bônus ou mudanças de estratégias."
+		],
+        "requisitos": "Arquétipo Ilusionista"
+    },
+    {
+        "nome": "Humilhação Inconsolável",
+        "pontos": "3",
+        "descricao": [
+			"Se você falhar em destruir algum usuário de magia negra após tentar caçá-lo, a Fúria Divina te consumirá, pouco a pouco, com um ódio incontrolável. Quanto mais tempo você demorar para corrigir esse erro, pior fica. Eventualmente, você será incapaz de pensar em nada a não ser terminar o trabalho."
+		],
+        "requisitos": "Arquétipo Inquisidor"
+    },
+    {
+        "nome": "Selo Frágil ",
+        "pontos": "3",
+        "descricao": [
+			"Ao fazer uma invocação por vantagem, há 40% de chance (Role 1d100, caso o resultado seja menor que 40 o personagem falha) de você invocar uma criatura que você não tem controle. Essa criatura estará mais raivosa que o normal por conta das condições que foi conjurada, ainda mais por alguém que não é capaz de controlá-lo, considerando isso uma afronta. A criatura então sairá descontrolada pelo cenário ou com um objetivo em mente, destruindo o que desejar ou quem desejar.",
+			"As implicações narrativas ou mecânicas ficam a critério do Mestre, uma vez que essa desvantagem pode até mesmo criar ganchos narrativos para a história."
+		],
+        "requisitos": "Arquétipo Invocador Astral"
+    },
+    {
+        "nome": "Vozes na minha cabeça",
+        "pontos": "2",
+        "descricao": [
+			"O Invocador Astral é como uma ponte entre o Plano Material e outros planos onde os espíritos celestiais e mitológicos se encontram. Por isso, muitos espíritos mal intencionados buscam invocadores de mente fraca afim de corrompê-los para ganhar um passe livre para o plano material, onde poderão reinar absolutos. Dessa forma, o personagem com essa desvantagem é ocasionalmente torturado e atordoado com vozes ou presenças espectrais (visiveis somente para o personagem) de criaturas que desejam corrompê-lo ou abaixar sua resistência mágica, moral e emocional. Eventualmente, alguns podem conseguir o que querem ou não, à critério do Mestre."
+		],
+        "requisitos": "Arquétipo Invocador Astral"
+    },
+    {
+        "nome": "Princípios",
+        "pontos": "2",
+        "descricao": [
+			"Apesar de ser um ladrão e de ter grandes habilidades em pegar coisas que não são suas, o personagem possui princípios para poder roubar. Ele não é necessariamente um criminoso ou faz isso por maldade, ele obedece uma filosofia de um grupo ou até mesmo própria.",
+			"Defina na história do personagem quando ele considera certo roubar de alguém e quais circunstâncias ele poderia fazer isso. O personagem então só poderá roubar ou fazer ações que envolvam pegar coisas dos outros nessas circunstâncias."
+		],
+        "requisitos": "Arquétipo Ladrão"
+    },
+    {
+        "nome": "Estigma do Ladrão",
+        "pontos": "2",
+        "descricao": [
+			"O personagem é comumente julgado pela sua forma de pensar, agir ou até mesmo de vestir. De uma forma ou de outra, as pessoas sabem que ele é um ladrão ou que faz coisas ilícitas. Justamente por isso, ele sofre uma pressão social maior que o comum.",
+			"O personagem com essa desvantagem é frequentemente maltratado e alvo de injustiças e acusações de coisas que não fez. Além disso, ele também é considerado como alguém de pouca confiança, fazendo com que NPCs e talvez até mesmo outros personagens do grupo não se sintam confortáveis em sua presença ou afim de passar informações importantes."
+		],
+        "requisitos": "Arquétipo Ladrão"
+    },
+    {
+        "nome": "Sede de conhecimento",
+        "pontos": "3",
+        "descricao": [
+			"O personagem é obcecado por magia e tudo em torno disso.  A chance de aprender algum feitiço ou uma magia nova acaba quase sempre tirando a atenção de algo que você esteja fazendo, consequentemente o personagem quase sempre acaba abandonando seus amigos e se metendo em lugares perigosos quando esse é o assunto."
+		],
+        "requisitos": "Arquétipo Mago"
+    },
+    {
+        "nome": "Preconceitos da magia",
+        "pontos": "2",
+        "descricao": [
+			"O personagem não suporta a presença de outros usuários de magia que não usam magias arcanas. Ele tem muitos preconceitos com quem lida com elementos, magias brancas e negras, considerando-os aberrações que se desviam das práticas consagradas da Magia Arcana e neutra. O personagem acaba arranjando brigas e problemas sociais com tais usuários."
+		],
+        "requisitos": "Arquétipo Mago"
+    },
+    {
+        "nome": "Falha Mecânica",
+        "pontos": "2",
+        "descricao": [
+			"Essa desvantagem funciona somente em conjunto com a vantagem “Inventor”. O personagem é bom em fazer invenções diversas e não tem problemas com criatividade, entretanto, o problema vem na parte funcional das suas invenções. Toda e qualquer invenção que o maquinista criar através da vantagem “Inventor” tem 40% de chance (jogue 1d100, se o resultado for menor ou igual à 40, é uma falha) em falhar e explodir causando 1d4 de dano direto no HP de todos que estiverem próximos (incluindo o próprio Maquinista)."
+		],
+        "requisitos": "Arquétipo Mecânico"
+    },
+    {
+        "nome": "Manutenção",
+        "pontos": "3",
+        "descricao": [
+			"Esta desvantagem funciona somente em conjunto com a vantagem “Piloto de Mado”. O personagem precisa fazer a manutenção na sua armadura com certa frequência e isso exige recursos que naturalmente não são muito fáceis de serem conseguidos. Sempre que um dia dentro do jogo se passar, o personagem deve fazer manutenção na sua armadura com um Núcleo de Reparação Mado. ",
+			"Este item pode ser encontrado geralmente em cidades de médio e grande porte que tenham qualquer incentivo ou desenvolvimento tecnológico. O mestre pode optar por complicar as coisas ao tornar tais centros tecnológicos escassos, mas deve dar sempre a oportunidade para o Jogador comprar tais núcleos e guardá-los consigo caso queira estocar os mesmos.",
+			"De início, é permitido que o personagem compre Núcleos de Reparação na lista de Utilidades Gerais encontradas no Grimório de Especialidades."
+		],
+        "requisitos": "Arquétipo Mecânico"
+    },
+    {
+        "nome": "Maldição de Manmon",
+        "pontos": "3",
+        "descricao": [
+			"A influência do Grande Senhor do Ouro, Manmon, está sob você. Como um Mercante Príncipe, o personagem não consegue se controlar quando o assunto é dinheiro. Portanto, situações que envolvam ganhar ou perder dinheiro roubam o foco dele de qualquer outra coisa que esteja fazendo. O personagem pode atingir dois extremos: tanto o de esbanjar dinheiro sempre que puder querendo sempre mais, quanto também não gostar de gastar o seu dinheiro a não ser que seja necessário. Em todo o caso, dinheiro é coisa séria para o personagem e ele irá à extremos por isso."
+		],
+        "requisitos": "Arquétipo Mercante Príncipe"
+    },
+    {
+        "nome": "Afogado pela prata",
+        "pontos": "2",
+        "descricao": [
+			"O persoangem contraiu múltiplas dívidas através de eventos passados que podem ser citados em sua história. Essas dívidas são relacionadas desde empresas, estabelecimentos e pessoas de pequeno porte quanto também organizações imensas. O fato é: o personagem será cobrado de suas dívidas e elas nunca acabarão, seja por juros imensos que sobem e ele não consegue pagar todos de uma vez ou por pessoas do passado que começam a aparecer com dívidas novas.",
+			"O mestre pode decidir quando tais pessoas irão aparecer, mas elas sempre deixarão o personagem praticamente quebrado em termos de dinheiro, mas nunca sem nada."
+		],
+        "requisitos": "Arquétipo Mercante Príncipe"
+    },
+    {
+        "nome": "Preço do conhecimento",
+        "pontos": "3",
+        "descricao": [
+			"O traumatizante processo de colocar as runas no corpo do personagem o alterou para sempre. Como um sobrevivente de uma tortura que mataria muitos guerreiros altamente treinados, o personagem nunca mais será o mesmo. Personagens que tentam ler as emoções do mestre das runas por meios não mágicos recebem -3 em seus testes, pois a verdade é que o mestre das runas já não possui muitas. Isso deve ser tratado como uma desvantagem para o mestre das runas e o narrador pode decidir aplicar um redutor de até -3 em todos os testes sociais nos quais isso seja relevante."
+		],
+        "requisitos": "Arquétipo Mestre das Runas"
+    },
+    {
+        "nome": "Radar Rúnico",
+        "pontos": "2",
+        "descricao": [
+			"As runas pelo corpo do personagem tornam-o facilmente identificável por quem as vê. Por algum motivo, elas emanam uma energia que faz com que você seja identificado a distância por mestres em poderes arcanos ou outros seres que dominem o mínimo de Arcanismo e artes mágicas.",
+			"Em termos práticos, isso significa que dificilmente um usuário de magia não saberia onde o Mestre das Runas está, mesmo não sendo capaz de vê-lo."
+		],
+        "requisitos": "Arquétipo Mestre das Runas"
+    },
+    {
+        "nome": "Crise de Identidade",
+        "pontos": "3",
+        "descricao": [
+			"O personagem passou tanto tempo imitando sons e copiando outras pessoas e criaturas, que eventualmente não consegue mais reconhecer quem ele é originalmente, adotando imitações em tempo integral na sua maneira de falar, pensar e gestos. Isso não acontece exatamente toda a hora, mas é mais frequente do que qualquer pessoa normal gostaria que fosse. A impressão é que o personagem acaba ficando confuso, tentando conectar imitações prévias ou espelhando-se em pessoas que ele imita muito, lentamente perdendo sua própria identidade.",
+			"Isso causa penalidades e complicações sociais e até mesmo mentais."
+		],
+        "requisitos": "Arquétipo Mímico"
+    },
+    {
+        "nome": "Votos",
+        "pontos": "2",
+        "descricao": [
+			"O personagem fez algum tipo de voto frente à algum objetivo futuro, como por exemplo, um voto de silêncio até adquirir um crescimento espiritual maior, voto de celibato enquanto se manter como monge, voto de pobreza para se desvincular das coisas materiais, etc. O jogador deve especificar qual tipo de voto que é e o motivo do personagem ter tomado isso para si.",
+			"As consequências do voto devem ser levadas bem a sério narrativamente e mecanicamente, dependendo do que for oferecido. Mesmo em situações extremas, o voto do personagem é algo que ele evitará o máximo que puder em quebrá-lo. Se o personagem quebrar o voto, ele sofrerá muito por um longo período e se sentirá fracassado. Novos votos podem ser feitos a partir de então."
+		],
+        "requisitos": "Arquétipo Monge"
+    },
+    {
+        "nome": "Tempo de Reflexão",
+        "pontos": "2",
+        "descricao": [
+			"O personagem dedica ao menos 1 hora do seu dia afim de meditar sobre eventos que tem acontecido com ele e/ou seu grupo. Essa meditação não é a mesma que acontece em “Hamon” e não podem ocorrer juntas. Nesse estado, o personagem reflete sobre tudo o que tem vivido e questiona-se para onde deve ir ou o que deve fazer, buscando respostas dentro de si mesmo. ",
+			"Ficar um dia ou mais sem meditar vai lentamente exaurindo a mente do personagem, fazendo com que para cada dia que se inicie, ele tenha uma penalidade temporária de -10 SP máximo até que possa meditar e restaurar sua integridade espiritual."
+		],
+        "requisitos": "Arquétipo Monge"
+    },
+    {
+        "nome": "Pesadelo",
+        "pontos": "3",
+        "descricao": [
+			"Ao fazer uma invocação pela vantagem “Pacto”, há 40% de chance (Role 1d100, caso o resultado seja menor que 40 o personagem falha) do necromante invocar um demônio, esqueleto, fantasma, morto-vivo ou criatura do tipo que esteja fora de seu controle e não o obedeça. Essa criatura tem o nível igual do necromante e é considerado um novo inimigo num combate (ou inicia um). Recomenda-se que o Mestre deixe preparado de antemão algumas fichas de possíveis criaturas que possam ser usadas dessa forma, atualizando-as conforme o necromante passar de nível ou simplesmente reutilize / improvise atributos para uma ficha simples na hora."
+		],
+        "requisitos": "Arquétipo Necromante"
+    },
+    {
+        "nome": "Atormentado",
+        "pontos": "2",
+        "descricao": [
+			"O personagem viu coisas demais, estudou coisas proibidas e teve múltiplos contatos com o submundo e os planos das criaturas sombrias. Ele não é mais o mesmo. O personagem com essa desvantagem tem visões de criaturas que vão o matar, tremedeiras aleatórias, dificuldades para dormir, comer e também uma saúde muito, muito frágil. O mais comum é ver o personagem tossir sangue ou estar constantemente gripado - sinais de que seu corpo acumulou muita energia do caos.",
+			"As penalidades e implicações estão mais voltadas para o lado social e mental do personagem, o Mestre tem liberdade para definir tais parâmetros."
+		],
+        "requisitos": "Arquétipo Necromante"
+    },
+    {
+        "nome": "Muhonin",
+        "pontos": "2",
+        "descricao": [
+			"O personagem fazia parte de uma organização ou um dojo com outros membros e mestres, mas por algum motivo foi expulso ou exilado de lá. O personagem com essa desvantagem não é bem visto pelos seus ex-companheiros por algo muito grave que ocasionou nessa expulsão, como a venda de um segredo milenar ou uma traição à um mestre.",
+			"Na sociedade ninja, o status do personagem se espalhou rapidamente, impedindo que ele ingresse em outros dojos ou ordens. Ele sempre será visto como um traidor e carregará (ou não) certo sofrimento por isso."
+		],
+        "requisitos": "Arquétipo Ninja"
+    },
+    {
+        "nome": "Proteção das Sombras",
+        "pontos": "2",
+        "descricao": [
+			"O Ninja não gosta de ter o seu rosto visto por outras pessoas e muito menos sua identidade real. Ele costuma se apresentar com um nome falso ou um apelido para todas as pessoas que conhece, inclusive seus aliados de grupo que não o conhecem desde antes de tornar-se um ninja.  Os motivos reais para ele preservar sua identidade podem ser listados na história do personagem. ",
+			"Além disso, o personagem evitará ao máximo remover sua máscara e mostrar sua face real para qualquer pessoa que seja. Caso seu rosto seja visto, ele se sentirá extremamente incomodado e de certa forma, até paranóico em relação à essa pessoa usar isso contra ele."
+		],
+        "requisitos": "Arquétipo Ninja"
+    },
+    {
+        "nome": "Penitência",
+        "pontos": "2",
+        "descricao": [
+			"Qualquer Paladino que se corrompa ou se torne maligno perde todos os seus poderes e só pode recuperá-los se fizer penitência. Se fizer parte da Ordem, também será caçado."
+		],
+        "requisitos": "Arquétipo Paladino"
+    },
+    {
+        "nome": "Código de Herói",
+        "pontos": "3",
+        "descricao": [
+			"O personagem possui uma conduta e filosofia própria muito rígida, principalmente quando se diz sobre a vida de outra pessoa. O paladino não permitirá que uma pessoa ou ser (desde que ele não seja uma monstruosidade absoluta e irracional) seja morto na sua frente ou mesmo pelas suas próprias mãos. O paladino acredita que através da justiça do reino mais próximo ou de onde ele veio será capaz de dar a punição adequada para tal ser.",
+			"O personagem com essa desvantagem irá impedir a todo custo que seus aliados ou outras pessoas tentem matar alguém desnecessariamente, protegendo essa vítima se for preciso. O paladino então levará tal pessoa consigo, geralmente presa ou restrita de alguma forma até um lugar onde ela possa ser julgada pelas autoridades locais."
+		],
+        "requisitos": "Arquétipo Paladino"
+    },
+    {
+        "nome": "Caçada pelo Tesouro",
+        "pontos": "3",
+        "descricao": [
+			"O personagem acredita na lenda de um tesouro lendário prometido à ele que, quando descoberto, mudará totalmente a sua vida ao ponto dele abandonar a vida de pirata. Descreva na história do personagem como ele ouviu sobre essa história, o que o faz acreditar tanto nisso e como é esse tesouro ou a lenda que o envolve.",
+			"Muitas vezes, esse tesouro pode nem ao menos ser real, mas a ilusão e vontade de crer nisso é mais forte no personagem. Existem outras pessoas ou organizações que sabem que o personagem está atrás dessas riquezas e talvez se interessem em disputar com ele ou até mesmo, enganá-lo numa parceria traiçoeira. ",
+			"O fato é que o personagem não esconde nem tem medo de falar sobre as maravilhas do tesouro para as pessoas, o que acaba atraindo atenção indesejada e inveja. O personagem fará de tudo para conseguir conquistar esse grande objetivo."
+		],
+        "requisitos": "Arquétipo Pirata"
+    },
+    {
+        "nome": "Yo-ho-ho e uma Garrafa de Rum",
+        "pontos": "2",
+        "descricao": [
+			"O personagem é viciado em bebidas alcóolicas, especialmente Rum. Ele carrega consigo um cantil que quase sempre tem Rum o suficiente para ele se embriagar naquele dia. Entretanto, não é difícil ele ficar sem a bebida por ter bebido demais e ter que buscar mais. O personagem pode ficar violento, chorão, sonolento ou simplesmente chato para as outras pessoas até conseguir sua bebida favorita de volta. "
+		],
+        "requisitos": "Arquétipo Pirata"
+    },
+    {
+        "nome": "Ronin",
+        "pontos": "2",
+        "descricao": [
+			"O personagem tornou-se um Ronin, o chamado samurai sem um mestre. Alguns abandonaram seus mestres/lordes voluntariamente, outros são forçados a saírem. Talvez o ronin em questão tenha feito pactos com demônios em troca de influência e poder, o afastando do caminho do guerreiro e seu compromisso com o código moral.",
+			"Seja qual for a razão, o ronin vaga pelas terras como um mercenário ou aventureiro, buscando um novo mestre e causa à servir. O personagem com essa desvantagem é visto como \"desonrado\" e \"inferior\" aos Samurais que possuem um lorde, sendo hostilizado por isso. Para outras pessoas, fica claro na aparência e postura do Ronin que ele é um mero mercenário à procura de migalhas, o que causa penalidades sociais e fazendo as pessoas não querem se aproximar do personagem.",
+		],
+        "requisitos": "Arquétipo Samurai"
+    },
+    {
+        "nome": "Seppuku",
+        "pontos": "5",
+        "descricao": [
+			"O personagem segue algum preceito do Bushido, o caminho do guerreiro, muito a sério. Ele toma para si uma das sete virtudes do bushido como a regente de suas ações e personalidade. Caso ele se desvirtue desse caminho, se corrompa, não obedeça tais preceitos ou perca a sua honra por algum motivo, ele deve conter o ato conhecido como Seppuku. Seppuku é um ato suicida onde o samurai corta o próprio ventre afim de expor as vísceras como um ato de pureza e caráter. Escolha um dos conceitos do Bushido ao comprar essa desvantagem:",
+			"- Gi: Justiça e Moralidade.",
+			"- Yuu: Coragem e Bravura Heróica.",
+			"- Jin: Compaixão e Benevolência,",
+			"- Rei: Polidez e Cortesia.",
+			"- Makoto: Sinceridade.",
+			"- Meiyo: Honra e Glória.",
+			"- Chuu: Dever e Lealdade.",
+			"O personagem deve sempre tentar guiar suas ações e decisões baseadas no preceito moral escolhido. Caso o personagem quebre o código, ele recebe 1 Ponto de Bushido na sua ficha, devendo anotá-lo em algum lugar. Ao acumular três, o personagem simplesmente não consegue mais viver com tamanha desonra e precisa cometer Seppuku. Conceder esse ponto é cargo do Mestre ao analisar que  o jogador não está agindo de acordo com o código moral escolhido. Pede-se sabedoria e um acordo prévio entre jogador e mestre afim de determinarem situações mutualmente acordadas para a consessão de tais pontos. Caso o jogador e Mestre estejam em constante conflito para decidir quando um ponto deve ser dado ou não, recomenda-se a suspensão dessa desvantagem e a escolha de outra no lugar."
+		],
+        "requisitos": "Arquétipo Samurai"
+    },
+    {
+        "nome": "Presença Indesejada",
+        "pontos": "3",
+        "descricao": [
+			"A presença de criaturas e animais sempre junto com o Senhor das Bestas não é algo que agrada à todos os gostos. O personagem com essa desvantagem geralmente não consegue se hospedar em hotéis, estalagens ou mesmo consegue acesso à lugares mais requintados onde pessoas não gostem que animais fiquem transitando por lá. Em tavernas, pode ser que o taverneiro peça para que os animais fiquem do lado de fora esperando pelo seu dono, o que nem sempre pode ser bem recebido pelo personagem. ",
+			"Além disso, pela convivência constante com tais criaturas, o cheiro natural do personagem não é dos melhores para aqueles que são mais exigentes, o que pode causar complicações sociais e narrativas."
+		],
+        "requisitos": "Arquétipo Senhor das Bestas"
+    },
+    {
+        "nome": "Miséria Constante",
+        "pontos": "2",
+        "descricao": [
+			" muito dificil para um Senhor das Bestas manter recursos adequados para si e para seus animais. Com essa desvantagem, o personagem quase sempre terá que usar de seus fundos monetários e lucros afim de dividí-los com suas criaturas, seja na manutenção de exames, alimento, bebidas, cuidados diversos, etc. Para cada animal que o personagem tiver consigo, todo e qualquer lucro que ele venha à ter em moedas de ouro é reduzido em -10% de forma acumulativa. ",
+			"Por exemplo, se o personagem tiver 2 animais, ele perde 20% dos lucros automaticamente. Essa parte “perdida” tem um destino narrativamente, significando os gastos citados anteriormente."
+		],
+        "requisitos": "Arquétipo Senhor das Bestas"
+    }			
+
 ].sort(function (a,b) {
     var na = a.nome.toUpperCase().latinize();
     var nb = b.nome.toUpperCase().latinize();

@@ -93,9 +93,9 @@ function VantagensUI (ui) {
             window.app.ui.vantagens.search();
         });
         
-        var $checkboxes = $('<div id="vCheckBoxes" />').append(this.$allowArquetipos).append("<label for='vAllowArquetipos'>Mostrar vantagens de Arquétipos</label>")
+        var $checkboxes = $('<div id="vCheckBoxes" />').append(this.$allowArquetipos).append("<label for='vAllowArquetipos'>Mostrar vantagens e desvantagens de Arquétipos</label>")
             .append("<br />")
-            .append(this.$allowRacas).append("<label for='vAllowRacas'>Mostrar vantagens de Raças</label>");
+            .append(this.$allowRacas).append("<label for='vAllowRacas'>Mostrar vantagens e desvantagens de Raças</label>");
         
         this.$conteudo.append($tipos).append(this.$pontos).append(this.$search).append($checkboxes);
         
