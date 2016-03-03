@@ -50,8 +50,11 @@ window.techChangelog = [
 			"Sadism, The End is Near e Spellcaster alterados pra ficarem de acordo com a remoção de Stamina.",
 			"O addon \"Area of Effect\" agora possui três versões para se relacionar melhor com o novo formato de combate com zonas. Além disso, \"Area of Effect\" agora é uma família de addons.",
 			"\"Area of no effect\" alterado para funcionar com os novos Area of Effects.",
-			"O addon \"Domínio Absoluto\" está clarificado que só funciona uma vez por rodada, agora."
-			
+			"O addon \"Domínio Absoluto\" está clarificado que só funciona uma vez por rodada, agora.",
+			"HOTFIX [1]: O addon \"Parry\" foi refeito.",
+			"HOTFIX [2]: Clarificado que em \"Defender's Vigil\" o alvo protegido precisa estar na mesma zona que o usuário para que ele possa ser protegido efetivamente.",
+			"HOTFIX [3]: Clarificado que em \"Now you do it\" não pode ser usado em contra-ataques.",
+			"HOTFIX [4]: O addon \"Fusão - Use meus poderes\" teve a cura instantânea de HP removida."
 			]			
  },
 {	 
@@ -1390,7 +1393,8 @@ window.techAddons =
             "Para qualquer efeito acontecendo nessa técnica, VOCÊ é o único usuário. Então efeitos como Mark of the Guardian podem ser utilizados por você e addons como Inspire terão todos os seus aliados como alvos válidos.",
             "Redutores ou Bônus de dano em porcentagem para o dano do aliado são ignorados durante esse seu ataque, mas qualquer Bônus ou Redutor adicionado no SEU ataque é considerado para o ataque final.",
             "O dano final desse ataque é a soma do seu dano com o dano do seu aliado e possui como tipos quaisquer atributos de dano que tenham sido usados por você e ele.",
-            "Observação: Esse addon não está perfeitamente balanceado e deverá ser refeito eventualmente."
+            "Esse addon não funciona quando a técnica é usada como contra-ataque.",
+			"Observação: Esse addon não está perfeitamente balanceado e deverá ser refeito eventualmente."
         ],
         "conceitos": [
             "caalvos",
@@ -2113,7 +2117,8 @@ window.techAddons =
         "nomeLimpo": "Defender's Vigil",
         "efeitos": [
             "Escolha um aliado. Até o início do seu próximo turno, todos os ataques realizados no aliado escolhido são realizados em você ao invés disso. Ativar esse efeito consome o turno do usuário.",
-            "Essa técnica não possui custo."
+            "O redirecionamento não funciona se você e seu aliado protegido estiverem em zonas diferentes e for logicamente impossível de protegê-lo(a).",
+			"Essa técnica não possui custo."
         ],
         "conceitos": [
             "unicidade"
@@ -2261,7 +2266,7 @@ window.techAddons =
         "nomeLimpo": "Fusao - Use meus poderes",
         "efeitos": [
             "Você pode se unir a outro personagem e aumentar seus poderes de alguma forma (como sendo absorvido no processo ou algo do tipo).",
-            "Isso instantaneamente cura o outro personagem até seu HP máximo e retira você do combate.",
+            "Isso retira você do combate.",
             "O outro personagem passa a receber +2 Bônus de Fusão em qualquer teste de combate e +4 Bônus de Fusão em qualquer rolagem de dano até o fim da fusão.",
             "A duração da fusão deve ser especificada na criação da técnica, como 30 minutos ou algo assim. A duração mínima da fusão é \"até o fim do combate atual\". A fusão pode ser eterna, se apropriado. Uma fusão não pode acontecer sem consentimento de ambos os jogadores.",
             "Essa fusão não pode ser realizada durante eventos PVP."
@@ -2493,9 +2498,10 @@ window.techAddons =
         "nome": "Parry",
         "nomeLimpo": "Parry",
         "efeitos": [
-            "Escolha um inimigo. Até o início do seu próximo turno, qualquer ataque realizado pelo inimigo marcado contra você pode ser esquivado usando seu Ataque ao invés de Defesa (ataques por marcas também).",
-			"Quando esse efeito é utilizado, fica completamente claro para o oponente e todos os participantes da luta que o usuário está preparando uma esquiva.",
-			"Custo: 5 SP, gasta o turno."
+            "Este addon só pode ser ativado quando você for alvo de um golpe ou habilidade. A técnica com esse addon só pode ser usada uma vez por rodada.",
+			"Quando ativado, você pode usar seu valor de Ataque ao invés de Defesa no teste de Esquiva.",
+			"Quando esse efeito é utilizado, fica completamente claro para o oponente e todos os participantes da luta que o usuário está preparando uma forma de anular o golpe.",
+			"Custo: 8 SP."
         ],
         "conceitos": [
 	 "unicidade",

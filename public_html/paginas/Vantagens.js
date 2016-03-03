@@ -2893,7 +2893,7 @@ window.desvantagensArray = [
     },
     {
         "nome": "Lealdade Extrema",
-        "pontos": "5",
+        "pontos": "3",
         "descricao": [
             "Um valor estimado na sociedade Jorn é o da lealdade. Juntamente com o conceito de honra, a lealdade cria as bases desses indivíduos e os orienta para a vida e como agirem em suas aventuras frente aos perigos e com seus aliados estimados, independente da raça deles. O personagem com essa desvantagem é capaz de dar sua própria vida por seus amigos e freqüentemente se mostrará leal em situações, mesmo que isso possa complicar ele mesmo."
         ],
