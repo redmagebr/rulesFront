@@ -54,7 +54,8 @@ window.techChangelog = [
 			"HOTFIX [1]: O addon \"Parry\" foi refeito.",
 			"HOTFIX [2]: Clarificado que em \"Defender's Vigil\" o alvo protegido precisa estar na mesma zona que o usuário para que ele possa ser protegido efetivamente.",
 			"HOTFIX [3]: Clarificado que em \"Now you do it\" não pode ser usado em contra-ataques.",
-			"HOTFIX [4]: O addon \"Fusão - Use meus poderes\" teve a cura instantânea de HP removida."
+			"HOTFIX [4]: O addon \"Fusão - Use meus poderes\" teve a cura instantânea de HP removida.",
+			"HOTFIX [5]: O addon \"Price in Blood I e II\" tiveram seus custos aumentados em HP."
 			]			
  },
 {	 
@@ -1562,7 +1563,7 @@ window.techAddons =
         "nomeLimpo": "Price in Blood I",
         "efeitos": [
             "Aumente o dano causado por essa técnica em +1 Bônus de Poder.",
-            "Como um custo extra para ativar essa técnica, pague 1 de HP. Isso é uma remoção direta do seu HP e não pode ser reduzida por outros efeitos. Não conta como um dano recebido.",
+            "Como um custo extra para ativar essa técnica, pague 2 de HP. Isso é uma remoção direta do seu HP e não pode ser reduzida por outros efeitos. Não conta como um dano recebido.",
             "Esse addon pode te jogar para 0 ou menos de HP, fazendo você entrar nas fases de teste de morte, normalmente",
             "Price in Blood não é única e pode ser comprada várias vezes."
         ],
@@ -1579,7 +1580,7 @@ window.techAddons =
         "nomeLimpo": "Price in Blood II",
         "efeitos": [
             "Aumente o dano causado por essa técnica em +2 Bônus de Poder.",
-            "Como um custo extra para ativar essa técnica, pague 3 de HP. Isso é uma remoção direta do seu HP e não pode ser reduzida por outros efeitos. Não conta como um dano recebido.",
+            "Como um custo extra para ativar essa técnica, pague 4 de HP. Isso é uma remoção direta do seu HP e não pode ser reduzida por outros efeitos. Não conta como um dano recebido.",
             "Esse addon pode te jogar para 0 ou menos de HP, fazendo você entrar nas fases de teste de morte, normalmente",
             "Price in Blood não é única e pode ser comprada várias vezes."
         ],

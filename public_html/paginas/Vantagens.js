@@ -1111,6 +1111,14 @@ window.vantagensArray = [
         "requisitos": "Arquétipo Druida"
     },
     {
+        "nome": "Como se fosse a minha casa",
+        "pontos": "1",
+        "descricao": [
+			"Qualquer teste para busca de alimentos em uma área selvagem que fosse exigir um teste possível de até dificuldade média (15) passa a ser sucesso automático, você conhece a natureza como a palma da sua mão. O mesmo vale para testes para não se perder ou encontrar alguém / algo que passou por ali."
+        ],
+        "requisitos": "Arquétipo Druida"
+    },	
+    {
         "nome": "Metamorfose",
         "pontos": "1",
         "descricao": [
@@ -3411,7 +3419,7 @@ window.desvantagensArray = [
         "nome": "Desempregado",
         "pontos": "2 ou 3",
         "descricao": [
-			"O personagem não tem nenhuma profissão ou talvez não faça questão de trabalhar. Reduza a quantidade de profissões iniciais do personagem para 0. Por três pontos, o personagem não não pode / quer aprender novas profissões, impossibilitando o ganho durante a aventura."
+			"O personagem não tem nenhuma profissão ou talvez não faça questão de trabalhar. Reduza a quantidade de profissões iniciais do personagem para 0. Por três pontos, o personagem não pode / quer aprender novas profissões, impossibilitando o ganho durante a aventura."
         ]
     },	
     {
