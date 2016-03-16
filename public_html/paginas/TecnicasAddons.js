@@ -5,57 +5,21 @@
  */
 window.techChangelog = [  
 {	 
-        version : [5,0],
+        version : [5,1],
         description : [
-			"Os addons: Restauração - Absorb Pain, Heal Other, Lifebloom, Healing Aura, Mountain's Stand e Patch Up, foram refeitos de acordo com as novas regras de cura para a versão 5.0 do sistema",
-			"Os addons: Restauração - Chain Heal e Dispel to Heal foram removidos e serão repensados para o futuro.",
-			"O addon Aura foi removido por ser parte integrante do sistema a partir de agora, através dos aspectos de arquétipos.",
-			"A ação \"Buscar Coragem\" foi alterada para se adequar as mudanças referentes a remoção de Stamina",
-			"\"Haymaker\" agora é um addon especial com um funcionamento sutilmente diferente (antigo: addon de ataque).",
-			"\"Inspire\" agora concede +2 Bônus de dano (antigo: +1).",
-			"\"Berserking\" foi alterada para ficar de acordo com as novas regras de cura. Seu bônus de dano agora é nomeado e foi aumentado para +3 (antigo: não-nomeado e +2). Sua penalidade em RD é aumentada para -2 (antigo: -1).",
-			"Os seguintes addons passaram de Bônus Não-nomeado para Bônus de Habilidade: Boon of the Aggressor, Counter Counter I e II, Unblockable I e II e Embrace the Shadows.",
-			"Os seguintes addons passaram de Bônus Não-nomeado para Bônus de Poder: All I Have I e II, Bless I e II, Symbol of Destruction, Price in Blood, Even the Odds, Killing Intent, Multiple Crush, Bloodlust, Strong but Slow I, II e III, Vulnerability e Consume Rage.",
-			"\"Overload\" e \"Avatar of Destruction\" passam a ter Bônus de Poder ao invés de Bônus de Overload",
-			"Overload agora tem mudanças em seu custo, sendo pago toda vez que o bônus é usado.",
-			"\"Bloodlust\" tem seu custo de SP mudado para 6 (antigo: 1 Stamina + 5 SP).",
-			"\"Fusão - Use meus poderes\" passa a ter um Bônus nomeado igual à Bônus de Fusão (antigo: bônus não-nomeado).",
-			"\"Flaw Trap\" agora custa 3 SP (antigo: 2).",
-			"\"Special Attack - Basic Master\" agora passa a ter seu bônus nomeado como Bônus de Habilidade.",
-			"\"No Flaws\" refeito.",
-			"Novo addon para ataques: \"Chicken Out\", \"Tecnica a Distancia\", \"Tecnica Corpo a Corpo\"",
-			"Estilos de Luta completamente removidos. Passam a ser incorporados como mecânica de combate que afetam todos.",
-			"Os addons de armas defensivas e armaduras: \"Impenetrável\" e \"Blindado\" foram removidos.",
-			"O addon \"Brutal\" foi removido em resposta a remoção de Impenetrável e Blindado.",
-			"Os addons de armas: Larga e Pesada e Arma Pesada foram fundidos no novo \"Larga e Pesada\"",
-			"Os addons: Special Attack Ranged I, II, III e Special Attack Ranged - Basic Master, foram removidos e incorporados no Special Attack comum.",
-			"Os addons: \"Capacidade Destrutiva\", \"Confiável\" e \"Dano Mínimo\" foram sutilmente refeitos, mas mantendo suas essências. Eles agora fazem parte de uma mesma família de addons e não podem ser adicionados juntos em combo. \"Dano Mínimo\" é renomeado para \"Dano Especial - Golpe Superior\", enquanto os outros são renomeados para \"Dano Especial - Confiável\" e \"Dano Especial - Capacidade Destrutiva\".",
-			"Novos addons para Armas: Catalisadora, Longo Alcance, Curto Alcance, Mau Pededor e Segundo Golpe.",
-			"Novos addons para Armaduras: Quebra de Ritmo, Injeção Instantânea.",
-			"Novos addons para Acessórios: Muleta, Poder de Uso Único.",
-			"Novos addons para Itens Consumíveis: Poção, Semente dos Dragões.",
-			"Novo addon para Passivas: Iron Will.",
-			"Novo addon para Especiais: Shroud of Peace.",
-			"O addon \"Devorador de Almas\" foi alterado devido as alterações no sistema de cura.",
-			"O addon \"Forma\" agora gasta o turno pra trocar o tipo de equipamento.",
-			"Os addons \"Melee\", \"Ranged\" e \"Melee Option\" foram alterados para ficarem a par de acordo com o novo sistema de combate",
-			"Novo conceito aplicado em alguns addons: Relação entre Melee VS Ranged e Zonas",
-			"Todas as menções à MP foram trocadas para SP.",
-			"Clarificado no conceito de Superioridade que o jogador pega o MAIOR resultado e não o MELHOR (uma vez que isso é subjetivo).",
-			"Disruption clarificado sobre que tipo de addon ele prolonga.",
-			"Vulnerability teve seu texto clarificado.",
-			"Frenzy Eater teve seu texto clarificado em relação ao disrupt. Ele não nega mais as duas próximas curas.",
-			"O addon Look agora oficialmente revela addons e atributos dos itens descobertos.",
-			"\"Soul Strike\" refeito.",
-			"Sadism, The End is Near e Spellcaster alterados pra ficarem de acordo com a remoção de Stamina.",
-			"O addon \"Area of Effect\" agora possui três versões para se relacionar melhor com o novo formato de combate com zonas. Além disso, \"Area of Effect\" agora é uma família de addons.",
-			"\"Area of no effect\" alterado para funcionar com os novos Area of Effects.",
-			"O addon \"Domínio Absoluto\" está clarificado que só funciona uma vez por rodada, agora.",
-			"HOTFIX [1]: O addon \"Parry\" foi refeito.",
-			"HOTFIX [2]: Clarificado que em \"Defender's Vigil\" o alvo protegido precisa estar na mesma zona que o usuário para que ele possa ser protegido efetivamente.",
-			"HOTFIX [3]: Clarificado que em \"Now you do it\" não pode ser usado em contra-ataques.",
-			"HOTFIX [4]: O addon \"Fusão - Use meus poderes\" teve a cura instantânea de HP removida.",
-			"HOTFIX [5]: O addon \"Price in Blood I e II\" tiveram seus custos aumentados em HP."
+			"O addon \"Poção\" agora clarifica que não consome o turno, mas itens com esse addon só podem ser usados 1x por rodada. Isso impede um bug não-intencional de personagens poderem bebe N poções num único turno.",
+			"Clarificado que \"Esforço Agressivo\" agora só pode ser usado uma vez por rodada, impedindo um loophole de usar o addon junto de técnicas de cura infinitamente.",
+			"Clarificado que em \"Stare Master\" em casos de empate, ambas as partes devem re-jogar os dados.",
+			"Clarificado no texto de \"Mocking Strike\" e \"Gaze of the Guardian\" que contra-ataques ainda são permitidos sem trancar a vítima em quem deu este efeito nela.",
+			"Clarificado que em \"On My Command\" esquivas críticas não ocorrem quando tratando do ATK (do aliado) vs DEF (do inimigo).",
+			"O addon \"Punishing Volt\" teve seu nível requerido reduzido para 2 (antigo: 3).",
+			"O addon \"Sharing is Caring\" agora permite que o usuário do addon se cure em mais de 1 HP, removendo a restrição prévia. Além disso, não gasta SP na self-heal. Entretanto, teve seu custo de SP aumentado para 3 (antigo 2) e impedido de ter o custo deste addon reduzido por qualquer outro addon.",
+			"Clarificado o texto em \"Divine Trap\" sobre seus custos.",
+			"O addon \"Area of No Effect\" ganhou algumas clarificações e adições frente ao seu uso e duração.",
+			"Clarificado em \"Shroud of Peace\" que seu efeito ocorre independente de zonas, diferenciando-se assim do Area of No Effect.",
+			"O addon \"Supress\" agora não gasta mais o turno do personagem, mas só pode ocorrer uma vez por rodada.",
+			"Clarificado que \"Ultimate Sacrifice\" agora precisa estar na mesma zona do alvo para protegê-lo. Adicionada uma opção de pagar SP para proteger alvos de zonas adjacentes.",
+			"Novo addon: \"Raging Strikes\"."
 			]			
  },
 {	 
@@ -877,7 +841,7 @@ window.techAddons =
         "nome": "Mocking Strike",
         "nomeLimpo": "Mocking Strike",
         "efeitos": [
-            "Caso essa técnica cause algum dano e o alvo dela esteja marcado por você, até o início do seu próximo turno, você é o único alvo válido para ataques realizados por ele.",
+            "Caso essa técnica cause algum dano e o alvo dela esteja marcado por você, até o início do seu próximo turno, você é o único alvo válido para ataques realizados por ele. Isso não é válido para contra-ataques, apenas ataques diretos feitos pelo alvo.",
             "Caso um personagem esteja afetado por mais de um mocking strike ou efeitos similares ao mesmo tempo, ele pode realizar ataques contra qualquer um dos personagens que aplicaram esses efeitos nele.",
             "Mocking Strike é sempre processada no final, então é possível aplicar uma marca e aplicar mocking strike com um único ataque.",
             "Aumente o custo da técnica em 2 SP."
@@ -905,6 +869,21 @@ window.techAddons =
         "conceitos": [
             "unicidade",
 			"normalizado"
+        ],
+        "nivel": 1
+    },
+    {
+        "tipo": "ataque",
+        "nome": "Raging Strikes",
+        "nomeLimpo": "Raging Strikes",
+        "efeitos": [
+			"A técnica com esse ataque causa -4 pontos de dano.",
+			"Toda vez que o usuário dessa técnica realizá-la e errar o golpe com este addon, ele ganha +1 Bônus não-nomeado de Ataque. Esse bônus aumenta até o usuário acertar um ataque, não tendo uma duração prévia, assim.",
+			"Esse bônus é perdido quando o usuário troca o alvo deste golpe.",
+			"Este addon não aumenta o custo de SP da técnica."
+        ],
+        "conceitos": [
+            "unicidade"
         ],
         "nivel": 1
     },
@@ -1410,7 +1389,8 @@ window.techAddons =
         "nomeLimpo": "Leadership - On My Command",
         "efeitos": [
             "Escolha um aliado e um inimigo. O aliado realizará um ataque básico no inimigo escolhido e essa será o dano básico da técnica (substituindo o dado de dano + atributo + bônus de arma). Adicione quaisquer outros efeitos da técnica no ataque do aliado, incluindo modificadores de dano.",
-            "Efeitos que mudam de acordo com quem está executando eles não podem ser adicionados nessa técnica. Então Mark of the Guardian não pode ser adicionado (as marcas funcionam diferente dependendo de qual personagem a está colocando).",
+            "Caso um inimigo role uma esquiva crítica versus a rolagem de ataque do aliado que está te ajudando, os efeitos da esquiva crítica não ocorrem. Trate-a como um sucesso comum (se for um sucesso).",
+			"Efeitos que mudam de acordo com quem está executando eles não podem ser adicionados nessa técnica. Então Mark of the Guardian não pode ser adicionado (as marcas funcionam diferente dependendo de qual personagem a está colocando).",
             "Outros efeitos podem ser adicionados, como Inspire para aumentar algum atributo de outro aliado. Só que tanto o personagem que usou essa técnica quanto quem realizou o ataque contam como o \"usuário\" dela. Assim sendo, efeitos que exigem um \"aliado\" (como Inspire) só poderiam afetar um terceiro personagem.",
             "Apesar de ambos serem o Usuário do Poder, é considerado que o dano é causado pelo dono do turno (apesar do aliado realizar o ataque e rolar os dados). Assim sendo, caso o aliado possua redutores nos danos dele, esses redutores NẪO são carregados para On My Command. Mas se o personagem que usou essa técnica possuir redutores no seu dano causado, esses redutores são repassados para o ataque do aliado.",
 			"Aumenta o custo da técnica em 2 SP.",
@@ -1564,8 +1544,7 @@ window.techAddons =
         "efeitos": [
             "Aumente o dano causado por essa técnica em +1 Bônus de Poder.",
             "Como um custo extra para ativar essa técnica, pague 2 de HP. Isso é uma remoção direta do seu HP e não pode ser reduzida por outros efeitos. Não conta como um dano recebido.",
-            "Esse addon pode te jogar para 0 ou menos de HP, fazendo você entrar nas fases de teste de morte, normalmente",
-            "Price in Blood não é única e pode ser comprada várias vezes."
+            "Esse addon pode te jogar para 0 ou menos de HP, fazendo você entrar nas fases de teste de morte, normalmente"
         ],
         "conceitos": [
             "unicidade",
@@ -1581,8 +1560,7 @@ window.techAddons =
         "efeitos": [
             "Aumente o dano causado por essa técnica em +2 Bônus de Poder.",
             "Como um custo extra para ativar essa técnica, pague 4 de HP. Isso é uma remoção direta do seu HP e não pode ser reduzida por outros efeitos. Não conta como um dano recebido.",
-            "Esse addon pode te jogar para 0 ou menos de HP, fazendo você entrar nas fases de teste de morte, normalmente",
-            "Price in Blood não é única e pode ser comprada várias vezes."
+            "Esse addon pode te jogar para 0 ou menos de HP, fazendo você entrar nas fases de teste de morte, normalmente"
         ],
         "conceitos": [
             "unicidade",
@@ -1945,7 +1923,7 @@ window.techAddons =
         nome : 'Gaze of the Guardian',
         nomeLimpo : 'Gaze of the Guardian',
         efeitos :[
-            "Escolha um inimigo marcado por você. Até o seu próximo turno, você se torna o único alvo válido para ataques realizados pelo inimigo escolhido.",
+            "Escolha um inimigo marcado por você. Até o seu próximo turno, você se torna o único alvo válido para ataques realizados pelo inimigo escolhido. Isso não é válido para contra-ataques, apenas ataques diretos feitos pelo alvo.",
             "Caso um personagem esteja afetado por vários Gaze of the Guardian ou efeitos similares, ele pode realizar ataques contra qualquer um dos personagens que aplicaram esses efeitos nele.",
             "Ativar esse efeito consome seu turno. O custo de ativação desse efeito é 2 SP."
         ],
@@ -1959,6 +1937,7 @@ window.techAddons =
         efeitos :[
             "Esse efeito pode ser ativado quando usando algum efeito de Formas Especiais que consome o turno do próprio personagem.",
             "O turno do personagem não é consumido pelo efeito em questão.",
+			"Esse addon só pode ser ativado uma vez por rodada pelo personagem.",
             "O custo de ativação desse efeito é 6 SP, cobrados além do custo de ativação do efeito que altera."
         ],
         conceitos : [],
@@ -2473,7 +2452,9 @@ window.techAddons =
         "nome": "Area of No Effect",
         "nomeLimpo": "Area of No Effect",
         "efeitos": [
-            "Uma força envolve a zona em que está, fazendo com que o primeiro ataque com um addon da família Area of Effect que for jogado contra tal zona, seja negado.",
+            "Uma força envolve a zona em que está, fazendo com que o primeiro ataque com um addon da família Area of Effect que for jogado contra tal zona, seja negado.", 
+			"Somente uma zona pode estar protegida por Area of No Effect por vez e permanece ativa por 1 rodada até o início do turno do usuário caso nenhum Area of Effect tenha sido jogado até então.",
+			"É possível estender a duração para mais uma rodada (totalizando duas) uma única vez, ao pagar 3 SP (sem reduzí-lo de qualquer forma) já no início do turno do usuário. Para isso ocorrer, nenhum AoE pode ter consumido os efeitos deste addon.",
 			"Esse efeito não pode ocorrer mais do que 1x por combate por personagem.",
 			"Custo: 6 SP, gasta o turno."
         ],
@@ -2486,7 +2467,7 @@ window.techAddons =
         "nome": "Shroud of Peace",
         "nomeLimpo": "Shroud of Peace",
         "efeitos": [
-            "Uma força envolve você e seus aliados, fazendo com que o primeiro ataque com um addon da família Area of Effect que seja jogado contra você ou seus aliados, seja negado. Uma vez que um alvo protegido receba um golpe com AoE, a proteção para todos os outros é cancelada também.",
+            "Uma força envolve você e seus aliados independente da zona em que estiverem, fazendo com que o primeiro ataque com um addon da família Area of Effect que seja jogado contra você ou seus aliados, seja negado. Uma vez que um alvo protegido receba um golpe com AoE, a proteção para todos os outros é cancelada também.",
 			"Esse addon não pode ocorrer mais do que 1x por combate, independente de qual aliado usá-lo.",
 			"Custo: 8 SP, gasta o turno."
         ],
@@ -2530,9 +2511,9 @@ window.techAddons =
         "nome": "Divine Trap",
         "nomeLimpo": "Divine Trap",
         "efeitos": [
-            "Escolha um atributo na criação dessa técnica e um alvo ou você mesmo (ver custos de mp): quando usar este addon, você ou seu aliado ficam protegidos no atributo em questão.",
+            "Escolha um atributo na criação dessa técnica e um alvo ou você mesmo (ver custos de SP): quando usar este addon, você ou seu aliado ficam protegidos no atributo em questão.",
 			"O primeiro golpe que acertar o alvo protegido e utilizar tal atributo, ao invés de causar dano, irá restaurar o HP da vítima em um valor igual à metade da ROLAGEM de dano causado.",
-			"Custo de SP: 4, consome o turno e somente 1 vez por combate OU 6 SP, consome o turno, somente 1 vez por combate e pode ser usado num aliado."
+			"Custo de SP: 4, consome o turno do personagem e só pode ser usada uma vez por combate por este personagem OU 6 SP, consome o turno, somente 1 vez por combate e pode ser usado também num aliado."
         ],
         "conceitos": [
 	 "unicidade",
@@ -2745,6 +2726,7 @@ window.techAddons =
         "nomeLimpo": "Stare Master",
         "efeitos": [
             "Escolha um oponente e realize um teste de ataque contra ele. Se você passar, o inimigo ficará marcado até o início do seu próximo turno.",
+			"Em caso de empates, ambos os envolvidos devem re-jogar os dados.",
             "Aumente o custo da técnica em 2 SP. Essa habilidade só pode ser usada uma vez por turno do usuário."
         ],
         "conceitos": [
@@ -2776,7 +2758,7 @@ window.techAddons =
             "Escolha um aliado que esteja sofrendo um debuff: essa penalidade fica adormecida e tem seus efeitos suspensos até o início da próxima rodada do usuário deste addon.",
             "Durações também ficam adormecidas e voltam a contar quando este efeito sair de cena.",
 			"Um alvo não pode ter a mesma penalidade adormecida várias vezes seguidas.",
-			"Gasto de SP igual à 4 e gaste o turno."
+			"Gasto de SP igual à 4. Não gaste o turno do personagem, mas só podendo ser usada uma vez por rodada."
         ],
         "conceitos": [
         ],
@@ -2841,8 +2823,9 @@ window.techAddons =
         "nomeLimpo": "Ultimate Sacrifice",
         "efeitos": [
             "Você pode ativar esse efeito quando um aliado iria receber dano. Ao invés disso, você recebe o dano no lugar do seu aliado, porém o dano final é aumentado em 3. Se você fosse receber 1 de dano, você recebe 4.",
-            "O aumento no dano é adicionado após o calculo de RD.",
+			"O aumento no dano é adicionado após o calculo de RD.",
             "Seu aliado não recebe dano algum.",
+			"Para este efeito ocorrer, o usuário precisa estar na mesma zona do protegido. Com o gasto de 4 SP ele pode ser usado para proteger alvos de zonas adjacentes. Esse custo não pode ser reduzido por nenhum efeito.",
             "Esse efeito não tem custo."
         ],
         "conceitos": [
@@ -3162,7 +3145,7 @@ window.techAddons =
         "efeitos": [
             "No fim de cada um de seus turnos, marque um oponente.",
             "Todos os seus ataques passam a ser Normalizados. Ver regras de Ataques Normalizados.",
-            "Enquanto essa passiva estiver ativa, você não pode ativar suas Marcas para realizar ataques básicos. Ao invés disso, você pode redirecionar ataques de inimigos marcados por você para você mesmo. Quando você faz isso, você só pode Bloquear o ataque, não esquivar. Isso é equivalente ao seu personagem entrar no meio do caminho e receber o ataque.",
+            "Enquanto essa passiva estiver ativa, você não pode ativar suas Marcas para realizar ataques básicos. Ao invés disso, você pode redirecionar ataques de inimigos marcados por você para você mesmo. Quando você faz isso, você só pode Bloquear o ataque, não esquivar. Isso é equivalente ao seu personagem entrar no meio do caminho e receber o ataque. Isso só é possível de ser feito se o personagem estiver na mesma zona do alvo protegido.",
             "Enquanto essa passiva estiver ativa, você pode realizar a ação \"Buscar Coragem\".",
             "Ativar essa passiva consome o turno do personagem. Desativar essa passiva consome o turno do personagem.",
             "Se esse addon for o único addon em uma técnica, o personagem pode decidir fazer essa técnica ser o estado natural dele. Nesse caso, a técnica não possui mais custo e está SEMPRE ativa. Caso contrário, aumente custo total da técnica em 2 (não acumulativo, mas somatório entre outros addons) para cada rodada que a habilidade com este addon ficar ativa."
@@ -3261,7 +3244,7 @@ window.techAddons =
         "conceitos": [
             "unicidade"
         ],
-        "nivel": 3
+        "nivel": 2
     },
 		    {
         "tipo": "passiva",
@@ -3294,9 +3277,9 @@ window.techAddons =
         "nome": "Sharing is Caring",
         "nomeLimpo": "Sharing is Caring",
         "efeitos": [
-            "Toda vez que você permitir que um aliado se cure e ele o faça, cure 1 HP seu. Não vale para múltiplos alvos, mas sim para a ação de permitir que ele se cure.",
-			"Então mesmo que você permitisse que 5 aliados se curassem, você ainda se curaria em +1. ",
-            "Aumenta o custo por rodada da técnica passiva em 2 SP."
+            "Toda vez que você permitir que um aliado se cure e ele o faça, cure 1 HP seu. Isso vale para a ação de cura, não para valores.",
+			"Então se você permitisse que 5 aliados se curassem, você se curaria em +5 extras. Você não paga SP pela própria cura.",
+            "Aumenta o custo por rodada da técnica passiva em 3 SP. Esse custo não pode ser reduzido por nenhum addon."
         ],
         "conceitos": [
             "unicidade"
@@ -3613,7 +3596,7 @@ window.techAddons =
         "nome": "Forma",
         "nomeLimpo": "Forma",
         "efeitos": [
-            "A arma possui múltiplas formas, que podem ser trocadas gastando o turno do personagem.",
+            "A arma possui múltiplas formas, que podem ser trocadas somente no início do turno do personagem.",
             "Inicialmente, a arma possui uma única forma. Para cada vez que Forma é comprada, a arma ganha uma forma extra.",
 			"Cada forma deve ser feita como uma arma diferente. Cada forma tem a quantidade padrão de addons reduzida no número de vezes que Forma foi colocada na arma.",
 			"Exemplo A: Arma de Duas mãos Nível 3 com um addon Forma. A arma se tornaria duas armas de duas mãos, cada uma com dois addons (3 - 1).",
@@ -4150,7 +4133,7 @@ window.techAddons =
         "nomeLimpo": "Pocao",
         "efeitos": [
 			"Itens com esse addon permitem o personagem se curar 1d6 + Nível do item. Reduza o custo do item em 50% do valor normal.",
-			"O item com este addon não gasta o turno do personagem quando usado. Esse deve ser o único addon do item, podendo ser comprado múltiplas vezes (aumentando o nível do item e portanto, o bônus de cura)."
+			"O item com este addon não gasta o turno do personagem quando usado, mas somente um item com este addon pode ser usado por rodada e deve ser feito antes de ações que terminem o turno do personagem. Esse deve ser o único addon do item, podendo ser comprado múltiplas vezes (aumentando o nível do item e portanto, o bônus de cura)."
         ],
         "conceitos": [],
         "nivel": 1
