@@ -19,7 +19,10 @@ window.techChangelog = [
 			"Clarificado em \"Shroud of Peace\" que seu efeito ocorre independente de zonas, diferenciando-se assim do Area of No Effect.",
 			"O addon \"Supress\" agora não gasta mais o turno do personagem, mas só pode ocorrer uma vez por rodada.",
 			"Clarificado que \"Ultimate Sacrifice\" agora precisa estar na mesma zona do alvo para protegê-lo. Adicionada uma opção de pagar SP para proteger alvos de zonas adjacentes.",
-			"Novo addon: \"Raging Strikes\"."
+			"Novo addon: \"Raging Strikes\".",
+			"HOTFIX [20/03]: Clarificada a duração básica de marcas.",
+			"HOTFIX [20/03]: Clarificado que Controle Absoluto não funciona junto de Area of Effect.",
+			"HOTFIX [20/03]: Clarificado o que ocorre em empates pelo addon Backstabber."
 			]			
  },
 {	 
@@ -589,6 +592,7 @@ window.techConceitos = [
             "O ataque proporcionado pela marca só pode ser feito se aquele que estiver fazendo-o, puder de alguma forma executar o golpe. Ou seja, alvos marcados em zonas distantes quando o personagem não pode puní-los com o golpe por não ter uma arma ranged equipada no momento ou uma técnica com alcance apropriado, não são possíveis.",
 			"Um alvo pode estar marcado por vários personagens, mas apenas um pode ativar sua marca quando ele faz um ataque.",
             "IMPORTANTE: Um personagem só pode ativar uma de suas marcas uma vez por rodada.",
+			"Se nada contradizer essa regra, marcas duram até o início do próximo turno do personagem que as colocou.",
             "Nota: Ver regras de Ataques Normalizados"
         ]
     },
@@ -862,6 +866,7 @@ window.techAddons =
 			"O dano causado é normalizado.",
 			"Vítimas podem desviar dessa técnica, bloquear ou contra-atacar com ataques básicos. Outras ações de defesa não são válidas.",
             "Cópias e aliados criados por outros addons também são alvos do Area of Effect.",
+			"Role individualmente testes de Ataque para cada alvo que decidir esquivar.",
 			"Não funciona em contra-ataques, uma vez que o único alvo válido em um contra-ataque é aquele que está te golpeando, não todos os outros.",
 			"Caso Area of Effect seja adicionado junto de outros efeitos que cortem o dano pela metade, o dano só é cortado uma única vez pela metade.",
             "Aumenta o custo da técnica em 4 SP."
@@ -877,7 +882,7 @@ window.techAddons =
         "nome": "Raging Strikes",
         "nomeLimpo": "Raging Strikes",
         "efeitos": [
-			"A técnica com esse ataque causa -4 pontos de dano.",
+			"A técnica com esse addon causa -4 pontos de dano.",
 			"Toda vez que o usuário dessa técnica realizá-la e errar o golpe com este addon, ele ganha +1 Bônus não-nomeado de Ataque. Esse bônus aumenta até o usuário acertar um ataque, não tendo uma duração prévia, assim.",
 			"Esse bônus é perdido quando o usuário troca o alvo deste golpe.",
 			"Este addon não aumenta o custo de SP da técnica."
@@ -899,6 +904,7 @@ window.techAddons =
 			"Este addon pode ser emparelhado com os addons \"Técnica à Distância\" ou \"Special Attack\" com a opção de golpe ranged, para atingirem outras zonas da escolha do usuário. Nesses casos, quando o momento de executar a técnica chega, o usuário escolhe uma zona desejada na hora e executa o golpe contra todas as vítimas que ali estão.",
 			"O dano causado é inteiro.",
 			"Vítimas podem desviar dessa técnica, bloquear ou contra-atacar com ataques básicos. Outras ações de defesa não são válidas.",
+			"Role individualmente testes de Ataque para cada alvo que decidir esquivar.",
             "Cópias e aliados criados por outros addons também são alvos do Area of Effect.",
 			"Não funciona em contra-ataques, uma vez que o único alvo válido em um contra-ataque é aquele que está te golpeando, não todos os outros.",
             "Aumenta o custo da técnica em 6 SP."
@@ -916,7 +922,8 @@ window.techAddons =
         "efeitos": [
             "A técnica passa a afetar todos os inimigos na mesma zona em que o usuário. Aliados não são mais afetados.",
 			"Esse addon é como uma alteração de propriedade de um dos Area of Effect (Blast ou Burst), sendo a única exceção que pode ser comprada junto deles apesar de ser da mesma família.",
-            "Aumenta o custo da técnica em 6 SP."			
+           	"Role individualmente testes de Ataque para cada alvo que decidir esquivar.",
+			"Aumenta o custo da técnica em 6 SP."			
         ],
         "conceitos": [
             "unicidade"
@@ -1994,7 +2001,7 @@ window.techAddons =
         "nome": "Backstabber",
         "nomeLimpo": "Backstabber",
         "efeitos": [
-            "Recebe um inimigo e um aliado como alvos. Faça um teste de Esquiva contra o Ataque do inimigo escolhido. Se você vencer, o próximo ataque que o inimigo fosse fazer em você é realizado no aliado escolhido.",
+            "Recebe um inimigo e um aliado como alvos. Faça um teste de Esquiva contra o Ataque do inimigo escolhido. Se você vencer, o próximo ataque que o inimigo fosse fazer em você é realizado no aliado escolhido. Em caso de empates, rolem novamente até um vencedor ser declarado.",
             "Não consome o turno do usuário, mas só pode ser ativada uma vez por rodada.",
             "Ativar este efeito consome 2 SP."
         ],
@@ -2083,7 +2090,8 @@ window.techAddons =
         "nomeLimpo": "Controle Absoluto",
         "efeitos": [
             "Sempre que você for rolar dados de combate (testes de Acerto, Esquiva, Dano e outros diretamente relacionados ao combate), você pode reduzir seu modificador para qualquer número que quiser, contanto que seja menor do que o modificador que você ia usar. Você não precisa avisar ninguém disso.",
-            "Reduzir seus modificadores não consome SP."
+            "Esse addon não funciona junto de Area of Effect.",
+			"Reduzir seus modificadores não consome SP."
         ],
         "conceitos": [
 

@@ -5,6 +5,18 @@
  */
 window.vantagensChangelog = [
 {
+        "version" : [5, 1],
+        "description" : [
+			 "Corrigida a vantagem de Maquinista \"Caminho da Engenharia\" que estava repetida 2x, mas tinham textos diferentes. A vantagem \"Ás do volante\" agora está aparecendo corretamente.",
+			 "Corrigida a duplicata de \"Maestria em Armas de Haste\".",
+			 "Corrigida a duplicata de \"Corpo como um Templo\".",
+			 "Corrigida o nome da desvantagem de Ogrekin de \"Favor Demoníaco\" para \"Fervor Demoníaco\".",
+			 "Corrigido o typo em \"Herdeiro\" sobre começar com 500 G ao invés de 550 G.",
+			 "Clarificado que \"Andarilho do Mundo\" pode ser comprada duas vezes pagando o preço normalmente, removendo o trecho antigo de sacrificar outras vantagens.",
+			 "As desvantagens do arquétipo Sabotador devem agora estar aparecendo normalmente."
+        ]
+    },
+{
         "version" : [5, 0],
         "description" : [
 			 "Novidade: Todos os arquétipos agora possuem as chamadas Desvantagens Arquetípicas.",
@@ -828,14 +840,14 @@ window.vantagensArray = [
         "pontos": "1",
         "descricao": [
 			"Seu treinamento te deixou apto a agir com maior precisão, facilidade e sobrevivência em um tipo de terreno. Assim sendo, escolha um terreno que represente o seu treinamento: Neve, Desertos, Pântanos, Montanhas, Planícies, Cavernas, Florestas, Praias ou Urbano. Sempre que estiver no seu estilo de terreno escolhido, você pode declarar ao Mestre que irá tomar um tempo para se familiarizar com ele. Esse tempo pode ser de 5 à 30 minutos.",
- "Dependendo da quantidade de tempo gasta, você ganha os seguintes benefícios (a critério do mestre frente ao tempo usado) enquanto permanecer nesse tipo de terreno:",
-"- Você e seu grupo não podem se perder de qualquer forma, a não ser que seja por influências mágicas;",
-"- Você está sempre alerta ao perigo, não podendo ser surpreendido em combate e sabendo automaticamente quando alguma criatura ou alguém está na espreita;",
-"- Você ignora qualquer penalidade que o terreno imponha contra você dentro e fora de combate;",
-"- Você passa automaticamente em testes de Furtividade e os seus relacionados;",
-"- Você é capaz de encontrar comida sem rolar qualquer teste. Em ambientes urbanos isso pode significar uma facilidade pra encontrar restaurantes ou locais com comida;",
-"- Você passa automaticamente em testes relacionados à Rastreamento e identificação de pegadas, trilhas ou vida local;",
-"Alternativamente, você pode não pegar alguma outra vantagem de arquétipo para comprar treinamento em um segundo tipo de terreno da sua escolha. Essa vantagem só pode ser pega no máximo duas vezes. Os terrenos escolhidos devem fazer sentido com a história e passado / presente do seu personagem."
+			"Dependendo da quantidade de tempo gasta, você ganha os seguintes benefícios (a critério do mestre frente ao tempo usado) enquanto permanecer nesse tipo de terreno:",
+			"- Você e seu grupo não podem se perder de qualquer forma, a não ser que seja por influências mágicas;",
+			"- Você está sempre alerta ao perigo, não podendo ser surpreendido em combate e sabendo automaticamente quando alguma criatura ou alguém está na espreita;",
+			"- Você ignora qualquer penalidade que o terreno imponha contra você dentro e fora de combate;",
+			"- Você passa automaticamente em testes de Furtividade e os seus relacionados;",
+			"- Você é capaz de encontrar comida sem rolar qualquer teste. Em ambientes urbanos isso pode significar uma facilidade pra encontrar restaurantes ou locais com comida;",
+			"- Você passa automaticamente em testes relacionados à Rastreamento e identificação de pegadas, trilhas ou vida local;",
+			"Essa vantagem só pode ser pega no máximo duas vezes, pagando normalmente seu custo. Os terrenos escolhidos devem fazer sentido com a história e passado / presente do seu personagem."
 		],
         "requisitos": "Arquétipo Artilheiro"
     },
@@ -1084,15 +1096,7 @@ window.vantagensArray = [
 			"O personagem viveu treinando com armas de haste de todos os tipos, sejam elas alabardas, lanças, tridentes, glaives ou coisas do tipo. Enquanto equipado com armas do tipo, o personagem ganha automaticamente +1 Bônus de Item de Prioridade em seus golpes usando a arma."
         ],
         "requisitos": "Arquétipo Dragoon"
-    },
-    {
-        "nome": "Maestria em Armas de Haste",
-        "pontos": "1",
-        "descricao": [
-			"O personagem viveu treinando com armas de haste de todos os tipos, sejam elas alabardas, lanças, tridentes, glaives ou coisas do tipo. Enquanto equipado com armas do tipo, o personagem ganha automaticamente +1 Bônus de Item de Prioridade em seus golpes usando a arma."
-        ],
-        "requisitos": "Arquétipo Dragoon"
-    },		
+    },	
     {
         "nome": "Vôo do Dragoon",
         "pontos": "0",
@@ -1465,7 +1469,7 @@ window.vantagensArray = [
         "requisitos": "Arquétipo Maquinista"
     },
     {
-        "nome": "Caminho da Engenharia",
+        "nome": "Ás do Volante",
         "pontos": "1",
         "descricao": [
 			"O personagem é um excelent piloto quando se trata de veículos mecânicos, Quando utilizando a perícia Sistemas ou Veículos para pilotar qualquer máquina, receba +3 em quaisquer testes."
@@ -1543,14 +1547,6 @@ window.vantagensArray = [
     {
         "nome": "Mais uma proteção",
         "pontos": "1",
-        "descricao": [
-			"O mestre das runas pode aplicar suas runas a algum objeto, protegendo contra algum tipo de corrupção mágica específica. Essas runas são mais simples, não duram tanto e são destruídas já na primeira vez que lidarem com a maldição de que protegem, mas essa primeira maldição também será bloqueada completamente. Se aplicado a uma armadura, elas vão proteger o usuário da armadura. Quando aplicadas a outros itens, devem ser tratadas de forma apropriada, considerando-se que as runas atuam como um pára-raios. Tipos de corrupção mágica que podem ser escolhidas: veneno, invasão de mente. Em geral, qualquer coisa que fosse ser incluída em \"Corpo como um templo\" pode ser escolhida por \"Mais uma proteção\"."
-        ],
-        "requisitos": "Arquétipo Mestre das Runas"
-    },
-    {
-        "nome": "Mais uma proteção",
-        "pontos": "0",
         "descricao": [
             "O mestre das runas pode aplicar suas runas a algum objeto, protegendo contra algum tipo de corrupção mágica específica. Essas runas são mais simples, não duram tanto e são destruídas já na primeira vez que lidarem com a maldição de que protegem, mas essa primeira maldição também será bloqueada completamente.",
             "Se aplicado a uma armadura, elas vão proteger o usuário da armadura. Quando aplicadas a outros itens, devem ser tratadas de forma apropriada, considerando-se que as runas atuam como um pára-raios. Tipos de corrupção mágica que podem ser escolhidas: veneno, invasão de mente. Em geral, qualquer coisa que fosse ser incluída em \"Corpo como um templo\" pode ser escolhida por \"Mais uma proteção\"."
@@ -2167,9 +2163,9 @@ window.vantagensArray = [
         "pontos": "1 ou 3 ou 5",
         "descricao": [
             "Você é herdeiro de alguma fortuna de algum tipo ou origem. Isso te faz iniciar a história com um pouco mais de dinheiro do que o normal. Você só pode comprar Herdeiro uma vez. O motivo e origem da herança devem ser explicados na história do personagem.",
-            "1 ponto: Comece a história com 750 moedas ao invés de 500.",
-            "3 pontos: Comece a história com 1000 moedas ao invés de 500.",
-            "5 pontos: Comece a história com 1500 moedas ao invés de 500."
+            "1 ponto: Comece a história com 750 moedas ao invés de 550.",
+            "3 pontos: Comece a história com 1000 moedas ao invés de 550.",
+            "5 pontos: Comece a história com 1500 moedas ao invés de 550."
         ]
     },
     {
@@ -2964,7 +2960,7 @@ window.desvantagensArray = [
         "requisitos": "Raça Kash'nir"
     },	
     {
-        "nome": "Favor Demoníaco",
+        "nome": "Fervor Demoníaco",
         "pontos": "2",
         "descricao": [
             "Um Ogrekin raramente tem compaixão, piedade ou dó de alguém por quem ele não se importa de fato. Assim, um personagem com essa desvantagem tende a ser excessivamente cruel, maldoso e sanguinário (na maior parte do tempo), dificilmente conhecendo o significado de \"empatia\"."
@@ -4905,11 +4901,28 @@ window.desvantagensArray = [
         "nome": "Miséria Constante",
         "pontos": "2",
         "descricao": [
-			" muito dificil para um Senhor das Bestas manter recursos adequados para si e para seus animais. Com essa desvantagem, o personagem quase sempre terá que usar de seus fundos monetários e lucros afim de dividí-los com suas criaturas, seja na manutenção de exames, alimento, bebidas, cuidados diversos, etc. Para cada animal que o personagem tiver consigo, todo e qualquer lucro que ele venha à ter em moedas de ouro é reduzido em -10% de forma acumulativa. ",
+			"É muito dificil para um Senhor das Bestas manter recursos adequados para si e para seus animais. Com essa desvantagem, o personagem quase sempre terá que usar de seus fundos monetários e lucros afim de dividí-los com suas criaturas, seja na manutenção de exames, alimento, bebidas, cuidados diversos, etc. Para cada animal que o personagem tiver consigo, todo e qualquer lucro que ele venha à ter em moedas de ouro é reduzido em -10% de forma acumulativa. ",
 			"Por exemplo, se o personagem tiver 2 animais, ele perde 20% dos lucros automaticamente. Essa parte “perdida” tem um destino narrativamente, significando os gastos citados anteriormente."
 		],
         "requisitos": "Arquétipo Senhor das Bestas"
-    }			
+    },
+    {
+        "nome": "Falante",
+        "pontos": "2",
+        "descricao": [
+			"O personagem tem uma vontade irresistível de falar seus planos antes que eles se concretizem de fato, independente para quem seja. A mera sensação de ver as expressões das pessoas, seja de horror, raiva, desespero ou alegria, é o suficiente para ele achar que o risco valeu a pena. Sempre que você for fazer alguma ação que envolva sabotar algo, você deve expressar seu plano abertamente para todos, deixando claro o que irá fazer."
+		],
+        "requisitos": "Arquétipo Sabotador"
+    },
+    {
+        "nome": "Sem limites",
+        "pontos": "3",
+        "descricao": [
+			"O personagem leva suas sabotagens ao extremo, independente da pessoa que é alvo. Ele não consegue evitar de sacanear seus amigos/inimigos, trazendo uma má reputação gigantesca a ele. Além disso, há  grandes chances das traquinagens do personagem causarem grande irritação nos inimigos e consequentemente, como ele não sabe quando parar,  o personagem é quase sempre pego de guarda aberta ou desprevinido por ações impulsivas.",
+			"No geral, o personagem com essa desvantagem é um pentelho absoluto para as pessoas a sua volta. Suas sabotagens podem ir desde coisas simples como jogar pimenta na cerveja do anão do seu grupo até coisa mais complexas, como retirar o volante da nave do grupo e escondê-lo em algum lugar da base, desafiando o grupo à encontrá-lo."
+		],
+        "requisitos": "Arquétipo Sabotador"
+    }		
 
 ].sort(function (a,b) {
     var na = a.nome.toUpperCase().latinize();
