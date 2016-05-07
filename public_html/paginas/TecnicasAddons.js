@@ -1923,19 +1923,6 @@ window.techAddons =
     },
     {
         "tipo": "ataque",
-        "nome": "Sabotage",
-        "nomeLimpo": "Fivefrenzy",
-        "efeitos": [
-			"A técnica com este addon não causa mais dano algum, independente da rolagem ou dos modificadores. Entretanto, caso a técnica acerte o alvo, ela aplica todos os debuffs/penalidades emparelhadas na técnica normalmente e também ignorando a regra de dano mínimo (Exemplo: Precisa causar 1 ponto ou mais de dano para ativar).",
-			"Não é possível emparelhar addons que alterem seu dano junto deste, seja positiva ou negativamente.",
-            "Aumente o custo da técnica em 2 SP."
-        ],
-        "conceitos": [
-        ],
-        "nivel": 1
-    },
-    {
-        "tipo": "ataque",
         "nome": "Sweep Hit",
         "nomeLimpo": "Sweephit",
         "efeitos": [
