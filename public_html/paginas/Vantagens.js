@@ -5,6 +5,12 @@
  */
 window.vantagensChangelog = [
 {
+        "version" : [5, 2],
+        "description" : [
+			 "Corrigidos os valores de \"Língua sem travas\" e \"Auto-suficiência biológica\"."
+        ]
+    },
+{
         "version" : [5, 1],
         "description" : [
 			 "Corrigida a vantagem de Maquinista \"Caminho da Engenharia\" que estava repetida 2x, mas tinham textos diferentes. A vantagem \"Ás do volante\" agora está aparecendo corretamente.",
@@ -13,7 +19,8 @@ window.vantagensChangelog = [
 			 "Corrigida o nome da desvantagem de Ogrekin de \"Favor Demoníaco\" para \"Fervor Demoníaco\".",
 			 "Corrigido o typo em \"Herdeiro\" sobre começar com 500 G ao invés de 550 G.",
 			 "Clarificado que \"Andarilho do Mundo\" pode ser comprada duas vezes pagando o preço normalmente, removendo o trecho antigo de sacrificar outras vantagens.",
-			 "As desvantagens do arquétipo Sabotador devem agora estar aparecendo normalmente."
+			 "As desvantagens do arquétipo Sabotador devem agora estar aparecendo normalmente.",
+			 "HOTFIX [26/03]: As vantagens de Escriba agora devem estar aparecendo normalmente."
         ]
     },
 {
@@ -365,7 +372,7 @@ window.vantagensArray = [
     },
     {
         "nome": "Auto-suficiência Biológica",
-        "pontos": "1",
+        "pontos": "0",
         "descricao": [
             "O personagem tem instalações em seu corpo de Droid que o permite ser auto-suficiente em questões mudanças que outros seres vivos são dependentes. Isto é, o Droid não precisa comer, beber, dormir ou respirar, ficando imune à penalidades de fadiga por sono ou por falta de alimento. Isso não deixa o Droid imune à recarregar suas baterias, calibrar circuitos, injetar óleo em suas articulações ou quaisquer aspectos mais narrativos que ele esteja sujeito ou queira ter presente em seu corpo (especificar na história)."
         ],
@@ -1188,7 +1195,33 @@ window.vantagensArray = [
 			"A postura de batalha e o seu treinamento como um Duelista o fazem mais elegante que a maioria dos guerreiros e bárbaros brutos. Esse e um traço que é facilmente reconhecido principalmente pela nobreza local, que tende a te dar mais crédito do que ao resto do seu grupo, talvez. O personagem com essa vantagem possui superioridade em testes com as perícias Diplomacia e Blefe sempre que passar num teste de Carisma, antes da rolagem da perícia em questão."
         ],
         "requisitos": "Arquétipo Duelista"
-    },	
+    },
+    {
+        "nome": "Super Alfabetizado",
+        "pontos": "1",
+        "descricao": [
+			"A escrita é a vida de um escriba. Fazer registros em qualquer material que seja é o mais importante, ter a história concretizada para que outros possam saber é o seu objetivo. Em termos narrativos, o personagem é capaz de ler e escrever duas vezes mais rápido do que qualquer membro comum da sua raça."
+        ],
+        "requisitos": "Arquétipo Escriba"
+    },
+    {
+        "nome": "Poliglota",
+        "pontos": "1",
+        "descricao": [
+			"Afim de compreender histórias passadas e futuras, o escriba também precisa ter um repertório maior de línguas conhecidas. O personagem com essa vantagem começa a história com três línguas extras (além de comum e a racial) da escolha dele."
+        ],
+        "requisitos": "Arquétipo Escriba"
+    },
+    {
+        "nome": "Contrato Mágico",
+        "pontos": "0",
+        "descricao": [
+			"O personagem é capaz de realizar um contrato mágico, uma técnica famigerada e exclusiva de um escriba. Utilizando de uma tinta comum, mas despejando parte da sua energia mágica e espiritual no contrato, o personagem pode uma vez por episódio fazer um contrato com alguém que encontrar em sua aventura. ",
+			"Esse contrato deve ser como um contrato comum, incluindo o que deve ser obedecido ou o que não precisa ser respeitado.",
+			"O contrato não pode ser quebrado por ambas as partes, uma força cósmica e mágica os impede de fazer isso. Entretanto, caso o contrato seja quebrado por algum motivo, existem consequências graves para quem o fez, que são determinadas pelo Mestre ou pelo Jogador (acordadas previamente). "
+        ],
+        "requisitos": "Arquétipo Escriba"
+    },		
     {
         "nome": "O plano do estrategista",
         "pontos": "1",
@@ -2761,7 +2794,7 @@ window.desvantagensArray = [
     },
     {
         "nome": "Língua sem Travas",
-        "pontos": "5",
+        "pontos": "2",
         "descricao": [
             "Muitos Droids não compreendem aspectos das emoções humanas ou até entendem-nas, mas de forma mais racional e lógica. Justamente por isso, alguns membros dessa raça tendem a ser honestos até demais para evitarem problemas, mas não compreendem que uma honestidade tão radical também pode trazer problemas. O personagem com essa desvantagem sempre fala a verdade e o que pensa de fato, independente da ocasião."
         ],
