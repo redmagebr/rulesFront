@@ -1231,7 +1231,7 @@ window.techAddons =
         "nome": "Leadership - Now you do it",
         "nomeLimpo": "Leadership - Now you do it",
         "efeitos": [
- 			"Escolha um aliado: ele fará um ataque em conjunto com você. Primeiro, você irá atacar - o alvo tem chance de reação normal (esquiva, bloqueio ou contra-ataque). Se você acertar o teste/causar dano nele, o seu aliado então rola um ataque básico com os modificadores reduzidos pela metade.",
+ 			"Escolha um aliado: ele fará um ataque em conjunto com você. Primeiro, você irá atacar - o alvo tem chance de reação normal (esquiva, bloqueio ou contra-ataque). Se você acertar o teste/causar dano nele, o seu aliado então rola o dano de um ataque básico com os modificadores reduzidos pela metade.",
 			"O dano final da sua técnica então é a soma do seu dano com a soma do dano do aliado.",
 			"O dano final desse possui como tipos quaisquer atributos de dano que tenham sido usados por você e ele.",
 			"Essa técnica não pode receber outros addons que aumentem ou diminuam seu dano.",
@@ -1257,6 +1257,7 @@ window.techAddons =
 			"Efeitos que mudam de acordo com quem está executando eles não podem ser adicionados nessa técnica. Então Mark of the Guardian não pode ser adicionado (as marcas funcionam diferente dependendo de qual personagem a está colocando).",
             "Outros efeitos podem ser adicionados, como Inspire para aumentar algum atributo de outro aliado. Só que tanto o personagem que usou essa técnica quanto quem realizou o ataque contam como o \"usuário\" dela. Assim sendo, efeitos que exigem um \"aliado\" (como Inspire) só poderiam afetar um terceiro personagem.",
             "Apesar de ambos serem o Usuário do Poder, é considerado que o dano é causado pelo dono do turno (apesar do aliado realizar o ataque e rolar os dados). Assim sendo, caso o aliado possua redutores nos danos dele, esses redutores NẪO são carregados para On My Command. Mas se o personagem que usou essa técnica possuir redutores no seu dano causado, esses redutores são repassados para o ataque do aliado.",
+			"Para contra-ataques versus esta técnica, o alvo considerado é o aliado que está atacando.",
 			"Aumenta o custo da técnica em 2 SP.",
         ],
         "conceitos": [
@@ -4301,7 +4302,7 @@ window.techAddons =
         "nome": "Falange",
         "nomeLimpo": "Falange",
         "efeitos": [
-			"Uma vez por combate, quando usar a opção \"Bloquear\", você pode reduzir o dano que o oponente viria a te dar para 1. Imediatamente, você pode fazer um ataque básico através de um golpe de oportunidade contra o seu atacante, desde que possa atacá-lo dentro do limite plausível de zonas.",
+			"Uma vez por combate, quando usar a opção \"Bloquear\" e reduzir o dano que fosse ser recebido para o mínimo de 1. Imediatamente, você pode fazer um ataque básico através de um golpe de oportunidade contra o seu atacante, desde que possa atacá-lo dentro do limite plausível de zonas.",
 			"O alvo deste golpe de oportunidade apenas pode esquivar ou bloquear o seu golpe."
         ],
         "conceitos": [],

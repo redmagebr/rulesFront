@@ -7,7 +7,9 @@ window.vantagensChangelog = [
 {
         "version" : [5, 2],
         "description" : [
-			 "Corrigidos os valores de \"Língua sem travas\" e \"Auto-suficiência biológica\"."
+			 "Corrigidos os valores de \"Língua sem travas\" e \"Auto-suficiência biológica\".",
+			 "Corrigido o valor de \"Motivo de Descrença\" para 2 (antigo: 4).",
+			 "Corrigido a nomeação do arquétipo \"Maquinista\" em algumas de suas vantagens, que estavam como \"Mecânico\"."
         ]
     },
 {
@@ -2722,7 +2724,7 @@ window.desvantagensArray = [
     },
     {
         "nome": "Motivo de Descrença",
-        "pontos": "4",
+        "pontos": "2",
         "descricao": [
             "Você pertence à uma espécie de bestiais que de alguma forma possui um histórico biológico de ser uma raça inofensiva e que não faz mal a ninguém.  Se não isso, algo em particular em você dentro da sua espécie, vai além do comum e te confere esse status.  Geralmente um Bestial com essa desvantagem não é considerado uma ameaça por ninguém e isso pode funcionar a seu favor às vezes, mas geralmente pessoas que não te conhecem não te levarão em consideração como alguém que pode trazer problemas."
         ],
@@ -4753,7 +4755,7 @@ window.desvantagensArray = [
         "descricao": [
 			"Essa desvantagem funciona somente em conjunto com a vantagem “Inventor”. O personagem é bom em fazer invenções diversas e não tem problemas com criatividade, entretanto, o problema vem na parte funcional das suas invenções. Toda e qualquer invenção que o maquinista criar através da vantagem “Inventor” tem 40% de chance (jogue 1d100, se o resultado for menor ou igual à 40, é uma falha) em falhar e explodir causando 1d4 de dano direto no HP de todos que estiverem próximos (incluindo o próprio Maquinista)."
 		],
-        "requisitos": "Arquétipo Mecânico"
+        "requisitos": "Arquétipo Maquinista"
     },
     {
         "nome": "Manutenção",
@@ -4763,7 +4765,7 @@ window.desvantagensArray = [
 			"Este item pode ser encontrado geralmente em cidades de médio e grande porte que tenham qualquer incentivo ou desenvolvimento tecnológico. O mestre pode optar por complicar as coisas ao tornar tais centros tecnológicos escassos, mas deve dar sempre a oportunidade para o Jogador comprar tais núcleos e guardá-los consigo caso queira estocar os mesmos.",
 			"De início, é permitido que o personagem compre Núcleos de Reparação na lista de Utilidades Gerais encontradas no Grimório de Especialidades."
 		],
-        "requisitos": "Arquétipo Mecânico"
+        "requisitos": "Arquétipo Maquinista"
     },
     {
         "nome": "Maldição de Manmon",
