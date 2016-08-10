@@ -9,7 +9,8 @@ window.vantagensChangelog = [
         "description" : [
 			 "Corrigidos os valores de \"Língua sem travas\" e \"Auto-suficiência biológica\".",
 			 "Corrigido o valor de \"Motivo de Descrença\" para 2 (antigo: 4).",
-			 "Corrigido a nomeação do arquétipo \"Maquinista\" em algumas de suas vantagens, que estavam como \"Mecânico\"."
+			 "Corrigido a nomeação do arquétipo \"Maquinista\" em algumas de suas vantagens, que estavam como \"Mecânico\".",
+			 "Minor-Update (Agosto de 2016): \"Oráculo\" teve seu teste reformulado."
         ]
     },
 {
@@ -2290,7 +2291,7 @@ window.vantagensArray = [
         ]
     },
     {
-        "nome": "Perfeito.",
+        "nome": "Perfeito",
         "pontos": "2 ou 3",
         "descricao": [
             "Você foi criado ou modificado para ser um exemplo perfeito da sua raça.",
@@ -2372,7 +2373,7 @@ window.vantagensArray = [
         "pontos": "3",
         "descricao": [
             "Em certos momentos, escolhidos pelo Mestre, ele pode dizer que você teve uma rápida visão sobre uma situação. Você também podem tentar se concentrar com calma para ter essas visões (não necessariamente claras).",
-            "Os testes para prever algo são feitos com 1d10 + Sabedoria + (1/2 Emprego [Vidente]), e a dificuldade varia de acordo com o que se está tentando prever"
+            "Os testes para prever algo são feitos com 1d10 + Sabedoria + Nível do Personagem , e a dificuldade varia de acordo com o que se está tentando prever."
         ]
     },
     {

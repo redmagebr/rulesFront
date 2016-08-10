@@ -5,6 +5,15 @@
  */
 window.techChangelog = [  
 {	 
+        version : [5,3],
+        description : [
+			"\"Special Attack (todos)\": clarificado que o custo de SP para tornar a técnica ranged é feito na criação da técnica.",
+			"\"Utiliza Munição\": clarificado que não comba com a vantagem de Ferreiro.",
+			"\"Reverse Saboteur\": clarificado que buffs que afetem o grupo inteiro de uma vez não acumulam dano.",
+			"\"Maelstrom\": clarificado que cada debuff entregue soma o dano inflingido."
+			]			
+ }, 
+{	 
         version : [5,2],
         description : [
 			"Nesta atualização, quase todos os addons passaram por uma padronização matemática de custos em relação seus benefícios e penalidades, aplicando um balanceamento matemático não instalado previamente no DFS neste quesito.",
@@ -1566,7 +1575,7 @@ window.techAddons =
             "Adicione um segundo atributo de dano, diferente do primeiro, dividido por 2 (seguindo as regras de arredondamento do DFS) ao dano da técnica.",
 			"Golpes Ranged recebem +1 Bônus de Prioridade e os outros bônus e penalidades que um golpe dessa categoria normalmente tem, dependendo da zona em que é feito.",
             "Special Attack I pode ser adicionada a uma técnica sem ocupar slots. Nesse caso: aumente o custo da técnica em +1 para cada tipo de custo. Não é possível ignorar o limite de apenas uma Special Attack dessa maneira.",
-            "Aumente o custo da técnica em 1 SP se ela for usar as propriedades da arma em questão ou 3 SP para ser considerada sempre ranged independente da arma usada." 
+            "Aumente o custo da técnica em 1 SP se ela for usar as propriedades da arma em questão ou 3 SP para ser considerada sempre ranged independente da arma usada, na criação da técnica." 
        ],
         "conceitos": [
             "unicidade",
@@ -1582,7 +1591,7 @@ window.techAddons =
         "efeitos": [
             "Adicione um segundo atributo de dano, diferente do primeiro, somado ao dano da técnica.",
 			"Golpes Ranged recebem +1 Bônus de Prioridade e os outros bônus e penalidades que um golpe dessa categoria normalmente tem, dependendo da zona em que é feito.",
-            "Aumente o custo da técnica em 2 SP se ela for usar as propriedades da arma em questão ou 5 SP para ser considerada sempre ranged independente da arma usada." 
+            "Aumente o custo da técnica em 2 SP se ela for usar as propriedades da arma em questão ou 5 SP para ser considerada sempre ranged independente da arma usada, na criação da técnica.." 
         ],
         "conceitos": [
             "unicidade",
@@ -1601,7 +1610,7 @@ window.techAddons =
             "Essa técnica passa a ter como tipo todos os seus atributos de dano que estejam acima de 0. Você deve fazer uma descrição que explique isso.",
             "Você só pode utilizar Special Attack III quando cada um dos atributos de dano seus forem menores ou iguais a sua sabedoria de combate.",
 			"Golpes Ranged recebem +1 Bônus de Prioridade e os outros bônus e penalidades que um golpe dessa categoria normalmente tem, dependendo da zona em que é feito.",
-            "Aumente o custo da técnica em 2 SP se ela for usar as propriedades da arma em questão ou 5 SP para ser considerada sempre ranged independente da arma usada." 
+            "Aumente o custo da técnica em 2 SP se ela for usar as propriedades da arma em questão ou 5 SP para ser considerada sempre ranged independente da arma usada, na criação da técnica.." 
         ],
         "conceitos": [
             "unicidade",
@@ -3788,7 +3797,7 @@ window.techAddons =
         "nome": "Reverse Saboteur",
         "nomeLimpo": "Reversesaboteur",
         "efeitos": [
-			"Enquanto a passiva com este addon estiver ativa, cada vez que você entregar uma condição positiva (buff) para um aliado ou em si mesmo, cause 2 pontos de dano direto no HP de um inimigo da sua escolha. Isso é considerado um dano que não ativa efeitos inatos ou indiretos.",
+			"Enquanto a passiva com este addon estiver ativa, cada vez que você entregar uma condição positiva (buff) para um aliado ou em si mesmo, cause 2 pontos de dano direto no HP de um inimigo da sua escolha. Isso é considerado um dano que não ativa efeitos inatos ou indiretos. Caso a condição afete o grupo inteiro de aliados de uma vez, o dano causado é igual a 2, como se fosse aplicado para uma única pessoa.",
 			"Para causar o dano, o usuário precisa estar na mesma zona do alvo em questão.",
             "Aumenta o custo da técnica em +2 SP por rodada (não acumulativo, mas somatório entre outros addons) para cada rodada que a habilidade com este addon ficar ativa."
         ],
@@ -3802,7 +3811,7 @@ window.techAddons =
         "nome": "Maelstrom",
         "nomeLimpo": "Maelstrom",
         "efeitos": [
-			"Enquanto a passiva com este addon estiver ativa, cada vez que você entregar uma condição negativa (debuff) em um inimigo, cause 2 pontos de dano direto no HP de um inimigo da sua escolha. Isso é considerado um dano que não ativa efeitos inatos ou indiretos.",
+			"Enquanto a passiva com este addon estiver ativa, cada vez que você causar uma condição negativa (debuff) em um inimigo,  cause 2 pontos de dano direto no HP de um inimigo da sua escolha. Isso é considerado um dano que não ativa efeitos inatos ou indiretos. Técnicas com múltiplos debuffs de uma vez ativam o efeito para cada debuff entregue com sucesso.",
 			"Para causar o dano, o usuário precisa estar na mesma zona do alvo em questão.",
             "Aumenta o custo da técnica em +2 SP por rodada (não acumulativo, mas somatório entre outros addons) para cada rodada que a habilidade com este addon ficar ativa."
         ],
@@ -4096,7 +4105,7 @@ window.techAddons =
         "nome": "Utiliza Munição",
         "nomeLimpo": "Utiliza Municao",
         "efeitos": [
-            "A arma utiliza munição e passa a seguir as regras de munição que estejam funcionando para a sua campanha. Uma arma que utiliza munição tem seu custo em lojas ou de criação reduzido em 50% (não funciona com vantagens que mexam com isso). Esse addon não ocupa slots nem aumenta o nível da arma.",
+            "A arma utiliza munição e passa a seguir as regras de munição que estejam funcionando para a sua campanha. Uma arma que utiliza munição tem seu custo em lojas ou de criação reduzido em 50% (não funciona com vantagens que mexam com isso, incluindo a vantagem do arquétipo Ferreiro). Esse addon não ocupa slots nem aumenta o nível da arma.",
             "Para armas criadas através de vantagens, colocar esse addon reduz o custo da vantagem em 1 ponto. Esse addon não pode ser adicionado caso a arma já fosse utilizar munição através de Ranged."
         ],
         "conceitos": [],
