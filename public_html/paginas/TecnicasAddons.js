@@ -5,6 +5,16 @@
  */
 window.techChangelog = [  
 {	 
+        version : [5,4],
+        description : [
+			"\"Bull Rush\": Adicionado clarificado que o addon não pode ser usado em conjunto com \"Esforço Agressivo\".",
+			"\"Look\", \"Break the Shadows\", \"Embrace the Shadows\", \"Opportunism\": Alterado para se adequar para a remoção da perícia Percepção.",
+			"\"Maelstrom\": Texto clarificado.",
+			"\"Autômato sem Alma\": Texto clarificado sobre problemas em relação a qual zona a arma ocupava e relação de mão hábil e inábil.",
+			"Novos addons: \"Blessing of the Wind\", \"Blessing of Fire\"."
+			]			
+ }, 
+{	 
         version : [5,3],
         description : [
 			"\"Special Attack (todos)\": clarificado que o custo de SP para tornar a técnica ranged é feito na criação da técnica.",
@@ -1024,6 +1034,37 @@ window.techAddons =
        ],
         "conceitos": [
 			"extra"
+        ],
+        "nivel": 2
+    },
+    {
+        "tipo": "ataque",
+        "nome": "Blessing of the Wind",
+        "nomeLimpo": "Blessing of the Wind",
+        "efeitos": [
+            "Este addon só é ativado em conjunto com os efeitos de \"Chain Attack\".",
+			"Após nocautear uma vítima, este addon te garante uma ação de movimento imediata e gratuita.",
+			"Movimentar-se dessa forma não causa golpes de oportunidade.",
+            "Aumente o custo da técnica em 2 SP."
+        ],
+        "conceitos": [
+		"unicidade"
+        ],
+        "nivel": 2
+    },
+    {
+        "tipo": "ataque",
+        "nome": "Blessing of Fire",
+        "nomeLimpo": "BlessingFire",
+        "efeitos": [
+            "Este addon só é ativado em conjunto com os efeitos de \"Chain Attack\".",
+			"Após nocautear uma vítima, este addon te garante +2 Bônus de Poder no próximo dano realizado.",
+			"Este efeito é descartado caso o seu próximo turno chegue sem você ter usado-o.",
+            "Aumente o custo da técnica em 2 SP."
+        ],
+        "conceitos": [
+		"stacking",
+		"unicidade"
         ],
         "nivel": 2
     },
@@ -2151,6 +2192,7 @@ window.techAddons =
 			"O efeito deste addon é usável apenas no turno do personagem e somente antes de você realizar qualquer ação que fosse acabar seu turno.",
 			"Quando esse turno fosse acabar, faça um novo ataque (básico ou por técnicas de ataque).",
 			"Até o início do seu próximo turno, você fica indefeso e não pode reagir a nada de nenhuma forma.",
+			"Este addon não funciona em conjunto com o addon \"Esforço Agressivo\".",
 			"Você não pode agir no seu próximo turno e ele acaba assim que começa. Seus turnos se normalizam depois disso.",
         ],
         "conceitos": [
@@ -2377,7 +2419,7 @@ window.techAddons =
         "nomeLimpo": "Look",
         "efeitos": [
             "Escolha um dos dois efeitos: 1 - Você consegue visualizar o que um alvo está portando (Equipamentos, dinheiro e itens, incluindo seus atributos e addons).",
-			"2 - Você pode fazer um teste de Percepção contra uma dificuldade colocada pelo Mestre pra perceber uma fraqueza, potencial, detalhe narrativo ou mecânica do alvo. O que vai ser analisado é determinado na hora da ação",
+			"2 - Você pode fazer um teste que envolva algum tipo de percepção contra uma dificuldade colocada pelo Mestre pra perceber uma fraqueza, potencial, detalhe narrativo ou mecânica do alvo. O que vai ser analisado é determinado na hora da ação e a perícia usada também é definida da mesma forma.",
             "A habilidade não gasta o turno do usuário, mas somente um efeito pode ser usado por rodada.",
             "Ativar este efeito consome 2 SP."
         ],
@@ -2484,7 +2526,7 @@ window.techAddons =
 			"Perde a invisibilidade ao receber dano de qualquer tipo (Damage Over Time Incluso), for curado ou afetado por qualquer habilidade aliada direta (passivas que afetam vários alvos não revelam o personagem invisível). O personagem também perde a invisibilidade APÓS causar dano por qualquer fonte direta ou após usar habilidades em geral. A invisibilidade não é perdida ao pagar o custo de manutenção de passivas.",
 			"Enquanto invisível, um personagem não pode:",
 			"Falar, usar itens ou qualquer ação que teoricamente quebraria sua invisibilidade.",
-			"Alvos que estejam lutando contra um personagem invisível, podem fazer um teste de 1d10 + SAB + Percepção VS 1d10 + AGI + Furtividade do alvo invisível para detectá-lo.",
+			"Alvos que estejam lutando contra um personagem invisível, podem fazer um teste que envolva algum tipo de percepção VS 1d10 + AGI + Furtividade do alvo invisível para detectá-lo. A perícia usada depende da ação em questão. Se for usado somente os sentidos do personagem, use 1D6 + SAB vs 1D6 + AGI do alvo.",
 			"Este mesmo teste deve ser feito toda vez que o combatente invisível for atacar alguém de qualquer forma ou fizer uma ação. Caso um combatente que seja alvo passe neste teste de identificação, o personagem invisível perde seus bônus contra esse alvo e é imediatamente relevado para todos.",
 			"Ativar este efeito consome 5 SP e gasta o turno",
 			"Pode ser ativada na Fase Zero de uma luta."
@@ -2501,7 +2543,8 @@ window.techAddons =
         "nome": "Break the Shadows",
         "nomeLimpo": "Break the Shadows",
         "efeitos": [
-            "O personagem realiza um teste de 1d10 + SAB + Percepção VS 1d10 + AGI + Furtividade contra todos os alvos que estejam sob o efeito de Embrace the Shadows.",
+            "O personagem realiza um teste envolvendo algum tipo de percepção VS 1d10 + AGI + Furtividade contra todos os alvos que estejam sob o efeito de Embrace the Shadows.",
+			"A perícia usada para definir o tipo de percepção depende do tipo de ação do personagem. Se for algo voltado puramente para os sentidos do personagem, role 1D6 + SAB vs 1D6 + AGI dos personagens oa invés disso.",
 			"Jogue o teste separadamente para cada alvo. Se passar, o personagem revela esses alvos, fazendo com que eles percam os efeitos da invisibilidade imediatamente.",
 			"Ativar este efeito consome 5 SP."
         ],
@@ -2922,9 +2965,9 @@ window.techAddons =
         "nomeLimpo": "Opportunism",
         "efeitos": [
             "Este addon só pode ser ativado caso o personagem esteja sob os efeitos de \"Embrace the Shadows\".",
-			"O personagem pode realizar um teste de Prestidigitação contra a Percepção de uma vítima escolhida, desde que ela não o possa ver e esteja na mesma zona que ele. Se passar, o personagem pode escolher uma peça de equipamento que o inimigo esteja usando e remove-a (negando todo e qualquer efeito e propriedade que ela dê) por uma rodada.",
+			"O personagem pode realizar um teste de Prestidigitação contra a algum tipo de percepção de uma vítima escolhida, desde que ela não o possa ver e esteja na mesma zona que ele. Se passar, o personagem pode escolher uma peça de equipamento que o inimigo esteja usando e remove-a (negando todo e qualquer efeito e propriedade que ela dê) por uma rodada.",
 			"Se o inimigo não usar equipamentos, a manobra pode ser traduzida em Inferioridade em rolagens de Danos, Curas, Defesa ou Ataque desde que faça sentido de acordo com a ação. Escolha o que vai ser penalizado na hora da manobra e de acordo com a descrição dada.",
-			"Caso o inimigo passe no teste de Percepção, ele ganha um Ataque Básico gratuito contra o usuário deste addon que pode reagir normalmente, mas no momento em que for descoberto, perde os benefícios de \"Embrace the Shadows\".",
+			"Caso o inimigo passe no teste envolvendo sua percepção, ele ganha um Ataque Básico gratuito contra o usuário deste addon que pode reagir normalmente, mas no momento em que for descoberto, perde os benefícios de \"Embrace the Shadows\".",
 			"Alvos que forem privados de seus equipamentos devem re-equipá-los na próxima rodada quando seus turnos chegarem, caso desejem voltar a receber os benefícios.",
 			"Ativar este efeito consome 5 SP e  gasta o turno."
         ],
@@ -3811,7 +3854,7 @@ window.techAddons =
         "nome": "Maelstrom",
         "nomeLimpo": "Maelstrom",
         "efeitos": [
-			"Enquanto a passiva com este addon estiver ativa, cada vez que você causar uma condição negativa (debuff) em um inimigo,  cause 2 pontos de dano direto no HP de um inimigo da sua escolha. Isso é considerado um dano que não ativa efeitos inatos ou indiretos. Técnicas com múltiplos debuffs de uma vez ativam o efeito para cada debuff entregue com sucesso.",
+			"Enquanto a passiva com este addon estiver ativa, cada vez que você causar uma condição negativa (debuff) em um inimigo, cause 2 pontos de dano direto no HP de um inimigo da sua escolha. Isso é considerado um dano que não ativa efeitos inatos ou indiretos. Técnicas com múltiplos debuffs de uma vez ativam o efeito para cada debuff entregue com sucesso, então uma técnica com 3 debuffs causaria, por exemplo, 6 pontos de dano de uma vez.",
 			"Para causar o dano, o usuário precisa estar na mesma zona do alvo em questão.",
             "Aumenta o custo da técnica em +2 SP por rodada (não acumulativo, mas somatório entre outros addons) para cada rodada que a habilidade com este addon ficar ativa."
         ],
@@ -3954,7 +3997,9 @@ window.techAddons =
             "Enquanto a arma estiver viva, a arma conta como um aliado e pode ser afetada por efeitos que funcionassem em Aliados, como Bônus, Redirecionamento de Ataques e outros, com durações de efeito padrões.",
             "Ataques realizados com essa arma são tratados como ataques do personagem original, utilizando seus atributos e os addons dessa Arma para decidir os efeitos. Personagens que sejam atacados por essa arma podem incluir tanto a Arma quanto o personagem que a utiliza em alvos de contra-ataques. A arma sempre tenta esquivar quando atacada, como dito antes.",
             "Contra-ataques contra o personagem que possui a arma funcionam como sempre, com o personagem, por exemplo, perdendo a concentração necessária para finalizar o ataque após um bloqueio ou uma esquiva mal-sucedida.",
-            "Enquanto um Autômato sem Alma estiver em campo, o personagem e seus aliados podem realizar a ação \"Se esconder\". Se esconder - 0 SP: Consome o turno do personagem e só pode ser realizada no turno do personagem. Se esconde atrás de um Autômato sem Alma. Todos os ataques realizados contra o personagem são redirecionados para o Autômato sem Alma enquanto ele estiver inteiro."
+            "Enquanto um Autômato sem Alma estiver em campo, o personagem e seus aliados podem realizar a ação \"Se esconder\". Se esconder - 0 SP: Consome o turno do personagem e só pode ser realizada no turno do personagem. Se esconde atrás de um Autômato sem Alma. Todos os ataques realizados contra o personagem são redirecionados para o Autômato sem Alma enquanto ele estiver inteiro.",
+			"Armas com este addon não sofrem penalidades de mão inábil, sendo tratada normalmente como se fosse uma mão hábil.",
+			"A arma pode equipar uma zona diferente em relação ao personagem com um comando simples. Isso gasta a ação de movimento gratuita do personagem em questão."
         ],
         "conceitos": [],
         "nivel": 1

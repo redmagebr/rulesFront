@@ -5,6 +5,30 @@
  */
 window.vantagensChangelog = [
 {
+        "version" : [5, 3],
+        "description" : [
+			 "Corrigido typos em \"Ás do Volante\".",
+			 "Removido o trecho que citava estilo de luta em \"Treinamento Extra\".",
+			 "Adicionados exemplos de explicações em \"Maestria Melee\" e \"Maestria Ranged\".",
+			 "Desvantagem \"Ímã de Esquisitisses\" teve seu custo reduzido para 2 pontos (antigo: 4).",
+			 "Novas vantagens: \"Presença de Mente\" e \"Super Olfato\".",
+			 "\"Credulidade\": Perícia afetada alterada para Discernir (antigo: Percepção).",
+			 "\"Alerta Constante\", \"Engenheiro de Masmorras\", \"Atalho\ e \"Super Audição\": Texto clarificado para se adequar a remoção da perícia Percepção.",
+			 "\Leitura Labial\" e \"Memória Eidética\": Teste de Sabedoria irá substituir o teste de Percepção por conta da remoção da perícia.",			 
+			 "\Mente Veloz\": Alterado para se adequar a remoção da perícia Percepção.",
+			 "\Terreno Favorito\": Perícia usada em planícies alterada para Natureza para se adequar a remoção da perícia Percepção.",
+			 "\Cego\", \"Deficiência Auditiva\", \"Olhos Deficientes\", e \"Distraído\": Perícia alterada para remover os trechos em que citava a perícia percepção.",
+			 "Vantagem racial: \"Agilidade da Aranha\" de El'zel foi corrigida para a versão atual.",
+			 "Vantagem racial: \"Senso de Corrupção\" de Yu'qun foi adaptada seguindo a remoção da perícia Percepção. Agora utiliza Arcanismo ou Religião (o que for maior).",
+			 "Vantagem racial: \"Rápida Habituação\" de Kalkan foi adaptada seguindo a remoção da perícia Percepção. Agora é orientada para testes de rastreamento em geral.",
+			 "Vantagem racial: \"Awareness\" de Ogrekin foi adaptada seguindo a remoção da perícia Percepção.",	
+			 "Vantagem racial: \"Fedorento\" de Orc foi adaptada seguindo a remoção da perícia Percepção.",	
+			 "Vantagem racial: \"Facilmente Enganado\" de Kalkan foi adaptada seguindo a remoção da perícia Percepção. Agora é orientada para a perícia Discernir.",
+			 "Vantagem de Arquétipo: \"Malícia\" de Ladrão, foi adaptada seguindo a remoção da perícia Percepção. Agora é vinculada com Furtividade.",
+		 
+        ]
+    },
+{
         "version" : [5, 2],
         "description" : [
 			 "Corrigidos os valores de \"Língua sem travas\" e \"Auto-suficiência biológica\".",
@@ -444,7 +468,7 @@ window.vantagensArray = [
         "nome": "Agilidade da Aranha",
         "pontos": "2",
         "descricao": [
-            "Sobreviver é um direito que deve ser conquistado diariamente numa sociedade de El'zes, e justamente por isso estar em boa condição física e mental é essencial. O personagem aprendeu a se virar bem em situações tensas e adquiriu a esperteza e agilidade corporal necessária para evitar ser pego de surpresa ou ser atingido por coisas no escuro, aumente o valor da Agilidade dele em +1 ponto, podendo ultrapassar o valor de 5. Essa vantagem não se acumula com \"Reflexos Velozes\". O personagem também ganha um bônus de +1 em testes de Percepção em ambientes escuros ou com baixa iluminação."
+            "O personagem aprendeu a reagir à situações tensas e que exigam esperteza e agilidae do mesmo. Ganhe um Bônus de Vantagem permanente igual à +1 no atributo Agilidade, podendo ultrapassar o valor de 5 máximos na criação de personagem."
         ],
         "requisitos": "Raça El'zel"
     },
@@ -572,7 +596,7 @@ window.vantagensArray = [
         "nome": "Rápida Habituação",
         "pontos": "1",
         "descricao": [
-            "Existem Kalkans por todos os lugares do mundo e em inúmeras sociedades diferentes que os aceitam ou meramente os suportam como membros integrantes. Dessa forma, essas pequenas criaturas aprenderam o que puderam pra sobreviver em diversos ambientes que muitas vezes não foram feitos para eles. Um personagem com essa vantagem ganha um Bônus de Vantagem de +2 em testes de que envolvam a perícia Percepção ou sub-testes que tratem de algum tipo de Rastreamento  afim de encontrar atalhos e rotas alternativas para o Kalkan ou seu grupo."
+			"Por não possuírem uma sociedade centralizada e dedicada, os Kalkans aprenderam a se misturar em outras sociedades. O personagem ganha um Bônus de Vantagem de +2 em testes relacionados a alguma forma de rastreamento."
         ],
         "requisitos": "Raça Kalkan"
     },
@@ -644,7 +668,7 @@ window.vantagensArray = [
         "nome": "Awareness",
         "pontos": "1",
         "descricao": [
-            "O perigo está à espreita em todos os lugares quando você menos espera, e os Ogrekins sabem muito bem disso e levam esse ensinamento para suas vidas. Dessa forma, um personagem com essa vantagem ganha um Bônus de Vantagem de +4 em qualquer teste que envolva a perícia Percepção afim de perceber perigos ou emboscadas no ambiente onde está. Mesmo falhando no teste o personagem com essa vantagem ainda pode agir na rodada surpresa, sendo assim, o último na ordem de iniciativas."
+			"O personagem tem uma percepção sobrenatural sobre os acontecimentos à sua volta. Ele ganha um Bônus de Vantagem de +4 em qualquer teste que envolva perceber perigos, emboscadas ou ambientes perigosos. Mesmo falhando nesses testes, o personagem nunca é pego de surpresa e age por último na ordem de iniciativas em tais situações."
         ],
         "requisitos": "Raça Ogrekin"
     },
@@ -781,7 +805,7 @@ window.vantagensArray = [
         "nome": "Senso de Corrupção",
         "pontos": "1",
         "descricao": [
-            "A elevada percepção de Yu'qun pode ser bem útil em casos de perigo; o personagem com essa vantagem é capaz de, através de um teste da perícia Percepção, notar em até 8 metros de distância qualquer tipo de corrupção anormal (de origem mágica ou algo do tipo) e estabelecer uma breve escala do quão perigoso isso é para ele ou para as pessoas à sua volta. O jogador pode assim, perguntar privadamente ao Mestre qual o grau de perigo frente ao que ele percebeu e o Mestre dizer numa escala de 1 à 5 o nível de perigo (sendo 5 o mais perigoso)."
+			"A elevada percepção de um Yu’qun vai além dos sentidos. Com um teste de Arcanismo ou Religião (o que o personagem tiver mais alto), o personagem nota em até 8 metros de distância, níveis de corrupção anormal ou mágica. O mestre deve indicar o nível de corrupção de 1 à 5, sendo 5 o mais perigoso."
         ],
         "requisitos": "Raça Yuqun"
     },
@@ -1448,7 +1472,7 @@ window.vantagensArray = [
         "pontos": "1",
         "descricao": [
             "A sua carreira como Ladrão te ensinou muitas coisas, inclusive como salvar a sua própria pele de maneiras diferentes, enquanto mantém as riquezas debaixo da manga. Escolha somente um desses efeitos:",
-            "• Experiente em Armadilhas: Você é capaz de analisar o ambiente e dizer se existem armadilhas ali. Pessoas normais acham isso impossível de ser feito, mas você não... Afinal, detectar armadilhas é o que te separa de ir pra cadeia, fugir ou perder uma mão. Quando você gastar 10 minutos ou 1 rodada observando uma área intensivamente (você precisa declarar isso ao mestre), role 1d10 + Sabedoria + Percepção, onde:",
+            "• Experiente em Armadilhas: Você é capaz de analisar o ambiente e dizer se existem armadilhas ali. Pessoas normais acham isso impossível de ser feito, mas você não... Afinal, detectar armadilhas é o que te separa de ir pra cadeia, fugir ou perder uma mão. Quando você gastar 10 minutos ou 1 rodada observando uma área intensivamente (você precisa declarar isso ao mestre), role 1d10 + Sabedoria + Furtividade onde:",
             "• Resultado entre 1 e 5: Pergunte uma das questões abaixo ao mestre.",
             "• Resultado entre 6 e 14: Pergunte duas questões.",
             "• Resultado de 15+: Pergunte três questões.",
@@ -1508,7 +1532,7 @@ window.vantagensArray = [
         "nome": "Ás do Volante",
         "pontos": "1",
         "descricao": [
-			"O personagem é um excelent piloto quando se trata de veículos mecânicos, Quando utilizando a perícia Sistemas ou Veículos para pilotar qualquer máquina, receba +3 em quaisquer testes."
+			"O personagem é um excelente piloto quando se trata de veículos mecânicos, Quando utilizando a perícia Sistemas ou Veículos para pilotar qualquer máquina, receba +3 em quaisquer testes."
         ],
         "requisitos": "Arquétipo Maquinista"
     },
@@ -1799,7 +1823,7 @@ window.vantagensArray = [
         "nome": "Alerta Constante",
         "pontos": "3",
         "descricao": [
-            "Receba +4 em quaisquer testes de Percepção para perceber uma emboscada ou algum tipo de cilada.",
+            "Receba +4 em quaisquer testes que envolvam perceber uma emboscada ou algum tipo de cilada.",
             "Mesmo que você falhe em perceber um ataque surpresa, você ainda pode agir na rodada de Surpresa, sendo o último a realizar ação durante ela."
         ]
     },
@@ -1880,7 +1904,7 @@ window.vantagensArray = [
         "nome": "Atalho",
         "pontos": "2",
         "descricao": [
-            "O personagem conhece atalhos diversos e mesmo que não seja familiarizado com o local em questão, consegue rastrear rotas alternativas com maior facilidade que os outros. Em testes de Percepção ou Rastreamento para encontrar um caminho alternativo ou atalho, adicione um bônus de +2 em suas rolagens."
+            "O personagem conhece atalhos diversos e mesmo que não seja familiarizado com o local em questão, consegue rastrear rotas alternativas com maior facilidade que os outros. Em testes que envolvam estratégias para encontrar um caminho alternativo ou atalho através de algum tipo de percepção, adicione um bônus de +2 em suas rolagens."
         ]
     },
     {
@@ -2043,7 +2067,7 @@ window.vantagensArray = [
         "nome": "Engenheiro de Masmorras",
         "pontos": "3",
         "descricao": [
-            "Você é um expert e conhecedor de masmorras, castelos, calabouços e afins quando se diz a respeito de armadilhas e passagens secretas. Ganhe superioridade em testes de Percepção e Inteligência para encontrar a presença de passagens secretas.",
+            "Você é um expert e conhecedor de masmorras, castelos, calabouços e afins quando se diz a respeito de armadilhas e passagens secretas. Ganhe superioridade em testes que envolvam perceber e encontrar a presença de passagens secretas.",
             "Armadilhas que forem te causar dano ganham inferioridade nas rolagens de dano. Se o seu arquétipo for Ladrão, você pode comprar essa vantagem por 2 pontos."
         ]
     },
@@ -2257,7 +2281,7 @@ window.vantagensArray = [
         "nome": "Leitura Labial",
         "pontos": "2",
         "descricao": [
-            "Seja por capacidade natural ou uma incrível paciência e treino, você possui a habilidade de entender o que outras pessoas falam mesmo sem ouví-los, apenas pelo fato de observar como seus lábios se movem à distância. Dessa forma, se você tiver em uma situação onde não pode ouvir o que alguma pessoa está dizendo em até 8 metros de distância de você, faça um teste de Percepção contra uma dificuldade colocada pelo mestre para entender sobre o quê essa pessoa está falando. Você ganha um bônus de superioridade nesse teste."
+            "Seja por capacidade natural ou uma incrível paciência e treino, você possui a habilidade de entender o que outras pessoas falam mesmo sem ouví-los, apenas pelo fato de observar como seus lábios se movem à distância. Dessa forma, se você tiver em uma situação onde não pode ouvir o que alguma pessoa está dizendo em até 8 metros de distância de você, faça um teste de Sabedoria contra uma dificuldade colocada pelo mestre para entender sobre o quê essa pessoa está falando. Você ganha um bônus de superioridade nesse teste."
         ]
     },
     {
@@ -2300,6 +2324,13 @@ window.vantagensArray = [
         ]
     },
     {
+        "nome": "Presença de Mente",
+        "pontos": "2",
+        "descricao": [
+            "O personagem consegue usar da sua inteligência em maneiras que muitas pessoas não conseguiriam normalmente, seja para perceber detalhes ou nuances específicos. O personagem com essa vantagem pode usar o atributo Inteligência no lugar de Sabedoria em testes que envolvam algum tipo de percepção. É interessante que o jogador descreva como sua inteligência o ajuda em perceber tal coisa."
+        ]
+    },	
+    {
         "nome": "Mente Rápida",
         "pontos": "3",
         "descricao": [
@@ -2311,7 +2342,7 @@ window.vantagensArray = [
         "pontos": "3",
         "descricao": [
             "Seu personagem é capaz de pensar muito mais rápido que outras pessoas, independente da sua inteligência. O efeito disso é que ele é capaz de tomar decisões complexas mesmo em pouco tempo sem afetar seu julgamento. Isso significa que você, o jogador, não precisa responder rapidamente à situação (como mestres realizando contagens de tempo) e você pode pensar um pouco para tomar a melhor decisão, sem tempo passar na história.",
-            "Adicionalmente, ganhe um bônus permanente na sua Percepção Passiva igual à +3 pontos."
+            "Adicionalmente, ganhe um bônus de vantagem igual à +3 em testes que envolvam algum tipo de percepção ou reação mental."
         ]
     },
     {
@@ -2333,7 +2364,7 @@ window.vantagensArray = [
         "nome": "Memória Eidética",
         "pontos": "2",
         "descricao": [
-            "O personagem possui uma memória fotográfica, e se lembra de tudo que conseguiu botar os olhos na vida. O personagem nunca esquece de nada e pode retornar mentalmente a algum lugar em que esteve para procurar mais informações. Exemplo: ao descobrir que o Rei era na verdade um vilão, o personagem retorna ao quarto do rei mentalmente e faz um teste de percepção procurando algo fora de lugar... E aí ele consegue se lembrar de algo que estava em cima da mesa e que na hora não tinha peso, mas agora muda tudo."
+            "O personagem possui uma memória fotográfica, e se lembra de tudo que conseguiu botar os olhos na vida. O personagem nunca esquece de nada e pode retornar mentalmente a algum lugar em que esteve para procurar mais informações. Exemplo: ao descobrir que o Rei era na verdade um vilão, o personagem retorna ao quarto do rei mentalmente e faz um teste de sabedoria procurando algo fora de lugar... E aí ele consegue se lembrar de algo que estava em cima da mesa e que na hora não tinha peso, mas agora muda tudo."
         ]
     },
     {
@@ -2537,10 +2568,17 @@ window.vantagensArray = [
         "nome": "Super Audição",
         "pontos": "1 ou 3",
         "descricao": [
-            "• 1 ponto: Você é capaz de escutar claramente um alfinete caindo na sala ao lado. Você ganha superioridade em testes de percepção auditiva.",
+            "• 1 ponto: Você é capaz de escutar claramente um alfinete caindo na sala ao lado. Você ganha superioridade em testes de que envolvam alguma percepção auditiva.",
             "• 3 pontos: Você pode ouvir claramente sussurros realizados longe (25m) de você. Também pode escutar frequências inaudíveis para ouvidos normais. Você passa automaticamente em testes de percepção auditiva com dificuldades iguais até um valor de 12 ou menos."
         ]
     },
+    {
+        "nome": "Super Olfato",
+        "pontos": "1 ou 3",
+        "descricao": [
+            "O personagem consegue sentir cheiros muito além do limiar humano comum. Seu olfato é levemente superior a de um cão ou de outra criatura comum que tem o olfato apurado. Ele ganha sucesso automático em testes para detectar cheiros próximos ou até mesmo em uma distância considerável. O personagem passa automaticamente em testes com 8 de dificuldade para sentir ou perceber cheiros."
+        ]
+    },	
     {
         "nome": "Super Sentidos",
         "pontos": "5",
@@ -2567,7 +2605,7 @@ window.vantagensArray = [
             "• Floresta: Ganhe superioridade em testes de Furtividade ou Agilidade quando tentando se camuflar nesse tipo de ambiente;",
             "• Interiores / Urbano: Ganhe superioridade em testes de Furtividade ou Agilidade quando tentando se mover silenciosamente nesse tipo de ambiente;",
             "• Pântanos: Ganhe imunidade à venenos e doenças originárias desse tipo de ambiente;",
-            "• Planícies: Ganhe superioridade em testes de Percepção ou Sabedoria quando tentando procurar algo nesse ambiente;",
+            "• Planícies: Ganhe superioridade em testes de Natureza ou Sabedoria quando tentando procurar algo nesse ambiente;",
             "• Montanhas: Ganhe superioridade em testes de Atletismo ou Força quando escalando uma superfície desse tipo de ambiente;"
         ]
     },	
@@ -2582,7 +2620,7 @@ window.vantagensArray = [
         "nome": "Treinamento Extra",
         "pontos": "2",
         "descricao": [
-            "O personagem começa a história com uma técnica a mais. Essa técnica possui um slot de addon e não pode ser fundida com outras técnicas inicialmente. Em níveis seguintes, a técnica pode receber upgrades tanto por ser fundida com outras técnicas quanto por pontos de habilidade. A técnica também pode ser um Estilo de Luta.",
+            "O personagem começa a história com uma técnica a mais. Essa técnica possui um slot de addon e não pode ser fundida com outras técnicas inicialmente. Em níveis seguintes, a técnica pode receber upgrades tanto por ser fundida com outras técnicas quanto por pontos de habilidade.",
             "Treinamento Extra pode ser comprada múltiplas vezes."
         ]
     },
@@ -2649,7 +2687,8 @@ window.vantagensArray = [
         "pontos": "3",
         "descricao": [
 			"O personagem possui treinamento com armas de longo alcance, tendo atingido o perfeito equilíbrio entre os prós e contras deste tipo de arma.",
-			"Personagens com essa vantagem que usem uma arma com o addon “Longo Alcance”, não sofrem as penalidades de não receber os modificadores de dano conforme descritas nele."
+			"Personagens com essa vantagem que usem uma arma com o addon “Longo Alcance”, não sofrem as penalidades de não receber os modificadores de dano conforme descritas nele.",
+			"Exemplos dessa vantagem: O personagem é treinado com lanças, então não sofre mais as penalidades do addon “Longo Alcance”."
         ]
     },
     {
@@ -2657,7 +2696,8 @@ window.vantagensArray = [
         "pontos": "3",
         "descricao": [
 			"O personagem possui treinamento com armas de curto alcance, tendo atingido o perfeito equilíbrio entre os prós e contras deste tipo de arma.",
-			"Personagens com essa vantagem que usem uma arma com o addon “Curto Alcance”, não sofrem as penalidades de não receber os modificadores de dano conforme descritas nele."
+			"Personagens com essa vantagem que usem uma arma com o addon “Curto Alcance”, não sofrem as penalidades de não receber os modificadores de dano conforme descritas nele.",
+			"Exemplos dessa vantagem: O personagem é treinado com espingardas, então não sofre mais as penalidades do addon “Curto Alcance”."
         ]
     }	
 ].sort(function (a,b) {
@@ -2959,7 +2999,7 @@ window.desvantagensArray = [
         "nome": "Facilmente Enganado",
         "pontos": "4",
         "descricao": [
-            "Devido à alta inocência que os Kalkans possuem, eles acabam sendo muitas vezes enganados por outras pessoas mais maliciosas ou mal intencionadas. Assim, um Kalkan com essa desvantagem tende à acreditar em praticamente tudo que lhe dizem e recebe uma penalidade igual à -5 em testes que envolvam a perícia Percepção afim de detectar mentiras que outras pessoas contam. Adicional a isso, todo que envolva alguma forma de Blefe para cima do Kalkan possuem sua dificuldade reduzida em duas categorias."
+            "Devido à alta inocência que os Kalkans possuem, eles acabam sendo muitas vezes enganados por outras pessoas mais maliciosas ou mal intencionadas. Assim, um Kalkan com essa desvantagem tende à acreditar em praticamente tudo que lhe dizem e recebe uma penalidade igual à -5 em testes que envolvam a perícia Discernir afim de detectar mentiras que outras pessoas contam. Adicional a isso, todo que envolva alguma forma de Blefe para cima do Kalkan possuem sua dificuldade reduzida em duas categorias."
         ],
         "requisitos": "Raça Kalkan"
     },
@@ -3023,7 +3063,7 @@ window.desvantagensArray = [
         "nome": "Fedorento",
         "pontos": "3",
         "descricao": [
-            "Poderia ser preconceito, poderia ser apenas um estereótipo, mas na verdade trata-se de um aspecto da fisiologia dos Orcs que está realmente presente: seu cheiro. Orcs possuem um cheiro mais forte que geralmente pode ser sentido à quase 8 metros de distância de onde estão, assim, testes de percepção para encontrar um personagem com essa desvantagem ganham a dificuldade reduzida em uma categoria e também faz com que o personagem ganhe penalidades em testes sociais devido ao seu cheiro (à critério do mestre)."
+            "Poderia ser preconceito, poderia ser apenas um estereótipo, mas na verdade trata-se de um aspecto da fisiologia dos Orcs que está realmente presente: seu cheiro. Orcs possuem um cheiro mais forte que geralmente pode ser sentido à quase 8 metros de distância de onde estão, assim, testes que envolvam o olfato para encontrar um personagem com essa desvantagem ganham a dificuldade reduzida em uma categoria e também faz com que o personagem ganhe penalidades em testes sociais devido ao seu cheiro (à critério do mestre)."
         ],
         "requisitos": "Raça Orc"
     },
@@ -3262,7 +3302,7 @@ window.desvantagensArray = [
         "nome": "Cego",
         "pontos": "3",
         "descricao": [
-            "O personagem perdeu completamente sua visão por algum motivo. O personagem treinou muito e ainda é capaz de operar em combate através dos outros sentidos, mas falha automaticamente em qualquer teste que dependa exclusivamente de visão. Além disso, recebe -4 em todos os outros testes de Percepção quando visão é um fator importante. Em combate, você não sofre penalidades quando enfrenta inimigos invisíveis ou outras táticas similares."
+            "O personagem perdeu completamente sua visão por algum motivo. O personagem treinou muito e ainda é capaz de operar em combate através dos outros sentidos, mas falha automaticamente em qualquer teste que dependa exclusivamente de visão. Além disso, recebe -4 em todos os outros testes quando a sua visão for um fator importante. Em combate, você não sofre penalidades quando enfrenta inimigos invisíveis ou outras táticas similares."
         ]
     },
     {
@@ -3367,7 +3407,7 @@ window.desvantagensArray = [
         "nome": "Credulidade",
         "pontos": "3",
         "descricao": [
-            "O personagem acredita em praticamente tudo que lhe dizem. Testes de blefe contra você tem sua dificuldade reduzida em duas categorias e você recebe um redutor de -5 em testes de percepção para detectar mentiras. Isso não significa que você precisa acreditar em histórias implausíveis."
+            "O personagem acredita em praticamente tudo que lhe dizem. Testes de blefe contra você tem sua dificuldade reduzida em duas categorias e você recebe um redutor de -5 em testes de discernir para detectar mentiras. Isso não significa que você precisa acreditar em histórias implausíveis."
         ]
     },
     {
@@ -3402,7 +3442,7 @@ window.desvantagensArray = [
         "nome": "Deficiência Auditiva",
         "pontos": "2",
         "descricao": [
-            "O personagem não consegue escutar bem ou é completamente surdo. O personagem aprendeu a lidar com isso em combate, mas isso causa falha automática em testes de percepção quando audição é um fator importante."
+            "O personagem não consegue escutar bem ou é completamente surdo. O personagem aprendeu a lidar com isso em combate, mas isso causa falha automática em testes quando audição for um fator importante."
         ]
     },
     {
@@ -3472,7 +3512,7 @@ window.desvantagensArray = [
         "nome": "Distraído",
         "pontos": "2",
         "descricao": [
-            "O personagem sofre inferioridade em testes de Percepção e tem dificuldade de se concentrar em uma tarefa."
+            "O personagem sofre inferioridade em qualquer teste que envolva algum tipo de percepção e tem dificuldade de se concentrar em uma tarefa."
         ]
     },
     {
@@ -3709,7 +3749,7 @@ window.desvantagensArray = [
     },
     {
         "nome": "Ímã de Esquisitissses",
-        "pontos": "4",
+        "pontos": "2",
         "descricao": [
 			"Coisas bizarras e estranhas acontecem com você com uma frequência alarmante. O personagem é como uma força magnética que atrai eventos estranhos para si. Você é aquele com quem os demônios que estão destruindo o mundo param para conversar. Itens mágicos e propriedades assustadoras acham uma forma de te atingir.",
 			"O primeiro cão a falar no século XXI conversa com você sobre os problemas pessoais dele. Entidades cósmicas abrem portais bizarros que teoricamente causariam a destruição do mundo, mas na realidade apenas querem que você os visite amigavelmente.",
@@ -3919,7 +3959,7 @@ window.desvantagensArray = [
         "nome": "Olhos deficientes",
         "pontos": "2",
         "descricao": [
-            "O personagem não consegue ver bem, possui algum tipo de deficiência visual, seja uma miopia fortíssima ou outro problema. O problema pode ser consertado por meio de lentes ou óculos. O personagem tem penalidade ou inferioridade em testes de Percepção e pode eventualmente receber penalidades em testes de mira / precisão."
+            "O personagem não consegue ver bem, possui algum tipo de deficiência visual, seja uma miopia fortíssima ou outro problema. O problema pode ser consertado por meio de lentes ou óculos. O personagem recebe penalidades ou inferioridade em testes que envolvam algum tipo de percepção visual e pode eventualmente receber penalidades em testes de mira / precisão."
         ]
     },
     {
